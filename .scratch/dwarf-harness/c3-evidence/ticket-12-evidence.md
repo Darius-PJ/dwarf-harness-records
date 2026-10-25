@@ -14,14 +14,14 @@ S4's coder runs were under outside load. The owner then gave the project manager
 
 | Slice | Commits on `main` | Reached `main` | Review |
 |---|---|---|---|
-| S1, the record-free rules | 69a26c2 | 2026-10-24 14:08 | approve, one minor and one nit |
-| S2, the F3-12 contract | 6a34116; D143's e045717; the freeze record e126a7e (D144) | 2026-10-24 15:16 | approve with the record and D143, S2's D41 sign-off; one minor and two nits |
-| S3a, the reducer, request slots, direct guard and passive views | 7a91eaf | 2026-10-24 16:10 | approve, one minor and three nits |
-| S3b, the producers | 20d076e | 2026-10-24 17:53 | approve, one minor and two nits |
-| S4, the crash rows, the measurement and the final documentation | ee450cf | 2026-10-24 20:30 | approve; one ticket-level major finding, routed to S5, and three nits |
-| S5, the artifact-read check order | e2008b6 | 2026-10-24 23:16 | approve: one nit, no change required; reviewed with the close |
+| S1, the record-free rules | 7feffa3 | 2026-10-24 14:08 | approve, one minor and one nit |
+| S2, the F3-12 contract | bfc54c7; D143's b332e47; the freeze record 7fcd582 (D144) | 2026-10-24 15:16 | approve with the record and D143, S2's D41 sign-off; one minor and two nits |
+| S3a, the reducer, request slots, direct guard and passive views | 3344892 | 2026-10-24 16:10 | approve, one minor and three nits |
+| S3b, the producers | 587d930 | 2026-10-24 17:53 | approve, one minor and two nits |
+| S4, the crash rows, the measurement and the final documentation | e296375 | 2026-10-24 20:30 | approve; one ticket-level major finding, routed to S5, and three nits |
+| S5, the artifact-read check order | d37ca15 | 2026-10-24 23:16 | approve: one nit, no change required; reviewed with the close |
 
-The slicing is the ruling's S1 to S4, with S5, which the S4 review added by its ruling on S4's measured regression, an assistant decision under D117 and D116 ([B33](../../../docs/DECISIONS.md#b33-c3-exact-subject-review-and-failure-results-ticket-12), item 4). S1 to S5 each reached `main` by fast-forward after its gate's check passed (D116 item 5). S2, D143's e045717 and the record commit df72ff6 reached `main` together from 69a26c2; df72ff6 was amended Markdown-only as e126a7e to fill in its check result (D128). Under D141 nothing after d12f605, ticket 11's close, was pushed before this close.
+The slicing is the ruling's S1 to S4, with S5, which the S4 review added by its ruling on S4's measured regression, an assistant decision under D117 and D116 ([B33](../../../docs/DECISIONS.md#b33-c3-exact-subject-review-and-failure-results-ticket-12), item 4). S1 to S5 each reached `main` by fast-forward after its gate's check passed (D116 item 5). S2, D143's b332e47 and the record commit df72ff6 reached `main` together from 7feffa3; df72ff6 was amended Markdown-only as 7fcd582 to fill in its check result (D128). Under D141 nothing after d7ed4ef, ticket 11's close, was pushed before this close.
 
 ## The coders
 
@@ -40,16 +40,16 @@ At 14:12 the owner asked for a fresh coder for every slice, and for Codex coders
 
 ## S1, the record-free rules (2026-10-24)
 
-The request slot's state machine, the binding comparison, the guard on direct complete and fail, the reviewed-failure fact in the task kernel, the clock's sample, floor and deadline rule and the request-ID watermark, all on unexported values with pure tests: 8 files in `internal/core/agents` (6 new, with `tasks.go` and `tasks_test.go`), +640/−1, committed as 69a26c2 on ce07208, all 8 hashes matching. Its only exports are the three ruled sentinels, `ErrReviewRequired`, `ErrReviewClock` and `ErrReviewExpired`. Its one edit to existing production code, in `tasks.go`, is neutral for every existing caller, because no existing path sets the reviewed-failure fact.
+The request slot's state machine, the binding comparison, the guard on direct complete and fail, the reviewed-failure fact in the task kernel, the clock's sample, floor and deadline rule and the request-ID watermark, all on unexported values with pure tests: 8 files in `internal/core/agents` (6 new, with `tasks.go` and `tasks_test.go`), +640/−1, committed as 7feffa3 on ebc0ca2, all 8 hashes matching. Its only exports are the three ruled sentinels, `ErrReviewRequired`, `ErrReviewClock` and `ErrReviewExpired`. Its one edit to existing production code, in `tasks.go`, is neutral for every existing caller, because no existing path sets the reviewed-failure fact.
 
 | Step | Result |
 |---|---|
 | V1 `go test -count=1 -v ./internal/core/agents` (coder) | pass, 19.0 s |
 | Race (coder) | pass, 140.2 s; no test over 60 s |
 | `go vet` and staticcheck for all five targets (coder) | clean; imports unchanged |
-| V6, V7, V10, gofmt, staticcheck, line endings (project manager, 69a26c2) | the four imports; clean |
-| Fuzzing (project manager, 69a26c2) | `FuzzScopedGroupReplay` ran 120 s: 25,063 executions, 56 new interesting inputs, no failure. It was fuzzed because S1 edits `transitionTask`, which the target reaches, although the edit is neutral for replayed input |
-| V4 check without its race step (project manager, 69a26c2) | `check PASSED: 8 of 9 steps passed, race skipped (D129) in 465.9s` (tests 398.9 s; `internal/core/agents` 186.0 s) |
+| V6, V7, V10, gofmt, staticcheck, line endings (project manager, 7feffa3) | the four imports; clean |
+| Fuzzing (project manager, 7feffa3) | `FuzzScopedGroupReplay` ran 120 s: 25,063 executions, 56 new interesting inputs, no failure. It was fuzzed because S1 edits `transitionTask`, which the target reaches, although the edit is neutral for replayed input |
+| V4 check without its race step (project manager, 7feffa3) | `check PASSED: 8 of 9 steps passed, race skipped (D129) in 465.9s` (tests 398.9 s; `internal/core/agents` 186.0 s) |
 
 Rule breaks, each failing its named tests once and restored byte for byte:
 
@@ -66,7 +66,7 @@ Rule breaks, each failing its named tests once and restored byte for byte:
 
 The project manager's reading during S1, confirmed by the review: note 1's "no exported API" means no exported entrance or type, so the three ruled sentinels, which the tests compare with `errors.Is`, may be exported (P9, P10).
 
-Review: AdvisorT12S1 approved S1 at 69a26c2: "S1's record-free rules implement notes 2–7 exactly with real breaks and no exported surface beyond the three ruled sentinels; approve the fast-forward, carrying reviewUnixNano's deletion to S3b."
+Review: AdvisorT12S1 approved S1 at 7feffa3: "S1's record-free rules implement notes 2–7 exactly with real breaks and no exported surface beyond the three ruled sentinels; approve the fast-forward, carrying reviewUnixNano's deletion to S3b."
 - Its minor: `reviewUnixNano`, a second clock rule with no ruled caller, goes with its test and the `math` import, because P10's plain `UnixNano` default with `reviewObservation` is the whole rule. S3b deleted them.
 - Its nit: `guardReviewTask`'s terminal-state clause never decides, so it and its three rows go. S3a dropped them.
 
@@ -74,7 +74,7 @@ The verdict is `local://t12-s1-verdict.md`.
 
 ## S2, the F3-12 contract, D143 and the freeze (2026-10-24)
 
-S2 is 20 files in `contract/ledger`, +1,901/−16: 13 code and test files and 7 new fixtures under `testdata/f3/12/`. It was committed as 6a34116 on 69a26c2, with all 20 hashes and all 24 golden hashes matching. It holds:
+S2 is 20 files in `contract/ledger`, +1,901/−16: 13 code and test files and 7 new fixtures under `testdata/f3/12/`. It was committed as bfc54c7 on 7feffa3, with all 20 hashes and all 24 golden hashes matching. It holds:
 - three version-1 codecs, `runtime.review_requested`, `runtime.review_result` and `runtime.review_receipt`, with the catalogue at forty-one types;
 - schema 3's canonical submission;
 - `PrivateRevisionRef` and the `private_revision` kind;
@@ -90,7 +90,7 @@ The [freeze evidence](f3-12-freeze-evidence.md) gives the coder's runs, V3, V6�
 
 | Step | Result |
 |---|---|
-| V4 check without its race step (project manager, 6a34116) | `check PASSED: 8 of 9 steps passed, race skipped (D129) in 510.7s` (tests 395.3 s; `contract/ledger` 70.6 s, `internal/core/agents` 162.6 s, `internal/core/ledgerstore` 276.4 s) |
+| V4 check without its race step (project manager, bfc54c7) | `check PASSED: 8 of 9 steps passed, race skipped (D129) in 510.7s` (tests 395.3 s; `contract/ledger` 70.6 s, `internal/core/agents` 162.6 s, `internal/core/ledgerstore` 276.4 s) |
 
 The project manager's answers during S2, all three confirmed by the review:
 
@@ -98,15 +98,15 @@ The project manager's answers during S2, all three confirmed by the review:
 2. Failure wire names: the request and its arguments keep `failure_cause` and `failing_evidence`, and the result and `failure.resolve`'s arguments use `cause` and `failing_evidence` (finding 3).
 3. The failure cause is an open token the requester supplies, so `semantic_failure`, the golden's value, is not frozen as a writer value; the record names it only in parentheses. This answered the record drafter's question.
 
-D143: at the owner's word at 14:37, e045717 removed the workflow's `push` trigger. It was placed on 6a34116, so the record commit's check covered it, and S2's review approved it with S2 and the record.
+D143: at the owner's word at 14:37, b332e47 removed the workflow's `push` trigger. It was placed on bfc54c7, so the record commit's check covered it, and S2's review approved it with S2 and the record.
 
-Review, as D144 records it: "On 2026-10-24 the build advisor (Fable) approved ticket 12's S2 at 6a34116 together with this record, its evidence and the D143 commit e045717, with no blocker or major finding; its minor (the package documentation's Catalogue section, stale since D140, now naming F3-11 and F3-12 and forty-one types) and nit (the Date line's F3-11 clause qualified by the two `SubjectRef` additions) were applied to the record commit before the freeze." Its second nit, that every golden binding has a one-element `required_evidence`, asked for no change, since the tests show the ascending rule. The verdict is `local://t12-s2-verdict.md`.
+Review, as D144 records it: "On 2026-10-24 the build advisor (Fable) approved ticket 12's S2 at bfc54c7 together with this record, its evidence and the D143 commit b332e47, with no blocker or major finding; its minor (the package documentation's Catalogue section, stale since D140, now naming F3-11 and F3-12 and forty-one types) and nit (the Date line's F3-11 clause qualified by the two `SubjectRef` additions) were applied to the record commit before the freeze." Its second nit, that every golden binding has a one-element `required_evidence`, asked for no change, since the tests show the ascending rule. The verdict is `local://t12-s2-verdict.md`.
 
-The freeze: the record commit df72ff6, `docs(ledger): record the F3-12 freeze (D144)`, on e045717, passed the check without its race step in 657.6 s (tests 580.3 s). A Markdown-only amendment filled in that result as e126a7e (D128). The project manager froze F3-12 under D125 as D144, and `main` moved from 69a26c2 to e126a7e at 15:16.
+The freeze: the record commit df72ff6, `docs(ledger): record the F3-12 freeze (D144)`, on b332e47, passed the check without its race step in 657.6 s (tests 580.3 s). A Markdown-only amendment filled in that result as 7fcd582 (D128). The project manager froze F3-12 under D125 as D144, and `main` moved from 7feffa3 to 7fcd582 at 15:16.
 
 ## S3a, the reducer, request slots, direct guard and passive views (2026-10-24)
 
-S3a is 28 files in `internal/core/agents`, +2,026/−169, committed as 7a91eaf on e126a7e, with all 28 hashes matching. It exports no mutation, and its production and test imports equal `main`'s. It holds:
+S3a is 28 files in `internal/core/agents`, +2,026/−169, committed as 3344892 on 7fcd582, with all 28 hashes matching. It exports no mutation, and its production and test imports equal `main`'s. It holds:
 - the reducer for all three F3-12 types through Open and the golden;
 - the request slots and their lifecycle;
 - the `maxRequest` watermark and the cold lookups at or below it;
@@ -124,9 +124,9 @@ At the coder's request a reader, ReaderT12S3a, mapped the agents test helpers an
 | Race (coder) | pass, 293.2 s; no test over 60 s |
 | New tests (coder) | `TestReviewFrozenGoldenReplay` (3 rows), `TestReviewGroupRules` (64), `TestReviewDirectGuard` (12), `TestReviewLedgerRecovery` (4), `TestReviewStatusViews` (4) and `FuzzReviewGroupReplay` (7 seeds) |
 | `contract/ledger` as a consumer (coder) | pass |
-| V6, V7, V10, gofmt, staticcheck, line endings (project manager, 7a91eaf) | the four imports; clean |
-| Fuzzing (project manager, 7a91eaf) | 120 s each, no failure, `testdata` clean: `FuzzReviewGroupReplay` 1,366 executions, 27 new interesting inputs; `FuzzScopedGroupReplay` 19,558, 43 new; `FuzzPrivateGroupReplay` 622,455, 1 new |
-| V4 check without its race step (project manager, 7a91eaf) | `check PASSED: 8 of 9 steps passed, race skipped (D129) in 508.3s` (tests 446.2 s; `internal/core/agents` 213.1 s) |
+| V6, V7, V10, gofmt, staticcheck, line endings (project manager, 3344892) | the four imports; clean |
+| Fuzzing (project manager, 3344892) | 120 s each, no failure, `testdata` clean: `FuzzReviewGroupReplay` 1,366 executions, 27 new interesting inputs; `FuzzScopedGroupReplay` 19,558, 43 new; `FuzzPrivateGroupReplay` 622,455, 1 new |
+| V4 check without its race step (project manager, 3344892) | `check PASSED: 8 of 9 steps passed, race skipped (D129) in 508.3s` (tests 446.2 s; `internal/core/agents` 213.1 s) |
 
 `FuzzReviewGroupReplay` ran about 11 executions a second. The review found that it follows the brief's §6.2: about 28 % of its inputs were valid, and each valid input pays a real-store copy and two Opens. S3b narrowed the valid branches.
 
@@ -161,7 +161,7 @@ The project manager's answers during S3a, all four confirmed by the review:
    It keeps P13's seek and finding 2's O(N·segment). The coder moved `sourceRecord` to the same cursor, which finding 2 allows, so S4 reports both figures. The review checked the cursor's correctness, error handling and cost, and asked that S4 label its measurement with the witness span.
 4. Hand-made groups in tests are drafts written through the store's `Append` or `Submit`, or copies of golden bytes, with observations and deadlines taken from envelope times read back from the log, never from wall time.
 
-Review: "S3a 7a91eaf approved: the F3-12 reducer, request slots, maxRequest watermark, segment-aligned witnesses, the direct guard live and at replay, and the passive views are implemented and proved through all three goldens, 64 group-rule rows and seven real breaks, with one minor (loadTask's cold scan now decodes whole families) and three test nits carried to S3b."
+Review: "S3a 3344892 approved: the F3-12 reducer, request slots, maxRequest watermark, segment-aligned witnesses, the direct guard live and at replay, and the passive views are implemented and proved through all three goldens, 64 group-rule rows and seven real breaks, with one minor (loadTask's cold scan now decodes whole families) and three test nits carried to S3b."
 - Its minor: `loadTask`'s cold scan ran `decodeFamily` on every commit, a cost and not a correctness defect. S3b restored the per-record scan before S4 measured.
 - Its three test nits, closed in S3b:
   - assert the refusal class on the direct private-failure row, which S3b's answer 1 settled as `ErrDenied`;
@@ -172,7 +172,7 @@ The verdict is `local://t12-s3a-verdict.md`.
 
 ## S3b, the producers (2026-10-24)
 
-S3b is 22 files in `internal/core/agents`, +1,899/−117, committed as 20d076e on 7a91eaf, with all 22 hashes matching. It holds:
+S3b is 22 files in `internal/core/agents`, +1,899/−117, committed as 587d930 on 3344892, with all 22 hashes matching. It holds:
 - the four producers, `RequestReview`, `RequestFailure`, `ResolveReview` and `ResolveFailure`, on `Service` for the owner and on `Agent`;
 - the clock seam `serviceDeps.reviewClock`, defaulting to `time.Now().UTC().UnixNano()`;
 - unlocked witness preparation;
@@ -198,9 +198,9 @@ The guard order, the placement of the recovery rows, break I and the final runs 
 | V5 `-race -count=20` on `TestReviewResultRaces` and `TestReviewDuplicateAndReplacement` (coder) | pass, 223.9 s |
 | `contract/ledger` as a consumer (coder) | pass, 9.2 s |
 | `go vet` and staticcheck for all five targets; `go mod tidy -diff` (coder) | clean |
-| V6, V7, V10, gofmt, staticcheck, line endings (project manager, 20d076e) | the four imports; clean |
-| Fuzzing (project manager, 20d076e) | 120 s each, no failure, `testdata` clean: `FuzzReviewGroupReplay`, with its valid branches narrowed, 15,566 executions, 67 new interesting inputs; `FuzzScopedGroupReplay`, which reaches `loadTask`, 20,125, 14 new. `FuzzPrivateGroupReplay` was not rerun: S3b touches neither `planGroup` nor the private revisions |
-| V4 check without its race step (project manager, 20d076e) | `check PASSED: 8 of 9 steps passed, race skipped (D129) in 520.5s` (tests 455.5 s; `internal/core/agents` 232.9 s) |
+| V6, V7, V10, gofmt, staticcheck, line endings (project manager, 587d930) | the four imports; clean |
+| Fuzzing (project manager, 587d930) | 120 s each, no failure, `testdata` clean: `FuzzReviewGroupReplay`, with its valid branches narrowed, 15,566 executions, 67 new interesting inputs; `FuzzScopedGroupReplay`, which reaches `loadTask`, 20,125, 14 new. `FuzzPrivateGroupReplay` was not rerun: S3b touches neither `planGroup` nor the private revisions |
+| V4 check without its race step (project manager, 587d930) | `check PASSED: 8 of 9 steps passed, race skipped (D129) in 520.5s` (tests 455.5 s; `internal/core/agents` 232.9 s) |
 
 Rule breaks. The paused coder broke A, B, C, F, G and H. CoderT12S3bOpus broke B, C, F, G and H again in the moved code and added I, each red, restored by hash and green:
 
@@ -225,7 +225,7 @@ The project manager's answers during S3b, all three confirmed by the review, eac
    - A retry checks the caller's read rights before returning its receipt, with per-reference source reads under the lock, as ticket 11's `artifact.read` check does.
    - The review stated the precedence exactly: caller chain → match → head → time → bounds and reservation → witnesses → read rights and sources → time → kernel → one `Submit`. `planReview` follows the same order, so replay and live agree.
 
-Review: "S3b 20d076e approved: the four review and failure producers, the two-pass guard order with its pinned precedence, the clock seam with both samples and the incarnation floor, unlocked witnesses, the request-ID CAS and one Submit are built on S3a's single reducer and proved by eight live tests, six re-broken rules and break I, with one minor (ReviewReceipt.ThroughSequence means two things) and two nits carried to S4."
+Review: "S3b 587d930 approved: the four review and failure producers, the two-pass guard order with its pinned precedence, the clock seam with both samples and the incarnation floor, unlocked witnesses, the request-ID CAS and one Submit are built on S3a's single reducer and proved by eight live tests, six re-broken rules and break I, with one minor (ReviewReceipt.ThroughSequence means two things) and two nits carried to S4."
 - Its minor: `ReviewReceipt.ThroughSequence` meant the receipt's own sequence on the producer and retry paths, but the prefix in `ReviewCommandStatus`, and the review recommended deleting it.
 - Its two nits:
   - `assertInert` should also check the direct guard and the unchanged book;
@@ -235,7 +235,7 @@ All three went to S4, which deleted the field, made every successfully read samp
 
 ## S4, the crash rows, the measurement and the final documentation (2026-10-24)
 
-S4 is 6 files in `internal/core/agents`, +560/−10, committed as ee450cf on 20d076e, with all 6 hashes matching: `doc.go`, `review_execute.go`, `review_query.go`, the new `review_crash_test.go`, `review_live_clock_test.go` and `review_prose_test.go`. Its production changes are the carried items:
+S4 is 6 files in `internal/core/agents`, +560/−10, committed as e296375 on 587d930, with all 6 hashes matching: `doc.go`, `review_execute.go`, `review_query.go`, the new `review_crash_test.go`, `review_live_clock_test.go` and `review_prose_test.go`. Its production changes are the carried items:
 - **`ReviewReceipt.ThroughSequence` is deleted.** It was an exported field with no caller before ticket 15, and `Sequence` and `EffectSequence` locate the receipt. The producer, a retry and the passive query now return the same value. `ReviewView.ThroughSequence` keeps the package-wide meaning, the read prefix.
 - **Every successfully read clock sample raises this incarnation's floor** before the head runs, so a call that a later guard refuses still raises it. The new row `TestReviewDeadlineAndClock/refused-call-sample-raises-incarnation-floor` is red without it (`break-floor.log`).
 - **`TestReviewProseCannotDecideTask`'s `assertInert`** also asserts that a direct complete refuses `ErrReviewRequired` with the frontier unchanged, and that the colony book is unchanged.
@@ -251,7 +251,7 @@ S4 is 6 files in `internal/core/agents`, +560/−10, committed as ee450cf on 20d
 
 S5 rewrote its cost paragraph.
 
-CoderT12S4, a fresh coder on the `coder-claude` role, started at 17:53 on 20d076e and ran for 1h43m. Its transcript shows `anthropic/claude-opus-5-5` at effort xhigh, as the owner asked at 17:18.
+CoderT12S4, a fresh coder on the `coder-claude` role, started at 17:53 on 587d930 and ran for 1h43m. Its transcript shows `anthropic/claude-opus-5-5` at effort xhigh, as the owner asked at 17:18.
 
 `TestReviewInjectedCrashRecovery` (`review_crash_test.go`) runs four parallel rows over `os.CopyFS` copies of one closed real store. Each is a child of the test binary, run with `-test.run=^TestReviewCrashChild$` and positively waited through `CombinedOutput`. Each reopens a real store with a review clock that fails the test if it is read, and asserts:
 - the frontier against the durable log, the consumed ID and the unpins read through `ledger.OpenReader`;
@@ -276,7 +276,7 @@ The test labels the rows injected faults, not power-loss or isolation proof.
 | Race (coder, under load) | pass, 604.4 s, no data race. `TestScopedTaskTransitionsAndProjection`, a ticket 11 test with no subtests that S4 did not touch, took 75.1 s, against 58.89 s at ticket 11's S4. `TestReviewProseCannotDecideTask` took 46.7 s, against 23 s at S3b, with five more owner transitions and book reads in `assertInert` |
 | V5 `-race -count=20` on `TestReviewResultRaces` and `TestReviewDuplicateAndReplacement` (coder, under load) | pass, 428.4 s |
 | Fuzzing | none: S4 changes no fuzzed code, and `FuzzReviewGroupReplay` calls no producer and no `ReviewCommandStatus`. The seed corpora passed in V1 and race |
-| V4 full check, uncached, with its race step (project manager, ee450cf; an evidence check, D129) | `check PASSED: all 9 steps passed in 1397.5s` (tests 440.1 s, race 889.6 s; 0 cached packages; `internal/core/agents` 230.4 s and 775.0 s), within D127's 25-minute line |
+| V4 full check, uncached, with its race step (project manager, e296375; an evidence check, D129) | `check PASSED: all 9 steps passed in 1397.5s` (tests 440.1 s, race 889.6 s; 0 cached packages; `internal/core/agents` 230.4 s and 775.0 s), within D127's 25-minute line |
 
 The coder's runs were loaded:
 - SlayTheSpire2 ran at about 0.67 of a core, and V1, race and V5 each took about twice as long as at S3b.
@@ -306,7 +306,7 @@ The project manager's answer during S4, which the review confirmed (its answer 5
 
 The review added two precisions. The 2× length is a deviation from the brief's plan of about 10×, to be recorded here, not a change of plan. And S5, the separate decision, supersedes `doc.go`'s "no fix is implied here".
 
-Review: AdvisorT12S4 approved S4 at ee450cf: "S4 ee450cf approved: ThroughSequence deleted, every read clock sample raises the incarnation floor, assertInert covers the guard and the book, four positively waited child-process crash rows over private real stores with breaks A–E red then restored, and a labelled 2× measurement that found Open O(N·G·H) through ticket 11's artifactAuthority (119.8 s → 800.5 s for 2.07× history, 65–77 % of CPU), which this review routes to a ticket-12 fix slice S5 — a check-order correction, no index — before the close."
+Review: AdvisorT12S4 approved S4 at e296375: "S4 e296375 approved: ThroughSequence deleted, every read clock sample raises the incarnation floor, assertInert covers the guard and the book, four positively waited child-process crash rows over private real stores with breaks A–E red then restored, and a labelled 2× measurement that found Open O(N·G·H) through ticket 11's artifactAuthority (119.8 s → 800.5 s for 2.07× history, 65–77 % of CPU), which this review routes to a ticket-12 fix slice S5 — a check-order correction, no index — before the close."
 - **Its major finding is about the ticket, not S4's code.** `artifactAuthority` iterated every grant the participant held and, for each task resource, authorized `task.inspect` and loaded the task before it could know which task the artifact belonged to. For an evicted terminal task, each load is a cold whole-history scan. This contradicts finding 2, and the review ruled S5.
 - **Its first two nits fold into S5's rewrite of the cost paragraph:**
   - the paragraph named unexported identifiers;
@@ -322,7 +322,7 @@ A throwaway driver through the public interface, never committed, with a byte-id
 - `memory_windows.go`, 8482128fd478e9fec4615891520e3214aad5bc6bc24c6a82d5d97499b6aa6d50;
 - `memory_other.go`, 510e7fa1005148730aaf4b1bad5141914262b14827ce1aae9e11137aafd52d04.
 
-It also reimplements `sourceRecord`'s from-0 and segment-aligned scans over the public ledger reader. Its defaults are populations 12 and 20 and factor 2. With `-profiles <dir>` it writes four CPU profiles and computes the read-rights share itself with `go tool pprof -traces`. The coder ran it under load (`measurement.log`, 2,101.6 s). The project manager reran it on ee450cf in the owner's quiet window (`smoke-pm/measurement-pm.log`, 842.1 s, 20:30:17–20:44:28), with the busiest process at 0.08 and 0.07 of a core before and after.
+It also reimplements `sourceRecord`'s from-0 and segment-aligned scans over the public ledger reader. Its defaults are populations 12 and 20 and factor 2. With `-profiles <dir>` it writes four CPU profiles and computes the read-rights share itself with `go tool pprof -traces`. The coder ran it under load (`measurement.log`, 2,101.6 s). The project manager reran it on e296375 in the owner's quiet window (`smoke-pm/measurement-pm.log`, 842.1 s, 20:30:17–20:44:28), with the busiest process at 0.08 and 0.07 of a core before and after.
 
 Its first lines label it:
 - a bookkeeping measurement only: no duration assertion, SLA, capacity, population cap or C4 claim; no executor, model, tool or provider work; and no injected crash or power loss;
@@ -392,9 +392,9 @@ The S4 review's major finding sent the measured regression here, and its ruling 
 
 The ruling expected a decision to cost O(G + witness batch) and Open O(N·(G + segment)), P13's bound. A cost break is untestable without a duration assertion, so the ruling asked for S4's driver rerun on the exact commit, at the same lengths and with the same labels, as the proof.
 
-CoderT12S5 (role `coder-claude`, Claude Opus 5.5 at effort xhigh, with the LSP) started at 20:31 on ee450cf and ran for 2h6m. It only read and edited until the project manager's quiet rerun of S4's driver ended, at 21:09.
+CoderT12S5 (role `coder-claude`, Claude Opus 5.5 at effort xhigh, with the LSP) started at 20:31 on e296375 and ran for 2h6m. It only read and edited until the project manager's quiet rerun of S4's driver ended, at 21:09.
 
-S5 is 2 files in `internal/core/agents`, +50/−39, committed as e2008b6 on ee450cf. Both hashes match the committed blobs:
+S5 is 2 files in `internal/core/agents`, +50/−39, committed as d37ca15 on e296375. Both hashes match the committed blobs:
 - **`scoped_authority.go`,** SHA-256 15c242be2e9fdf8758be24456f1d8e1fff0c95e4b2d1db084853554116add508. `artifactAuthority` resolves the artifact's source at most once per call, lazily, at the first task resource whose `task.inspect` the caller holds: from the witness batch when there is one, and otherwise by one `sourceRecord`. It compares the task that source names with each task resource before `loadTask`, so only the matching task loads. The artifact-class early return, the `task.inspect` authorization, the audience, the description's SHA-256 and size and its equality, and the selected-grant branch keep their order. The only state is two locals. The function comment gained three lines.
 - **`doc.go`,** SHA-256 2c76c9014892f9f2eef2f21084bb820717729c042d66f1fafeb534b241d4b4c8. Only its cost paragraph changed (lines 311–337).
 
@@ -416,9 +416,9 @@ The retry's cost as built:
 | V1 (coder, quiet) | pass, 58.8 s (`ok` 57.584 s) |
 | Race (coder, quiet) | pass, 343.7 s (`ok` 331.970 s), no data race and no test over 60 s. The race times the S4 review asked for: `TestScopedTaskTransitionsAndProjection` 41.33 s (75.1 s at S4 under load; 58.89 s at ticket 11's S4); `TestReviewProseCannotDecideTask` 26.11 s (46.7 s at S4; 23 s at S3b); `TestReviewInjectedCrashRecovery` 5.33 s, its rows 9.38–10.56 s |
 | V5 `-race -count=20` on `TestReviewResultRaces` and `TestReviewDuplicateAndReplacement` (coder, quiet) | pass, 237.1 s |
-| V6, V7, V10, gofmt, staticcheck, line endings (project manager, e2008b6) | the four imports; `go mod tidy -diff` empty and `go mod verify` clean; Defender on; clean |
-| Fuzzing (project manager, e2008b6) | 120 s each, no failure, `testdata` clean: `FuzzReviewGroupReplay` 13,544 executions, 29 new interesting inputs; `FuzzScopedGroupReplay` 16,700, 14 new |
-| V4 full check, uncached, with its race step (project manager, e2008b6; the ticket's full check, D129) | `check PASSED: all 9 steps passed in 1681.3s` (tests 519.4 s, race 1057.0 s; `internal/core/agents` 292.8 s and 901.0 s), within D127's 25-minute line |
+| V6, V7, V10, gofmt, staticcheck, line endings (project manager, d37ca15) | the four imports; `go mod tidy -diff` empty and `go mod verify` clean; Defender on; clean |
+| Fuzzing (project manager, d37ca15) | 120 s each, no failure, `testdata` clean: `FuzzReviewGroupReplay` 13,544 executions, 29 new interesting inputs; `FuzzScopedGroupReplay` 16,700, 14 new |
+| V4 full check, uncached, with its race step (project manager, d37ca15; the ticket's full check, D129) | `check PASSED: all 9 steps passed in 1681.3s` (tests 519.4 s, race 1057.0 s; `internal/core/agents` 292.8 s and 901.0 s), within D127's 25-minute line |
 
 The coder's machine was quiet: the busiest process used 0.03 of a core before the 2× run and 0.04 before the 10× run.
 
@@ -430,7 +430,7 @@ Rule break, red, restored by hash and green:
 
 No test was added: the ruling allowed an existing test's red, and a cost break has no duration assertion.
 
-Review: AdvisorT12S5 reviewed S5 and the close documents in one review (D116 item 6, as the S4 review allowed): "S5 e2008b6 approved: artifactAuthority resolves the artifact's source once, at the first task resource the caller may inspect, compares its TaskID before loadTask and loads only that task, with every other check in its order and no state; dropping the comparison turned ticket 11's TestScopedTaskTransitionsAndProjection red; the quiet driver put the read-rights path at 0.000 of every profile, one approve at 85 → 160 ms for 2.07× history and 94 → 671 ms for a measured 10.04× (exponent 0.85), and agents.Open at 13.2 → 47.8 s and 15.6 → 1,191.1 s (exponents 1.78 and 1.88, 9–11 % of it the review path's witness batch and the rest ticket 10's and 11's scans), inside the ruling's O(N·(G + segment)); doc.go's cost paragraph names no unexported identifier and states the retry's cost as built; one nit, no change required."
+Review: AdvisorT12S5 reviewed S5 and the close documents in one review (D116 item 6, as the S4 review allowed): "S5 d37ca15 approved: artifactAuthority resolves the artifact's source once, at the first task resource the caller may inspect, compares its TaskID before loadTask and loads only that task, with every other check in its order and no state; dropping the comparison turned ticket 11's TestScopedTaskTransitionsAndProjection red; the quiet driver put the read-rights path at 0.000 of every profile, one approve at 85 → 160 ms for 2.07× history and 94 → 671 ms for a measured 10.04× (exponent 0.85), and agents.Open at 13.2 → 47.8 s and 15.6 → 1,191.1 s (exponents 1.78 and 1.88, 9–11 % of it the review path's witness batch and the rest ticket 10's and 11's scans), inside the ruling's O(N·(G + segment)); doc.go's cost paragraph names no unexported identifier and states the retry's cost as built; one nit, no change required."
 
 Its one nit, with no change required: `doc.go`'s retry sentence places the terminal-task load inside its exception for a retry matched before the witness batch is read. That load in fact applies to every retry of a committed approve or fail. The sentence is ambiguous, not false, and a `.go` edit would need a new commit and a new full check (D129). The verdict is `local://t12-s5-close-verdict.md`.
 
@@ -444,11 +444,11 @@ Its one nit, with no change required: `doc.go`'s retry sentence places the termi
 
 The review confirmed the answer.
 
-The coder ran the driver at 2× and at 10× on its worktree, whose hashes equal e2008b6's blobs. The project manager reran it at 2× on e2008b6 from 23:12:05 to 23:15:32 (exit 0, 206 s). Before his run the busiest process, apart from the sampler, used 0.02 of a core; no sample was taken after it.
+The coder ran the driver at 2× and at 10× on its worktree, whose hashes equal d37ca15's blobs. The project manager reran it at 2× on d37ca15 from 23:12:05 to 23:15:32 (exit 0, 206 s). Before his run the busiest process, apart from the sampler, used 0.02 of a core; no sample was taken after it.
 
 All four 2× runs below reached the same history. Commits went from 314 to 651, H from 1,047 to 2,163, N from 80 (41 requests, 39 results) to 172 (87, 85), G from 32 (30 on terminal tasks) to 67 (65), and ledger bytes from 1,402,745 to 2,925,733. Each cell gives the baseline → the grown length.
 
-| Measure | Project manager's S5 rerun (e2008b6) | Coder's S5 run (e2008b6) | Project manager's quiet run (ee450cf) | Coder's loaded run (ee450cf) |
+| Measure | Project manager's S5 rerun (d37ca15) | Coder's S5 run (d37ca15) | Project manager's quiet run (e296375) | Coder's loaded run (e296375) |
 |---|---|---|---|---|
 | The store's Open | 81.7 → 118.4 ms | 66.7 → 120.3 ms | 75.2 → 134.0 ms | 96.7 → 348.0 ms |
 | `agents.Open` | 14.7 → 50.7 s, exponent 1.70 | 13.2 → 47.8 s, 1.78 | 43.9 → 330.6 s, 2.78 | 119.8 → 800.5 s, 2.62 |
@@ -472,7 +472,7 @@ The coder's S5 run at 2×:
 
 The races ended as at S4 in every run: the two identical results both applied with the same receipt, 4 records and 1 unit; the result against a reassignment was stale, with the reassignment applied, 3 records and no unit.
 
-The coder's run at 10× measured history that S4 could only project, on the tree whose hashes equal e2008b6's blobs:
+The coder's run at 10× measured history that S4 could only project, on the tree whose hashes equal d37ca15's blobs:
 - **History:** 3,174 commits, H 10,515, N 868 (435 requests, 433 results), G 328 (326 on terminal tasks), and 14,337,611 ledger bytes.
 - **The store's Open:** 75.1 → 602.5 ms.
 - **`agents.Open`:** 15,612 → 1,191,102 ms, 76.3 times, exponent 1.88; the N·G·H model predicts 1,116.9 times.
@@ -501,18 +501,18 @@ The profile reading, from `pprof-shares.txt`, is an analysis of the kept profile
 
 The ruling's bound holds. What remains is ticket 10's and 11's per-scope history validation and scoped replay, which ticket 140 inherits, with the review path's witness batch.
 
-There was no 10× rerun by the project manager. The coder's run is on the tree whose hashes equal e2008b6's blobs, the convention D129 states for coders' runs (D121), and it claims no bound. A rerun would have held the owner's quiet machine for another hour, and the project manager's 2× rerun on the exact commit is the gate's figure.
+There was no 10× rerun by the project manager. The coder's run is on the tree whose hashes equal d37ca15's blobs, the convention D129 states for coders' runs (D121), and it claims no bound. A rerun would have held the owner's quiet machine for another hour, and the project manager's 2× rerun on the exact commit is the gate's figure.
 
 Unmeasured, as the driver prints it ([S4's list](#s4s-labelled-measurement)), except that the 10× run measured the 10× history: the 10× log's line 154 says otherwise.
 
 ## CI
 
-CI is paused ([D143](../../../docs/DECISIONS.md#d143-ci-paused-a-push-starts-no-run)). The owner wrote at 14:37: "Github Action budget has been reached, adjust the repo so that no CI tests run for the time being. A final decision/resolution will be forthcoming". D143's e045717 removed the workflow's `push` trigger, so a push to `main` starts no run, and a run starts only when the owner starts one by hand.
+CI is paused ([D143](../../../docs/DECISIONS.md#d143-ci-paused-a-push-starts-no-run)). The owner wrote at 14:37: "Github Action budget has been reached, adjust the repo so that no CI tests run for the time being. A final decision/resolution will be forthcoming". D143's b332e47 removed the workflow's `push` trigger, so a push to `main` starts no run, and a run starts only when the owner starts one by hand.
 
 - No hosted run covers any of ticket 12's commits: S1, S2 with D143 and D144's record, S3a, S3b, S4, S5 or this close. The brief's §6.4 says that "a missing run is missing evidence", and that is what this is: ticket 12's code has had no CI run on Windows, Linux or macOS. Its portability rests on each check's `go vet`, staticcheck and cross-builds for the five targets.
-- Run 14 started with ticket 11's push of d12f605 at 11:40 on 2026-10-24, before D143. Its logs have not reached the project manager, and no result is claimed for it.
+- Run 14 started with ticket 11's push of d7ed4ef at 11:40 on 2026-10-24, before D143. Its logs have not reached the project manager, and no result is claimed for it.
 - Ticket 12's one push, after this close (D141), starts no run (D143).
-- The latest CI result recorded is run 13, on 6d3eecc, which passed all nine steps on Windows, Linux and macOS ([ticket 11's evidence](ticket-11-evidence.md#ci-runs-913)).
+- The latest CI result recorded is run 13, on 6e11d49, which passed all nine steps on Windows, Linux and macOS ([ticket 11's evidence](ticket-11-evidence.md#ci-runs-913)).
 
 ## Limits
 
@@ -527,7 +527,7 @@ CI is paused ([D143](../../../docs/DECISIONS.md#d143-ci-paused-a-push-starts-no-
   - one decision took 1.16 s and 6.0 s;
   - the read-rights path took 56–75 % of the profiled CPU.
 
-  After S5, quiet and under the profiler, the driver rerun on e2008b6 put the read-rights path at 0.000 of every profile: at 2× (the project manager's rerun) `agents.Open` took 14.7 s at 1,047 records and 50.7 s at 2,163 (exponent 1.70; the coder's run 13.2 s → 47.8 s, 1.78) and one approve 84 ms → 140 ms (the coder's 85 → 160 ms); the coder's run on the tree whose hashes equal e2008b6's blobs reached a measured 10.04× (H 10,515, N 868, G 328): `agents.Open` 15.6 s → 1,191.1 s (exponent 1.88) and one approve 94 → 671 ms (0.85). What remains of Open's growth is ticket 10's and 11's per-scope history validation (about 45 % of its CPU) and scoped replay (23–29 %), with the review path's witness batch at 9–11 %, the ruling's O(N·(G + segment)) in a one-segment log; the driver's 10× label was changed by the project manager's answer, hashes recorded, and the 10× log's unmeasured-10× line is false for that run ([S5](#s5-the-artifact-read-check-order-2026-10-24)).
+  After S5, quiet and under the profiler, the driver rerun on d37ca15 put the read-rights path at 0.000 of every profile: at 2× (the project manager's rerun) `agents.Open` took 14.7 s at 1,047 records and 50.7 s at 2,163 (exponent 1.70; the coder's run 13.2 s → 47.8 s, 1.78) and one approve 84 ms → 140 ms (the coder's 85 → 160 ms); the coder's run on the tree whose hashes equal d37ca15's blobs reached a measured 10.04× (H 10,515, N 868, G 328): `agents.Open` 15.6 s → 1,191.1 s (exponent 1.88) and one approve 94 → 671 ms (0.85). What remains of Open's growth is ticket 10's and 11's per-scope history validation (about 45 % of its CPU) and scoped replay (23–29 %), with the review path's witness batch at 9–11 %, the ruling's O(N·(G + segment)) in a one-segment log; the driver's 10× label was changed by the project manager's answer, hashes recorded, and the 10× log's unmeasured-10× line is false for that run ([S5](#s5-the-artifact-read-check-order-2026-10-24)).
 - What ticket 140 still inherits (P13, as the S4 review restated it):
   - the F3-12 groups in its index, since task state needs both families;
   - the cold request and receipt lookups as index sites;
@@ -587,10 +587,10 @@ Every review in ticket 12 was a fresh build advisor, Fable (`claude-fable-5-1`),
 
 | Review | Advisor | Commit | Verdict | Ran |
 |---|---|---|---|---|
-| The design ruling | AdvisorT12Ruling | the brief, at d12f605 | approve-with-changes: 9 choices accepted and 6 modified; 2 major, 6 minor and 2 nit findings | 22.2 min |
-| S1 | AdvisorT12S1 | 69a26c2 | approve: 1 minor, 1 nit | 7.7 min |
-| S2, the F3-12 record and D143 | AdvisorT12S2 | 6a34116 and e045717 | approve, S2's D41 sign-off: 1 minor, 2 nits | 13.5 min |
-| S3a | AdvisorT12S3a | 7a91eaf | approve: 1 minor, 3 nits | 17.6 min |
-| S3b | AdvisorT12S3b | 20d076e | approve: 1 minor, 2 nits | 14.4 min |
-| S4 | AdvisorT12S4 | ee450cf | approve: 1 major, ticket-level and routed to S5, and 3 nits | 11.8 min |
-| S5 and the close | AdvisorT12S5 | e2008b6; the close commit | approve: one nit on S5, no change required; the close documents with this review's changes applied | 11.8 min |
+| The design ruling | AdvisorT12Ruling | the brief, at d7ed4ef | approve-with-changes: 9 choices accepted and 6 modified; 2 major, 6 minor and 2 nit findings | 22.2 min |
+| S1 | AdvisorT12S1 | 7feffa3 | approve: 1 minor, 1 nit | 7.7 min |
+| S2, the F3-12 record and D143 | AdvisorT12S2 | bfc54c7 and b332e47 | approve, S2's D41 sign-off: 1 minor, 2 nits | 13.5 min |
+| S3a | AdvisorT12S3a | 3344892 | approve: 1 minor, 3 nits | 17.6 min |
+| S3b | AdvisorT12S3b | 587d930 | approve: 1 minor, 2 nits | 14.4 min |
+| S4 | AdvisorT12S4 | e296375 | approve: 1 major, ticket-level and routed to S5, and 3 nits | 11.8 min |
+| S5 and the close | AdvisorT12S5 | d37ca15; the close commit | approve: one nit on S5, no change required; the close documents with this review's changes applied | 11.8 min |

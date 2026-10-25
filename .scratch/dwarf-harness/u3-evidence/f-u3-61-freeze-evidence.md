@@ -1,6 +1,6 @@
-# F-U3-61 freeze evidence: ticket 61 S2 at 1a74bfc
+# F-U3-61 freeze evidence: ticket 61 S2 at ba8aa33
 
-Collected on 2026-10-17 for D130, the project manager's freeze of F-U3-61 under D125. The test runs are the coder's final runs on the committed tree (D121), verified by hash: all eight changed files' SHA-256 values match commit 1a74bfc (`feat(ledger): draft F-U3-61 graph records for the project manager's freeze`, on `main` 3d442f4). The fuzzing is the project manager's, on that commit, and so is the check, on the freeze-record commit; go1.27.2, Git 2.55.0.windows.3. What was built and checked follows the build advisor's design ruling for ticket 61 and its notes for S2; the ruling lands in this directory with the ticket's close.
+Collected on 2026-10-17 for D130, the project manager's freeze of F-U3-61 under D125. The test runs are the coder's final runs on the committed tree (D121), verified by hash: all eight changed files' SHA-256 values match commit ba8aa33 (`feat(ledger): draft F-U3-61 graph records for the project manager's freeze`, on `main` ee798a5). The fuzzing is the project manager's, on that commit, and so is the check, on the freeze-record commit; go1.27.2, Git 2.55.0.windows.3. What was built and checked follows the build advisor's design ruling for ticket 61 and its notes for S2; the ruling lands in this directory with the ticket's close.
 
 | Step | Result |
 |---|---|

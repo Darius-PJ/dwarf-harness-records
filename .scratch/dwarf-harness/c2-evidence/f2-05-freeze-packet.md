@@ -1,19 +1,19 @@
 # OG5: freeze request for F2-05, ticket 05's part of F2
 
-**Prepared:** 2026-10-12, against commit d4e3032 on branch `build/05-f2`, which is `main` at eb29f0a plus S2 (31103d8) and its fix-up. For C2 and ticket 05. **Answer:** 2026-10-12, "Freeze as presented". [D115](../../../docs/DECISIONS.md#d115-f2-05-workspace-and-scratch-records-frozen) records the freeze from section 8's draft, and Appendix A.2's edits record it in the register, the roadmaps and ticket 05; S2 reached `main` as 5ead0d9. The rest of this packet stays as sent.
+**Prepared:** 2026-10-12, against commit d4e3032 on branch `build/05-f2`, which is `main` at b663791 plus S2 (31103d8) and its fix-up. For C2 and ticket 05. **Answer:** 2026-10-12, "Freeze as presented". [D115](../../../docs/DECISIONS.md#d115-f2-05-workspace-and-scratch-records-frozen) records the freeze from section 8's draft, and Appendix A.2's edits record it in the register, the roadmaps and ticket 05; S2 reached `main` as bce48a0. The rest of this packet stays as sent.
 
 Ticket 05 has drafted the first records of C2's F2 family: four `workspace.*` record types in `contract/ledger`, the package that holds your frozen `ledger-format` (D111, DEC:1515–1516). Your answer to OG-B froze F2 in parts, each part before the code that writes it, and left this part's freeze as "a later and separate owner question" ([D113](../../../docs/DECISIONS.md#d113-c2s-f2-freeze-in-parts-each-part-before-the-code-that-writes-it), DEC:1642–1646). This packet asks that question. S2, the draft, reaches `main` only with your freeze, and S3, the code that writes these records, waits for it (DEC:1646). Take the time you need.
 
 **In short.** You are asked to freeze four record types that Core's workspace service will write: a workspace's registration, each revision of the capture inputs you approve for it, the creation of a context's private scratch, and the scratch's closure (§2). They are added to `ledger-format` version 1, which you froze on 2026-10-10. The record envelope, F0's four types, the reader and the appender do not change (§5.5). Freezing lets S2 reach `main` and S3 start (§3.1). Afterwards the four types change only by addition (§3.2). Seven questions show what the freeze fixes, each with our recommendation, and an eighth notes what stays Core policy (§6). All of them fold into one answer, "Freeze as presented", which we recommend (§7).
 
-Citations are `file:line` at `main` eb29f0a; "RC:289, :417" means lines 289 and 417 of the same file. DOC is cited by section and REG by line, both as they stand at d4e3032; Appendix B reproduces the relevant `go doc` output.
+Citations are `file:line` at `main` b663791; "RC:289, :417" means lines 289 and 417 of the same file. DOC is cited by section and REG by line, both as they stand at d4e3032; Appendix B reproduces the relevant `go doc` output.
 
 | Short | File |
 |---|---|
 | DOC | `contract/ledger/doc.go` at d4e3032, the package documentation |
 | REG | `docs/CONTRACTS.md` at d4e3032 |
 | DEC | `docs/DECISIONS.md` |
-| CON | `docs/CONTRACTS.md` at eb29f0a |
+| CON | `docs/CONTRACTS.md` at b663791 |
 | RC | `docs/ROADMAP-CORE.md` |
 | RM | `docs/ROADMAPS.md` |
 | UC | `docs/DESIGN-UNDERCURRENT.md` |
@@ -27,7 +27,7 @@ Citations are `file:line` at `main` eb29f0a; "RC:289, :417" means lines 289 and 
 
 ## 1. What is requested
 
-Freeze F2-05 by addition to `ledger-format` version 1 (D40, DEC:206; D111; D113), at commit d4e3032. That commit is `main` at eb29f0a plus two commits on branch `build/05-f2`: S2, 31103d8, and its fix-up, the test and documentation corrections the build advisor's review of S2 asked for (step R0 of Appendix C lists its files). d4e3032 is not on `main`. S2 adds to a frozen contract, so it waits for your sign-off (D41, DEC:213); with your freeze it reaches `main` by fast-forward, after a rebase that leaves `contract/ledger` byte-identical (Appendix A.0).
+Freeze F2-05 by addition to `ledger-format` version 1 (D40, DEC:206; D111; D113), at commit d4e3032. That commit is `main` at b663791 plus two commits on branch `build/05-f2`: S2, 31103d8, and its fix-up, the test and documentation corrections the build advisor's review of S2 asked for (step R0 of Appendix C lists its files). d4e3032 is not on `main`. S2 adds to a frozen contract, so it waits for your sign-off (D41, DEC:213); with your freeze it reaches `main` by fast-forward, after a rebase that leaves `contract/ledger` byte-identical (Appendix A.0).
 
 F2-05 is:
 
@@ -271,7 +271,7 @@ The build advisor reviewed S2 at 31103d8, on a runner's evidence collected in a 
 
 | Step | Check | What it shows | Expected |
 |---|---|---|---|
-| R0 | Commit identity | The commit presented is d4e3032: S2 and its fix-up on eb29f0a, with no golden byte changed by the fix-up | As described |
+| R0 | Commit identity | The commit presented is d4e3032: S2 and its fix-up on b663791, with no golden byte changed by the fix-up | As described |
 | R1 | Every test of `contract/ledger` and `internal/core/ledgerstore`, run twice | Every test passes, F0's included. The fix-up made the refusal test's shape deterministic, so both runs list the same tests | Exit 0 twice; no `--- FAIL`; 4 skips, the helper and harness tests; identical test lists; no `#`-suffixed F2-05 subtest |
 | R2 | `FuzzDecodeF2_05` and `FuzzCheckTruncation`, 120 s each | No input breaks a decoder; a decoded payload re-encodes and decodes to the same value; a log cut at any commit boundary of the new golden still checks correctly | Both pass; no new file under `testdata` |
 | R3 | `go list -deps` | `contract/ledger` still imports only the standard library | One line: the package itself |
@@ -280,7 +280,7 @@ The build advisor reviewed S2 at 31103d8, on a runner's evidence collected in a 
 | R6 | `git ls-files --eol` | The new golden is stored with LF (B1) | `i/lf w/lf` |
 | R7 | `gofmt -l`; `go vet` for Linux and macOS | Formatting and a cross-platform vet | Nothing listed; no finding |
 | R8 | `go run ./tools/check`, with `DWARF_CC` set | All nine check steps, including race tests, import boundaries and cross builds | All nine pass |
-| R9 | `git diff` against eb29f0a | Additivity: which existing lines S2 removed | The 14 lines of §5.5, no others |
+| R9 | `git diff` against b663791 | Additivity: which existing lines S2 removed | The 14 lines of §5.5, no others |
 | R10 | Line lengths of the golden | The size of each record, for §5.8 | Twelve lengths, each under 1 KiB |
 | R11 | `go doc -all` | The surface of Appendix B | Appendix B |
 | R12 | The grammar paragraphs in `doc.go` | §4.2's quotation matches the source | Word for word the same |
@@ -289,7 +289,7 @@ The build advisor reviewed S2 at 31103d8, on a runner's evidence collected in a 
 
 | Step | Result |
 |---|---|
-| R0 | HEAD d4e3032; `eb29f0a..HEAD` lists only the fix-up and 31103d8; tree clean; the fix-up changes only `doc.go`, `golden_test.go` and `workspace_test.go`; testdata identical to 31103d8 (d4e3032, 2026-10-12) |
+| R0 | HEAD d4e3032; `b663791..HEAD` lists only the fix-up and 31103d8; tree clean; the fix-up changes only `doc.go`, `golden_test.go` and `workspace_test.go`; testdata identical to 31103d8 (d4e3032, 2026-10-12) |
 | R1 | `go test -count=1 -v ./contract/ledger ./internal/core/ledgerstore`, twice: each run exit 0, 417 PASS, 0 FAIL, 4 SKIP (child-process helpers and the gated workload); no `#`-suffixed F2-05 names; identical test-name sets (d4e3032, 2026-10-12) |
 | R2 | `FuzzDecodeF2_05` 120 s: PASS, 3,639,569 execs; `FuzzCheckTruncation` 120 s: PASS, 59,269 execs; testdata unchanged (d4e3032, 2026-10-12) |
 | R3 | Non-standard imports of `contract/ledger`: only itself (d4e3032, 2026-10-12) |
@@ -298,7 +298,7 @@ The build advisor reviewed S2 at 31103d8, on a runner's evidence collected in a 
 | R6 | `contract/ledger/testdata/f2/05/log/00000000000000000001.jsonl`: `i/lf w/lf` (d4e3032, 2026-10-12) |
 | R7 | `gofmt -l contract/ledger`: nothing; `go vet` for linux and darwin: exit 0 (d4e3032, 2026-10-12) |
 | R8 | `go run ./tools/check`: all nine steps pass, in a quiet window (d4e3032, 2026-10-12). A first run on this commit, while three other heavy jobs ran on the machine, failed only the race step: `internal/core/ledgerstore`'s `TestBodiesConcurrentUse` timed out its one-minute throughput assertion ("138 references acknowledged within a minute, want 200"). That test is ticket 03's and unchanged here; alone under the race detector it passed three of three runs at about 14 s each. It is load-sensitive; the finding is recorded as a comment on ticket 03, whose test it is, in this request's send-time documents commit |
-| R9 | Changes since eb29f0a in `contract/ledger`: additions plus the 14 removed lines quoted in §5.5 (the catalogue literal restructured, the authorized catalogue-test change, reworded doc lines); no exported identifier, encoding rule or F0 golden byte changes (d4e3032, 2026-10-12) |
+| R9 | Changes since b663791 in `contract/ledger`: additions plus the 14 removed lines quoted in §5.5 (the catalogue literal restructured, the authorized catalogue-test change, reworded doc lines); no exported identifier, encoding rule or F0 golden byte changes (d4e3032, 2026-10-12) |
 | R10 | The golden's 12 records are 458–850 bytes each (each under 1,024) (d4e3032, 2026-10-12) |
 | R11 | `go doc -all ./contract/ledger` excerpt: Appendix B (d4e3032, 2026-10-12) |
 | R12 | `doc.go`'s `common_dir` and `branch` grammars are word for word §4.2's quotations (d4e3032, 2026-10-12) |
@@ -309,7 +309,7 @@ The runner's record of 2026-10-12, which the build advisor reviewed. R1 ran once
 
 | Step | Result at 31103d8 |
 |---|---|
-| R0 | Parent eb29f0a; worktree clean |
+| R0 | Parent b663791; worktree clean |
 | R1 | 421 tests and subtests ran: 417 passed, 4 skipped (`TestHelperChildWriter`, `TestHelperChildSubmitter`, `TestWorkload`, `TestHelperWorkloadChild`), none failed; `ok` for `contract/ledger` (3.961 s) and `internal/core/ledgerstore` (44.610 s) |
 | R2 | `FuzzDecodeF2_05`: 2,671,587 executions in 120 s, PASS. `FuzzCheckTruncation`: 47,376 executions in 120 s, PASS. No new file under `testdata` |
 | R3 | `github.com/Darius-PJ/dwarf-harness/contract/ledger` only |
@@ -340,7 +340,7 @@ The coder broke one rule at a time, ran the F2-05, golden and catalogue tests, a
 
 S2 changes no F0 rule.
 
-**The record.** Against eb29f0a it removes 14 lines from `contract/ledger`:
+**The record.** Against b663791 it removes 14 lines from `contract/ledger`:
 
 ```text
 -// TypeBodiesCollected, each at version 1. It never contains a type in the
@@ -608,7 +608,7 @@ Originators follow AGENTS:7–14.
 **Where the finds come from.**
 
 - **`contract/ledger/**` and `docs/CONTRACTS.md`:** from the `05-f2` worktree while S2's fix-up was being made. They change the wording S2 wrote, which `main` does not yet hold.
-- **Every other file:** from `main` at eb29f0a, the main checkout.
+- **Every other file:** from `main` at b663791, the main checkout.
 - Before applying, each find occurs exactly once in its file, with these exceptions:
   - F2a's find is text that F1 adds, and F29's is text that A2 adds.
   - F30a's and F30b's find also occurs inside their own fences in this packet. Apply them to the first occurrence only, the header on line 3.
@@ -652,7 +652,7 @@ Originators follow AGENTS:7–14.
 5. **Rebase.** Rebase `build/05-f2` onto `main`. If a commit on `main` also changed `docs/CONTRACTS.md` (OG4's freeze, for example), keep both sides.
 6. **Check identity before recording.**
    - `git diff --exit-code d4e3032 HEAD -- contract/ledger` must print nothing and exit 0.
-   - `git diff d4e3032 HEAD -- docs/CONTRACTS.md` must print nothing, or only lines that commits on `main` after eb29f0a changed (`git log --oneline eb29f0a..main -- docs/CONTRACTS.md` lists them). None of them may touch the F2-05 text: the status line's F2-05 clause, the `ledger-format` row, and the F2-05 catalogue lead-in and table.
+   - `git diff d4e3032 HEAD -- docs/CONTRACTS.md` must print nothing, or only lines that commits on `main` after b663791 changed (`git log --oneline b663791..main -- docs/CONTRACTS.md` lists them). None of them may touch the F2-05 text: the status line's F2-05 clause, the `ledger-format` row, and the F2-05 catalogue lead-in and table.
    - If either check fails, stop and report: the entry would name a text you did not see.
    - If both pass, fill «RECORD-COMMIT» with `git rev-parse --short HEAD`.
 7. **Record.** On top of the rebased branch, make one commit that applies A.2.
@@ -693,7 +693,7 @@ Replace:
 
 #### A2 — .scratch/dwarf-harness/issues/05-create-private-scratch-and-capture-exact-eligible-trees.md
 
-A comment recording the request, appended after the last comment. At eb29f0a the last comment ends as in the find (T05:53). If a comment has been added since, such as S1's, anchor on the end of that one instead.
+A comment recording the request, appended after the last comment. At b663791 the last comment ends as in the find (T05:53). If a comment has been added since, such as S1's, anchor on the end of that one instead.
 
 Find:
 ````
@@ -1476,7 +1476,7 @@ Report each step's exit codes and the output it names. Delete any temporary file
 
 ```powershell
 git rev-parse HEAD
-git log --format='%H %s' eb29f0a..HEAD
+git log --format='%H %s' b663791..HEAD
 git status --porcelain
 git diff --stat 31103d8 HEAD
 git diff --exit-code 31103d8 HEAD -- contract/ledger/testdata; "EXIT=$LASTEXITCODE"
@@ -1590,8 +1590,8 @@ Expected: all nine steps `PASS`; `EXIT=0`.
 **R9. Additivity.**
 
 ```powershell
-git diff --stat eb29f0a HEAD -- contract/ledger docs/CONTRACTS.md
-git diff -U0 eb29f0a HEAD -- contract/ledger | Select-String -Pattern '^-[^-]'
+git diff --stat b663791 HEAD -- contract/ledger docs/CONTRACTS.md
+git diff -U0 b663791 HEAD -- contract/ledger | Select-String -Pattern '^-[^-]'
 ```
 
 Expected: the 14 removed lines of §5.5, and no others.

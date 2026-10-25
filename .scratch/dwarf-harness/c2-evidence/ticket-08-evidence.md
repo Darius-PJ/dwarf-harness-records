@@ -28,9 +28,9 @@ Rule breaks, each restored and re-run green:
 | p | Removed Git-ID grammar checks while retaining width equality. | Invalid commit/tree grammar cases across all three types; restored run passed. |
 
 
-## Ticket 08 S1 evidence, on d4453c0 (2026-10-16)
+## Ticket 08 S1 evidence, on ba5d5c8 (2026-10-16)
 
-The test runs are the coder's final runs on the committed tree (D121), verified by hash: all eight changed files match d4453c0. The project manager's checks ran on a detached worktree of d4453c0; go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on.
+The test runs are the coder's final runs on the committed tree (D121), verified by hash: all eight changed files match ba5d5c8. The project manager's checks ran on a detached worktree of ba5d5c8; go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on.
 
 | Step | Result |
 |---|---|
@@ -61,9 +61,9 @@ Rule breaks (note 10), each restored and re-run green:
 
 The long-path half of note 8's Windows test was dropped: Git refuses any `GIT_DIR` over 220 characters (`local://t08-s1-longpath-probe.md`); the remaining test is `TestWindowsFinalizationSharing`. The break for links ran before that rename, under the old name.
 
-## Ticket 08 S3a evidence, on 09b4593 (2026-10-16)
+## Ticket 08 S3a evidence, on 75fb821 (2026-10-16)
 
-The test runs are the coder's final runs on the committed tree (D121), verified by hash: all 14 changed files match 09b4593. The project manager's checks ran on a detached worktree of 09b4593; go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on.
+The test runs are the coder's final runs on the committed tree (D121), verified by hash: all 14 changed files match 75fb821. The project manager's checks ran on a detached worktree of 75fb821; go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on.
 
 | Step | Result |
 |---|---|
@@ -98,9 +98,9 @@ Rule breaks (the coder's `breaks.json`, copy in `local://t08-s3a-ev/coder-breaks
 | A no-change parent's unaccepted commit is not a finalization predecessor | Allowed no-change speculative predecessors and tree-only predecessor equivalence through candidate, Git parent, and record binding checks. | TestNoChangeUsesDurablePredecessor |
 | Product RequestPromotion remains unavailable after mechanical acceptance | Temporarily replaced the refusal with admission when an accepted witness existed; restored the exact SHA-256 afterwards. | TestRequestPromotionUnavailableInC2 |
 
-## Ticket 08 S3b evidence, on 7a4c9a4 (2026-10-16)
+## Ticket 08 S3b evidence, on 7a6624b (2026-10-16)
 
-S3b was committed as d8fa46f on 09b4593 and rebased onto F2-09's freeze record and D125 (73769d1) as 7a4c9a4, with `internal/` unchanged. The test runs are the coder's final runs (D121), verified by hash: all 17 changed files match both commits. The project manager's checks and the harness ran on a detached worktree of 7a4c9a4; go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on.
+S3b was committed as d8fa46f on 75fb821 and rebased onto F2-09's freeze record and D125 (59bd9f9) as 7a6624b, with `internal/` unchanged. The test runs are the coder's final runs (D121), verified by hash: all 17 changed files match both commits. The project manager's checks and the harness ran on a detached worktree of 7a6624b; go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on.
 
 | Step | Result |
 |---|---|
@@ -162,4 +162,4 @@ The 15 slowest top-level tests in the coder's race run:
 | `TestCancellationFailsLocalSuffixNotForeign` | 25.97 |
 | `TestAcceptedPredecessorKeepsSpeculativeGeneration` | 25.08 |
 
-Package test time inside the full check (tests step / race step): ticket 07's close 442.4 / 423.9 s; S1 458.8 / 569.3 s; S3a 494.3 / 608.4 s; S3b 507.7 / 621.3 s. D122's limit is 20 minutes per step, reported above 15. The first full check on 73769d1 failed its race step on `TestScratchWaitsOnlyForItsPair`, whose 10 s deadline expired while the coder's focused tests overlapped the check; S3b raised that bound to 2 minutes.
+Package test time inside the full check (tests step / race step): ticket 07's close 442.4 / 423.9 s; S1 458.8 / 569.3 s; S3a 494.3 / 608.4 s; S3b 507.7 / 621.3 s. D122's limit is 20 minutes per step, reported above 15. The first full check on 59bd9f9 failed its race step on `TestScratchWaitsOnlyForItsPair`, whose 10 s deadline expired while the coder's focused tests overlapped the check; S3b raised that bound to 2 minutes.

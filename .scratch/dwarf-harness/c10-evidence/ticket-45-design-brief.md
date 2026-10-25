@@ -10,7 +10,7 @@ P1–P5 are settled by that ruling, not re-proposed in the active design. New ch
 
 ### 0.2. Start and authority gates
 
-The submitted gate verdict concerns **ticket 45's independently usable Windows executor**, not all of C10. Repository-relative citations below refer to the assigned base, `main` at `3d442f4`. The designer changes no repository file and runs no commands; no runtime evidence is claimed. Publication/readiness never supplies a missing approval, freeze or platform result (`.scratch/dwarf-harness/issues/45-run-and-positively-close-a-restricted-windows-process-tree.md:7-24,36`).
+The submitted gate verdict concerns **ticket 45's independently usable Windows executor**, not all of C10. Repository-relative citations below refer to the assigned base, `main` at `ee798a5`. The designer changes no repository file and runs no commands; no runtime evidence is claimed. Publication/readiness never supplies a missing approval, freeze or platform result (`.scratch/dwarf-harness/issues/45-run-and-positively-close-a-restricted-windows-process-tree.md:7-24,36`).
 
 | Gate, in ticket order | Established state and consequence |
 |---|---|

@@ -14,7 +14,7 @@ Sources: `.scratch/dwarf-harness/issues/07-merge-a-second-writer-through-tempora
 
 ## 1. Owned paths and source precedence
 
-All repository paths below are relative to `C:/Users/darius.jones/Documents/PROJECTS/dwarf-harness` at ead167e; the coder uses the PM's absolute worktree paths. This brief is a proposal. The ticket 07 advisor's ruling wins; prior rulings win over their briefs. D117 replaces the historical design-approval language in ticket 06's ruling, not its technical rulings (`local://t07-design-assignment.md:3,15,22-27`; `docs/DECISIONS.md:1920-1921`).
+All repository paths below are relative to `C:/Users/darius.jones/Documents/PROJECTS/dwarf-harness` at f0d4878; the coder uses the PM's absolute worktree paths. This brief is a proposal. The ticket 07 advisor's ruling wins; prior rulings win over their briefs. D117 replaces the historical design-approval language in ticket 06's ruling, not its technical rulings (`local://t07-design-assignment.md:3,15,22-27`; `docs/DECISIONS.md:1920-1921`).
 
 | Slice | Owned code and tests |
 |---|---|
@@ -163,7 +163,7 @@ Fuzz only new parsing: `FuzzDecodeF2_07` + existing F2 decode targets whose opti
 
 Set `GOTOOLCHAIN=local`, `GOFLAGS=''`, explicit `CGO_ENABLED=0`; use the PM's absolute worktree. Run, serially, on each changed package (`./internal/core/workspace`, S2 also `./contract/ledger`): `go test -count=1 -v`, `go vet`, **`go tool staticcheck`**, **`gofmt -l`** on owned Go files (empty output), `go mod tidy -diff`, `go mod verify`; cross-OS `GOOS=linux` and `GOOS=darwin` vet, restoring GOOS afterwards. Host race: `CGO_ENABLED=1`, `CC=DWARF_CC`; `go test -race -count=1 -v ./internal/core/workspace`, then `go test -race -count=20 -run 'Writer|MergeBackWaits|ProtectedWindow|TemporaryClosure' ./internal/core/workspace`. Report whole-package times and 15 slowest tests. Never overlap tests/checks.
 
-The budget is B25/ec24d96: **215 s plain / 274 s race inside the full check plus this ticket's own measured test cost**, not the older 3565211 note. Keep Go's ten-minute default and `tools/check` unchanged; exceeding feasibility is reported, not hidden with a longer timeout. Sources: `AGENTS.md:30-40`; `docs/DECISIONS.md:1909,1963-1964`; `local://t07-design-assignment.md:28-31,53`; `skill://dwarfharness-staged-build`, coder checks/test-cost traps.
+The budget is B25/02edd7b: **215 s plain / 274 s race inside the full check plus this ticket's own measured test cost**, not the older fcf23e4 note. Keep Go's ten-minute default and `tools/check` unchanged; exceeding feasibility is reported, not hidden with a longer timeout. Sources: `AGENTS.md:30-40`; `docs/DECISIONS.md:1909,1963-1964`; `local://t07-design-assignment.md:28-31,53`; `skill://dwarfharness-staged-build`, coder checks/test-cost traps.
 
 ### 5.2 PM evidence and exact-commit check
 
@@ -234,7 +234,7 @@ Every recommendation is provisional until ruled; no recommendation approves a fr
 | 10 multiple authors | P8/P14: immutable source histories and admission references, no task re-authoring |
 | 11 represented tree | P15: task unchanged; source only represented in parent for safe removal |
 | 12 admissions + merge | P11/P14: sealed checkpoint unchanged, successor own sealed baseline, new provenance references |
-| 13 test-cost numbers | Settled assignment/B25 ec24d96, 215/274, §5.1 |
+| 13 test-cost numbers | Settled assignment/B25 02edd7b, 215/274, §5.1 |
 | 14 capture window lifetime | Existing observe→durable admission/closure boundary stays, release before validation; P10 never extends it to request lifetime |
 | 15 cancelled merge wait | P10/P18: ctx error before prepared, no effect/record, retain source; prepared is explicit pending work |
 | 16 end-turn split | P1/P5: C2 mechanisms now, C3 invokes at real first write/end and schedules merge/notice |

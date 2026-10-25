@@ -2,7 +2,7 @@
 
 Designer: DesignT04, 2026-10-12. Status: ruled by the advisor on 2026-10-12, approve-with-changes; see [the ruling](ticket-04-design-ruling.md), which wins where the two differ. The owner approves the design before any code starts (ticket:65). Nothing below is decided until the advisor rules; the owner gates in §7.2 stay with the owner.
 
-**Sources** are cited as `path:line` at `main` a8b31d9. Abbreviations:
+**Sources** are cited as `path:line` at `main` 818db9a. Abbreviations:
 - "ticket" = `.scratch/dwarf-harness/issues/04-load-and-identify-a-strict-law-independently-of-field-execution.md`; "ticket 09/60/71" = the issues with those numbers;
 - "U" = `docs/DESIGN-UNDERCURRENT.md`; "Core" = `docs/DESIGN-CORE-AND-LAUNCHERS.md`; "val" = `docs/RESEARCH-ADMISSIBLE-VALIDATION.md`;
 - "RU" = `docs/ROADMAP-UNDERCURRENT.md`; "RC" = `docs/ROADMAP-CORE.md`; "R" = `docs/ROADMAPS.md`;

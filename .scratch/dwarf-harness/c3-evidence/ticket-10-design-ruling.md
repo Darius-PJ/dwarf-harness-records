@@ -1,6 +1,6 @@
 # Ticket 10 design ruling (advisor AdvisorT10, 2026-10-21)
 
-Ruling on `local://t10-brief.md` (DesignT10, at `main` 0afd402; at the close both land under `.scratch/dwarf-harness/c3-evidence/` as `ticket-10-design-brief.md` and `ticket-10-design-ruling.md`). Where they differ, this ruling wins; the frozen F3-10 wins over both on encodings. Under D117 it ends the design step: no owner design question; S1 may start now. The PM's freeze of F3-10 (D125) comes before the code that writes it. Abbreviations as the brief's (T10, SPEC, RC, CORE, DEC, CON, LD, BR = the brief); `WS` = `internal/core/workspace/`, `LS` = `internal/core/ledgerstore/`; bare Go names are the new package's.
+Ruling on `local://t10-brief.md` (DesignT10, at `main` 976e19b; at the close both land under `.scratch/dwarf-harness/c3-evidence/` as `ticket-10-design-brief.md` and `ticket-10-design-ruling.md`). Where they differ, this ruling wins; the frozen F3-10 wins over both on encodings. Under D117 it ends the design step: no owner design question; S1 may start now. The PM's freeze of F3-10 (D125) comes before the code that writes it. Abbreviations as the brief's (T10, SPEC, RC, CORE, DEC, CON, LD, BR = the brief); `WS` = `internal/core/workspace/`, `LS` = `internal/core/ledgerstore/`; bare Go names are the new package's.
 
 **Verdict:** approve-with-changes.
 

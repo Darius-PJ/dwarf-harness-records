@@ -1,12 +1,12 @@
 # OG4: freeze request for `law-format`
 
-**Prepared:** 2026-10-12, against commit 43f7c07 on branch `build/04-freeze`, which is `main` at eb29f0a plus one sentence of package documentation; `main` reaches 43f7c07 by fast-forward with the commit that records this request. For U1.L and ticket 04. **Answer:** 2026-10-12, "Freeze as presented". [D114](../../../docs/DECISIONS.md#d114-law-format-frozen-at-version-1) records the freeze, adapted from §8 to your answer, and Appendix A.2's edits record it in the register and the roadmaps. The rest of this packet stays as sent.
+**Prepared:** 2026-10-12, against commit 35ca559 on branch `build/04-freeze`, which is `main` at b663791 plus one sentence of package documentation; `main` reaches 35ca559 by fast-forward with the commit that records this request. For U1.L and ticket 04. **Answer:** 2026-10-12, "Freeze as presented". [D114](../../../docs/DECISIONS.md#d114-law-format-frozen-at-version-1) records the freeze, adapted from §8 to your answer, and Appendix A.2's edits record it in the register and the roadmaps. The rest of this packet stays as sent.
 
 Ticket 04 has built U1.L's `law-format` contract, the package `contract/law`, and [B22](../../../docs/DECISIONS.md#b22-u1l-law-format-version-1-the-validation-policy-and-their-identities) records its design (DEC:1539). Under your D40 the owner freezes a contract, and other roadmaps build against it only once it is frozen (DEC:206). This packet asks you to freeze it. Ticket 04 closes with the request sent, as C1 closed with OG2 (RULING:36; DEC:1469); it does not wait for your answer. U1.L is Done only when you freeze the format (RU:215), and C4 waits for that freeze as well as for C3 (RC:537). Take the time you need.
 
 **In short.** You are asked to freeze version 1 of `law-format` (§1). It has two artifacts: the shared field law, a strict JSON file with six field kinds and 22 built-in source rules, and the local validation policy, which carries your D47 values as exact fractions. It also fixes two size profiles for reading them, the order and codes of refusals, and identity as the SHA-256 of a file's exact bytes (§3). Freezing makes U1.L Done and lets C4 build on the format once C3 is Done. Afterwards the format changes only by addition, which for this strict format means new versions read beside version 1 (§2). The freeze chooses no law values and activates nothing (§2.4). Nine questions show what it fixes, each with our recommendation, and a tenth notes that the golden values are test data (§6). All nine fold into one answer, "Freeze as presented", which we recommend (§7).
 
-Citations are `file:line` at `main` eb29f0a; "RU:187, :217" means lines 187 and 217 of the same file. The package documentation is cited by section, as in "DOC, Parser limits", as it stands at 43f7c07; Appendix B reproduces it.
+Citations are `file:line` at `main` b663791; "RU:187, :217" means lines 187 and 217 of the same file. The package documentation is cited by section, as in "DOC, Parser limits", as it stands at 35ca559; Appendix B reproduces it.
 
 | Short | File |
 |---|---|
@@ -29,7 +29,7 @@ Citations are `file:line` at `main` eb29f0a; "RU:187, :217" means lines 187 and 
 
 ## 1. What is requested
 
-Freeze `law-format` at commit 43f7c07, as **Version 1** with status **Frozen** (CON:19, :30). 43f7c07 is not on `main` yet. It is `main` at eb29f0a plus one sentence in the package documentation, on branch `build/04-freeze`, and `main` reaches it by fast-forward with the commit that records this request (Appendix A.1).
+Freeze `law-format` at commit 35ca559, as **Version 1** with status **Frozen** (CON:19, :30). 35ca559 is not on `main` yet. It is `main` at b663791 plus one sentence in the package documentation, on branch `build/04-freeze`, and `main` reaches it by fast-forward with the commit that records this request (Appendix A.1).
 
 Version 1 is everything the package `contract/law` defines:
 
@@ -41,7 +41,7 @@ Version 1 is everything the package `contract/law` defines:
 - **exclusions:** what neither artifact may carry (DEC:1574–1577);
 - **the Go API** that loads them, and **the golden vectors** (§3, §4).
 
-`contract/law` at 43f7c07 is S1 (a74ccc4), its documentation fix 9a35bb6, and 43f7c07's sentence on empty edge lists (Q2). Ticket 04's comments record the build, the review and the merge (T04:69, :71).
+`contract/law` at 35ca559 is S1 (6f82da1), its documentation fix 9bba28f, and 35ca559's sentence on empty edge lists (Q2). Ticket 04's comments record the build, the review and the merge (T04:69, :71).
 
 Section 8 holds a draft decision entry, and Appendix A the edits that record the request and the freeze. None of them is applied before your answer, except Appendix A.1, which records that the request was sent.
 
@@ -106,7 +106,7 @@ The documentation's opening says "Version 1 is a draft until the owner's freeze 
 
 Ten files under `contract/law/testdata/`, written by hand without an encoder and pinned by SHA-256 in `golden_test.go` (DEC:1581–1582); `TestGoldenFilesPinned` fails on a changed, unrecorded or missing file (`contract/law/golden_test.go:60`). An eleventh vector is derived inside the test: `full.json` with each LF replaced by CRLF, because B1 stores text files with LF (DEC:231; RULING:27). Its digest is pinned as well, computed outside the loader (`contract/law/golden_test.go:29–30`), and V7 recomputes it.
 
-Sizes and SHA-256 digests, computed from the committed files at 43f7c07:
+Sizes and SHA-256 digests, computed from the committed files at 35ca559:
 
 | File (relative to `contract/law/testdata/`) | What it holds | Bytes | SHA-256 |
 |---|---|---|---|
@@ -131,7 +131,7 @@ What the set shows:
 
 ## 5. Evidence
 
-The results in §5.2 come from one runner run in a separate worktree of 43f7c07, with the commands of §5.3.
+The results in §5.2 come from one runner run in a separate worktree of 35ca559, with the commands of §5.3.
 
 ### 5.1 What each check shows
 
@@ -146,18 +146,18 @@ The results in §5.2 come from one runner run in a separate worktree of 43f7c07,
 | V7 | `Get-FileHash` over the golden files, and over `full.json` with CRLF | The files match their pinned digests, and the CRLF digest is recomputed outside the loader | The ten digests of §4; `83cad664…f9bf` for the CRLF form |
 | V8 | `BenchmarkLoad`, five runs | What a load of the largest version-1 law, and of an input of the maximum size, costs (§5.5) | A measurement, not a threshold |
 
-### 5.2 Results at 43f7c07
+### 5.2 Results at 35ca559
 
 | | Result |
 |---|---|
-| V1 | `go test -count=1 -v ./contract/law`: exit 0; 595 `=== RUN`, 595 `--- PASS`, 0 `--- FAIL`; `ok … contract/law 1.369s` (43f7c07, 2026-10-12) |
-| V2 | `FuzzLoad` 120 s: PASS, 366,367 execs; `FuzzLoadValidationPolicy` 120 s: PASS, 1,675,496 execs; `git status --porcelain -- contract/law/testdata` empty (43f7c07, 2026-10-12) |
-| V3 | `go run ./tools/check` with `DWARF_CC`: all nine steps pass (toolchain, gofmt, vet, staticcheck, govulncheck, import boundary, tests, race, cross builds); exit 0 (43f7c07, 2026-10-12) |
-| V4 | `go list -deps` non-standard imports: only `github.com/Darius-PJ/dwarf-harness/contract/law` (43f7c07, 2026-10-12) |
-| V5 | `go mod tidy` left `go.mod` and `go.sum` unchanged; `go mod verify`: all modules verified; `gofmt -l contract/law`: no output (43f7c07, 2026-10-12) |
-| V6 | `git ls-files --eol -- contract/law`: 26 files, all `i/lf w/lf` except `testdata/law/v1/full-compact.json` (`i/none w/none`) (43f7c07, 2026-10-12) |
-| V7 | `Get-FileHash` of the ten testdata files equals the ten pinned digests of §4; the derived CRLF vector recomputes to `83cad664b5eb46a5ef8453f4d57cfce5c9023d24bd54e8d9a463c0f2b6eaf9bf` (43f7c07, 2026-10-12) |
-| V8 | Measurement, no pass mark. `BenchmarkLoad`, `-count 5`, Intel Core i7-10610U @ 1.80 GHz, windows/amd64: `full` 225,812–259,979 ns/op, 176,489–176,492 B/op, 1,734 allocs/op; `standard-max` 1,330,165–1,404,458 ns/op, 1,216,877–1,216,878 B/op, 1,741 allocs/op (43f7c07, 2026-10-12) |
+| V1 | `go test -count=1 -v ./contract/law`: exit 0; 595 `=== RUN`, 595 `--- PASS`, 0 `--- FAIL`; `ok … contract/law 1.369s` (35ca559, 2026-10-12) |
+| V2 | `FuzzLoad` 120 s: PASS, 366,367 execs; `FuzzLoadValidationPolicy` 120 s: PASS, 1,675,496 execs; `git status --porcelain -- contract/law/testdata` empty (35ca559, 2026-10-12) |
+| V3 | `go run ./tools/check` with `DWARF_CC`: all nine steps pass (toolchain, gofmt, vet, staticcheck, govulncheck, import boundary, tests, race, cross builds); exit 0 (35ca559, 2026-10-12) |
+| V4 | `go list -deps` non-standard imports: only `github.com/Darius-PJ/dwarf-harness/contract/law` (35ca559, 2026-10-12) |
+| V5 | `go mod tidy` left `go.mod` and `go.sum` unchanged; `go mod verify`: all modules verified; `gofmt -l contract/law`: no output (35ca559, 2026-10-12) |
+| V6 | `git ls-files --eol -- contract/law`: 26 files, all `i/lf w/lf` except `testdata/law/v1/full-compact.json` (`i/none w/none`) (35ca559, 2026-10-12) |
+| V7 | `Get-FileHash` of the ten testdata files equals the ten pinned digests of §4; the derived CRLF vector recomputes to `83cad664b5eb46a5ef8453f4d57cfce5c9023d24bd54e8d9a463c0f2b6eaf9bf` (35ca559, 2026-10-12) |
+| V8 | Measurement, no pass mark. `BenchmarkLoad`, `-count 5`, Intel Core i7-10610U @ 1.80 GHz, windows/amd64: `full` 225,812–259,979 ns/op, 176,489–176,492 B/op, 1,734 allocs/op; `standard-max` 1,330,165–1,404,458 ns/op, 1,216,877–1,216,878 B/op, 1,741 allocs/op (35ca559, 2026-10-12) |
 
 ### 5.3 The runner's commands
 
@@ -166,7 +166,7 @@ Windows PowerShell. Each block says what to report.
 Setup, from the repository root: a detached worktree of the freeze commit, outside the working tree and the vault.
 
 ```powershell
-git worktree add --detach "$env:TEMP\dh-law-freeze" 43f7c07
+git worktree add --detach "$env:TEMP\dh-law-freeze" 35ca559
 Set-Location "$env:TEMP\dh-law-freeze"
 $env:GOTOOLCHAIN = 'local'
 $env:GOFLAGS = ''
@@ -176,7 +176,7 @@ go version
 git rev-parse HEAD
 ```
 
-Report the Go version (expected `go1.27.2 windows/amd64`) and the full hash (expected `43f7c0710caeb35ed1581793f881adf93618502d`).
+Report the Go version (expected `go1.27.2 windows/amd64`) and the full hash (expected `35ca5593a3d072166fe38c944fe806086db0e4b2`).
 
 V1:
 
@@ -318,7 +318,7 @@ Each question says what the freeze fixes and gives our recommendation. Q1–Q8 a
 
 **Phase 1 belongs to the whole format family.** Phase 1 checks the size bound, a BOM and UTF-8, then each token in turn for syntax, the token, depth, member, element and string-size bounds, keys repeated after decoding and unsigned-integer spelling, then anything after the root value. These rules hold for every schema and evaluator version: no version relaxes them or reorders the phases (DOC, Refusal phases and errors; DEC:1566). Phase 1 runs before the version check, so if a later version relaxed one of these rules, older hosts would refuse its artifacts as malformed instead of unsupported; keeping phase 1 fixed keeps that answer clear (RULING:26; DEC:1605).
 
-**A note on representation.** Rules with the `local/v1` profile have an empty edge list. The loaded value holds it as an empty, non-nil slice, `[]EdgeType{}`, and consumers test `len(EdgeTypes) == 0`. The documentation says so since 43f7c07 (DOC, Compatibility and non-goals), and the golden tests pin it, since their comparison tells an empty slice from a nil one (`contract/law/golden_test.go:97`). Freezing the goldens' "exact typed values" freezes this choice too.
+**A note on representation.** Rules with the `local/v1` profile have an empty edge list. The loaded value holds it as an empty, non-nil slice, `[]EdgeType{}`, and consumers test `len(EdgeTypes) == 0`. The documentation says so since 35ca559 (DOC, Compatibility and non-goals), and the golden tests pin it, since their comparison tells an empty slice from a nil one (`contract/law/golden_test.go:97`). Freezing the goldens' "exact typed values" freezes this choice too.
 
 | Option | Consequence |
 |---|---|
@@ -492,12 +492,12 @@ The numbers in the golden files are Undercurrent §13.4's preregistration candid
 To send in the question tool:
 
 ```text
-Ticket 04 has built U1.L's law-format contract (contract/law). Under D40 I request your freeze of law-format at version 1, at commit 43f7c07, which reaches main with the record of this request. The packet is in your vault at dwarf-harness/.scratch/dwarf-harness/u1-evidence/law-format-freeze-packet.md: what freezing permits and what it does not, the frozen surface by section of the package documentation, the ten golden files and the derived line-ending vector with their digests, the evidence (V1–V8 and the load-cost reasoning), nine questions with our recommendations and a note on the golden values, a draft decision entry and the edits that record the freeze. Freezing makes U1.L Done and lets C4 build on the format once C3 is Done; it chooses no law values and activates nothing. Nothing is frozen until you answer and your decision entry is recorded. Take the time you need.
+Ticket 04 has built U1.L's law-format contract (contract/law). Under D40 I request your freeze of law-format at version 1, at commit 35ca559, which reaches main with the record of this request. The packet is in your vault at dwarf-harness/.scratch/dwarf-harness/u1-evidence/law-format-freeze-packet.md: what freezing permits and what it does not, the frozen surface by section of the package documentation, the ten golden files and the derived line-ending vector with their digests, the evidence (V1–V8 and the load-cost reasoning), nine questions with our recommendations and a note on the golden values, a draft decision entry and the edits that record the freeze. Freezing makes U1.L Done and lets C4 build on the format once C3 is Done; it chooses no law values and activates nothing. Nothing is frozen until you answer and your decision entry is recorded. Take the time you need.
 ```
 
 | Label | Description |
 |---|---|
-| Freeze as presented (Recommended) | Freeze law-format v1 at 43f7c07, with every recommendation in Q1–Q9. Your entry and the edits are recorded; U1.L becomes Done; C4 still waits for C3. |
+| Freeze as presented (Recommended) | Freeze law-format v1 at 35ca559, with every recommendation in Q1–Q9. Your entry and the edits are recorded; U1.L becomes Done; C4 still waits for C3. |
 | Freeze with changes | Name the changes by question number. A follow-up change makes them, and the freeze is recorded at its commit. law-format stays Draft until then. |
 | Not yet | Nothing is frozen. law-format stays Draft, U1.L is not Done, and C4 and U1.E keep waiting. You may say what is missing. |
 
@@ -513,7 +513,7 @@ Written for "Freeze as presented"; Appendix A's F1a appends it, and F1b adjusts 
 - **Date:** «DATE». **Decided by:** adopted. In OG4, the `law-format` freeze request that ticket 04 sent on 2026-10-12, the owner picked "Freeze as presented" from the assistant's options.
 - **Owner's words (question tool):**
   > «OWNER-WORDS»
-- **Decision:** `law-format` is frozen at version 1, at commit 43f7c07 (D40), which reached `main` with the record of the request, as B22 items 1–9 record it and the package documentation of `contract/law` states it:
+- **Decision:** `law-format` is frozen at version 1, at commit 35ca559 (D40), which reached `main` with the record of the request, as B22 items 1–9 record it and the package documentation of `contract/law` states it:
   - the field law: format `dwarf-harness/undercurrent-law`, schema version 1, evaluator version 1 and kernel `bounded_best_arrival/v1`, with its members and ranges and the evaluator-v1 registry of six kinds, 22 rules, four profiles and three edge types; `quantity_class` takes either value for any kind;
   - the validation policy: format `dwarf-harness/validation-policy`, schema version 1, with exactly `flake_rate_prior`, `failure_repair_confidence` and `quarantine_threshold`, each an unreduced fraction of `uint64` terms with the numerator below the denominator;
   - the profiles `compact-v1` and `standard-v1` and their counting rules; a host may tighten them, never widen them;
@@ -529,11 +529,11 @@ Written for "Freeze as presented"; Appendix A's F1a appends it, and F1b adjusts 
 
 ## Appendix A. Edits that record the request and the freeze (not applied)
 
-Each edit has a heading `#### <ID> — <path>`, plain text saying when it applies, then `Find:` and `Replace:`, each followed by one four-backtick fence. The finds are copied from 43f7c07, which is `main` at eb29f0a plus the documentation sentence, except those of F2 and F30, which match text that A.1 adds, and F1b, which matches text that F1a adds. Before applying, each find occurs exactly once in its file, with one exception: F31a's and F31b's find also occurs inside their own fences in this packet, so each applies to the first occurrence only, the header on line 3. Where variants share a find, such as F4a and F4b, exactly one of them applies.
+Each edit has a heading `#### <ID> — <path>`, plain text saying when it applies, then `Find:` and `Replace:`, each followed by one four-backtick fence. The finds are copied from 35ca559, which is `main` at b663791 plus the documentation sentence, except those of F2 and F30, which match text that A.1 adds, and F1b, which matches text that F1a adds. Before applying, each find occurs exactly once in its file, with one exception: F31a's and F31b's find also occurs inside their own fences in this packet, so each applies to the first occurrence only, the header on line 3. Where variants share a find, such as F4a and F4b, exactly one of them applies.
 
 ### A.1 When the request is sent
 
-In the commit that records the request, which also adds this packet as sent and brings 43f7c07 onto `main` by fast-forward. Ticket 04 closes here: its last comment says it "closes when that request is sent (ruling P24)" (T04:71), and the tracker's resolve rule asks for an `## Answer` and `Status: resolved` (`docs/agents/issue-tracker.md:26`). No map file exists for this effort, so the map step does not apply. A row under "Open items awaiting the owner" records the pending request, as B21 added one for OG2 (DEC:1506). If your answer arrives before this commit, apply A.1 and then A.2 in order.
+In the commit that records the request, which also adds this packet as sent and brings 35ca559 onto `main` by fast-forward. Ticket 04 closes here: its last comment says it "closes when that request is sent (ruling P24)" (T04:71), and the tracker's resolve rule asks for an `## Answer` and `Status: resolved` (`docs/agents/issue-tracker.md:26`). No map file exists for this effort, so the map step does not apply. A row under "Open items awaiting the owner" records the pending request, as B21 added one for OG2 (DEC:1506). If your answer arrives before this commit, apply A.1 and then A.2 in order.
 
 #### A1 — .scratch/dwarf-harness/issues/04-load-and-identify-a-strict-law-independently-of-field-execution.md
 
@@ -592,7 +592,7 @@ U1.L's `law-format` contract is built, reviewed and on `main` as a draft, and U1
 
 #### A4 — .scratch/dwarf-harness/issues/04-load-and-identify-a-strict-law-independently-of-field-execution.md
 
-A comment recording the request, appended after the last comment. At eb29f0a the last comment ends as in the find; if a comment has been added since, anchor on the end of that one instead.
+A comment recording the request, appended after the last comment. At b663791 the last comment ends as in the find; if a comment has been added since, anchor on the end of that one instead.
 
 Find:
 ````
@@ -602,7 +602,7 @@ Replace:
 ````
 The freeze request comes next, with its own packet, and this ticket closes when that request is sent (ruling P24).
 
-2026-10-12 — OG4, the `law-format` freeze request, was sent at 07:51 local time as one question-tool request, pointing to the packet at `.scratch/dwarf-harness/u1-evidence/law-format-freeze-packet.md`. Its V1–V8 results, `go doc` output and golden digests were taken at 43f7c07, which adds one sentence to the package documentation, as the build advisor's review of S1 asked: an empty edge list loads as an empty, non-nil slice. `main` reaches 43f7c07 by fast-forward with this comment's commit. The ticket closes with the request sent, not answered (ruling P24). `law-format` stays Draft until the owner answers and his decision entry is recorded.
+2026-10-12 — OG4, the `law-format` freeze request, was sent at 07:51 local time as one question-tool request, pointing to the packet at `.scratch/dwarf-harness/u1-evidence/law-format-freeze-packet.md`. Its V1–V8 results, `go doc` output and golden digests were taken at 35ca559, which adds one sentence to the package documentation, as the build advisor's review of S1 asked: an empty edge list loads as an empty, non-nil slice. `main` reaches 35ca559 by fast-forward with this comment's commit. The ticket closes with the request sent, not answered (ruling P24). `law-format` stays Draft until the owner answers and his decision entry is recorded.
 ````
 
 #### A5 — docs/DECISIONS.md
@@ -624,7 +624,7 @@ In one documents-only commit, as for D111. The status lines of `ROADMAP-UNDERCUR
 
 #### F1a — docs/DECISIONS.md
 
-The entry of §8, appended after D113, the log's last entry at eb29f0a (DEC:1636–1648). If another entry has been appended since, anchor on its last line instead and renumber the entry.
+The entry of §8, appended after D113, the log's last entry at b663791 (DEC:1636–1648). If another entry has been appended since, anchor on its last line instead and renumber the entry.
 
 Find:
 ````
@@ -639,7 +639,7 @@ Replace:
 - **Date:** «DATE». **Decided by:** adopted. In OG4, the `law-format` freeze request that ticket 04 sent on 2026-10-12, the owner picked "Freeze as presented" from the assistant's options.
 - **Owner's words (question tool):**
   > «OWNER-WORDS»
-- **Decision:** `law-format` is frozen at version 1, at commit 43f7c07 (D40), which reached `main` with the record of the request, as B22 items 1–9 record it and the package documentation of `contract/law` states it:
+- **Decision:** `law-format` is frozen at version 1, at commit 35ca559 (D40), which reached `main` with the record of the request, as B22 items 1–9 record it and the package documentation of `contract/law` states it:
   - the field law: format `dwarf-harness/undercurrent-law`, schema version 1, evaluator version 1 and kernel `bounded_best_arrival/v1`, with its members and ranges and the evaluator-v1 registry of six kinds, 22 rules, four profiles and three edge types; `quantity_class` takes either value for any kind;
   - the validation policy: format `dwarf-harness/validation-policy`, schema version 1, with exactly `flake_rate_prior`, `failure_repair_confidence` and `quarantine_threshold`, each an unreduced fraction of `uint64` terms with the numerator below the denominator;
   - the profiles `compact-v1` and `standard-v1` and their counting rules; a host may tighten them, never widen them;
@@ -1082,7 +1082,7 @@ Replace:
 ````
 `law-format` stays Draft until the owner answers and his decision entry is recorded.
 
-«DATE» — The owner's freeze is recorded: `main` moved by fast-forward to «RECORD-COMMIT» after all nine check steps passed on it. In OG4 the owner chose "Freeze as presented" (question tool: "«OWNER-WORDS»"). The commit appends [D114](../../../docs/DECISIONS.md#d114-law-format-frozen-at-version-1), which freezes `law-format` at version 1 at 43f7c07, and updates the register and every status line. U1.L is Done; U1 stays In progress until U1.E is Done.
+«DATE» — The owner's freeze is recorded: `main` moved by fast-forward to «RECORD-COMMIT» after all nine check steps passed on it. In OG4 the owner chose "Freeze as presented" (question tool: "«OWNER-WORDS»"). The commit appends [D114](../../../docs/DECISIONS.md#d114-law-format-frozen-at-version-1), which freezes `law-format` at version 1 at 35ca559, and updates the register and every status line. U1.L is Done; U1 stays In progress until U1.E is Done.
 ````
 
 #### F31a — .scratch/dwarf-harness/u1-evidence/law-format-freeze-packet.md
@@ -1121,12 +1121,12 @@ Replace:
 
 ### A.3 Other answers
 
-- **"Freeze with changes":** an adapted F31b records your answer and the changes you named, and a ticket 04 comment records them too. The open item stays, its Notes naming the follow-up ticket. The follow-up makes the changes and reruns §5's checks; the entry, **Decided by:** modified, and edits F1a–F30 then land against its commit, which takes the place of 43f7c07.
+- **"Freeze with changes":** an adapted F31b records your answer and the changes you named, and a ticket 04 comment records them too. The open item stays, its Notes naming the follow-up ticket. The follow-up makes the changes and reruns §5's checks; the entry, **Decided by:** modified, and edits F1a–F30 then land against its commit, which takes the place of 35ca559.
 - **"Not yet":** an adapted F31b records your answer, and a ticket 04 comment records it too. The open item stays, its Notes recording the answer. No entry is recorded and no other F edit is made.
 
 ### A.4 Unchanged, and why
 
-- **`contract/law` itself.** Nothing in the package changes after 43f7c07. Its documentation's first sentence, "Version 1 is a draft until the owner's freeze (D40)", and its last, "Consumers must wait for the owner's law-format freeze", stay as written, as `contract/ledger/doc.go:3–4` and `contract/ledger/appender/appender.go:37` stayed after D111.
+- **`contract/law` itself.** Nothing in the package changes after 35ca559. Its documentation's first sentence, "Version 1 is a draft until the owner's freeze (D40)", and its last, "Consumers must wait for the owner's law-format freeze", stay as written, as `contract/ledger/doc.go:3–4` and `contract/ledger/appender/appender.go:37` stayed after D111.
 - **B22's own text.** Entries are not edited; B22 gains only the "See also" line (DEC:5).
 - **Dated history:** the earlier entries of the status lines (CON:3, RU:3, RM:3) and the ticket's earlier comments.
 - **Lines that state the dependency as a rule** and stay true: RC:537, :539, :548, :553, :566, :642; RM:118, :153; RU:44, :45, :89, :158, :159, :189, :200, :202, :378, :380; CORE:97, :199, :216, :704, :846; RAV:366, :373; SPEC:694, :696; UC:462, :582, :588, :688.
@@ -1136,7 +1136,7 @@ Replace:
 - **Statements about a selection, not a freeze:** SPEC:483 ("This selection is not a contract freeze, calibration result or activation") and CON:66 stay true.
 - **Older snapshots:** UC:3, Core's `**Updated:**` line (CORE:4) and the consolidation comments (CON:110, :114), which neither D111 nor B22 updated.
 
-## Appendix B. `go doc -all ./contract/law` at 43f7c07
+## Appendix B. `go doc -all ./contract/law` at 35ca559
 
 ```text
 package law // import "github.com/Darius-PJ/dwarf-harness/contract/law"

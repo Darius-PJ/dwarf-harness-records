@@ -1,6 +1,6 @@
 # OG-F8: freeze request for F2-08, ticket 08's part of F2
 
-**Prepared:** 2026-10-13, against commit c44484d on branch `build/08-f2`, which was `main` at b03de1d plus S2; on 2026-10-15 S2 was rebased onto `main` db85ebb as c9bb2c2, with `contract/ledger` unchanged. For C2 and ticket 08. **Answer:** 2026-10-15, "Freeze as presented". [D123](../../../docs/DECISIONS.md#d123-f2-08-finalization-acceptance-and-no-change-records-frozen) records the freeze; S2's `contract/ledger` reached `main` unchanged in bf8b198. The rest of this packet stays as sent.
+**Prepared:** 2026-10-13, against commit c44484d on branch `build/08-f2`, which was `main` at c1c1a25 plus S2; on 2026-10-15 S2 was rebased onto `main` b6d2cf4 as c9bb2c2, with `contract/ledger` unchanged. For C2 and ticket 08. **Answer:** 2026-10-15, "Freeze as presented". [D123](../../../docs/DECISIONS.md#d123-f2-08-finalization-acceptance-and-no-change-records-frozen) records the freeze; S2's `contract/ledger` reached `main` unchanged in 0df6a0a. The rest of this packet stays as sent.
 
 You froze C2's F2 records in parts, each part before the code that writes it (D113). Ticket 08 finishes a promotion: Core moves `main` to an admitted request's clean (conflict-free) integration result, or ends the request without moving it. It has drafted its records, F2-08, in `contract/ledger` (S2). This packet asks you to freeze them. Your answer is also your sign-off for S2 reaching `main` (D41), with its decision entry and register change; S3, Core's code that writes these records, waits for it.
 
@@ -53,7 +53,7 @@ Not yours here, as the ruling frames it: no new dependency (D29); no change to D
 | Fuzzing `FuzzDecodeF2_08` and `FuzzDecodeF2_06`, 120 s each (V3) | PASS: 3,576,403 and 3,836,058 executions; no new corpus file |
 | F0, F2-05, F2-06 and F2-07 goldens unchanged (V8) | PASS: each regenerates byte for byte, matching the digests of D111, D115, D118 and D119 |
 | Full check (V4) | PASS: all nine steps in 993 s on c44484d; it runs again on the record commit |
-| Build advisor's review of S2 | Approved by the build advisor on c44484d, whose contract/ledger is unchanged by the rebase onto main db85ebb: additions only, every earlier golden byte-identical, each decoder rule tested and broken once, the F2-08 section and its record rules as ruled, nothing under internal/; two register wording fixes carried to the freeze record. |
+| Build advisor's review of S2 | Approved by the build advisor on c44484d, whose contract/ledger is unchanged by the rebase onto main b6d2cf4: additions only, every earlier golden byte-identical, each decoder rule tested and broken once, the F2-08 section and its record rules as ruled, nothing under internal/; two register wording fixes carried to the freeze record. |
 
 ## Your choices
 

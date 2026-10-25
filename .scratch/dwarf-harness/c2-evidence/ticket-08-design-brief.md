@@ -27,7 +27,7 @@ Sources: T08:12,18-24,28-32; RC:289,303,326,339-347; DEC:1646-1650,
 ## 1. Sources, scope and owned paths
 This is a proposal for the ticket's advisor, not an approved decision. Every **P**
 below is an unsettled implementation choice; the ruling wins. Record shapes are
-also subject to OG-F8. Source paths/lines are at assignment base 702ca66; ticket 07
+also subject to OG-F8. Source paths/lines are at assignment base 2fa3b79; ticket 07
 S3's specified future behavior comes from its ruling/notes, not an assumed diff.
 
 Citation key (all paths relative to `C:/Users/darius.jones/Documents/PROJECTS/dwarf-harness`):

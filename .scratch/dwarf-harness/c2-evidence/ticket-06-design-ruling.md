@@ -1,6 +1,6 @@
 # Ticket 06 design ruling (advisor AdvisorT06, 2026-10-12)
 
-Ruling on the design brief `local://t06-brief.md` (DesignT06; at the ticket's close both land under `.scratch/dwarf-harness/c2-evidence/` as `ticket-06-design-brief.md` and `ticket-06-design-ruling.md`). Where the two differ, this ruling wins. The owner's approval of the design (OG-A6) comes before any code; his freeze of F2-06 (OG-F6) comes before the code that writes it. Sources are cited as in the brief: RC = `docs/ROADMAP-CORE.md`, CORE = `docs/DESIGN-CORE-AND-LAUNCHERS.md`, DEC = `docs/DECISIONS.md`, LD = `contract/ledger/doc.go`, WD = `internal/core/workspace/doc.go`, T0n = the tickets, RU = ticket 05's ruling, G6-Mn = `local://t06-git-probe.md`, all at `main` b04860c.
+Ruling on the design brief `local://t06-brief.md` (DesignT06; at the ticket's close both land under `.scratch/dwarf-harness/c2-evidence/` as `ticket-06-design-brief.md` and `ticket-06-design-ruling.md`). Where the two differ, this ruling wins. The owner's approval of the design (OG-A6) comes before any code; his freeze of F2-06 (OG-F6) comes before the code that writes it. Sources are cited as in the brief: RC = `docs/ROADMAP-CORE.md`, CORE = `docs/DESIGN-CORE-AND-LAUNCHERS.md`, DEC = `docs/DECISIONS.md`, LD = `contract/ledger/doc.go`, WD = `internal/core/workspace/doc.go`, T0n = the tickets, RU = ticket 05's ruling, G6-Mn = `local://t06-git-probe.md`, all at `main` 8c2c328.
 
 **Verdict:** approve-with-changes.
 

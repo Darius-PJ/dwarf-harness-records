@@ -1,6 +1,6 @@
 # Ticket 11 — scoped grants and atomic task ownership
 
-Design proposal for advisor ruling, not an adopted decision. Base supplied by the PM: `main` 1e6c3dd. This assignment writes only this brief; no repository edit or command is authorized. Frozen contracts prevail over this brief; the advisor's ruling settles its numbered proposals.
+Design proposal for advisor ruling, not an adopted decision. Base supplied by the PM: `main` f67e162. This assignment writes only this brief; no repository edit or command is authorized. Frozen contracts prevail over this brief; the advisor's ruling settles its numbered proposals.
 
 ## Owner summary
 

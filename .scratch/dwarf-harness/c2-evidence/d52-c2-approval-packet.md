@@ -1,12 +1,12 @@
 # D52 approval request: the C2 promotion boundary
 
-**Prepared:** 2026-10-12, against `main` at 5b07a9b, for Core step C2 and its first ticket, 05. The cited files are unchanged at a8b31d9. **Answer:** 2026-10-12, in the question tool: "Approve". [D112](../../../docs/DECISIONS.md#d112-c2-promotion-boundary-approved-d52) records your approval from section 8's draft, and the Appendix's edits record the status changes. The rest of this packet stays as sent.
+**Prepared:** 2026-10-12, against `main` at 9bbfd8a, for Core step C2 and its first ticket, 05. The cited files are unchanged at 818db9a. **Answer:** 2026-10-12, in the question tool: "Approve". [D112](../../../docs/DECISIONS.md#d112-c2-promotion-boundary-approved-d52) records your approval from section 8's draft, and the Appendix's edits record the status changes. The rest of this packet stays as sent.
 
 D52 asks you to approve the promotion-boundary specification in Core step C2 before any C2 or C3 code is built (DEC:343; RC:308). C1 is Done and you froze its F0 contracts on 2026-10-10 (RC:276; DEC:1512), so your approval is the last item C2 waits for (RC:376; RM:170). Ticket 05 names it as a start gate (T05:23). C2 cannot start until you answer; take the time you need.
 
 **In short.** You are asked to approve how work moves from an agent's private scratch into a workspace's `main`: exact capture of the scratch's content, a queue of up to four checkpoints per context and workspace, a merge train validated in parallel but published one request at a time in order, cancellation and crash recovery, switching the validation policy, and sealing of unfinished results (§3). Approving lets C2 start: it proposes its F2 event families, which you freeze before C2 implementation (§2.1, §5.3). Nothing is promoted until C4 brings real validation: C2 answers promotion requests "unavailable", and all harness work stays testing-only (§2.2). One small decision is still yours: who may change a workspace's pinned exclusions (P2). We recommend approving, with those exclusions yours alone (§6).
 
-Citations are `file:line` at commit 5b07a9b. "RC:290, :320" means lines 290 and 320 of the same file.
+Citations are `file:line` at commit 9bbfd8a. "RC:290, :320" means lines 290 and 320 of the same file.
 
 | Short | File |
 |---|---|
@@ -28,7 +28,7 @@ Citations are `file:line` at commit 5b07a9b. "RC:290, :320" means lines 290 and 
 
 ### 1.1 The text
 
-Your approval covers this text as it stands at 5b07a9b:
+Your approval covers this text as it stands at 9bbfd8a:
 
 | Lines | Content |
 |---|---|
@@ -326,7 +326,7 @@ We found no other decision the sources leave to you. The remaining items in §5 
 To send in the question tool, with this packet's path in place of .scratch/dwarf-harness/c2-evidence/d52-c2-approval-packet.md:
 
 ```text
-Under D52 you approve the C2 promotion boundary before any C2 or C3 code is built. C1 is Done and F0 is frozen, so this is the last item C2 waits for. The packet is in your vault at .scratch/dwarf-harness/c2-evidence/d52-c2-approval-packet.md: what the approval covers (Core roadmap C2 and Core design §§13.2–13.3 at commit 5b07a9b), what it permits and what it does not, the boundary in plain terms, the decisions it rests on, what stays unproven, and one open choice: who may change a workspace's pinned exclusions, which D75 left to this specification. Whatever you choose, promotion stays unavailable until C4 and harness work stays testing-only. Nothing is approved until you answer and the decision entry is recorded.
+Under D52 you approve the C2 promotion boundary before any C2 or C3 code is built. C1 is Done and F0 is frozen, so this is the last item C2 waits for. The packet is in your vault at .scratch/dwarf-harness/c2-evidence/d52-c2-approval-packet.md: what the approval covers (Core roadmap C2 and Core design §§13.2–13.3 at commit 9bbfd8a), what it permits and what it does not, the boundary in plain terms, the decisions it rests on, what stays unproven, and one open choice: who may change a workspace's pinned exclusions, which D75 left to this specification. Whatever you choose, promotion stays unavailable until C4 and harness work stays testing-only. Nothing is approved until you answer and the decision entry is recorded.
 ```
 
 | Label | Description |
@@ -346,7 +346,7 @@ Written for "Approve". For "Approve, exclusions delegable", the exclusion bullet
 - **Date:** «DATE». **Decided by:** adopted. In the D52 approval request for Core step C2, which ticket 05 waits for, the owner picked "Approve" from the assistant's options; it also settles the exclusion authority that D75 left to this specification.
 - **Owner's words (question tool):**
   > «OWNER-WORDS»
-- **Decision:** The owner approves the promotion-boundary specification that D52 requires before C2 or C3 implementation, as it stands at commit 5b07a9b:
+- **Decision:** The owner approves the promotion-boundary specification that D52 requires before C2 or C3 implementation, as it stands at commit 9bbfd8a:
   - `ROADMAP-CORE.md` C2 (lines 278–417): the promotion boundary and who implements it, the recorded lifecycle choices, the recovery prerequisites and mapping, the selected promotion specification, the eight boundary scenarios, the snapshot choices, and the prerequisites and evidence;
   - Core §13.2, capture, immutable checkpoints and validation train (lines 848–874), and §13.3, the whole-generation disclosure barrier (lines 876–882), read under §13's opening paragraph;
   - with them, B4's amendment of D62 to a first-in-first-out queue of four checkpoints per enrolled code-working context/workspace pair, the B4 and B5 mechanisms those sections select, and B15's workload calibration, whose numbers stay calibration inputs;
@@ -358,7 +358,7 @@ Written for "Approve". For "Approve, exclusions delegable", the exclusion bullet
 
 ## Appendix. Edits that record the approval (not applied)
 
-Written for "Approve". For "Approve, exclusions delegable", edits 10 and 22 name "the owner, or a holder of an explicit grant the owner issues for that workspace". Each edit records the decision; none changes a mechanism. Before recording the entry, the applying change must confirm that RC:278–417 and CORE:848–882 are byte-identical to their text at 5b07a9b, the commit the entry names.
+Written for "Approve". For "Approve, exclusions delegable", edits 10 and 22 name "the owner, or a holder of an explicit grant the owner issues for that workspace". Each edit records the decision; none changes a mechanism. Before recording the entry, the applying change must confirm that RC:278–417 and CORE:848–882 are byte-identical to their text at 9bbfd8a, the commit the entry names.
 
 `docs/DECISIONS.md`
 

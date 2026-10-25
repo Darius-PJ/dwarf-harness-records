@@ -2,9 +2,9 @@
 
 Each slice's evidence as reviewed, oldest first; the brief, ruling and Git probes sit beside this file. Paths that begin `local://` name the build session's own files, which stay outside the repository. The two Git probe copies beside this file were normalized from CRLF to LF line endings (B1); their text is otherwise unchanged.
 
-## Ticket 07 S1 evidence, on 1b96ee7
+## Ticket 07 S1 evidence, on 2c53572
 
-Collected on 2026-10-13 by the PM's `pm-evidence.sh` on a detached worktree of `1b96ee790679d2674235b4bba21f3a8e2ff6f40d` (branch `build/07-temp-scratch`: ff113dc, ticket 59's tracker commit, then S1, on `main` ead167e); go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on. Raw outputs: `local://t07-s1-ev/`. No other test ran meanwhile.
+Collected on 2026-10-13 by the PM's `pm-evidence.sh` on a detached worktree of `2c535723e02fd463075be683daddb594c7d25be4` (branch `build/07-temp-scratch`: f86e88b, ticket 59's tracker commit, then S1, on `main` f0d4878); go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on. Raw outputs: `local://t07-s1-ev/`. No other test ran meanwhile.
 
 | Step | Result |
 |---|---|
@@ -35,9 +35,9 @@ Rule breaks, each restored and re-run green:
 | i | Opened index.lock with O_TRUNC instead of O_EXCL, installing through a foreign lock. | TestIndexInstallOwnedLock/foreign |
 | j | Replaced two-tree read-tree -m -u with read-tree --reset -u. | TestMaterializeRetryPreservesThirdValue |
 
-## F2-07 freeze evidence: ticket 07 S2 at ae1c995
+## F2-07 freeze evidence: ticket 07 S2 at b23d8f7
 
-Collected on 2026-10-13 by the project manager on a detached worktree of `ae1c9956dc5e74409dca9f010e4e4e2f92db91d5` (`feat(ledger): draft F2-07 scratch observation and merge-back records for the owner's freeze`, on `main` 1b96ee7); go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on.
+Collected on 2026-10-13 by the project manager on a detached worktree of `b23d8f72c1683f965e87cb0c6fa68142af18316d` (`feat(ledger): draft F2-07 scratch observation and merge-back records for the owner's freeze`, on `main` 2c53572); go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on.
 
 | Step | Result |
 |---|---|
@@ -54,9 +54,9 @@ Collected on 2026-10-13 by the project manager on a detached worktree of `ae1c99
 
 Rule breaks (the coder's report): 67 mutations of the decoder and encoder rules, including breaks a–n of the assignment, each failed a named test and the restored code passed; one accessor-only mutation was masked by `PromotionAdmitted.check`, which still refuses the duplicate, and was replaced by an encoder-side break. Every owned file's SHA-256 was verified restored after the runs.
 
-## Ticket 07 S3a evidence, on b03de1d
+## Ticket 07 S3a evidence, on c1c1a25
 
-Collected on 2026-10-13 by the PM's `pm-evidence.sh` on a detached worktree of `b03de1d0b59db65875147575c7ab4f9a0e920596` (branch `build/07-temp-scratch`: dd2e5f3, D120, documents only, then S3a, on `main` 702ca66); go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on. Raw outputs: `local://t07-s3a-ev/`. CoderT07S3b and CoderT08S2 wrote code but ran no test meanwhile.
+Collected on 2026-10-13 by the PM's `pm-evidence.sh` on a detached worktree of `c1c1a25b44cfb2e2bb493377154a76c3d25feaa7` (branch `build/07-temp-scratch`: a3247da, D120, documents only, then S3a, on `main` 2fa3b79); go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on. Raw outputs: `local://t07-s3a-ev/`. CoderT07S3b and CoderT08S2 wrote code but ran no test meanwhile.
 
 | Step | Result |
 |---|---|
@@ -85,9 +85,9 @@ Rule breaks, each restored and re-run green:
 | p | Accepted a fitting payload without checking its encoded envelope. | TestScratchPathsetBoundIsExplicit: preflight measured only payload bytes |
 | q | Removed resumed-temporary context binding. | TestInterruptedWriterResumesTemporary: resumed another context's work |
 
-## Ticket 07 S3b evidence, on db85ebb
+## Ticket 07 S3b evidence, on b6d2cf4
 
-Collected on 2026-10-13. The test runs are the coder's final runs on the committed tree (D121), verified by hash: all 19 changed files' SHA-256 values match `db85ebb72af9d7265555495105bc98716ba69c8f` (`feat(workspace): merge back temporary scratches, retry, notices and admission provenance (ticket 07 S3b)`, above c41452f, D122, and 4d9fc6a, D121, on `main` b03de1d). The module checks, the full check and the workload run are the project manager's, on a detached worktree of that commit, with nothing else running; go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on.
+Collected on 2026-10-13. The test runs are the coder's final runs on the committed tree (D121), verified by hash: all 19 changed files' SHA-256 values match `b6d2cf42bf9bda4f94e8c821f8262222efa87294` (`feat(workspace): merge back temporary scratches, retry, notices and admission provenance (ticket 07 S3b)`, above e240daa, D122, and 8f986a5, D121, on `main` c1c1a25). The module checks, the full check and the workload run are the project manager's, on a detached worktree of that commit, with nothing else running; go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on.
 
 | Step | Result |
 |---|---|
@@ -103,7 +103,7 @@ Collected on 2026-10-13. The test runs are the coder's final runs on the committ
 | V4 `go run ./tools/check` (with D122's 20-minute limit) | `check PASSED: all 9 steps passed`, 1,164 s; the package took 362.002 s in the tests step and 460.203 s in the race step |
 | V11 `TestCaptureWorkload`, alone | exit 0, 1,263.812 s; 29 rows (`local://t07-s3b-ev/t07-workload.jsonl`); the `lease` phase measured **107.3 ms** per lease on the 10,000-file scratch |
 
-An earlier final sequence on the previous tree failed V5: one per-row clone reported Git's `fatal: hardlink different from source`, and a pattern the PM had widened hit the 45-minute limit. The fix (`--no-hardlinks` at all five per-row clone sites) and the advisor's narrower pattern are in db85ebb, and the final runs above followed it.
+An earlier final sequence on the previous tree failed V5: one per-row clone reported Git's `fatal: hardlink different from source`, and a pattern the PM had widened hit the 45-minute limit. The fix (`--no-hardlinks` at all five per-row clone sites) and the advisor's narrower pattern are in b6d2cf4, and the final runs above followed it.
 
 Rule breaks, each restored and re-run green:
 
@@ -122,9 +122,9 @@ Rule breaks, each restored and re-run green:
 | r | Complete missing applied-source closure during Open. | Open completed missing closure |
 | pin_rollback | Delete overwritten pin entries during undo. | refused prepared append destroyed prior pin ownership or order |
 
-## Fix-up at 9954aec (2026-10-15)
+## Fix-up at 1ebb83b (2026-10-15)
 
-The five findings of the S3b review. The test runs are the coder's final runs on the committed tree (D121), verified by hash: all six changed files' SHA-256 values match 9954aec. The project manager's checks and the harness ran on 3eeba8c, the same tree committed with a wrong message and corrected to 9954aec; go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on.
+The five findings of the S3b review. The test runs are the coder's final runs on the committed tree (D121), verified by hash: all six changed files' SHA-256 values match 1ebb83b. The project manager's checks and the harness ran on 3eeba8c, the same tree committed with a wrong message and corrected to 1ebb83b; go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on.
 
 | Step | Result |
 |---|---|
@@ -138,7 +138,7 @@ The five findings of the S3b review. The test runs are the coder's final runs on
 | V12 | `GOOS=linux` and `GOOS=darwin` `go vet ./internal/core/workspace`: exit 0 |
 | gofmt, staticcheck, line endings | clean; every file `i/lf w/lf` |
 | V4 `go run ./tools/check` with `DWARF_CC` | `check PASSED: all 9 steps passed`, 1,216 s; the package took 442.372 s in the tests step and 423.892 s in the race step |
-| V11 `TestCaptureWorkload` | exit 0, 779 s, run alone; 29 lines (`ticket-07-capture-workload.jsonl`). The `lease` line reads 0 ms: its 32 leases finished within one step of this machine's monotonic clock, about 0.5 ms (A.10), so each took under about 16 µs. At db85ebb the same phase read 107.3 ms per lease. |
+| V11 `TestCaptureWorkload` | exit 0, 779 s, run alone; 29 lines (`ticket-07-capture-workload.jsonl`). The `lease` line reads 0 ms: its 32 leases finished within one step of this machine's monotonic clock, about 0.5 ms (A.10), so each took under about 16 µs. At b6d2cf4 the same phase read 107.3 ms per lease. |
 
 The race run alone took 629.3 s against S3b's 529.8 s. Per-test comparison of the two logs put the growth across unrelated ticket 06 tests (`TestCapacityScalesWithPairs` 44.8 → 54.7 s, `TestNewRootAfterFailure` 22.4 → 28.6 s), while the plain run's top-level sum stayed 1,302 → 1,304 s. The new `TestMergeBackWaitsForPendingChild` costs about 10 s, and `TestMergeBackWaitsForTaskTurn` fell 24.5 s. The project manager read the growth as machine load [INFERENCE]; the in-check figures are the record.
 

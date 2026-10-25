@@ -1,6 +1,6 @@
 # F2-09 freeze evidence: ticket 09 S2 at 93b76a4
 
-Collected on 2026-10-16. The test runs are the coder's final runs on the committed tree (D121), verified by hash: all 11 changed files' SHA-256 values match commit 93b76a4 (`feat(ledger): draft F2-09 policy activation records for the owner's freeze`, on `main` d4453c0). The fuzzing, module checks and full check are the project manager's, on a detached worktree of that commit; go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on.
+Collected on 2026-10-16. The test runs are the coder's final runs on the committed tree (D121), verified by hash: all 11 changed files' SHA-256 values match commit 93b76a4 (`feat(ledger): draft F2-09 policy activation records for the owner's freeze`, on `main` ba5d5c8). The fuzzing, module checks and full check are the project manager's, on a detached worktree of that commit; go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on.
 
 | Step | Result |
 |---|---|

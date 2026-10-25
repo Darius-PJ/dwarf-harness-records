@@ -2,7 +2,7 @@
 
 Designer: DesignT06, 2026-10-12. Status: **draft for the build advisor's ruling; the ruling wins where the two differ.** The owner approves the design before any code (OG-A6, §7.3); the freeze of ticket 06's records (F2-06) is his later, separate question (§8).
 
-**Sources** are cited as `file:line` at `main` b04860c. Abbreviations:
+**Sources** are cited as `file:line` at `main` 8c2c328. Abbreviations:
 - T05–T09 = `.scratch/dwarf-harness/issues/0N-….md` (tickets 05–09).
 - RC = `docs/ROADMAP-CORE.md`; CORE = `docs/DESIGN-CORE-AND-LAUNCHERS.md`; DEC = `docs/DECISIONS.md`; CON = `docs/CONTRACTS.md`; UC = `docs/DESIGN-UNDERCURRENT.md`; SPEC = `.scratch/dwarf-harness/spec.md`; AGENTS = `AGENTS.md`.
 - PKT = `.scratch/dwarf-harness/c2-evidence/d52-c2-approval-packet.md`; BR = `…/ticket-05-design-brief.md`; RU = `…/ticket-05-design-ruling.md`.

@@ -1,6 +1,6 @@
 # Ruling: ticket 45 implementation design (§1–§9 of `local://t45-brief.md`)
 
-**Advisor:** build advisor (Claude Fable 5.1), under D117. **Base:** `main` at 3d442f4, read-only.
+**Advisor:** build advisor (Claude Fable 5.1), under D117. **Base:** `main` at ee798a5, read-only.
 **Ruled on:** `local://t45-brief.md` §1–§9 (DesignT45), with `local://t45-api-digest.md`, `local://t45-api-digest-2.md`, the gate ruling (§0 of this file's predecessor, carried below as §0), and the repository conventions the brief cites (`internal/core/workspace/recovery_test.go:455-509`; `internal/core/ledgerstore/peakmem_windows_test.go:14-47`; `tools/check/boundary.go:49-53`; `internal/core/durable/durable.go:1-3`), which I read myself.
 
 **Verdict: approve**, with P7 and P14 amended as ruled in §1 and the findings in §4. The ruling wins over the brief where they differ; the brief is not re-edited. **Owner gates: none.** No freeze, no contract, no module, no cgo. The design goes to the build. **Budget:** S1 now, with the checkpoint in §3; S2 and the close wait for the Oct 22 reset.
@@ -160,7 +160,7 @@ The gate ruling of this file's first version stands unchanged: reading B control
 
 # Ruling: ticket 45 gate analysis (C10: run and positively close a restricted Windows process tree)
 
-**Advisor:** build advisor (Claude Fable 5.1), under D117 (`docs/DECISIONS.md:1931-1935`). **Base:** `main` at 3d442f4, read-only.
+**Advisor:** build advisor (Claude Fable 5.1), under D117 (`docs/DECISIONS.md:1931-1935`). **Base:** `main` at ee798a5, read-only.
 **Ruled on:** `local://t45-brief.md` §0 (DesignT45), with `local://t45-gate-supplement.md`, `local://t45-design-assignment.md`, the precedent `local://t59-ruling.md`, and the cited sources, which I read myself.
 
 **Verdict on the brief: reject §0's verdict; adopt §0's trace.** **Gate verdict: buildable now**, all five criteria, with the deferrals in §3. P1 is reversed (reading B controls); P2, P3 and P4 are upheld, P2 narrowed; P5 falls with P1. No owner question is asked; no design approval exists yet (D117): the brief returns to the designer to complete §1 onward. Nothing here marks C10 Done, claims A2, or freezes anything.

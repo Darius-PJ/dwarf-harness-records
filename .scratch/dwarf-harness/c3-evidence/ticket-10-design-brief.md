@@ -1,6 +1,6 @@
 # Ticket 10 — persist and recover independent private contexts
 
-Design proposal for advisor ruling, not an adopted decision. Base supplied by the PM: `main` 734eb1d. No repository write, Git inspection, command, build or test is part of this assignment. The eventual ruling wins over this brief; the frozen F3-10 contract wins over either on its encodings. Sources below are repository-relative citations; coder filesystem paths must instead be absolute beneath the PM-assigned worktree.
+Design proposal for advisor ruling, not an adopted decision. Base supplied by the PM: `main` c6bfc5e. No repository write, Git inspection, command, build or test is part of this assignment. The eventual ruling wins over this brief; the frozen F3-10 contract wins over either on its encodings. Sources below are repository-relative citations; coder filesystem paths must instead be absolute beneath the PM-assigned worktree.
 
 ## Owner summary
 
@@ -420,7 +420,7 @@ Designer runs none. Coder runs the following serially from the **absolute PM-ass
 | PM last code slice | `go run ./tools/check` with race; all five build/static-analysis targets as settled by D137; native three-OS CI under D133 required for C3 exit, never inferred from cross-builds |
 | Markdown-only close | Relative-link resolution and LF, no full-check repetition (D128) |
 
-No tests/evidence overlap. Report uncached package plain/race elapsed, ten slowest race tests, test/row counts and every >60-s test; **this assignment additionally requires each test ≤60 s under race**. B28's historical workspace baseline is 315 s plain /407 s race on 99a8f89, not a runtime-package prediction. D127's full-check package timeout/report line remain 30/25 minutes; don't restore the obsolete 15-minute line or change tools/check, skip accepted rows, split packages or export test-only hooks. Sources: DEC:B28 item 8,D127,D129,D131; assignment “Building”.
+No tests/evidence overlap. Report uncached package plain/race elapsed, ten slowest race tests, test/row counts and every >60-s test; **this assignment additionally requires each test ≤60 s under race**. B28's historical workspace baseline is 315 s plain /407 s race on 245a032, not a runtime-package prediction. D127's full-check package timeout/report line remain 30/25 minutes; don't restore the obsolete 15-minute line or change tools/check, skip accepted rows, split packages or export test-only hooks. Sources: DEC:B28 item 8,D127,D129,D131; assignment “Building”.
 
 ### Feasibility and smoke evidence, not whole-runtime capacity (P14)
 

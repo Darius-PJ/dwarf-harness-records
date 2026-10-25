@@ -1,6 +1,6 @@
 # F2-08 freeze evidence: ticket 08 S2 at c44484d
 
-Collected on 2026-10-13. The test runs are the coder's final runs on the committed tree (D121), verified by hash: all 11 changed files' SHA-256 values match commit `c44484d401b89e20c970252654bdf28d570f8404` (`feat(ledger): draft F2-08 finalization, acceptance and no-change records for the owner's freeze`, on `main` b03de1d). The fuzzing, module checks and full check are the project manager's, on a detached worktree of that commit; go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on. On 2026-10-15 S2 was rebased onto `main` db85ebb as c9bb2c2; `git diff c44484d c9bb2c2 -- contract/ledger` is empty, and the full check runs again on the freeze-record commit.
+Collected on 2026-10-13. The test runs are the coder's final runs on the committed tree (D121), verified by hash: all 11 changed files' SHA-256 values match commit `c44484d401b89e20c970252654bdf28d570f8404` (`feat(ledger): draft F2-08 finalization, acceptance and no-change records for the owner's freeze`, on `main` c1c1a25). The fuzzing, module checks and full check are the project manager's, on a detached worktree of that commit; go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on. On 2026-10-15 S2 was rebased onto `main` b6d2cf4 as c9bb2c2; `git diff c44484d c9bb2c2 -- contract/ledger` is empty, and the full check runs again on the freeze-record commit.
 
 | Step | Result |
 |---|---|

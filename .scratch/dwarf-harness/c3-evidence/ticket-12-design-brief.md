@@ -8,7 +8,7 @@ No owner question is triggered by the recommended design. The advisor must rule 
 
 ## §0 — Build gate and reserved owner decisions
 
-**Gate: buildable now after the advisor's ruling, with the contract stop below.** The assignment fixes base `main` d12f605 and reports ticket 11 resolved and CI run 13 green. The repository records the scoped service and carried encoder fix in B32; ticket 12 names only ticket 11 as its blocker. This is not a new D52 approval or a C3 completion claim. Sources: ticket 12:7-8,51; `docs/DECISIONS.md:2637-2668`; `docs/ROADMAP-CORE.md:469-475,515`.
+**Gate: buildable now after the advisor's ruling, with the contract stop below.** The assignment fixes base `main` d7ed4ef and reports ticket 11 resolved and CI run 13 green. The repository records the scoped service and carried encoder fix in B32; ticket 12 names only ticket 11 as its blocker. This is not a new D52 approval or a C3 completion claim. Sources: ticket 12:7-8,51; `docs/DECISIONS.md:2637-2668`; `docs/ROADMAP-CORE.md:469-475,515`.
 
 | Reserved decision | Trigger and treatment |
 |---|---|

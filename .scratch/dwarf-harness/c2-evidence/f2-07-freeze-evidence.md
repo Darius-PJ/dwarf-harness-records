@@ -1,6 +1,6 @@
-# F2-07 freeze evidence: ticket 07 S2 at ae1c995
+# F2-07 freeze evidence: ticket 07 S2 at b23d8f7
 
-Collected on 2026-10-13 by the project manager on a detached worktree of `ae1c9956dc5e74409dca9f010e4e4e2f92db91d5` (`feat(ledger): draft F2-07 scratch observation and merge-back records for the owner's freeze`, on `main` 1b96ee7); go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on.
+Collected on 2026-10-13 by the project manager on a detached worktree of `b23d8f72c1683f965e87cb0c6fa68142af18316d` (`feat(ledger): draft F2-07 scratch observation and merge-back records for the owner's freeze`, on `main` 2c53572); go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on.
 
 | Step | Result |
 |---|---|

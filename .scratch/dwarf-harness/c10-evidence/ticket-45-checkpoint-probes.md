@@ -1,7 +1,7 @@
 # Ticket 45 S1 checkpoint: native probe results (2026-10-17)
 
 **Setup.**
-- **Machine:** Windows 10 Pro 19045, x64. Coder CoderT45S1, worktree `45-s1` at 3d442f4.
+- **Machine:** Windows 10 Pro 19045, x64. Coder CoderT45S1, worktree `45-s1` at ee798a5.
 - **Logs:** under `C:/Users/darius.jones/worktrees/dwarf-harness/t45-s1-evidence/`: `qualification-test-20261017-033608.log` and `probe-*.log`. Every throwaway change was restored, with its SHA-256 asserted.
 - **Flags in every launch:** `0x0008040c`: `CREATE_SUSPENDED`, `EXTENDED_STARTUPINFO_PRESENT`, `CREATE_UNICODE_ENVIRONMENT` and `DETACHED_PROCESS`.
 - **LPAC:** `SECURITY_CAPABILITIES` with zero capabilities, plus the ALL APPLICATION PACKAGES opt-out policy and `JOB_LIST`.

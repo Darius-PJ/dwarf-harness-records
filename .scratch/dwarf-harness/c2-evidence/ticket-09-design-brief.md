@@ -1,6 +1,6 @@
 # Ticket 09 — exact one-off policy activation
 
-Design proposal for advisor ruling; no design choice is adopted by this brief. Repository base: db85ebb. Ticket 08's ruling and frozen F2-08 take precedence over its brief. Repository remains read-only for this assignment.
+Design proposal for advisor ruling; no design choice is adopted by this brief. Repository base: b6d2cf4. Ticket 08's ruling and frozen F2-08 take precedence over its brief. Repository remains read-only for this assignment.
 
 ## 0. Owner summary
 Ticket 09 adds exact, owner-authorized policy controls to the existing workspace

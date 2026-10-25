@@ -1,6 +1,6 @@
 # OG-F6: freeze request for F2-06, ticket 06's part of F2
 
-**Prepared:** 2026-10-12, against commit 188f5c5 on branch `build/06-f2`, which is `main` at 1c5a0eb plus S2. For C2 and ticket 06. **Answer:** 2026-10-12, "Freeze as presented". [D118](../../../docs/DECISIONS.md#d118-f2-06-promotion-admission-generation-and-failure-records-frozen) records the freeze; S2 reached `main` as e6429de. The rest of this packet stays as sent.
+**Prepared:** 2026-10-12, against commit 188f5c5 on branch `build/06-f2`, which is `main` at 408944d plus S2. For C2 and ticket 06. **Answer:** 2026-10-12, "Freeze as presented". [D118](../../../docs/DECISIONS.md#d118-f2-06-promotion-admission-generation-and-failure-records-frozen) records the freeze; S2 reached `main` as bde7c68. The rest of this packet stays as sent.
 
 You froze C2's F2 records in parts, each part before the code that writes it (D113). Ticket 06 has drafted its part, F2-06, in `contract/ledger` (S2). This packet asks you to freeze it. S2 reaches `main` only with your answer (D41), and S3, Core's code that writes these records, waits for it.
 

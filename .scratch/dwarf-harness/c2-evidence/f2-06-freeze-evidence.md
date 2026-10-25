@@ -2,7 +2,7 @@
 
 Collected by the project manager on 2026-10-12 with a script (`t06-s2-evidence.sh`, then `t06-s2-evidence-2.sh` for the final commit) on a detached worktree of the exact commit, Windows 10, Git 2.55.0.windows.3, go1.27.2, Defender real-time protection on.
 
-**Commit:** `188f5c577636f3ad4d362e39397b4ae8dea2ee04`, `feat(ledger): draft F2-06 promotion records for the owner's freeze` on `build/06-f2`, parent `main` 1c5a0eb. It replaced 0fa0f43 before any review: the first full check, at 0fa0f43, failed only its staticcheck step (`contract\ledger\promotion.go:133:10: error strings should not be capitalized (ST1005)`), and 188f5c5 rewords that one string (`git diff --stat 0fa0f43 188f5c5`: `contract/ledger/promotion.go | 2 +-`).
+**Commit:** `188f5c577636f3ad4d362e39397b4ae8dea2ee04`, `feat(ledger): draft F2-06 promotion records for the owner's freeze` on `build/06-f2`, parent `main` 408944d. It replaced 0fa0f43 before any review: the first full check, at 0fa0f43, failed only its staticcheck step (`contract\ledger\promotion.go:133:10: error strings should not be capitalized (ST1005)`), and 188f5c5 rewords that one string (`git diff --stat 0fa0f43 188f5c5`: `contract/ledger/promotion.go | 2 +-`).
 
 | Step | Command | Result |
 |---|---|---|

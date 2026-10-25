@@ -1,6 +1,6 @@
 # Ticket 09 design ruling (advisor AdvisorT09, 2026-10-15)
 
-Ruling on `local://t09-brief.md` (DesignT09, at `main` db85ebb; at the close both land under `.scratch/dwarf-harness/c2-evidence/` as `ticket-09-design-brief.md` and `ticket-09-design-ruling.md`). Where they differ, this ruling wins. Under D117 it ends the design step: no owner design question; the build starts from the brief as modified here, after ticket 08 closes. The owner's freeze of F2-09 (OG-F9) comes before the code that writes it. Abbreviations as the brief's (T09, SPEC, CORE, RC, DEC, LD, LAW, UC, CON, WD, R8, F8, BUD, ENV, BR = the brief); bare Go names are `internal/core/workspace/`.
+Ruling on `local://t09-brief.md` (DesignT09, at `main` b6d2cf4; at the close both land under `.scratch/dwarf-harness/c2-evidence/` as `ticket-09-design-brief.md` and `ticket-09-design-ruling.md`). Where they differ, this ruling wins. Under D117 it ends the design step: no owner design question; the build starts from the brief as modified here, after ticket 08 closes. The owner's freeze of F2-09 (OG-F9) comes before the code that writes it. Abbreviations as the brief's (T09, SPEC, CORE, RC, DEC, LD, LAW, UC, CON, WD, R8, F8, BUD, ENV, BR = the brief); bare Go names are `internal/core/workspace/`.
 
 **Verdict:** approve-with-changes.
 

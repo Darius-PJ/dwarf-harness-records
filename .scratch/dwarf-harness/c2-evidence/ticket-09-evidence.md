@@ -2,9 +2,9 @@
 
 Each slice's evidence as reviewed, oldest first. S2's freeze evidence is [f2-09-freeze-evidence.md](f2-09-freeze-evidence.md), beside this file with the brief, the ruling and the test-cost diagnosis and ruling. Paths that begin `local://` name the build session's own files, which stay outside the repository.
 
-## Ticket 09 S1 evidence, on 9bbb0ce (2026-10-16)
+## Ticket 09 S1 evidence, on d85ed78 (2026-10-16)
 
-The test runs are the coder's final runs on the committed tree (D121), verified by hash: all four new files match 9bbb0ce. f9793ec beneath it is documents only (D126). The project manager's checks ran on a detached worktree of 9bbb0ce; go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on.
+The test runs are the coder's final runs on the committed tree (D121), verified by hash: all four new files match d85ed78. 787758b beneath it is documents only (D126). The project manager's checks ran on a detached worktree of d85ed78; go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on.
 
 | Step | Result |
 |---|---|
@@ -37,9 +37,9 @@ Rule breaks (note 3), each restored and re-run green:
 | Include removed workspaces in affected scope. | Removed prior-only entries from scope derivation. | `TestActivationAffectedWorkspaces/removed`, `TestActivationAffectedWorkspaces/all_removed`, `TestActivationAffectedWorkspaces/removed_and_added`, `TestActivationAffectedWorkspaces/policy_changed_union` |
 | Keep checks-only changes local. | Treated local policy-list differences as global changes. | `TestActivationAffectedWorkspaces/checks_only`, `TestActivationAffectedWorkspaces/environment_only` |
 
-## Ticket 09 S3a evidence, on 4432061 (2026-10-16)
+## Ticket 09 S3a evidence, on a76866d (2026-10-16)
 
-The test runs are the coder's final runs on the committed tree (D121), verified by hash: all 12 changed files match 4432061. The project manager's module checks ran in the gate worktree on 6f2c730, the stack S3a reached `main` in; go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on, before the machine changes of 2026-10-16.
+The test runs are the coder's final runs on the committed tree (D121), verified by hash: all 12 changed files match a76866d. The project manager's module checks ran in the gate worktree on f8e2dbc, the stack S3a reached `main` in; go1.27.2, Git 2.55.0.windows.3, Defender real-time protection on, before the machine changes of 2026-10-16.
 
 | Step | Result |
 |---|---|
@@ -48,7 +48,7 @@ The test runs are the coder's final runs on the committed tree (D121), verified 
 | V5 `-race -count=20 -timeout=45m -run '^TestActivation(IntentAdmissionLinearization\|SharedCutoverWaitsForAllIntents\|SingleDueWakeup\|ReplacementCancellationCAS\|SameIDAndOnePending)$'` (coder) | exit 0; 445.814 s |
 | V6 non-standard imports | `contract/law`, `contract/ledger`, `contract/ledger/appender`, `internal/core/durable`, `internal/core/ledgerstore` |
 | V7, V12, gofmt, staticcheck, line endings | clean |
-| `go run ./tools/check -race=false` on 6f2c730 (D129) | `check PASSED: 8 of 9 steps passed, race skipped (D129)`, 907 s; the package took 620.158 s in the tests step |
+| `go run ./tools/check -race=false` on f8e2dbc (D129) | `check PASSED: 8 of 9 steps passed, race skipped (D129)`, 907 s; the package took 620.158 s in the tests step |
 
 Rule breaks (notesForS3a 10), each restored; the `promote.go` break restored with its SHA-256 asserted:
 
@@ -70,28 +70,28 @@ Rule breaks (notesForS3a 10), each restored; the `promote.go` break restored wit
 | Holdless recovery fence | Disabled activation recovery fence; restored. | `TestActivationReplayIsInertAndOverdue/pending` |
 | Unconditional no_validator | Returned no_evidence after activation; restored and asserted original promote.go SHA-256. | `TestRequestPromotionUnavailableInC2` |
 
-## Test-cost optimization evidence (OPT-1 bf05e92, OPT-2 9d43602; 2026-10-16/17)
+## Test-cost optimization evidence (OPT-1 36d0c51, OPT-2 8fb6ef1; 2026-10-16/17)
 
-All runs alone on the machine, serially, by the slice coders. Machine state for every figure below: PcaSvc repaired (its hung process ended), Windows Defender excluding git.exe (the owner's choices). The final runs ran on the combined tree 9d43602; all six changed files' SHA-256 values match it.
+All runs alone on the machine, serially, by the slice coders. Machine state for every figure below: PcaSvc repaired (its hung process ended), Windows Defender excluding git.exe (the owner's choices). The final runs ran on the combined tree 8fb6ef1; all six changed files' SHA-256 values match it.
 
 ### The whole package, plain (`go test -count=1 -timeout=29m -v ./internal/core/workspace`)
 
 | Stage | Package s | Sum of top-level s | Source |
 |---|---:|---:|---|
-| Before the machine fixes (S3a's final run, 4432061's tree) | 774.8 | 1,998 | `local://t09-s3a-ev/coder-final-v1.log` |
-| After the machine fixes, unchanged tests (6f2c730) | 482.264 | 1,248.88 | `local://opt-ev/opt1-baseline.log` |
+| Before the machine fixes (S3a's final run, a76866d's tree) | 774.8 | 1,998 | `local://t09-s3a-ev/coder-final-v1.log` |
+| After the machine fixes, unchanged tests (f8e2dbc) | 482.264 | 1,248.88 | `local://opt-ev/opt1-baseline.log` |
 | O1 | 479.318 | 1,206.76 | `local://opt-ev/opt1-o1.log` |
-| O1 + O2 (OPT-1, bf05e92) | 440.317 | 1,099.47 | `local://opt-ev/opt1-o1o2.log` |
-| O1–O4 (OPT-1 + OPT-2, 9d43602) | 361.337 | 884.29 | `local://opt-ev/opt2-v1.log` |
+| O1 + O2 (OPT-1, 36d0c51) | 440.317 | 1,099.47 | `local://opt-ev/opt1-o1o2.log` |
+| O1–O4 (OPT-1 + OPT-2, 8fb6ef1) | 361.337 | 884.29 | `local://opt-ev/opt2-v1.log` |
 
 ### Race (`-race -count=1 -timeout=45m -v`)
 
 | Stage | Package s | Sum of top-level s |
 |---|---:|---:|
 | Before the machine fixes (S3a) | 892.3 | 2,217 |
-| O1–O4 (9d43602) | 411.486 | 1,123.37 |
+| O1–O4 (8fb6ef1) | 411.486 | 1,123.37 |
 
-V5 on 9d43602: `-race -count=20 -timeout=45m -run '^(TestFinalizationCrashMatrix|TestWindowsOwnedGitCrashBeforeRecovery)$'`, exit 0, 448.1 s.
+V5 on 8fb6ef1: `-race -count=20 -timeout=45m -run '^(TestFinalizationCrashMatrix|TestWindowsOwnedGitCrashBeforeRecovery)$'`, exit 0, 448.1 s.
 
 ### Focused, plain, alone (OPT-2's before and after, both after the machine fixes)
 
@@ -113,7 +113,7 @@ OPT-1: six, each killed (`local://opt1-coder-report.md`). OPT-2: seven; six kill
 ### Defender and PcaSvc (2026-10-16, the owner's choices)
 
 - **PcaSvc:** the Program Compatibility Assistant service used one full thread at idle. Its restart hung in Stop Pending, and its own process (hosting only PcaSvc) was ended through a second elevated step; it runs normally since.
-- **Defender A/B,** on the gate worktree at 6f2c730 with the subset `TestFinalizationCrashMatrix`, `TestOpenFailsClosedOnF2_07MergeBackRuleBreak` and `TestOpenFailsClosedOnF2_08RuleBreak`, plain, `-parallel=4`:
+- **Defender A/B,** on the gate worktree at f8e2dbc with the subset `TestFinalizationCrashMatrix`, `TestOpenFailsClosedOnF2_07MergeBackRuleBreak` and `TestOpenFailsClosedOnF2_08RuleBreak`, plain, `-parallel=4`:
 
   | Runs | Package seconds | MsMpEng, % of one thread |
   |---|---|---|
@@ -123,9 +123,9 @@ OPT-1: six, each killed (`local://opt1-coder-report.md`). OPT-2: seven; six kill
   The median was 53.2 s against 63.1 s, so the excluded runs were 19% faster, and faster at every matched position. The excluded runs came first, so run order was not controlled.
 - **Exclusions:** an exclusion of the tests' temporary folder gained 0.5% in the diagnosis and was removed. The git.exe process exclusions (Git for Windows' `cmd`, `bin` and `mingw64\bin` copies) stay.
 
-## Ticket 09 S3b evidence, on 99a8f89 (2026-10-17)
+## Ticket 09 S3b evidence, on 245a032 (2026-10-17)
 
-The test runs are the coder's final runs on the committed tree (D121), verified by hash: every changed file matches 99a8f89. 6e54b85 beneath it changes only `tools/check` (step durations). The project manager's checks and the full check ran in the gate worktree on 99a8f89, with Go's test cache cleared first (the ticket's last code slice, D129). Machine state: PcaSvc repaired and git.exe excluded from Defender (the owner's choices of 2026-10-16).
+The test runs are the coder's final runs on the committed tree (D121), verified by hash: every changed file matches 245a032. 50026d5 beneath it changes only `tools/check` (step durations). The project manager's checks and the full check ran in the gate worktree on 245a032, with Go's test cache cleared first (the ticket's last code slice, D129). Machine state: PcaSvc repaired and git.exe excluded from Defender (the owner's choices of 2026-10-16).
 
 | Step | Result |
 |---|---|

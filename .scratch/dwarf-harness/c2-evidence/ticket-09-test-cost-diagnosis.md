@@ -2,7 +2,7 @@
 
 ## Scope and evidence
 
-Diagnosis only at detached commit `6f2c730`. All repository edits were temporary instrumentation or experiments in the disposable probe worktree; no permanent optimization is applied. Raw commands, timing output, counters and scripts live in `C:/Users/darius.jones/worktrees/dwarf-harness/test-cost-evidence/`. Tests ran serially after the PM's “go”, with exclusive access to the machine for these measurements. Normal background services remained active.
+Diagnosis only at detached commit `f8e2dbc`. All repository edits were temporary instrumentation or experiments in the disposable probe worktree; no permanent optimization is applied. Raw commands, timing output, counters and scripts live in `C:/Users/darius.jones/worktrees/dwarf-harness/test-cost-evidence/`. Tests ran serially after the PM's “go”, with exclusive access to the machine for these measurements. Normal background services remained active.
 
 ## Measurement method and limitations
 

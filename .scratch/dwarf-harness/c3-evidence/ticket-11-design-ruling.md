@@ -1,6 +1,6 @@
 # Ticket 11 design ruling (advisor AdvisorT11, 2026-10-23)
 
-Ruling on `local://t11-brief.md` (DesignerT11, at `main` 1e6c3dd; at the close both land under `.scratch/dwarf-harness/c3-evidence/` as `ticket-11-design-brief.md` and `ticket-11-design-ruling.md`). Where they differ, this ruling wins; the frozen F0/F2/F3-10 win over both on encodings. Under D117 it ends the design step: no owner design question; S1 may start now. The PM's freeze of F3-11 (D125) comes before the code that writes it. Abbreviations as the brief's (T11, SPEC, RC, CORE, DEC, CON, LD, AS, LS, R10, BR = the brief).
+Ruling on `local://t11-brief.md` (DesignerT11, at `main` f67e162; at the close both land under `.scratch/dwarf-harness/c3-evidence/` as `ticket-11-design-brief.md` and `ticket-11-design-ruling.md`). Where they differ, this ruling wins; the frozen F0/F2/F3-10 win over both on encodings. Under D117 it ends the design step: no owner design question; S1 may start now. The PM's freeze of F3-11 (D125) comes before the code that writes it. Abbreviations as the brief's (T11, SPEC, RC, CORE, DEC, CON, LD, AS, LS, R10, BR = the brief).
 
 **Verdict:** approve-with-changes.
 

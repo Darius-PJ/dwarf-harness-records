@@ -2,10 +2,10 @@
 
 Designer: DesignT05, 2026-10-12. Status: **ruled by the advisor on 2026-10-12, approve-with-changes; see [the ruling](ticket-05-design-ruling.md), which wins where the two differ.** The owner approves the design before any code starts (T05:49), and the gates in §7.2 stay with him. Where the advisor's ruling differs from this brief, the ruling wins.
 
-**Sources** are cited as `file:line` at `main` dfe2414, where D112 is recorded. Abbreviations:
+**Sources** are cited as `file:line` at `main` 1f58cdb, where D112 is recorded. Abbreviations:
 - T05 = `.scratch/dwarf-harness/issues/05-create-private-scratch-and-capture-exact-eligible-trees.md`; T06–T09 = issues 06–09 in the same folder.
 - RC = `docs/ROADMAP-CORE.md`; RM = `docs/ROADMAPS.md`; CORE = `docs/DESIGN-CORE-AND-LAUNCHERS.md`; DEC = `docs/DECISIONS.md`; CON = `docs/CONTRACTS.md`; UC = `docs/DESIGN-UNDERCURRENT.md`; RU = `docs/ROADMAP-UNDERCURRENT.md`; SPEC = `.scratch/dwarf-harness/spec.md`; PKT = `.scratch/dwarf-harness/c2-evidence/d52-c2-approval-packet.md`; AGENTS = `AGENTS.md`.
-- DEC numbering is dfe2414's. D112 added a line after DEC:349 and one after DEC:542, so D53–D75 now sit one line, and D76 onward two lines, below the packet's citations.
+- DEC numbering is 1f58cdb's. D112 added a line after DEC:349 and one after DEC:542, so D53–D75 now sit one line, and D76 onward two lines, below the packet's citations.
 - `ledger/…` = `contract/ledger/…`; `appender` = `contract/ledger/appender`; `ledgerstore/…` = `internal/core/ledgerstore/…`; `check/…` = `tools/check/…`.
 - **G1** = runner probe R1–R7 (`local://t05-git-probe-result.md`); **G2** = runner probe R8–R9 (`local://t05-git-probe-result-2.md`). Both ran git 2.55.0.windows.3 and go1.27.2 on the owner's machine. Appendix D lists what this brief takes from them.
 
@@ -1166,7 +1166,7 @@ Run in PowerShell from the worktree root, with `$env:GOTOOLCHAIN='local'; $env:G
 
 | Item | Resolution |
 |---|---|
-| 1 D52 status conflict | Resolved by D112 at dfe2414 (DEC:1523–1535; RC:406, :417; T05:51) |
+| 1 D52 status conflict | Resolved by D112 at 1f58cdb (DEC:1523–1535; RC:406, :417; T05:51) |
 | 2 F2 freeze timing | OG-B |
 | 3 Temporary-scratch trigger | Ticket 07's. D23's "created on that turn's first write" (DEC:71) and T07:12's "first conflicting writer access" name the same event: the second turn's first write is the conflicting access. Ticket 05 supplies BeginWrite, which ticket 07 can use |
 | 4 T05:18 versus D111 | T05:18 is publication-time text. D111 froze F0 (DEC:1509–1521), which meets T05:22's consumed families |

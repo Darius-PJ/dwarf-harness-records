@@ -1,6 +1,6 @@
 # OG-F9: freeze request for F2-09, ticket 09's part of F2
 
-**Prepared:** 2026-10-16, against commit 93b76a4 on branch `build/09-f2`, which is `main` at d4453c0 plus S2. For C2 and ticket 09. **Answer:** 2026-10-16, "Freeze as presented". [D124](../../../docs/DECISIONS.md#d124-f2-09-policy-activation-records-frozen) records the freeze; S2's `contract/ledger` reached `main` unchanged in 336ff23. The rest of this packet stays as sent.
+**Prepared:** 2026-10-16, against commit 93b76a4 on branch `build/09-f2`, which is `main` at ba5d5c8 plus S2. For C2 and ticket 09. **Answer:** 2026-10-16, "Freeze as presented". [D124](../../../docs/DECISIONS.md#d124-f2-09-policy-activation-records-frozen) records the freeze; S2's `contract/ledger` reached `main` unchanged in 0a21963. The rest of this packet stays as sent.
 
 You froze C2's F2 records in parts, each part before the code that writes it (D113). Ticket 09 lets you activate a new field law, validation policy and per-workspace check and environment policies, immediately or not before a time you choose; Core then switches the whole colony once, after promotions it has already begun to finalize are settled. It has drafted its records, F2-09, in `contract/ledger` (S2). This packet asks you to freeze them. Your answer is also your sign-off for S2 reaching `main` (D41), with its decision entry and register change; S3a, Core's code that writes these records, waits for it.
 

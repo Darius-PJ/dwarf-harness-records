@@ -10,26 +10,26 @@ Every local run was on the project's Windows machine, with go1.27.2 windows/amd6
 
 | Slice | Commits on `main` | Reached `main` | Review |
 |---|---|---|---|
-| S1, the record-free rules | 93cd19f | 2026-10-23 13:55 | approve, five minors and a nit |
-| S2, the F3-11 contract | 9a21fef; the freeze record 6d3eecc (D140) | 2026-10-23 15:35 | approve with the record, S2's D41 sign-off; two minors and three nits |
-| S3a, the reducer, entrance, grants, capacity, tasks and receipts | a5e18f1 | 2026-10-23 20:23 | approve, three minors and four nits |
-| S3b, admission, dispatch, endings and scoped access | c2c1996 | 2026-10-23 23:40 | approve, one minor and four nits |
-| S4, the crash matrix and final documentation | ca4e141 | 2026-10-24 01:56 | approve, two nits, no change required |
+| S1, the record-free rules | 51eb580 | 2026-10-23 13:55 | approve, five minors and a nit |
+| S2, the F3-11 contract | 8f5a63f; the freeze record 6e11d49 (D140) | 2026-10-23 15:35 | approve with the record, S2's D41 sign-off; two minors and three nits |
+| S3a, the reducer, entrance, grants, capacity, tasks and receipts | 0061b12 | 2026-10-23 20:23 | approve, three minors and four nits |
+| S3b, admission, dispatch, endings and scoped access | 444fd28 | 2026-10-23 23:40 | approve, one minor and four nits |
+| S4, the crash matrix and final documentation | ee9efa7 | 2026-10-24 01:56 | approve, two nits, no change required |
 
-S2's record commit 28f59c1 was amended, Markdown-only, as 6d3eecc to fill in its check result (D128). 6d3eecc was pushed on the owner's "Push now", and CI run 13 covers it. D141's 02f4881, Markdown-only, then reached `main` beneath S3a, which was committed as e7582c3 on 6d3eecc and rebased onto it as a5e18f1, with the tree identical and all 42 hashes matching both commits. Under D141 nothing after 6d3eecc was pushed before this close.
+S2's record commit 28f59c1 was amended, Markdown-only, as 6e11d49 to fill in its check result (D128). 6e11d49 was pushed on the owner's "Push now", and CI run 13 covers it. D141's 7adfe7b, Markdown-only, then reached `main` beneath S3a, which was committed as e7582c3 on 6e11d49 and rebased onto it as 0061b12, with the tree identical and all 42 hashes matching both commits. Under D141 nothing after 6e11d49 was pushed before this close.
 
 ## S1, the record-free rules (2026-10-23)
 
-Grant and resource containment, the resource path grammar, task-transition validation, scope sets and checked capacity arithmetic, and schema 2's canonical submission helpers, all unexported, with three new `Limits` fields, `MaxLiveTasks`, `MaxLiveGrants` and `MaxPendingLocalWork`, at the brief's defaults 4,096, 8,192 and 4,096: 12 files in `internal/core/agents`, +1,760/−2, committed as 93cd19f on 1e6c3dd, all 12 hashes matching. S1 writes no record and exports nothing else.
+Grant and resource containment, the resource path grammar, task-transition validation, scope sets and checked capacity arithmetic, and schema 2's canonical submission helpers, all unexported, with three new `Limits` fields, `MaxLiveTasks`, `MaxLiveGrants` and `MaxPendingLocalWork`, at the brief's defaults 4,096, 8,192 and 4,096: 12 files in `internal/core/agents`, +1,760/−2, committed as 51eb580 on f67e162, all 12 hashes matching. S1 writes no record and exports nothing else.
 
 | Step | Result |
 |---|---|
 | V1 `go test -count=1 -v ./internal/core/agents` (coder) | pass, 14.2 s; slowest `TestPrivateScratchBindingsAreDistinct` 7.88 s |
 | Race (coder) | pass, 20.4 s |
 | gofmt; `go vet` and staticcheck for all five targets (coder) | clean; imports unchanged |
-| V6, V7, V10, gofmt, staticcheck, line endings (project manager, 93cd19f) | the four imports; clean |
+| V6, V7, V10, gofmt, staticcheck, line endings (project manager, 51eb580) | the four imports; clean |
 | Fuzzing | none: S1 adds no fuzz target |
-| V4 check without its race step (project manager, 93cd19f) | `check PASSED: 8 of 9 steps passed, race skipped (D129) in 460.1s` (tests 402.3 s; `internal/core/agents` 104.3 s) |
+| V4 check without its race step (project manager, 51eb580) | `check PASSED: 8 of 9 steps passed, race skipped (D129) in 460.1s` (tests 402.3 s; `internal/core/agents` 104.3 s) |
 
 Rule breaks, each run once and restored:
 
@@ -51,18 +51,18 @@ The project manager's answers during S1, all three confirmed by the review:
 2. Schema 2's encoder uses an unexported argument struct per operation, in the brief's order, with the envelope kept apart, so that S2's review could reorder arguments without touching it.
 3. The 1,024-byte path bound is fixed grammar, an unexported constant, not a `Limits` field. S2 freezes the same grammar, so one implementation remains.
 
-Review: AdvisorT11S1 approved S1 at 93cd19f: "S1 implements notesForS1 2-9 faithfully as record-free unexported helpers with behaviour vectors and real breaks; approved for fast-forward with five minors (Limits zero semantics, nil list -> null, zero digest accepted, grant_id optional for core work ops, busy/invalid not asserted) carried to S3a and the path-grammar cutover to S2." Its nit asked for an explicit ASCII fold for `.git` when the grammar moved into `contract/ledger`. The verdict is `local://t11-s1-verdict.md`.
+Review: AdvisorT11S1 approved S1 at 51eb580: "S1 implements notesForS1 2-9 faithfully as record-free unexported helpers with behaviour vectors and real breaks; approved for fast-forward with five minors (Limits zero semantics, nil list -> null, zero digest accepted, grant_id optional for core work ops, busy/invalid not asserted) carried to S3a and the path-grammar cutover to S2." Its nit asked for an explicit ASCII fold for `.git` when the grammar moved into `contract/ledger`. The verdict is `local://t11-s1-verdict.md`.
 
 ## S2, the F3-11 contract (2026-10-23)
 
-Ten codecs in new `scoped_*.go` files, the catalogue at 38 type versions, the F3-11 section of the package documentation, `ledger.ValidResourcePath` as the one path grammar, which `internal/core/agents` now calls, a golden of 39 commits and 130 records with its three objects and three bodies, and `FuzzDecodeF3_11`: 23 files, +3,104/−55, committed as 9a21fef on 93cd19f, all 23 hashes and all 17 golden hashes matching. The [freeze evidence](f3-11-freeze-evidence.md) gives the coder's runs, V3 and V6–V9, the check on the record commit and rule breaks A–J, and D140 records the freeze. Beyond it:
+Ten codecs in new `scoped_*.go` files, the catalogue at 38 type versions, the F3-11 section of the package documentation, `ledger.ValidResourcePath` as the one path grammar, which `internal/core/agents` now calls, a golden of 39 commits and 130 records with its three objects and three bodies, and `FuzzDecodeF3_11`: 23 files, +3,104/−55, committed as 8f5a63f on 51eb580, all 23 hashes and all 17 golden hashes matching. The [freeze evidence](f3-11-freeze-evidence.md) gives the coder's runs, V3 and V6–V9, the check on the record commit and rule breaks A–J, and D140 records the freeze. Beyond it:
 
 | Step | Result |
 |---|---|
-| `internal/core/ledgerstore` (project manager, 9a21fef) | pass, 34.6 s |
-| V4 check without its race step (project manager, 9a21fef) | `check PASSED: 8 of 9 steps passed, race skipped (D129) in 502.8s` (tests 397.8 s; `contract/ledger` 68.3 s, `internal/core/agents` 100.1 s) |
+| `internal/core/ledgerstore` (project manager, 8f5a63f) | pass, 34.6 s |
+| V4 check without its race step (project manager, 8f5a63f) | `check PASSED: 8 of 9 steps passed, race skipped (D129) in 502.8s` (tests 397.8 s; `contract/ledger` 68.3 s, `internal/core/agents` 100.1 s) |
 
-The record commit 28f59c1's check took 833.3 s, its tests step 755.4 s against 397.8 s on 9a21fef. The slowdown was in packages neither S2 nor the record touched: `internal/core/workspace` went from 388 to 748 s, `internal/core/ledgerstore` from 246 to 355 s and `internal/core/graphfoundation` from 97 to 170 s, while `internal/core/agents` changed little. [INFERENCE] The cause is machine-side load.
+The record commit 28f59c1's check took 833.3 s, its tests step 755.4 s against 397.8 s on 8f5a63f. The slowdown was in packages neither S2 nor the record touched: `internal/core/workspace` went from 388 to 748 s, `internal/core/ledgerstore` from 246 to 355 s and `internal/core/graphfoundation` from 97 to 170 s, while `internal/core/agents` changed little. [INFERENCE] The cause is machine-side load.
 
 The project manager's answers during S2, all six confirmed by the review, answer 5 with one correction:
 
@@ -73,7 +73,7 @@ The project manager's answers during S2, all six confirmed by the review, answer
 5. The fixture objects and bodies beside the log are allowed, written by the same `-update` run, with no CR byte. The review's correction: the capture body, like the empty object, has no line terminator.
 6. The coder's correction to the golden's order: the unnamed `task.create` root may precede task B, and task B's own `task.assign`, `task.reassign` and `task.cancel` root follows B's creation, since a grant names only registered identities.
 
-Review, as D140 records it: "On 2026-10-23 the build advisor (Fable) approved ticket 11's S2 at 9a21fef together with this record and its evidence, with no blocker or major finding; its minors (the B2 C3 row's stale later-family list and two decoder rules added to doc.go) and nits (the V9 wording for the two terminator-less fixtures, the maxima clause, and an unfamiliar-kind encoder canonicalization carried to ticket 12) were applied to the record before the freeze or carried as stated." It found the empty object `e3b0c442…` valid: it is F3-10's initial empty handoff and memory. The verdict is `local://t11-s2-verdict.md`.
+Review, as D140 records it: "On 2026-10-23 the build advisor (Fable) approved ticket 11's S2 at 8f5a63f together with this record and its evidence, with no blocker or major finding; its minors (the B2 C3 row's stale later-family list and two decoder rules added to doc.go) and nits (the V9 wording for the two terminator-less fixtures, the maxima clause, and an unfamiliar-kind encoder canonicalization carried to ticket 12) were applied to the record before the freeze or carried as stated." It found the empty object `e3b0c442…` valid: it is F3-10's initial empty handoff and memory. The verdict is `local://t11-s2-verdict.md`.
 
 ## S3a, the reducer, entrance, grants, capacity, tasks and receipts (2026-10-23)
 
@@ -86,9 +86,9 @@ The reducer for all ten F3-11 types, with family dispatch before the shared priv
 | V5 `-race -count=20` on `TestScopedTaskClaimAndReassignCAS`, `TestScopedGrantAttenuationAndCurrentChain` and `TestScopedReceiptsAndLostAck` (coder) | pass, 154.8 s |
 | `go vet`, staticcheck and build for all five targets; `go mod tidy -diff` (coder) | clean |
 | `FuzzScopedGroupReplay`, 9 seeds (coder) | pass, plain and under race |
-| V6, V7, V10, gofmt, staticcheck, line endings (project manager, a5e18f1) | the four imports; clean |
-| Fuzzing (project manager, a5e18f1) | `FuzzScopedGroupReplay` ran 120 s: 161 executions, 16 new interesting inputs, no failure; each execution built the golden fixture in a real store and opened the service. `FuzzPrivateGroupReplay`, fuzzed because S3a refactors `planGroup`, ran 120 s: 179,791 executions, 4 new interesting inputs, no failure |
-| V4 check without its race step (project manager, a5e18f1) | `check PASSED: 8 of 9 steps passed, race skipped (D129) in 663.4s` (tests 579.4 s; `internal/core/agents` 217.9 s, against 104.3 s at S1) |
+| V6, V7, V10, gofmt, staticcheck, line endings (project manager, 0061b12) | the four imports; clean |
+| Fuzzing (project manager, 0061b12) | `FuzzScopedGroupReplay` ran 120 s: 161 executions, 16 new interesting inputs, no failure; each execution built the golden fixture in a real store and opened the service. `FuzzPrivateGroupReplay`, fuzzed because S3a refactors `planGroup`, ran 120 s: 179,791 executions, 4 new interesting inputs, no failure |
+| V4 check without its race step (project manager, 0061b12) | `check PASSED: 8 of 9 steps passed, race skipped (D129) in 663.4s` (tests 579.4 s; `internal/core/agents` 217.9 s, against 104.3 s at S1) |
 
 Rule breaks, each applied once and restored to the recorded hashes:
 
@@ -108,7 +108,7 @@ The project manager's answers during S3a. The review confirmed all twelve, answe
 
 1. `Limits.MaxAgentTurnSlots`, default 3, comes in S3a, because `ConfigureCapacity` is the guard that reads it. One active turn per context stays an invariant, not a `Limits` value. The review added that it must refuse values ≤ 0 (its minor 2).
 2. Readiness: ready or blocked follows the assignee's current `task.start` chain, the assigned context's current `turn.start` chain and enrolment; free slots alone decide `ready_queued`. Each operation uses one complete chain, never a union, and each blocked state keeps its own reason.
-3. Test imports are the standard library plus the package's test imports at 6d3eecc.
+3. Test imports are the standard library plus the package's test imports at 6e11d49.
 4. **Changed reviewed behaviour, as answer 9 corrected it.** An agent's task subject (`wait_artifact`, `submission` or `failure_evidence`) is authorized exactly when the bound origin could read the artifact now under `ReadArtifact`'s rule, in addition to the task chain that authorizes the mutation. Authority comes first, with a denial that does not reveal existence, then the `body_refs` check; both are checked again at commit and at Open.
 5. The 1 MiB `maxObjectBytes` refusal at replay stays: a storage-support constant of this build, applied to both families, distinct from the configurable `Limits` that history may exceed.
 6. `Agent.GrantStatus` and `Agent.CapacityStatus` disclose only the agent's own leaf grant; another agent's grant and an unknown ID get the same `ErrDenied`. A chain that is not current reports band `denied`, distinct from `busy`.
@@ -119,11 +119,11 @@ The project manager's answers during S3a. The review confirmed all twelve, answe
 11. `TaskView` discloses the stored subject references as task facts, without bytes, under a current `task.inspect` and the audience; a disclosed reference grants no read.
 12. Audience registration is a producer guard only. Open adds no check, which would tighten a frozen record rule (D40), and a recorded unregistered ID is inert.
 
-Review: "On 2026-10-23 the build advisor (Fable) approved ticket 11's S3a at a5e18f1 with its evidence for fast-forward under D116 item 5 (check without race passed, D129; not pushed, D141): the reducer for all ten F3-11 types with family dispatch before the shared private head, the bound entrance, grants, capacity, tasks and receipts are complete with real breaks and both goldens replaying through Open; three minors (the fuzz target's per-input real-store rebuild, MaxAgentTurnSlots accepting 0, an agent create echoing an existing task's version) and four nits are carried to S3b/S4, and the 69.78 s lifecycle row stands as a B26 reporting line." Its nits: the golden rows should assert materializations through Open; `doc.go` should explain the owner's start against readiness and that "own" usage is per session; and authorizing from a work context bound to no task scans the whole ledger, which goes to S4's profile. The verdict is `local://t11-s3a-verdict.md`.
+Review: "On 2026-10-23 the build advisor (Fable) approved ticket 11's S3a at 0061b12 with its evidence for fast-forward under D116 item 5 (check without race passed, D129; not pushed, D141): the reducer for all ten F3-11 types with family dispatch before the shared private head, the bound entrance, grants, capacity, tasks and receipts are complete with real breaks and both goldens replaying through Open; three minors (the fuzz target's per-input real-store rebuild, MaxAgentTurnSlots accepting 0, an agent create echoing an existing task's version) and four nits are carried to S3b/S4, and the 69.78 s lifecycle row stands as a B26 reporting line." Its nits: the golden rows should assert materializations through Open; `doc.go` should explain the owner's start against readiness and that "own" usage is per session; and authorizing from a work context bound to no task scans the whole ledger, which goes to S4's profile. The verdict is `local://t11-s3a-verdict.md`.
 
 ## S3b, admission, dispatch, endings and scoped access (2026-10-23)
 
-The agent's `StartTurn` and local-work admission, the host-only dispatch, endings and reconciliation, the agent's private writes and verified private and artifact reads, and the owner's turn cancel, turn status and passive artifact read, all through one preflight path. Its first edit restructured `FuzzScopedGroupReplay` as S3a's review asked, with one long-lived service and baseline per process. 31 files in `internal/core/agents`, +3,163/−363, committed as c2c1996 on a5e18f1. Ticket 10's `commands.go` (answer 7's duplicate wait), `integrity.go` (a private object's allocation bounded to its recorded size plus one byte), `read.go` and `submission.go` (shared internals) also changed.
+The agent's `StartTurn` and local-work admission, the host-only dispatch, endings and reconciliation, the agent's private writes and verified private and artifact reads, and the owner's turn cancel, turn status and passive artifact read, all through one preflight path. Its first edit restructured `FuzzScopedGroupReplay` as S3a's review asked, with one long-lived service and baseline per process. 31 files in `internal/core/agents`, +3,163/−363, committed as 444fd28 on 0061b12. Ticket 10's `commands.go` (answer 7's duplicate wait), `integrity.go` (a private object's allocation bounded to its recorded size plus one byte), `read.go` and `submission.go` (shared internals) also changed.
 
 30 of the coder's final hashes match the committed blobs. The 31st file, `scoped_service_test.go`, which holds S3a's minor-3 row, was missing from the report's `changed` list and `finalHashes`. Its committed blob equals the hash in the coder's `break-baseline.json` (5bbeed65…), and its modification time, 20:34, precedes the final V1 (22:35), race and V5 runs, so those runs covered it. This is a reporting gap with no code change, as the review recorded.
 
@@ -134,9 +134,9 @@ The agent's `StartTurn` and local-work admission, the host-only dispatch, ending
 | V5 `-race -count=20` on `TestScopedTaskClaimAndReassignCAS`, `TestScopedStartTurnAdmission`, `TestScopedDispatchRevocationRace`, `TestScopedOwnerAndAgentPrivateCAS` and `TestScopedProjectionBeforeAckAndIndependentPreparation` (coder) | pass, 704.7 s |
 | gofmt; `go vet` and staticcheck for all five targets; `go mod tidy -diff` (coder) | clean |
 | `FuzzScopedGroupReplay`, 9 seeds (coder) | pass |
-| V6, V7, V10, gofmt, staticcheck, line endings (project manager, c2c1996) | the four imports; clean |
-| Fuzzing (project manager, c2c1996) | `FuzzScopedGroupReplay`, restructured, ran 120 s: 6,242 executions, 39 new interesting inputs, no failure. `FuzzPrivateGroupReplay`, fuzzed because `encodePrivateWrite` changed, ran 120 s: 160,572 executions, 2 new interesting inputs, no failure |
-| V4 check without its race step (project manager, c2c1996) | `check PASSED: 8 of 9 steps passed, race skipped (D129) in 1057.5s` (tests 889.2 s; `internal/core/agents` 397.7 s, 1.8 times S3a's) |
+| V6, V7, V10, gofmt, staticcheck, line endings (project manager, 444fd28) | the four imports; clean |
+| Fuzzing (project manager, 444fd28) | `FuzzScopedGroupReplay`, restructured, ran 120 s: 6,242 executions, 39 new interesting inputs, no failure. `FuzzPrivateGroupReplay`, fuzzed because `encodePrivateWrite` changed, ran 120 s: 160,572 executions, 2 new interesting inputs, no failure |
+| V4 check without its race step (project manager, 444fd28) | `check PASSED: 8 of 9 steps passed, race skipped (D129) in 1057.5s` (tests 889.2 s; `internal/core/agents` 397.7 s, 1.8 times S3a's) |
 
 The package went from 33.9 s to 74.8 s plain and from 183.2 s to 296.4 s under race. The review judged the growth test-side, from more parallel real-store tests, and left it to S4's profile.
 
@@ -168,11 +168,11 @@ The project manager's answers during S3b. The review confirmed all nine, answers
 8. A reader mapped `ReadBody`'s missing, corrupt and collected outcomes (`local://t11-reader-bodies.md`); the rows keep the three errors distinct across a real reopen.
 9. The owner's `CancelTurn` refuses a nonzero `GrantID` with `ErrInvalid` before any lookup, as every shared owner request does. The review's minor extends the convention to the owner's `TurnStatus`.
 
-Review: "On 2026-10-23 the build advisor (Fable) approved ticket 11's S3b at c2c1996 with its evidence for fast-forward of main under D116 item 5 (check without race passed, D129; not pushed, D141): the Agent entrance for turns, local admission, private writes and verified private and artifact reads, the owner's cancel, status and passive artifact read, the host-only dispatch, endings and reconciliation, and the shared-head CAS all run through one preflightScoped path with real breaks A–K, all nine PM answers confirmed (answer 7 correcting ticket 10's duplicate return), the fuzz restructure at 6,242 executions, and the package's growth judged test-side with StartTurn's integrity scans referred to S4's profile; one minor (owner TurnStatus accepts a GrantID) and four nits are carried to S4." Its nits: an artifact whose size differs from its reference is reported as a corrupt store rather than a wrong reference; a grant's `max_operation_bytes` gives denied for admissions and writes but busy for reads; `StartTurn`'s integrity check scans the whole ledger twice and reads every historical Markdown object; and the coder report's omitted file. The verdict is `local://t11-s3b-verdict.md`.
+Review: "On 2026-10-23 the build advisor (Fable) approved ticket 11's S3b at 444fd28 with its evidence for fast-forward of main under D116 item 5 (check without race passed, D129; not pushed, D141): the Agent entrance for turns, local admission, private writes and verified private and artifact reads, the owner's cancel, status and passive artifact read, the host-only dispatch, endings and reconciliation, and the shared-head CAS all run through one preflightScoped path with real breaks A–K, all nine PM answers confirmed (answer 7 correcting ticket 10's duplicate return), the fuzz restructure at 6,242 executions, and the package's growth judged test-side with StartTurn's integrity scans referred to S4's profile; one minor (owner TurnStatus accepts a GrantID) and four nits are carried to S4." Its nits: an artifact whose size differs from its reference is reported as a corrupt store rather than a wrong reference; a grant's `max_operation_bytes` gives denied for admissions and writes but busy for reads; `StartTurn`'s integrity check scans the whole ledger twice and reads every historical Markdown object; and the coder report's omitted file. The verdict is `local://t11-s3b-verdict.md`.
 
 ## S4, the crash matrix and final documentation (2026-10-23 and 2026-10-24)
 
-The seven-row injected crash matrix, the owner's `TurnStatus` refusing a supplied grant (S3b's carried minor), the unexported test seam `serviceDeps.afterScopedSubmit`, nil in production, and the final package documentation: 6 files in `internal/core/agents`, +429/−4 (`doc.go`, `scoped_admissions.go`, `scoped_admissions_test.go`, the new 398-line `scoped_crash_test.go`, `scoped_execute.go` and `service.go`), committed by the project manager as ca4e141 on c2c1996, all 6 hashes matching. The non-test changes are 4 files, +25/−4. There is no new behaviour, no optimization and no change outside the package; `contract/ledger`, every golden and every frozen rule are untouched. The coder's report names every committed file with its hash, so S3b's reporting gap did not recur. S4 started on 2026-10-23 at 23:41, was parked from 23:50 to 00:09 at the owner's word, and was complete at 01:10.
+The seven-row injected crash matrix, the owner's `TurnStatus` refusing a supplied grant (S3b's carried minor), the unexported test seam `serviceDeps.afterScopedSubmit`, nil in production, and the final package documentation: 6 files in `internal/core/agents`, +429/−4 (`doc.go`, `scoped_admissions.go`, `scoped_admissions_test.go`, the new 398-line `scoped_crash_test.go`, `scoped_execute.go` and `service.go`), committed by the project manager as ee9efa7 on 444fd28, all 6 hashes matching. The non-test changes are 4 files, +25/−4. There is no new behaviour, no optimization and no change outside the package; `contract/ledger`, every golden and every frozen rule are untouched. The coder's report names every committed file with its hash, so S3b's reporting gap did not recur. S4 started on 2026-10-23 at 23:41, was parked from 23:50 to 00:09 at the owner's word, and was complete at 01:10.
 
 `TestScopedInjectedCrashRecovery` (`scoped_crash_test.go`) runs seven parallel rows. Each is a child of the current test executable, run with `-test.run=^TestScopedCrashChild$` and positively waited through `CombinedOutput`, driven by the `serviceDeps` hooks and a gob signal carrying the boundary, the pre-transition durable frontier and the committed receipt, over a copied closed real store. The rows are labelled injected, not power-loss or isolation proof.
 
@@ -194,9 +194,9 @@ Every row checks the exact durable frontier, that Open appended nothing, that `r
 | V5 `-race -count=20` on `TestScopedTaskClaimAndReassignCAS`, `TestScopedStartTurnAdmission`, `TestScopedDispatchRevocationRace`, `TestScopedOwnerAndAgentPrivateCAS` and `TestScopedProjectionBeforeAckAndIndependentPreparation` (coder) | pass, 365.8 s |
 | `go vet` and staticcheck for all five targets; `go mod tidy -diff`; imports (coder) | clean; imports unchanged from S3b except the test-only `encoding/gob` |
 | `FuzzScopedGroupReplay`, 9 seeds, and `FuzzPrivateGroupReplay`, 20 seeds, in V1 and race (coder) | pass |
-| V6, V7, V10, gofmt, staticcheck, line endings (project manager, ca4e141) | the four imports; clean |
+| V6, V7, V10, gofmt, staticcheck, line endings (project manager, ee9efa7) | the four imports; clean |
 | Fuzzing | none beyond the seed corpora: S4 touches none of `planGroup`, `planPrivateRevisions`, `encodePrivateWrite` or `scopedDrafts` |
-| V4 full check, uncached, with its race step (project manager, ca4e141; D129) | `check PASSED: all 9 steps passed in 1294.8s` (tests 454.1 s, race 779.4 s; 0 cached packages; `internal/core/agents` 192.4 s and 532.9 s), within D127's 25-minute line |
+| V4 full check, uncached, with its race step (project manager, ee9efa7; D129) | `check PASSED: all 9 steps passed in 1294.8s` (tests 454.1 s, race 779.4 s; 0 cached packages; `internal/core/agents` 192.4 s and 532.9 s), within D127's 25-minute line |
 
 The check runs without `-v`, so per-test times under its parallel load are not recorded. S3b's 74.8, 296.4 and 704.7 s were taken under outside load [INFERENCE, as S3b's review request stated]. The review keeps S3b's judgement that the growth was test-side, and the profile below shows the production-side share as per-operation scans linear in the log's length.
 
@@ -219,7 +219,7 @@ The final `doc.go` states the owner's `TurnStatus` refusal; the `max_operation_b
 
 ### The P16 smoke and the S3b-7 profile
 
-A throwaway driver through the public interface, in `_t11_s4_measure/` (`main.go` e708da67…, `memory_other.go` 8ebe6624…, `memory_windows.go` 20437b85…), never committed. The coder ran it (`measurement.log`, 568.9 s), and the project manager reran it on ca4e141 in `gate` (`smoke-pm/measurement-pm.log`, 562.3 s), then deleted it, because `tools/check` passes every top-level directory to gofmt. The driver labels its output `admission_and_storage_only`: it claims no execution, accepted delivery, model or tool throughput, C3 or C4 capacity, or power-loss isolation. CPU, disk IOPS and latency, physical I/O against the OS cache, child-process memory and production isolation are unmeasured.
+A throwaway driver through the public interface, in `_t11_s4_measure/` (`main.go` e708da67…, `memory_other.go` 8ebe6624…, `memory_windows.go` 20437b85…), never committed. The coder ran it (`measurement.log`, 568.9 s), and the project manager reran it on ee9efa7 in `gate` (`smoke-pm/measurement-pm.log`, 562.3 s), then deleted it, because `tools/check` passes every top-level directory to gofmt. The driver labels its output `admission_and_storage_only`: it claims no execution, accepted delivery, model or tool throughput, C3 or C4 capacity, or power-loss isolation. CPU, disk IOPS and latency, physical I/O against the OS cache, child-process memory and production isolation are unmeasured.
 
 - **The smoke.** Populations of 12, then 20 contexts under finite limits, with grants carrying the 64 MiB+1 artifact buffer (67,108,865 bytes), and artifact reads applied; 1, then 3 simultaneous turns held. The synchronized 16-command burst (4 claims, 3 private writes, 3 private reads, 3 artifact reads and 3 local admissions) gave 10 applied, 3 busy, 3 stale and 0 denied in the coder's run, and 11, 2, 3 and 0 in the project manager's; busy was `colony_capacity`, and stale the three losing claims. One shared-parent contention gave 1 applied and 1 busy (`grant_capacity`). A revoke before dispatch was denied, a stale reassignment refused by assignment mismatch, and a lost-acknowledgement retry replayed with no second hold. Reopen found 5 pending work items and reconciliation ended them; one dispatched work stays `unknown` with `LocalSlots` 1 and 128 bytes held, the path ticket 15 resolves.
 - **Latency,** p50 of applied admissions and of transitions: 273 ms and 1.17 s in the burst; 1.14 s and 299 ms over the growth phase's 156 and 624 samples.
@@ -244,11 +244,11 @@ The review's ruling (its answer 4): no correctness defect, and nothing for S4 to
 
 The project manager's answers during S4. The review confirmed all three, answer 3 with precisions.
 
-1. The reader's setup map (`local://t11-s4-reader-setup.md`) holds facts only and informed only the uncommitted driver; the reader's one disclosed Go command, `go env GOROOT`, was read-only. The review: nothing in ca4e141 depends on the map.
+1. The reader's setup map (`local://t11-s4-reader-setup.md`) holds facts only and informed only the uncommitted driver; the reader's one disclosed Go command, `go env GOROOT`, was read-only. The review: nothing in ee9efa7 depends on the map.
 2. `serviceDeps.afterScopedSubmit`, nil in production, is called under `Service.mu` between `Submit` and `refreshLocked`, for the crash row that revokes before the projection: a test seam under P17, not behaviour. The review: it is the only point where a scoped crash before the projection can be injected, since `afterScopedCommit` fires after the refresh and the unlock, and production pays one nil test.
 3. Breaks A and G use layer-accurate mutations, each applied once and reverted by hash. The review's precisions: A's mutation lies outside the owned paths, but a rule break is not a commit, and `store.go` is in the hash baseline; the row stopped at its first assertion, the frontier guard, so its later assertions stand as the agents-level contract. G reproduces the real bug class, a commit before validation.
 
-Review: "On 2026-10-24 the build advisor (Fable) approved ticket 11's S4 at ca4e141 with its evidence for fast-forward of main under D116 item 5 (the full check, uncached and with race, passed, D129; not pushed, D141): the seven-row injected crash matrix as positively waited children of the test executable over copied real stores, the owner TurnStatus grant refusal, the afterScopedSubmit test seam and the final doc.go, with real breaks A–H (A and G layer-accurate), all three PM answers confirmed, and the labelled smoke and profile showing no correctness defect but a ledger-linear per-operation cost and a superlinear Open (1.4 s to 76 s for ten times the commits) that this review sends to a new ticket as B3's measured trigger, recorded in B32; two nits, no change required." Its nits: the rows' gob input is written inside the copied colony root, which works only while neither Open inspects the root for unknown entries; and the `turn_status` row's durable guard around a pure query cannot fail. The verdict is `local://t11-s4-verdict.md`.
+Review: "On 2026-10-24 the build advisor (Fable) approved ticket 11's S4 at ee9efa7 with its evidence for fast-forward of main under D116 item 5 (the full check, uncached and with race, passed, D129; not pushed, D141): the seven-row injected crash matrix as positively waited children of the test executable over copied real stores, the owner TurnStatus grant refusal, the afterScopedSubmit test seam and the final doc.go, with real breaks A–H (A and G layer-accurate), all three PM answers confirmed, and the labelled smoke and profile showing no correctness defect but a ledger-linear per-operation cost and a superlinear Open (1.4 s to 76 s for ten times the commits) that this review sends to a new ticket as B3's measured trigger, recorded in B32; two nits, no change required." Its nits: the rows' gob input is written inside the copied colony root, which works only while neither Open inspects the root for unknown entries; and the `turn_status` row's durable guard around a pure query cannot fail. The verdict is `local://t11-s4-verdict.md`.
 
 ## CI runs 9–13
 
@@ -256,14 +256,14 @@ Each run is the full check on the native jobs (D133). Times are each job's whole
 
 | Run | Link | Commit | Windows | Linux | macOS |
 |---|---|---|---|---|---|
-| 9 | [39877133318](https://github.com/Darius-PJ/dwarf-harness/actions/runs/39877133318) | 60a975a: ticket 61's S6 (7b1c63a), ticket 10's a400d15 and close | green, 2,390.2 s | green, 902.3 s | green, 395.3 s |
-| 10 | [39886730409](https://github.com/Darius-PJ/dwarf-harness/actions/runs/39886730409) | 9ab6a6c: ticket 45's follow-up 4 | green, 2,081.2 s | green, 872.6 s | green, 376.6 s |
-| 11 | [39973430326](https://github.com/Darius-PJ/dwarf-harness/actions/runs/39973430326) | ec1434f: ticket 45's follow-up 5 | green, 2,362.3 s | green, 879.7 s | green, 397.9 s |
-| 12 | [39984600549](https://github.com/Darius-PJ/dwarf-harness/actions/runs/39984600549) | 1e6c3dd: ticket 45's follow-up 6 | green, 2,412.8 s | green, 875.5 s | green, 384.7 s |
-| 13 | [40013125505](https://github.com/Darius-PJ/dwarf-harness/actions/runs/40013125505) | 6d3eecc: ticket 11's S1, S2 and D140 | green, 1,660.2 s | green, 854.2 s | green, 389.1 s |
+| 9 | [39877133318](https://github.com/Darius-PJ/dwarf-harness/actions/runs/39877133318) | 5599d50: ticket 61's S6 (5960e66), ticket 10's 32f3af8 and close | green, 2,390.2 s | green, 902.3 s | green, 395.3 s |
+| 10 | [39886730409](https://github.com/Darius-PJ/dwarf-harness/actions/runs/39886730409) | a21ce72: ticket 45's follow-up 4 | green, 2,081.2 s | green, 872.6 s | green, 376.6 s |
+| 11 | [39973430326](https://github.com/Darius-PJ/dwarf-harness/actions/runs/39973430326) | a062050: ticket 45's follow-up 5 | green, 2,362.3 s | green, 879.7 s | green, 397.9 s |
+| 12 | [39984600549](https://github.com/Darius-PJ/dwarf-harness/actions/runs/39984600549) | f67e162: ticket 45's follow-up 6 | green, 2,412.8 s | green, 875.5 s | green, 384.7 s |
+| 13 | [40013125505](https://github.com/Darius-PJ/dwarf-harness/actions/runs/40013125505) | 6e11d49: ticket 11's S1, S2 and D140 | green, 1,660.2 s | green, 854.2 s | green, 389.1 s |
 
 - Every job of runs 9–13 passed all nine steps, and each run started within a minute of its push. For runs 11–13, each `URL.txt` link matches its jobs' checked-out commit.
-- Ticket 10's close recorded runs 1–8, all before a400d15 was pushed. Run 9 is a400d15's first CI run, and it passed on all three systems; `internal/core/agents` took 41.5 s and 33.9 s on the Windows runner in the tests and race steps. Run 9 was also S6's first native Linux and macOS run: `internal/undercurrent/graph`'s race run grew from run 8's 53.8 s to 187.5 s on Linux, 48.0 to 116.0 s on macOS and 103.5 to 215.3 s on Windows.
+- Ticket 10's close recorded runs 1–8, all before 32f3af8 was pushed. Run 9 is 32f3af8's first CI run, and it passed on all three systems; `internal/core/agents` took 41.5 s and 33.9 s on the Windows runner in the tests and race steps. Run 9 was also S6's first native Linux and macOS run: `internal/undercurrent/graph`'s race run grew from run 8's 53.8 s to 187.5 s on Linux, 48.0 to 116.0 s on macOS and 103.5 to 215.3 s on Windows.
 - Run 13 is the first native Linux and macOS run of ticket 11's code, S1 and S2. Its Windows job ran on a new image and finished in 1,660.2 s against about 2,400 s in runs 11 and 12, mostly in `internal/core/workspace`; the logs do not show why.
 - Images: Windows `windows-2022` 20261012.333.1 in runs 9–12 and 20261021.343.1 in run 13, with Git 2.56.0.windows.2; Linux `ubuntu-24.04` 20261012.334.1 and macOS `macos-15-arm64` 20260907.0337.1 in every run, with Git 2.55.0.
 - S3a, S3b and S4 have not run in CI. Under D141, ticket 11's one push follows this close, and the next CI run starts with it; no result is claimed for it here.
@@ -293,9 +293,9 @@ Every review in ticket 11 was a fresh build advisor, Fable (`claude-fable-5-1`),
 
 | Review | Advisor | Commit | Verdict | Ran |
 |---|---|---|---|---|
-| The design ruling | AdvisorT11Ruling | the brief, at 1e6c3dd | approve-with-changes: 7 choices accepted and 10 modified; 3 major, 8 minor and 2 nit findings | 18m7s |
-| S1 | AdvisorT11S1 | 93cd19f | approve: 5 minor, 1 nit | 12m45s |
-| S2 and the F3-11 record | AdvisorT11S2 | 9a21fef | approve, S2's D41 sign-off: 2 minor, 3 nits | 16m43s |
-| S3a | AdvisorT11S3a | a5e18f1 | approve: 3 minor, 4 nits | 17m36s |
-| S3b | AdvisorT11S3b | c2c1996 | approve: 1 minor, 4 nits | 16m32s |
-| S4 | AdvisorT11S4 | ca4e141 | approve: 2 nits, no change required | 11m34s |
+| The design ruling | AdvisorT11Ruling | the brief, at f67e162 | approve-with-changes: 7 choices accepted and 10 modified; 3 major, 8 minor and 2 nit findings | 18m7s |
+| S1 | AdvisorT11S1 | 51eb580 | approve: 5 minor, 1 nit | 12m45s |
+| S2 and the F3-11 record | AdvisorT11S2 | 8f5a63f | approve, S2's D41 sign-off: 2 minor, 3 nits | 16m43s |
+| S3a | AdvisorT11S3a | 0061b12 | approve: 3 minor, 4 nits | 17m36s |
+| S3b | AdvisorT11S3b | 444fd28 | approve: 1 minor, 4 nits | 16m32s |
+| S4 | AdvisorT11S4 | ee9efa7 | approve: 2 nits, no change required | 11m34s |

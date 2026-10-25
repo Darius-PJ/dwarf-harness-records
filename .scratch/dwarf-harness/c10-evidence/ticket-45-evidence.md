@@ -16,18 +16,18 @@ The executed payload is the Go test binary, not Git. Windows 10 Pro 19045; go1.2
 
 ## Ticket 45 S1 evidence, on 1ed46a5 (2026-10-17)
 
-The test runs are the coder's final runs on the committed tree (D121), verified by hash: all 19 changed files match 1ed46a5. They ran alone on the machine. S1 reached `main` as 0bbd9ee, 1ed46a5 rebased onto 774cccd, with all 19 hashes unchanged.
+The test runs are the coder's final runs on the committed tree (D121), verified by hash: all 19 changed files match 1ed46a5. They ran alone on the machine. S1 reached `main` as 01cbada, 1ed46a5 rebased onto 88ca88f, with all 19 hashes unchanged.
 
 | Step | Result |
 |---|---|
 | V1 `gofmt -l`, `go vet`, `go tool staticcheck` on `internal/core/winexec` and `internal/core/durable` (coder, final) | clean |
 | V2 `go test -count=1 -v` (coder, final) | winexec ok, 8.034 s; durable ok, 0.531 s |
 | V2 race (coder, final) | winexec ok, 12.694 s; durable ok, 1.539 s; longest new test 7.78 s |
-| V6 non-standard imports (project manager, 0bbd9ee) | `internal/core/durable`, `golang.org/x/sys/windows` |
+| V6 non-standard imports (project manager, 01cbada) | `internal/core/durable`, `golang.org/x/sys/windows` |
 | V7 | `go mod tidy -diff`: none |
 | V12 | `go vet` for linux/amd64, linux/arm64, darwin/amd64 and darwin/arm64: exit 0 |
-| gofmt, staticcheck, line endings (project manager, 0bbd9ee) | clean |
-| V4 check without its race step (project manager, 0bbd9ee; D129) | `check PASSED: 8 of 9 steps passed, race skipped (D129)` in 1,070.5 s. The tests step took 1,055.7 s, while `internal/core/workspace` took 265.3 s, winexec 7.8 s, `tools/check` 17.6 s and durable 0.5 s; the rest was Go's test cache, which D131 removed |
+| gofmt, staticcheck, line endings (project manager, 01cbada) | clean |
+| V4 check without its race step (project manager, 01cbada; D129) | `check PASSED: 8 of 9 steps passed, race skipped (D129)` in 1,070.5 s. The tests step took 1,055.7 s, while `internal/core/workspace` took 265.3 s, winexec 7.8 s, `tools/check` 17.6 s and durable 0.5 s; the rest was Go's test cache, which D131 removed |
 
 Qualification, from the coder's report (ruling §3, §6 and §7):
 
@@ -81,9 +81,9 @@ Rule breaks, each restored with every owned file's SHA-256 and file set asserted
 
 Review: The build advisor approved S1 at 1ed46a5 on 2026-10-17 with one major finding, the relabel of an already-exited run as timed out, canceled or shut down when the wall, the caller's deadline or Close arrives during its drain or cleanup, carried to S2 with its regression test, two minor findings and two nits. The fresh reviewer first assigned was stopped by Anthropic's cyber-content filter after 6 s. The verdict is `local://t45-s1-verdict.md`.
 
-## Ticket 45 S2 evidence, on 1066c86 (2026-10-18)
+## Ticket 45 S2 evidence, on 77b9968 (2026-10-18)
 
-The test runs are the coder's final runs on the committed tree (D121), verified by hash: all 20 changed files match 1066c86 (`final-hashes.json`). S2 reached `main` as 1066c86, with 19356a8 above it, which routes `security_windows_test.go`'s three Job queries through the pinned `queryJob` (the review's minor finding). `command-history.json` records all 58 checks, including the earlier failures and the deliberate mutations.
+The test runs are the coder's final runs on the committed tree (D121), verified by hash: all 20 changed files match 77b9968 (`final-hashes.json`). S2 reached `main` as 77b9968, with 6e168e6 above it, which routes `security_windows_test.go`'s three Job queries through the pinned `queryJob` (the review's minor finding). `command-history.json` records all 58 checks, including the earlier failures and the deliberate mutations.
 
 | Step | Result |
 |---|---|
@@ -94,8 +94,8 @@ The test runs are the coder's final runs on the committed tree (D121), verified 
 | V7 | `go mod tidy -diff`: none (`s2-tidy-20261018-181617.log`) |
 | V12 | `go vet` for linux/amd64, linux/arm64, darwin/amd64 and darwin/arm64: exit 0 |
 | Evidence case alone | `TestDefenderResourceEvidence`: plain 11.69 s, race 12.05 s (`s2-test-20261018-181802.log`, `s2-race-20261018-181829.log`) |
-| Fuzzing (project manager, D116 item 6) | `FuzzFenceDecode` ran 4,129,250 executions in 120 s on 19356a8 without a failure |
-| V4 full check with its race step (project manager, D129) | passed on 19356a8, the commit `main` moved to by fast-forward (`check PASSED: all 9 steps passed in 749.2s`) |
+| Fuzzing (project manager, D116 item 6) | `FuzzFenceDecode` ran 4,129,250 executions in 120 s on 6e168e6 without a failure |
+| V4 full check with its race step (project manager, D129) | passed on 6e168e6, the commit `main` moved to by fast-forward (`check PASSED: all 9 steps passed in 749.2s`) |
 
 S2's tests under the race detector, from the coder's report:
 
@@ -152,4 +152,4 @@ Seven rule breaks in all, S1's three and S2's four.
 - **Limitations.** Native Job peak counters are not RAM or committed-memory measurements, and logical file bytes are not physical disk allocation.
 - **Plan.** No capacity, C4 or A2 qualification is claimed. Declared-workload throughput, admission economics, other C4 environments and qualification are ticket 46's.
 
-Review: The build advisor approved S2 at 1066c86 on 2026-10-18 with no product findings, one minor finding on a test observer's unpinned Job queries and three nits: the S1 stop-grace defect is fixed with its three-row regression, every §6.2 row observes real native state (handle snapshots, Job PID lists, real Git and ledger targets, supervisor kills, retained-Job ambiguity, sharing-blocked renames, fifteen corrupt fences), and the enforcement-readback refusal is fixed by pinning the buffers that cross x/sys uintptr wrappers. The minor finding is fixed in 19356a8. The nit on the Defender sentence is applied in this file's Machine state; the other two nits need no change. The verdict is `local://t45-s2-verdict.md`, and B30 records the ticket.
+Review: The build advisor approved S2 at 77b9968 on 2026-10-18 with no product findings, one minor finding on a test observer's unpinned Job queries and three nits: the S1 stop-grace defect is fixed with its three-row regression, every §6.2 row observes real native state (handle snapshots, Job PID lists, real Git and ledger targets, supervisor kills, retained-Job ambiguity, sharing-blocked renames, fifteen corrupt fences), and the enforcement-readback refusal is fixed by pinning the buffers that cross x/sys uintptr wrappers. The minor finding is fixed in 6e168e6. The nit on the Defender sentence is applied in this file's Machine state; the other two nits need no change. The verdict is `local://t45-s2-verdict.md`, and B30 records the ticket.

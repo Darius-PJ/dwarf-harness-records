@@ -47,8 +47,8 @@ No -short, testing.Short(), per-test deadline tier, package split or test-only e
 ## Targets
 
 {
- "baselineAlone": "775 s plain, 892 s race (S3a on 4432061)",
- "baselineCheck": "620 s tests step on 6f2c730; the race step is next measured at S3b's close (D129) against 25 minutes (D127)",
+ "baselineAlone": "775 s plain, 892 s race (S3a on a76866d)",
+ "baselineCheck": "620 s tests step on f8e2dbc; the race step is next measured at S3b's close (D129) against 25 minutes (D127)",
  "afterOPT1Alone": "plain ≤ 660 s, race ≤ 760 s (O1+O2 midpoint 135 s, range 85–190)",
  "afterOPT2Alone": "plain ≤ 600 s, race ≤ 700 s (overlapping estimates discounted to ~175–200 s)",
  "inCheck": "tests step ≤ 480 s at OPT-2's -race=false merge; race step reported at S3b's close",
@@ -59,7 +59,7 @@ No -short, testing.Short(), per-test deadline tier, package split or test-only e
 
 ## notesForOptimize
 
-1. 1. Base and gate: branch from build/09-activation above 6f2c730 (S3a 4432061, D127–D129). Two slices, OPT-1 (fixtures: O1, O2) and OPT-2 (matrices: O3, O4), each merged with `go run ./tools/check -race=false` under D129; S3b remains ticket 09's last code slice and runs the full check. D121: final runs and the PM's check never overlap; the measured runs are alone on the machine.
+1. 1. Base and gate: branch from build/09-activation above f8e2dbc (S3a a76866d, D127–D129). Two slices, OPT-1 (fixtures: O1, O2) and OPT-2 (matrices: O3, O4), each merged with `go run ./tools/check -race=false` under D129; S3b remains ticket 09's last code slice and runs the full check. D121: final runs and the PM's check never overlap; the measured runs are alone on the machine.
 
 2. 2. Owned paths: OPT-1 helpers_test.go (TestMain, per-format lazy seeds, newGitFixture, serviceFromHistory, openFixtureService), worktree_test.go fixtureScratch, mergeback_test.go newMaterializeHistory, activation_service_test.go activationWorkspaceFromHistory. OPT-2 recovery_test.go TestFinalizationCrashMatrix, recovery_windows_test.go TestWindowsOwnedGitCrashBeforeRecovery, replay_test.go's two F2-07 tests (F2-08 only for the Seq assertion). Nothing else: no product file, no doc.go, nothing in contract/**, tools/check or go.mod; no new exported or test-only symbol; no new dependency (D29); LF (B1).
 
