@@ -1,0 +1,62 @@
+[
+ {
+  "old": "- The first read of a freshly written file took about 23 ms, a repeat read about 0.2 ms. Hashing every file of a fresh 10,000-file worktree took 305 s; a stat-only walk took 0.6 s. Attributing the first-read cost to Defender scanning is [INFERENCE].",
+  "action": "replace",
+  "new": "- The first read of a freshly written file took about 23 ms, a repeat read about 0.2 ms. Hashing every file of a fresh 10,000-file worktree took 305 s; a stat-only walk took 0.6 s. Attributing the first-read cost to antivirus scanning is [INFERENCE]."
+ },
+ {
+  "old": "- First read of a freshly written file: about 23 ms; repeat read: about 0.2 ms (1,000 fresh files took 23 s; re-reading them took 0.24 s). Attributing this to Defender scanning is [INFERENCE].",
+  "action": "replace",
+  "new": "- First read of a freshly written file: about 23 ms; repeat read: about 0.2 ms (1,000 fresh files took 23 s; re-reading them took 0.24 s). Attributing this to antivirus scanning is [INFERENCE]."
+ },
+ {
+  "old": "- Fresh means the scratch's first capture, right after creation wrote its files; neither the file cache nor Defender's scanning was controlled or observed. A.7 attributes a freshly written file's slow first read to Defender scanning, as an [INFERENCE]; this run does not test that.",
+  "action": "replace",
+  "new": "- Fresh means the scratch's first capture, right after creation wrote its files; neither the file cache nor antivirus scanning was controlled or observed. A.7 attributes a freshly written file's slow first read to antivirus scanning, as an [INFERENCE]; this run does not test that."
+ },
+ {
+  "old": "- `admit_root` is the service scratch's first capture after creation wrote its files, like A.11's fresh observe; neither the file cache nor Defender's scanning was controlled or observed.",
+  "action": "replace",
+  "new": "- `admit_root` is the service scratch's first capture after creation wrote its files, like A.11's fresh observe; neither the file cache nor antivirus scanning was controlled or observed."
+ },
+ {
+  "old": "- `observe_task` is the task's first observation; neither the file cache nor Defender's scanning was controlled or observed.",
+  "action": "replace",
+  "new": "- `observe_task` is the task's first observation; neither the file cache nor antivirus scanning was controlled or observed."
+ },
+ {
+  "old": "- Measured numbers come from one Windows laptop. Read them as ratios between languages, not as absolute values.",
+  "action": "replace",
+  "new": "- Measured numbers come from one Windows machine. Read them as ratios between languages, not as absolute values."
+ },
+ {
+  "old": "These figures come from [the existing language research, section 3](RESEARCH-IMPLEMENTATION-LANGUAGE.md#3-measurements-on-this-machine), measured on one Windows laptop on **2026-09-28**. They are historical small-program results, not a finished DwarfHarness comparison.",
+  "action": "replace",
+  "new": "These figures come from [the existing language research, section 3](RESEARCH-IMPLEMENTATION-LANGUAGE.md#3-measurements-on-this-machine), measured on one Windows machine on **2026-09-28**. They are historical small-program results, not a finished DwarfHarness comparison."
+ },
+ {
+  "old": "\t// script. The owner answered OG3 \"Heavier: double the traffic\", which",
+  "action": "replace",
+  "new": "\t// script. For OG3 the owner chose to double the traffic, which"
+ },
+ {
+  "old": "The owner's later use of “web” and “browser” for colonies and session spawning is interpreted here as referring to the selected GUI. The explicit native-window decision governs; the previous browser bullets, transport and measurements are in `superceeded-Design.md`, in the archive folder `../dwarfharness/`, outside this repository.",
+  "action": "replace",
+  "new": "The owner's later references to the web and to a browser for colonies and session spawning are interpreted here as referring to the selected GUI. The explicit native-window decision governs; the previous browser bullets, transport and measurements are in `superceeded-Design.md`, in the archive folder `../dwarfharness/`, outside this repository."
+ },
+ {
+  "old": "The owner's later use of “web” and “browser” for colonies and session spawning is interpreted here as referring to the selected GUI. The explicit native-window decision governs; the previous browser bullets, transport and measurements are in `superceeded-Design.md`.",
+  "action": "replace",
+  "new": "The owner's later references to the web and to a browser for colonies and session spawning are interpreted here as referring to the selected GUI. The explicit native-window decision governs; the previous browser bullets, transport and measurements are in `superceeded-Design.md`."
+ },
+ {
+  "old": "The owner answered \"Approve\" on 2026-10-12. C2 is Ready; its F2 family must be frozen under D40 before C2 implementation. Exclusion updates are the owner's alone. Promotion stays unavailable and harness work testing-only until C4.",
+  "action": "replace",
+  "new": "The owner approved the C2 boundary on 2026-10-12. C2 is Ready; its F2 family must be frozen under D40 before C2 implementation. Exclusion updates are the owner's alone. Promotion stays unavailable and harness work testing-only until C4."
+ },
+ {
+  "old": "The owner asked for the questions deferred to tickets 108 and 137 to be repeated, since they did not appear in the tickets, and answered them in the question tool on 2026-10-13. D120 quotes his eight answers: each Grand role has its own action loop; Grand officers carry a colony banner instead of a Corps marker; a pick on an outfit without a pack is not drawn in action frames (his own words); the vest, the pennant and the map pick stay; ticket 137's next round adds a fourth ramp step and lightens the dog's fur. D109 gains an Amended-by line, B19 and B20 See-also lines, and tickets 107, 108, 117 and 137 dated cross-links.",
+  "action": "replace",
+  "new": "The owner asked for the questions deferred to tickets 108 and 137 to be repeated, since they did not appear in the tickets, and answered them in the question tool on 2026-10-13. D120 records his eight answers: each Grand role has its own action loop; Grand officers carry a colony banner instead of a Corps marker; action frames leave out the pick on an outfit without a pack; the vest, the pennant and the map pick stay; ticket 137's next round adds a fourth ramp step and lightens the dog's fur. D109 gains an Amended-by line, B19 and B20 See-also lines, and tickets 107, 108, 117 and 137 dated cross-links."
+ }
+]

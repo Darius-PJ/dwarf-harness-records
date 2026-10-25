@@ -1,0 +1,25 @@
+== antivirus: 2
+.github/workflows/check.yml: Write-Output "Defender exclusions not observed: $_"
+.github/workflows/check.yml: Write-Output "Defender status not observed: $_"
+== email-like: 11
+internal/core/agents/scratch_test.go: private@example.invalid
+internal/core/graphfoundation/helpers_test.go: graph@example.invalid
+internal/core/winexec/matrix_fixtures_windows_test.go: winexec@example.invalid
+internal/core/workspace/doc.go: core@dwarf-harness.invalid
+internal/core/workspace/helpers_test.go: workspace@example.invalid
+internal/core/workspace/integrate.go: core@dwarf-harness.invalid
+internal/core/workspace/integrate_test.go: core@dwarf-harness.invalid
+internal/core/workspace/integrate_test.go: host@example.invalid
+internal/core/workspace/train_test.go: core@dwarf-harness.invalid
+internal/core/workspace/train_test.go: host@example.invalid
+internal/core/workspace/write_test.go: core@dwarf-harness.invalid
+== program: 6
+docs/DESIGN-UNDERCURRENT.md: | Validation assurance above A1 | The core's same-user isolation boundary (core §10 item 8) | Until then, validation evidence protects against mistakes and casual gaming but not against deliberate tampering by code under test |
+docs/RESEARCH-ADMISSIBLE-VALIDATION.md: **Gaming and reward hacking**
+docs/RESEARCH-ADMISSIBLE-VALIDATION.md: | A1 | Host-run in a fresh directory, same user as agents | Admissible; protects against mistakes and casual gaming. Code under test can still reach other files the user can. |
+docs/RESEARCH-ADMISSIBLE-VALIDATION.md: | Gaming surface | An agent cannot seed strain by declaration or by a single failing check: an agent-authored F1 remains evidence only. Reproduced F2 is the first grade eligible for reduced agent-authored strain under V2; this costs compute, is deduplicated by lineage and remains visibly agent-authored. An agent cannot end strain by editing a check. It can still special-case a fix to pass a visible check; independent-lineage corroboration narrows but does not close that gap. |
+docs/RESEARCH-ADMISSIBLE-VALIDATION.md: | Gaming surface | An agent cannot seed strain by declaration. It can seed reduced, agent-authored strain by writing a check that fails on canonical; that costs compute, is deduplicated by lineage and is visible as agent-authored. It cannot end strain by editing a check. It can still special-case a fix to pass a visible check; independent-lineage corroboration narrows but does not close that gap. |
+docs/ROADMAP-UNDERCURRENT.md: | Impossible task | A task whose pinned checks cannot legitimately pass; any pass is a forgery or gaming |
+== quote: 2
+internal/core/winexec/fence.go: Owner  string `json:"owner_sid"`
+internal/core/workspace/activation_service_test.go: t.Fatal("non-owner wrote")

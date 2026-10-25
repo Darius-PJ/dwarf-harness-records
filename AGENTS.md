@@ -13,7 +13,7 @@ Every new entry in `docs/DECISIONS.md` records its **originator** in the existin
 
 Use `adopted` when unsure. Entries dated before 2026-10-04 stay as written.
 
-`docs/DECISIONS.md` and the evidence folders `.scratch/dwarf-harness/*-evidence/` are private records (D145), and only they quote the owner. Every tracked file, including tickets, roadmaps, documents, code comments and commit messages, states what he decided and cites the entry. It never quotes him, never names his Windows user folder, and never describes his machine, its settings or the programs he runs.
+`docs/DECISIONS.md` and the evidence folders `.scratch/dwarf-harness/*-evidence/` are private records, kept with this file and the role files in the private records repository, never in the published project repository (D145). Only they quote the owner. Every file the project repository tracks, including tickets, roadmaps, documents and code comments, and every commit message, states what he decided and cites the entry. It never quotes him, never names his Windows user folder, and never describes his machine, its settings or the programs he runs.
 
 ## Agent skills
 

@@ -1,0 +1,162 @@
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= go env GOMOD
+module root: C:\Users\darius.jones\worktrees\dwarf-harness\gate
+
+== Step 0: toolchain
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= go mod edit -json
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= go version
+go version go1.27.2 windows/amd64
+go1.27.2 is the toolchain pinned in go.mod
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= go env -json GOFLAGS GOENV
+GOFLAGS is not set in the go env file
+PASS step 0 (toolchain) in 0.1s
+
+== Step 1: gofmt
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= go env GOROOT
+$ "C:\Program Files\Go\bin\gofmt.exe" -l .github .scratch contract docs helpers internal tools
+PASS step 1 (gofmt) in 1.0s
+
+== Step 2: vet
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=windows GOARCH=amd64 go vet ./...
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=linux GOARCH=amd64 go vet ./...
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=linux GOARCH=arm64 go vet ./...
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=darwin GOARCH=amd64 go vet ./...
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=darwin GOARCH=arm64 go vet ./...
+PASS step 2 (vet) in 23.2s
+
+== Step 3: staticcheck
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=windows GOARCH=amd64 go build -trimpath -o C:\Users\darius.jones\AppData\Local\Temp\dwarf-check-static-1687667745\staticcheck.exe honnef.co/go/tools/cmd/staticcheck
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=windows GOARCH=amd64 C:\Users\darius.jones\AppData\Local\Temp\dwarf-check-static-1687667745\staticcheck.exe ./...
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=linux GOARCH=amd64 C:\Users\darius.jones\AppData\Local\Temp\dwarf-check-static-1687667745\staticcheck.exe ./...
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=linux GOARCH=arm64 C:\Users\darius.jones\AppData\Local\Temp\dwarf-check-static-1687667745\staticcheck.exe ./...
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=darwin GOARCH=amd64 C:\Users\darius.jones\AppData\Local\Temp\dwarf-check-static-1687667745\staticcheck.exe ./...
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=darwin GOARCH=arm64 C:\Users\darius.jones\AppData\Local\Temp\dwarf-check-static-1687667745\staticcheck.exe ./...
+PASS step 3 (staticcheck) in 40.0s
+
+== Step 4: govulncheck
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=windows GOARCH=amd64 go build -trimpath -o C:\Users\darius.jones\AppData\Local\Temp\dwarf-check-static-1687667745\govulncheck.exe golang.org/x/vuln/cmd/govulncheck
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=windows GOARCH=amd64 C:\Users\darius.jones\AppData\Local\Temp\dwarf-check-static-1687667745\govulncheck.exe -db https://vuln.go.dev ./...
+=== Symbol Results ===
+
+No vulnerabilities found.
+
+Your code is affected by 0 vulnerabilities.
+This scan also found 0 vulnerabilities in packages you import and 1
+vulnerability in modules you require, but your code doesn't appear to call these
+vulnerabilities.
+Use '-show verbose' for more details.
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=linux GOARCH=amd64 C:\Users\darius.jones\AppData\Local\Temp\dwarf-check-static-1687667745\govulncheck.exe -db https://vuln.go.dev ./...
+=== Symbol Results ===
+
+No vulnerabilities found.
+
+Your code is affected by 0 vulnerabilities.
+This scan also found 0 vulnerabilities in packages you import and 1
+vulnerability in modules you require, but your code doesn't appear to call these
+vulnerabilities.
+Use '-show verbose' for more details.
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=linux GOARCH=arm64 C:\Users\darius.jones\AppData\Local\Temp\dwarf-check-static-1687667745\govulncheck.exe -db https://vuln.go.dev ./...
+=== Symbol Results ===
+
+No vulnerabilities found.
+
+Your code is affected by 0 vulnerabilities.
+This scan also found 0 vulnerabilities in packages you import and 1
+vulnerability in modules you require, but your code doesn't appear to call these
+vulnerabilities.
+Use '-show verbose' for more details.
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=darwin GOARCH=amd64 C:\Users\darius.jones\AppData\Local\Temp\dwarf-check-static-1687667745\govulncheck.exe -db https://vuln.go.dev ./...
+=== Symbol Results ===
+
+No vulnerabilities found.
+
+Your code is affected by 0 vulnerabilities.
+This scan also found 0 vulnerabilities in packages you import and 1
+vulnerability in modules you require, but your code doesn't appear to call these
+vulnerabilities.
+Use '-show verbose' for more details.
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=darwin GOARCH=arm64 C:\Users\darius.jones\AppData\Local\Temp\dwarf-check-static-1687667745\govulncheck.exe -db https://vuln.go.dev ./...
+=== Symbol Results ===
+
+No vulnerabilities found.
+
+Your code is affected by 0 vulnerabilities.
+This scan also found 0 vulnerabilities in packages you import and 1
+vulnerability in modules you require, but your code doesn't appear to call these
+vulnerabilities.
+Use '-show verbose' for more details.
+PASS step 4 (govulncheck) in 14.8s
+
+== Step 5: import boundary
+$ GOTOOLCHAIN=local CGO_ENABLED=1 GOFLAGS= GOOS=windows GOARCH=amd64 go list -deps -test -json ./...
+windows/amd64: 27 packages and test variants of the module checked, 0 violations
+$ GOTOOLCHAIN=local CGO_ENABLED=1 GOFLAGS= GOOS=linux GOARCH=amd64 go list -deps -test -json ./...
+linux/amd64: 26 packages and test variants of the module checked, 0 violations
+$ GOTOOLCHAIN=local CGO_ENABLED=1 GOFLAGS= GOOS=linux GOARCH=arm64 go list -deps -test -json ./...
+linux/arm64: 26 packages and test variants of the module checked, 0 violations
+$ GOTOOLCHAIN=local CGO_ENABLED=1 GOFLAGS= GOOS=darwin GOARCH=amd64 go list -deps -test -json ./...
+darwin/amd64: 26 packages and test variants of the module checked, 0 violations
+$ GOTOOLCHAIN=local CGO_ENABLED=1 GOFLAGS= GOOS=darwin GOARCH=arm64 go list -deps -test -json ./...
+darwin/arm64: 26 packages and test variants of the module checked, 0 violations
+PASS step 5 (import boundary) in 4.4s
+
+== Step 6: tests
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= "C:\Program Files\Go\bin\go.exe" env GOROOT
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=windows GOARCH=amd64 "C:\Program Files\Go\bin\go.exe" build -trimpath -o C:\Users\darius.jones\AppData\Local\Temp\dwarf-check-go-analyzer-517457856\go-analyzer.exe ./helpers/go-analyzer
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= DWARF_GRAPH_GO_HELPER=C:\Users\darius.jones\AppData\Local\Temp\dwarf-check-go-analyzer-517457856\go-analyzer.exe "DWARF_GRAPH_GO=C:\Program Files\Go\bin\go.exe" "DWARF_GRAPH_GOROOT=C:\Program Files\Go" go test -count=1 -timeout 30m ./...
+ok  	github.com/Darius-PJ/dwarf-harness/contract/law	2.718s
+ok  	github.com/Darius-PJ/dwarf-harness/contract/ledger	77.533s
+?   	github.com/Darius-PJ/dwarf-harness/contract/ledger/appender	[no test files]
+ok  	github.com/Darius-PJ/dwarf-harness/helpers/go-analyzer	14.797s
+ok  	github.com/Darius-PJ/dwarf-harness/internal/core/agents	214.626s
+ok  	github.com/Darius-PJ/dwarf-harness/internal/core/durable	1.190s
+ok  	github.com/Darius-PJ/dwarf-harness/internal/core/graphfoundation	133.346s
+ok  	github.com/Darius-PJ/dwarf-harness/internal/core/ledgerstore	304.549s
+ok  	github.com/Darius-PJ/dwarf-harness/internal/core/winexec	73.215s
+ok  	github.com/Darius-PJ/dwarf-harness/internal/core/workspace	415.349s
+ok  	github.com/Darius-PJ/dwarf-harness/internal/undercurrent/graph	164.184s
+ok  	github.com/Darius-PJ/dwarf-harness/tools/artgen	60.971s
+ok  	github.com/Darius-PJ/dwarf-harness/tools/check	71.008s
+PASS step 6 (tests) in 424.3s
+
+== Step 7: race
+$ C:\Users\darius.jones\AppData\Local\Programs\llvm-mingw-20260922-ucrt-x86_64\bin\x86_64-w64-mingw32-clang.exe --version
+clang version 23.1.2 (https://github.com/llvm/llvm-project.git 85ac560262434c9ccfc0c183ec22d4138ed647fb)
+Target: x86_64-w64-windows-gnu
+Thread model: posix
+InstalledDir: C:/Users/darius.jones/AppData/Local/Programs/llvm-mingw-20260922-ucrt-x86_64/bin
+Configuration file: C:/Users/darius.jones/AppData/Local/Programs/llvm-mingw-20260922-ucrt-x86_64/bin/x86_64-w64-windows-gnu.cfg
+$ GOTOOLCHAIN=local CGO_ENABLED=1 GOFLAGS= CC=C:\Users\darius.jones\AppData\Local\Programs\llvm-mingw-20260922-ucrt-x86_64\bin\x86_64-w64-mingw32-clang.exe DWARF_GRAPH_GO_HELPER=C:\Users\darius.jones\AppData\Local\Temp\dwarf-check-go-analyzer-517457856\go-analyzer.exe "DWARF_GRAPH_GO=C:\Program Files\Go\bin\go.exe" "DWARF_GRAPH_GOROOT=C:\Program Files\Go" go test -race -count=1 -timeout 30m ./...
+ok  	github.com/Darius-PJ/dwarf-harness/contract/law	9.247s
+ok  	github.com/Darius-PJ/dwarf-harness/contract/ledger	178.813s
+?   	github.com/Darius-PJ/dwarf-harness/contract/ledger/appender	[no test files]
+ok  	github.com/Darius-PJ/dwarf-harness/helpers/go-analyzer	12.114s
+ok  	github.com/Darius-PJ/dwarf-harness/internal/core/agents	760.735s
+ok  	github.com/Darius-PJ/dwarf-harness/internal/core/durable	2.494s
+ok  	github.com/Darius-PJ/dwarf-harness/internal/core/graphfoundation	210.002s
+ok  	github.com/Darius-PJ/dwarf-harness/internal/core/ledgerstore	764.707s
+ok  	github.com/Darius-PJ/dwarf-harness/internal/core/winexec	89.504s
+ok  	github.com/Darius-PJ/dwarf-harness/internal/core/workspace	836.088s
+ok  	github.com/Darius-PJ/dwarf-harness/internal/undercurrent/graph	327.165s
+ok  	github.com/Darius-PJ/dwarf-harness/tools/artgen	480.725s
+ok  	github.com/Darius-PJ/dwarf-harness/tools/check	212.840s
+PASS step 7 (race) in 878.5s
+
+== Step 8: cross builds
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=windows GOARCH=amd64 go build -o NUL ./...
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=linux GOARCH=amd64 go build -o NUL ./...
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=linux GOARCH=arm64 go build -o NUL ./...
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=darwin GOARCH=amd64 go build -o NUL ./...
+$ GOTOOLCHAIN=local CGO_ENABLED=0 GOFLAGS= GOOS=darwin GOARCH=arm64 go build -o NUL ./...
+PASS step 8 (cross builds) in 11.7s
+
+== Summary
+PASS  0 toolchain in 0.1s
+PASS  1 gofmt in 1.0s
+PASS  2 vet in 23.2s
+PASS  3 staticcheck in 40.0s
+PASS  4 govulncheck in 14.8s
+PASS  5 import boundary in 4.4s
+PASS  6 tests in 424.3s
+PASS  7 race in 878.5s
+PASS  8 cross builds in 11.7s
+check PASSED: all 9 steps passed in 1397.9s

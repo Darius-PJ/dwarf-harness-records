@@ -1,0 +1,16 @@
+{
+ "src": "C:/Users/darius.jones/Documents/PROJECTS/dwarf-harness",
+ "src_ref": "3bc46c436fb735b8740d7d247fbd7781d103a9f5",
+ "dst": "C:\\Users\\darius.jones\\worktrees\\public-rewrite\\pub-verify-dkwdgvif/remote.git",
+ "name": "Darius-PJ",
+ "email": "173397901+Darius-PJ@users.noreply.github.com",
+ "remove_regex": "^(docs/DECISIONS\\.md$|AGENTS\\.md$|CLAUDE\\.md$|\\.omp/|\\.scratch/dwarf-harness/[^/]+-evidence/)",
+ "keys": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22/local/scrub-keys.json",
+ "maps": [
+  "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22/local/scrub-quotes-map.json",
+  "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22/local/scrub-machine-map.json",
+  "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22/local/scrub-pm-map.json"
+ ],
+ "out": "C:/Users/darius.jones/worktrees/public-rewrite/out-remote",
+ "allow_undecided": false
+}

@@ -1,6 +1,6 @@
 # Decision log
 
-**Status:** Append-only log, started 2026-10-02 at the implementation walkthrough. It lives in `docs/` of the `dwarf-harness` repository, created on 2026-10-02 at the owner's request; step C0 in `ROADMAP-CORE.md` completes the repository.
+**Status:** Append-only log, started 2026-10-02 at the implementation walkthrough. It lives in `docs/` of the `dwarf-harness` repository, created on 2026-10-02 at the owner's request; step C0 in `ROADMAP-CORE.md` completes the repository. Since D145 it is a private record: the published repository does not hold it, and the private `dwarf-harness-records` repository tracks it at the same path.
 
 **How to use it.** Each entry records the question, the decision, who made it and the documents it changes. Entries are never edited after they are recorded. A later entry that changes an earlier one says so ("Amends D17", "Supersedes D28"), and the earlier entry gains only a one-line pointer to it. Owner decisions are numbered D19 onward, continuing core §2. Build decisions are numbered B1 onward. A build decision may revise anything a document marks **[PROPOSAL]** or **[INFERENCE]**; anything a document marks as awaiting an owner decision goes back to the owner.
 
@@ -231,6 +231,7 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 - **Amended by D129:** slice merges run the check without its race step (`-race=false`); each ticket's last code slice runs it in full.
 - **See also:** D133 records the CI this entry requires: its workflow, its pinned downloads, its budget and when C3 may start.
 - **Amended by D137:** the vet, staticcheck and govulncheck steps run for every supported target, not only the host.
+- **Amended by D145:** the GitHub remote becomes public once the owner makes it so; CI stays paused under D143.
 
 ### B1. Line endings
 
@@ -1933,6 +1934,7 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 - **Amended by D117:** a ruled design no longer waits for the owner; item 5's other conditions and the Limits line stand.
 - **Amended by D125:** contract freezes of completed slices no longer wait for the owner; item 7's freeze packet is no longer written, and the freeze record with its evidence file goes to the build advisor with the slice's review.
 - **Amended by D135:** item 1's role files are no longer tracked; they stay in the owner's checkout, excluded through its `.git/info/exclude`.
+- **Amended by D145:** item 3's documents land in two commits: the ticket file and the status and register changes in the project repository, and the brief, ruling, evidence and B entry in the private records repository.
 
 ### D117. Ruled designs go to the build without the owner's approval
 
@@ -2465,6 +2467,7 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
   - A new worktree or clone has no `.omp/agents/`. Agents are still started from the owner's checkout.
   - A clone that should ignore the files needs the same line in its own `.git/info/exclude`.
 - **Changes:** this entry and an "Amended by D135" line under D116. The same commit removes the eight role files from the index and keeps them on disk.
+- **Amended by D145:** the role files are committed to the private records repository, and the rewritten history holds no `.omp/` at all.
 
 ### D136. The agent instruction files are not tracked
 
@@ -2475,6 +2478,7 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 - **Consequences:** earlier commits, including those on GitHub, still hold both files. A new worktree or clone has neither, so agents read them from the owner's checkout. Documents that name `AGENTS.md` keep naming it as the owner's local file.
 - **Changes:** this entry and an "Amended by D136" line under D135. The same commit removes both files from the index and keeps them on disk.
 - **Amended by D136:** `AGENTS.md` and `CLAUDE.md` are untracked the same way.
+- **Amended by D145:** both files are committed to the private records repository, and the rewritten history holds neither.
 
 ### D137. The check analyzes every supported target
 
@@ -2826,3 +2830,65 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
     - in `ROADMAPS.md`, C3's row on the status board;
     - ticket 12's status, criteria, Answer and comments, and a comment each on tickets 89 and 140;
     - under `.scratch/dwarf-harness/c3-evidence/`, the design brief `ticket-12-design-brief.md`, the ruling `ticket-12-design-ruling.md` and the evidence `ticket-12-evidence.md`, beside D144's `f3-12-freeze-evidence.md`.
+
+### D145. A rewritten history for the public repository, and private records
+
+- **Date:** 2026-10-25. **Decided by:** owner. He decided to make the repository public, what its history must no longer hold, the three new documents and the full rewrite. His question-tool picks among the project manager's options (the commit identity, the agent files' removal from history and a private records repository) and the cutover the project manager described, which he started, are adopted.
+- **Question:** The owner asked what making the repository public would change. Before it goes public, what must leave its history, how is the history rewritten, and where do the records it no longer holds live?
+- **Owner's words (chat, 12:06):**
+  > Alright, there are several documents that I would like untracked and removed from history in that case. The windows username, laptop details, games mentioned, verbatim quotes need to go. I would like a README.md, a SECURITY.md and an ARCHITECTURE.md. I'd like to rewrite the entire history.
+  > The evidence files don't need to be tracked either. That seems to be the source of most of the local-only information. I will verify the cleaned history before making the repo public
+- **Owner's words (chat, 12:12):**
+  > Decisions.md should be untracked as well
+- **Owner's words (chat, 12:14):**
+  > References to decisions.md need not be changed since they are vital to the workflow but no one should be able to access the DECISIONS file
+- **Owner's answers (question tool, 12:22):** the name on every rewritten commit: "Darius-PJ"; the agent files in old commits: "Remove them"; how to keep the untracked records: "Private records repository".
+- **Owner's words (chat, 13:54):**
+  > I've updated email and name settings. This is intended to be a professional github profile. So my name stays, hints 'Darius-PJ' as the username. The new repos have been created and the old one has been renamed. The current state looks clean. You can initiate the switchover. https://github.com/Darius-PJ/dwarf-harness-records & https://github.com/Darius-PJ/dwarf-harness are the new repos
+- **Decision:**
+  1. **Repositories.**
+     - `Darius-PJ/dwarf-harness` is a new repository holding the rewritten history. The owner makes it public once he has verified the history.
+     - The original repository, renamed `Darius-PJ/dwarf-harness-archive`, stays private with the original history, `main` at 3bc46c4. Its local copy is `Documents/PROJECTS/DwarfHarness/dwarf-harness-archive.git`.
+     - `Darius-PJ/dwarf-harness-records`, also private, tracks the records of item 4.
+  2. **The rewritten history.** Each commit of 3bc46c4's history was rebuilt in order, one for one: 207 commits, ending at fee7a16, the counterpart of 3bc46c4. 3c9db5c adds `README.md`, `SECURITY.md` and `ARCHITECTURE.md`. In that history:
+     - **Identity:** every author and committer is `Darius-PJ <173397901+Darius-PJ@users.noreply.github.com>`, GitHub's ID-based private address for his account. Dates and time zones are unchanged.
+     - **Removed paths:** no commit holds `docs/DECISIONS.md`, `.scratch/dwarf-harness/*-evidence/`, `AGENTS.md`, `CLAUDE.md` or `.omp/`. The 23 commits that changed only those paths stay, empty.
+     - **Personal details:** reviewed line replacements were applied to every version of every other Markdown and Go file, and to commit messages: 251 lines in 151 files, and 27 message lines. They removed:
+       - his quoted words and the times of his messages;
+       - his Windows user folder;
+       - the development machine's processor, memory, Windows build, antivirus settings and exclusions, administrator rights, power plan and heat throttling;
+       - the programs he ran;
+       - remarks about his budgets and spending.
+     - **Code and test data:** at the tip, only two Go comments differ, in `internal/core/workspace/doc.go` and `internal/core/ledgerstore/workload_test.go`. Test data is byte-identical.
+     - **Citations and links:** the 642 commit hashes cited in Markdown and in messages name the new commits. Links and references to `docs/DECISIONS.md` and the evidence folders are unchanged, so they do not resolve in a clone, as the README says.
+  3. **The project checkout** is on the published history.
+     - Its `.git/info/exclude` lists `/docs/DECISIONS.md` and `/.scratch/dwarf-harness/*-evidence/`, beside D135's and D136's lines.
+     - Its repository-level Git identity is item 2's, for every worktree.
+  4. **Private records.**
+     - `docs/DECISIONS.md`, the evidence folders, `AGENTS.md`, `CLAUDE.md` and `.omp/agents/` stay at their paths in the project checkout.
+     - The records repository tracks them and nothing else. Its Git directory, `Documents/PROJECTS/DwarfHarness/dwarf-harness-records.git`, takes that checkout as its work tree.
+     - Its first commit imports the records unchanged. Its second translates the commit hashes their Markdown cites, 715 in 49 files, with the map it adds as `.scratch/dwarf-harness/rewrite-evidence/commit-map.txt`.
+  5. **Quoting** (`AGENTS.md`, and the drafter's role file).
+     - Only `docs/DECISIONS.md` and the evidence folders quote the owner.
+     - Every file the project repository tracks, and every commit message, states what he decided and cites the entry.
+     - None of them quotes him, names his Windows user folder, or describes his machine, its settings or the programs he runs.
+- **Limits:**
+  - These GitHub steps are the owner's:
+    - making the repository public;
+    - private vulnerability reporting;
+    - protecting `main`;
+    - Issues, Wiki and Discussions.
+  - CI stays paused until his final decision (D143). Resuming it restores `check.yml`'s push trigger, which is a code change.
+  - Pushes to either repository wait for his word (D31, D46, D141).
+  - No step's status changes.
+- **Consequences:**
+  - Old commit hashes resolve only in the archive, and the map translates them. CI runs 1–14 belong to the archive's Actions history.
+  - A ticket's close becomes two commits. The ticket file and the status and register changes go to the project repository. Its brief, ruling, evidence and B entry go to the records repository. A D entry lands in the records repository alone.
+  - Every push to the project repository publishes. Before each push, the outgoing commits are scanned for credentials and for the owner's name, addresses, Windows user folder and machine details.
+- **Amends:** D42 (the remote's visibility); D116 item 3 (one documents commit per ticket); D135 and D136 (the agent files are committed, to the records repository).
+- **Evidence:** the [evidence file](../.scratch/dwarf-harness/rewrite-evidence/public-history-evidence.md) and the tools, maps and reports beside it.
+- **Changes:**
+  - this entry, with "Amended by D145" lines under D42, D116, D135 and D136, and this log's status line;
+  - `AGENTS.md`'s decision-record rule, and the drafter's role file;
+  - the records repository's three commits;
+  - the project checkout's `.git/info/exclude`.
