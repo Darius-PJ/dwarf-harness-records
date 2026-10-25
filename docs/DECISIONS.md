@@ -2438,6 +2438,7 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 - **Changes:** this entry; the CI design brief and its ruling under `.scratch/dwarf-harness/c3-evidence/`; "See also" lines under D30 and D42; core §8.2's dependency table and CI records; `ROADMAP-CORE.md` C0's repository row and C3's Waits-for, Stop point and Status; C3's row on the status board; a comment on ticket 10.
 - **See also:** D141 pushes `main` once per ticket, so CI runs once per ticket within OG-BUDGET's included minutes.
 - **Amended by D143:** the workflow loses its `push` trigger while CI is paused, so only a manual dispatch starts a run.
+- **Amended by D146:** the `push` trigger returns, and the repository is public, so its standard runners cost nothing and item 3's budget no longer limits runs.
 
 ### D134. The Go helper turns off `go list`'s module index
 
@@ -2641,6 +2642,7 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 - **Amends:** D31.
 - **Changes:** this entry, an "Amended by D141" line under D31 and a "See also" line under D133.
 - **See also:** D143 pauses CI, so a push starts no run until the owner decides.
+- **See also:** D146 resumes CI, which runs once per ticket because pushes go once per ticket.
 
 ### B32. C3: scoped grants and atomic task ownership (ticket 11)
 
@@ -2717,6 +2719,7 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 - **Limits:** C3 cannot exit while CI is paused, because its exit criterion needs the check green in CI on Windows, Linux and macOS (D133). No step's status changes. Native Linux and macOS test runs stop until CI resumes.
 - **Amends:** D133 item 2, the workflow's triggers.
 - **Changes:** this entry; `.github/workflows/check.yml`; an "Amended by D143" line under D133 and a "See also" line under D141.
+- **Amended by D146:** the pause ends: a push to `main` that changes more than Markdown starts a run again.
 
 ### D144. F3-12 review and failure decision records frozen
 
@@ -2892,3 +2895,42 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
   - `AGENTS.md`'s decision-record rule, and the drafter's role file;
   - the records repository's three commits;
   - the project checkout's `.git/info/exclude`.
+- **Amended by D146:** the repository is public, CI runs once per ticket, and a ruleset protects `main`. Issues, Wiki and Discussions await the owner's decision.
+
+### D146. CI resumes once per ticket, and a ruleset protects `main`
+
+- **Date:** 2026-10-25. **Decided by:** owner. He decided that CI resumes once the repository is public and runs once per ticket, never per slice, and asked for the rule that blocks force pushes to `main` and its deletion. He made the repository public, turned on private vulnerability reporting and created the ruleset himself. His question-tool picks among the project manager's options (creating the ruleset himself, with the settings the project manager listed, and pushing the resumed workflow at once) are adopted.
+- **Owner's words (chat, 14:57):**
+  > I want Issues, Wiki and Discussions to be tracked in the dwarf-harness-records repo. Once dwarf-harness is public we can Resume CI tests but they should only run per ticket and not per slice. Please add the rule that blocks force-pushes to main and blocks deleting it. I have turned the main repo public and turned on private vulnerability reporting
+- **Owner's words (chat, 14:58):**
+  > I need guidance on Issues, Wiki and Discussions for public repos, disregard the statements concerning them earlier
+- **Owner's answers (question tool, 15:09):** how the ruleset is added: "I've added it myself"; when the resumed workflow is pushed: "Push now".
+- **Question:** With the repository public, does CI resume, how often does it run, and how is `main` protected on GitHub?
+- **Decision:**
+  1. **The repository is public.** `Darius-PJ/dwarf-harness` is public, with private vulnerability reporting on, as `SECURITY.md` asks. The owner made both changes on 2026-10-25, as D145 left them to him.
+  2. **CI resumes, once per ticket.**
+     - 8ad40fa restores the `push` trigger that D133 set and D143 removed: a push to `main` that changes more than Markdown starts the three-OS check. Manual dispatch stays.
+     - A push starts one run, and pushes go once per ticket, after its close (D141). So CI runs once per ticket and never per slice.
+     - Slice merges stay local, gated by the local check (D116, D129).
+  3. **The minutes cost nothing.** GitHub Actions is free for public repositories that use standard GitHub-hosted runners ([GitHub's Actions billing](https://docs.github.com/en/billing/concepts/product-billing/github-actions)), and all three jobs use them. D133's budget therefore no longer limits runs.
+  4. **A ruleset protects `main`.**
+     - The owner created the branch ruleset "Protect Main" (id 25833473): enforcement active, targeting the default branch.
+     - It holds two rules, "Restrict deletions" and "Block force pushes". GitHub's public API lists exactly `deletion` and `non_fast_forward` for `main`.
+     - Its bypass list is visible only to admins; the steps he followed left it empty.
+     - Pushes that fast-forward `main` are unaffected. A history rewrite like D145's needs the ruleset disabled first.
+  5. **The first run.** The push of 8ad40fa at 15:13:18 started run 1 of the repository's Actions, id 40224996258 (https://github.com/Darius-PJ/dwarf-harness/actions/runs/40224996258), at 15:13:26. It is ticket 12's run, which the pause had left without one. Its result is recorded like every run (D133).
+- **Not decided here:** Issues, Wiki and Discussions.
+  - The owner withdrew his first sentence about them and asked for guidance first, so their settings are unchanged.
+  - At 15:01 GitHub's public API reported Issues on, Wiki and Discussions off, and pull requests open to everyone.
+- **Unchanged:** pushes wait for the owner's word (D31, D46, D141), and the local check still gates `main` (D42, D46, D128, D129).
+- **Amends:**
+  - D143: the pause ends;
+  - D133 items 2 and 3: the push trigger returns, and the budget no longer limits a public repository's standard runners;
+  - D145's Limits: CI, and the protection of `main`.
+- **Evidence:**
+  - The local check on 8ad40fa, in the gate worktree, exited 0: `check PASSED: 8 of 9 steps passed, race skipped (D129) in 466.7s`. The full check had passed on its parent, 3c9db5c (D145's evidence).
+  - The push printed `3c9db5c..8ad40fa  main -> main` and `PUSH_EXIT=0`, and `ls-remote` showed 8ad40fa62c0b8f247546b17412b6377916516a77.
+- **Changes:**
+  - this entry;
+  - in the project repository: `.github/workflows/check.yml`, `README.md`'s CI sentence, C3's Status line in `ROADMAP-CORE.md` and its row on the status board of `ROADMAPS.md`;
+  - "Amended by D146" lines under D133, D143 and D145, and a "See also" line under D141.
