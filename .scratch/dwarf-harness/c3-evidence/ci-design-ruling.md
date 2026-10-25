@@ -1,0 +1,66 @@
+I have read the brief, its assignment, the facts file, the cited repository sources (`tools/check`, `gitparse.go`, the winexec resource test, `.gitattributes`, `go.mod`, D28/D29/D40–D42/D46/D52/D122/D127–D131/B28/B30, roadmap C0/C3, the board, ticket 10, AGENTS.md, core §8.2) and GitHub's live workflow-syntax page for the path-filter rules. Arithmetic, pins, hashes, sizes, runner specs, Git versions and billing rates in the brief all match `ci-facts.md`; the few corrections below are the only deviations.
+
+```json
+{
+  "verdict": "approve",
+  "buildNow": true,
+  "rulings": [
+    {"id": "P1", "ruling": "accept", "detail": "push to main + paths-ignore '**.md' + workflow_dispatch, full check every run, mirrors D128/D42. One wording fix: the documented rule (workflow-syntax, 'Git diff comparisons') is: >1,000 commits -> always runs; diff timeout -> always runs; >3,000 files with matches outside the first 3,000 -> does NOT run. The first push to an empty remote diffs the whole tree. Mitigation stands: if the first push starts no run, the owner dispatches once and nobody records a 'skip' observation. PM: note tracked-file and commit counts before the push."},
+    {"id": "P2", "ruling": "accept", "detail": "windows-2022 / ubuntu-24.04 / macos-15 labels, specs (2 vCPU/8 GB, 2 vCPU/8 GB, 3 M1/7 GB), OS/image/Git values all match ci-facts.md §1.1, §1.4, §8. Git 2.55/2.56 clears the 2.45 floor (gitparse.go:196; D-entry at DECISIONS.md:1969). No -latest, no arm64 Linux, no Intel Mac. windows-2022 trades the 2025/VS2026 mapping ambiguity for an earlier deprecation date; acceptable, revisit when runner-images announces it."},
+    {"id": "P3", "ruling": "modify", "detail": "Hybrid approved: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 (v7.0.1, lightweight tag -> commit, facts §4.1) as the only action; Go 1.27.2 from go.dev with the three literal SHA-256/size values (facts §6 match exactly); setup-go considered/not admitted on the no-checksum, go-versions-bytes evidence (facts §7). Two changes: (a) do NOT export GOROOT. Set GOROOT to empty in the workflow env, prepend <stage>/go/bin via GITHUB_PATH only, and have the inventory assert `go env GOROOT` == the extracted root; as drafted the assertion is tautological and an image-set GOROOT could redirect the stdlib. (b) On Windows prefer the built-in `$env:SystemRoot\\System32\\tar.exe -xf` over Expand-Archive for the Go and LLVM zips (both are image utilities, no new dependency); Expand-Archive on ~750 MB/thousands of files can cost many billed Windows minutes. Keep hash-before-extract either way."},
+    {"id": "P4", "ruling": "accept", "detail": "tools/check needs no change: race.go selects DWARF_CC on Windows (absolute, regular file, 'clang version 23.1.2' + 'Target: x86_64-w64-windows-gnu'), /usr/bin/gcc on Linux, `xcrun --find clang` on macOS; main.go sets GOTOOLCHAIN=local, CGO_ENABLED, GOFLAGS= per child command and -count=1/-timeout 30m. LLVM pin (URL, asset 581762383, 190,725,905 bytes, sha256 e3ad77d1...7666, commit 0eca5ac9) matches facts §5/§9.2; root dir llvm-mingw-20260922-ucrt-x86_64 follows release.sh. Same tar.exe note as P3."},
+    {"id": "P5", "ruling": "accept", "detail": "Verified: matrix_resources_windows_test.go:24 constant and :344-345 keys are unconditional laptop statements inside t.Logf evidence, not assertions; nothing else references them; no t.Skip/testing.Short/19045 guard exists in winexec (grep). Delete exactly those three items against the post-a70eb84 file; keep every assertion. No new test. Expect the winexec race-step stop-proof rows (the S4-gate flake in t61 notes) to be the likeliest first red on hosted Windows; do not widen StopGrace to get green."},
+    {"id": "P6", "ruling": "accept", "detail": "installedTool/foundationTool skip only when the variable is unset (helper_test.go:311-316; foundation_test.go:148-152) and demand exact versions 3.13.15 / v24.18.0 / 6.0.3; leave all three empty and log the gap."},
+    {"id": "P7", "ruling": "modify", "detail": "Keep -timeout 30m / 25-min report line (D127) and fail-fast:false. Set timeout-minutes: 120, not 90. On 2 vCPUs `go test ./...` runs two packages at a time, so a stage approaches total package time / 2, not the slowest package; a 90-min cancel on the first run loses the per-step evidence and costs a rerun, while 120 costs nothing unless used and the owner's stop-at-limit budget bounds spend. Lower it after measurement (a .yml change still needs a local full check under D128 as written, so pick once)."},
+    {"id": "P8", "ruling": "accept", "detail": "Rates $0.010/$0.006/$0.062, per-job round-up, included minutes 2,000/3,000/3,000/50,000, legacy 1x/2x/10x correction and the 'debit policy unverified' stance all match facts §2. Arithmetic checked: $2.41 x 4/10/20 = $9.64/$24.10/$48.20; macOS 77%. Recommend $25/month, <=10 matrices, budget with 'Stop usage when the limit is reached' created before the push; tell the owner included minutes may cover most of it."},
+    {"id": "P9", "ruling": "accept", "detail": "Recommend green full matrix on the reviewed tree before clearing C3's CI prerequisite; the owner may instead start C3 on 'workflow exists + Windows green' with Linux/macOS repairs in parallel. Either way ROADMAP-CORE.md:514 still requires green three-OS CI at C3's exit, red runs become narrow producer-owned repair tickets, and infrastructure failure is never pass."},
+    {"id": "P10", "ruling": "accept", "detail": "One workflow, one action, contents:read, persist-credentials:false, no cache/artifact/retry/continue-on-error. Lockfile guidance (facts §3.1/3.3: public preview, gh actions-lock) correctly not adopted; SHA pin is the documented fallback, not 'strongest'. Add: Actions logs expire (default 90 days), so the run URL, SHA, per-OS durations and inventory lines must be copied into the records."},
+    {"id": "P11", "ruling": "modify", "detail": "One <<D-NEXT>> for the owner's three answers (originator per AGENTS.md: adopted if picked unchanged, modified if changed, owner words quoted); See-also pointers under D42 and D30 only. §8.2 gets records for the two real dependencies, actions/checkout and the llvm-mingw CI download; the Go archive URLs/hashes are the D28 toolchain's distribution and belong in the D entry and the workflow, not as a §8.2 dependency row. No B entry unless a build decision results."}
+  ],
+  "ownerQuestions": [
+    {
+      "id": "OG-DEPS",
+      "question": "Approve the CI's three pinned downloads, for CI use only? (1) actions/checkout v7.0.1 at commit 3d3c42e5aac5ba805825da76410c181273ba90b1, MIT, the only action; (2) official Go 1.27.2 archives from go.dev, SHA-256-verified before use; (3) llvm-mingw 20260922 ucrt-x86_64 (190 MB, SHA-256 e3ad77d1…7666) as the Windows race compiler. Its licences are mixed (Apache-2/LLVM, ZPL, GPL make/busybox, PSF) and not fully audited; nothing is redistributed.",
+      "options": [
+        {"label": "Approve all three as recorded", "description": "Recommended. Records land in DECISIONS.md and core §8.2."},
+        {"label": "Approve (2) and (3), replace (1) with a scripted git fetch", "description": "No third-party action; we own token/auth/cleanup logic on three shells."},
+        {"label": "Hold", "description": "Name what to change."}
+      ],
+      "recommended": "Approve all three as recorded"
+    },
+    {
+      "id": "OG-BUDGET",
+      "question": "Set a GitHub Actions budget with 'Stop usage when the limit is reached' before the first push. One full three-OS run is modelled at up to $2.41 (Windows $0.010/min, Linux $0.006/min, macOS $0.062/min; estimates, first runs will measure). Your plan's included minutes lower the bill by an amount GitHub's docs don't state. Which cap?",
+      "options": [
+        {"label": "$25/month, at most 10 runs", "description": "Recommended: 8 planned pushes + 2 reruns/dispatches."},
+        {"label": "$10/month, at most 4 runs", "description": "2 pushes + 2 reruns."},
+        {"label": "$0 paid, included minutes only", "description": "Runs stop when the allowance is exhausted; no coverage is waived to stay at zero."}
+      ],
+      "recommended": "$25/month, at most 10 runs"
+    },
+    {
+      "id": "OG-START",
+      "question": "C1/C2 code has never run natively on Linux or macOS, so the first CI run may be red there. When may C3 start?",
+      "options": [
+        {"label": "After the first full three-OS run is green on the reviewed tree", "description": "Recommended. Red rows become repair tickets first; C3's exit needs green CI anyway."},
+        {"label": "When the workflow exists and Windows is green", "description": "Linux/macOS failures become repair tickets worked in parallel with C3; C3 still cannot exit until all three are green."}
+      ],
+      "recommended": "After the first full three-OS run is green on the reviewed tree"
+    }
+  ],
+  "notesForBuild": [
+    "Deliverables: .github/workflows/check.yml exactly per brief §3 with the P3/P7 modifications (GOROOT empty + `go env GOROOT` assertion; tar.exe extraction on Windows; timeout-minutes 120); the P5 deletion in internal/core/winexec/matrix_resources_windows_test.go (constant + two keys, nothing else); no tools/check change; no new tests.",
+    "Coder works on a branch from current main now; D41 forbids fast-forwarding the dependency-adding commit to main before OG-DEPS is answered.",
+    "Pre-push verification, since the workflow cannot run: (1) runners download all four archives (3 Go, 1 LLVM) and recompute SHA-256 locally against the pinned literals, resolving facts' unverified item 6 for our pins; (2) run the Windows pwsh setup steps locally with RUNNER_TEMP/GITHUB_ENV/GITHUB_PATH pointed at temp files (Windows PowerShell 5.1 is acceptable; note $PSNativeCommandUseErrorActionPreference is ignored there) and confirm the extracted root llvm-mingw-20260922-ucrt-x86_64/bin/clang.exe exists and its first two --version lines; time tar.exe vs Expand-Archive; (3) coder: `go test -count=1 -timeout 30m ./internal/core/winexec` plain, then with -race, CGO_ENABLED=1, CC=pinned clang; (4) PM: full `go run ./tools/check` in the gate worktree on the exact commit (the .yml and .go changes are not Markdown-only); (5) advisor reviews the final YAML text plus these outputs before fast-forward. GitHub validates workflow syntax at push; a syntax error produces no billable job.",
+    "PM before the push: record `git ls-files | wc -l` and `git rev-list --count main` against the 3,000-file / 1,000-commit filter rules; if no run starts on the first push, the owner dispatches once rather than anyone recording a skip.",
+    "Owner push steps as brief §8 (add origin only if absent; `git push -u origin main`; no force/tags). Optional zero-cost hardening to include: Settings → Actions → allow GitHub-owned actions only. Save the run URL and all three job results to the PM; logs expire.",
+    "Red-run routing as brief §4: separate setup/network failures from product failures; reproducible product defects get a repair ticket under .scratch/dwarf-harness/issues/ linked from ticket 10 and the producer ticket; deterministic regression, never a CI-only skip, retry or continue-on-error; frozen-contract breaks go to the owner.",
+    "Done = Prepared: approved workflow + P5 fix on main, D-NEXT and status records landed, owner push instructions delivered. Cleared: first run observed, its SHA/URL/per-OS durations recorded, and the CI prerequisite dispositioned under the owner's OG-START answer. Clearing CI closes nothing else on ticket 10."
+  ],
+  "records": [
+    "Before the push (Markdown-only commit after the code commit; document check): DECISIONS.md <<D-NEXT>> 'Three-OS CI for C3' with the owner's three answers verbatim, the exact pins/hashes, trigger/runner policy, the P5 correction, and See-also lines under D42 and D30; core §8.2 records for actions/checkout and the llvm-mingw CI download; ROADMAP-CORE.md:188 'no remote yet' -> 'private remote https://github.com/Darius-PJ/dwarf-harness created 2026-10-19; CI workflow reviewed, first push pending'; C3 Waits-for/Stop point wording distinguishing remote created / workflow prepared / push pending; ROADMAPS.md C3 row 'Waiting — remote created; reviewed CI awaits owner push/first run'; dated comment on ticket 10 with the adopted policies and known native coverage gaps (Linux/macOS never run natively; three graph helper rows skipped; Intel Mac and Linux arm64 cross-build only).",
+    "After the first green run: ticket 10 comment with pushed SHA, run URL, per-OS job and per-step durations, inventory lines (image version, Git, Go, compiler), timings against the 20/25/30-minute lines; ROADMAP-CORE.md C3 prerequisite row and ROADMAPS.md C3 Waits-for updated per OG-START (CI prerequisite only; C3 stays Waiting on its other gates); no decision-log edit unless a decision results (then <<B-NEXT>> pointing back to the D entry). After the first billing cycle: the actual included-minute debit recorded in the same ticket comment.",
+    "After a red run: the same ticket 10 comment with the failing OS/step/package/test, setup-vs-product classification and links to the repair tickets created; board and roadmap unchanged unless the owner chose the Windows-green start option; no green claim, no exit-gate change."
+  ]
+}
+```
