@@ -117,6 +117,7 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 - **Changes:** core §8.1, §8.5; supersedes §8.1's "cgo-free where practical" for the core.
 - **See also:** B11 preserves the cgo-free Core/terminal while selecting isolated GUI and signed macOS execution-helper build boundaries.
 - **Amended by D106:** go1.27.2 replaces go1.27.1 as the pinned toolchain.
+- **Amended by D147:** go1.27.3 replaces go1.27.2 as the pinned toolchain.
 
 ### D29. Dependency policy
 
@@ -303,6 +304,7 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 - **Changes:** `ROADMAP-CORE.md` C0; core §8.2. Amended by D50 for the restricted appender contract.
 - **Amended by D106:** `go.mod` declares `toolchain go1.27.2`.
 - **Amended by D132:** a new top-level tree `helpers/` for separate helper programs, and a row for the first: `helpers/go-analyzer` may import, besides the standard library, `golang.org/x/tools/go/packages` only.
+- **Amended by D147:** `go.mod` declares `toolchain go1.27.3`.
 
 ### D46. When the full check must pass (amends D31)
 
@@ -1144,6 +1146,7 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
   > move to go1.27.2 approved
 - **Decision:** go1.27.2, installed permanently with the official installer, replaces go1.27.1. `go.mod` keeps `go 1.27` and declares `toolchain go1.27.2`; the check reads that pin and runs with `GOTOOLCHAIN=local`. The rest of D28 stands.
 - **Changes:** core §8.1; `ROADMAP-CORE.md` C0; system specification implementation decision 5; fortress terminal research step 1. Amends D28 and D45. Measurements taken with go1.27.1 (core Appendix A, `DECISION-RUST-VS-GO.md`, `RESEARCH-IMPLEMENTATION-LANGUAGE.md`) stay as recorded.
+- **Amended by D147:** go1.27.3 replaces go1.27.2.
 
 ### B17. C0: tool pins, check steps and import-table encoding
 
@@ -2439,6 +2442,7 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 - **See also:** D141 pushes `main` once per ticket, so CI runs once per ticket within OG-BUDGET's included minutes.
 - **Amended by D143:** the workflow loses its `push` trigger while CI is paused, so only a manual dispatch starts a run.
 - **Amended by D146:** the `push` trigger returns, and the repository is public, so its standard runners cost nothing and item 3's budget no longer limits runs.
+- **Amended by D147:** items 1 and 2 name go1.27.3's official archives, with the SHA-256s and sizes D147 lists, in place of go1.27.2's.
 
 ### D134. The Go helper turns off `go list`'s module index
 
@@ -2934,3 +2938,19 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
   - this entry;
   - in the project repository: `.github/workflows/check.yml`, `README.md`'s CI sentence, C3's Status line in `ROADMAP-CORE.md` and its row on the status board of `ROADMAPS.md`;
   - "Amended by D146" lines under D133, D143 and D145, and a "See also" line under D141.
+
+### D147. Toolchain: go1.27.3
+
+- **Date:** 2026-10-25. **Decided by:** adopted. Ticket 13's first slice adds Core's TLS client for paid provider calls, and the check's vulnerability scan then failed on it: GO-2026-6809 (CVE-2026-111943, "Distrust compromised intermediate certificates in crypto/x509"), found in go1.27.2's `crypto/x509` through `x509.Certificate.Verify` and fixed in go1.27.3, released 2026-10-19, whose only changes are security fixes to `crypto/x509`. `main` was unaffected, because nothing in it verified certificates. The project manager proposed moving the pin before the slice could merge, and the owner approved.
+- **Owner's words (question tool, 19:31):**
+  > Move to Go 1.27.3 now
+- **Decision:** go1.27.3, installed permanently with the official installer, replaces go1.27.2. `go.mod` keeps `go 1.27` and declares `toolchain go1.27.3`; the check reads that pin and runs with `GOTOOLCHAIN=local`. CI downloads go1.27.3's official archives, each checked against its published SHA-256 and size: `go1.27.3.windows-amd64.zip` f26081f438319757f8a1b46d7d0b2c5ec7583d4038e485e0aa725cfde7885fff (79,010,309 bytes), `go1.27.3.linux-amd64.tar.gz` 65efbc80fdc1fa2cd2631cad5b481777a68e8725f34e89f50fc6ac714e379b40 (70,588,678 bytes) and `go1.27.3.darwin-arm64.tar.gz` dd3908cf20959d798c1e06ebe5b72213f0505ce01373b40ce3110975a6cd99c2 (68,196,737 bytes). The rest of D28, D106 and D133 stands.
+- **Installation:** the project manager downloaded `go1.27.3.windows-amd64.msi` from go.dev, checked its SHA-256 (89ec8325f667c674fe1b94a5a88e26932aa12323589881927ff54da99d4b7faa) and installed it elevated, after the owner accepted the Windows prompt; `go version` reports `go1.27.3 windows/amd64`, and `go.exe`'s SHA-256 is 83b7ba66215e696414fa49462d0db2da4f4cf15c7bebd42f0b189fa04866999d.
+- **The Go analyzer's qualified tuple** (ticket 61; D132 item 5; D134) becomes go1.27.3 windows/amd64 with that `go.exe`. The check's descendant proof, `TestGoListHasNoDescendants` under `DWARF_GRAPH_GO`, requalified it on 64c4afb, in both the tests and the race steps.
+- **Changes:**
+  - in the project repository, commit a2cf109: `go.mod`; `.github/workflows/check.yml`'s three Go archives with their SHA-256s and sizes, and its two version checks; the two tests that verify the installed toolchain (`internal/undercurrent/graph`, `internal/core/graphfoundation`) and a derived fixture's `go.mod`; the art sample's `provenance.json`, whose toolchain name is the only change when the sample is regenerated; core §8.1; `ROADMAP-CORE.md` C0; `README.md`; system specification implementation decision 5 and a dated comment; fortress terminal research step 1;
+  - in the project repository, commit 5cabee1: core §8.2's CI records (the archives the workflow installs, and the toolchain llvm-mingw serves);
+  - in the project repository, commit ffcca82: the Go analyzer's native test request names go1.27.3, beside the two tests above; and the graph's wrong-version row uses go1.26.0, below the module's `go 1.27`, so that it never names the running toolchain;
+  - "Amended by D147" lines under D28, D45, D106 and D133; D133's says that items 1 and 2 now name go1.27.3's archives, digests and sizes.
+- **Unchanged:** measurements taken with go1.27.2 (core Appendix A, core §8.2's binary-size records, ticket records) stay as recorded. Ticket 61's S5 record of the go1.27.2 tuple stays as that slice's history; ticket 61's next documents note the new tuple. Three test fixtures pin the installed toolchain, and a toolchain move changes exactly these: `installedGoTools` (`internal/undercurrent/graph/go_test.go`), `foundationGoConfig` (`internal/core/graphfoundation/helpers_test.go`) and `nativeRequest` (`helpers/go-analyzer/main_test.go`). Every other version string in the tests is a fixture that runs no toolchain and stays as it is.
+- **Evidence:** ticket 13's notes record the failing scan (S1's gate on 00c97ad, `check FAILED: 2 of 9 steps failed`, with govulncheck at step 4 on all five targets) and the full check with the race step on 64c4afb under go1.27.3: every step passed but the tests and the race steps, which failed only on two version pins, both fixed in ffcca82: the Go analyzer's native test request still named go1.27.2 (three tests), and the graph's wrong-version row named go1.27.3, now the running toolchain. The vulnerability scan passed on all five targets, and regenerating the art sample left the tree clean. On ffcca82, `go run ./tools/check -race=false` (D129; the race step had run on 64c4afb): `check PASSED: 8 of 9 steps passed, race skipped (D129) in 521.4s`; and the two fixed packages' tests, run again under the race detector, passed. They land with ticket 13's close, beside the fix-up's probe evidence.
