@@ -1940,6 +1940,7 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 - **Amended by D135:** item 1's role files are no longer tracked; they stay in the owner's checkout, excluded through its `.git/info/exclude`.
 - **Amended by D145:** item 3's documents land in two commits: the ticket file and the status and register changes in the project repository, and the brief, ruling, evidence and B entry in the private records repository.
 - **Amended by D152:** coders run focused tests and only the rule breaks D152 names (item 6's "coders run their package's checks"); tickets are built in two to four slices; reviews block only on D152's list; the instruction of 2026-10-12 no longer applies to starting a ticket either (item 5); item 6's check on the exact commit moves to GitHub's runners once D152's item 6 takes effect.
+- **Amended by D153:** item 6's exact-commit merge gate is the work branch's hosted `Check result`, with D128's document check retained and no additional routine local full check.
 
 ### D117. Ruled designs go to the build without the owner's approval
 
@@ -2224,6 +2225,7 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 - **Decision:** A slice merge runs `go run ./tools/check -race=false`, every step except the race step. Each ticket's last code slice runs the full check, race step included. Coders keep their race runs.
 - **Amends:** D42's gate and D46.
 - **Changes:** this entry and "Amended by D129" lines under D42 and D46; `AGENTS.md`'s Check line; `ROADMAPS.md`'s Integration rule; `tools/check` gains `-race=false`.
+- **Amended by D153:** every hosted full check includes race on all three systems; local race/×20 applies only under D152 item 1, replacing the once-per-ticket race cadence and routine slice `-race=false` gate.
 
 ### B28. C2: one-off policy activation (ticket 09)
 
@@ -2651,6 +2653,7 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 - **Changes:** this entry, an "Amended by D141" line under D31 and a "See also" line under D133.
 - **See also:** D143 pauses CI, so a push starts no run until the owner decides.
 - **See also:** D146 resumes CI, which runs once per ticket because pushes go once per ticket.
+- **Amended by D153:** guarded slice branches run CI before exact-SHA promotion, and routine branch/passing-main pushes no longer wait for the owner or a ticket's close; other owner gates remain.
 
 ### B32. C3: scoped grants and atomic task ownership (ticket 11)
 
@@ -2943,6 +2946,7 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
   - this entry;
   - in the project repository: `.github/workflows/check.yml`, `README.md`'s CI sentence, C3's Status line in `ROADMAP-CORE.md` and its row on the status board of `ROADMAPS.md`;
   - "Amended by D146" lines under D133, D143 and D145, and a "See also" line under D141.
+- **Amended by D153:** item 2 and the Unchanged local-gate/push clauses give way to work-branch CI, exact-SHA `Check result` before fast-forward `main`, and routine guarded pushes without owner approval; a `main` push starts no run.
 
 ### D147. Toolchain: go1.27.3
 
@@ -3040,3 +3044,33 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 - **Unchanged:** a fresh coder for each slice; fresh reviewers; D145's rules for the public repository; the scan before every push.
 - **Evidence:** the project manager's [analysis](../.scratch/dwarf-harness/c3-evidence/process-speed-analysis-2026-10-27.md) of ticket 13's transcripts and the coders' command records: about 9.5 coder hours outside the measurement, 6.7 of them the model writing code and tests and 2.8 running commands; the ticket's 36 hours also held about 11 hours waiting overnight for an owner answer and about 8 hours of measurement, 4.7 of them a superseded first run.
 - **Changes:** this entry; an "Amended by D152" line under D116; the evidence file; in the records repository, the verdict section of the advisor's role file. The project manager's procedures and the coders' standing context changed outside the repositories.
+
+### D153. Each slice is checked on GitHub before `main` moves
+
+- **Date:** 2026-10-27. **Decided by:** adopted. Implements D152 item 6: the project manager proposed the work-branch workflow and repository safeguards, CoderCIPerSlice built the workflow, and temporary GPT-6 Astra stand-ins reviewed it under D152's blocking standard. The owner applied the settings and then confirmed the required checks' GitHub Actions source.
+- **Owner's words (chat, 12:50):**
+  > Settings are changed, Github is up to the new standard.
+- **Owner's confirmation (chat, recorded 22:00):**
+  > Adjusted, Github actions is the source of these checks for the rule
+- **Activation:** public run 3, [40612562217](https://github.com/Darius-PJ/dwarf-harness/actions/runs/40612562217), passed the classifier, all three full-check jobs and `Check result` on exact commit 8aea12c771e06807f26ae2a605b94414ca916d8a. The owner's subsequent confirmation clears the required-check selection/source blocker. The PM completes this record, AGENTS.md and the procedure cutover before promoting that reviewed, passing SHA; no CI rerun or protection bypass is needed.
+- **Decision:**
+  1. **Work-branch CI.** `.github/workflows/check.yml` runs on pushes to `build/**`, `docs/**` and `fix/**`, and on manual dispatch. A push to `main` starts no run: `main` advances only to an already-checked branch commit. Per-ref concurrency cancels superseded runs.
+     - `changes` compares paths since the branch's merge base with `main`. A non-Markdown path or manual dispatch runs the full Windows, Linux and macOS check, race included. On pushes, Markdown-only or empty diffs skip the matrix.
+     - `Check result` succeeds only if classification succeeded and the matrix either succeeded or was skipped for that exemption. Failed, cancelled or missing prerequisite outcomes do not pass.
+  2. **Exact-SHA integration.** Rebase onto current `main` as needed, then obtain fresh D152-standard review approval and successful hosted `Check result` on the exact final SHA before fast-forwarding and pushing `main`. A fix or rebase creates a new SHA and needs its own run. Strict up-to-date mode is off; the fast-forward procedure preserves the checked subject.
+     - The local full check is no longer an additional routine merge gate. Coders use D152's focused local checks; local full checks remain available for diagnosis.
+     - Markdown-only branches still require the PM's link/LF document check (D128), which the workflow does not run. The exemption assumes no tracked Markdown is an input to code, embeds, tools or tests; the current-tree inventory supported that premise. Revisit it if such an input is introduced.
+  3. **Repository protection.** "Protect Main", id 25833473, retains deletion and force-push blocks and adds linear history and required `Check result` from GitHub Actions, with no bypass. Leave the up-to-date requirement and creation exemption off.
+     - The owner reported the recommended Actions settings applied: GitHub-created actions only, full-length SHA pins, approval for all external contributors' fork workflows, read-only workflow permissions and no PR creation/approval by Actions. The workflow itself has no PR trigger or secret references.
+     - The reported standard also includes repository secret push protection, Dependabot alerts without its PRs, collaborators-only or disabled Issues/PR participation, and Projects off. Projects off and the baseline rules were publicly observable; the remaining settings are owner-reported. The pre-pin API snapshot's empty check list is historical, not a contradiction of his subsequent adjustment.
+     - The requested Vercel/collaborator/deploy-key/webhook inventory has no separate confirmation. Do not infer either retained access or removal. The unauthenticated API's `bypass_actors: null` does not independently establish the bypass list.
+  4. **Routine pushes.** The PM pushes guarded slice branches so CI runs during review, then pushes approved, passing fast-forward `main`, without a routine owner question or a once-per-ticket wait. Private records push separately and start no project CI.
+     - Changes under `.github/` still require actual owner sign-off recorded in a decision entry. `DWARF_ALLOW_WORKFLOW=D<entry>` is the local guard's mechanical override, not authorization by itself.
+     - Every other D152 item 4 owner gate remains: D52, breaking frozen-contract changes, toolchain, dependencies and owner-decision documents, keys, money, accounts, machine and art sign-offs.
+  5. **Outgoing-commit guard.** The untracked main checkout's `.git/hooks/pre-push`, shared by project worktrees, calls `pre_push_scan.py` beside it. It scans every outgoing commit's patch, message, identities and changed paths, not only the endpoint diff.
+     - Both modes refuse merge histories, whose own changes or simplified side histories could escape the scan. Public mode also refuses credentials, private paths, personal details, the drill variable name, any identity other than D145's published one, and unsigned-off `.github/` changes. Credentials, identity and privacy have no override.
+     - Machine-term hits require a contextual human read. The private records hook uses the same script with `--records`, checking credentials and merges without rejecting D145's intended private material.
+  6. **Trust boundary.** These safeguards limit public tampering, not malicious authorized writers. A required check identifies a job name and reporting app, not the implementation it ran. A writer could replace a job or weaken `tools/check`; the hook is bypassable with `--no-verify`, another client or the API. GitHub's path-restricting push rules are unavailable to this public repository. `Check result` means full-check-or-document-exemption, not that every commit ran the suite.
+- **Amends:** D116 item 6 (hosted exact-commit gate); D129 (race in each hosted full check, local race only under D152); D141 (push cadence and routine owner approval); D146 item 2 and its local-gate/push clauses (work-branch CI and hosted gate). D128's document check stands.
+- **Evidence:** the [CI cutover evidence](../.scratch/dwarf-harness/c3-evidence/ci-per-slice-evidence.md), the four workflow-branch commits ea2e6f4, edef6ef, d663698 and 8aea12c, and public run 3 above. StandInCIPerSliceConfirm approved guarded publication and conditional promotion after clearing the merge-history major in both hooks. Fable double-checks the complete change after its reset.
+- **Changes:** this entry and four one-line amendments; AGENTS.md's Check/Commits lines; private evidence; the five managed process skills. The workflow branch updates README, Core §8.2 and tickets139/140. Prepared Markdown followthrough 93e8f0a updates README/dispatch wording, code-slice wording, ROADMAPS integration rule 3 and the paired C3 Status/board without closing ticket13; it follows workflow promotion and requires its own exact-SHA aggregate and document check.
