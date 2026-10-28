@@ -8,16 +8,16 @@ D152 item 6 authorizes a hosted exact-commit merge gate only after the workflow 
 
 The branch was pushed under recorded workflow authorization D152; its guard scanned four outgoing commits and 141 added lines with no refusing hits. The saved hosted start establishes a real run, not a successful check. Main had not moved in the accompanying PM note. Sources: `local://t13-docs-notes.md:248`; `local://ci-per-slice-run-start.json:2-20`.
 
-| Activation prerequisite | Evidence available at drafting | Completion evidence |
+| Activation prerequisite | Evidence recorded | Source |
 |---|---|---|
 | Review of exact candidate and both hooks | Final confirm approves 8aea12c, with the conditions below | `local://ci-per-slice-confirm-verdict.md:21-36` |
 | Successful hosted `Check result` on exact final candidate SHA | Public run3 completed successfully on 8aea12c771e06807f26ae2a605b94414ca916d8a; classifier, all three full-check matrix jobs and aggregate succeeded | `local://ci-per-slice-hosted-proof.json` (`jobs`, `checks`) |
-| Owner pins required `Check result` to GitHub Actions, empty bypass list | Owner subsequently confirmed the adjustment and GitHub Actions source after the exact selection instructions | Owner confirmed the adjustment after the exact `Check result`/GitHub Actions instructions: Adjusted, Github actions is the source of these checks for the rule. The earlier reported standard includes no bypass; the unauthenticated API does not independently expose that list. Source: `local://ci-owner-pin-record.json`. |
-| Final publicly observable ruleset | Post-run saved ruleset still has an empty required-check list; `bypass_actors: null` is an unauthenticated visibility limit, not proof of no bypass | The saved pre-pin/post-run public snapshot is in `local://ci-per-slice-hosted-proof.json`; subsequent required-check/source adjustment is owner-confirmed, not independently re-queried. No hidden setting is presented as publicly verified. |
-| D153, AGENTS and cutover guidance completed; PM document link/LF check | Public followthrough 93e8f0a prepared; its link check has only known mirror omissions and all five files LF; private records/procedure application and final check remain pending | D153 and AGENTS are applied; ApplyCISkills applied all56 prescribed edits without conflicts. All five retain frontmatter/LF. The private-record link/LF check is run before promotion and recorded in the activation events below. |
-| Effective cutover, without bypassing any prerequisite | Not established by the source bundle | Owner-confirmed required-check/source adjustment plus the completed hosted result; integration becomes effective after the document check below and before exact-SHA promotion. No bypass is authorized. |
+| Required check and source | Owner confirmed GitHub Actions as source, then selected “Corrected and saved” after the remote rejected typo `check results` instead of exact `Check result`. No-bypass configuration is from the owner's reported standard, not unauthenticated API visibility | `local://ci-owner-pin-record.json`; `local://ci-main-promotion.json` |
+| Observable enforcement | The remote refused the mismatched required context, then accepted the same hosted-green SHA after correction; it also accepted the independently green Markdown followthrough. No bypass was used | `local://ci-main-promotion.json`; `local://ci-docs-main-promotion.json` |
+| D153, AGENTS and guidance | Applied and document-checked before workflow promotion; private links returned `[]`, all three private files LF, all five skills retain frontmatter/LF | Activation events below |
+| Effective cutover | Reviewed, hosted-green workflow SHA8aea12c and independently green Markdown SHA93e8f0a were both promoted and pushed through the guard and remote rules | Run3/run4 proof and promotion records below |
 
-Sources for the historical pending distinctions: `local://t13-docs-notes.md:244`; `local://ci-per-slice-run-start.json:5-12`; `local://ci-per-slice-confirm-verdict.md:29-32`. Runtime fields are filled only from actual observations; their fill rules are at the end of this file.
+Historical prerequisite distinctions remain in the saved start/draft records. This record distinguishes actual hosted success, owner-reported settings, observed remote enforcement and document checks; it does not infer hidden settings or detailed package timings.
 
 ## Candidate and change provenance
 
@@ -82,14 +82,14 @@ This is his settings report, not independent API proof of every control. Source:
 
 | Control/inventory | What the supplied record establishes | What it does not establish |
 |---|---|---|
-| `Protect Main`, id 25833473 | At 12:51 the public API showed deletion, non-fast-forward, linear-history and required-status-check rules | Required-check list was empty; no proof yet that `Check result` was pinned to GitHub Actions or that bypass is empty |
+| `Protect Main`, id 25833473 | Baseline public API showed deletion, non-fast-forward, linear-history and required-status-check rules; later remote enforcement and owner correction are recorded below | Baseline empty list was pre-pin; unauthenticated bypass visibility remains limited |
 | Projects | Public API showed off | No claim about other feature restrictions follows |
 | Issues | Public API still returned `has_issues: true` | That field does not settle collaborator-only participation |
 | Actions permissions/pins/fork approvals | Recommended GitHub-created actions only, full-length action SHA pins, approval for all external contributors, read-only token and PR creation/approval off; covered by owner's general report | No independent observation of private/admin-only settings |
 | Secrets/Dependabot | Repository secret push protection on; Dependabot alerts on and its PRs off were recommended/reported | No separate API verification supplied |
 | Issues/PR participation | Collaborators-only (or off) was recommended; general report supplied | No independent confirmation of participation limit |
 | Vercel/collaborators/deploy keys/webhooks | Owner was asked to remove Vercel repository access unless deploying it and confirm empty writer/integration inventories | General settings report is not a separately verified inventory |
-| Required-check source and bypass at activation | Must be supplied by owner/admin evidence and observable ruleset facts where available | Must not be inferred from a job name, earlier settings report or first run start |
+| Required-check source and bypass at activation | Owner confirms GitHub Actions source and corrected exact name; no bypass is part of his reported standard | No independent admin-visible bypass-list observation is claimed |
 
 Sources: `local://t13-docs-notes.md:240,244`; `local://ci-per-slice-confirm-verdict.md:29-32`. D146's older rule/bypass observations remain historical, not evidence of the new required-check activation (`docs/DECISIONS.md:2925-2929`).
 
@@ -133,13 +133,13 @@ The completed run and inventory notices are actual hosted proof, separate from t
 
 ## Guidance and documentation integration
 
-R01–R05 of `local://ci-record-edits.md` append D153 and one-line amendments only under D116/D129/D141/D146. R06 replaces AGENTS Check/Commits and leaves its adjacent Owner sign-off rule untouched. The private evidence stays out of project publication; no B entry or ticket-13 close belongs to this cutover. Sources: `local://ci-cutover-draft-assignments.md:6-13`; `AGENTS.md:37-39`; `docs/DECISIONS.md:1931-1942,2224-2226,2651-2653,2933-2945`.
+The PM integrated `local://ci-record-edits.md` as D153, four one-line amendments and the Check/Commits replacement in AGENTS.md, preserving its adjacent Owner sign-off line. The final, concise canonical wording—not the earlier conditional draft—is authoritative. Private evidence stays out of project publication; no B entry or ticket13 close belongs to this cutover.
 
 D153's activated loop is focused D152 coder checks/hashes; rebase/merge-base; all-outgoing-commit scan; work-branch push; fresh blocking-standard review concurrent with CI; exact-final-SHA `Check result` success before ff-only main/push. A changed SHA needs a new run. Markdown-only branches still get PM link/LF checking; manual dispatch forces a full matrix. D152's local race/static/rule-break conditions, changed-target 120 s fuzz campaigns, contract evidence and owner gates remain. Sources: `docs/DECISIONS.md:1934,3028-3038`; `local://ci-cutover-draft-assignments.md:20-22`; `local://ci-per-slice-confirm-verdict.md:29-32`.
 
 The PM prepared the separate public documentation followthrough as `93e8f0a`, `docs(build): align integration guidance with hosted checks (D153)`, on `docs/ci-cutover-guidance`, parent `8aea12c`. It changes five files (seven lines each way): README distinguishes push-only exemption from forced-full dispatch; tickets 139/140 say each code slice; ROADMAPS working rule 3 uses the exact-SHA hosted `Check result`; C3's ROADMAP-CORE Status and ROADMAPS board row change together to D153 cadence and the already recorded public run 2, without closing ticket 13. The pending close edits E08/E09 were reanchored. Sources: `local://t13-docs-notes.md:250,252`.
 
-This followthrough is prepared, not pushed or merged. Its preparation link check reports only known mirror omissions of README's non-Markdown targets, and all five files are LF; this is not a claim that every link resolves in a public clone. Its push is planned after workflow promotion to `8aea12c`, so its own merge-base comparison can exercise the Markdown exemption. The first workflow run remains bound to `8aea12c`, not `93e8f0a`; the latter must get its own successful exact-SHA aggregate and PM document check before its own promotion. Sources: `local://t13-docs-notes.md:250,252`; `local://ci-per-slice-run-start.json:5-12`; `local://ci-cutover-draft-assignments.md:20`.
+The followthrough was pushed only after protected workflow promotion to8aea12c. Public [run4](https://github.com/Darius-PJ/dwarf-harness/actions/runs/40619407526) passed on exact93e8f0afe125b1ea8e87f4b8336664dd390c5b3a: classifier and aggregate succeeded, matrix skipped. It then fast-forwarded main and was accepted remotely. The preparation link check had only known mirror omissions of real non-Markdown README targets, and all five files were LF; no public-clone access to D145 private records is claimed. Sources: `local://ci-cutover-docs-hosted-proof.json`; `local://ci-docs-main-promotion.json`; `local://t13-docs-notes.md`.
 
 ## Owner confirmation and activation
 
@@ -147,12 +147,14 @@ Recorded 2026-10-27T22:00:20-04:00 (chat):
 
 > Adjusted, Github actions is the source of these checks for the rule
 
-Owner confirmed the adjustment after the exact `Check result`/GitHub Actions instructions: Adjusted, Github actions is the source of these checks for the rule. The earlier reported standard includes no bypass; the unauthenticated API does not independently expose that list. Source: `local://ci-owner-pin-record.json`.
+The source adjustment is owner-reported. After the first remote refusal exposed the name typo, he selected “Corrected and saved” following the exact `Check result` instruction. The unchanged green commit was then accepted, without rerunning CI or bypassing a rule. His earlier reported standard includes no bypass; the unauthenticated API does not independently expose that list. Sources: `local://ci-owner-pin-record.json`; `local://ci-main-promotion.json`.
 
-The PM applies D153/AGENTS and the managed-skill cutover, completes the document check, and then promotes the already-reviewed, hosted-passing SHA without bypass. Promotion and the separate Markdown followthrough are recorded as actual events below, not inferred from preparation.
+D153, AGENTS.md, managed-skill changes and the document check completed before promotion. The actual protected publication events follow; they are not inferred from prepared commits.
 
 ### Activation events
 
 - Before promotion, D153 and AGENTS.md were applied, and ApplyCISkills applied all56 prescribed edits to the five managed skills without conflicts. Its actual model was `openai-codex/gpt-6-astra`, xhigh, fallback false.
 - PM document verification: the private D153/AGENTS/evidence link check returned `[]`; all three files are LF. The five managed skills retain their frontmatter and LF. No local full check or passing hosted run was repeated.
-- This completes the record/guidance prerequisites for promoting reviewed, hosted-passing 8aea12c. The subsequent main push remains guarded and subject to the configured remote rules; no bypass is authorized.
+- D153/AGENTS/evidence were committed privately as135e697 before main advanced. The first main push was refused because the required context was `check results`; the owner corrected it to exact `Check result`. Retrying only that failed guarded push succeeded, advancing remote main d8336c8..8aea12c; `ls-remote` returned8aea12c771e06807f26ae2a605b94414ca916d8a.
+- The docs branch push scanned one commit/nine added lines with no refusing hits. Public run4 completed successfully on93e8f0afe125b1ea8e87f4b8336664dd390c5b3a, with the matrix skipped and the classifier/aggregate successful. Main then advanced8aea12c..93e8f0a; its guarded push was accepted and `ls-remote` matched that exact SHA. This is the end-to-end Markdown exemption proof, not a second full-suite run.
+- Sources: `local://ci-main-promotion.json`, `local://ci-cutover-docs-hosted-proof.json`, `local://ci-docs-main-promotion.json`, and `local://ci-docs-notes.md`. Fresh post-reset Fable requests are prepared as `local://t13-fable-verification-request.md` and `local://ci-fable-verification-request.md`; neither verification has run. Ticket13 remains open, and its temporary data is retained until the ordered close.
