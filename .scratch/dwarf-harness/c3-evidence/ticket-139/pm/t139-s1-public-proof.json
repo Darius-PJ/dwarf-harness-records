@@ -1,0 +1,87 @@
+{
+  "finalPublicSHA": "34090c3b634b9854904671c336db91c350e6328c",
+  "codeSHA": "86f952cfcae37bde06767c6c4eaa615a503dd96d",
+  "base": "82d8d48856c7191019625c9f6e896d10b9b8498c",
+  "freezeDecision": "D154",
+  "freezeDate": "2026-10-28",
+  "commitTime": "2026-10-28T20:32:05-04:00",
+  "application": "Public R3\u2013R13 only; exact approved projection, with D154/date metadata. Private R1/R2/R14 applied separately by primary.",
+  "finalHashes": {
+    "contract/ledger/catalogue.go": "a2ef53d73961e882d56d59fa6a5988af56b744a3e0a35028dcba89647f697537",
+    "contract/ledger/catalogue_test.go": "8c042f0265260fed837ca1ab532113ddda4eab033c36ec0d995286ac555d939f",
+    "contract/ledger/doc.go": "d6bf607f06e11d7c27850bc757da529d2c7d5fae64b6f907785c63ca076afb69",
+    "contract/ledger/paid_compatibility_test.go": "3e236cb3bbd2006ffae0582215c476c26e8ac492e354fd85e3f87daba812e8f7",
+    "contract/ledger/registration.go": "e0ca1f86f681b4489f07ae75b107d0981f54bfdb1a0c50f138fd98d882db09ee",
+    "contract/ledger/registration_fuzz_test.go": "56693358dc9bad9cd1990bba6d75dcb2ac9b91acf7c7d4fd8e2343414ba6d10f",
+    "contract/ledger/registration_golden_test.go": "f4d9b5778d2936b4ccada58e549a746dd25f6a27289624c0cd4c898f5fca8c37",
+    "contract/ledger/registration_submission.go": "3b7d3b5d03bd4b0bccf85691d2ce70979dbdf1b1dd9e21355a71559425a09f6f",
+    "contract/ledger/registration_test.go": "42185f48ec0e51721742527706a138ed5144bed8f20f2c1572835d2c66f5a48b",
+    "contract/ledger/testdata/f3/139/bodies/e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5": "e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5",
+    "contract/ledger/testdata/f3/139/log/00000000000000000001.jsonl": "db1476e07b355d909dfb07cce79f142387469618709bc52a3f496395b94c5134",
+    "contract/ledger/testdata/f3/139/objects/a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b": "a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b",
+    "contract/ledger/testdata/f3/139/objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/CONTRACTS.md": "d394ba48c0d41e25a8e8d748b8743753cb3bfd4a3cdd51a5d8b1bef18aa4bf8f",
+    "docs/DESIGN-CORE-AND-LAUNCHERS.md": "900f18b1ba75185f4b0b23fc4923f22f0994aff629950c68446821212e91db2b"
+  },
+  "cumulativeChangedPaths": [
+    "contract/ledger/catalogue.go",
+    "contract/ledger/catalogue_test.go",
+    "contract/ledger/doc.go",
+    "contract/ledger/paid_compatibility_test.go",
+    "contract/ledger/registration.go",
+    "contract/ledger/registration_fuzz_test.go",
+    "contract/ledger/registration_golden_test.go",
+    "contract/ledger/registration_submission.go",
+    "contract/ledger/registration_test.go",
+    "contract/ledger/testdata/f3/139/bodies/e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5",
+    "contract/ledger/testdata/f3/139/log/00000000000000000001.jsonl",
+    "contract/ledger/testdata/f3/139/objects/a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b",
+    "contract/ledger/testdata/f3/139/objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/CONTRACTS.md",
+    "docs/DESIGN-CORE-AND-LAUNCHERS.md"
+  ],
+  "recordCommitPaths": [
+    "contract/ledger/catalogue.go",
+    "contract/ledger/doc.go",
+    "contract/ledger/registration.go",
+    "contract/ledger/registration_submission.go",
+    "docs/CONTRACTS.md",
+    "docs/DESIGN-CORE-AND-LAUNCHERS.md"
+  ],
+  "commentOnlyPaths": [
+    "contract/ledger/catalogue.go",
+    "contract/ledger/doc.go",
+    "contract/ledger/registration.go",
+    "contract/ledger/registration_submission.go"
+  ],
+  "format": {
+    "command": [
+      "C:/Program Files/Go/bin/gofmt.exe",
+      "-l",
+      "contract/ledger/catalogue.go",
+      "contract/ledger/doc.go",
+      "contract/ledger/registration.go",
+      "contract/ledger/registration_submission.go"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "exit": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "linksLF": {
+    "changedMarkdown": [
+      "docs/CONTRACTS.md",
+      "docs/DESIGN-CORE-AND-LAUNCHERS.md"
+    ],
+    "mirrorIssues": [],
+    "noCRInAll15Files": true
+  },
+  "review": "Joint ReviewT139S1Astra approval; no technical correction or confirmation pass.",
+  "hosted": "pending; full three-OS/race matrix required for this exact final public SHA"
+}

@@ -1,0 +1,148 @@
+from __future__ import annotations
+
+import hashlib
+import json
+import os
+from pathlib import Path
+import subprocess
+import sys
+import time
+from datetime import datetime, timezone
+
+WT = Path("C:/Users/darius.jones/worktrees/dwarf-harness/139-registration")
+EV = Path("C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence")
+GO = "C:/Program Files/Go/bin/go.exe"
+FMT = "C:/Program Files/Go/bin/gofmt.exe"
+ENVIRONMENT = {"GOTOOLCHAIN": "local", "GOFLAGS": "", "CGO_ENABLED": "0", "GOOS": "windows", "GOARCH": "amd64"}
+OWNED = [
+    "contract/ledger/registration.go",
+    "contract/ledger/registration_submission.go",
+    "contract/ledger/registration_test.go",
+    "contract/ledger/registration_fuzz_test.go",
+    "contract/ledger/registration_golden_test.go",
+    "contract/ledger/catalogue.go",
+    "contract/ledger/doc.go",
+    "contract/ledger/paid_compatibility_test.go",
+    "contract/ledger/catalogue_test.go",
+]
+HELPER = WT / "internal/core/agents/scoped_golden_test.go"
+PROBE = WT / "internal/core/agents/registration_freeze_setup_probe_test.go"
+COMMANDS = {
+    "format": [FMT, "-w", *[str(WT / p) for p in OWNED]],
+    "generate": [GO, "test", "-count=1", "-v", "-timeout=19m", "./contract/ledger", "-run", "^TestGoldenF3_139$", "-update"],
+    "focused": [GO, "test", "-count=1", "-v", "-timeout=19m", "./contract/ledger", "-run", "^(TestRegistration.*|TestGoldenF3_139|FuzzDecodeF3_139)$"],
+    "goldens": [GO, "test", "-count=1", "-v", "-timeout=19m", "./contract/ledger", "-run", "^TestGolden", "-update"],
+    "probe_format": [FMT, "-w", str(EV / "registration_freeze_setup_probe_test.go")],
+    "probe": [GO, "test", "-count=1", "-v", "-timeout=19m", "./internal/core/agents", "-run", "^TestRegistrationFreezeSetupProbe$"],
+    "package": [GO, "test", "-count=1", "-v", "-timeout=19m", "./contract/ledger"],
+    "consumer": [GO, "test", "-count=1", "-v", "-timeout=19m", "./internal/core/ledgerstore"],
+    "format_check": [FMT, "-l", *[str(WT / p) for p in OWNED]],
+    "vet": [GO, "vet", "./contract/ledger"],
+    "staticcheck": [GO, "tool", "staticcheck", "./contract/ledger"],
+    "imports": [GO, "list", "-f", r'{{join .Imports "\n"}}', "./contract/ledger"],
+    "test_imports": [GO, "list", "-f", r'{{join .TestImports "\n"}}', "./contract/ledger"],
+    "dependencies": [GO, "list", "-deps", "-f", "{{if not .Standard}}{{.ImportPath}}{{end}}", "./contract/ledger"],
+    "tidy": [GO, "mod", "tidy", "-diff"],
+    "verify": [GO, "mod", "verify"],
+}
+
+
+def sha(path: Path) -> str:
+    return hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def old_fixtures() -> dict[str, str]:
+    root = WT / "contract/ledger/testdata"
+    return {p.relative_to(WT).as_posix(): sha(p) for p in sorted(root.rglob("*")) if p.is_file() and "f3/139/" not in p.relative_to(root).as_posix()}
+
+
+def save(name: str, value: object) -> None:
+    (EV / name).write_text(json.dumps(value, indent=2) + "\n", encoding="utf-8", newline="\n")
+
+
+def baseline() -> dict:
+    path = EV / "baseline.json"
+    if path.exists():
+        raise RuntimeError("refusing to overwrite baseline")
+    if PROBE.exists():
+        raise RuntimeError("probe path already exists")
+    result = {"oldFixtures": old_fixtures(), "helper": sha(HELPER), "modules": {p: sha(WT / p) for p in ["go.mod", "go.sum"]}}
+    (EV / "scoped_golden_test.go.baseline").write_bytes(HELPER.read_bytes())
+    save("baseline.json", result)
+    return {"oldFixtureCount": len(result["oldFixtures"]), "helperSHA256": result["helper"], "modules": result["modules"]}
+
+
+def prove_old() -> dict:
+    original = json.loads((EV / "baseline.json").read_text(encoding="utf-8"))
+    current = old_fixtures()
+    if current != original["oldFixtures"]:
+        raise RuntimeError("earlier fixture set or hash changed")
+    if any(sha(WT / p) != digest for p, digest in original["modules"].items()):
+        raise RuntimeError("module file changed")
+    return {"unchangedOldFixtures": len(current), "oldFixtureHashes": current, "modulesUnchanged": True}
+
+
+def restoration() -> dict:
+    original = json.loads((EV / "baseline.json").read_text(encoding="utf-8"))
+    if HELPER.read_bytes() != (EV / "scoped_golden_test.go.baseline").read_bytes() or sha(HELPER) != original["helper"]:
+        raise RuntimeError("temporary fixture helper not restored byte-identically")
+    if PROBE.exists():
+        raise RuntimeError("temporary agents probe still present")
+    return {"helperSHA256Before": original["helper"], "helperSHA256After": sha(HELPER), "helperByteIdentical": True, "temporaryProbeAbsent": True}
+
+
+def final_hashes() -> dict:
+    old = prove_old()
+    restored = restoration()
+    fixtures = sorted(p for p in (WT / "contract/ledger/testdata/f3/139").rglob("*") if p.is_file())
+    paths = [WT / p for p in OWNED] + fixtures
+    if any(b"\r" in p.read_bytes() for p in paths):
+        raise RuntimeError("CR byte found in owned source or fixture")
+    result = {"finalHashes": {p.relative_to(WT).as_posix(): sha(p) for p in paths}, "goldens": {p.relative_to(WT).as_posix(): sha(p) for p in fixtures}, "restoration": restored, "unchangedOldFixtureCount": old["unchangedOldFixtures"], "noCR": True}
+    save("final-hashes.json", result)
+    return result
+
+
+def main() -> int:
+    if Path.cwd().resolve() != WT.resolve():
+        raise RuntimeError("command must run from assigned worktree")
+    step = sys.argv[1]
+    env = os.environ.copy()
+    env.update(ENVIRONMENT)
+    history_path = EV / "commands.json"
+    history = json.loads(history_path.read_text(encoding="utf-8")) if history_path.exists() else []
+    log = EV / f"{len(history)+1:02d}-{step}.log"
+    started = datetime.now(timezone.utc).isoformat()
+    begin = time.perf_counter()
+    exit_code = 0
+    command = COMMANDS.get(step, [sys.executable, str(Path(__file__)), step])
+    try:
+        if step in COMMANDS:
+            with log.open("wb") as output:
+                output.write((json.dumps({"command": command, "cwd": str(WT), "environment": ENVIRONMENT}) + "\n").encode())
+                output.flush()
+                completed = subprocess.run(command, cwd=WT, env=env, stdout=output, stderr=subprocess.STDOUT, timeout=1190, check=False)
+                exit_code = completed.returncode
+            if exit_code == 0 and step in {"format_check", "tidy"}:
+                body = log.read_bytes().split(b"\n", 1)[1]
+                if body.strip():
+                    raise RuntimeError(f"{step} must have empty output")
+        else:
+            actions = {"baseline": baseline, "old_proof": prove_old, "restoration": restoration, "hashes": final_hashes}
+            value = actions[step]()
+            log.write_text(json.dumps(value, indent=2) + "\n", encoding="utf-8", newline="\n")
+    except Exception as error:
+        exit_code = 1
+        with log.open("a", encoding="utf-8", newline="\n") as output:
+            output.write(f"ERROR: {type(error).__name__}: {error}\n")
+    result = {"step": step, "command": command, "environment": ENVIRONMENT, "cwd": str(WT), "exit": exit_code, "seconds": round(time.perf_counter()-begin, 3), "startedUTC": started, "log": str(log)}
+    history.append(result)
+    save("commands.json", history)
+    print(json.dumps(result), flush=True)
+    if exit_code:
+        print(log.read_text(encoding="utf-8", errors="replace"), flush=True)
+    return exit_code
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

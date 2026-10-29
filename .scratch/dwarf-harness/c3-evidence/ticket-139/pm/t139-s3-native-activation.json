@@ -1,0 +1,19 @@
+{
+  "status": "explicitly granted; actual launch delegated, not yet observed",
+  "grantReference": "primary-t139-s3-8a17-20261029-slot1",
+  "subject": "8a17ec1ed2617ca2a4e5203479f75f363b359970",
+  "worktree": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-acceptance",
+  "author": "CoderT139S3",
+  "approvedPrivateHashes": {
+    "final-commands.json": "55d09cbb87e3804f318b0508445551760de6daf0bdbb463b422f7b26a94788d4",
+    "run-risk.ps1": "09c62b3067adc1e361b29e97c8843113a4c38881a3d11bf0304f9bf20a19710f",
+    "run-risk-source.json": "b85e09ac6bd53df075d3414dcf0f0458200239755ca3df783b7b02234a505d7f",
+    "run-final.ps1": "a7cf871b1988c8915d0e61fd479388148ef280a812266e6fcd9fd13c73dc6c9a"
+  },
+  "manifestSHA256": "45737862fb8b62ed57aaf3d3d55c059d162f50e0842fb95b2490baf85641da3d",
+  "sourceGrantFile": "local://t139-s3-execution-grant.txt",
+  "sequence": "risk at most4planned named Go commands; only after both proved red/exactrestore/samegreen, exact final runner; fail closed/no repeats; full AUTHOR+PM release required",
+  "temporaryOwnership": "only exact two source-bound diffs in own tree, never main/140",
+  "nativeWorkObserved": false,
+  "mainOrPrivatePromotion": false
+}

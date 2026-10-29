@@ -1,0 +1,62 @@
+[
+    {
+        "path":  "internal/core/agents/doc.go",
+        "expectedSHA256":  "56f58f4332cc20bfa0ccb2b7d42656599bca9e83e5dbfec88df5680c94ad810e",
+        "sha256":  "56f58f4332cc20bfa0ccb2b7d42656599bca9e83e5dbfec88df5680c94ad810e",
+        "matches":  true
+    },
+    {
+        "path":  "internal/core/agents/history_index.go",
+        "expectedSHA256":  "69c23b9faf4590931d2fde8ecb2385bb2a08967dfe1ace1fb8b0efff5975a73a",
+        "sha256":  "69c23b9faf4590931d2fde8ecb2385bb2a08967dfe1ace1fb8b0efff5975a73a",
+        "matches":  true
+    },
+    {
+        "path":  "internal/core/agents/history_index_test.go",
+        "expectedSHA256":  "375391888662220403614dda65cce81d32a7b6727327c938453da671d7633fb5",
+        "sha256":  "375391888662220403614dda65cce81d32a7b6727327c938453da671d7633fb5",
+        "matches":  true
+    },
+    {
+        "path":  "internal/core/agents/recovery_test.go",
+        "expectedSHA256":  "57fb5b06fec677eb1f4c04aca4ff2e9337d5c4d3ceb20024d25eab24ca89db8c",
+        "sha256":  "57fb5b06fec677eb1f4c04aca4ff2e9337d5c4d3ceb20024d25eab24ca89db8c",
+        "matches":  true
+    },
+    {
+        "path":  "internal/core/agents/registration_state.go",
+        "expectedSHA256":  "5fd211ee66aef9b73e985f4fa4fd8ff461dab8725ed3ea1c240785fd787287fa",
+        "sha256":  "5fd211ee66aef9b73e985f4fa4fd8ff461dab8725ed3ea1c240785fd787287fa",
+        "matches":  true
+    },
+    {
+        "path":  "internal/core/agents/replay.go",
+        "expectedSHA256":  "3b81a839ad03597271b78e0eff057c2e59926036f89dc2dc7cad6579b68eae2d",
+        "sha256":  "3b81a839ad03597271b78e0eff057c2e59926036f89dc2dc7cad6579b68eae2d",
+        "matches":  true
+    },
+    {
+        "path":  "internal/core/agents/review_execute.go",
+        "expectedSHA256":  "156e2e55f8ad84ff37eada10fd55e653fa190478dfc5aeea2cd972003c81896e",
+        "sha256":  "156e2e55f8ad84ff37eada10fd55e653fa190478dfc5aeea2cd972003c81896e",
+        "matches":  true
+    },
+    {
+        "path":  "internal/core/agents/scoped_execute.go",
+        "expectedSHA256":  "c23fb945fbe9c2a5e1535fe8a22a1954f2006b80ce492e581b03017b6a7ce86c",
+        "sha256":  "c23fb945fbe9c2a5e1535fe8a22a1954f2006b80ce492e581b03017b6a7ce86c",
+        "matches":  true
+    },
+    {
+        "path":  "internal/core/agents/scoped_receipt_test.go",
+        "expectedSHA256":  "315354fc745c3f90d904a379c60c7b9991b0ba32d9bfe67c9f8edb87817eed34",
+        "sha256":  "315354fc745c3f90d904a379c60c7b9991b0ba32d9bfe67c9f8edb87817eed34",
+        "matches":  true
+    },
+    {
+        "path":  "internal/core/agents/scoped_state.go",
+        "expectedSHA256":  "2c232bb2af3f6ba6dc90d47ba503c71dad585ef8d4bdaf5c2592cc1490bb0e9e",
+        "sha256":  "2c232bb2af3f6ba6dc90d47ba503c71dad585ef8d4bdaf5c2592cc1490bb0e9e",
+        "matches":  true
+    }
+]

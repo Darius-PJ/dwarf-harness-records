@@ -1,0 +1,24 @@
+{
+  "base": "82d8d48856c7191019625c9f6e896d10b9b8498c",
+  "ownedSourceHashesBefore": {
+    "contract/ledger/registration.go": "02345d1412c33261df9ad5f22e037fd58ae5dda67df2d02ba9e340519a237715",
+    "contract/ledger/registration_submission.go": "219fe33b301ac334014429c4949ce29d2fb309718e16721a9cd7b5edf702d3f3",
+    "contract/ledger/registration_test.go": "3b24430da85a76fd1d51e45f55608a781f51b3b3eb28653033784af7e32f382e",
+    "contract/ledger/registration_fuzz_test.go": "56693358dc9bad9cd1990bba6d75dcb2ac9b91acf7c7d4fd8e2343414ba6d10f",
+    "contract/ledger/registration_golden_test.go": "392393ae67bf97b6ef558a6e2189d5100731642246bf7701dd482164fd1f23e3",
+    "contract/ledger/catalogue.go": "c858bb6ae564f60501091d48070a0a9f8e51be544a20ca756148dca656f029c0",
+    "contract/ledger/doc.go": "ae17cfdef20eb813ddde16e4fa09742fface302861f750b5770d072872efc45b",
+    "contract/ledger/paid_compatibility_test.go": "3e236cb3bbd2006ffae0582215c476c26e8ac492e354fd85e3f87daba812e8f7"
+  },
+  "ownedSourceHashesAfter": {
+    "contract/ledger/registration.go": "02345d1412c33261df9ad5f22e037fd58ae5dda67df2d02ba9e340519a237715",
+    "contract/ledger/registration_submission.go": "219fe33b301ac334014429c4949ce29d2fb309718e16721a9cd7b5edf702d3f3",
+    "contract/ledger/registration_test.go": "3b24430da85a76fd1d51e45f55608a781f51b3b3eb28653033784af7e32f382e",
+    "contract/ledger/registration_fuzz_test.go": "56693358dc9bad9cd1990bba6d75dcb2ac9b91acf7c7d4fd8e2343414ba6d10f",
+    "contract/ledger/registration_golden_test.go": "392393ae67bf97b6ef558a6e2189d5100731642246bf7701dd482164fd1f23e3",
+    "contract/ledger/catalogue.go": "c858bb6ae564f60501091d48070a0a9f8e51be544a20ca756148dca656f029c0",
+    "contract/ledger/doc.go": "ae17cfdef20eb813ddde16e4fa09742fface302861f750b5770d072872efc45b",
+    "contract/ledger/paid_compatibility_test.go": "3e236cb3bbd2006ffae0582215c476c26e8ac492e354fd85e3f87daba812e8f7"
+  },
+  "allOwnedSourcesPreserved": true
+}

@@ -1,0 +1,110 @@
+[
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/registration_types.go",
+        "sha256":  "cce6073307a2b60ab6161041db52d65f4c71b7ee104d05f5e62484059ea547d3"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/registration_commands.go",
+        "sha256":  "8845fee25ccedadf6cd68c15df29e834b2099e1229e76c992a1f906045335a7d"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/registration_replay.go",
+        "sha256":  "af7337423f654b621ce6a461fef78819a7a2e561ec627d6843e832b21ee0cb45"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/registration_state.go",
+        "sha256":  "5fd211ee66aef9b73e985f4fa4fd8ff461dab8725ed3ea1c240785fd787287fa"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/registration_query.go",
+        "sha256":  "73fdd84660648ae808182bdde4dc77de6c59aa6fd6a13a7e5789174278c324a1"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/registration_service_test.go",
+        "sha256":  "853e2e17c113659094d02814fb9be826cd8515db39d22be2761d4e671c1c3ae4"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/registration_replay_test.go",
+        "sha256":  "b88f7477c1a29fda5714e00bdaf5ed281e37dcfb5730780d63c045f91e856ec7"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/registration_fuzz_test.go",
+        "sha256":  "6108e6a47701cf8b5572222b4543702f8cec70935b274b8ac733e1ac369c9a8d"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/service.go",
+        "sha256":  "3a9e0838135f9344ddcf083f7884b9289697a74cf0d9c56c38d3b7f102e69bec"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/types.go",
+        "sha256":  "b9c449c480b6c05264a966386cfdb1a23cd21702ad618d2018ae199e8dafd0b8"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/scoped_replay.go",
+        "sha256":  "4e7b0e0f92da725d07443bf88044432de673d1e5b220d6a98d824bec67159570"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/replay.go",
+        "sha256":  "90f179cf09edea95fed8dffa251bd9820c68d6a1028245a4f172f188faf081a8"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/doc.go",
+        "sha256":  "8a52831e0de08b3452fec02b265d90e3efef042cdb93a82699f46d7b185741ad"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/scoped_golden_test.go",
+        "sha256":  "f9984f743a7f5a9c9c6f9dd105447bc41e9b8227c48c3807781c30dd3bb0b82f"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/integrity.go",
+        "sha256":  "04dec8cedf618605134256b7aa2a973c5f78f1220a397c47d7beb2c5a8906560"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/paid_fixture_test.go",
+        "sha256":  "6479e89ecc069fa3c87fb4a30dfadd8d823f165431920855f5de5136516317e8"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/paid_fuzz_test.go",
+        "sha256":  "6aed09c53695dc3605c61888ae7877f0998f61a68ea89eeb84b1c807585508f8"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/paid_live.go",
+        "sha256":  "f23effce5c73095784b1a43087a6b1ac4212e582edf4750d119dab282dc9f444"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/paid_read.go",
+        "sha256":  "23cedad1a2838e69738d46929d25038ea29ceb27e5093bc35f80216b08b1c903"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/paid_settlement.go",
+        "sha256":  "4a87639a07f80dc37cecf3beb5576f7e471107c613fafd42a2b92f6cbc7f1ee1"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/paid_state.go",
+        "sha256":  "9cbdb65b4703c02cf9bf0ab7f9004641ebc5052dce2e180360c0605e0c4486a6"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/review_execute.go",
+        "sha256":  "705524a3c43540db6ed4d587dc00c65502285a3b3aa4669f884f015a82911120"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/review_fuzz_test.go",
+        "sha256":  "a31d51556102f4f9ce2c76af54409a5e6abb63eaa59c12b33daed03d058769ac"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/review_replay_test.go",
+        "sha256":  "c95510f94cbe9c7881d441c31fdf73f4a9af52e947dccda8fad438cc1b2a2752"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/review_state.go",
+        "sha256":  "ed34c8b43e24aeb1f02a15f90a5cc57998e2c14021f084dffe25e9cf39b8bb10"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/scoped_submit.go",
+        "sha256":  "4639d4f4ff6a535c955dfd40478548cfec489ed3c2254996c002bb6657b90ee0"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/history_index.go",
+        "sha256":  "2cf636da336a1cecd4d5d65c81a97ddaaa8a022c52c9f3d3a075b796a8c6ac3e"
+    }
+]

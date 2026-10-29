@@ -1,0 +1,10 @@
+[
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance/internal/core/agents/registration_crash_test.go",
+        "sha256":  "1123794587c8486dd276a6463e88718870f62d9db7f4526ac1d41051ba9ac564"
+    },
+    {
+        "path":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance/internal/core/agents/registration_recovery_test.go",
+        "sha256":  "d045d9705df2b4fb4f8c0d4db319ef29ccc40693d4dda47e6338165fb033aa53"
+    }
+]

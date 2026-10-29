@@ -1,0 +1,231 @@
+{
+  "verdict": "approve",
+  "reviewLine": "GPT-6 Astra, temporary stand-in for the DwarfHarness advisor Claude Fable 5.1, performed this fresh review and approves Ticket139's complete design as amended in this ruling under D152. Fable remains the main advisor and double-checks the whole ticket after its reset. This is not implementation approval, a contract freeze, runtime evidence or D52 promotion approval.",
+  "choices": {
+    "P1": {
+      "ruling": "approve-with-amendment",
+      "decision": "Add four F3-139 v1 types and schema 5; Defined grows from 49 to 53. Use resource.set, work_domain.set and declaration.set. Leave F3-10 through F3-13 and schemas 1 through 4 unchanged."
+    },
+    "P2": {
+      "ruling": "replace",
+      "decision": "External-only registrations are sufficient. ResourceID is an opaque UUIDv7, separate from an explicitly supplied immutable ledger.Resource external address. Preserve existing opaque external-key grammar, including paid-route/<UUID>. Enforce unique address ownership; no normalization, aliases, route lookup, provider functionality or historic registration prerequisite."
+    },
+    "P3": {
+      "ruling": "approve-with-clarification",
+      "decision": "Nonempty registered-agent audiences are evidence scope, never authority. Declaration audience is contained in its pinned source and each task audience; each context consumer's agent belongs to the declaration audience. No implicit expansion or disclosure permission."
+    },
+    "P4": {
+      "ruling": "approve-with-amendment",
+      "decision": "Expected-zero creation and contiguous CAS revisions; declarations pin the source version current at commit and replace their full consumer set. Empty consumers withdraw edges. IDs are namespaced by kind, not globally exclusive across new kinds."
+    },
+    "P5": {
+      "ruling": "approve",
+      "decision": "Task consumers use stable task IDs; context consumers use exact registered bindings. Unassigned and terminal tasks are legitimate evidence consumers. No assignment-following aliases, retirement or deletion API."
+    },
+    "P6": {
+      "ruling": "simplify",
+      "decision": "Owner-only SetResourceRegistration, SetWorkDomainRegistration and SetDeclaration. No separate register/revise wrappers or Agent methods. Canonical targets are bound once in concrete arguments; remove RegistrationTarget."
+    },
+    "P7": {
+      "ruling": "approve",
+      "decision": "One command/effect/receipt Submit; global deduplication before CAS and population guards; original-request preflight binding; actual committed sequence readback and projection installation before acknowledgement; preserve Close, cancellation and poisoning semantics."
+    },
+    "P8": {
+      "ruling": "approve",
+      "decision": "Concrete fifth decodeFamily result, three latest-state maps, commandMatch.registration and existing refresh/lookup integration. Shared preflight/replay planner. No independent authority store, history cache, receipt index or generic router."
+    },
+    "P9": {
+      "ruling": "simplify",
+      "decision": "Frozen 64 KiB payload/submission rules plus only MaxRegistrations=256 and MaxDeclarations=1024 producer defaults. Remove audience/consumer count knobs; preserve bounded allocation and actual encoded-size checks. Replay and matching retries ignore producer population limits."
+    },
+    "P10": {
+      "ruling": "approve-with-amendment",
+      "decision": "Owner-only typed current/history/version/receipt queries. ResourceStatus uses exact ledger.Resource plus ThroughSequence. Zero is genesis, ToEnd captures the durable boundary, and future or mid-commit cursors fail. Historical snapshots come from complete validated commits, without a second reducer or cache."
+    },
+    "P11": {
+      "ruling": "replace",
+      "decision": "Exactly three slices: contract and freeze prerequisites; complete producer/query/replay with live publication regressions; real interrupted recovery and cross-family acceptance."
+    },
+    "P12": {
+      "ruling": "approve-with-amendment",
+      "decision": "Separate D125 freeze, D152 focused evidence/review and D153 final-SHA hosted integration. Require actual Core prerequisite-golden probing before freeze. No duplicate local full gate or routine design confirmation pass."
+    }
+  },
+  "findings": [
+    {
+      "id": "F1",
+      "severity": "major",
+      "location": "local://t139-brief.md:37",
+      "problem": "Bare registration UUID keys exclude the frozen paid-route/<route UUIDv7> grant address.",
+      "requiredChange": "Persist and canonically bind an explicit immutable F3-11 external Resource, enforce address uniqueness, query by exact address and amend the golden.",
+      "status": "resolved-by-binding-ruling"
+    },
+    {
+      "id": "F2",
+      "severity": "major",
+      "location": "local://t139-brief.md:446",
+      "problem": "S1's blanket exclusion of actual Core probing can freeze invalid earlier-family prerequisites.",
+      "requiredChange": "Before joint freeze review, run a throwaway real ledgerstore/Core Open probe of the generated golden and a rebuilt invalid-prerequisite control; retain source and outputs privately.",
+      "status": "resolved-by-binding-ruling"
+    },
+    {
+      "id": "F3",
+      "severity": "minor",
+      "location": "local://t139-brief.md, P4/P6/P9 and API sections",
+      "problem": "Create/revise wrappers, redundant target representation, cross-kind UUID exclusion and four additional limits add unnecessary surface.",
+      "requiredChange": "Use three CAS setters and operations, argument-bound targets, kind-scoped IDs and two producer population limits.",
+      "status": "resolved-by-binding-ruling"
+    }
+  ],
+  "ownerGates": {
+    "triggered": [],
+    "conditional": [
+      "D40: breaking a frozen contract",
+      "D29: adding a dependency",
+      "D41: changing an owner-reserved decision",
+      "D52: promotion or workload admission beyond the testing-only C3 boundary",
+      "Live credentials, provider invocation or spending"
+    ],
+    "notOwnerGates": [
+      "The completed additive F3-139 freeze under D125",
+      "Producer population-limit defaults",
+      "Supporting an existing opaque paid-route grant address without provider functionality"
+    ]
+  },
+  "slices": [
+    {
+      "id": "S1",
+      "name": "Additive contract and completed freeze bundle",
+      "ownedPaths": [
+        "contract/ledger/registration.go",
+        "contract/ledger/registration_submission.go",
+        "contract/ledger/registration_test.go",
+        "contract/ledger/registration_fuzz_test.go",
+        "contract/ledger/registration_golden_test.go",
+        "contract/ledger/catalogue.go",
+        "contract/ledger/doc.go",
+        "contract/ledger/testdata/f3/139/**"
+      ],
+      "deliverable": "Four types, schema 5, complete 19-commit/65-record golden, earlier-golden compatibility evidence and mandatory actual Core prerequisite probe. No producer scaffold.",
+      "exit": "Joint completed-contract and freeze-record review; PM D125 freeze; frozen contract landed before S2; D153 success for final public SHA."
+    },
+    {
+      "id": "S2",
+      "name": "Complete owner producer, queries and replay",
+      "ownedPaths": [
+        "internal/core/agents/registration_types.go",
+        "internal/core/agents/registration_commands.go",
+        "internal/core/agents/registration_replay.go",
+        "internal/core/agents/registration_state.go",
+        "internal/core/agents/registration_query.go",
+        "internal/core/agents/registration_service_test.go",
+        "internal/core/agents/registration_replay_test.go"
+      ],
+      "deliverable": "All ruled mutations, queries, scope/CAS/address invariants, global deduplication and replay; live retry/lost-ack/Close regressions; real new-golden prefix replay; grant independence.",
+      "sharedChanges": "Only the enumerated sharedFileHooks and mechanical decoder migrations."
+    },
+    {
+      "id": "S3",
+      "name": "Interrupted recovery and cross-family acceptance",
+      "ownedPaths": [
+        "internal/core/agents/registration_crash_test.go",
+        "internal/core/agents/registration_recovery_test.go",
+        "Narrow extensions to S2 registration tests and registration documentation"
+      ],
+      "deliverable": "Real positively waited process-death/torn-tail recovery, original receipt retry and cross-family historical behavior; actual Service smoke; ticket and documentation close evidence.",
+      "boundaries": "No power-loss claim, provider work, graph implementation, competing cache or promotion."
+    }
+  ],
+  "sharedFileHooks": {
+    "structural": [
+      {
+        "path": "internal/core/agents/service.go",
+        "change": "Three latest-state maps and initialization, family consumption, one afterRegistrationCommit hook."
+      },
+      {
+        "path": "internal/core/agents/types.go",
+        "change": "MaxRegistrations and MaxDeclarations defaults and validation only."
+      },
+      {
+        "path": "internal/core/agents/scoped_replay.go",
+        "change": "Fifth concrete family result and mixed-family rejection."
+      },
+      {
+        "path": "internal/core/agents/replay.go",
+        "change": "Registration refresh/install arm and commandMatch/global lookup integration."
+      },
+      {
+        "path": "internal/core/agents/doc.go",
+        "change": "Registration owner/evidence/nonsecret/query/recovery contract."
+      },
+      {
+        "path": "internal/core/agents/scoped_golden_test.go",
+        "change": "Permanent chapter-139 fixture support in S2."
+      }
+    ],
+    "mechanicalDecodeFamilyCallers": [
+      "internal/core/agents/integrity.go",
+      "internal/core/agents/paid_fixture_test.go",
+      "internal/core/agents/paid_fuzz_test.go",
+      "internal/core/agents/paid_live.go",
+      "internal/core/agents/paid_read.go",
+      "internal/core/agents/paid_settlement.go",
+      "internal/core/agents/paid_state.go",
+      "internal/core/agents/replay.go",
+      "internal/core/agents/review_execute.go",
+      "internal/core/agents/review_fuzz_test.go",
+      "internal/core/agents/review_replay_test.go",
+      "internal/core/agents/review_state.go",
+      "internal/core/agents/scoped_submit.go"
+    ],
+    "ticket140": "Primary owns shared history/cache integration. Ticket139 adds no cache or dependency on Ticket140. Preserve whole-commit F0 command-key invalidation; if a cached commandMatch cannot retain registration, leave that positive uncached and use authoritative lookup.",
+    "coordination": "Primary alone owns main integration, shared records, numbering and local compute slots."
+  },
+  "notesForS1": [
+    "This ruling supersedes conflicting brief text; no routine confirmation pass.",
+    "ResourceID and explicit immutable external grant address are separate identities.",
+    "Support existing opaque keys, including paid-route/<UUID>, without provider or credential prerequisites.",
+    "Use resource.set, work_domain.set and declaration.set; remove RegistrationTarget.",
+    "Add only two producer population limits; retain actual encoded-size checks.",
+    "Golden has 19 commits and 65 records, an earlier root grant, first new effect/receipt 25/26 and final effect/receipt 64/65.",
+    "Run actual Core Open prerequisite probing before the joint freeze review; new-family records may remain unconsumed for that probe.",
+    "Record zero reconciliation issues, unchanged durable sequence and ledger bytes; legitimate Completed materialization entries are allowed.",
+    "Retain a separate invalid-prerequisite negative control, rebuilt consistently, that actual Core Open rejects.",
+    "Generate all hashes; preserve every earlier frozen golden, including D149's corrected F3-13.",
+    "Private decisions/evidence remain private under D145; primary allocates record numbers; technical decisions use originator assistant.",
+    "No unresolved technical source question remains."
+  ],
+  "evidenceRequirements": {
+    "designReviewPerformed": "Read-only source and artifact review; no edits or commands performed.",
+    "D125": "Completed contract, generated fixtures, observed hashes, actual Core prerequisite probe, applicable focused/fuzz evidence and proposed freeze record reviewed together before PM freeze and producer implementation.",
+    "D152": "Focused behavioral evidence and plain verbose changed-package tests; race and affected x20 tests for shared-state/concurrency changes; risk-specific reachable rule breaks; no duplicate local full gate or speculative measurement.",
+    "D153": "Successful hosted classification, all required OS jobs and aggregate Check result on each exact final public SHA before primary moves main.",
+    "golden": {
+      "commits": 19,
+      "records": 65,
+      "firstEffectSequence": 25,
+      "firstReceiptSequence": 26,
+      "lastEffectSequence": 64,
+      "lastReceiptSequence": 65,
+      "newDigest": "Must be observed from the generator; not assigned by this ruling."
+    },
+    "pmFuzzCampaigns120Seconds": [
+      "FuzzDecodeF3_139",
+      "FuzzRegistrationGroupReplay",
+      "FuzzScopedGroupReplay",
+      "FuzzReviewGroupReplay",
+      "FuzzPaidGroupReplay"
+    ],
+    "privateFuzz": "Normal FuzzPrivateGroupReplay seeds only unless its actual unchanged decoder/planner path is modified.",
+    "runtimeAcceptance": [
+      "Owner/origin rejection, concurrent CAS and immutable exact grant address",
+      "All four declaration combinations, source pins, replacement, withdrawal and historical cursors",
+      "Global same-command matching before CAS and producer limits",
+      "Original-request preflight binding and committed receipt/projection before acknowledgement",
+      "Close, lost acknowledgement, real torn/interrupted recovery and ledger-only restart",
+      "Existing grants and old-family behavior unchanged, with no provider or money effects"
+    ],
+    "verificationClaims": "All implementation, fuzz, smoke, freeze and CI requirements above are future gates, not checks claimed to have run."
+  },
+  "requests": []
+}

@@ -1,0 +1,6 @@
+=== RUN   TestRegistrationOriginalRequestPreflight
+=== PAUSE TestRegistrationOriginalRequestPreflight
+=== CONT  TestRegistrationOriginalRequestPreflight
+--- PASS: TestRegistrationOriginalRequestPreflight (0.24s)
+PASS
+ok  	github.com/Darius-PJ/dwarf-harness/internal/core/agents	3.308s

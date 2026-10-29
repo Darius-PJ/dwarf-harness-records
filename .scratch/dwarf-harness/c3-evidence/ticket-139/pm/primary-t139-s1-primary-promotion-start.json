@@ -1,0 +1,35 @@
+{
+  "sha": "34090c3b634b9854904671c336db91c350e6328c",
+  "hashProof": [
+    [
+      "contract/ledger/catalogue.go",
+      "contract/ledger/catalogue_test.go",
+      "contract/ledger/doc.go",
+      "contract/ledger/paid_compatibility_test.go",
+      "contract/ledger/registration.go",
+      "contract/ledger/registration_fuzz_test.go",
+      "contract/ledger/registration_golden_test.go",
+      "contract/ledger/registration_submission.go",
+      "contract/ledger/registration_test.go",
+      "contract/ledger/testdata/f3/139/bodies/e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5",
+      "contract/ledger/testdata/f3/139/log/00000000000000000001.jsonl",
+      "contract/ledger/testdata/f3/139/objects/a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b",
+      "contract/ledger/testdata/f3/139/objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "docs/CONTRACTS.md",
+      "docs/DESIGN-CORE-AND-LAUNCHERS.md"
+    ],
+    [],
+    [],
+    []
+  ],
+  "hosted": {
+    "id": 40794776982,
+    "head_sha": "34090c3b634b9854904671c336db91c350e6328c",
+    "conclusion": "success",
+    "run_attempt": 1,
+    "html_url": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40794776982",
+    "updated_at": "2026-10-29T01:05:11Z"
+  },
+  "mainFastForward": "Completed after quiet campaign execution ended; guarded publication and private commit pending.",
+  "at": "2026-10-28T21:22:18.520631-04:00"
+}

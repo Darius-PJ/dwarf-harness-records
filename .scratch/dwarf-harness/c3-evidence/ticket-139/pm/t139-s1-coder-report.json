@@ -1,0 +1,718 @@
+{
+  "status": "complete",
+  "slice": "Ticket139 S1",
+  "worktree": "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration",
+  "branch": "build/139-registration",
+  "verificationBase": "82d8d48856c7191019625c9f6e896d10b9b8498c",
+  "baseNote": "Main explicitly advanced the original 93e8f0afe125b1ea8e87f4b8336664dd390c5b3a base to this coordinated T140S3 candidate before compute; no coder Git commands.",
+  "evidenceRoot": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence",
+  "commandRecord": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/commands.json",
+  "commandNote": "Commands below are the exact serial outer invocations observed by the shell. commands.json and each child-command log retain exact child argv, environment, cwd, start time, exit and duration. The runner sets the listed environment before every child. It was archived as run.py.source after execution.",
+  "changed": [
+    {
+      "path": "contract/ledger/registration.go",
+      "reason": "Four F3-139 v1 payload types and strict codecs; explicit existing external Resource mapping; kind-scoped references and ordered typed consumers; complete input/output cap and receipt binding."
+    },
+    {
+      "path": "contract/ledger/registration_submission.go",
+      "reason": "Schema5 canonical owner submission with exactly resource.set, work_domain.set and declaration.set, concrete arguments and checked version semantics; no RegistrationTarget."
+    },
+    {
+      "path": "contract/ledger/registration_test.go",
+      "reason": "Observable malformed-input, canonicalization, nested conditional, opaque-address, ordering, version, receipt and exact size-boundary regressions."
+    },
+    {
+      "path": "contract/ledger/registration_fuzz_test.go",
+      "reason": "FuzzDecodeF3_139 covers all four payloads plus schema5 with real golden shapes, nested ambiguity and size/version boundaries; 92 seed executions passed."
+    },
+    {
+      "path": "contract/ledger/registration_golden_test.go",
+      "reason": "Canonical generator and Reader/Check-backed regression for all 19 commits and 65 records, prior task/root grant, ordered registrations/declarations, pins, consumers and withdrawals."
+    },
+    {
+      "path": "contract/ledger/catalogue.go",
+      "reason": "Exactly four additive proposed-for-freeze version1 catalogue entries."
+    },
+    {
+      "path": "contract/ledger/doc.go",
+      "reason": "Additive F3-139 specification and accurate catalogue overview; distinguishes codec rules from later Core production/replay, grants, population limits and D125 freeze status."
+    },
+    {
+      "path": "contract/ledger/paid_compatibility_test.go",
+      "reason": "Main-approved removal of only obsolete len(c.set)==49 assertion; catalogue_additions and all paid type/version checks retained."
+    },
+    {
+      "path": "contract/ledger/catalogue_test.go",
+      "reason": "Main-approved replacement of closed private-map equality with public admission checks for every prior wire type plus four new literal wire names; v2 and fixture rejection retained."
+    },
+    {
+      "path": "contract/ledger/testdata/f3/139/log/00000000000000000001.jsonl",
+      "reason": "Generator-created 19-commit/65-record complete fixture including valid earlier owner task and root grant before 14 F3-139 groups."
+    },
+    {
+      "path": "contract/ledger/testdata/f3/139/objects/a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b",
+      "reason": "Generator-created real agent instructions object."
+    },
+    {
+      "path": "contract/ledger/testdata/f3/139/objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "reason": "Generator-created empty content-addressed object used by earlier agent/context prerequisites."
+    },
+    {
+      "path": "contract/ledger/testdata/f3/139/bodies/e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5",
+      "reason": "Generator-created real owner-task description body."
+    }
+  ],
+  "commands": [
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "baseline"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 0,
+      "log": "01-baseline.log",
+      "seconds": 0.026
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "format"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 0,
+      "log": "02-format.log",
+      "seconds": 0.043
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "generate"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 0,
+      "log": "03-generate.log",
+      "seconds": 5.97
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "focused"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 0,
+      "log": "04-focused.log",
+      "seconds": 3.709
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "goldens"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 0,
+      "log": "05-goldens.log",
+      "seconds": 2.714
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "old_proof"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 0,
+      "log": "06-old_proof.log",
+      "seconds": 0.029
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "probe_format"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 0,
+      "log": "07-probe_format.log",
+      "seconds": 0.023
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "probe"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 0,
+      "log": "08-probe.log",
+      "seconds": 10.926
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "restoration"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 0,
+      "log": "09-restoration.log",
+      "seconds": 0.014
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "package"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 1,
+      "log": "10-package.log",
+      "seconds": 11.823
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "format"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 0,
+      "log": "11-format.log",
+      "seconds": 0.04
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "package"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 0,
+      "log": "12-package.log",
+      "seconds": 13.633
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "consumer"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 0,
+      "log": "13-consumer.log",
+      "seconds": 35.914
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "format_check"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 0,
+      "log": "14-format_check.log",
+      "seconds": 0.047
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "vet"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 0,
+      "log": "15-vet.log",
+      "seconds": 0.624
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "staticcheck"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 0,
+      "log": "16-staticcheck.log",
+      "seconds": 2.291
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "imports"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 1,
+      "log": "17-imports.log",
+      "seconds": 0.026
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "imports"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 0,
+      "log": "18-imports.log",
+      "seconds": 0.08
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "test_imports"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 0,
+      "log": "19-test_imports.log",
+      "seconds": 0.085
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "dependencies"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 0,
+      "log": "20-dependencies.log",
+      "seconds": 0.111
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "tidy"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 0,
+      "log": "21-tidy.log",
+      "seconds": 0.111
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "verify"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 0,
+      "log": "22-verify.log",
+      "seconds": 20.544
+    },
+    {
+      "command": [
+        "C:/Program Files/Python313/python.exe",
+        "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+        "hashes"
+      ],
+      "environment": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "CGO_ENABLED": "0",
+        "GOOS": "windows",
+        "GOARCH": "amd64"
+      },
+      "exit": 0,
+      "log": "23-hashes.log",
+      "seconds": 0.03
+    }
+  ],
+  "tests": {
+    "focused": {
+      "command": "go test -count=1 -v -timeout=19m ./contract/ledger -run ^(TestRegistration.*|TestGoldenF3_139|FuzzDecodeF3_139)$",
+      "exit": 0,
+      "log": "04-focused.log",
+      "packageSeconds": 2.579
+    },
+    "finalPackage": {
+      "command": "go test -count=1 -v -timeout=19m ./contract/ledger",
+      "exit": 0,
+      "log": "12-package.log",
+      "packageSeconds": 9.325
+    },
+    "ledgerstoreConsumer": {
+      "command": "go test -count=1 -v -timeout=19m ./internal/core/ledgerstore",
+      "exit": 0,
+      "log": "13-consumer.log",
+      "packageSeconds": 33.5
+    },
+    "newRegressionTests": [
+      "TestRegistrationStrictObjects",
+      "TestRegistrationNestedValidation",
+      "TestRegistrationVersionsAndSets",
+      "TestRegistrationOpaqueAddress",
+      "TestRegistrationCanonicalSubmission",
+      "TestRegistrationReceiptBinding",
+      "TestRegistrationCompleteInputCap",
+      "TestRegistrationEncodedCaps",
+      "TestGoldenF3_139"
+    ],
+    "fuzz": {
+      "target": "FuzzDecodeF3_139",
+      "seeds": 92,
+      "result": "passed in focused and final package runs",
+      "timedCampaign": "not run; PM owns post-commit 120s campaign"
+    },
+    "golden": {
+      "newGeneratorCommand": "go test -count=1 -v -timeout=19m ./contract/ledger -run ^TestGoldenF3_139$ -update",
+      "allGoldenCommand": "go test -count=1 -v -timeout=19m ./contract/ledger -run ^TestGolden -update",
+      "result": "both passed",
+      "commits": 19,
+      "records": 65,
+      "firstEffect": 25,
+      "firstReceipt": 26,
+      "finalEffect": 64,
+      "finalReceipt": 65,
+      "oldFixturesUnchanged": 42,
+      "oldFixtureHashProof": "06-old_proof.log",
+      "D149F3_13LogSHA256": "50b41cf739cbef89bec234cf64873e80af85188b256c66d6cb1e86ebea3555ff"
+    },
+    "format": {
+      "result": "passed; empty gofmt -l output for all nine owned Go files",
+      "log": "14-format_check.log"
+    },
+    "vet": {
+      "command": "go vet ./contract/ledger",
+      "exit": 0,
+      "log": "15-vet.log"
+    },
+    "staticcheck": {
+      "command": "go tool staticcheck ./contract/ledger",
+      "exit": 0,
+      "log": "16-staticcheck.log"
+    },
+    "imports": {
+      "result": "production and test imports standard-library only; nonstandard production dependency closure contains only contract/ledger itself",
+      "logs": [
+        "18-imports.log",
+        "19-test_imports.log",
+        "20-dependencies.log"
+      ]
+    },
+    "modules": {
+      "tidy": "go mod tidy -diff: exit0, empty output",
+      "verify": "go mod verify: exit0, all modules verified",
+      "unchanged": true
+    },
+    "race": {
+      "status": "not run",
+      "reason": "codec-only; no concurrency/shared-state change"
+    },
+    "allTargetStatic": {
+      "status": "not run",
+      "reason": "no platform-file changes; host staticcheck run"
+    },
+    "fullGate": {
+      "status": "not run",
+      "reason": "PM-owned committed-slice full check"
+    }
+  },
+  "breaks": [
+    {
+      "log": "10-package.log",
+      "exit": 1,
+      "failure": "Only TestNewCatalogue failed: closed private def.set map equality still enumerated the old catalogue.",
+      "resolution": "Main approved ownership and replacement with observable public wire/version admission checks, including four new literal names. Existing invalid/admission cases and old wire coverage retained. Final plain package run 12-package.log passed."
+    },
+    {
+      "log": "17-imports.log",
+      "exit": 1,
+      "failure": "Evidence-runner Python string interpreted template backslash-n as a literal newline: template: main:1: unterminated quoted string.",
+      "resolution": "Corrected runner template to a raw string without product changes. Same approved import audit passed in 18-imports.log; test-import audit passed in 19-test_imports.log."
+    }
+  ],
+  "timing": {
+    "finalContract": {
+      "wallSeconds": 13.633,
+      "goReportedSeconds": 9.325
+    },
+    "consumer": {
+      "wallSeconds": 35.914,
+      "goReportedSeconds": 33.5
+    },
+    "probe": {
+      "wallSeconds": 10.926,
+      "goReportedSeconds": 2.971
+    },
+    "slowContractTests": [
+      {
+        "name": "FuzzCheckTruncation",
+        "seconds": 3.78
+      },
+      {
+        "name": "TestRegistrationEncodedCaps/runtime.registration_receipt",
+        "seconds": 1.29
+      },
+      {
+        "name": "TestCheckFailsClosed",
+        "seconds": 0.75
+      },
+      {
+        "name": "TestRegistrationEncodedCaps/runtime.resource_registered",
+        "seconds": 0.63
+      },
+      {
+        "name": "TestRegistrationEncodedCaps/schema-5",
+        "seconds": 0.61
+      }
+    ],
+    "slowConsumerTests": [
+      {
+        "name": "TestCommandLookupMatchesModel",
+        "seconds": 8.76
+      },
+      {
+        "name": "TestBodiesConcurrentUse",
+        "seconds": 5.11
+      },
+      {
+        "name": "TestOpenFailsClosedOnF0RuleViolation",
+        "seconds": 3.87
+      }
+    ],
+    "note": "Observed test timings from verbose final logs; no performance comparison or concurrency measurement claimed. Complete per-command wall times are in commands.json. Sequence is complete; primary's broader compute grant is not released by this coder."
+  },
+  "finalHashes": {
+    "contract/ledger/registration.go": "02345d1412c33261df9ad5f22e037fd58ae5dda67df2d02ba9e340519a237715",
+    "contract/ledger/registration_submission.go": "219fe33b301ac334014429c4949ce29d2fb309718e16721a9cd7b5edf702d3f3",
+    "contract/ledger/registration_test.go": "42185f48ec0e51721742527706a138ed5144bed8f20f2c1572835d2c66f5a48b",
+    "contract/ledger/registration_fuzz_test.go": "56693358dc9bad9cd1990bba6d75dcb2ac9b91acf7c7d4fd8e2343414ba6d10f",
+    "contract/ledger/registration_golden_test.go": "f4d9b5778d2936b4ccada58e549a746dd25f6a27289624c0cd4c898f5fca8c37",
+    "contract/ledger/catalogue.go": "c858bb6ae564f60501091d48070a0a9f8e51be544a20ca756148dca656f029c0",
+    "contract/ledger/doc.go": "153bfbe24ba06252606ede402c7de74b7d9f9ceadcd48ed5ecd50ba315caa457",
+    "contract/ledger/paid_compatibility_test.go": "3e236cb3bbd2006ffae0582215c476c26e8ac492e354fd85e3f87daba812e8f7",
+    "contract/ledger/catalogue_test.go": "8c042f0265260fed837ca1ab532113ddda4eab033c36ec0d995286ac555d939f",
+    "contract/ledger/testdata/f3/139/bodies/e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5": "e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5",
+    "contract/ledger/testdata/f3/139/log/00000000000000000001.jsonl": "db1476e07b355d909dfb07cce79f142387469618709bc52a3f496395b94c5134",
+    "contract/ledger/testdata/f3/139/objects/a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b": "a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b",
+    "contract/ledger/testdata/f3/139/objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "goldens": {
+    "contract/ledger/testdata/f3/139/bodies/e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5": "e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5",
+    "contract/ledger/testdata/f3/139/log/00000000000000000001.jsonl": "db1476e07b355d909dfb07cce79f142387469618709bc52a3f496395b94c5134",
+    "contract/ledger/testdata/f3/139/objects/a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b": "a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b",
+    "contract/ledger/testdata/f3/139/objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "deletedOrRenamed": [
+    {
+      "path": "contract/ledger/paid_compatibility_test.go:catalogue_additions len(c.set)==49 assertion",
+      "reason": "Main-approved removal: obsolete internal catalogue cardinality pin; semantic admission assertions and subtest retained. No test or row removed."
+    },
+    {
+      "path": "contract/ledger/catalogue_test.go:maps.Equal(def.set,want) assertion and maps import",
+      "reason": "Main-approved replacement: private-map closed-catalogue assertion replaced by observable admission contract. Every old wire row, invalid/admission case and fixture rejection retained; four new literal wire entries added. No test or old row removed."
+    },
+    {
+      "path": "internal/core/agents/registration_freeze_setup_probe_test.go",
+      "reason": "Own mandatory throwaway actual-Core positive/negative probe removed after proof; source retained privately outside worktree."
+    },
+    {
+      "path": "internal/core/agents/scoped_golden_test.go temporary chapter139 selection",
+      "reason": "Temporary probe support removed; entire helper restored byte-identically before final hashes."
+    },
+    {
+      "path": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py",
+      "renamedTo": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py.source",
+      "reason": "Disposable executable removed by archiving exact source as private evidence after final proof; no product change."
+    }
+  ],
+  "probe": {
+    "source": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/registration_freeze_setup_probe_test.go",
+    "command": "go test -count=1 -v -timeout=19m ./internal/core/agents -run ^TestRegistrationFreezeSetupProbe$",
+    "exit": 0,
+    "log": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/08-probe.log",
+    "positive": {
+      "ledgerstoreOpen": "success",
+      "agentsOpen": "success",
+      "issues": 0,
+      "completed": 10,
+      "durableBefore": 65,
+      "durableAfter": 65,
+      "ledgerBeforeSHA256": "db1476e07b355d909dfb07cce79f142387469618709bc52a3f496395b94c5134",
+      "ledgerAfterSHA256": "db1476e07b355d909dfb07cce79f142387469618709bc52a3f496395b94c5134",
+      "taskSequence": 19,
+      "taskVersion": 1,
+      "grantAuthorityVersion": 1,
+      "proof": "Actual earlier owner task reconstructed waiting and unassigned, description digest checked against original payload; actual root grant reconstructed current and nonrevoked with matching authority/address. Nonempty Completed accepted as legitimate reconciliation repair."
+    },
+    "negative": {
+      "control": "Separate copied complete log rebuilt canonically with a missing dependency in the earlier owner task and recomputed submission, digest and full chain; retained golden untouched.",
+      "ledgerstoreOpen": "success",
+      "agentsOpen": "ErrInconsistent",
+      "error": "agents: inconsistent record at sequence 17: invalid scoped transition: agents: task dependency",
+      "serviceNil": true,
+      "durableBefore": 65,
+      "durableAfter": 65,
+      "rebuiltSHA256": "5234ed31b1cc83b33b6dc7aa5fb2df64dc2e21c97600549bb95a45e866061f91",
+      "ledgerUnchangedAfterRejectedOpen": true
+    },
+    "restoration": {
+      "helper": "internal/core/agents/scoped_golden_test.go",
+      "beforeSHA256": "1c954596b2e148581ae2fa738966273667b337b00c501711467b5f4d5d906e1e",
+      "afterSHA256": "1c954596b2e148581ae2fa738966273667b337b00c501711467b5f4d5d906e1e",
+      "byteIdentical": true,
+      "temporaryProbeAbsent": true,
+      "baselineArtifact": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/scoped_golden_test.go.baseline",
+      "logs": [
+        "09-restoration.log",
+        "23-hashes.log"
+      ]
+    },
+    "scope": "Prerequisite-family replay proof through actual Core only; not a claim that the future F3-139 producer/replay state machine exists. No permanent Core edits."
+  },
+  "invariants": {
+    "allOwnedFilesNoCR": true,
+    "allOldFixtureBytesUnchanged": true,
+    "moduleFilesUnchanged": true,
+    "noGitWrites": true,
+    "noProviderCalls": true,
+    "noNewDependencies": true,
+    "noPermanentCoreProducerOrScaffold": true,
+    "noGraphCacheBuildConstraintWorkflowChanges": true,
+    "noProductEditsAfterFinalHashes": true
+  },
+  "remainingPMGates": [
+    "Advisor approval and joint D125 freeze review/record",
+    "PM commit and hash binding",
+    "PM-owned timed fuzz, committed-slice full gate and hosted CI/integration"
+  ],
+  "openQuestions": []
+}

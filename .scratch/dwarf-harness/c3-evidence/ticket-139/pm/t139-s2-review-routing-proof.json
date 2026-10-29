@@ -1,0 +1,66 @@
+{
+  "subject": "67d9636d6c70ba8cab2810bcec81c31a6c5df914",
+  "providerWindows": [
+    {
+      "limit": "anthropic:7d",
+      "used": 1.0,
+      "status": "exhausted",
+      "resets": "2026-10-29 19:00",
+      "recorded": "2026-10-28 23:00"
+    },
+    {
+      "limit": "anthropic:7d:fable",
+      "used": 0.9,
+      "status": "warning",
+      "resets": "2026-10-29 19:00",
+      "recorded": "2026-10-28 23:00"
+    },
+    {
+      "limit": "openai-codex:primary",
+      "used": 0.52,
+      "status": "ok",
+      "resets": "2026-11-04 12:13",
+      "recorded": "2026-10-28 23:00"
+    }
+  ],
+  "agents": {
+    "StandardsT139S2": {
+      "selector": "advisor-astra",
+      "transcript": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\StandardsT139S2.jsonl",
+      "events": [
+        {
+          "type": "model_change",
+          "id": "aed70d05",
+          "timestamp": "2026-10-29T03:03:05.314Z",
+          "model": "openai-codex/gpt-6-astra",
+          "resolvedModelIsFallback": false
+        },
+        {
+          "type": "thinking_level_change",
+          "id": "a1fb5714",
+          "timestamp": "2026-10-29T03:03:05.324Z",
+          "thinkingLevel": "max"
+        }
+      ]
+    },
+    "SpecT139S2": {
+      "selector": "advisor-astra",
+      "transcript": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\SpecT139S2.jsonl",
+      "events": [
+        {
+          "type": "model_change",
+          "id": "180ac95a",
+          "timestamp": "2026-10-29T03:03:05.576Z",
+          "model": "openai-codex/gpt-6-astra",
+          "resolvedModelIsFallback": false
+        },
+        {
+          "type": "thinking_level_change",
+          "id": "a7593492",
+          "timestamp": "2026-10-29T03:03:05.585Z",
+          "thinkingLevel": "max"
+        }
+      ]
+    }
+  }
+}

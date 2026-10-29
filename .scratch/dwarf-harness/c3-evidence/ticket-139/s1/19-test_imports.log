@@ -1,0 +1,23 @@
+{"command": ["C:/Program Files/Go/bin/go.exe", "list", "-f", "{{join .TestImports \"\\n\"}}", "./contract/ledger"], "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration", "environment": {"GOTOOLCHAIN": "local", "GOFLAGS": "", "CGO_ENABLED": "0", "GOOS": "windows", "GOARCH": "amd64"}}
+bytes
+crypto/sha256
+encoding/binary
+encoding/hex
+encoding/json
+errors
+flag
+fmt
+io
+io/fs
+maps
+math
+os
+path/filepath
+reflect
+slices
+strconv
+strings
+sync
+testing
+time
+uuid

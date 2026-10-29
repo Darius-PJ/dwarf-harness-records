@@ -1,0 +1,14 @@
+{
+    "name":  "04b-original-binding",
+    "path":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\internal\\core\\agents\\registration_replay.go",
+    "target":  "^TestRegistrationOriginalRequestPreflight$",
+    "expectedFailure":  "self-consistent mutation escaped original request:",
+    "originalSHA256":  "af7337423f654b621ce6a461fef78819a7a2e561ec627d6843e832b21ee0cb45",
+    "mutantSHA256":  "8c86f1e740fd0c40cde7533414e2877da2d00462427f6ec46d68ffe84f05cf5d",
+    "restoredSHA256":  "af7337423f654b621ce6a461fef78819a7a2e561ec627d6843e832b21ee0cb45",
+    "byteIdenticalRestoration":  true,
+    "diff":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044\\04b-original-binding.patch",
+    "red":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044\\04b-original-binding-red.json",
+    "green":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044\\04b-original-binding-restored-green.json",
+    "classification":  "killed-by-expected-regression"
+}

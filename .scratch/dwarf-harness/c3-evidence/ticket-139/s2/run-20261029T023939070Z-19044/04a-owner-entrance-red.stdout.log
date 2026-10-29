@@ -1,0 +1,8 @@
+=== RUN   TestRegistrationAuthorityAndIdentity
+=== PAUSE TestRegistrationAuthorityAndIdentity
+=== CONT  TestRegistrationAuthorityAndIdentity
+    registration_service_test.go:33: non-owner registration: <nil>
+--- FAIL: TestRegistrationAuthorityAndIdentity (0.23s)
+FAIL
+FAIL	github.com/Darius-PJ/dwarf-harness/internal/core/agents	3.423s
+FAIL

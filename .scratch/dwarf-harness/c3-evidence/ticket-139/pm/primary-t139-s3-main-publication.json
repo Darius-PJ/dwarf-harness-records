@@ -1,0 +1,92 @@
+{
+  "started": "2026-10-29T16:07:23.271782-04:00",
+  "exactApprovedCheckedSHA": "84d0ced9446168777c7b7bfa3382974977bf27ed",
+  "reviewedCodeSHA": "f92a5ef25b15cab47769cf76ff1af2eb86b23e25",
+  "base": "8a17ec1ed2617ca2a4e5203479f75f363b359970",
+  "checkURL": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40929620085",
+  "codeBindings": {
+    "matched": [
+      "internal/core/agents/registration_crash_test.go",
+      "internal/core/agents/registration_recovery_test.go"
+    ],
+    "mismatched": [],
+    "missing": [],
+    "uncovered": []
+  },
+  "closingRecordBindings": {
+    "matched": [
+      ".scratch/dwarf-harness/issues/139-register-shared-resources-and-work-domains-through-core.md",
+      "docs/ROADMAP-CORE.md",
+      "docs/ROADMAPS.md",
+      "docs/ROADMAP-UNDERCURRENT.md"
+    ],
+    "mismatched": [],
+    "missing": [],
+    "uncovered": []
+  },
+  "jointRecordReview": "Parentactual151+115+42line review/003ce6+b0fbhashbindings;BOTHactualsourceAstraMAXapprovals/no findings/gates/confirmation",
+  "parentHelperNote": "verify_hashes returned successfultuple; assertion adaptedtotuple WITHOUT rerunningbindings/nativeproof",
+  "commands": [
+    {
+      "label": "ff_main",
+      "args": [
+        "merge",
+        "--ff-only",
+        "84d0ced9446168777c7b7bfa3382974977bf27ed"
+      ],
+      "started": "2026-10-29T16:07:23.303903-04:00",
+      "finished": "2026-10-29T16:07:23.445956-04:00",
+      "exit": 0,
+      "stdout": "Updating 8a17ec1..84d0ced\nFast-forward\n ...ared-resources-and-work-domains-through-core.md |  18 +-\n docs/ROADMAP-CORE.md                               |   2 +-\n docs/ROADMAP-UNDERCURRENT.md                       |   2 +-\n docs/ROADMAPS.md                                   |   4 +-\n internal/core/agents/registration_crash_test.go    | 359 +++++++++++++++++++++\n internal/core/agents/registration_recovery_test.go | 323 ++++++++++++++++++\n 6 files changed, 697 insertions(+), 11 deletions(-)\n create mode 100644 internal/core/agents/registration_crash_test.go\n create mode 100644 internal/core/agents/registration_recovery_test.go\n",
+      "stderr": ""
+    },
+    {
+      "label": "ff_provenance",
+      "args": [
+        "reflog",
+        "show",
+        "-1",
+        "--date=iso",
+        "--format=%H %gD %gs",
+        "main"
+      ],
+      "started": "2026-10-29T16:07:23.446068-04:00",
+      "finished": "2026-10-29T16:07:23.479683-04:00",
+      "exit": 0,
+      "stdout": "84d0ced9446168777c7b7bfa3382974977bf27ed main@{2026-10-29 16:07:23 -0400} merge 84d0ced9446168777c7b7bfa3382974977bf27ed: Fast-forward\n",
+      "stderr": ""
+    },
+    {
+      "label": "push_main",
+      "args": [
+        "push",
+        "origin",
+        "main"
+      ],
+      "started": "2026-10-29T16:07:23.479776-04:00",
+      "finished": "2026-10-29T16:07:25.449507-04:00",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "pre-push scan refs/heads/main: 2 commit(s), 701 added line(s): ok\nTo github.com:Darius-PJ/dwarf-harness.git\n   8a17ec1..84d0ced  main -> main\n"
+    },
+    {
+      "label": "remote_main",
+      "args": [
+        "ls-remote",
+        "origin",
+        "refs/heads/main"
+      ],
+      "started": "2026-10-29T16:07:25.449610-04:00",
+      "finished": "2026-10-29T16:07:26.174270-04:00",
+      "exit": 0,
+      "stdout": "84d0ced9446168777c7b7bfa3382974977bf27ed\trefs/heads/main\n",
+      "stderr": ""
+    }
+  ],
+  "finished": "2026-10-29T16:07:26.174370-04:00",
+  "publicRemote": "84d0ced9446168777c7b7bfa3382974977bf27ed",
+  "projectCIStartedByMainPush": false,
+  "outgoingGuard": "Actual2outgoingcommits701addedlinesclean/nooverride/outputretained",
+  "privateRecords": "D156privateb63d618already published;B34andretentionstillprimaryinprogress",
+  "FableWholeTicket": "Held/notrun/separate;notcredited"
+}

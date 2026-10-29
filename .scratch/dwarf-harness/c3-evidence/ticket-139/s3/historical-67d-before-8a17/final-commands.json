@@ -1,0 +1,179 @@
+{
+  "status": "PROPOSAL_ONLY_NOT_EXECUTED",
+  "sourceBase": "67d9636d6c70ba8cab2810bcec81c31a6c5df914",
+  "cwd": "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance",
+  "branch": "build/139-acceptance",
+  "executionAuthorized": false,
+  "sourceCoverageRevision": {
+    "crashPrefix": "The actual frozen 139 ledger's first 14 complete commits end at seq 50; seq 49/receipt 50 install declaration 0x500 version 2 with both exact-context and task consumers. The ledger's first withdrawal, for declaration 0x501, is in the following complete group, seqs 51-53. No withdrawal is installed in the chosen baseline.",
+    "sourceRecords": "contract/ledger/testdata/f3/139/log/00000000000000000001.jsonl:31,34,37,40,48-53; commit starts through seq 50 establish the exact 14-group prefix.",
+    "crashAssertion": "All four rows now start from the public nonempty consumer snapshot and exercise a real active-to-empty replacement. Every complete prior group/receipt in that chosen prefix remains checked; no future golden group is included in prior-history expectations.",
+    "originalCrashArchive": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/registration_crash.original-code-ready.go",
+    "smokeReopen": "Copy agents.DefaultLimits and set BOTH MaxRegistrations=1 and MaxDeclarations=1 after retaining 2 registrations and 4 declaration identities. Preserve all current/history/pin/actual-receipt/original-retry/no-append assertions; no additional permanent test."
+  },
+  "prerequisites": [
+    "PM review of exact source, both temporary mutation diffs and finite serial sequence",
+    "Primary's explicit fresh compute grant identifying the subject and sequence; Ticket140 currently owns local compute",
+    "Explicit retarget decision if main advances beyond the integrated 67d9636d source base",
+    "Separate bounded temporary ownership permission for each product file in mutationPlans; neither is currently owned",
+    "Every mutant must be byte-identically restored and its named restored-green run completed before smoke/final checks",
+    "Go 1.27.3 and pinned staticcheck are the supplied toolchain, not permission to install or rerun baseline/setup"
+  ],
+  "toolchain": {
+    "go": "C:/Program Files/Go/bin/go.exe",
+    "gofmt": "C:/Program Files/Go/bin/gofmt.exe",
+    "versionRequired": "go1.27.3",
+    "environmentOverridesForEveryCommand": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "GOROOT": "C:/Program Files/Go",
+      "GOOS": "windows",
+      "GOARCH": "amd64",
+      "CGO_ENABLED": "0"
+    },
+    "remainingEnvironment": "Inherited host environment; each crash child deliberately copies and logs only its explicit non-provider environment plus boundary protocol variables"
+  },
+  "runner": {
+    "path": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/run-final.ps1",
+    "status": "source only; not parsed or executed by a PowerShell process",
+    "mandatoryParameter": "GrantReference: an actual new PM grant reference supplied at execution, not an approval issued by the script",
+    "serial": true,
+    "parentToolTimeoutSeconds": 0,
+    "deadlines": "Every child has a command deadline. Windows taskkill gets 10 seconds and at most 10 seconds to reap itself; target gets 30 seconds to exit; stream collection gets at most 30 seconds per stream. Failure stops the sequence without automatic retry.",
+    "retainedEvidence": "Per-command exact executable/argv/cwd/environment overrides/deadline, timestamps/duration, exit/timeout/reap/stream status, separate raw stdout/stderr, command index and summary; smoke archive/hash/removal; final hashes/module/F3 comparison",
+    "mutationHandling": "No mutation machinery and no product writes; approved red/restored-green work is a separate prerequisite",
+    "sourceEdits": "Only successful-smoke source removal and gofmt on the two owned new tests; never restores any unrelated file"
+  },
+  "mutationPlans": [
+    {
+      "id": "withdrawal-install-omitted",
+      "status": "requires PM approval and temporary product-file permission; not installed",
+      "path": "internal/core/agents/registration_state.go",
+      "symbol": "projection.installRegistration",
+      "originalSourceSHA256": "5fd211ee66aef9b73e985f4fa4fd8ff461dab8725ed3ea1c240785fd787287fa",
+      "original": "\tif v := plan.declaration; v != nil {\n\t\tp.declarations[v.Record.DeclarationID] = *v\n\t}\n",
+      "replacement": "\tif v := plan.declaration; v != nil && len(v.Record.Consumers) != 0 {\n\t\tp.declarations[v.Record.DeclarationID] = *v\n\t}\n",
+      "risk": "Treat an empty consumer replacement as no installation, so recovery retains active edges instead of the first complete committed withdrawal",
+      "namedRegression": "TestRegistrationInjectedCrashRecovery/durable_before_install",
+      "prefixIsolation": "The crash baseline is exactly frozen groups 1-14 through seq 50, before any withdrawal. The proposed skip-empty mutant cannot alter an earlier withdrawal during setup; the durable-before-install child stops before the new withdrawal is installed, isolating reconstruction of that new committed active-to-empty change.",
+      "redThenIdenticalRestoredGreen": {
+        "executable": "C:/Program Files/Go/bin/go.exe",
+        "argv": ["test", "-count=1", "-v", "-timeout=19m", "./internal/core/agents", "-run", "^TestRegistrationInjectedCrashRecovery$/^durable_before_install$"],
+        "runnerDeadlineSeconds": 1200
+      },
+      "expectedConsumerFailure": "Expected at public DeclarationStatus after the durable-before-install child and Store.Open/Service.Open: retained active version 2 instead of the newly committed empty-consumer version 3. Prior-history checks concern only the 14 complete groups through seq 50, so earlier golden withdrawals cannot confound this red.",
+      "evidenceRequired": ["original hash", "unique exact temporary diff", "mutant hash", "actual nonzero named-regression output", "byte-identical restore hash", "same named regression restored green"],
+      "maskingRule": "A compile failure, unrelated fixture failure or surviving regression is not the intended red; retain and classify the actual public failing assertion. No second stacked weakening to force a kill."
+    },
+    {
+      "id": "external-grant-needs-registration",
+      "status": "requires PM approval and explicit temporary scoped_state.go permission; not installed",
+      "path": "internal/core/agents/scoped_state.go",
+      "symbol": "Service.registeredResource",
+      "originalSourceSHA256": "9ce8f61064c9673ba3374fb6b3a4ccafa44cc88a59a1c229d2e0c4440d27f3d1",
+      "original": "\tcase \"external\":\n\t\treturn true, nil\n",
+      "replacement": "\tcase \"external\":\n\t\tfor _, registered := range s.p.resources {\n\t\t\tif sameScopedValue(registered.Record.Resource, resource) {\n\t\t\t\treturn true, nil\n\t\t\t}\n\t\t}\n\t\treturn false, nil\n",
+      "risk": "Turn resource-registration evidence into a prerequisite for pre-existing opaque external grants",
+      "namedRegression": "TestRegistrationPaidHistoryRecovery",
+      "redThenIdenticalRestoredGreen": {
+        "executable": "C:/Program Files/Go/bin/go.exe",
+        "argv": ["test", "-count=1", "-v", "-timeout=19m", "./internal/core/agents", "-run", "^TestRegistrationPaidHistoryRecovery$"],
+        "runnerDeadlineSeconds": 1200
+      },
+      "expectedConsumerFailure": "The public Service refuses valid frozen F3-13 external-grant history on Open, or refuses real delegation of the valid existing grant before registration. The former is an anticipated public historical-compatibility failure, not a claimed live delegation observation.",
+      "evidenceRequired": ["original hash", "unique exact temporary diff", "mutant hash", "actual public Open/delegation failure output", "byte-identical restore hash", "same named regression restored green"],
+      "maskingRule": "Do not count a compile failure or unrelated fixture failure. A survivor is a survivor; record its masking guard without layering additional mutations."
+    }
+  ],
+  "serialFinalCommandsAfterRestoration": [
+    {
+      "id": "01-public-service-smoke",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": ["run", "./_t139_smoke"],
+      "runnerDeadlineSeconds": 600,
+      "coverage": "Real owner-Service replay and all six original matching retries with retained registration population 2 > MaxRegistrations 1 and declaration population 4 > MaxDeclarations 1, preserving current/historical/pinned metadata, actual original receipts and the complete unchanged ledger.",
+      "before": "Archive the exact main.go bytes and hash outside the worktree",
+      "afterSuccess": "Remove only _t139_smoke/main.go; remove its directory only if empty. Record source/hash/actual stdout/exit/removal before final checks."
+    },
+    {
+      "id": "02-gofmt-write",
+      "executable": "C:/Program Files/Go/bin/gofmt.exe",
+      "argv": ["-w", "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance/internal/core/agents/registration_crash_test.go", "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance/internal/core/agents/registration_recovery_test.go"],
+      "runnerDeadlineSeconds": 120
+    },
+    {
+      "id": "03-gofmt-list",
+      "executable": "C:/Program Files/Go/bin/gofmt.exe",
+      "argv": ["-l", "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance/internal/core/agents/registration_crash_test.go", "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance/internal/core/agents/registration_recovery_test.go"],
+      "runnerDeadlineSeconds": 120,
+      "require": "empty stdout/stderr"
+    },
+    {
+      "id": "04-focused-and-seeds",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": ["test", "-count=1", "-v", "-timeout=19m", "./internal/core/agents", "-run", "^(TestRegistrationInjectedCrashRecovery|TestRegistrationReviewHistoryRecovery|TestRegistrationPaidHistoryRecovery|FuzzRegistrationGroupReplay)$"],
+      "runnerDeadlineSeconds": 1200
+    },
+    {
+      "id": "05-agents-plain",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": ["test", "-count=1", "-v", "-timeout=19m", "./internal/core/agents"],
+      "runnerDeadlineSeconds": 1200
+    },
+    {
+      "id": "06-host-vet",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": ["vet", "./internal/core/agents"],
+      "runnerDeadlineSeconds": 600
+    },
+    {
+      "id": "07-host-staticcheck",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": ["tool", "staticcheck", "./internal/core/agents"],
+      "runnerDeadlineSeconds": 600
+    },
+    {
+      "id": "08-production-imports",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": ["list", "-f", "{{join .Imports \"\\n\"}}", "./internal/core/agents"],
+      "runnerDeadlineSeconds": 300
+    },
+    {
+      "id": "09-test-imports",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": ["list", "-f", "{{join .TestImports \"\\n\"}}", "./internal/core/agents"],
+      "runnerDeadlineSeconds": 300
+    },
+    {
+      "id": "10-module-tidy-diff",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": ["mod", "tidy", "-diff"],
+      "runnerDeadlineSeconds": 600,
+      "require": "empty stdout/stderr; no module rewrite"
+    },
+    {
+      "id": "11-module-verify",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": ["mod", "verify"],
+      "runnerDeadlineSeconds": 600
+    }
+  ],
+  "finalHashOperations": {
+    "ownedTests": "SHA256 after all restorations, smoke source removal and owned-only formatting",
+    "moduleAndF3": "Read-only final complete path/hash set compared to supplied S2 run-20261029T023939070Z-19044/module-and-f3-after.json; no S2 setup/baseline tests rerun",
+    "sourceOnlyHashes": "source-hashes-revised.json records the permitted revised-source/checksum metadata and original crash archive; source-hashes.json retains the historical first CODE_READY snapshot and unchanged-source hashes. No Go/formatter/lint/test/smoke/mutation process has run."
+  },
+  "race": {
+    "status": "NOT_RUN_NOT_PROPOSED_FOR_TESTS_ONLY_S3",
+    "reason": "No production shared state, locks, publication or concurrency path changed; S2 already supplied its own race and affected-x20 proof, which is not S3 proof",
+    "ifOwnershipChanges": "A later explicitly authorized shared-state product fix needs renewed PM selection and grant; canonical whole-package race is -race -count=1 -v -timeout=29m (runner 1800s), affected-only -race -count=20 -v -timeout=45m (runner 2800s), CGO_ENABLED=1 and CC=C:/Users/darius.jones/AppData/Local/Programs/llvm-mingw-20260922-ucrt-x86_64/bin/x86_64-w64-mingw32-clang.exe. No automatic execution or guessed future affected selection."
+  },
+  "seeds": {
+    "focused": ["FuzzRegistrationGroupReplay"],
+    "plainPackage": ["FuzzRegistrationGroupReplay", "FuzzScopedGroupReplay", "FuzzReviewGroupReplay", "FuzzPaidGroupReplay", "FuzzPrivateGroupReplay"],
+    "changedProductionFuzzedPaths": [],
+    "timedCampaigns": [],
+    "reason": "Tests-only S3 does not alter a decoder/planner/shared dispatcher. PM alone may choose and grant a later immutable-subject 120-second campaign; no repeat of S2 campaigns is proposed."
+  },
+  "prohibited": ["local tools/check", "build/setup baseline reruns", "ungranted Go/formatter/linter/smoke/fuzz/race", "automatic mutation installation", "Git writes", "commits/pushes", "product/shared/contract/fixture/dependency/workflow edits", "provider/model/network work", "subagents"]
+}

@@ -1,0 +1,24 @@
+{
+  "status": "new finite attempt explicitly granted and delegated; actual launch not yet observed",
+  "grantReference": "primary-t139-s3-8a17-20261029-slot2",
+  "subject": "8a17ec1ed2617ca2a4e5203479f75f363b359970",
+  "quietHold": "explicitly RELEASED; primary whole local-Go released",
+  "approvedPrivateHashes": {
+    "final-commands.json": "55d09cbb87e3804f318b0508445551760de6daf0bdbb463b422f7b26a94788d4",
+    "run-risk.ps1": "ada741007d1a8fe56ccb58a2acf2b2bf390e4385c143d6fc89bfcdda9cf1a730",
+    "run-risk-source.json": "c74260739418cddb29614461da91d929d5964b38280dcc82ce5abfcc385e3baf",
+    "run-final.ps1": "a7cf871b1988c8915d0e61fd479388148ef280a812266e6fcd9fd13c73dc6c9a"
+  },
+  "manifestSHA256": "45737862fb8b62ed57aaf3d3d55c059d162f50e0842fb95b2490baf85641da3d",
+  "sourceAuthority": "primary current grant; no retarget/rebind/re-audit; only already-applied scalar launcher correction",
+  "priorSlot1": "actual pre-child launcher failure retained,0Git/Go/mutants,not red",
+  "launcherFocusedProof": "existing30s read-only reviewed-head; no extra reproduction",
+  "freshBudgetReading": {
+    "codex": 0.78,
+    "read": "2026-10-29 02:12",
+    "reset": "2026-11-04 12:13",
+    "anthropicWeekly": 1.0,
+    "fableHeld": 0.9
+  },
+  "sequence": "same bounded risk at most4Go; only after2genuine red/restoredgreen, unchanged final; fail closed/no repeats; full AUTHOR+PM release required"
+}

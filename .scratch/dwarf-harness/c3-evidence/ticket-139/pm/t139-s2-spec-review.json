@@ -1,0 +1,103 @@
+{
+  "status": "review-complete",
+  "axis": "specification/correctness",
+  "subjectSHA": "67d9636d6c70ba8cab2810bcec81c31a6c5df914",
+  "baseSHA": "34090c3b634b9854904671c336db91c350e6328c",
+  "verdict": "approved",
+  "findings": [],
+  "reviewLine": "GPT-6 Astra, temporary stand-in for advisor Claude Fable 5.1, approves Ticket139 S2 on the specification/correctness axis only. Fable double-checks the whole ticket after reset.",
+  "evidenceReviewed": [
+    {
+      "kind": "requirements",
+      "sources": [
+        ".scratch/dwarf-harness/issues/139-register-shared-resources-and-work-domains-through-core.md",
+        "C:/Users/darius.jones/.omp/agent/sessions/-documents-PROJECTS-dwarf-harness/2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21/local/t139-design-assignment.md:9-19",
+        "C:/Users/darius.jones/.omp/agent/sessions/-documents-PROJECTS-dwarf-harness/2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21/local/t139-ruling.md",
+        "C:/Users/darius.jones/.omp/agent/sessions/-documents-PROJECTS-dwarf-harness/2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21/local/t139-s2-assignment.md",
+        "contract/ledger/doc.go:2560-2764",
+        "contract/ledger/doc.go:F3-10/F3-11 identity, replay and external-resource rules",
+        "docs/CONTRACTS.md:F3-10/F3-11/F3-139",
+        "docs/DECISIONS.md:B32/D142/D125/D152/D153/D154",
+        "docs/DESIGN-CORE-AND-LAUNCHERS.md:13.1/13.5/13.10",
+        "docs/DESIGN-UNDERCURRENT.md:8.2-8.3",
+        "docs/ROADMAP-CORE.md:principles/C3",
+        "docs/ROADMAPS.md",
+        "AGENTS.md",
+        "docs/agents/issue-tracker.md",
+        "docs/agents/domain.md"
+      ]
+    },
+    {
+      "kind": "immutable-source",
+      "worktree": "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration",
+      "coverage": "Eight registration implementation/test files and targeted integrating sections in all nineteen other changed files; existing origin, query, normalization and historical-task helpers.",
+      "bindingProof": "C:/Users/darius.jones/.omp/agent/sessions/-documents-PROJECTS-dwarf-harness/2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21/local/t139-s2-commit-proof.json",
+      "delegatedGuardDiff": "C:/Users/darius.jones/.omp/agent/sessions/-documents-PROJECTS-dwarf-harness/2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21/local/t139-s2-history-guard.diff"
+    },
+    {
+      "kind": "retained-local-proof",
+      "root": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/run-20261029T023939070Z-19044",
+      "files": [
+        "summary.json",
+        "03-focused-and-seeds.stdout.log",
+        "05-agents-plain.stdout.log",
+        "08-agents-race.stdout.log",
+        "09-affected-race-x20.stdout.log",
+        "rule-breaks.json",
+        "04a-owner-entrance-red.stdout.log",
+        "04b-original-binding.patch",
+        "04b-original-binding.mutant.go",
+        "04b-original-binding-red.json",
+        "04b-original-binding-red.stdout.log",
+        "04b-original-binding-restored-green.stdout.log",
+        "04c-postcommit-cancellation.patch",
+        "04c-postcommit-cancellation-red.stdout.log",
+        "accepted-registration-seeds.json",
+        "baseline-comparison.json"
+      ],
+      "assessment": "Behavioral regressions cover authority, identities, CAS, limits, declarations, copied history, frozen prefixes, grant independence, retry, cancellation, poisoning and Close. Accepted resource/domain/declaration fuzz seeds reach real-store Submit, Core Open, typed snapshots and durable receipt assertions."
+    },
+    {
+      "kind": "original-binding-mutant",
+      "observedFailure": "self-consistent mutation escaped original request: agents: command binding or digest mismatch",
+      "assessment": "[INFERENCE from source] The mismatch is reached after Submit and committed readback, not from an independent preflight guard masking the mutation. The permanent assertion requires ErrInconsistent and unchanged durability; its restored-green execution also validates the altered group independently and proves rejected input consumes no command/entity identity.",
+      "durableCountsObserved": false
+    },
+    {
+      "kind": "immutable-PM-fuzz",
+      "path": "C:/Users/darius.jones/.omp/agent/sessions/-documents-PROJECTS-dwarf-harness/2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21/local/t139-s2-fuzz-result.json",
+      "result": "Four serial 120-second campaigns, parallel=1; all exit 0, no timeout or failure-corpus lines.",
+      "executions": {
+        "Registration": 7156,
+        "Scoped": 17030,
+        "Review": 28640,
+        "Paid": 43599
+      },
+      "boundHashCount": 77,
+      "hashesUnchanged": true
+    }
+  ],
+  "remainingExternalGates": [
+    "D153 successful hosted Check result on the exact final SHA; Check9/run40810219344 attempt1 was in progress in the latest PM report.",
+    "Primary-only integration and any Ticket140 retarget; approval does not transfer automatically to changed source.",
+    "S3 real-process interrupted/torn-tail recovery, cross-family acceptance, actual public-Service smoke and ticket-close evidence.",
+    "Fable whole-ticket double-check after reset."
+  ],
+  "ownerGates": {
+    "triggered": [],
+    "preserved": [
+      "D52 promotion/admission beyond testing-only scope",
+      "Breaking frozen-contract changes",
+      "New dependencies or other owner-reserved decisions",
+      "Live credentials, provider invocation or spending"
+    ]
+  },
+  "confirmationNeeded": false,
+  "reviewerExecution": "Read-only inspection; no builds, tests, formatters, fuzz runs, measurements, source edits, Git writes or subagents.",
+  "artifactDelivery": {
+    "written": false,
+    "reason": "Reviewer tools are read-only; complete report contents returned for PM persistence.",
+    "markdownPath": "C:/Users/darius.jones/.omp/agent/sessions/-documents-PROJECTS-dwarf-harness/2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21/local/t139-s2-spec-review.md",
+    "jsonPath": "C:/Users/darius.jones/.omp/agent/sessions/-documents-PROJECTS-dwarf-harness/2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21/local/t139-s2-spec-review.json"
+  }
+}

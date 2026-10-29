@@ -1,0 +1,82 @@
+{
+  "projectSHA": "34090c3b634b9854904671c336db91c350e6328c",
+  "recordsSHA": "3234b90d0ee4d6457b7b313e6c1656e2c6fe0680",
+  "recordParent": "84712f6d4331a5e2d39f672a3fec2c85b3d25106",
+  "decision": "D154",
+  "jointReview": "local://t139-s1-joint-review.json",
+  "hashProof": "local://t139-s1-primary-promotion-start.json",
+  "projectPublication": "local://t139-s1-main-publication.json",
+  "privateLF": "No CR in either changed private Markdown file",
+  "privateLinks": [],
+  "privateFileHashes": {
+    "docs/DECISIONS.md": "6561c293f936779332ceb8b1ab0a893b8763b762a9ace1891dfc324a7e29c747",
+    ".scratch/dwarf-harness/c3-evidence/f3-139-freeze-evidence.md": "0077267133bf1e2ba0592b95d51b33c4ccbb62dc8830a6f27e0a3c1b33a4311c"
+  },
+  "commands": [
+    {
+      "label": "stage",
+      "command": [
+        "git",
+        "--git-dir=C:/Users/darius.jones/Documents/PROJECTS/DwarfHarness/dwarf-harness-records.git",
+        "--work-tree=C:/Users/darius.jones/Documents/PROJECTS/dwarf-harness",
+        "add",
+        "--",
+        "docs/DECISIONS.md",
+        ".scratch/dwarf-harness/c3-evidence/f3-139-freeze-evidence.md"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "",
+      "finished": "2026-10-28T21:24:14.406789-04:00"
+    },
+    {
+      "label": "commit",
+      "command": [
+        "git",
+        "--git-dir=C:/Users/darius.jones/Documents/PROJECTS/DwarfHarness/dwarf-harness-records.git",
+        "--work-tree=C:/Users/darius.jones/Documents/PROJECTS/dwarf-harness",
+        "commit",
+        "--only",
+        "-m",
+        "docs(ledger): freeze registration records",
+        "--",
+        "docs/DECISIONS.md",
+        ".scratch/dwarf-harness/c3-evidence/f3-139-freeze-evidence.md"
+      ],
+      "exit": 0,
+      "stdout": "[main 3234b90] docs(ledger): freeze registration records\n 2 files changed, 172 insertions(+)\n create mode 100644 .scratch/dwarf-harness/c3-evidence/f3-139-freeze-evidence.md\n",
+      "stderr": "",
+      "finished": "2026-10-28T21:24:14.573013-04:00"
+    },
+    {
+      "label": "recordsPush",
+      "command": [
+        "git",
+        "--git-dir=C:/Users/darius.jones/Documents/PROJECTS/DwarfHarness/dwarf-harness-records.git",
+        "--work-tree=C:/Users/darius.jones/Documents/PROJECTS/dwarf-harness",
+        "push",
+        "origin",
+        "main"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "pre-push scan refs/heads/main: 1 commit(s), 174 added line(s): ok\nTo github.com:Darius-PJ/dwarf-harness-records.git\n   84712f6..3234b90  main -> main\n",
+      "finished": "2026-10-28T21:24:16.463406-04:00"
+    },
+    {
+      "label": "recordsRemote",
+      "command": [
+        "git",
+        "--git-dir=C:/Users/darius.jones/Documents/PROJECTS/DwarfHarness/dwarf-harness-records.git",
+        "--work-tree=C:/Users/darius.jones/Documents/PROJECTS/dwarf-harness",
+        "ls-remote",
+        "origin",
+        "refs/heads/main"
+      ],
+      "exit": 0,
+      "stdout": "3234b90d0ee4d6457b7b313e6c1656e2c6fe0680\trefs/heads/main\n",
+      "stderr": "",
+      "finished": "2026-10-28T21:24:18.465661-04:00"
+    }
+  ]
+}

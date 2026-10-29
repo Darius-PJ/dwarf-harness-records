@@ -1,0 +1,8 @@
+=== RUN   TestRegistrationOriginalRequestPreflight
+=== PAUSE TestRegistrationOriginalRequestPreflight
+=== CONT  TestRegistrationOriginalRequestPreflight
+    registration_replay_test.go:228: self-consistent mutation escaped original request: agents: command binding or digest mismatch
+--- FAIL: TestRegistrationOriginalRequestPreflight (0.23s)
+FAIL
+FAIL	github.com/Darius-PJ/dwarf-harness/internal/core/agents	3.321s
+FAIL

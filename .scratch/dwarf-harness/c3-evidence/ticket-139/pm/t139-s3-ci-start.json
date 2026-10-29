@@ -1,0 +1,22 @@
+{
+  "sourceURL": "https://api.github.com/repos/Darius-PJ/dwarf-harness/actions/runs?head_sha=84d0ced9446168777c7b7bfa3382974977bf27ed&per_page=10",
+  "observation": "Actual functions.read JSONresponse; selected exact run fields below, no repeated APIcheck or job success inferred",
+  "id": 40929620085,
+  "name": "Check",
+  "runNumber": 11,
+  "runAttempt": 1,
+  "headBranch": "build/139-acceptance",
+  "headSHA": "84d0ced9446168777c7b7bfa3382974977bf27ed",
+  "event": "push",
+  "status": "in_progress",
+  "conclusion": null,
+  "createdAt": "2026-10-29T18:18:55Z",
+  "updatedAt": "2026-10-29T18:19:11Z",
+  "runStartedAt": "2026-10-29T18:18:55Z",
+  "URL": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40929620085",
+  "jobsURL": "https://api.github.com/repos/Darius-PJ/dwarf-harness/actions/runs/40929620085/jobs",
+  "commitTime": "2026-10-29T18:16:51Z",
+  "required": "Exact currentattempt Windows/Linux/macOS fullchecks/race and successful aggregateCheckresult; matrix classification/joboutcomes notobservedyet",
+  "localGoPending": false,
+  "mainMovedBySecondary": false
+}

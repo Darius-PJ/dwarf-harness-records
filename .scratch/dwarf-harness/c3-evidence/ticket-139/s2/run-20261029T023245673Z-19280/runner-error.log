@@ -1,0 +1,9 @@
+Command failed; no automatic retry: 03-focused-and-seeds (see 
+C:\Users\darius.jones\worktrees\dwarf-harness\t139-s2-evidence\run-20261029T023245673Z-19280\03-focused-and-seeds.json)
+At C:\Users\darius.jones\worktrees\dwarf-harness\t139-s2-evidence\run-final.ps1:122 char:9
++         throw "Command failed; no automatic retry: $Name (see $metada ...
++         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (Command failed;...and-seeds.json):String) [], RuntimeException
+    + FullyQualifiedErrorId : Command failed; no automatic retry: 03-focused-and-seeds (see C:\Users\darius.jones\work 
+   trees\dwarf-harness\t139-s2-evidence\run-20261029T023245673Z-19280\03-focused-and-seeds.json)
+ 

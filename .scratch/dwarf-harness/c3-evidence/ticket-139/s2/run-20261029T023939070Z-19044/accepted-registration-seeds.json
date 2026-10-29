@@ -1,0 +1,41 @@
+[
+    {
+        "target":  "FuzzRegistrationGroupReplay/seed#0",
+        "kind":  "resource",
+        "preparedPrefix":  5,
+        "rawPASSLines":  [
+                             "    --- PASS: FuzzRegistrationGroupReplay/seed#0 (0.14s)"
+                         ],
+        "source":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/registration_fuzz_test.go",
+        "sourceSHA256":  "6108e6a47701cf8b5572222b4543702f8cec70935b274b8ac733e1ac369c9a8d",
+        "command":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044\\03-focused-and-seeds.json",
+        "rawLog":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044\\03-focused-and-seeds.stdout.log",
+        "reachability":  "mode 0 requires acceptance; success then requires copied real store Submit, Open and typed snapshot/receipt assertions"
+    },
+    {
+        "target":  "FuzzRegistrationGroupReplay/seed#8",
+        "kind":  "work_domain",
+        "preparedPrefix":  6,
+        "rawPASSLines":  [
+                             "    --- PASS: FuzzRegistrationGroupReplay/seed#8 (0.14s)"
+                         ],
+        "source":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/registration_fuzz_test.go",
+        "sourceSHA256":  "6108e6a47701cf8b5572222b4543702f8cec70935b274b8ac733e1ac369c9a8d",
+        "command":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044\\03-focused-and-seeds.json",
+        "rawLog":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044\\03-focused-and-seeds.stdout.log",
+        "reachability":  "mode 0 requires acceptance; success then requires copied real store Submit, Open and typed snapshot/receipt assertions"
+    },
+    {
+        "target":  "FuzzRegistrationGroupReplay/seed#16",
+        "kind":  "declaration",
+        "preparedPrefix":  13,
+        "rawPASSLines":  [
+                             "    --- PASS: FuzzRegistrationGroupReplay/seed#16 (0.15s)"
+                         ],
+        "source":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/registration_fuzz_test.go",
+        "sourceSHA256":  "6108e6a47701cf8b5572222b4543702f8cec70935b274b8ac733e1ac369c9a8d",
+        "command":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044\\03-focused-and-seeds.json",
+        "rawLog":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044\\03-focused-and-seeds.stdout.log",
+        "reachability":  "mode 0 requires acceptance; success then requires copied real store Submit, Open and typed snapshot/receipt assertions"
+    }
+]

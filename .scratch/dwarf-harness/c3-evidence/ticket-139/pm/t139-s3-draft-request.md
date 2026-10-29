@@ -1,0 +1,43 @@
+# Draft Ticket139 S3 assignment — settled scope, not implementation
+
+## Your job
+Draft one bounded fresh-coder assignment as local://t139-s3-assignment-draft.md and return its full path plus choices/questions. Write only your own local artifact. Do not edit the repository, execute commands, design a replacement architecture or inspect unstable in-flight S2 source for claims of completion. The PM will read/correct your draft before a future coder sees it. This is independent document preparation while CoderT139S2 implements S2, not permission to start S3.
+
+## Source precedence and facts
+Main checkout C:/Users/darius.jones/Documents/PROJECTS/dwarf-harness contains team-readable private records under D145. Secondary session root C:/Users/darius.jones/.omp/agent/sessions/-Documents-PROJECTS-dwarf-harness/2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21; its local/t139-ruling.md and t139-ruling.json are authoritative. The earlier brief is historical and superseded where amended. Use current staged-build/slice-recipes and last-code-slice skills, but D152/D153 supersede their historical duplicate local full-check/once-per-ticket push wording. Do not read the whole decision log; named entries/ranges only.
+
+The contract family is now frozen as D154: four v1 types and schema5, three owner CAS operations, explicit exact opaque F3-11 external address separate from resource UUID, kind-scoped entity IDs, two producer population settings, no registration-derived authority. S1 final34090c3b634b9854904671c336db91c350e6328c passed full hosted Check8 and primary integrated/published main/private records. S2 is active source-only from34090c3b and is NOT yet implemented, checked, reviewed or integrated. Its exact final SHA, any fresh review notes, final affected test names and future execution allocation are not yet facts. State these as activation metadata to be supplied by PM; do not invent them.
+
+Read the known scope in ruling§§4,6–8, especially S3 lines392–416 and rule-break/acceptance/fuzz lines478–517. local/t139-s2-assignment.md gives the already-settled S2 contract and shared ownership, not proof it has landed. S3 activation requires primary's actual approved/checked S2 integration acknowledgment and exact base, no active source hold, and a fresh coder. A local compute slot is separately explicit; no tests/formatter/fuzz/measurement before CODE_READY and PM's granted final sequence.
+
+## Settled S3 scope
+Own registration_crash_test.go and registration_recovery_test.go under internal/core/agents, narrowly necessary extensions to S2 registration tests/documentation. A real product defect found by these cases must be reported with exact evidence for bounded PM authorization; do not suppress it, edit frozen contracts/goldens, or silently widen shared ownership. Fresh reviewer afterward; no main/private-record/push operations by coder.
+
+Prove real subprocess/store recovery at all four ruled boundaries:
+1. before commit;
+2. torn final group;
+3. durable complete group before installation;
+4. installed group before acknowledgment.
+Use the existing beforeSubmit/afterScopedSubmit and the one ruled afterRegistrationCommit hook, not a new framework/public hook. Reuse established repository crash/fixture patterns when actual implementation begins; your draft need not guess their filenames or implementation. Positively wait/reap children and retain their actual exits/markers/output. Distinguish deliberate process death/torn-byte injection from power-loss or hardware durability qualification. Establish complete committed state only, original actual receipt recovery, no duplicate effect on matching retry, and no service replay append or automatic action. Existing Store.Open may trim an uncommitted torn tail: distinguish store tail repair from the subsequent agents.Open ledger-only reconstruction; do not demand unchanged torn bytes as if they were a committed group.
+
+Cross-family acceptance uses real existing families/fixtures, not stand-ins:
+- stable task identity across reassignment/terminal state, including F3-12 review-derived terminal task history; exact context bindings never follow assignment;
+- existing F3-13 opaque paid-route addresses beside registration with no provider functionality or credential prerequisite;
+- globally reused command IDs across families and correct original matching receipt;
+- unrelated family activity preserving registration state and historical answers.
+Reuse existing old-family regressions, not a new compatibility/count test. S2 already owes live CAS/retry/Close, original-request preflight, all new-golden replay and cursor tests; do not defer them again or duplicate them gratuitously.
+
+## Actual Service smoke, not a permanent test-only substitute
+Require a throwaway PUBLIC-API CLI program inside the worktree, e.g. _t139_smoke/main.go (leading underscore omitted by Go package patterns), exercising the actual Service/store with real temp state: register resources/domains, declare task/context links, revise/withdraw/query current/historical/pinned metadata, close/reopen and same-command receipt retry with committed state/no duplicate effects. It must import the real internal packages from within their permitted tree, use actual owner APIs, opaque nonsecret identities, and no provider/model/network action. No private seam is needed for this public registration API. This is correctness smoke, not a benchmark/capacity/SLA claim; no new measurement campaign is authorized. The exact temporary CLI implementation is the future coder's job against actual S2, not a fake scaffold in your draft. Run after the final product edit, retain exact source/argv/env/output privately, remove only own temporary driver before final hashes/checks; any later product edit requires renewed path proof. Keep permanent tests only for plausible observable boundary/invariant regressions.
+
+## Evidence and execution rules
+Go1.27.3, GOTOOLCHAIN=local, empty GOFLAGS, explicit CGO_ENABLED=0 for normal work; first worktree LSP notification and references before an exported/shared-symbol change. CODE_READY first, exact final serial command proposal and actual scope; final commands only after PM forwards primary's grant. One focused new regression/seed run, one plain verbose changed-package run, owned-only gofmt/host vet/staticcheck and relevant import/module audit/final hashes. No unrelated unchanged-package reruns, five-target statics without platform changes, duplicate local full gate or timing campaign.
+
+If tests-only, S2 already supplies the full shared-state race/affected×20 proof: do not duplicate it automatically. If a product shared-state/concurrency fix is authorized, use D152's exact two-command recipe (one whole changed-package race plus ×20 only actual affected concurrent tests) with explicit CGO_ENABLED=1 and the existing pinned llvm-mingw clang. Applicable timed120s fuzz is PM-owned and selected from changed actual paths, not a mandatory replay of every unchanged target; ordinary seeds remain in the package proof. Final public S3 SHA needs its own hosted full three-OS/race and aggregate before primary integration.
+
+Risk-selected rule-breaks only for authority/permission/crash correctness actually touched. Red must be observable consumer behavior. Stacked independent barriers may mask a one-change mutant: report that survivor and masking guard honestly; do not count an internal-only assertion or construct a multi-change automatic-execution feature to force a red. Require exact temporary edit/source hash, actual failing regression, byte-identical restoration and restored green; no extra whole-package run per mutant. Ask PM to approve actual plans after source is ready. New discovered error reproduction is kept when it defends a plausible bug, not wording/wiring/defaults.
+
+Final complete coder JSON must report exact base/changed paths/final hashes, actual commands/env/exits/durations/raw evidence paths, all child cases/waits/exits and process-death limits, actual-Service smoke/source/removal proof, risk red/restored-green/survivor evidence, seed/fuzz targets, removed assertions and questions. No unrun claims, fake fallbacks, altered old goldens, dependency, graph/action/view/provider/cache work, owner-policy decision or D52 readiness.
+
+## Stop condition and non-goals
+This draft is only the future code-slice assignment, not ticket-close edits, a cleanup plan/todo, a measurement driver design or a whole-ticket approval. The PM handles closing records/docs after actual smoke proof, fresh review, hosted success and primary coordination. Fable remains main advisor; temporary fresh Astra reviews are retained for its later whole-ticket double-check. Do not claim Fable has verified anything.

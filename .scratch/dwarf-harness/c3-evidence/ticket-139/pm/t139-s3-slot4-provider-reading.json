@@ -1,0 +1,23 @@
+[
+  {
+    "limitID": "anthropic:7d",
+    "usedFraction": 1.0,
+    "status": "exhausted",
+    "resetsAt": 1793314800375,
+    "recordedAt": 1793295194794
+  },
+  {
+    "limitID": "anthropic:7d:fable",
+    "usedFraction": 0.9,
+    "status": "warning",
+    "resetsAt": 1793314800375,
+    "recordedAt": 1793295194794
+  },
+  {
+    "limitID": "openai-codex:primary",
+    "usedFraction": 0.42,
+    "status": "ok",
+    "resetsAt": 1793812435000,
+    "recordedAt": 1793295194510
+  }
+]

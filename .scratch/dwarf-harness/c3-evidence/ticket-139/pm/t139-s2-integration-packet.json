@@ -1,0 +1,279 @@
+{
+  "ticket": 139,
+  "slice": "S2",
+  "status": "integrated-primary-fast-forward-guarded-push-remote-confirmed",
+  "sha": "67d9636d6c70ba8cab2810bcec81c31a6c5df914",
+  "codeSHA": "67d9636d6c70ba8cab2810bcec81c31a6c5df914",
+  "parent": "34090c3b634b9854904671c336db91c350e6328c",
+  "branch": "build/139-registration",
+  "worktree": "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration",
+  "review": {
+    "verdict": "approved-on-both-independent-axes",
+    "axes": [
+      {
+        "axis": "standards-maintainability",
+        "agent": "StandardsT139S2",
+        "verdict": "approved",
+        "findings": 0,
+        "actualModel": "openai-codex/gpt-6-astra",
+        "effort": "max",
+        "fallback": false,
+        "report": "local://t139-s2-standards-review.json",
+        "sourceFinalMessageID": "3151e55a"
+      },
+      {
+        "axis": "specification/correctness",
+        "agent": "SpecT139S2",
+        "verdict": "approved",
+        "findings": 0,
+        "actualModel": "openai-codex/gpt-6-astra",
+        "effort": "max",
+        "fallback": false,
+        "report": "local://t139-s2-spec-review.json",
+        "sourceFinalMessageID": "c1e33b33"
+      }
+    ],
+    "aggregate": "local://t139-s2-review-aggregate.md",
+    "routingProof": "local://t139-s2-review-routing-proof.json",
+    "newOwnerGates": [],
+    "confirmationNeeded": false
+  },
+  "finalHashes": {
+    "internal/core/agents/registration_types.go": "cce6073307a2b60ab6161041db52d65f4c71b7ee104d05f5e62484059ea547d3",
+    "internal/core/agents/registration_commands.go": "8845fee25ccedadf6cd68c15df29e834b2099e1229e76c992a1f906045335a7d",
+    "internal/core/agents/registration_replay.go": "af7337423f654b621ce6a461fef78819a7a2e561ec627d6843e832b21ee0cb45",
+    "internal/core/agents/registration_state.go": "5fd211ee66aef9b73e985f4fa4fd8ff461dab8725ed3ea1c240785fd787287fa",
+    "internal/core/agents/registration_query.go": "73fdd84660648ae808182bdde4dc77de6c59aa6fd6a13a7e5789174278c324a1",
+    "internal/core/agents/registration_service_test.go": "853e2e17c113659094d02814fb9be826cd8515db39d22be2761d4e671c1c3ae4",
+    "internal/core/agents/registration_replay_test.go": "b88f7477c1a29fda5714e00bdaf5ed281e37dcfb5730780d63c045f91e856ec7",
+    "internal/core/agents/registration_fuzz_test.go": "6108e6a47701cf8b5572222b4543702f8cec70935b274b8ac733e1ac369c9a8d",
+    "internal/core/agents/service.go": "3a9e0838135f9344ddcf083f7884b9289697a74cf0d9c56c38d3b7f102e69bec",
+    "internal/core/agents/types.go": "b9c449c480b6c05264a966386cfdb1a23cd21702ad618d2018ae199e8dafd0b8",
+    "internal/core/agents/scoped_replay.go": "4e7b0e0f92da725d07443bf88044432de673d1e5b220d6a98d824bec67159570",
+    "internal/core/agents/replay.go": "90f179cf09edea95fed8dffa251bd9820c68d6a1028245a4f172f188faf081a8",
+    "internal/core/agents/doc.go": "8a52831e0de08b3452fec02b265d90e3efef042cdb93a82699f46d7b185741ad",
+    "internal/core/agents/scoped_golden_test.go": "f9984f743a7f5a9c9c6f9dd105447bc41e9b8227c48c3807781c30dd3bb0b82f",
+    "internal/core/agents/integrity.go": "04dec8cedf618605134256b7aa2a973c5f78f1220a397c47d7beb2c5a8906560",
+    "internal/core/agents/paid_fixture_test.go": "6479e89ecc069fa3c87fb4a30dfadd8d823f165431920855f5de5136516317e8",
+    "internal/core/agents/paid_fuzz_test.go": "6aed09c53695dc3605c61888ae7877f0998f61a68ea89eeb84b1c807585508f8",
+    "internal/core/agents/paid_live.go": "f23effce5c73095784b1a43087a6b1ac4212e582edf4750d119dab282dc9f444",
+    "internal/core/agents/paid_read.go": "23cedad1a2838e69738d46929d25038ea29ceb27e5093bc35f80216b08b1c903",
+    "internal/core/agents/paid_settlement.go": "4a87639a07f80dc37cecf3beb5576f7e471107c613fafd42a2b92f6cbc7f1ee1",
+    "internal/core/agents/paid_state.go": "9cbdb65b4703c02cf9bf0ab7f9004641ebc5052dce2e180360c0605e0c4486a6",
+    "internal/core/agents/review_execute.go": "705524a3c43540db6ed4d587dc00c65502285a3b3aa4669f884f015a82911120",
+    "internal/core/agents/review_fuzz_test.go": "a31d51556102f4f9ce2c76af54409a5e6abb63eaa59c12b33daed03d058769ac",
+    "internal/core/agents/review_replay_test.go": "c95510f94cbe9c7881d441c31fdf73f4a9af52e947dccda8fad438cc1b2a2752",
+    "internal/core/agents/review_state.go": "ed34c8b43e24aeb1f02a15f90a5cc57998e2c14021f084dffe25e9cf39b8bb10",
+    "internal/core/agents/scoped_submit.go": "4639d4f4ff6a535c955dfd40478548cfec489ed3c2254996c002bb6657b90ee0",
+    "internal/core/agents/history_index.go": "2cf636da336a1cecd4d5d65c81a97ddaaa8a022c52c9f3d3a075b796a8c6ac3e"
+  },
+  "hashProof": "local://t139-s2-commit-proof.json",
+  "evidence": {
+    "authorReport": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\final-report.json",
+    "successfulRun": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044",
+    "commandManifest": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\final-commands.txt",
+    "initialFixtureFailure": {
+      "run": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/run-20261029T023245673Z-19280",
+      "step": "03-focused-and-seeds",
+      "exit": 1,
+      "seconds": 20.1381574,
+      "cause": "TestRegistrationCommitRetryAndClose/concurrent-retry incorrectly called Store.Append with ledger.command drafts; the real writer correctly refused the test fixture.",
+      "approvedCorrection": "Two live Store.Submit(command,nil) calls; all public original-receipt, normalization, no-second-effect and changed-input assertions preserved. No production change.",
+      "boundary": "The new row covers live retry after two legitimate F0 commits, not two F0 commands within one commit. Unchanged HistoryIndexCommandOccurrences covers historical whole-commit invalidation in full plain/race.",
+      "countedAsMutantRed": false
+    },
+    "mutationIndex": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/run-20261029T023939070Z-19044/rule-breaks.json",
+    "acceptedRealStoreSeedProof": {
+      "evidence": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/run-20261029T023939070Z-19044/accepted-registration-seeds.json",
+      "sourceSHA256": "6108e6a47701cf8b5572222b4543702f8cec70935b274b8ac733e1ac369c9a8d",
+      "passed": [
+        {
+          "target": "FuzzRegistrationGroupReplay/seed#0",
+          "kind": "resource",
+          "preparedPrefix": 5
+        },
+        {
+          "target": "FuzzRegistrationGroupReplay/seed#8",
+          "kind": "work_domain",
+          "preparedPrefix": 6
+        },
+        {
+          "target": "FuzzRegistrationGroupReplay/seed#16",
+          "kind": "declaration",
+          "preparedPrefix": 13
+        }
+      ],
+      "proof": "Mode0 requires acceptance; these successful seeds must reach copied real-store Submit, Open, typed snapshot and original receipt assertions. Raw PASS lines and source hash are retained."
+    },
+    "fuzz": "local://t139-s2-fuzz-result.json",
+    "frozenModuleBaseline": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/run-20261029T023939070Z-19044/baseline-comparison.json"
+  },
+  "localProof": {
+    "focusedAndSeeds": "passed",
+    "wholePackagePlain": "passed-once",
+    "hostVetStaticcheck": "passed",
+    "wholePackageRace": "passed-once",
+    "affectedRaceTimes20": "passed-only-five-new-concurrent-rows",
+    "riskProofs": "three-independent-red/exact-byte-restore/same-target-green",
+    "timedFuzz": [
+      {
+        "target": "FuzzRegistrationGroupReplay",
+        "exitCode": 0,
+        "seconds": 120,
+        "parallel": 1,
+        "wallSeconds": 146.8106063999876,
+        "progress": {
+          "elapsed": "2m0s",
+          "executions": 7156,
+          "rate": "0/sec",
+          "newInteresting": 43,
+          "totalInteresting": 67
+        }
+      },
+      {
+        "target": "FuzzScopedGroupReplay",
+        "exitCode": 0,
+        "seconds": 120,
+        "parallel": 1,
+        "wallSeconds": 127.94415630001458,
+        "progress": {
+          "elapsed": "2m2s",
+          "executions": 17030,
+          "rate": "0/sec",
+          "newInteresting": 4,
+          "totalInteresting": 216
+        }
+      },
+      {
+        "target": "FuzzReviewGroupReplay",
+        "exitCode": 0,
+        "seconds": 120,
+        "parallel": 1,
+        "wallSeconds": 127.74517870001728,
+        "progress": {
+          "elapsed": "2m1s",
+          "executions": 28640,
+          "rate": "0/sec",
+          "newInteresting": 11,
+          "totalInteresting": 189
+        }
+      },
+      {
+        "target": "FuzzPaidGroupReplay",
+        "exitCode": 0,
+        "seconds": 120,
+        "parallel": 1,
+        "wallSeconds": 128.5808768000279,
+        "progress": {
+          "elapsed": "2m2s",
+          "executions": 43599,
+          "rate": "0/sec",
+          "newInteresting": 12,
+          "totalInteresting": 280
+        }
+      }
+    ],
+    "all77FuzzHashBindingsUnchanged": true,
+    "localSlotReleased": true,
+    "noDuplicateFullLocalGate": true,
+    "originalBindingMutantPrecision": "Raw red ErrCommandMismatch, not nil. Both reviewers infer postcommit receipt fence from source, not masking preflight; no unprinted durable counts claimed. Restored test requires preflight inconsistency plus unchanged durability and proves independently valid altered input/ID reuse."
+  },
+  "publication": {
+    "branch": "build/139-registration",
+    "sha": "67d9636d6c70ba8cab2810bcec81c31a6c5df914",
+    "parent": "34090c3b634b9854904671c336db91c350e6328c",
+    "mergeBase": "34090c3b634b9854904671c336db91c350e6328c",
+    "observedPrimaryMain": "34090c3b634b9854904671c336db91c350e6328c",
+    "exit": 0,
+    "remoteConfirmedSHA": "67d9636d6c70ba8cab2810bcec81c31a6c5df914",
+    "pushTime": "2026-10-28 23:06:03 EDT",
+    "guard": {
+      "commits": 1,
+      "addedLines": 2405,
+      "result": "ok",
+      "override": null
+    },
+    "command": "GIT_TERMINAL_PROMPT=0 GIT_SSH_COMMAND=\"ssh -o BatchMode=yes\" git push --set-upstream origin build/139-registration && printf 'PUSH_EXIT=0\\n' && GIT_TERMINAL_PROMPT=0 GIT_SSH_COMMAND=\"ssh -o BatchMode=yes\" git ls-remote origin refs/heads/build/139-registration && date '+%Y-%m-%d %H:%M:%S %Z'",
+    "mainMovedBySecondary": false,
+    "review": "two fresh Astra axes in progress",
+    "hostedConclusion": "success",
+    "runURL": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40810219344",
+    "runID": 40810219344
+  },
+  "hosted": {
+    "runID": 40810219344,
+    "runNumber": 9,
+    "attempt": 1,
+    "sha": "67d9636d6c70ba8cab2810bcec81c31a6c5df914",
+    "url": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40810219344",
+    "status": "completed",
+    "conclusion": "success",
+    "fullThreeOSIncludingRace": true,
+    "evidence": "local://t139-s2-ci-result.json",
+    "jobs": [
+      {
+        "name": "changes",
+        "conclusion": "success",
+        "url": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40810219344/job/123238499435",
+        "apiJobSeconds": 9.0
+      },
+      {
+        "name": "Check / windows-amd64",
+        "conclusion": "success",
+        "url": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40810219344/job/123238560773",
+        "apiJobSeconds": 1610.0
+      },
+      {
+        "name": "Check / macos-arm64",
+        "conclusion": "success",
+        "url": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40810219344/job/123238560824",
+        "apiJobSeconds": 942.0
+      },
+      {
+        "name": "Check / linux-amd64",
+        "conclusion": "success",
+        "url": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40810219344/job/123238560894",
+        "apiJobSeconds": 830.0
+      },
+      {
+        "name": "Check result",
+        "conclusion": "success",
+        "url": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40810219344/job/123246788960",
+        "apiJobSeconds": 2.0
+      }
+    ],
+    "timingLimit": "API job durations only; internal full-check/package/race times not observed."
+  },
+  "integration": {
+    "owner": "primary PM only",
+    "ready": true,
+    "mainMovedOrPushedBySecondary": false,
+    "expectedParent": "34090c3b634b9854904671c336db91c350e6328c",
+    "historyGuardDiff": "local://t139-s2-history-guard.diff",
+    "historyGuardSHA256": "2cf636da336a1cecd4d5d65c81a97ddaaa8a022c52c9f3d3a075b796a8c6ac3e",
+    "notes": [
+      "Preserve fifth-family decode/plan/install in any primary140 acceptCommitLocked integration; expected input remains scoped-only.",
+      "Keep ignored fifth cached decode result and exclude registration positives from the four-family accelerator; no new cache/key/cap/invalidation change.",
+      "Live retry is after two legitimate F0 Submit commits; existing historical whole-commit regression separately covers multi-F0 invalidation.",
+      "Future readCommittedRange/acceptCommitLocked/historyIndex.warmSources changes are NOT in this subject; a derived combined/rebased subject requires new applicable proof/review/exact-SHA hosted gate.",
+      "No contract/dependency/owner-policy change or provider/graph/view/action feature; registration never grants permission.",
+      "S3 source-only work in separate139-acceptance is not completion or granted execution; all final integration remains primary-owned."
+    ],
+    "status": "integrated-by-primary",
+    "primaryReceipt": "local://t139-s2-primary-main-publication.json",
+    "primaryMainSHA": "67d9636d6c70ba8cab2810bcec81c31a6c5df914",
+    "previousMain": "34090c3b634b9854904671c336db91c350e6328c",
+    "primaryReflog": "67d9636d6c70ba8cab2810bcec81c31a6c5df914 main@{2026-10-28 23:43:09 -0400} merge 67d9636d6c70ba8cab2810bcec81c31a6c5df914: Fast-forward",
+    "primaryPushFinished": "2026-10-28T23:43:11.581264-04:00",
+    "primaryRemoteObserved": "2026-10-28T23:43:12.299548-04:00",
+    "primaryPrivateRecordsUnchanged": "3234b90d0ee4d6457b7b313e6c1656e2c6fe0680"
+  },
+  "fable": {
+    "reviewed": false,
+    "wholeTicketPacket": "local://fable-verification-request.md",
+    "pending": "Whole-ticket double-check after held window resets."
+  },
+  "secondarySession": "01a1848f-bc71-7725-b904-bf2e53c88c21",
+  "artifactRoot": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local",
+  "artifactConvention": "Every local:// path in this packet resolves under artifactRoot, not the receiving session."
+}

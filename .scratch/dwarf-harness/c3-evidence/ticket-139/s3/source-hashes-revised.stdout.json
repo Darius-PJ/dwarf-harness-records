@@ -1,0 +1,18 @@
+[
+    {
+        "Path":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-acceptance\\internal\\core\\agents\\registration_crash_test.go",
+        "Hash":  "F937F77B81699ADABD7D80001E3DD0F6A58D0B692690E0FF8B3090261E3D8241"
+    },
+    {
+        "Path":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-acceptance\\_t139_smoke\\main.go",
+        "Hash":  "80463D040929445E6F53811F3FB2B3D98876DEE9CB0B64B1228BBC0DC66A3036"
+    },
+    {
+        "Path":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\final-commands.json",
+        "Hash":  "BE68C1FE94648F1A76C92CC2D976CF39E5EECD316594577EFAB98D721974DAFF"
+    },
+    {
+        "Path":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\registration_crash.original-code-ready.go",
+        "Hash":  "FF17022135AF51F63C78CEE727A72922E18585E9FB43FF5D0964325BBD0DE458"
+    }
+]

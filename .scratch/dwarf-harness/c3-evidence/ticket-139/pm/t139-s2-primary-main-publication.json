@@ -1,0 +1,117 @@
+{
+  "sha": "67d9636d6c70ba8cab2810bcec81c31a6c5df914",
+  "previousMain": "34090c3b634b9854904671c336db91c350e6328c",
+  "approvedHostedRun": {
+    "runID": 40810219344,
+    "runNumber": 9,
+    "attempt": 1,
+    "sha": "67d9636d6c70ba8cab2810bcec81c31a6c5df914",
+    "url": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40810219344",
+    "status": "completed",
+    "conclusion": "success",
+    "fullThreeOSIncludingRace": true,
+    "evidence": "local://t139-s2-ci-result.json",
+    "jobs": [
+      {
+        "name": "changes",
+        "conclusion": "success",
+        "url": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40810219344/job/123238499435",
+        "apiJobSeconds": 9.0
+      },
+      {
+        "name": "Check / windows-amd64",
+        "conclusion": "success",
+        "url": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40810219344/job/123238560773",
+        "apiJobSeconds": 1610.0
+      },
+      {
+        "name": "Check / macos-arm64",
+        "conclusion": "success",
+        "url": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40810219344/job/123238560824",
+        "apiJobSeconds": 942.0
+      },
+      {
+        "name": "Check / linux-amd64",
+        "conclusion": "success",
+        "url": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40810219344/job/123238560894",
+        "apiJobSeconds": 830.0
+      },
+      {
+        "name": "Check result",
+        "conclusion": "success",
+        "url": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40810219344/job/123246788960",
+        "apiJobSeconds": 2.0
+      }
+    ],
+    "timingLimit": "API job durations only; internal full-check/package/race times not observed."
+  },
+  "reviewAxes": [
+    {
+      "axis": "standards-maintainability",
+      "agent": "StandardsT139S2",
+      "verdict": "approved",
+      "findings": 0,
+      "actualModel": "openai-codex/gpt-6-astra",
+      "effort": "max",
+      "fallback": false,
+      "report": "local://t139-s2-standards-review.json",
+      "sourceFinalMessageID": "3151e55a"
+    },
+    {
+      "axis": "specification/correctness",
+      "agent": "SpecT139S2",
+      "verdict": "approved",
+      "findings": 0,
+      "actualModel": "openai-codex/gpt-6-astra",
+      "effort": "max",
+      "fallback": false,
+      "report": "local://t139-s2-spec-review.json",
+      "sourceFinalMessageID": "c1e33b33"
+    }
+  ],
+  "newProjectCIStartedByMainPush": false,
+  "privateRecordsUnchanged": "3234b90d0ee4d6457b7b313e6c1656e2c6fe0680",
+  "fastForward": {
+    "command": [
+      "git",
+      "-C",
+      "C:/Users/darius.jones/Documents/PROJECTS/dwarf-harness",
+      "merge",
+      "--ff-only",
+      "67d9636d6c70ba8cab2810bcec81c31a6c5df914"
+    ],
+    "exit": 0,
+    "stdout": "Updating 34090c3..67d9636\nFast-forward\n internal/core/agents/doc.go                       |  45 ++\n internal/core/agents/history_index.go             |   5 +-\n internal/core/agents/integrity.go                 |   4 +-\n internal/core/agents/paid_fixture_test.go         |   4 +-\n internal/core/agents/paid_fuzz_test.go            |   2 +-\n internal/core/agents/paid_live.go                 |   6 +-\n internal/core/agents/paid_read.go                 |   2 +-\n internal/core/agents/paid_settlement.go           |   2 +-\n internal/core/agents/paid_state.go                |   4 +-\n internal/core/agents/registration_commands.go     | 288 +++++++++\n internal/core/agents/registration_fuzz_test.go    | 155 +++++\n internal/core/agents/registration_query.go        | 191 ++++++\n internal/core/agents/registration_replay.go       | 119 ++++\n internal/core/agents/registration_replay_test.go  | 538 +++++++++++++++++\n internal/core/agents/registration_service_test.go | 702 ++++++++++++++++++++++\n internal/core/agents/registration_state.go        | 182 ++++++\n internal/core/agents/registration_types.go        |  84 +++\n internal/core/agents/replay.go                    |  32 +-\n internal/core/agents/review_execute.go            |   5 +-\n internal/core/agents/review_fuzz_test.go          |   2 +-\n internal/core/agents/review_replay_test.go        |   2 +-\n internal/core/agents/review_state.go              |   2 +-\n internal/core/agents/scoped_golden_test.go        |   3 +\n internal/core/agents/scoped_replay.go             |  21 +-\n internal/core/agents/scoped_submit.go             |   4 +-\n internal/core/agents/service.go                   |  54 +-\n internal/core/agents/types.go                     |   6 +-\n 27 files changed, 2403 insertions(+), 61 deletions(-)\n create mode 100644 internal/core/agents/registration_commands.go\n create mode 100644 internal/core/agents/registration_fuzz_test.go\n create mode 100644 internal/core/agents/registration_query.go\n create mode 100644 internal/core/agents/registration_replay.go\n create mode 100644 internal/core/agents/registration_replay_test.go\n create mode 100644 internal/core/agents/registration_service_test.go\n create mode 100644 internal/core/agents/registration_state.go\n create mode 100644 internal/core/agents/registration_types.go\n",
+    "stderr": "",
+    "reflog": "67d9636d6c70ba8cab2810bcec81c31a6c5df914 main@{2026-10-28 23:43:09 -0400} merge 67d9636d6c70ba8cab2810bcec81c31a6c5df914: Fast-forward"
+  },
+  "push": {
+    "command": [
+      "git",
+      "-C",
+      "C:/Users/darius.jones/Documents/PROJECTS/dwarf-harness",
+      "push",
+      "origin",
+      "main"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "pre-push scan refs/heads/main: 1 commit(s), 2405 added line(s): ok\nTo github.com:Darius-PJ/dwarf-harness.git\n   34090c3..67d9636  main -> main\n",
+    "finished": "2026-10-28T23:43:11.581264-04:00"
+  },
+  "remote": {
+    "command": [
+      "git",
+      "-C",
+      "C:/Users/darius.jones/Documents/PROJECTS/dwarf-harness",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "exit": 0,
+    "stdout": "67d9636d6c70ba8cab2810bcec81c31a6c5df914\trefs/heads/main\n",
+    "stderr": "",
+    "observed": "2026-10-28T23:43:12.299548-04:00"
+  },
+  "status": "approved-exact-SHA-fast-forwarded-guarded-push-remote-confirmed"
+}

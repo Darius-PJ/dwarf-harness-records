@@ -1,0 +1,14 @@
+{
+    "name":  "04c-postcommit-cancellation",
+    "path":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\internal\\core\\agents\\registration_commands.go",
+    "target":  "^TestRegistrationCommitRetryAndClose$/^installed-lost-ack-and-cancel$",
+    "expectedFailure":  "post-commit cancellation returned before acknowledgment hook:",
+    "originalSHA256":  "8845fee25ccedadf6cd68c15df29e834b2099e1229e76c992a1f906045335a7d",
+    "mutantSHA256":  "d432ef8f0223007bcb705b180435139ade2224ecdd98c005a3c82253f8da1ea4",
+    "restoredSHA256":  "8845fee25ccedadf6cd68c15df29e834b2099e1229e76c992a1f906045335a7d",
+    "byteIdenticalRestoration":  true,
+    "diff":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044\\04c-postcommit-cancellation.patch",
+    "red":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044\\04c-postcommit-cancellation-red.json",
+    "green":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044\\04c-postcommit-cancellation-restored-green.json",
+    "classification":  "killed-by-expected-regression"
+}

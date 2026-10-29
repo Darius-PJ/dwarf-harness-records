@@ -1,0 +1,11 @@
+--- slot3-stopped/registration_crash_test.go
++++ remaining-source/registration_crash_test.go
+@@ -27,7 +27,7 @@
+ 	Boundary                 string
+ 	Before                   uint64
+ 	Digest                   string
+-	Receipt                  json.RawMessage
++	Receipt                  json.RawMessage `json:",omitempty"`
+ 	EffectSequence, Sequence uint64
+ 	Cut                      int64
+ }

@@ -1,0 +1,527 @@
+[
+  {
+    "step": "baseline",
+    "command": [
+      "C:\\Program Files\\Python313\\python.exe",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\run.py",
+      "baseline"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 0,
+    "seconds": 0.026,
+    "startedUTC": "2026-10-28T23:42:26.811190+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\01-baseline.log"
+  },
+  {
+    "step": "format",
+    "command": [
+      "C:/Program Files/Go/bin/gofmt.exe",
+      "-w",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\registration.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\registration_submission.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\registration_test.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\registration_fuzz_test.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\registration_golden_test.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\catalogue.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\doc.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\paid_compatibility_test.go"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 0,
+    "seconds": 0.043,
+    "startedUTC": "2026-10-28T23:42:30.059092+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\02-format.log"
+  },
+  {
+    "step": "generate",
+    "command": [
+      "C:/Program Files/Go/bin/go.exe",
+      "test",
+      "-count=1",
+      "-v",
+      "-timeout=19m",
+      "./contract/ledger",
+      "-run",
+      "^TestGoldenF3_139$",
+      "-update"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 0,
+    "seconds": 5.97,
+    "startedUTC": "2026-10-28T23:42:33.466996+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\03-generate.log"
+  },
+  {
+    "step": "focused",
+    "command": [
+      "C:/Program Files/Go/bin/go.exe",
+      "test",
+      "-count=1",
+      "-v",
+      "-timeout=19m",
+      "./contract/ledger",
+      "-run",
+      "^(TestRegistration.*|TestGoldenF3_139|FuzzDecodeF3_139)$"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 0,
+    "seconds": 3.709,
+    "startedUTC": "2026-10-28T23:42:43.109302+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\04-focused.log"
+  },
+  {
+    "step": "goldens",
+    "command": [
+      "C:/Program Files/Go/bin/go.exe",
+      "test",
+      "-count=1",
+      "-v",
+      "-timeout=19m",
+      "./contract/ledger",
+      "-run",
+      "^TestGolden",
+      "-update"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 0,
+    "seconds": 2.714,
+    "startedUTC": "2026-10-28T23:42:50.981529+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\05-goldens.log"
+  },
+  {
+    "step": "old_proof",
+    "command": [
+      "C:\\Program Files\\Python313\\python.exe",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\run.py",
+      "old_proof"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 0,
+    "seconds": 0.029,
+    "startedUTC": "2026-10-28T23:42:58.653341+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\06-old_proof.log"
+  },
+  {
+    "step": "probe_format",
+    "command": [
+      "C:/Program Files/Go/bin/gofmt.exe",
+      "-w",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\registration_freeze_setup_probe_test.go"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 0,
+    "seconds": 0.023,
+    "startedUTC": "2026-10-28T23:43:02.600457+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\07-probe_format.log"
+  },
+  {
+    "step": "probe",
+    "command": [
+      "C:/Program Files/Go/bin/go.exe",
+      "test",
+      "-count=1",
+      "-v",
+      "-timeout=19m",
+      "./internal/core/agents",
+      "-run",
+      "^TestRegistrationFreezeSetupProbe$"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 0,
+    "seconds": 10.926,
+    "startedUTC": "2026-10-28T23:43:38.148302+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\08-probe.log"
+  },
+  {
+    "step": "restoration",
+    "command": [
+      "C:\\Program Files\\Python313\\python.exe",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\run.py",
+      "restoration"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 0,
+    "seconds": 0.014,
+    "startedUTC": "2026-10-28T23:43:58.129300+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\09-restoration.log"
+  },
+  {
+    "step": "package",
+    "command": [
+      "C:/Program Files/Go/bin/go.exe",
+      "test",
+      "-count=1",
+      "-v",
+      "-timeout=19m",
+      "./contract/ledger"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 1,
+    "seconds": 11.823,
+    "startedUTC": "2026-10-28T23:44:03.935673+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\10-package.log"
+  },
+  {
+    "step": "format",
+    "command": [
+      "C:/Program Files/Go/bin/gofmt.exe",
+      "-w",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\registration.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\registration_submission.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\registration_test.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\registration_fuzz_test.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\registration_golden_test.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\catalogue.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\doc.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\paid_compatibility_test.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\catalogue_test.go"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 0,
+    "seconds": 0.04,
+    "startedUTC": "2026-10-28T23:46:03.556660+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\11-format.log"
+  },
+  {
+    "step": "package",
+    "command": [
+      "C:/Program Files/Go/bin/go.exe",
+      "test",
+      "-count=1",
+      "-v",
+      "-timeout=19m",
+      "./contract/ledger"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 0,
+    "seconds": 13.633,
+    "startedUTC": "2026-10-28T23:46:06.578656+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\12-package.log"
+  },
+  {
+    "step": "consumer",
+    "command": [
+      "C:/Program Files/Go/bin/go.exe",
+      "test",
+      "-count=1",
+      "-v",
+      "-timeout=19m",
+      "./internal/core/ledgerstore"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 0,
+    "seconds": 35.914,
+    "startedUTC": "2026-10-28T23:46:23.848895+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\13-consumer.log"
+  },
+  {
+    "step": "format_check",
+    "command": [
+      "C:/Program Files/Go/bin/gofmt.exe",
+      "-l",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\registration.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\registration_submission.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\registration_test.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\registration_fuzz_test.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\registration_golden_test.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\catalogue.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\doc.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\paid_compatibility_test.go",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration\\contract\\ledger\\catalogue_test.go"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 0,
+    "seconds": 0.047,
+    "startedUTC": "2026-10-28T23:47:03.196901+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\14-format_check.log"
+  },
+  {
+    "step": "vet",
+    "command": [
+      "C:/Program Files/Go/bin/go.exe",
+      "vet",
+      "./contract/ledger"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 0,
+    "seconds": 0.624,
+    "startedUTC": "2026-10-28T23:47:06.207517+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\15-vet.log"
+  },
+  {
+    "step": "staticcheck",
+    "command": [
+      "C:/Program Files/Go/bin/go.exe",
+      "tool",
+      "staticcheck",
+      "./contract/ledger"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 0,
+    "seconds": 2.291,
+    "startedUTC": "2026-10-28T23:47:10.364163+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\16-staticcheck.log"
+  },
+  {
+    "step": "imports",
+    "command": [
+      "C:/Program Files/Go/bin/go.exe",
+      "list",
+      "-f",
+      "{{join .Imports \"\n\"}}",
+      "./contract/ledger"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 1,
+    "seconds": 0.026,
+    "startedUTC": "2026-10-28T23:47:15.703697+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\17-imports.log"
+  },
+  {
+    "step": "imports",
+    "command": [
+      "C:/Program Files/Go/bin/go.exe",
+      "list",
+      "-f",
+      "{{join .Imports \"\\n\"}}",
+      "./contract/ledger"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 0,
+    "seconds": 0.08,
+    "startedUTC": "2026-10-28T23:47:31.722626+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\18-imports.log"
+  },
+  {
+    "step": "test_imports",
+    "command": [
+      "C:/Program Files/Go/bin/go.exe",
+      "list",
+      "-f",
+      "{{join .TestImports \"\\n\"}}",
+      "./contract/ledger"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 0,
+    "seconds": 0.085,
+    "startedUTC": "2026-10-28T23:47:35.925954+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\19-test_imports.log"
+  },
+  {
+    "step": "dependencies",
+    "command": [
+      "C:/Program Files/Go/bin/go.exe",
+      "list",
+      "-deps",
+      "-f",
+      "{{if not .Standard}}{{.ImportPath}}{{end}}",
+      "./contract/ledger"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 0,
+    "seconds": 0.111,
+    "startedUTC": "2026-10-28T23:47:39.218006+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\20-dependencies.log"
+  },
+  {
+    "step": "tidy",
+    "command": [
+      "C:/Program Files/Go/bin/go.exe",
+      "mod",
+      "tidy",
+      "-diff"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 0,
+    "seconds": 0.111,
+    "startedUTC": "2026-10-28T23:47:42.295981+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\21-tidy.log"
+  },
+  {
+    "step": "verify",
+    "command": [
+      "C:/Program Files/Go/bin/go.exe",
+      "mod",
+      "verify"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 0,
+    "seconds": 20.544,
+    "startedUTC": "2026-10-28T23:47:45.392047+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\22-verify.log"
+  },
+  {
+    "step": "hashes",
+    "command": [
+      "C:\\Program Files\\Python313\\python.exe",
+      "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\run.py",
+      "hashes"
+    ],
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "CGO_ENABLED": "0",
+      "GOOS": "windows",
+      "GOARCH": "amd64"
+    },
+    "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration",
+    "exit": 0,
+    "seconds": 0.03,
+    "startedUTC": "2026-10-28T23:48:09.775321+00:00",
+    "log": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence\\23-hashes.log"
+  }
+]

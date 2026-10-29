@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-10-29T14:09:22.199959-04:00",
+  "codeSHA": "f92a5ef25b15cab47769cf76ff1af2eb86b23e25",
+  "parentSHA": "8a17ec1ed2617ca2a4e5203479f75f363b359970",
+  "closingPacketSHA256": "003ce6eaa63db35972f2857d4929de7aca240df4c9a66da3c34d42b77784c45b",
+  "sourceIndexSHA256": "b0fb823b16505ea7be2bee79d66fd893a146b6b83865003c932d7840c5bef435",
+  "primaryActualRead": "All151lines,includingfullrawpublicresolution66;all115sourceindexlines;42lineactualcommitbinding;currentlocalproof/failurearchivechronologyobserved",
+  "publicR1throughR7": "APPROVE_EXACT_REPLACEMENTS_FOR_SECONDARY_OWN_BRANCH_ONLY_CONDITIONAL_ON_BOTH_FRESH_ACTUAL_TECHNICAL_APPROVALS_WITH_NO_REQUIRED_FINDING",
+  "privateR8": "CONTENT_APPROVED_AS_DRAFT_NOT_APPLIED_OR_PUBLISHED;primaryONLYreanchorsactualtail/dateandwritesafterrealintegrationreadiness",
+  "privateEvidencePlan": "APPROVE_PRIMARY_ONLYRETENTION_PLAN;copyactualbytesatfollowthrough/preserveallstops;mutableactualverdictandCIupdatesonly;no inventedfuturefacts",
+  "conditions": [
+    "BothfreshStandardsT139S3andSpecT139S3actualapprovalsagainstexactcodeANDR1\u2013R8/sourceindexrequiredBEFOREpublicstatusapplication",
+    "ExactlyONE D116 closing-doc commit,exact2testblobbridge,actualD128linksLFproof,guardedbuild/139-acceptancefinalpublicSHApush/fullthreeOSraceandCheckresult",
+    "Materialsource/contract/recordchangeorrequiredfindingSTOPforparentbeforeapplying;noCodefixassumed",
+    "No secondary main/private records mutation or push",
+    "No numeric140acceptance/C3orU3completion/13Fable/provider/C4/view/61consumerclaim",
+    "R8B34date/tailmayneedprimaryreanchorifactual140OG-SEQUENCEdecisionappendedbefore139close;bodyunchangedunlessreviewrequires"
+  ],
+  "publicFilesApplied": false,
+  "privateCopiesWritten": false,
+  "B34Applied": false,
+  "branchPublished": false,
+  "hostedSuccessObserved": false,
+  "mainIntegrationAuthorized": false,
+  "compute": "BothPMGoFULLreleased;no new native checks required;140policywaitdoesnothold139 own-branch reviews/docs/CI"
+}

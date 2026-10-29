@@ -1,0 +1,12 @@
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationCommitRetryAndClose
+=== RUN   TestRegistrationCommitRetryAndClose/installed-lost-ack-and-cancel
+=== PAUSE TestRegistrationCommitRetryAndClose/installed-lost-ack-and-cancel
+=== CONT  TestRegistrationCommitRetryAndClose/installed-lost-ack-and-cancel
+    registration_service_test.go:426: post-commit cancellation returned before acknowledgment hook: context canceled
+--- FAIL: TestRegistrationCommitRetryAndClose (0.00s)
+    --- FAIL: TestRegistrationCommitRetryAndClose/installed-lost-ack-and-cancel (0.18s)
+FAIL
+FAIL	github.com/Darius-PJ/dwarf-harness/internal/core/agents	3.303s
+FAIL

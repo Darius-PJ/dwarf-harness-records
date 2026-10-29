@@ -1,0 +1,71 @@
+{
+  "sha": "86f952cfcae37bde06767c6c4eaa615a503dd96d",
+  "logs": {
+    "contract/ledger/testdata/f0/catalogue/log/00000000000000000001.jsonl": {
+      "sha256": "319c805312afd1abf824d306bcd799dd42bd3ae04fdf33fb74bc3f742ac8c898",
+      "freeze": "D111",
+      "sourceLine": 1541
+    },
+    "contract/ledger/testdata/f0/log/00000000000000000001.jsonl": {
+      "sha256": "c72c4a739965586d984b524dbc6ee67a5b9d866756639fbb03b04e90f441f2e5",
+      "freeze": "D111",
+      "sourceLine": 1541
+    },
+    "contract/ledger/testdata/f0/log/00000000000000000005.jsonl": {
+      "sha256": "3ee9f566e69e9cccb89ed435afee322950d3084a69ed0301684c15be70f8e65b",
+      "freeze": "D111",
+      "sourceLine": 1541
+    },
+    "contract/ledger/testdata/f2/05/log/00000000000000000001.jsonl": {
+      "sha256": "843663a168e472adf4656fdba4ffa6db770e588feec0020bb10e20bf14def437",
+      "freeze": "D115",
+      "sourceLine": 1705
+    },
+    "contract/ledger/testdata/f2/06/log/00000000000000000001.jsonl": {
+      "sha256": "014cc612076390934fa8a668117c353c5cca2630a3b3fd90364a29542b96f40d",
+      "freeze": "D118",
+      "sourceLine": 1963
+    },
+    "contract/ledger/testdata/f2/07/log/00000000000000000001.jsonl": {
+      "sha256": "96de91f92432040683157279432512810c2dd27d36012695be46dd1eccac88c5",
+      "freeze": "D119",
+      "sourceLine": 2021
+    },
+    "contract/ledger/testdata/f2/08/log/00000000000000000001.jsonl": {
+      "sha256": "985e073a342d9f991fdd2afd407dc495c3542020c98e35d3079018e29db14b8c",
+      "freeze": "D123",
+      "sourceLine": 2114
+    },
+    "contract/ledger/testdata/f2/09/log/00000000000000000001.jsonl": {
+      "sha256": "f1a0c473ee410c189c743547f37c86ebd638ce9c92c68cd44d1b2816f9f3ad88",
+      "freeze": "D124",
+      "sourceLine": 2129
+    },
+    "contract/ledger/testdata/f3/10/log/00000000000000000001.jsonl": {
+      "sha256": "9622b72877ed546a18fcbfd28a19807e0bab237909e23ffe76e7c3da1c260ecd",
+      "freeze": "D139",
+      "sourceLine": 2552
+    },
+    "contract/ledger/testdata/f3/11/log/00000000000000000001.jsonl": {
+      "sha256": "145bb11c2b1c58e9e8530a98e6972b35329e4adb9dfb945a9f15381ae221bba6",
+      "freeze": "D140",
+      "sourceLine": 2634
+    },
+    "contract/ledger/testdata/f3/12/log/00000000000000000001.jsonl": {
+      "sha256": "6586720b28a19f997dd0890a6dbc71d27ffdf395fd000e68b6aedbbbe0ce79f8",
+      "freeze": "D144",
+      "sourceLine": 2751
+    },
+    "contract/ledger/testdata/f3/13/log/00000000000000000001.jsonl": {
+      "sha256": "50b41cf739cbef89bec234cf64873e80af85188b256c66d6cb1e86ebea3555ff",
+      "freeze": "D149",
+      "sourceLine": 2994
+    },
+    "contract/ledger/testdata/u3/61/log/00000000000000000001.jsonl": {
+      "sha256": "6c7169aa9cfe77bb8976348f515ef85ec8da82b277520f82fd2bf169e6c45e0f",
+      "freeze": "D130",
+      "sourceLine": 2296
+    }
+  },
+  "allEarlierFixturesUnchanged": 42
+}

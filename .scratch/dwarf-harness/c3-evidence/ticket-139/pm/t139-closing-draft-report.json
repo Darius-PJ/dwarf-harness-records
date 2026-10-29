@@ -1,0 +1,175 @@
+{
+  "status": "DRAFT_READY_FOR_PRIMARY_AND_TWO_FRESH_INDEPENDENT_REVIEWS",
+  "ticket": 139,
+  "draftDate": "2026-10-29",
+  "editFile": "C:/Users/darius.jones/.omp/agent/sessions/-Documents-PROJECTS-dwarf-harness/2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21/local/t139-closing-edits.md",
+  "reportFile": "C:/Users/darius.jones/.omp/agent/sessions/-Documents-PROJECTS-dwarf-harness/2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21/local/t139-closing-draft-report.json",
+  "authority": {
+    "source": "local/t139-b34-closing-authority.txt:5-11",
+    "decisionNumber": "B34",
+    "allocationOnly": true,
+    "approved": false,
+    "applied": false,
+    "originator": "assistant",
+    "delegation": ["D117", "D125", "D152"],
+    "noNewOwnerPolicyDependencyOrBreakingChange": true,
+    "unallocatedNumbers": ["B35", "D156"],
+    "integrationOwner": "primary",
+    "secondaryMayApplySharedLinesOrPrivateRecord": false
+  },
+  "sourceRoots": {
+    "publicFinds": "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance",
+    "privateFind": "C:/Users/darius.jones/Documents/PROJECTS/dwarf-harness",
+    "localReferences": "C:/Users/darius.jones/.omp/agent/sessions/-Documents-PROJECTS-dwarf-harness/2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21/local",
+    "actualS3AuthorReport": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/remaining-20261029T173807547Z-9144/author-final-report.json"
+  },
+  "format": {
+    "numberedIds": ["R1", "R2", "R3", "R4", "R5", "R6", "R7", "R8"],
+    "headingPattern": "#### <ID> — <repository-relative path>",
+    "findReplaceFence": "four backticks, one fence per field",
+    "findProvenance": "Each Find copied from one raw ranged read of its assigned current source; no ellipses or inferred anchors.",
+    "mechanicalUniquenessAndDryRun": "PM-owned; not run by drafter",
+    "unknownValuePlaceholders": [],
+    "applicationMetadata": "B34 date must be the actual local application date. If later than the drafted date, update the date value before application. If the private tail changes, reanchor R8 Find and its retained first replacement line together.",
+    "encoding": "UTF-8 text with LF line endings supplied to write"
+  },
+  "publicTargets": [
+    {
+      "path": ".scratch/dwarf-harness/issues/139-register-shared-resources-and-work-domains-through-core.md",
+      "editIds": ["R1", "R2", "R3"],
+      "sourceLines": ["3", "35-40", "60"],
+      "changes": ["ready-for-agent to resolved, proposed only", "six checkboxes checked with criterion words preserved", "claim 2026-10-28 and concise resolution 2026-10-29 appended under existing Comments"],
+      "unchanged": ["Blocked by: 11", "publication comment", "all authority/start/scope/verification gates"]
+    },
+    {
+      "path": "docs/ROADMAP-CORE.md",
+      "editIds": ["R4"],
+      "sourceLines": ["516"],
+      "changes": ["C3 status line only: add Ticket139 producer completion/B34", "keep In progress and identify Ticket13's retained Fable verification"],
+      "pairedWith": "R5"
+    },
+    {
+      "path": "docs/ROADMAPS.md",
+      "editIds": ["R5", "R6"],
+      "sourceLines": ["171", "189"],
+      "changes": ["paired C3 and U3 board status cells only; existing other cells retained"],
+      "pairedWith": ["R4", "R7"],
+      "pairRule": "status text exactly identical apart from table and Status wrappers"
+    },
+    {
+      "path": "docs/ROADMAP-UNDERCURRENT.md",
+      "editIds": ["R7"],
+      "sourceLines": ["309"],
+      "changes": ["U3 status line only: identify supplied registration producer under D154 and remove139 from outstanding producer freezes"],
+      "unchanged": ["In progress", "foundation partial", "F-U3-61/D130", "Ticket61 remaining criteria", "Ticket62", "producer freezes15/17", "promotion integration C4"],
+      "pairedWith": "R6"
+    }
+  ],
+  "privateTarget": {
+    "path": "docs/DECISIONS.md",
+    "editId": "R8",
+    "anchor": "current D155 final Changes line, source line3102",
+    "styleSource": "docs/DECISIONS.md:2758-2760 (B33)",
+    "changes": "Short B34 append only; existing D155 retained verbatim, no earlier entry body rewritten.",
+    "contents": ["actual date and assistant originator under delegated authority", "ruled three-slice build and complete additive D154 freeze before producer", "owner-only CAS and separate kind-scoped opaque identity/exact kind-key address", "scoped versioned pinned declarations, full replacement and withdrawal", "registration is evidence rather than permission", "ledger-only reconstruction and original matching-command receipts", "brief/ruling/package/evidence pointers rather than repeated specification or test narratives", "process-interruption versus power-loss limit and retained publication/Fable gates"],
+    "containsOwnerQuotation": false,
+    "privateSupportingPaths": [
+      ".scratch/dwarf-harness/c3-evidence/ticket-139-design-brief.md",
+      ".scratch/dwarf-harness/c3-evidence/ticket-139-design-ruling.md",
+      ".scratch/dwarf-harness/c3-evidence/ticket-139-acceptance-evidence.md"
+    ],
+    "packageLinkFromDecisions": "../internal/core/agents/doc.go",
+    "supportingCopiesAndCanonicalIndex": "Integration-PM-owned; parent supplies separately. Names are assigned destinations, not a claim that copies or final receipts were created.",
+    "mustNotEnterPublicCommit": true
+  },
+  "actualEvidenceRead": {
+    "immutableCodeSubject": "f92a5ef25b15cab47769cf76ff1af2eb86b23e25",
+    "parentSubject": "8a17ec1ed2617ca2a4e5203479f75f363b359970",
+    "commitProof": "local/t139-s3-commit-proof.json:2-24,26-41",
+    "committedFiles": [
+      {"path": "internal/core/agents/registration_crash_test.go", "testedAndCommittedSHA256": "1123794587c8486dd276a6463e88718870f62d9db7f4526ac1d41051ba9ac564"},
+      {"path": "internal/core/agents/registration_recovery_test.go", "testedAndCommittedSHA256": "d045d9705df2b4fb4f8c0d4db319ef29ccc40693d4dda47e6338165fb033aa53"}
+    ],
+    "scope": "Two new tests,682insertions; no S3 product/shared/contract/module/workflow change claimed.",
+    "authorReportQualification": "Author report names the precommit parent; the later immutable commit proof binds both final exercised test blobs to the S3 code subject. No rerun or independent runtime verification by drafter.",
+    "crashProof": {
+      "source": "author-final-report.json:168-243",
+      "boundaries": ["before_commit", "torn_final_group", "durable_before_install", "installed_before_ack"],
+      "focusedAndPlainRows": "All four pass in each run; all eight children positively waited/reaped.",
+      "storeRepair": "Only torn final group:50888 to48599bytes,2289bytes truncated, exact complete durable50prefix retained.",
+      "coreReplay": "All four subsequent Core opens leave ledger bytes and durable sequence unchanged.",
+      "retry": "Uncommitted rows first submit after reopen; committed rows recover original child receipt. Matching retry yields actual effect52/receipt53, version3 empty consumers, durable53, without duplicate.",
+      "limit": "Real process interruption and deliberate torn tail, not power-loss, OS/device failure or physical-durability qualification."
+    },
+    "plainRun": {
+      "source": "author-final-report.json:31-43,156-167",
+      "completedNativeCommands": 10,
+      "commandExitZero": 10,
+      "topTestsPassed": 182,
+      "topFuzzPassed": 5,
+      "allResultRowsPassed": 1367,
+      "failedRows": 0,
+      "skippedRows": 0,
+      "registrationOrdinarySeedsPassed": 24,
+      "noBenchmarkClaim": true
+    },
+    "retainedRiskAndSmoke": {
+      "source": "author-final-report.json:267-317; local/t139-s3-commit-proof.json:26-36",
+      "twoSemanticReds": ["withdrawal-install-omitted", "external-grant-needs-registration"],
+      "restoration": "Each has exact byte restoration and identical target green; no rerun by drafter.",
+      "negativeBoundaryLimit": "External-grant mutant fails public Service.Open replay; not a live-delegation red. Earlier launcher/IPC/absent Receipt:null stops are not semantic reds.",
+      "realCLI": "Actual public owner Service smoke passed in retained slot3: durable53 to53,11registrationreceipts,6originalretries, lower limits1/1 below retained2/4, current/history/pins and all resource-domain by task-context shapes; archived probe removed.",
+      "wireBridge": "Retained completed risk/smoke accepted across only the private nil Receipt omitempty signal bridge; parent assertions, rows and nonempty committed receipt semantics unchanged. No recreated CLI or repeated proof claimed."
+    },
+    "freezeAndProducerSources": [
+      "private-main:docs/DECISIONS.md:3079-3088 (D154)",
+      "local/t139-acceptance-matrix.md:3,9-14,17-25",
+      "internal/core/agents/doc.go:615-658",
+      "local/t139-ruling.md:69-82,218-247,392-412"
+    ],
+    "notCredited": ["fresh S3 independent approval", "S3 hosted green", "final closing-doc public SHA hosted green", "main/private integration", "Fable whole-ticket review"]
+  },
+  "preservedGates": [
+    "joint primary approval before public closing-status application/commit",
+    "two fresh independent review axes, no inferred approval",
+    "D116 one public closing-documents commit and D145 separate private records integration",
+    "D153 guarded exact final public SHA successful hosted Check result before main advance, with required three-OS/race code proof",
+    "C3 all three OS green at exit; C3 stays In progress",
+    "Ticket13 retained Fable close verification and open14/15/140",
+    "U3 partial foundation; F-U3-61/D130; remaining15/17 producer freezes and C4 accepted-promotion integration",
+    "no claimed graph nodes/edges, action facts, runtime provider execution or registration views",
+    "D52 test-agents-only; no colony work admission",
+    "D29/D40/D41 and every existing owner-reserved gate",
+    "later whole-ticket Fable verification not replaced",
+    "Ticket139 does not become a direct Ticket15 blocker; D155 is not a Ticket139 dependency"
+  ],
+  "intentionallyUnchanged": [
+    "Ticket61 file", "Ticket15 file", "Ticket139 Blocked by11", "CONTRACTS.md", "package documentation", "all source/test code", "fixtures", "dependencies", "toolchain", "workflow", "public new documents/changelog", "existing decision entry bodies", "canonical evidence copies/index"
+  ],
+  "applicationReadiness": {
+    "completeDraftArtifacts": true,
+    "sourceAnchorsAvailable": true,
+    "unreachableSources": [],
+    "openTechnicalDesignQuestions": [],
+    "pendingPrimarySuppliedInput": "Canonical evidence-copy index and integration-owned final supporting contents; no fabricated index or source copies included.",
+    "pendingApprovalsAndPublication": ["joint primary approval", "two fresh independent reviews", "exact-final-public-SHA hosted success", "primary-owned public/private integration receipts"],
+    "draftDoesNotCloseTicketByItself": true
+  },
+  "actionsByDrafter": {
+    "repositoryEdits": false,
+    "privateMainEdits": false,
+    "gitOrNativeOrGoOrLspCommands": false,
+    "testsBuildLintFormattersFuzzOrSmokeRuns": false,
+    "subagents": false,
+    "writesOnlyAssignedTwoLocalOutputs": true,
+    "verification": "Source/text-only drafting; no runtime, mechanical application, link check, CI or repository-state verification performed."
+  },
+  "choices": [
+    {"id": "P1", "choice": "Seven exact public replacements touch only the four assigned files; one separate private B34 append.", "sources": ["local/t139-closing-draft-assignment.md:10-17,25-26", "local/t139-b34-closing-authority.txt:5,9-11"]},
+    {"id": "P2", "choice": "Pair C3 and U3 status text exactly, preserving all remaining readiness gates.", "sources": ["docs/ROADMAP-CORE.md:516", "docs/ROADMAPS.md:171,189", "docs/ROADMAP-UNDERCURRENT.md:307-309", "local/t139-closing-draft-assignment.md:12-14"]},
+    {"id": "P3", "choice": "Keep B34 short, assistant-originated, pointer-led and about the ruled build, not newly invented policy or approval.", "sources": ["local/t139-ruling.md:69-82,218-247", "internal/core/agents/doc.go:615-658", "private-main:docs/DECISIONS.md:2758-2760,3079-3088,3102"]},
+    {"id": "P4", "choice": "Credit completed local recovery/smoke/risk only; distinguish Store repair from no-append Core replay and retain review/hosted/Fable gates.", "sources": ["author-final-report.json:168-243,267-317,374-387", "local/t139-s3-commit-proof.json:2-41", "local/t139-acceptance-matrix.md:3,13,22-25"]},
+    {"id": "P5", "choice": "Use only assigned private c3-evidence destinations; parent owns canonical copies/index and all integration.", "sources": ["local/t139-closing-draft-assignment.md:17,26", "local/t139-b34-closing-authority.txt:11"]}
+  ],
+  "unsettled": "Only separately supplied evidence-copy index and actual review/publication/integration receipts; none is fabricated or treated as success."
+}

@@ -1,0 +1,25 @@
+{
+  "status": "EXACT_JOINT_REVIEW_INPUT_NOT_APPROVAL",
+  "codeSHA": "f92a5ef25b15cab47769cf76ff1af2eb86b23e25",
+  "baseSHA": "8a17ec1ed2617ca2a4e5203479f75f363b359970",
+  "codeScope": "ONLY2newtestfiles/682lines; actual committed blobs equal finaltested1123/d045",
+  "inputSHA256": {
+    "t139-s3-review-context.md": "f8ff5f32bf19450a060a8a977fb842843c575813492091ef4c6b5337cea89506",
+    "t139-s3-standards-axis.md": "c74520112d4cd7c8068bef69d940ba75de05d00dbbb87a8c396f792ef8fccf44",
+    "t139-s3-code.diff": "eac738dd00723e8285f5c38337d46a5a3c4f002c6574629f4701ed08d49d6d73",
+    "t139-s3-commit-proof.json": "846c409134f19520126572e51170952855519a59c710c20fb0adc20e7eba76db",
+    "t139-closing-edits.md": "003ce6eaa63db35972f2857d4929de7aca240df4c9a66da3c34d42b77784c45b",
+    "t139-closing-evidence-sources.json": "b0fb823b16505ea7be2bee79d66fd893a146b6b83865003c932d7840c5bef435",
+    "t139-closing-preview-proof.json": "dc1df6975bc2445d45dc8e67e471057edc75a52ff0b3818c00b660f36e873adc",
+    "t139-closing-pm-revision.diff": "fa9426cd3034f54875724463a2eeee0a56724adfd2cfb550c53daeca4e932bf9"
+  },
+  "closingEdits": "R1\u20137fourpublicfiles, R8primaryprivateB34; exact8anchors unique in memory/zero repo writes",
+  "shortB34Words": 153,
+  "privateCanonicalRoot": ".scratch/dwarf-harness/c3-evidence/",
+  "nativePending": false,
+  "fullGoRelease": true,
+  "freshReviews": "Independent StandardsT139S3/SpecT139S3 activation requested; NO verdict inferred",
+  "primaryJointApproval": "Pending actualread/explicitapplicationpermission",
+  "mainOrPrivateEditsBySecondary": false,
+  "finalPublicSHAAndHosted": "Notcreated/pushed; own closing-doc commit and full3OSraceCheck required after approvals"
+}

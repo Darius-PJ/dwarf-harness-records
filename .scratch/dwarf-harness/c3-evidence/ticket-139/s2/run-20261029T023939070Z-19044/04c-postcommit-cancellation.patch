@@ -1,0 +1,5 @@
+--- a/internal/core/agents/registration_commands.go
++++ b/internal/core/agents/registration_commands.go
+@@ -264,1 +264,1 @@
+-	err = s.refreshLocked(context.Background(), max(s.p.through, committed.Last))
++	err = s.refreshLocked(ctx, max(s.p.through, committed.Last))

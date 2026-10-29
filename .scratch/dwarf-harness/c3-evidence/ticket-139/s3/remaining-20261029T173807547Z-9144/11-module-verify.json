@@ -1,0 +1,29 @@
+{
+    "name":  "11-module-verify",
+    "executable":  "C:/Program Files/Go/bin/go.exe",
+    "argv":  [
+                 "mod",
+                 "verify"
+             ],
+    "cwd":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance",
+    "environmentOverrides":  {
+                                 "GOTOOLCHAIN":  "local",
+                                 "GOFLAGS":  "",
+                                 "GOROOT":  "C:/Program Files/Go",
+                                 "GOOS":  "windows",
+                                 "GOARCH":  "amd64",
+                                 "CGO_ENABLED":  "0"
+                             },
+    "timeoutSeconds":  600,
+    "startedUTC":  "2026-10-29T17:39:41.1543471Z",
+    "finishedUTC":  "2026-10-29T17:40:03.4323081Z",
+    "elapsedSeconds":  22.266447,
+    "exitCode":  0,
+    "timedOut":  false,
+    "reaped":  true,
+    "streamsComplete":  true,
+    "error":  null,
+    "stdout":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\remaining-20261029T173807547Z-9144\\11-module-verify.stdout.log",
+    "stderr":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\remaining-20261029T173807547Z-9144\\11-module-verify.stderr.log",
+    "metadata":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\remaining-20261029T173807547Z-9144\\11-module-verify.json"
+}

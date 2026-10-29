@@ -1,0 +1,12 @@
+{"command": ["C:/Program Files/Go/bin/go.exe", "test", "-count=1", "-v", "-timeout=19m", "./contract/ledger", "-run", "^TestGoldenF3_139$", "-update"], "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration", "environment": {"GOTOOLCHAIN": "local", "GOFLAGS": "", "CGO_ENABLED": "0", "GOOS": "windows", "GOARCH": "amd64"}}
+=== RUN   TestGoldenF3_139
+=== PAUSE TestGoldenF3_139
+=== CONT  TestGoldenF3_139
+    registration_golden_test.go:218: log/00000000000000000001.jsonl SHA-256=db1476e07b355d909dfb07cce79f142387469618709bc52a3f496395b94c5134
+    registration_golden_test.go:218: objects/a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b SHA-256=a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b
+    registration_golden_test.go:218: objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 SHA-256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+    registration_golden_test.go:218: bodies/e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5 SHA-256=e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5
+    registration_golden_test.go:315: commits=19 records=65 first_effect=25 first_receipt=26 final_effect=64 final_receipt=65
+--- PASS: TestGoldenF3_139 (0.03s)
+PASS
+ok  	github.com/Darius-PJ/dwarf-harness/contract/ledger	1.667s

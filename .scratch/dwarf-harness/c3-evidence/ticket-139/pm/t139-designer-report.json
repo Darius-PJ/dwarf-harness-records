@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "briefPath": "local://t139-brief.md",
+  "choices": "P1–P12",
+  "slices": ["S1: complete additive contract and freeze", "S2: Core reducer, producer and queries", "S3: recovery, concurrency and frozen-record regressions"],
+  "proposedTypes": ["runtime.resource_registered", "runtime.work_domain_registered", "runtime.declaration_changed", "runtime.registration_receipt"],
+  "sharedFileCollisions": "Exact paths, hooks and mechanical tuple migrations in §7.2; primary-owned cache integration fallback included.",
+  "conditionalOwnerGates": ["OG-BREAK", "OG-DEP", "OG-TOOLCHAIN", "OG-D52", "OG-POLICY", "OG-OWNER"],
+  "unresolvedQuestions": [],
+  "notesForRuling": ["Explicitly rule external-only UUID-key resources, audience scope, pinned declarations, assignment-independent task links and fifth-family dispatch.", "All six criteria mapped to proof; no T139→T140 dependency or competing cache.", "Design only. No repository edits, commands, freeze or implementation evidence claimed."]
+}

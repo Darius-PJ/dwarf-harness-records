@@ -1,0 +1,90 @@
+{
+  "status": "PRIVATE_DRIVER_SOURCE_READY_PENDING_FINAL_SUBJECT_AND_GRANTS",
+  "path": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/run-risk.ps1",
+  "sha256": "ac51e8a54decb193bc589336b2798949ecba87a772bb05f8bff7829f764acc27",
+  "sourcePattern": "Narrow adaptation of the supplied S2 run-final.ps1 Run-Command/Run-RuleBreak pattern; exactly two fixed reviewed mutation plans, no general mutation framework",
+  "mandatoryParameters": ["GrantReference", "ExpectedSubject"],
+  "binding": {
+    "provisionalSourceBase": "67d9636d6c70ba8cab2810bcec81c31a6c5df914",
+    "notPromisedExecutionSubject": true,
+    "preLaunchRequirement": "Primary must name its actual FINAL CUMULATIVE prefix first. PM must refresh ReviewedSubject, the exact proposal/PlanHash, every original source hash and anchor, and SourceHashes including the actual cumulative helper/codec files; review and checksum the resulting private driver again. No retarget/readoption is performed by this driver.",
+    "guard": "Mandatory ExpectedSubject must equal the source-bound ReviewedSubject before creating the run directory. A finite read-only git rev-parse --verify HEAD must then match it. The reviewed proposal hash, all listed source hashes and each unique mutation anchor are checked before product mutation.",
+    "futurePermission": "The supplied grant reference records primary's real explicit permissions; it does not issue them. Both temporary product permissions and the local-Go slot remain ungranted."
+  },
+  "cwd": "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance",
+  "environmentOverrides": {
+    "GOTOOLCHAIN": "local",
+    "GOFLAGS": "",
+    "GOROOT": "C:/Program Files/Go",
+    "GOOS": "windows",
+    "GOARCH": "amd64",
+    "CGO_ENABLED": "0"
+  },
+  "environmentRecording": "Every native command records these explicit overrides. Runner input also records inherited environment variable names without copying secret values.",
+  "finiteSerialScope": {
+    "readOnlySubjectCommand": {
+      "executable": "Host git.exe resolved with Get-Command at the separately granted launch",
+      "argv": ["rev-parse", "--verify", "HEAD"],
+      "deadlineSeconds": 30
+    },
+    "goExecutable": "C:/Program Files/Go/bin/go.exe",
+    "maximumGoCommands": 4,
+    "sequence": [
+      {
+        "phase": "withdrawal-install-omitted red",
+        "argv": ["test", "-count=1", "-v", "-timeout=19m", "./internal/core/agents", "-run", "^TestRegistrationInjectedCrashRecovery$/^durable_before_install$"],
+        "deadlineSeconds": 1200
+      },
+      {
+        "phase": "same-target restored green after proved withdrawal red and byte-identical restore",
+        "argv": ["test", "-count=1", "-v", "-timeout=19m", "./internal/core/agents", "-run", "^TestRegistrationInjectedCrashRecovery$/^durable_before_install$"],
+        "deadlineSeconds": 1200
+      },
+      {
+        "phase": "external-grant-needs-registration red",
+        "argv": ["test", "-count=1", "-v", "-timeout=19m", "./internal/core/agents", "-run", "^TestRegistrationPaidHistoryRecovery$"],
+        "deadlineSeconds": 1200
+      },
+      {
+        "phase": "same-target restored green after proved authority red and byte-identical restore",
+        "argv": ["test", "-count=1", "-v", "-timeout=19m", "./internal/core/agents", "-run", "^TestRegistrationPaidHistoryRecovery$"],
+        "deadlineSeconds": 1200
+      }
+    ],
+    "cleanupBounds": "taskkill: 10 seconds, then at most 10 seconds to reap taskkill; requested-process reap: 30 seconds; stream collection: at most 30 seconds per stream. No retries.",
+    "parentToolTimeoutSeconds": 0,
+    "excluded": ["Go version/setup commands", "baseline/full-package tests", "formatting", "lint", "smoke", "race", "fuzz", "tools/check", "Git writes", "additional or stacked mutants"]
+  },
+  "evidenceAndSafety": {
+    "archives": "Exact original and mutant bytes, computed unified diff, original/mutant/restored hashes, reviewed proposal and runner, source-binding checks, raw separate Go stdout/stderr, exact argv/cwd/environment overrides, actual exit/deadline/reap/stream/timestamp/duration metadata and per-mutant proofs",
+    "M1": "Requires the actual durable_before_install child marker with Before=50, EffectSequence=52, Sequence=53 and version-3 empty-consumer receipt; positive child reap/exit 73; unchanged Service replay through 53; then the public recovered active-v2 versus wanted empty-v3 assertion in the named failing subtest. Earlier fixture failures are not accepted as this red.",
+    "M2": "Separately classifies the public Open refusal at the actual first frozen external-grant group (seqs 27-29), or the observed first live delegation refusal. Public Open failure never claims that delegation was reached.",
+    "honestOutcomes": "Compile/build failure, timeout, unrelated failure, unexpected evidence shape, a target that did not run, and a genuine survived-or-masked target are distinct unproved outcomes. A zero exit is called survival only if the named target actually passed.",
+    "restoration": "Every attempted mutant is restored with exact original bytes in finally, including partial-write and handled process errors. Both byte comparison and SHA256 equality are required before green. No second mutant can coexist with the first.",
+    "stopPolicy": "An unproved red is restored and stops before any green/second mutant for PM ruling. A proved red permits only its same-target restored green. Failed/unproved restored green also stops. No automatic weakening or retries.",
+    "externalTerminationLimit": "External termination of the PowerShell process cannot execute finally. Keep the parent deadline disabled and do not terminate an installed-mutant run; archived originals and interim proof remain available for PM recovery. An unreaped process explicitly prevents release of the compute slot."
+  },
+  "observedNow": {
+    "status": "Source written and checksum captured only",
+    "parserExecution": false,
+    "runnerExecution": false,
+    "mutantsInstalled": false,
+    "goCommands": [],
+    "worktreeSourceOrProductEdits": [],
+    "retargetOrNew140SourceAdoption": false,
+    "checksumCommand": {
+      "executable": "powershell.exe",
+      "argv": ["-NoProfile", "-NonInteractive", "-Command", "Get-FileHash -Algorithm SHA256 -LiteralPath 'C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/run-risk.ps1' | Select-Object Path,Hash | ConvertTo-Json"],
+      "cwd": "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance",
+      "environmentOverrides": {},
+      "timeoutSeconds": 30,
+      "exitCode": null,
+      "durationSeconds": null,
+      "toolResult": "Completed with the requested SHA256 record and no failure reported; numeric process exit code and duration were not exposed by the tool response",
+      "actualOutput": {
+        "Path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\run-risk.ps1",
+        "Hash": "AC51E8A54DECB193BC589336B2798949ECBA87A772BB05F8BFF7829F764ACC27"
+      }
+    }
+  }
+}

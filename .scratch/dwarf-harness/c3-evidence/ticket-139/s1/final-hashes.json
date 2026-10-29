@@ -1,0 +1,31 @@
+{
+  "finalHashes": {
+    "contract/ledger/registration.go": "02345d1412c33261df9ad5f22e037fd58ae5dda67df2d02ba9e340519a237715",
+    "contract/ledger/registration_submission.go": "219fe33b301ac334014429c4949ce29d2fb309718e16721a9cd7b5edf702d3f3",
+    "contract/ledger/registration_test.go": "42185f48ec0e51721742527706a138ed5144bed8f20f2c1572835d2c66f5a48b",
+    "contract/ledger/registration_fuzz_test.go": "56693358dc9bad9cd1990bba6d75dcb2ac9b91acf7c7d4fd8e2343414ba6d10f",
+    "contract/ledger/registration_golden_test.go": "f4d9b5778d2936b4ccada58e549a746dd25f6a27289624c0cd4c898f5fca8c37",
+    "contract/ledger/catalogue.go": "c858bb6ae564f60501091d48070a0a9f8e51be544a20ca756148dca656f029c0",
+    "contract/ledger/doc.go": "153bfbe24ba06252606ede402c7de74b7d9f9ceadcd48ed5ecd50ba315caa457",
+    "contract/ledger/paid_compatibility_test.go": "3e236cb3bbd2006ffae0582215c476c26e8ac492e354fd85e3f87daba812e8f7",
+    "contract/ledger/catalogue_test.go": "8c042f0265260fed837ca1ab532113ddda4eab033c36ec0d995286ac555d939f",
+    "contract/ledger/testdata/f3/139/bodies/e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5": "e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5",
+    "contract/ledger/testdata/f3/139/log/00000000000000000001.jsonl": "db1476e07b355d909dfb07cce79f142387469618709bc52a3f496395b94c5134",
+    "contract/ledger/testdata/f3/139/objects/a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b": "a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b",
+    "contract/ledger/testdata/f3/139/objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "goldens": {
+    "contract/ledger/testdata/f3/139/bodies/e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5": "e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5",
+    "contract/ledger/testdata/f3/139/log/00000000000000000001.jsonl": "db1476e07b355d909dfb07cce79f142387469618709bc52a3f496395b94c5134",
+    "contract/ledger/testdata/f3/139/objects/a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b": "a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b",
+    "contract/ledger/testdata/f3/139/objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "restoration": {
+    "helperSHA256Before": "1c954596b2e148581ae2fa738966273667b337b00c501711467b5f4d5d906e1e",
+    "helperSHA256After": "1c954596b2e148581ae2fa738966273667b337b00c501711467b5f4d5d906e1e",
+    "helperByteIdentical": true,
+    "temporaryProbeAbsent": true
+  },
+  "unchangedOldFixtureCount": 42,
+  "noCR": true
+}

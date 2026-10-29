@@ -1,0 +1,21 @@
+{
+  "status": "Actual primary grant received and delegated; launch not yet observed",
+  "grantReference": "primary-t139-s3-8a17-20261029-slot3",
+  "subject": "8a17ec1ed2617ca2a4e5203479f75f363b359970",
+  "ownerOverride": false,
+  "ownerWait": "Satisfied by actual fresh PRIMARY response, not assumed authority",
+  "primaryRead": "ALL4owned source hunks079A and144private data lines17B6; actual6changed-file hashes matched",
+  "crashSourceSHA256": "36ae613b18c7c6ee5950ff096ed146288a8f920560a0423f473ee48724256f6d",
+  "privateHashes": {
+    "final-commands.json": "2230e5613e756c97fd42651a578c9eefbcab39ef40109d27e382ae79921c24cb",
+    "run-risk.ps1": "822e80ce8c43ee200731ef881d571201ffc3db2de094b85c9e6cb236151c0d58",
+    "run-risk-source.json": "241f48869c9023008da5f4d40195cf1d1d6e00f721f94ff0b6c4faa89a9705e5",
+    "run-final.ps1": "bb3039028d78a04c969711b35d40cdd97a54800fc09bc816da06f2ce4566e149"
+  },
+  "manifestSHA256": "f5f1f2c2313ef9fdb4a476113615f7ebf632be110672fb7cd32ea1f93b3ee3ef",
+  "unchanged84": "Reuse actual slot2post-stop proof, future risk guard85still required",
+  "priorStops": "Both UNPROVED retained; no semanticred/green relabel",
+  "scope": "Exact same at-most4riskGo, only both genuine red/restoredgreen then same final; no additional source/CLI/probe/baseline/Git authority",
+  "fullPrimaryRelease": true,
+  "nativeLaunchObserved": false
+}

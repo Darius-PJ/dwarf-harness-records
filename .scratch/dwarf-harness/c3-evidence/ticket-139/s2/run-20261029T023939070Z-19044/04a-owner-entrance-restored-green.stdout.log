@@ -1,0 +1,6 @@
+=== RUN   TestRegistrationAuthorityAndIdentity
+=== PAUSE TestRegistrationAuthorityAndIdentity
+=== CONT  TestRegistrationAuthorityAndIdentity
+--- PASS: TestRegistrationAuthorityAndIdentity (0.30s)
+PASS
+ok  	github.com/Darius-PJ/dwarf-harness/internal/core/agents	3.371s

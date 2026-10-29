@@ -1,0 +1,1 @@
+{"command": ["C:/Program Files/Go/bin/go.exe", "tool", "staticcheck", "./contract/ledger"], "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration", "environment": {"GOTOOLCHAIN": "local", "GOFLAGS": "", "CGO_ENABLED": "0", "GOOS": "windows", "GOARCH": "amd64"}}

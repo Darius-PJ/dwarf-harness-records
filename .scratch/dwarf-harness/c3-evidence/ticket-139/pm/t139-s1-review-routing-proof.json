@@ -1,0 +1,9 @@
+{
+  "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\ReviewT139S1Astra.jsonl",
+  "model": "openai-codex/gpt-6-astra",
+  "fallback": false,
+  "thinkingLevel": "max",
+  "readOnly": true,
+  "spawns": "",
+  "agent": "advisor-astra"
+}

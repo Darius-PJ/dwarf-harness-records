@@ -1,0 +1,6 @@
+=== RUN   TestRegistrationPaidHistoryRecovery
+=== PAUSE TestRegistrationPaidHistoryRecovery
+=== CONT  TestRegistrationPaidHistoryRecovery
+--- PASS: TestRegistrationPaidHistoryRecovery (0.65s)
+PASS
+ok  	github.com/Darius-PJ/dwarf-harness/internal/core/agents	2.853s

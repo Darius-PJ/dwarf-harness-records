@@ -1,0 +1,14 @@
+{
+  "recordedAt": "2026-10-29T13:48:04.450424-04:00",
+  "allocation": "B34TOticket139shortclosingrecord",
+  "authority": "PrimaryPMsharedlogcoordinationMailboxE1A4683\u2013695",
+  "actualLogRead": "DECISIONSheadinggrepBAF6lastB33;D155publishedprivate63f2026",
+  "entryApplied": false,
+  "entryApproved": false,
+  "nextFreeB": "B35UNALLOCATEDnotreservedfor140or13",
+  "nextD": "D156UNALLOCATED",
+  "ownerOriginForFutureEntry": "assistantwithinexistingdelegatedD117authority;no newownerpolicy/freeze",
+  "sharedPublicRowRestriction": "SecondarydraftsTicket139+pairedC3Core516/Roadmaps171+pairedU3Under309/Roadmaps189;primary140NOconcurrenteditsthose4rows untiljointapproval/integration;keepC3U3inprogress/allotherreadinessgates",
+  "privateAuthority": "No secondarymain/privatewriteorpush;draftjointreviewbeforeclosingapplication",
+  "sourceProof": "Final1123/d045/allremainingPASS/exactpriorrisk+CLIbridge;freshdualreviews+exactfinalbranchhostedfullcheckremain"
+}

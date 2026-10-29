@@ -1,0 +1,54 @@
+[
+    {
+        "name":  "withdrawal-install-omitted",
+        "path":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-acceptance\\internal\\core\\agents\\registration_state.go",
+        "target":  "TestRegistrationInjectedCrashRecovery/durable_before_install",
+        "expectedFailure":  "Expected at public DeclarationStatus after the durable-before-install child and Store.Open/Service.Open: retained active version 2 instead of the newly committed empty-consumer version 3. Prior-history checks concern only the 14 complete groups through seq 50, so earlier golden withdrawals cannot confound this red.",
+        "diff":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\risk-20261029T171230684Z-18452\\withdrawal-install-omitted.patch",
+        "originalSource":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\risk-20261029T171230684Z-18452\\withdrawal-install-omitted.original.go",
+        "originalSHA256":  "5fd211ee66aef9b73e985f4fa4fd8ff461dab8725ed3ea1c240785fd787287fa",
+        "mutantSource":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\risk-20261029T171230684Z-18452\\withdrawal-install-omitted.mutant.go",
+        "mutantSHA256":  "69d4929eaf065680f7787149c7a7adfc81419ce9130bc1cef9a8251e7c162fc0",
+        "restoredSHA256":  "5fd211ee66aef9b73e985f4fa4fd8ff461dab8725ed3ea1c240785fd787287fa",
+        "byteIdenticalRestoration":  true,
+        "red":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\risk-20261029T171230684Z-18452\\withdrawal-install-omitted-red.json",
+        "green":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\risk-20261029T171230684Z-18452\\withdrawal-install-omitted-restored-green.json",
+        "classification":  "killed-by-expected-regression",
+        "observedBoundary":  "public-recovered-declaration-after-durable-child-boundary",
+        "evidence":  [
+                         "    registration_crash_test.go:107: child wait: reaped=true state=exit status 73 error=exit status 73 output={\"Boundary\":\"durable_before_install\",\"Before\":50,\"Digest\":\"1e4f079872bb76359dd6afdebc8307e2a041cb713137f6da724264581bfcaa44\",\"Receipt\":{\"command_id\":\"019a0700-0000-7000-8000-00000000364c\",\"submission_sha256\":\"1e4f079872bb76359dd6afdebc8307e2a041cb713137f6da724264581bfcaa44\",\"submission\":{\"schema\":5,\"actor\":\"owner\",\"origin\":{\"agent_id\":\"019a1390-0000-7000-8000-000000000100\",\"session_id\":\"019a1390-0000-7000-8000-000000000101\",\"context_id\":\"019a1390-0000-7000-8000-000000000102\"},\"operation\":\"declaration.set\",\"arguments\":{\"declaration_id\":\"019a1390-0000-7000-8000-000000000500\",\"expected_version\":2,\"subject\":{\"kind\":\"resource\",\"id\":\"019a1390-0000-7000-8000-000000000400\",\"version\":2},\"audience\":[\"019a1390-0000-7000-8000-000000000100\"],\"consumers\":[]}},\"outcome\":\"applied\",\"version\":3},\"EffectSequence\":52,\"Sequence\":53,\"Cut\":0}",
+                         "agents.Open: durable=53 ledger_unchanged=true",
+                         "    registration_crash_test.go:202: partial or missing declaration recovery: {Record:{DeclarationID:019a1390-0000-7000-8000-000000000500 ExpectedVersion:1 Version:2 Subject:{Kind:resource ID:019a1390-0000-7000-8000-000000000400 Version:2} Audience:[019a1390-0000-7000-8000-000000000100] Consumers:[{Kind:context TaskID:00000000-0000-0000-0000-000000000000 Binding:{AgentID:019a1390-0000-7000-8000-000000000100 ContextID:019a1390-0000-7000-8000-000000000103}} {Kind:task TaskID:019a1390-0000-7000-8000-000000000300 Binding:{AgentID:00000000-0000-0000-0000-000000000000 ContextID:00000000-0000-0000-0000-000000000000}}]} Origin:{AgentID:019a1390-0000-7000-8000-000000000100 SessionID:019a1390-0000-7000-8000-000000000101 ContextID:019a1390-0000-7000-8000-000000000102} EffectSequence:49 ReceiptSequence:50 ThroughSequence:53} want {Record:{DeclarationID:019a1390-0000-7000-8000-000000000500 ExpectedVersion:2 Version:3 Subject:{Kind:resource ID:019a1390-0000-7000-8000-000000000400 Version:2} Audience:[019a1390-0000-7000-8000-000000000100] Consumers:[]} Origin:{AgentID:019a1390-0000-7000-8000-000000000100 SessionID:019a1390-0000-7000-8000-000000000101 ContextID:019a1390-0000-7000-8000-000000000102} EffectSequence:52 ReceiptSequence:53 ThroughSequence:53}: \u003cnil\u003e"
+                     ],
+        "classifierError":  null,
+        "driverError":  null,
+        "restorationError":  null,
+        "greenClassification":  "restored-green",
+        "requiresPMRuling":  false
+    },
+    {
+        "name":  "external-grant-needs-registration",
+        "path":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-acceptance\\internal\\core\\agents\\scoped_state.go",
+        "target":  "TestRegistrationPaidHistoryRecovery",
+        "expectedFailure":  "The public Service refuses valid frozen F3-13 external-grant history on Open, or refuses real delegation of the valid existing grant before registration. The former is an anticipated public historical-compatibility failure, not a claimed live delegation observation.",
+        "diff":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\risk-20261029T171230684Z-18452\\external-grant-needs-registration.patch",
+        "originalSource":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\risk-20261029T171230684Z-18452\\external-grant-needs-registration.original.go",
+        "originalSHA256":  "2c232bb2af3f6ba6dc90d47ba503c71dad585ef8d4bdaf5c2592cc1490bb0e9e",
+        "mutantSource":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\risk-20261029T171230684Z-18452\\external-grant-needs-registration.mutant.go",
+        "mutantSHA256":  "588c55bb5bbaa58bcdf37eef6ce530162445e65bf2ed0707986157e15f5723c3",
+        "restoredSHA256":  "2c232bb2af3f6ba6dc90d47ba503c71dad585ef8d4bdaf5c2592cc1490bb0e9e",
+        "byteIdenticalRestoration":  true,
+        "red":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\risk-20261029T171230684Z-18452\\external-grant-needs-registration-red.json",
+        "green":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\risk-20261029T171230684Z-18452\\external-grant-needs-registration-restored-green.json",
+        "classification":  "killed-by-expected-regression",
+        "observedBoundary":  "public-Service-Open-before-delegation",
+        "evidence":  [
+                         "    registration_recovery_test.go:176: agents: inconsistent record at sequence 27: invalid scoped transition: agents: unavailable"
+                     ],
+        "classifierError":  null,
+        "driverError":  null,
+        "restorationError":  null,
+        "greenClassification":  "restored-green",
+        "requiresPMRuling":  false
+    }
+]

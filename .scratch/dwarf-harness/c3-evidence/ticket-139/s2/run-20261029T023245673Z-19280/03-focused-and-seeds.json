@@ -1,0 +1,32 @@
+{
+    "name":  "03-focused-and-seeds",
+    "executable":  "C:/Program Files/Go/bin/go.exe",
+    "argv":  [
+                 "test",
+                 "-v",
+                 "-count=1",
+                 "-timeout=19m",
+                 "-run",
+                 "^(TestRegistration.*|FuzzRegistrationGroupReplay|FuzzScopedGroupReplay|FuzzReviewGroupReplay|FuzzPaidGroupReplay|FuzzPrivateGroupReplay)$",
+                 "./internal/core/agents"
+             ],
+    "cwd":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration",
+    "environmentOverrides":  {
+                                 "GOTOOLCHAIN":  "local",
+                                 "GOFLAGS":  "",
+                                 "GOROOT":  "C:/Program Files/Go",
+                                 "GOOS":  "windows",
+                                 "GOARCH":  "amd64",
+                                 "CGO_ENABLED":  "0"
+                             },
+    "timeoutSeconds":  1200,
+    "startedUTC":  "2026-10-29T02:32:46.5423476Z",
+    "finishedUTC":  "2026-10-29T02:33:06.6812273Z",
+    "elapsedSeconds":  20.1381574,
+    "exitCode":  1,
+    "timedOut":  false,
+    "error":  null,
+    "stdout":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023245673Z-19280\\03-focused-and-seeds.stdout.log",
+    "stderr":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023245673Z-19280\\03-focused-and-seeds.stderr.log",
+    "metadata":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023245673Z-19280\\03-focused-and-seeds.json"
+}

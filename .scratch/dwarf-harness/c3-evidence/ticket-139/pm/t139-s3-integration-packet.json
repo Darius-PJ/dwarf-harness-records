@@ -1,0 +1,179 @@
+{
+  "status": "APPROVED_EXACT_SHA_HOSTED_GREEN_READY_FOR_PRIMARY_INTEGRATION",
+  "ticket": 139,
+  "slice": "S3 interruptedrecovery/crossfamilyacceptance +oneclosingdoccommit",
+  "finalPublicSHA": "84d0ced9446168777c7b7bfa3382974977bf27ed",
+  "reviewedCodeSHA": "f92a5ef25b15cab47769cf76ff1af2eb86b23e25",
+  "baseSHA": "8a17ec1ed2617ca2a4e5203479f75f363b359970",
+  "branch": "build/139-acceptance",
+  "worktree": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-acceptance",
+  "commits": [
+    {
+      "sha": "f92a5ef25b15cab47769cf76ff1af2eb86b23e25",
+      "parent": "8a17ec1ed2617ca2a4e5203479f75f363b359970",
+      "scope": "ONLY2newtests/682insertions"
+    },
+    {
+      "sha": "84d0ced9446168777c7b7bfa3382974977bf27ed",
+      "parent": "f92a5ef25b15cab47769cf76ff1af2eb86b23e25",
+      "scope": "ONE D116closingdoccommit/4existingpublicfiles/15insertions11deletions"
+    }
+  ],
+  "verdicts": {
+    "standards": {
+      "verdict": "approve",
+      "findings": [],
+      "ownerGates": [],
+      "confirmationNeeded": false,
+      "actualFinalMessageID": "7be38b8d",
+      "verbatimReport": "local://t139-s3-standards-yield.md",
+      "JSON": "local://t139-s3-standards-review.json"
+    },
+    "spec": {
+      "verdict": "approve",
+      "findings": [],
+      "ownerGates": [],
+      "confirmationNeeded": false,
+      "actualFinalMessageID": "1d2520e4",
+      "verbatimReport": "local://t139-s3-spec-yield.md",
+      "JSON": "local://t139-s3-spec-review.json"
+    }
+  },
+  "reviewProvenance": {
+    "role": "advisor-astra",
+    "actualModel": "openai-codex/gpt-6-astra",
+    "actualEffort": "max",
+    "fallback": false,
+    "routing": "local://t139-s3-review-routing-proof.json",
+    "jointClosingDraftSHA256": "003ce6eaa63db35972f2857d4929de7aca240df4c9a66da3c34d42b77784c45b",
+    "jointPrivateSourceIndexSHA256": "b0fb823b16505ea7be2bee79d66fd893a146b6b83865003c932d7840c5bef435",
+    "primaryJointApproval": "local://t139-primary-joint-closing-approval.txt",
+    "noNewReviewRequested": true
+  },
+  "finalHashes": {
+    "internal/core/agents/registration_crash_test.go": "1123794587c8486dd276a6463e88718870f62d9db7f4526ac1d41051ba9ac564",
+    "internal/core/agents/registration_recovery_test.go": "d045d9705df2b4fb4f8c0d4db319ef29ccc40693d4dda47e6338165fb033aa53",
+    ".scratch/dwarf-harness/issues/139-register-shared-resources-and-work-domains-through-core.md": "58e34215e328d73bfa8757576d4f9216a6b383614582cd9d6e7ad639c9454859",
+    "docs/ROADMAP-CORE.md": "a2ee264bde3b25b8c161b01215f612108d2ae1f672945d0cba72bcef2efdf86d",
+    "docs/ROADMAPS.md": "d8e99a169f28c11961e0c9555a8c0e9774ba48286ad73ed331e783be52131e4f",
+    "docs/ROADMAP-UNDERCURRENT.md": "d0e59b9e8a4c22ef747436308e22b861e4ec23a0ce10754328678ee5efc2fed0"
+  },
+  "finalHashAndRecordBridge": "local://t139-s3-public-proof.json",
+  "publicRecordApplicationAndLinksLF": "local://t139-s3-public-record-application.json",
+  "hosted": {
+    "runID": 40929620085,
+    "runNumber": 11,
+    "attempt": 1,
+    "exactSHA": "84d0ced9446168777c7b7bfa3382974977bf27ed",
+    "URL": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40929620085",
+    "status": "completed",
+    "conclusion": "success",
+    "updatedAt": "2026-10-29T18:56:02Z",
+    "all5RequiredJobsSuccess": true,
+    "all3ActualFullCheckStepsSuccess": true,
+    "jobs": [
+      {
+        "name": "changes",
+        "id": 123644271295,
+        "URL": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40929620085/job/123644271295",
+        "conclusion": "success"
+      },
+      {
+        "name": "Check / linux-amd64",
+        "id": 123644346515,
+        "URL": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40929620085/job/123644346515",
+        "conclusion": "success"
+      },
+      {
+        "name": "Check / macos-arm64",
+        "id": 123644346609,
+        "URL": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40929620085/job/123644346609",
+        "conclusion": "success"
+      },
+      {
+        "name": "Check / windows-amd64",
+        "id": 123644346672,
+        "URL": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40929620085/job/123644346672",
+        "conclusion": "success"
+      },
+      {
+        "name": "Check result",
+        "id": 123664481951,
+        "URL": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40929620085/job/123664481951",
+        "conclusion": "success"
+      }
+    ],
+    "fullResult": "local://t139-s3-ci-result.json",
+    "rawAttemptJobs": "local://t139-s3-ci-jobs.json",
+    "limits": "Actual full3OS/raceworkflow passed; no localfullgate repeated. Job/fullcheckstep time is not package/race or quantitativeperformance proof."
+  },
+  "publication": "local://t139-s3-publication.json:guard2commits701addedlinesclean/nooverride/exit0/remoteEXACT84d0/14:18:44EDT",
+  "actualLocalEvidence": {
+    "root": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\remaining-20261029T173807547Z-9144",
+    "authorReport": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\remaining-20261029T173807547Z-9144\\author-final-report.json",
+    "nativeCalls": 10,
+    "allPassedReapedStreamsComplete": true,
+    "focus": "ALL4realcrashboundaries",
+    "plain": {
+      "topTestsPASS": 182,
+      "topFuzzPASS": 5,
+      "allRowsPASS": 1367,
+      "FAIL": 0,
+      "SKIP": 0,
+      "registrationOrdinarySeedsPASS": 24
+    },
+    "childrenPositivelyReaped": 8,
+    "moduleF3Complete39Unchanged": true,
+    "unchangedHelperTargetBindings10": true,
+    "postcommitAndPrecommitMeaning": "Uncommitted firstrecoverySubmit legitimately applies; committedrows recoverchildoriginaleffect52/receipt53/v3empty; matchingretry no duplicate; CoreOpen ledgerunchanged inall4; Storetornrepairseparate",
+    "notClaimed": "Powerloss/OSdevicefailure/measurement/newlocalrace-x20-timedfuzz-fullgate"
+  },
+  "retainedProofBridge": {
+    "sourceDelta": "Exactly Receipt json.RawMessage gets json:\",omitempty\" in test-private signal; no parent/assertion/row/selection/product change",
+    "absence": "Nil/zero-length RawMessage is omitted by the child; the unchanged parent zero-length/no-effect check still applies",
+    "nonempty": "Nonempty committed receipt keeps the same default Receipt field name and JSON object bytes; M1 durable/committed path is unchanged",
+    "noRerun": "Retain actual slot3two semantic reds/exactrestore/identicalgreens and realServiceCLI proof; no repeats/CLI recreation",
+    "riskEvidence": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\risk-20261029T171230684Z-18452",
+    "lastRestoration85": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\risk-20261029T171230684Z-18452\\external-grant-needs-registration-after-green.source-hashes.json",
+    "smokeAndFocusEvidence": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\run-20261029T171317887Z-19436",
+    "smokeArchive": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\run-20261029T171317887Z-19436\\smoke-main.go",
+    "smokeArchiveSHA256": "80463d040929445e6f53811f3fb2b3d98876dee9cb0b64b1228bbc0dc66a3036",
+    "smokeRemoval": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\run-20261029T171317887Z-19436\\smoke-source-and-removal.json"
+  },
+  "wholeTicketPriorSlices": [
+    {
+      "slice": "S1",
+      "SHA": "34090c3b634b9854904671c336db91c350e6328c",
+      "status": "Alreadyapproved/fullhostedgreen/primaryintegrated",
+      "packet": "local://t139-s1-integration-packet.json",
+      "CI": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40794776982",
+      "freeze": "D154beforeCoreproducer"
+    },
+    {
+      "slice": "S2",
+      "SHA": "67d9636d6c70ba8cab2810bcec81c31a6c5df914",
+      "status": "Alreadydualapproved/fullhostedgreen/primaryintegrated",
+      "packet": "local://t139-s2-integration-packet.json",
+      "CI": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40810219344"
+    }
+  ],
+  "privateRecords": {
+    "B34": "ContentjointlyapprovedDRAFT; primaryactualdate/tailreanchor/app/copies/privatepushONLY",
+    "exactDraft": "local://t139-closing-edits.md:R8",
+    "approvedSourceRetentionPlan": "local://t139-closing-evidence-sources.json",
+    "canonicalRoot": ".scratch/dwarf-harness/c3-evidence/",
+    "observedSourceHashFollowthrough": "Finalimmutable-sourcecopyindex follows actualCI/notes/Fablemetadata; planunchanged, no futurefacts",
+    "Fable": "Whole-ticket packetretained local://fable-verification-request.md; held/notrun; appendactualprimaryintegrationreceiptswhenobserved",
+    "finalObservedSourceIndex": "local://t139-final-evidence-sources.json"
+  },
+  "integrationNotes": [
+    "Primary alone owns main/private refs. Fast-forward ONLY exactapproved84d0 after its successfulCheck11; verify currentmain as your mutationprerequisite, not an instruction for secondary to query/rebase.",
+    "No secondarymain/privateedit/push. No rebase/reset/force/newdependency/frozenbreakingchange or newownergate.",
+    "Parent8a17 includes primary140helper/codec; no139cache/reducer, no140branch/acceptance/numericthreshold/policy change.139close doesnotwaiton140ownerquestion.",
+    "PublicR1\u2013R7exact only; C3/U3stayInprogress.13verification/14/15/17/C4/graph/actionfacts/provider/view/consumer readiness fences unchanged; no139direct15blocker.",
+    "Retain allhonestlauncher/IPC/null-signalstops and real successfulrisks/smoke separately; no retrospective red or duplicate proof.",
+    "All139author/reviewersparked/FULLAUTHOR+PMGoRelease/no pendingnative/no idlecompute reservation. Preserve unrelated mainuserfiles.",
+    "Publicmain/privateapplication/integrationreceipts not yet supplied or claimed. Secondary hands exactSHA/evidence over; no mainmove bysecondary."
+  ],
+  "wholeTicketHandoff": "local://t139-final-handoff.md"
+}

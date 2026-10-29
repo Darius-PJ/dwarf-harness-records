@@ -1,0 +1,2 @@
+{"command": ["C:/Program Files/Go/bin/go.exe", "list", "-deps", "-f", "{{if not .Standard}}{{.ImportPath}}{{end}}", "./contract/ledger"], "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration", "environment": {"GOTOOLCHAIN": "local", "GOFLAGS": "", "CGO_ENABLED": "0", "GOOS": "windows", "GOARCH": "amd64"}}
+github.com/Darius-PJ/dwarf-harness/contract/ledger

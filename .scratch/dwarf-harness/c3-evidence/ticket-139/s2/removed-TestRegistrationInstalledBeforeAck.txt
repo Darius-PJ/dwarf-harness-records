@@ -1,0 +1,42 @@
+Removed with explicit PM approval before any execution.
+Reason: this test pins query/I/O behavior by requiring a status query to ignore an authoritative log error. That is not a valid observable contract. No production integrity validation was changed or relaxed.
+Original source: internal/core/agents/registration_replay_test.go, lines 482-516 in snapshot 4565.
+Replacement evidence: TestRegistrationCommitRetryAndClose/installed-lost-ack-and-cancel, with deterministic hook/result-channel observation and the single Background-to-caller-ctx postcommit refresh mutant.
+
+Exact removed function:
+
+func TestRegistrationInstalledBeforeAck(t *testing.T) {
+	t.Parallel()
+	ctx := context.Background()
+	f := newServiceFixture(t, serviceDeps{})
+	a := registerPrivate(t, f.service, 100)
+	request := registrationRequest(a, 300, 400, "installed-before-ack")
+	f.service.deps.afterRegistrationCommit = func(receipt RegistrationReceipt) error {
+		// A normal status query can refresh a missing installation itself.
+		// Make that repair impossible during this observation: the validated
+		// current projection must answer without rereading the committed log.
+		segment := filepath.Join(f.store.LogDir(), ledger.SegmentName(1))
+		saved := readTestFile(t, segment)
+		defer writeTestFile(t, segment, saved)
+		broken := bytes.Clone(saved)
+		broken[len(broken)-2] = '!'
+		writeTestFile(t, segment, broken)
+		view, err := f.service.ResourceStatus(ctx, ResourceRegistrationLookup{Resource: request.Resource, ThroughSequence: ledger.ToEnd})
+		if err != nil {
+			return err
+		}
+		if view.Record.Version != 1 || view.ReceiptSequence != receipt.Sequence || view.ThroughSequence != receipt.Sequence {
+			return ErrInconsistent
+		}
+		return nil
+	}
+	receipt, err := f.service.SetResourceRegistration(ctx, a, request)
+	if err != nil || receipt.Version != 1 || f.store.Durable() != receipt.Sequence {
+		t.Fatalf("acknowledgement preceded usable installed projection: %+v %v", receipt, err)
+	}
+	reopenScoped(t, f, DefaultLimits())
+	view, err := f.service.ResourceStatus(ctx, ResourceRegistrationLookup{Resource: request.Resource, ThroughSequence: ledger.ToEnd})
+	if err != nil || view.Record.Version != 1 || view.ReceiptSequence != receipt.Sequence {
+		t.Fatalf("installed state differs from replay: %+v %v", view, err)
+	}
+}

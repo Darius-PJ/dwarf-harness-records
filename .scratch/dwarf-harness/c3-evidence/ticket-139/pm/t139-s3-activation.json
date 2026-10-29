@@ -1,0 +1,52 @@
+{
+  "sourceBase": "67d9636d6c70ba8cab2810bcec81c31a6c5df914",
+  "worktree": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-acceptance",
+  "branch": "build/139-acceptance",
+  "worktreeCreated": true,
+  "creationResult": "HEAD at67d9636; Windows block clone unsupported; ordinary checkout fallback succeeded",
+  "primaryGrant": "C:/Users/darius.jones/Documents/PROJECTS/DwarfHarness/t139-secondary-coordination.md:349-355",
+  "sourceReadEditLSPOnly": true,
+  "computeGranted": false,
+  "productOrSharedEditsGranted": false,
+  "agent": "CoderT139S3",
+  "selector": "coder",
+  "events": [
+    {
+      "type": "model_change",
+      "id": "de85d083",
+      "timestamp": "2026-10-29T03:28:43.603Z",
+      "model": "openai-codex/gpt-6-astra",
+      "resolvedModelIsFallback": false
+    },
+    {
+      "type": "thinking_level_change",
+      "id": "0a08382e",
+      "timestamp": "2026-10-29T03:28:43.612Z",
+      "thinkingLevel": "max"
+    }
+  ],
+  "lspToolAvailable": true,
+  "providerWindows": [
+    {
+      "limit": "anthropic:7d",
+      "used": 1.0,
+      "status": "exhausted",
+      "resets": "2026-10-29 19:00",
+      "recorded": "2026-10-28 23:25"
+    },
+    {
+      "limit": "anthropic:7d:fable",
+      "used": 0.9,
+      "status": "warning",
+      "resets": "2026-10-29 19:00",
+      "recorded": "2026-10-28 23:25"
+    },
+    {
+      "limit": "openai-codex:primary",
+      "used": 0.57,
+      "status": "ok",
+      "resets": "2026-11-04 12:13",
+      "recorded": "2026-10-28 23:20"
+    }
+  ]
+}

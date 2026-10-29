@@ -1,0 +1,7 @@
+{
+    "source":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance/_t139_smoke/main.go",
+    "retainedSource":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\run-20261029T171317887Z-19436\\smoke-main.go",
+    "sha256":  "80463d040929445e6f53811f3fb2b3d98876dee9cb0b64b1228bbc0dc66a3036",
+    "command":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence\\run-20261029T171317887Z-19436\\01-public-service-smoke.json",
+    "removedAfterSuccessfulRun":  true
+}

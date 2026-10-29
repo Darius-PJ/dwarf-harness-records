@@ -1,0 +1,493 @@
+{"command": ["C:/Program Files/Go/bin/go.exe", "test", "-count=1", "-v", "-timeout=19m", "./contract/ledger", "-run", "^(TestRegistration.*|TestGoldenF3_139|FuzzDecodeF3_139)$"], "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration", "environment": {"GOTOOLCHAIN": "local", "GOFLAGS": "", "CGO_ENABLED": "0", "GOOS": "windows", "GOARCH": "amd64"}}
+=== RUN   TestGoldenF3_139
+=== PAUSE TestGoldenF3_139
+=== RUN   TestRegistrationStrictObjects
+=== PAUSE TestRegistrationStrictObjects
+=== RUN   TestRegistrationNestedValidation
+=== PAUSE TestRegistrationNestedValidation
+=== RUN   TestRegistrationVersionsAndSets
+=== PAUSE TestRegistrationVersionsAndSets
+=== RUN   TestRegistrationOpaqueAddress
+=== PAUSE TestRegistrationOpaqueAddress
+=== RUN   TestRegistrationCanonicalSubmission
+=== PAUSE TestRegistrationCanonicalSubmission
+=== RUN   TestRegistrationReceiptBinding
+=== PAUSE TestRegistrationReceiptBinding
+=== RUN   TestRegistrationCompleteInputCap
+=== PAUSE TestRegistrationCompleteInputCap
+=== RUN   TestRegistrationEncodedCaps
+=== PAUSE TestRegistrationEncodedCaps
+=== CONT  TestGoldenF3_139
+=== CONT  TestRegistrationCanonicalSubmission
+=== CONT  TestRegistrationCompleteInputCap
+=== CONT  TestRegistrationEncodedCaps
+=== RUN   TestRegistrationEncodedCaps/runtime.resource_registered
+=== RUN   TestRegistrationCanonicalSubmission/resource.set
+=== PAUSE TestRegistrationEncodedCaps/runtime.resource_registered
+=== RUN   TestRegistrationEncodedCaps/schema-5
+=== PAUSE TestRegistrationCanonicalSubmission/resource.set
+=== PAUSE TestRegistrationEncodedCaps/schema-5
+=== RUN   TestRegistrationCanonicalSubmission/work_domain.set
+=== RUN   TestRegistrationEncodedCaps/runtime.registration_receipt
+=== CONT  TestRegistrationVersionsAndSets
+=== CONT  TestRegistrationOpaqueAddress
+=== PAUSE TestRegistrationCanonicalSubmission/work_domain.set
+=== RUN   TestRegistrationCanonicalSubmission/declaration.set
+=== PAUSE TestRegistrationCanonicalSubmission/declaration.set
+=== RUN   TestRegistrationOpaqueAddress/019a1390-0000-7000-8000-000000000450
+=== CONT  TestRegistrationReceiptBinding
+=== PAUSE TestRegistrationOpaqueAddress/019a1390-0000-7000-8000-000000000450
+=== RUN   TestRegistrationOpaqueAddress/paid-route/019a1390-0000-7000-8000-000000000450
+=== PAUSE TestRegistrationOpaqueAddress/paid-route/019a1390-0000-7000-8000-000000000450
+=== CONT  TestRegistrationNestedValidation
+=== RUN   TestRegistrationOpaqueAddress/Shared_Compute:_East_/_α_&_<queue>_
+=== PAUSE TestRegistrationOpaqueAddress/Shared_Compute:_East_/_α_&_<queue>_
+=== RUN   TestRegistrationOpaqueAddress/_é_
+=== CONT  TestRegistrationStrictObjects
+=== PAUSE TestRegistrationEncodedCaps/runtime.registration_receipt
+=== PAUSE TestRegistrationOpaqueAddress/_é_
+=== RUN   TestRegistrationOpaqueAddress/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+=== PAUSE TestRegistrationOpaqueAddress/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+=== RUN   TestRegistrationStrictObjects/runtime.resource_registered
+=== PAUSE TestRegistrationStrictObjects/runtime.resource_registered
+=== RUN   TestRegistrationNestedValidation/address_missing
+=== PAUSE TestRegistrationNestedValidation/address_missing
+=== RUN   TestRegistrationStrictObjects/runtime.work_domain_registered
+=== RUN   TestRegistrationCompleteInputCap/runtime.resource_registered
+=== PAUSE TestRegistrationCompleteInputCap/runtime.resource_registered
+=== RUN   TestRegistrationVersionsAndSets/create
+=== RUN   TestRegistrationCompleteInputCap/runtime.work_domain_registered
+=== PAUSE TestRegistrationStrictObjects/runtime.work_domain_registered
+=== RUN   TestRegistrationNestedValidation/address_null
+=== PAUSE TestRegistrationNestedValidation/address_null
+=== RUN   TestRegistrationStrictObjects/runtime.declaration_changed
+=== PAUSE TestRegistrationVersionsAndSets/create
+=== PAUSE TestRegistrationCompleteInputCap/runtime.work_domain_registered
+=== PAUSE TestRegistrationStrictObjects/runtime.declaration_changed
+=== RUN   TestRegistrationVersionsAndSets/revision
+=== CONT  TestRegistrationCanonicalSubmission/resource.set
+=== PAUSE TestRegistrationVersionsAndSets/revision
+=== RUN   TestRegistrationNestedValidation/address_wrong_kind_member
+=== RUN   TestRegistrationVersionsAndSets/maximum
+=== PAUSE TestRegistrationVersionsAndSets/maximum
+=== RUN   TestRegistrationVersionsAndSets/overflow
+=== PAUSE TestRegistrationVersionsAndSets/overflow
+=== RUN   TestRegistrationStrictObjects/runtime.registration_receipt
+=== RUN   TestRegistrationVersionsAndSets/skip_version
+=== PAUSE TestRegistrationVersionsAndSets/skip_version
+=== PAUSE TestRegistrationStrictObjects/runtime.registration_receipt
+=== RUN   TestRegistrationVersionsAndSets/negative_expected
+=== RUN   TestRegistrationStrictObjects/schema-5
+=== PAUSE TestRegistrationVersionsAndSets/negative_expected
+=== RUN   TestRegistrationCompleteInputCap/runtime.declaration_changed
+=== PAUSE TestRegistrationStrictObjects/schema-5
+=== PAUSE TestRegistrationNestedValidation/address_wrong_kind_member
+=== CONT  TestRegistrationCanonicalSubmission/declaration.set
+=== PAUSE TestRegistrationCompleteInputCap/runtime.declaration_changed
+=== RUN   TestRegistrationCompleteInputCap/runtime.registration_receipt
+=== PAUSE TestRegistrationCompleteInputCap/runtime.registration_receipt
+=== RUN   TestRegistrationNestedValidation/address_duplicate
+=== PAUSE TestRegistrationNestedValidation/address_duplicate
+=== RUN   TestRegistrationCompleteInputCap/schema-5
+=== RUN   TestRegistrationNestedValidation/resource_nonexternal
+=== PAUSE TestRegistrationNestedValidation/resource_nonexternal
+=== RUN   TestRegistrationNestedValidation/domain_resource_member
+=== RUN   TestRegistrationVersionsAndSets/withdraw
+=== CONT  TestRegistrationCanonicalSubmission/work_domain.set
+=== PAUSE TestRegistrationCompleteInputCap/schema-5
+=== PAUSE TestRegistrationVersionsAndSets/withdraw
+=== CONT  TestRegistrationOpaqueAddress/019a1390-0000-7000-8000-000000000450
+=== RUN   TestRegistrationVersionsAndSets/nil_consumers
+=== PAUSE TestRegistrationVersionsAndSets/nil_consumers
+=== RUN   TestRegistrationVersionsAndSets/empty_audience
+=== PAUSE TestRegistrationVersionsAndSets/empty_audience
+=== RUN   TestRegistrationVersionsAndSets/duplicate_audience
+--- PASS: TestRegistrationReceiptBinding (0.00s)
+=== PAUSE TestRegistrationVersionsAndSets/duplicate_audience
+=== CONT  TestRegistrationOpaqueAddress/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+=== PAUSE TestRegistrationNestedValidation/domain_resource_member
+=== RUN   TestRegistrationNestedValidation/subject_unknown_kind
+=== PAUSE TestRegistrationNestedValidation/subject_unknown_kind
+=== RUN   TestRegistrationNestedValidation/subject_zero_version
+=== RUN   TestRegistrationVersionsAndSets/unordered_audience
+=== PAUSE TestRegistrationNestedValidation/subject_zero_version
+=== PAUSE TestRegistrationVersionsAndSets/unordered_audience
+=== RUN   TestRegistrationNestedValidation/subject_null_id
+=== RUN   TestRegistrationVersionsAndSets/duplicate_consumers
+=== PAUSE TestRegistrationNestedValidation/subject_null_id
+=== RUN   TestRegistrationNestedValidation/consumer_task_binding
+=== PAUSE TestRegistrationVersionsAndSets/duplicate_consumers
+=== CONT  TestRegistrationOpaqueAddress/_é_
+=== RUN   TestRegistrationVersionsAndSets/unordered_consumers
+=== PAUSE TestRegistrationNestedValidation/consumer_task_binding
+=== PAUSE TestRegistrationVersionsAndSets/unordered_consumers
+=== RUN   TestRegistrationNestedValidation/consumer_context_task
+=== PAUSE TestRegistrationNestedValidation/consumer_context_task
+=== RUN   TestRegistrationNestedValidation/consumer_unknown_kind
+=== PAUSE TestRegistrationNestedValidation/consumer_unknown_kind
+=== RUN   TestRegistrationNestedValidation/binding_null
+=== PAUSE TestRegistrationNestedValidation/binding_null
+=== RUN   TestRegistrationNestedValidation/binding_duplicate
+=== RUN   TestRegistrationVersionsAndSets/consumer_foreign_typed_field
+=== PAUSE TestRegistrationVersionsAndSets/consumer_foreign_typed_field
+=== RUN   TestRegistrationVersionsAndSets/kind_scoped_identity
+=== PAUSE TestRegistrationVersionsAndSets/kind_scoped_identity
+=== PAUSE TestRegistrationNestedValidation/binding_duplicate
+=== CONT  TestRegistrationOpaqueAddress/Shared_Compute:_East_/_α_&_<queue>_
+=== RUN   TestRegistrationNestedValidation/origin_null_session
+=== PAUSE TestRegistrationNestedValidation/origin_null_session
+=== RUN   TestRegistrationNestedValidation/origin_duplicate
+=== PAUSE TestRegistrationNestedValidation/origin_duplicate
+=== RUN   TestRegistrationNestedValidation/argument_wrong_operation_field
+=== PAUSE TestRegistrationNestedValidation/argument_wrong_operation_field
+=== RUN   TestRegistrationNestedValidation/argument_missing_resource
+=== PAUSE TestRegistrationNestedValidation/argument_missing_resource
+=== CONT  TestRegistrationOpaqueAddress/paid-route/019a1390-0000-7000-8000-000000000450
+=== CONT  TestRegistrationStrictObjects/runtime.resource_registered
+=== CONT  TestRegistrationStrictObjects/runtime.registration_receipt
+--- PASS: TestRegistrationCanonicalSubmission (0.00s)
+    --- PASS: TestRegistrationCanonicalSubmission/resource.set (0.00s)
+    --- PASS: TestRegistrationCanonicalSubmission/declaration.set (0.00s)
+    --- PASS: TestRegistrationCanonicalSubmission/work_domain.set (0.00s)
+=== RUN   TestRegistrationNestedValidation/closed_actor
+=== PAUSE TestRegistrationNestedValidation/closed_actor
+=== RUN   TestRegistrationNestedValidation/closed_schema
+=== PAUSE TestRegistrationNestedValidation/closed_schema
+=== RUN   TestRegistrationNestedValidation/no_register_operation
+=== CONT  TestRegistrationStrictObjects/schema-5
+--- PASS: TestRegistrationOpaqueAddress (0.00s)
+    --- PASS: TestRegistrationOpaqueAddress/019a1390-0000-7000-8000-000000000450 (0.00s)
+    --- PASS: TestRegistrationOpaqueAddress/_é_ (0.00s)
+    --- PASS: TestRegistrationOpaqueAddress/Shared_Compute:_East_/_α_&_<queue>_ (0.00s)
+    --- PASS: TestRegistrationOpaqueAddress/paid-route/019a1390-0000-7000-8000-000000000450 (0.00s)
+    --- PASS: TestRegistrationOpaqueAddress/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx (0.00s)
+=== CONT  TestRegistrationStrictObjects/runtime.work_domain_registered
+=== CONT  TestRegistrationStrictObjects/runtime.declaration_changed
+=== CONT  TestRegistrationCompleteInputCap/runtime.resource_registered
+=== CONT  TestRegistrationCompleteInputCap/runtime.registration_receipt
+=== PAUSE TestRegistrationNestedValidation/no_register_operation
+=== RUN   TestRegistrationNestedValidation/no_revise_operation
+=== PAUSE TestRegistrationNestedValidation/no_revise_operation
+=== RUN   TestRegistrationNestedValidation/uuid_uppercase
+=== CONT  TestRegistrationCompleteInputCap/schema-5
+=== PAUSE TestRegistrationNestedValidation/uuid_uppercase
+=== RUN   TestRegistrationNestedValidation/uuid_wrong_version
+=== PAUSE TestRegistrationNestedValidation/uuid_wrong_version
+=== RUN   TestRegistrationNestedValidation/noninteger_version
+=== PAUSE TestRegistrationNestedValidation/noninteger_version
+=== RUN   TestRegistrationNestedValidation/signed_expected
+=== PAUSE TestRegistrationNestedValidation/signed_expected
+=== CONT  TestRegistrationCompleteInputCap/runtime.declaration_changed
+=== RUN   TestRegistrationNestedValidation/exponent_expected
+=== PAUSE TestRegistrationNestedValidation/exponent_expected
+=== CONT  TestRegistrationCompleteInputCap/runtime.work_domain_registered
+=== RUN   TestRegistrationNestedValidation/string_expected
+--- PASS: TestRegistrationStrictObjects (0.00s)
+    --- PASS: TestRegistrationStrictObjects/runtime.resource_registered (0.00s)
+    --- PASS: TestRegistrationStrictObjects/runtime.work_domain_registered (0.00s)
+    --- PASS: TestRegistrationStrictObjects/schema-5 (0.00s)
+    --- PASS: TestRegistrationStrictObjects/runtime.registration_receipt (0.00s)
+    --- PASS: TestRegistrationStrictObjects/runtime.declaration_changed (0.00s)
+=== PAUSE TestRegistrationNestedValidation/string_expected
+=== RUN   TestRegistrationNestedValidation/overflow_expected
+=== PAUSE TestRegistrationNestedValidation/overflow_expected
+=== CONT  TestRegistrationVersionsAndSets/create
+=== CONT  TestRegistrationVersionsAndSets/empty_audience
+=== CONT  TestRegistrationVersionsAndSets/kind_scoped_identity
+=== CONT  TestRegistrationVersionsAndSets/consumer_foreign_typed_field
+=== CONT  TestRegistrationVersionsAndSets/unordered_consumers
+=== CONT  TestRegistrationVersionsAndSets/unordered_audience
+=== CONT  TestRegistrationVersionsAndSets/duplicate_consumers
+=== CONT  TestRegistrationVersionsAndSets/nil_consumers
+=== CONT  TestRegistrationVersionsAndSets/withdraw
+=== CONT  TestRegistrationVersionsAndSets/negative_expected
+=== CONT  TestRegistrationVersionsAndSets/skip_version
+=== CONT  TestRegistrationVersionsAndSets/overflow
+=== CONT  TestRegistrationVersionsAndSets/revision
+=== CONT  TestRegistrationVersionsAndSets/maximum
+=== CONT  TestRegistrationVersionsAndSets/duplicate_audience
+=== CONT  TestRegistrationNestedValidation/address_missing
+=== CONT  TestRegistrationNestedValidation/overflow_expected
+=== CONT  TestRegistrationNestedValidation/exponent_expected
+=== CONT  TestRegistrationNestedValidation/string_expected
+=== CONT  TestRegistrationNestedValidation/uuid_uppercase
+=== CONT  TestRegistrationNestedValidation/uuid_wrong_version
+=== CONT  TestRegistrationNestedValidation/no_revise_operation
+=== CONT  TestRegistrationNestedValidation/no_register_operation
+=== CONT  TestRegistrationNestedValidation/closed_schema
+=== CONT  TestRegistrationNestedValidation/closed_actor
+=== CONT  TestRegistrationNestedValidation/argument_missing_resource
+=== CONT  TestRegistrationNestedValidation/argument_wrong_operation_field
+=== CONT  TestRegistrationNestedValidation/origin_duplicate
+=== CONT  TestRegistrationNestedValidation/origin_null_session
+=== CONT  TestRegistrationNestedValidation/subject_zero_version
+=== CONT  TestRegistrationNestedValidation/subject_unknown_kind
+=== CONT  TestRegistrationNestedValidation/binding_duplicate
+=== CONT  TestRegistrationNestedValidation/domain_resource_member
+=== CONT  TestRegistrationNestedValidation/binding_null
+=== CONT  TestRegistrationNestedValidation/resource_nonexternal
+=== CONT  TestRegistrationNestedValidation/consumer_unknown_kind
+=== CONT  TestRegistrationNestedValidation/signed_expected
+=== CONT  TestRegistrationNestedValidation/noninteger_version
+--- PASS: TestRegistrationVersionsAndSets (0.00s)
+    --- PASS: TestRegistrationVersionsAndSets/create (0.00s)
+    --- PASS: TestRegistrationVersionsAndSets/empty_audience (0.00s)
+    --- PASS: TestRegistrationVersionsAndSets/consumer_foreign_typed_field (0.00s)
+    --- PASS: TestRegistrationVersionsAndSets/kind_scoped_identity (0.00s)
+    --- PASS: TestRegistrationVersionsAndSets/duplicate_consumers (0.00s)
+    --- PASS: TestRegistrationVersionsAndSets/nil_consumers (0.00s)
+    --- PASS: TestRegistrationVersionsAndSets/withdraw (0.00s)
+    --- PASS: TestRegistrationVersionsAndSets/negative_expected (0.00s)
+    --- PASS: TestRegistrationVersionsAndSets/unordered_consumers (0.00s)
+    --- PASS: TestRegistrationVersionsAndSets/overflow (0.00s)
+    --- PASS: TestRegistrationVersionsAndSets/unordered_audience (0.00s)
+    --- PASS: TestRegistrationVersionsAndSets/duplicate_audience (0.00s)
+    --- PASS: TestRegistrationVersionsAndSets/revision (0.00s)
+    --- PASS: TestRegistrationVersionsAndSets/skip_version (0.00s)
+    --- PASS: TestRegistrationVersionsAndSets/maximum (0.00s)
+=== CONT  TestRegistrationNestedValidation/address_duplicate
+--- PASS: TestRegistrationCompleteInputCap (0.00s)
+    --- PASS: TestRegistrationCompleteInputCap/runtime.resource_registered (0.00s)
+    --- PASS: TestRegistrationCompleteInputCap/runtime.registration_receipt (0.00s)
+    --- PASS: TestRegistrationCompleteInputCap/runtime.declaration_changed (0.00s)
+    --- PASS: TestRegistrationCompleteInputCap/schema-5 (0.01s)
+    --- PASS: TestRegistrationCompleteInputCap/runtime.work_domain_registered (0.01s)
+=== CONT  TestRegistrationNestedValidation/consumer_context_task
+=== CONT  TestRegistrationNestedValidation/subject_null_id
+=== CONT  TestRegistrationNestedValidation/address_wrong_kind_member
+=== CONT  TestRegistrationNestedValidation/address_null
+=== CONT  TestRegistrationNestedValidation/consumer_task_binding
+=== NAME  TestGoldenF3_139
+    registration_golden_test.go:218: objects/a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b SHA-256=a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b
+    registration_golden_test.go:218: objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 SHA-256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+--- PASS: TestRegistrationNestedValidation (0.01s)
+    --- PASS: TestRegistrationNestedValidation/address_missing (0.00s)
+    --- PASS: TestRegistrationNestedValidation/exponent_expected (0.00s)
+    --- PASS: TestRegistrationNestedValidation/overflow_expected (0.00s)
+    --- PASS: TestRegistrationNestedValidation/uuid_uppercase (0.00s)
+    --- PASS: TestRegistrationNestedValidation/string_expected (0.00s)
+    --- PASS: TestRegistrationNestedValidation/no_revise_operation (0.00s)
+    --- PASS: TestRegistrationNestedValidation/no_register_operation (0.00s)
+    --- PASS: TestRegistrationNestedValidation/uuid_wrong_version (0.00s)
+    --- PASS: TestRegistrationNestedValidation/closed_schema (0.00s)
+    --- PASS: TestRegistrationNestedValidation/closed_actor (0.00s)
+    --- PASS: TestRegistrationNestedValidation/argument_missing_resource (0.00s)
+    --- PASS: TestRegistrationNestedValidation/argument_wrong_operation_field (0.00s)
+    --- PASS: TestRegistrationNestedValidation/origin_duplicate (0.00s)
+    --- PASS: TestRegistrationNestedValidation/origin_null_session (0.00s)
+    --- PASS: TestRegistrationNestedValidation/binding_duplicate (0.00s)
+    --- PASS: TestRegistrationNestedValidation/subject_zero_version (0.00s)
+    --- PASS: TestRegistrationNestedValidation/subject_unknown_kind (0.00s)
+    --- PASS: TestRegistrationNestedValidation/domain_resource_member (0.00s)
+    --- PASS: TestRegistrationNestedValidation/consumer_unknown_kind (0.00s)
+    --- PASS: TestRegistrationNestedValidation/resource_nonexternal (0.00s)
+    --- PASS: TestRegistrationNestedValidation/signed_expected (0.00s)
+    --- PASS: TestRegistrationNestedValidation/noninteger_version (0.00s)
+    --- PASS: TestRegistrationNestedValidation/address_duplicate (0.00s)
+    --- PASS: TestRegistrationNestedValidation/binding_null (0.00s)
+    --- PASS: TestRegistrationNestedValidation/address_null (0.00s)
+    --- PASS: TestRegistrationNestedValidation/address_wrong_kind_member (0.00s)
+    --- PASS: TestRegistrationNestedValidation/subject_null_id (0.00s)
+    --- PASS: TestRegistrationNestedValidation/consumer_context_task (0.00s)
+    --- PASS: TestRegistrationNestedValidation/consumer_task_binding (0.00s)
+=== NAME  TestGoldenF3_139
+    registration_golden_test.go:218: bodies/e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5 SHA-256=e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5
+    registration_golden_test.go:218: log/00000000000000000001.jsonl SHA-256=db1476e07b355d909dfb07cce79f142387469618709bc52a3f496395b94c5134
+=== CONT  TestRegistrationEncodedCaps/runtime.resource_registered
+=== CONT  TestRegistrationEncodedCaps/schema-5
+=== CONT  TestRegistrationEncodedCaps/runtime.registration_receipt
+=== NAME  TestGoldenF3_139
+    registration_golden_test.go:315: commits=19 records=65 first_effect=25 first_receipt=26 final_effect=64 final_receipt=65
+--- PASS: TestGoldenF3_139 (0.02s)
+--- PASS: TestRegistrationEncodedCaps (0.01s)
+    --- PASS: TestRegistrationEncodedCaps/schema-5 (0.53s)
+    --- PASS: TestRegistrationEncodedCaps/runtime.resource_registered (0.54s)
+    --- PASS: TestRegistrationEncodedCaps/runtime.registration_receipt (1.02s)
+=== RUN   FuzzDecodeF3_139
+=== RUN   FuzzDecodeF3_139/seed#0
+=== RUN   FuzzDecodeF3_139/seed#1
+=== RUN   FuzzDecodeF3_139/seed#2
+=== RUN   FuzzDecodeF3_139/seed#3
+=== RUN   FuzzDecodeF3_139/seed#4
+=== RUN   FuzzDecodeF3_139/seed#5
+=== RUN   FuzzDecodeF3_139/seed#6
+=== RUN   FuzzDecodeF3_139/seed#7
+=== RUN   FuzzDecodeF3_139/seed#8
+=== RUN   FuzzDecodeF3_139/seed#9
+=== RUN   FuzzDecodeF3_139/seed#10
+=== RUN   FuzzDecodeF3_139/seed#11
+=== RUN   FuzzDecodeF3_139/seed#12
+=== RUN   FuzzDecodeF3_139/seed#13
+=== RUN   FuzzDecodeF3_139/seed#14
+=== RUN   FuzzDecodeF3_139/seed#15
+=== RUN   FuzzDecodeF3_139/seed#16
+=== RUN   FuzzDecodeF3_139/seed#17
+=== RUN   FuzzDecodeF3_139/seed#18
+=== RUN   FuzzDecodeF3_139/seed#19
+=== RUN   FuzzDecodeF3_139/seed#20
+=== RUN   FuzzDecodeF3_139/seed#21
+=== RUN   FuzzDecodeF3_139/seed#22
+=== RUN   FuzzDecodeF3_139/seed#23
+=== RUN   FuzzDecodeF3_139/seed#24
+=== RUN   FuzzDecodeF3_139/seed#25
+=== RUN   FuzzDecodeF3_139/seed#26
+=== RUN   FuzzDecodeF3_139/seed#27
+=== RUN   FuzzDecodeF3_139/seed#28
+=== RUN   FuzzDecodeF3_139/seed#29
+=== RUN   FuzzDecodeF3_139/seed#30
+=== RUN   FuzzDecodeF3_139/seed#31
+=== RUN   FuzzDecodeF3_139/seed#32
+=== RUN   FuzzDecodeF3_139/seed#33
+=== RUN   FuzzDecodeF3_139/seed#34
+=== RUN   FuzzDecodeF3_139/seed#35
+=== RUN   FuzzDecodeF3_139/seed#36
+=== RUN   FuzzDecodeF3_139/seed#37
+=== RUN   FuzzDecodeF3_139/seed#38
+=== RUN   FuzzDecodeF3_139/seed#39
+=== RUN   FuzzDecodeF3_139/seed#40
+=== RUN   FuzzDecodeF3_139/seed#41
+=== RUN   FuzzDecodeF3_139/seed#42
+=== RUN   FuzzDecodeF3_139/seed#43
+=== RUN   FuzzDecodeF3_139/seed#44
+=== RUN   FuzzDecodeF3_139/seed#45
+=== RUN   FuzzDecodeF3_139/seed#46
+=== RUN   FuzzDecodeF3_139/seed#47
+=== RUN   FuzzDecodeF3_139/seed#48
+=== RUN   FuzzDecodeF3_139/seed#49
+=== RUN   FuzzDecodeF3_139/seed#50
+=== RUN   FuzzDecodeF3_139/seed#51
+=== RUN   FuzzDecodeF3_139/seed#52
+=== RUN   FuzzDecodeF3_139/seed#53
+=== RUN   FuzzDecodeF3_139/seed#54
+=== RUN   FuzzDecodeF3_139/seed#55
+=== RUN   FuzzDecodeF3_139/seed#56
+=== RUN   FuzzDecodeF3_139/seed#57
+=== RUN   FuzzDecodeF3_139/seed#58
+=== RUN   FuzzDecodeF3_139/seed#59
+=== RUN   FuzzDecodeF3_139/seed#60
+=== RUN   FuzzDecodeF3_139/seed#61
+=== RUN   FuzzDecodeF3_139/seed#62
+=== RUN   FuzzDecodeF3_139/seed#63
+=== RUN   FuzzDecodeF3_139/seed#64
+=== RUN   FuzzDecodeF3_139/seed#65
+=== RUN   FuzzDecodeF3_139/seed#66
+=== RUN   FuzzDecodeF3_139/seed#67
+=== RUN   FuzzDecodeF3_139/seed#68
+=== RUN   FuzzDecodeF3_139/seed#69
+=== RUN   FuzzDecodeF3_139/seed#70
+=== RUN   FuzzDecodeF3_139/seed#71
+=== RUN   FuzzDecodeF3_139/seed#72
+=== RUN   FuzzDecodeF3_139/seed#73
+=== RUN   FuzzDecodeF3_139/seed#74
+=== RUN   FuzzDecodeF3_139/seed#75
+=== RUN   FuzzDecodeF3_139/seed#76
+=== RUN   FuzzDecodeF3_139/seed#77
+=== RUN   FuzzDecodeF3_139/seed#78
+=== RUN   FuzzDecodeF3_139/seed#79
+=== RUN   FuzzDecodeF3_139/seed#80
+=== RUN   FuzzDecodeF3_139/seed#81
+=== RUN   FuzzDecodeF3_139/seed#82
+=== RUN   FuzzDecodeF3_139/seed#83
+=== RUN   FuzzDecodeF3_139/seed#84
+=== RUN   FuzzDecodeF3_139/seed#85
+=== RUN   FuzzDecodeF3_139/seed#86
+=== RUN   FuzzDecodeF3_139/seed#87
+=== RUN   FuzzDecodeF3_139/seed#88
+=== RUN   FuzzDecodeF3_139/seed#89
+=== RUN   FuzzDecodeF3_139/seed#90
+=== RUN   FuzzDecodeF3_139/seed#91
+--- PASS: FuzzDecodeF3_139 (0.02s)
+    --- PASS: FuzzDecodeF3_139/seed#0 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#1 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#2 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#3 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#4 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#5 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#6 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#7 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#8 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#9 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#10 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#11 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#12 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#13 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#14 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#15 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#16 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#17 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#18 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#19 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#20 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#21 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#22 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#23 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#24 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#25 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#26 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#27 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#28 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#29 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#30 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#31 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#32 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#33 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#34 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#35 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#36 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#37 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#38 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#39 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#40 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#41 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#42 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#43 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#44 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#45 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#46 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#47 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#48 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#49 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#50 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#51 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#52 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#53 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#54 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#55 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#56 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#57 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#58 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#59 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#60 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#61 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#62 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#63 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#64 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#65 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#66 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#67 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#68 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#69 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#70 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#71 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#72 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#73 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#74 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#75 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#76 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#77 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#78 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#79 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#80 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#81 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#82 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#83 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#84 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#85 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#86 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#87 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#88 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#89 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#90 (0.00s)
+    --- PASS: FuzzDecodeF3_139/seed#91 (0.00s)
+PASS
+ok  	github.com/Darius-PJ/dwarf-harness/contract/ledger	2.579s

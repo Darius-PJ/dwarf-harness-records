@@ -1,0 +1,9 @@
+{
+    "operation":  "Get-FileHash SHA256: go.mod, go.sum, every existing F3 fixture file",
+    "cwd":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration",
+    "startedUTC":  "2026-10-29T02:39:39.2811804Z",
+    "finishedUTC":  "2026-10-29T02:39:39.4594293Z",
+    "exitCode":  0,
+    "includesFrozen139":  true,
+    "result":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044\\module-and-f3-before.json"
+}

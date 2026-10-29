@@ -1,0 +1,11 @@
+# Ticket139 S3 — independent Standards axis
+
+Read pinned common context t139-s3-review-context.md. Review ONLY standards/maintainability of its exact two-test immutable diff JOINTLY with exact proposed closing records/source index; Spec is independent. No delegation, edit, native/Go/Git/LSP/setup/formatter/test or routine confirmation. Source evidence and repository conventions win.
+
+Standards: injected AGENTS; current coder-context.md D152/D153/B26/B28; ROADMAPS working rules/Core principles; domain/tracker conventions; existing real-subprocess/recovery and cross-family test patterns in agents. No new module/dependency/build tags/product imports. New tests must defend observable behavior/boundaries/errors, not wiring/source/default/wording/mock echoes or superficial helper PASS. Test-private signals must not leak into public APIs or weaken parent assertions. Distinguish actual process death/torn injection from powerloss and honest unproved setup/IPC failures from semantic reds.
+
+Reuse the always-on Fowler heuristic baseline in existing t139-s2-standards-axis.md lines7–21 ONLY: Mysterious Name, Duplication, Feature Envy, Data Clumps, Primitive Obsession, Repeated Switches, Shotgun Surgery, Divergent Change, Speculative Generality, Message Chains, Middle Man, Refused Bequest. These are judgement calls, not automatic breaches; tooling/repo conventions override. Do not apply that old document's S2-specific I/O-pinning/migration/test instructions. Boring explicit repeated family shapes are not justification for a registry or framework.
+
+Check proposed R1–R8 private/public separation, short pointer B34, paired sole status locations, exact preserved criterion words/gates and no unsupported success. Parent mechanical preview is separate evidence, not a substitute for judgement. Final public-SHA hosted matrix/primary integration/later Fable remain honestly external.
+
+Return YOUR separate under400word Markdown + JSON per common context as t139-s3-standards-review.{md,json}, or actual complete final content if role cannot write. Cite source/line/hunk/R-id for every finding; distinguish documented breach from judgement. D152 blocking issues only; no unneeded abstraction/refactor wish list. No merged/reranked other-axis verdict or request to rerun completed checks.

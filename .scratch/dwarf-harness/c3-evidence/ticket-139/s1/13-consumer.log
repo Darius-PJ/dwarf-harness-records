@@ -1,0 +1,262 @@
+{"command": ["C:/Program Files/Go/bin/go.exe", "test", "-count=1", "-v", "-timeout=19m", "./internal/core/ledgerstore"], "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration", "environment": {"GOTOOLCHAIN": "local", "GOFLAGS": "", "CGO_ENABLED": "0", "GOOS": "windows", "GOARCH": "amd64"}}
+=== RUN   TestPublishBodyRoundTrip
+--- PASS: TestPublishBodyRoundTrip (0.26s)
+=== RUN   TestPublishBodyFailsWithoutDurability
+=== RUN   TestPublishBodyFailsWithoutDurability/temporary_file_flush
+=== RUN   TestPublishBodyFailsWithoutDurability/rename
+=== RUN   TestPublishBodyFailsWithoutDurability/directory_flush_after_the_rename
+--- PASS: TestPublishBodyFailsWithoutDurability (0.44s)
+    --- PASS: TestPublishBodyFailsWithoutDurability/temporary_file_flush (0.13s)
+    --- PASS: TestPublishBodyFailsWithoutDurability/rename (0.16s)
+    --- PASS: TestPublishBodyFailsWithoutDurability/directory_flush_after_the_rename (0.14s)
+=== RUN   TestReadBodyVerifies
+--- PASS: TestReadBodyVerifies (0.27s)
+=== RUN   TestAppendRefusesUnpublishedBodies
+--- PASS: TestAppendRefusesUnpublishedBodies (0.17s)
+=== RUN   TestF0TypeRules
+=== RUN   TestF0TypeRules/a_catalogue_without_ledger.command
+--- PASS: TestF0TypeRules (0.32s)
+    --- PASS: TestF0TypeRules/a_catalogue_without_ledger.command (0.13s)
+=== RUN   TestOpenRebuildsPinsAndCollections
+=== RUN   TestOpenRebuildsPinsAndCollections/a_pinned_body_stays_and_a_collected_body_classifies
+=== RUN   TestOpenRebuildsPinsAndCollections/a_log_over_a_lowered_pin_bound_opens
+=== RUN   TestOpenRebuildsPinsAndCollections/the_collection_index_keeps_commit_ends
+--- PASS: TestOpenRebuildsPinsAndCollections (0.63s)
+    --- PASS: TestOpenRebuildsPinsAndCollections/a_pinned_body_stays_and_a_collected_body_classifies (0.31s)
+    --- PASS: TestOpenRebuildsPinsAndCollections/a_log_over_a_lowered_pin_bound_opens (0.17s)
+    --- PASS: TestOpenRebuildsPinsAndCollections/the_collection_index_keeps_commit_ends (0.15s)
+=== RUN   TestOpenBodiesLayout
+=== RUN   TestOpenBodiesLayout/Create_makes_the_layout
+=== RUN   TestOpenBodiesLayout/Create_completes_an_interrupted_Create
+=== RUN   TestOpenBodiesLayout/Create_refuses_a_body_file
+=== RUN   TestOpenBodiesLayout/Create_refuses_an_unexpected_file
+=== RUN   TestOpenBodiesLayout/Create_refuses_a_file_named_like_a_fan-out_directory
+=== RUN   TestOpenBodiesLayout/Open_without_bodies_fails_closed
+=== RUN   TestOpenBodiesLayout/Open_empties_.tmp
+=== RUN   TestOpenBodiesLayout/Collect_fails_closed_on_an_unexpected_file
+=== RUN   TestOpenBodiesLayout/Collect_fails_closed_on_a_body_under_the_wrong_fan-out_directory
+=== RUN   TestOpenBodiesLayout/Collect_fails_closed_on_a_directory_under_a_body's_name
+=== RUN   TestOpenBodiesLayout/Collect_fails_closed_on_a_file_not_named_by_a_digest
+--- PASS: TestOpenBodiesLayout (1.45s)
+    --- PASS: TestOpenBodiesLayout/Create_makes_the_layout (0.13s)
+    --- PASS: TestOpenBodiesLayout/Create_completes_an_interrupted_Create (0.13s)
+    --- PASS: TestOpenBodiesLayout/Create_refuses_a_body_file (0.01s)
+    --- PASS: TestOpenBodiesLayout/Create_refuses_an_unexpected_file (0.01s)
+    --- PASS: TestOpenBodiesLayout/Create_refuses_a_file_named_like_a_fan-out_directory (0.00s)
+    --- PASS: TestOpenBodiesLayout/Open_without_bodies_fails_closed (0.17s)
+    --- PASS: TestOpenBodiesLayout/Open_empties_.tmp (0.17s)
+    --- PASS: TestOpenBodiesLayout/Collect_fails_closed_on_an_unexpected_file (0.23s)
+    --- PASS: TestOpenBodiesLayout/Collect_fails_closed_on_a_body_under_the_wrong_fan-out_directory (0.20s)
+    --- PASS: TestOpenBodiesLayout/Collect_fails_closed_on_a_directory_under_a_body's_name (0.20s)
+    --- PASS: TestOpenBodiesLayout/Collect_fails_closed_on_a_file_not_named_by_a_digest (0.20s)
+=== RUN   TestBodiesConcurrentUse
+=== RUN   TestBodiesConcurrentUse/publish,_read,_append,_collect_and_close
+=== RUN   TestBodiesConcurrentUse/Close_waits_for_an_in-flight_read
+=== RUN   TestBodiesConcurrentUse/Close_waits_for_an_in-flight_publication
+--- PASS: TestBodiesConcurrentUse (5.11s)
+    --- PASS: TestBodiesConcurrentUse/publish,_read,_append,_collect_and_close (4.73s)
+    --- PASS: TestBodiesConcurrentUse/Close_waits_for_an_in-flight_read (0.19s)
+    --- PASS: TestBodiesConcurrentUse/Close_waits_for_an_in-flight_publication (0.19s)
+=== RUN   TestReadBodyClassifiesFromSnapshot
+--- PASS: TestReadBodyClassifiesFromSnapshot (0.18s)
+=== RUN   TestCollectRespectsPinsAndHistory
+--- PASS: TestCollectRespectsPinsAndHistory (0.32s)
+=== RUN   TestCollectKeepBytesOldestFirst
+--- PASS: TestCollectKeepBytesOldestFirst (1.23s)
+=== RUN   TestCollectSeesReferencesAddedDuringScan
+--- PASS: TestCollectSeesReferencesAddedDuringScan (0.18s)
+=== RUN   TestCollectLeftoverRetried
+--- PASS: TestCollectLeftoverRetried (0.22s)
+=== RUN   TestCollectKeepsFreshRepublication
+--- PASS: TestCollectKeepsFreshRepublication (0.25s)
+=== RUN   TestCollectRecordFailureDeletesNothing
+--- PASS: TestCollectRecordFailureDeletesNothing (0.24s)
+=== RUN   TestSubmitDeduplicates
+=== RUN   TestSubmitDeduplicates/concurrent_submissions_of_each_ID_write_it_once
+--- PASS: TestSubmitDeduplicates (0.38s)
+    --- PASS: TestSubmitDeduplicates/concurrent_submissions_of_each_ID_write_it_once (0.23s)
+=== RUN   TestSubmitDuplicateIgnoresCurrentDrafts
+--- PASS: TestSubmitDuplicateIgnoresCurrentDrafts (0.19s)
+=== RUN   TestSubmitRefusesFutureCommandID
+--- PASS: TestSubmitRefusesFutureCommandID (0.15s)
+=== RUN   TestIssueLimitMS
+--- PASS: TestIssueLimitMS (0.00s)
+=== RUN   TestOldCommandResolvesAfterEviction
+--- PASS: TestOldCommandResolvesAfterEviction (0.44s)
+=== RUN   TestSubmitLookupHonoursCtx
+--- PASS: TestSubmitLookupHonoursCtx (0.18s)
+=== RUN   TestSubmitFailsClosedOnAnUndecodableCommandRecord
+--- PASS: TestSubmitFailsClosedOnAnUndecodableCommandRecord (0.15s)
+=== RUN   TestFreshCommandIDsStayOffTheDisk
+--- PASS: TestFreshCommandIDsStayOffTheDisk (0.15s)
+=== RUN   TestCommandLookupMatchesModel
+--- PASS: TestCommandLookupMatchesModel (8.76s)
+=== RUN   TestDurableAdvancesOnlyAfterSync
+--- PASS: TestDurableAdvancesOnlyAfterSync (0.12s)
+=== RUN   TestAppendFailurePoisonsUntilRecover
+=== RUN   TestAppendFailurePoisonsUntilRecover/short_write
+=== RUN   TestAppendFailurePoisonsUntilRecover/write_error
+=== RUN   TestAppendFailurePoisonsUntilRecover/flush_error
+=== RUN   TestAppendFailurePoisonsUntilRecover/log_directory_flush_error_while_rotating
+=== RUN   TestAppendFailurePoisonsUntilRecover/segment_creation_error_while_rotating
+--- PASS: TestAppendFailurePoisonsUntilRecover (0.86s)
+    --- PASS: TestAppendFailurePoisonsUntilRecover/short_write (0.17s)
+    --- PASS: TestAppendFailurePoisonsUntilRecover/write_error (0.16s)
+    --- PASS: TestAppendFailurePoisonsUntilRecover/flush_error (0.17s)
+    --- PASS: TestAppendFailurePoisonsUntilRecover/log_directory_flush_error_while_rotating (0.18s)
+    --- PASS: TestAppendFailurePoisonsUntilRecover/segment_creation_error_while_rotating (0.18s)
+=== RUN   TestCancelledAppendWritesNothing
+--- PASS: TestCancelledAppendWritesNothing (0.13s)
+=== RUN   TestSubmitFailureLeavesNoIdentity
+--- PASS: TestSubmitFailureLeavesNoIdentity (0.12s)
+=== RUN   TestSubmitFindsCommandsOfSegmentsRecoverMadeCurrent
+=== RUN   TestSubmitFindsCommandsOfSegmentsRecoverMadeCurrent/Recover_leaves_the_new_segment_current
+=== RUN   TestSubmitFindsCommandsOfSegmentsRecoverMadeCurrent/Open_lists_the_empty_segment
+=== RUN   TestSubmitFindsCommandsOfSegmentsRecoverMadeCurrent/the_log's_first_segment
+=== RUN   TestSubmitFindsCommandsOfSegmentsRecoverMadeCurrent/Open_lists_the_empty_first_segment
+--- PASS: TestSubmitFindsCommandsOfSegmentsRecoverMadeCurrent (0.70s)
+    --- PASS: TestSubmitFindsCommandsOfSegmentsRecoverMadeCurrent/Recover_leaves_the_new_segment_current (0.18s)
+    --- PASS: TestSubmitFindsCommandsOfSegmentsRecoverMadeCurrent/Open_lists_the_empty_segment (0.18s)
+    --- PASS: TestSubmitFindsCommandsOfSegmentsRecoverMadeCurrent/the_log's_first_segment (0.17s)
+    --- PASS: TestSubmitFindsCommandsOfSegmentsRecoverMadeCurrent/Open_lists_the_empty_first_segment (0.18s)
+=== RUN   TestOpenTruncatesTornFinalCommit
+=== RUN   TestOpenTruncatesTornFinalCommit/boundary
+=== RUN   TestOpenTruncatesTornFinalCommit/boundary+1
+=== RUN   TestOpenTruncatesTornFinalCommit/line1/hash-end
+=== RUN   TestOpenTruncatesTornFinalCommit/line1/after-tab
+=== RUN   TestOpenTruncatesTornFinalCommit/line1/json-middle
+=== RUN   TestOpenTruncatesTornFinalCommit/line1/before-lf
+=== RUN   TestOpenTruncatesTornFinalCommit/line1/after-lf
+=== RUN   TestOpenTruncatesTornFinalCommit/line2/hash-end
+=== RUN   TestOpenTruncatesTornFinalCommit/line2/after-tab
+=== RUN   TestOpenTruncatesTornFinalCommit/line2/json-middle
+=== RUN   TestOpenTruncatesTornFinalCommit/line2/before-lf
+=== RUN   TestOpenTruncatesTornFinalCommit/line2/after-lf
+=== RUN   TestOpenTruncatesTornFinalCommit/line3/hash-end
+=== RUN   TestOpenTruncatesTornFinalCommit/line3/after-tab
+=== RUN   TestOpenTruncatesTornFinalCommit/line3/json-middle
+=== RUN   TestOpenTruncatesTornFinalCommit/line3/before-lf
+=== RUN   TestOpenTruncatesTornFinalCommit/fully_torn_later_segment
+--- PASS: TestOpenTruncatesTornFinalCommit (0.80s)
+    --- PASS: TestOpenTruncatesTornFinalCommit/boundary (0.03s)
+    --- PASS: TestOpenTruncatesTornFinalCommit/boundary+1 (0.03s)
+    --- PASS: TestOpenTruncatesTornFinalCommit/line1/hash-end (0.02s)
+    --- PASS: TestOpenTruncatesTornFinalCommit/line1/after-tab (0.02s)
+    --- PASS: TestOpenTruncatesTornFinalCommit/line1/json-middle (0.02s)
+    --- PASS: TestOpenTruncatesTornFinalCommit/line1/before-lf (0.03s)
+    --- PASS: TestOpenTruncatesTornFinalCommit/line1/after-lf (0.02s)
+    --- PASS: TestOpenTruncatesTornFinalCommit/line2/hash-end (0.02s)
+    --- PASS: TestOpenTruncatesTornFinalCommit/line2/after-tab (0.02s)
+    --- PASS: TestOpenTruncatesTornFinalCommit/line2/json-middle (0.03s)
+    --- PASS: TestOpenTruncatesTornFinalCommit/line2/before-lf (0.02s)
+    --- PASS: TestOpenTruncatesTornFinalCommit/line2/after-lf (0.02s)
+    --- PASS: TestOpenTruncatesTornFinalCommit/line3/hash-end (0.03s)
+    --- PASS: TestOpenTruncatesTornFinalCommit/line3/after-tab (0.03s)
+    --- PASS: TestOpenTruncatesTornFinalCommit/line3/json-middle (0.03s)
+    --- PASS: TestOpenTruncatesTornFinalCommit/line3/before-lf (0.03s)
+    --- PASS: TestOpenTruncatesTornFinalCommit/fully_torn_later_segment (0.23s)
+=== RUN   TestOpenFailsClosedOnCorruption
+=== RUN   TestOpenFailsClosedOnCorruption/flipped_byte_in_a_non-final_commit
+=== RUN   TestOpenFailsClosedOnCorruption/renamed_segment
+=== RUN   TestOpenFailsClosedOnCorruption/log_of_another_colony
+--- PASS: TestOpenFailsClosedOnCorruption (0.90s)
+    --- PASS: TestOpenFailsClosedOnCorruption/flipped_byte_in_a_non-final_commit (0.28s)
+    --- PASS: TestOpenFailsClosedOnCorruption/renamed_segment (0.25s)
+    --- PASS: TestOpenFailsClosedOnCorruption/log_of_another_colony (0.38s)
+=== RUN   TestOpenFailsClosedOnF0RuleViolation
+=== RUN   TestOpenFailsClosedOnF0RuleViolation/an_unpin_of_an_unknown_pin
+=== RUN   TestOpenFailsClosedOnF0RuleViolation/an_unpin_before_its_pin_in_one_commit
+=== RUN   TestOpenFailsClosedOnF0RuleViolation/a_pin_of_an_active_pin
+=== RUN   TestOpenFailsClosedOnF0RuleViolation/a_pin_that_lists_no_body
+=== RUN   TestOpenFailsClosedOnF0RuleViolation/an_unpin_that_lists_a_body
+=== RUN   TestOpenFailsClosedOnF0RuleViolation/a_pin_whose_payload_does_not_decode
+=== RUN   TestOpenFailsClosedOnF0RuleViolation/an_unpin_whose_payload_does_not_decode
+=== RUN   TestOpenFailsClosedOnF0RuleViolation/a_command_that_is_not_first_in_its_commit
+=== RUN   TestOpenFailsClosedOnF0RuleViolation/two_commands_in_one_commit
+=== RUN   TestOpenFailsClosedOnF0RuleViolation/a_command_that_lists_a_body
+=== RUN   TestOpenFailsClosedOnF0RuleViolation/a_command_whose_payload_does_not_decode
+=== RUN   TestOpenFailsClosedOnF0RuleViolation/a_command_ID_recorded_twice
+=== RUN   TestOpenFailsClosedOnF0RuleViolation/a_collection_that_lists_a_body_in_body_refs
+=== RUN   TestOpenFailsClosedOnF0RuleViolation/a_collection_ordered_by_the_agent
+=== RUN   TestOpenFailsClosedOnF0RuleViolation/a_collection_ordered_by_a_runner
+=== RUN   TestOpenFailsClosedOnF0RuleViolation/a_collection_whose_payload_does_not_decode
+=== RUN   TestOpenFailsClosedOnF0RuleViolation/ledger.command_at_version_2
+=== RUN   TestOpenFailsClosedOnF0RuleViolation/ledger.body_pin_at_version_2
+=== RUN   TestOpenFailsClosedOnF0RuleViolation/ledger.body_unpin_at_version_2
+=== RUN   TestOpenFailsClosedOnF0RuleViolation/ledger.bodies_collected_at_version_2
+=== RUN   TestOpenFailsClosedOnF0RuleViolation/a_log_that_follows_every_rule
+--- PASS: TestOpenFailsClosedOnF0RuleViolation (3.87s)
+    --- PASS: TestOpenFailsClosedOnF0RuleViolation/an_unpin_of_an_unknown_pin (0.19s)
+    --- PASS: TestOpenFailsClosedOnF0RuleViolation/an_unpin_before_its_pin_in_one_commit (0.18s)
+    --- PASS: TestOpenFailsClosedOnF0RuleViolation/a_pin_of_an_active_pin (0.19s)
+    --- PASS: TestOpenFailsClosedOnF0RuleViolation/a_pin_that_lists_no_body (0.20s)
+    --- PASS: TestOpenFailsClosedOnF0RuleViolation/an_unpin_that_lists_a_body (0.19s)
+    --- PASS: TestOpenFailsClosedOnF0RuleViolation/a_pin_whose_payload_does_not_decode (0.18s)
+    --- PASS: TestOpenFailsClosedOnF0RuleViolation/an_unpin_whose_payload_does_not_decode (0.18s)
+    --- PASS: TestOpenFailsClosedOnF0RuleViolation/a_command_that_is_not_first_in_its_commit (0.18s)
+    --- PASS: TestOpenFailsClosedOnF0RuleViolation/two_commands_in_one_commit (0.18s)
+    --- PASS: TestOpenFailsClosedOnF0RuleViolation/a_command_that_lists_a_body (0.20s)
+    --- PASS: TestOpenFailsClosedOnF0RuleViolation/a_command_whose_payload_does_not_decode (0.19s)
+    --- PASS: TestOpenFailsClosedOnF0RuleViolation/a_command_ID_recorded_twice (0.18s)
+    --- PASS: TestOpenFailsClosedOnF0RuleViolation/a_collection_that_lists_a_body_in_body_refs (0.18s)
+    --- PASS: TestOpenFailsClosedOnF0RuleViolation/a_collection_ordered_by_the_agent (0.20s)
+    --- PASS: TestOpenFailsClosedOnF0RuleViolation/a_collection_ordered_by_a_runner (0.18s)
+    --- PASS: TestOpenFailsClosedOnF0RuleViolation/a_collection_whose_payload_does_not_decode (0.19s)
+    --- PASS: TestOpenFailsClosedOnF0RuleViolation/ledger.command_at_version_2 (0.18s)
+    --- PASS: TestOpenFailsClosedOnF0RuleViolation/ledger.body_pin_at_version_2 (0.19s)
+    --- PASS: TestOpenFailsClosedOnF0RuleViolation/ledger.body_unpin_at_version_2 (0.18s)
+    --- PASS: TestOpenFailsClosedOnF0RuleViolation/ledger.bodies_collected_at_version_2 (0.19s)
+    --- PASS: TestOpenFailsClosedOnF0RuleViolation/a_log_that_follows_every_rule (0.14s)
+=== RUN   TestHelperChildWriter
+    recovery_test.go:367: runs only as the child of TestKilledWriterReleasesLockAndRecovers
+--- SKIP: TestHelperChildWriter (0.00s)
+=== RUN   TestKilledWriterReleasesLockAndRecovers
+    recovery_test.go:460: 40 acknowledgements; recovery {Segment: TruncatedBytes:0}
+--- PASS: TestKilledWriterReleasesLockAndRecovers (0.78s)
+=== RUN   TestHelperChildSubmitter
+    recovery_test.go:498: runs only as the child of TestDuplicateCommandsAfterCrash
+--- SKIP: TestHelperChildSubmitter (0.00s)
+=== RUN   TestDuplicateCommandsAfterCrash
+    recovery_test.go:600: 40 acknowledgements; command in flight true; recovery {Segment: TruncatedBytes:0}
+    recovery_test.go:623: the command in flight was in the log already: true
+--- PASS: TestDuplicateCommandsAfterCrash (0.34s)
+=== RUN   TestCreateAndOpenLayout
+=== RUN   TestCreateAndOpenLayout/no_colony.json
+=== RUN   TestCreateAndOpenLayout/log_without_colony.json
+=== RUN   TestCreateAndOpenLayout/colony.json_format_2
+=== RUN   TestCreateAndOpenLayout/log_directory_missing
+--- PASS: TestCreateAndOpenLayout (0.41s)
+    --- PASS: TestCreateAndOpenLayout/no_colony.json (0.00s)
+    --- PASS: TestCreateAndOpenLayout/log_without_colony.json (0.00s)
+    --- PASS: TestCreateAndOpenLayout/colony.json_format_2 (0.16s)
+    --- PASS: TestCreateAndOpenLayout/log_directory_missing (0.12s)
+=== RUN   TestWriterReproducesGolden
+=== RUN   TestWriterReproducesGolden/f0
+=== RUN   TestWriterReproducesGolden/catalogue
+--- PASS: TestWriterReproducesGolden (0.31s)
+    --- PASS: TestWriterReproducesGolden/f0 (0.12s)
+    --- PASS: TestWriterReproducesGolden/catalogue (0.18s)
+=== RUN   TestConcurrentAppendsAreGapless
+--- PASS: TestConcurrentAppendsAreGapless (0.35s)
+=== RUN   TestRefusedAppendConsumesNothing
+=== RUN   TestRefusedAppendConsumesNothing/record_over_MaxRecordBytes
+=== RUN   TestRefusedAppendConsumesNothing/commit_over_MaxCommitBytes
+=== RUN   TestRefusedAppendConsumesNothing/no_drafts
+=== RUN   TestRefusedAppendConsumesNothing/invalid_draft
+--- PASS: TestRefusedAppendConsumesNothing (0.39s)
+    --- PASS: TestRefusedAppendConsumesNothing/record_over_MaxRecordBytes (0.02s)
+    --- PASS: TestRefusedAppendConsumesNothing/commit_over_MaxCommitBytes (0.16s)
+    --- PASS: TestRefusedAppendConsumesNothing/no_drafts (0.00s)
+    --- PASS: TestRefusedAppendConsumesNothing/invalid_draft (0.00s)
+=== RUN   TestRotationKeepsCommitsWhole
+--- PASS: TestRotationKeepsCommitsWhole (0.24s)
+=== RUN   TestEventTimeNeverDecreases
+--- PASS: TestEventTimeNeverDecreases (0.14s)
+=== RUN   TestWorkload
+    workload_test.go:2753: set DWARF_LEDGER_WORKLOAD_OUT to a results file to run the workload measurements
+--- SKIP: TestWorkload (0.00s)
+=== RUN   TestHelperWorkloadChild
+    workload_test.go:2776: runs only as the child of TestWorkload
+--- SKIP: TestHelperWorkloadChild (0.00s)
+PASS
+ok  	github.com/Darius-PJ/dwarf-harness/internal/core/ledgerstore	33.500s

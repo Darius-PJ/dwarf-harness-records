@@ -1,0 +1,8 @@
+{
+  "oldFixtureCount": 42,
+  "helperSHA256": "1c954596b2e148581ae2fa738966273667b337b00c501711467b5f4d5d906e1e",
+  "modules": {
+    "go.mod": "817ae18bd8be5c150e0a71bb18bc577f4ab4bab6a3e0be0befe1c45091aa3bc6",
+    "go.sum": "8f5c60cb264ddc6838335d517678723a6c1af0e97568d7c1bd6510971500b18b"
+  }
+}

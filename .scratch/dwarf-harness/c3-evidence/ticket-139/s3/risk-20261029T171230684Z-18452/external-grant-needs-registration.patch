@@ -1,0 +1,12 @@
+--- a/internal/core/agents/scoped_state.go
++++ b/internal/core/agents/scoped_state.go
+@@ -331,2 +331,7 @@
+-	case "external":
+-		return true, nil
++	case "external":
++		for _, registered := range s.p.resources {
++			if sameScopedValue(registered.Record.Resource, resource) {
++				return true, nil
++			}
++		}
++		return false, nil

@@ -1,0 +1,14 @@
+{
+  "appliedAt": "2026-10-28T20:26:59.030388-04:00",
+  "decision": 154,
+  "date": "2026-10-28",
+  "editsAppliedByPrimary": [
+    "R1",
+    "R2",
+    "R14"
+  ],
+  "decisionSnapshotFromEdit": "0B0F",
+  "evidenceSHA256": "700e996d29ab81984507101011fffef2254bb14795ebc2284a48e253010a1c8f",
+  "jointReviewSource": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s1-joint-review.json",
+  "status": "Private D125 freeze record applied locally; final public freeze-record SHA and its own hosted CI remain pending. Private commit/publication and main promotion are held for that gate."
+}

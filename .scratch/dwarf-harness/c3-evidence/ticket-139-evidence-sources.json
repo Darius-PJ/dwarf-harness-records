@@ -1,0 +1,244 @@
+{
+  "ticket": 139,
+  "status": "APPROVED_RETENTION_PLAN_WITH_FINAL_OBSERVED_SOURCE_BINDINGS_READY_FOR_PRIMARY_COPY",
+  "codeSHA": "f92a5ef25b15cab47769cf76ff1af2eb86b23e25",
+  "parentSHA": "8a17ec1ed2617ca2a4e5203479f75f363b359970",
+  "privateAuthority": "Primary alone applies/publishes D145private records; secondary has no write/push authority",
+  "canonicalRoot": ".scratch/dwarf-harness/c3-evidence/",
+  "files": [
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-brief.md",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139-design-brief.md",
+      "SHA256AtDraft": "f212b4e148e63c12e2101c36ba6a37f2f361487976b98a6413a9e3759ded6424",
+      "verbatimCopyRequired": true,
+      "refreshOnlyAfterObservedFollowthrough": false,
+      "SHA256AtHandoff": "f212b4e148e63c12e2101c36ba6a37f2f361487976b98a6413a9e3759ded6424",
+      "handoffHashBasis": "Unchanged immutable reviewed source binding reused; primary verifies actual bytes at copy, no broad re-audit"
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-ruling.md",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139-design-ruling.md",
+      "SHA256AtDraft": "549ea458c5a7fba7295b20d79b1ca7154f26fea832f4e848f423280c7e694858",
+      "verbatimCopyRequired": true,
+      "refreshOnlyAfterObservedFollowthrough": false,
+      "SHA256AtHandoff": "549ea458c5a7fba7295b20d79b1ca7154f26fea832f4e848f423280c7e694858",
+      "handoffHashBasis": "Unchanged immutable reviewed source binding reused; primary verifies actual bytes at copy, no broad re-audit"
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-acceptance-matrix.md",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139-acceptance-evidence.md",
+      "SHA256AtDraft": "e604ca8395feb697673ce16cfe4a671eac03801b1b3af0e3fb503a5e90a4cf2b",
+      "verbatimCopyRequired": true,
+      "refreshOnlyAfterObservedFollowthrough": true,
+      "SHA256AtHandoff": "be707eda954cdace70dfa879b324f2b8172ffe65e198a307319ad1efe42ec8f7",
+      "handoffHashBasis": "Actual observed-only mutable evidence followthrough after finalCI"
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-docs-notes.md",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139-build-notes.md",
+      "SHA256AtDraft": "506a84109d3a29e6750eb8975dabc88b3b5d77bef9c0e16d020e5f793a7ddb42",
+      "verbatimCopyRequired": true,
+      "refreshOnlyAfterObservedFollowthrough": true,
+      "SHA256AtHandoff": "f3e2303d1f15867825304516868b73a1e5dae55c508bc8740ab53347dc73ee0f",
+      "handoffHashBasis": "Actual observed-only mutable evidence followthrough after finalCI"
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\fable-verification-request.md",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139-fable-verification-request.md",
+      "SHA256AtDraft": "d02f9e1cf9582a4a3fdd317da765da79ff98afd94e5c0e4e6ac7303e135830e6",
+      "verbatimCopyRequired": true,
+      "refreshOnlyAfterObservedFollowthrough": true,
+      "SHA256AtHandoff": "88338a1f98a63ebd60b3ee98f7bfbab06d69ec4146ef1d6925f3929ff1aa99a2",
+      "handoffHashBasis": "Actual observed-only mutable evidence followthrough after finalCI"
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s1-integration-packet.json",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139-s1-integration-packet.json",
+      "SHA256AtDraft": "a5117577876ee044907758d2396929d291ef182542b74c9814582c3fda72a2e6",
+      "verbatimCopyRequired": true,
+      "refreshOnlyAfterObservedFollowthrough": false,
+      "SHA256AtHandoff": "a5117577876ee044907758d2396929d291ef182542b74c9814582c3fda72a2e6",
+      "handoffHashBasis": "Unchanged immutable reviewed source binding reused; primary verifies actual bytes at copy, no broad re-audit"
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s2-integration-packet.json",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139-s2-integration-packet.json",
+      "SHA256AtDraft": "49ef19b949948a67ed25f60b3478c58af391cb761d0ed07302324c44f1bf90db",
+      "verbatimCopyRequired": true,
+      "refreshOnlyAfterObservedFollowthrough": false,
+      "SHA256AtHandoff": "49ef19b949948a67ed25f60b3478c58af391cb761d0ed07302324c44f1bf90db",
+      "handoffHashBasis": "Unchanged immutable reviewed source binding reused; primary verifies actual bytes at copy, no broad re-audit"
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-commit-proof.json",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139-s3-code-proof.json",
+      "SHA256AtDraft": "846c409134f19520126572e51170952855519a59c710c20fb0adc20e7eba76db",
+      "verbatimCopyRequired": true,
+      "refreshOnlyAfterObservedFollowthrough": false,
+      "SHA256AtHandoff": "846c409134f19520126572e51170952855519a59c710c20fb0adc20e7eba76db",
+      "handoffHashBasis": "Unchanged immutable reviewed source binding reused; primary verifies actual bytes at copy, no broad re-audit"
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-final-author-yield.md",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139-s3-author-yield.md",
+      "SHA256AtDraft": "5ec795fc4b4ea40106a465ee16ed083cb33346a8971adf641024f5b48021ff82",
+      "verbatimCopyRequired": true,
+      "refreshOnlyAfterObservedFollowthrough": false,
+      "SHA256AtHandoff": "5ec795fc4b4ea40106a465ee16ed083cb33346a8971adf641024f5b48021ff82",
+      "handoffHashBasis": "Unchanged immutable reviewed source binding reused; primary verifies actual bytes at copy, no broad re-audit"
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-final-author-capture.json",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139-s3-author-capture.json",
+      "SHA256AtDraft": "0a31913ccf1a042514e4ebc3551567ad1bcf216b670ee59aef9f2b08b89a1947",
+      "verbatimCopyRequired": true,
+      "refreshOnlyAfterObservedFollowthrough": false,
+      "SHA256AtHandoff": "0a31913ccf1a042514e4ebc3551567ad1bcf216b670ee59aef9f2b08b89a1947",
+      "handoffHashBasis": "Unchanged immutable reviewed source binding reused; primary verifies actual bytes at copy, no broad re-audit"
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-b34-closing-authority.txt",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139-b34-authority.txt",
+      "SHA256AtDraft": "f12d7865001cfc3dc405e068806890c1aa639ff87233b86fb793be8f155b9afa",
+      "verbatimCopyRequired": true,
+      "refreshOnlyAfterObservedFollowthrough": false,
+      "SHA256AtHandoff": "f12d7865001cfc3dc405e068806890c1aa639ff87233b86fb793be8f155b9afa",
+      "handoffHashBasis": "Unchanged immutable reviewed source binding reused; primary verifies actual bytes at copy, no broad re-audit"
+    }
+  ],
+  "wholeRawEvidenceDirectoryCopies": [
+    {
+      "source": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s1-evidence",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139/s1",
+      "preserveBytesAndAllHonestStops": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139/s2",
+      "preserveBytesAndAllHonestStops": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s3-evidence",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139/s3",
+      "preserveBytesAndAllHonestStops": true
+    }
+  ],
+  "PMSourceCorpus": {
+    "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local",
+    "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm",
+    "include": "Ticket139 t139-* plus ci-docs-notes.md, coder-context.md, fable-verification-request.md; exact source snapshots/final actual-review/CI/publication/integration metadata; no other-ticket artifacts",
+    "copyAndHashAtActualIntegration": true
+  },
+  "existingFreezeEvidence": "Keep already-published f3-139-freeze-evidence.md/D154 as canonical; no duplicate family/freeze",
+  "futureObservedFollowthrough": "Append actual fresh2verdicts/provenance, finalpublicSHA/hosted result/primaryintegration; never invent futurefacts or rewrite stopped attempts",
+  "publicExclusion": "NONE of this index, privateB34, ownerquotes or raw evidence goes in projectbranch",
+  "proofLimits": "Process exit+torn injection, not powerloss; Windows CGO0local/no newrace-x20-timedfuzz; exact finalhosted3OSrace still pending",
+  "secondaryMainOrPrivateEdit": false,
+  "finalPublicSHA": "84d0ced9446168777c7b7bfa3382974977bf27ed",
+  "reviewedSourceIndex": {
+    "path": "local://t139-closing-evidence-sources.json",
+    "SHA256": "b0fb823b16505ea7be2bee79d66fd893a146b6b83865003c932d7840c5bef435",
+    "unchanged": true
+  },
+  "actualHosted": {
+    "runID": 40929620085,
+    "attempt": 1,
+    "conclusion": "success",
+    "exactSHA": "84d0ced9446168777c7b7bfa3382974977bf27ed",
+    "URL": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40929620085"
+  },
+  "additionalActualFinalArtifacts": [
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-integration-packet.json",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-integration-packet.json",
+      "SHA256AtHandoff": "b3b1a4f826775bdfa614f2cbc94a2fe9dc261139ac069accdadd1c85e788648c",
+      "verbatimCopyRequired": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-public-proof.json",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-public-proof.json",
+      "SHA256AtHandoff": "7ee159b6149a56e46d4af41574f4013488e7ba91fa2365c3f376ddf97cd6dffe",
+      "verbatimCopyRequired": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-public-record-application.json",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-public-record-application.json",
+      "SHA256AtHandoff": "6ab8c4c777309c48f857ee09a8d589b5dd0d73476a5857a0427e1edd4780ec48",
+      "verbatimCopyRequired": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-publication.json",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-publication.json",
+      "SHA256AtHandoff": "5fb2d5468d7258894fc2cee01af71d99da1c5965ef8f1ddbb9f0f9c2148241a3",
+      "verbatimCopyRequired": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-ci-result.json",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-ci-result.json",
+      "SHA256AtHandoff": "82aef336c16440d930172e4a791ae52e016c73dda95fcd6f99546066fc403d27",
+      "verbatimCopyRequired": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-ci-jobs.json",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-ci-jobs.json",
+      "SHA256AtHandoff": "3638ddcb22dc6d3e165d0fc45144f177a81507deea38582d5c54667f44188905",
+      "verbatimCopyRequired": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-review-routing-proof.json",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-review-routing-proof.json",
+      "SHA256AtHandoff": "094ad38d42716dd29e27ac186b525c72258e34e69eefef3a3ae9e24aa1e8203a",
+      "verbatimCopyRequired": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-review-aggregate.md",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-review-aggregate.md",
+      "SHA256AtHandoff": "7bbb26695414ff71ae07742ca410055d2493fbd450da4217c087965e0a9219f6",
+      "verbatimCopyRequired": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-standards-yield.md",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-standards-yield.md",
+      "SHA256AtHandoff": "6e47276dfd37c8d5ffd33e8a3b699268b9f9f51a095b8e210468e70af0a023cc",
+      "verbatimCopyRequired": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-standards-review.json",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-standards-review.json",
+      "SHA256AtHandoff": "2206f850ba09b686112c5d444fa01bb917caccfbc5bf590462c667ae9ddbc50f",
+      "verbatimCopyRequired": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-spec-yield.md",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-spec-yield.md",
+      "SHA256AtHandoff": "6c23c1ae344ed09ebf4d82b9106c04f5a82c047554fddde1de50aa0599443f42",
+      "verbatimCopyRequired": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-spec-review.json",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-spec-review.json",
+      "SHA256AtHandoff": "92375498e6e573bd2e05fc5e6f01d088388d1d4f4339fade37a4901477b93d1e",
+      "verbatimCopyRequired": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-primary-joint-closing-approval.txt",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-primary-joint-closing-approval.txt",
+      "SHA256AtHandoff": "3a80c2d02d7fbc73c623dacc819f5e654744986d41e07f30aec68804b7606dd1",
+      "verbatimCopyRequired": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-joint-primary-record-review.json",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-joint-primary-record-review.json",
+      "SHA256AtHandoff": "7bb96f4bd30ae842dfdf048e63bb88a79a03311b9723aff9e0737f4466083466",
+      "verbatimCopyRequired": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-final-handoff.md",
+      "canonicalPrivateDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-final-handoff.md",
+      "SHA256AtHandoff": "3853fc3cbf901bd68a7a67a21f79eaba95faaa4af868fd7337e2c5dc754f1b69",
+      "verbatimCopyRequired": true
+    }
+  ],
+  "followthroughLimits": "Only actual final local/review/CI/publication followthrough above. Primarymain/privatecopy/application/publication not yet observed; append suppliedactualreceipts and refresh ONLY mutable evidence at their actualcopy. No source/ruling/privateB34body policy change.",
+  "canonicalIndexDestination": ".scratch/dwarf-harness/c3-evidence/ticket-139-evidence-sources.json"
+}

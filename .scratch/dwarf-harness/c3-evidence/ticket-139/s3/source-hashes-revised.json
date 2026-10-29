@@ -1,0 +1,92 @@
+{
+  "status": "REVISED_CODE_READY_SOURCE_METADATA_ONLY",
+  "authorization": "Main granted bounded source-only crash-prefix and public-CLI lowered-limit corrections, original crash archival, proposal updates and read-only checksum metadata for changed exact files. No runtime/formatter/runner/mutant execution or product/shared-file ownership was granted.",
+  "sourceBase": "67d9636d6c70ba8cab2810bcec81c31a6c5df914",
+  "cwd": "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance",
+  "branch": "build/139-acceptance",
+  "supersedes": "The crash and CLI source hashes in source-hashes.json are the historical first CODE_READY versions. This record supplies their revised source hashes; unchanged source hashes remain in the original record.",
+  "archive": {
+    "path": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/registration_crash.original-code-ready.go",
+    "createdBeforeCrashEdit": true,
+    "sha256": "ff17022135af51f63c78cee727a72922e18585e9fb43ff5d0964325bbd0de458",
+    "matchesOriginalCodeReadyHash": true
+  },
+  "changes": [
+    {
+      "path": "internal/core/agents/registration_crash_test.go",
+      "sha256": "f937f77b81699adabd7d80001e3dd0f6a58d0b692690e0ff8b3090261e3d8241",
+      "reason": "Use the actual 14-complete-group frozen prefix ending at seq 50, immediately before the first withdrawal group at seqs 51-53. Slice the helper's returned complete commit catalogue to the installed prefix. Assert the public baseline declaration has active nonempty consumers; all four rows now remove those active edges rather than repeat an already-empty withdrawal.",
+      "sourceRecords": "contract/ledger/testdata/f3/139/log/00000000000000000001.jsonl:31,34,37,40,48-53; commit starts at seqs 1,7,13,17,21,24,27,30,33,36,39,42,45,48",
+      "baseline": {
+        "completeGroups": 14,
+        "throughSequence": 50,
+        "declarationID": "019a1390-0000-7000-8000-000000000500",
+        "version": 2,
+        "consumerKinds": ["context", "task"],
+        "firstExcludedWithdrawal": "declaration 0x501, effect seq 52 in complete group 51-53"
+      },
+      "preserved": "All four boundaries, child marker/output/exit/wait protocol, complete prior prefix/receipt/task/grant checks, Store.Open versus Service.Open distinction, actual committed receipt and no-duplicate original retry assertions. No golden/helper/product edit."
+    },
+    {
+      "path": "_t139_smoke/main.go",
+      "sha256": "80463d040929445e6f53811f3fb2b3d98876dee9cb0b64b1228bbc0dc66a3036",
+      "reason": "Reopen the actual public Service using a copied DefaultLimits with MaxRegistrations=1 and MaxDeclarations=1, below the already retained populations of 2 registrations and 4 declarations. Preserve all current/history/exact-pin/actual-receipt/original-retry/no-append checks and identify that lowered-limit coverage in the CLI result.",
+      "status": "Source complete; not run; own driver remains present pending the separately granted smoke"
+    },
+    {
+      "path": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/final-commands.json",
+      "sha256": "be68c1fe94648f1a76c92cc2d976cf39e5eecd316594577efab98d721974daff",
+      "reason": "Record the actual active prefix, withdrawal-mutant isolation, lowered-limit CLI coverage and revised metadata location. Exact executable/argv/environment/deadlines and temporary diffs are unchanged."
+    }
+  ],
+  "unchangedCarriedForwardHashes": [
+    {
+      "path": "internal/core/agents/registration_recovery_test.go",
+      "sha256": "d5cfdc0e42b4e718a85a18f3ef3b9f3f89088236ab04f19d031c6baf38abb479"
+    },
+    {
+      "path": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/run-final.ps1",
+      "sha256": "6f7facb96b48b2f6dad4b124515c72215d8f99ccd9a0a0855a8b01aa036d5c93"
+    }
+  ],
+  "unchangedHashNote": "No edit or rehash of these two files in this bounded correction; hashes are carried from the original observed checksum record, not newly measured.",
+  "diagnostics": {
+    "registration_crash_test.go": "LSP diagnostics returned OK after the correction",
+    "_t139_smoke/main.go": "LSP diagnostics returned OK after the correction",
+    "limitation": "No runtime success inferred from LSP"
+  },
+  "checksumCommand": {
+    "executable": "powershell.exe",
+    "argv": [
+      "-NoProfile",
+      "-NonInteractive",
+      "-Command",
+      "Get-FileHash -Algorithm SHA256 -LiteralPath 'C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance/internal/core/agents/registration_crash_test.go','C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance/_t139_smoke/main.go','C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/final-commands.json','C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/registration_crash.original-code-ready.go' | Select-Object Path,Hash | ConvertTo-Json"
+    ],
+    "cwd": "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance",
+    "environmentOverrides": {},
+    "environment": "Inherited host environment; no Go process launched",
+    "timeoutSeconds": 30,
+    "exitCode": null,
+    "durationSeconds": null,
+    "toolResult": "Completed with four actual SHA-256 records and no failure reported; numeric process exit code and duration were not exposed by the tool response",
+    "stdout": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/source-hashes-revised.stdout.json"
+  },
+  "mutationProposal": {
+    "status": "Unapproved and uninstalled",
+    "withdrawalRegression": "TestRegistrationInjectedCrashRecovery/durable_before_install",
+    "isolation": "No withdrawal exists in the chosen replay baseline, so the proposed skip-empty-install mutant cannot alter an earlier withdrawal. The selected child dies before new installation; the intended consumer-visible red is reconstructed public declaration version 2 with active edges instead of the actual newly committed empty version 3.",
+    "authorityRegression": "TestRegistrationPaidHistoryRecovery; unchanged proposal, still requiring primary's explicit temporary scoped_state.go ownership",
+    "noRuntimeClaims": "No red, green, survivor, store-repair, child-exit or smoke result has been observed"
+  },
+  "runtimeStatus": "NOT_RUN: source/read/edit/LSP and read-only checksum permissions only; primary140 retains execution",
+  "race": "Not run/proposed for tests-only S3; no production shared-state change",
+  "fuzz": "Unchanged ordinary-seed proposal; no timed campaign or changed production fuzzed path",
+  "scope": "No product/shared/golden/helper/dependency/documentation edits, no permanent extra test, no formatter/Go/runner/mutation/Git execution",
+  "prerequisites": [
+    "PM review of the revised exact source/proposal",
+    "Fresh primary compute grant before execution",
+    "Explicit temporary product-file permission before any mutant",
+    "Explicit retarget decision if main advances beyond the source base"
+  ]
+}

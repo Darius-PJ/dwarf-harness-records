@@ -1,0 +1,9 @@
+--- a/internal/core/agents/registration_state.go
++++ b/internal/core/agents/registration_state.go
+@@ -161,3 +161,3 @@
+-	if v := plan.declaration; v != nil {
+-		p.declarations[v.Record.DeclarationID] = *v
+-	}
++	if v := plan.declaration; v != nil && len(v.Record.Consumers) != 0 {
++		p.declarations[v.Record.DeclarationID] = *v
++	}

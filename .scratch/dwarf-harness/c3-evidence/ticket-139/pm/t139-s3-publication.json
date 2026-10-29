@@ -1,0 +1,25 @@
+{
+  "branch": "build/139-acceptance",
+  "sha": "84d0ced9446168777c7b7bfa3382974977bf27ed",
+  "reviewedCodeSHA": "f92a5ef25b15cab47769cf76ff1af2eb86b23e25",
+  "base": "8a17ec1ed2617ca2a4e5203479f75f363b359970",
+  "exit": 0,
+  "remoteConfirmedSHA": "84d0ced9446168777c7b7bfa3382974977bf27ed",
+  "pushTime": "2026-10-29 14:18:44 EDT",
+  "toolWallSeconds": 2.9,
+  "guard": {
+    "commits": 2,
+    "addedLines": 701,
+    "result": "ok",
+    "override": null,
+    "scanBasis": "Actual pre-push output, not inferred from gitdiff stats"
+  },
+  "command": "GIT_TERMINAL_PROMPT=0 GIT_SSH_COMMAND=\"ssh -o BatchMode=yes\" git push --set-upstream origin build/139-acceptance && printf PUSH_EXIT=0 && sameenv git ls-remote origin refs/heads/build/139-acceptance && date",
+  "mainMovedBySecondary": false,
+  "privateRecordPublishedBySecondary": false,
+  "review": "Both actual independent Astra/MAX/nofallback axes APPROVE0 for codejoint exactclosingdraft; primaryconditionalrecordgate satisfied",
+  "publicRecordApplication": "R1\u2013R7only/oneD116doccommit/exactshadowhash/linksLFproof retained",
+  "hostedConclusion": "success",
+  "runID": 40929620085,
+  "runURL": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40929620085"
+}

@@ -1,0 +1,562 @@
+=== RUN   TestRegistrationVersionCAS
+=== PAUSE TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose/concurrent-retry
+=== PAUSE TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/resource
+=== PAUSE TestRegistrationVersionCAS/resource
+=== RUN   TestRegistrationCommitRetryAndClose/close-fence
+=== PAUSE TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/work_domain
+=== PAUSE TestRegistrationVersionCAS/work_domain
+=== RUN   TestRegistrationVersionCAS/declaration
+=== PAUSE TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/resource
+=== CONT  TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/work_domain
+--- PASS: TestRegistrationCommitRetryAndClose (0.00s)
+    --- PASS: TestRegistrationCommitRetryAndClose/close-fence (0.47s)
+    --- PASS: TestRegistrationCommitRetryAndClose/concurrent-retry (0.68s)
+--- PASS: TestRegistrationVersionCAS (0.01s)
+    --- PASS: TestRegistrationVersionCAS/declaration (0.79s)
+    --- PASS: TestRegistrationVersionCAS/work_domain (0.80s)
+    --- PASS: TestRegistrationVersionCAS/resource (0.80s)
+=== RUN   TestRegistrationVersionCAS
+=== PAUSE TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose/concurrent-retry
+=== PAUSE TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/resource
+=== PAUSE TestRegistrationVersionCAS/resource
+=== RUN   TestRegistrationCommitRetryAndClose/close-fence
+=== PAUSE TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/work_domain
+=== PAUSE TestRegistrationVersionCAS/work_domain
+=== RUN   TestRegistrationVersionCAS/declaration
+=== PAUSE TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/resource
+=== CONT  TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/work_domain
+--- PASS: TestRegistrationCommitRetryAndClose (0.00s)
+    --- PASS: TestRegistrationCommitRetryAndClose/close-fence (0.53s)
+    --- PASS: TestRegistrationCommitRetryAndClose/concurrent-retry (0.76s)
+--- PASS: TestRegistrationVersionCAS (0.00s)
+    --- PASS: TestRegistrationVersionCAS/resource (0.88s)
+    --- PASS: TestRegistrationVersionCAS/declaration (0.88s)
+    --- PASS: TestRegistrationVersionCAS/work_domain (0.88s)
+=== RUN   TestRegistrationVersionCAS
+=== PAUSE TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose/concurrent-retry
+=== PAUSE TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/resource
+=== PAUSE TestRegistrationVersionCAS/resource
+=== RUN   TestRegistrationCommitRetryAndClose/close-fence
+=== PAUSE TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/work_domain
+=== PAUSE TestRegistrationVersionCAS/work_domain
+=== RUN   TestRegistrationVersionCAS/declaration
+=== PAUSE TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/work_domain
+=== CONT  TestRegistrationVersionCAS/resource
+--- PASS: TestRegistrationCommitRetryAndClose (0.00s)
+    --- PASS: TestRegistrationCommitRetryAndClose/close-fence (0.51s)
+    --- PASS: TestRegistrationCommitRetryAndClose/concurrent-retry (0.74s)
+--- PASS: TestRegistrationVersionCAS (0.00s)
+    --- PASS: TestRegistrationVersionCAS/declaration (0.85s)
+    --- PASS: TestRegistrationVersionCAS/resource (0.85s)
+    --- PASS: TestRegistrationVersionCAS/work_domain (0.85s)
+=== RUN   TestRegistrationVersionCAS
+=== PAUSE TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose/concurrent-retry
+=== PAUSE TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/resource
+=== PAUSE TestRegistrationVersionCAS/resource
+=== RUN   TestRegistrationCommitRetryAndClose/close-fence
+=== PAUSE TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/concurrent-retry
+=== CONT  TestRegistrationCommitRetryAndClose/close-fence
+=== RUN   TestRegistrationVersionCAS/work_domain
+=== PAUSE TestRegistrationVersionCAS/work_domain
+=== RUN   TestRegistrationVersionCAS/declaration
+=== PAUSE TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/work_domain
+=== CONT  TestRegistrationVersionCAS/resource
+=== CONT  TestRegistrationVersionCAS/declaration
+--- PASS: TestRegistrationCommitRetryAndClose (0.00s)
+    --- PASS: TestRegistrationCommitRetryAndClose/close-fence (0.49s)
+    --- PASS: TestRegistrationCommitRetryAndClose/concurrent-retry (0.76s)
+--- PASS: TestRegistrationVersionCAS (0.00s)
+    --- PASS: TestRegistrationVersionCAS/work_domain (0.85s)
+    --- PASS: TestRegistrationVersionCAS/declaration (0.85s)
+    --- PASS: TestRegistrationVersionCAS/resource (0.86s)
+=== RUN   TestRegistrationVersionCAS
+=== PAUSE TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationVersionCAS
+=== CONT  TestRegistrationCommitRetryAndClose
+=== RUN   TestRegistrationVersionCAS/resource
+=== PAUSE TestRegistrationVersionCAS/resource
+=== RUN   TestRegistrationCommitRetryAndClose/concurrent-retry
+=== PAUSE TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/work_domain
+=== PAUSE TestRegistrationVersionCAS/work_domain
+=== RUN   TestRegistrationCommitRetryAndClose/close-fence
+=== PAUSE TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/concurrent-retry
+=== CONT  TestRegistrationCommitRetryAndClose/close-fence
+=== RUN   TestRegistrationVersionCAS/declaration
+=== PAUSE TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/work_domain
+=== CONT  TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/resource
+--- PASS: TestRegistrationCommitRetryAndClose (0.00s)
+    --- PASS: TestRegistrationCommitRetryAndClose/close-fence (0.49s)
+    --- PASS: TestRegistrationCommitRetryAndClose/concurrent-retry (0.74s)
+--- PASS: TestRegistrationVersionCAS (0.00s)
+    --- PASS: TestRegistrationVersionCAS/declaration (0.85s)
+    --- PASS: TestRegistrationVersionCAS/resource (0.86s)
+    --- PASS: TestRegistrationVersionCAS/work_domain (0.86s)
+=== RUN   TestRegistrationVersionCAS
+=== PAUSE TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationVersionCAS
+=== CONT  TestRegistrationCommitRetryAndClose
+=== RUN   TestRegistrationVersionCAS/resource
+=== PAUSE TestRegistrationVersionCAS/resource
+=== RUN   TestRegistrationCommitRetryAndClose/concurrent-retry
+=== PAUSE TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/work_domain
+=== PAUSE TestRegistrationVersionCAS/work_domain
+=== RUN   TestRegistrationCommitRetryAndClose/close-fence
+=== PAUSE TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/concurrent-retry
+=== CONT  TestRegistrationCommitRetryAndClose/close-fence
+=== RUN   TestRegistrationVersionCAS/declaration
+=== PAUSE TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/resource
+=== CONT  TestRegistrationVersionCAS/work_domain
+=== CONT  TestRegistrationVersionCAS/declaration
+--- PASS: TestRegistrationCommitRetryAndClose (0.00s)
+    --- PASS: TestRegistrationCommitRetryAndClose/close-fence (0.51s)
+    --- PASS: TestRegistrationCommitRetryAndClose/concurrent-retry (0.73s)
+--- PASS: TestRegistrationVersionCAS (0.00s)
+    --- PASS: TestRegistrationVersionCAS/declaration (0.84s)
+    --- PASS: TestRegistrationVersionCAS/resource (0.85s)
+    --- PASS: TestRegistrationVersionCAS/work_domain (0.86s)
+=== RUN   TestRegistrationVersionCAS
+=== PAUSE TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose/concurrent-retry
+=== PAUSE TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/resource
+=== PAUSE TestRegistrationVersionCAS/resource
+=== RUN   TestRegistrationCommitRetryAndClose/close-fence
+=== PAUSE TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/work_domain
+=== PAUSE TestRegistrationVersionCAS/work_domain
+=== RUN   TestRegistrationVersionCAS/declaration
+=== PAUSE TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/work_domain
+=== CONT  TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/resource
+--- PASS: TestRegistrationCommitRetryAndClose (0.00s)
+    --- PASS: TestRegistrationCommitRetryAndClose/close-fence (0.50s)
+    --- PASS: TestRegistrationCommitRetryAndClose/concurrent-retry (0.74s)
+--- PASS: TestRegistrationVersionCAS (0.00s)
+    --- PASS: TestRegistrationVersionCAS/declaration (0.84s)
+    --- PASS: TestRegistrationVersionCAS/work_domain (0.84s)
+    --- PASS: TestRegistrationVersionCAS/resource (0.85s)
+=== RUN   TestRegistrationVersionCAS
+=== PAUSE TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationVersionCAS
+=== CONT  TestRegistrationCommitRetryAndClose
+=== RUN   TestRegistrationVersionCAS/resource
+=== PAUSE TestRegistrationVersionCAS/resource
+=== RUN   TestRegistrationCommitRetryAndClose/concurrent-retry
+=== PAUSE TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/work_domain
+=== PAUSE TestRegistrationVersionCAS/work_domain
+=== RUN   TestRegistrationCommitRetryAndClose/close-fence
+=== PAUSE TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/concurrent-retry
+=== CONT  TestRegistrationCommitRetryAndClose/close-fence
+=== RUN   TestRegistrationVersionCAS/declaration
+=== PAUSE TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/work_domain
+=== CONT  TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/resource
+--- PASS: TestRegistrationCommitRetryAndClose (0.01s)
+    --- PASS: TestRegistrationCommitRetryAndClose/close-fence (0.54s)
+    --- PASS: TestRegistrationCommitRetryAndClose/concurrent-retry (0.77s)
+--- PASS: TestRegistrationVersionCAS (0.01s)
+    --- PASS: TestRegistrationVersionCAS/resource (0.89s)
+    --- PASS: TestRegistrationVersionCAS/declaration (0.90s)
+    --- PASS: TestRegistrationVersionCAS/work_domain (0.90s)
+=== RUN   TestRegistrationVersionCAS
+=== PAUSE TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose/concurrent-retry
+=== PAUSE TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/resource
+=== PAUSE TestRegistrationVersionCAS/resource
+=== RUN   TestRegistrationCommitRetryAndClose/close-fence
+=== PAUSE TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/work_domain
+=== PAUSE TestRegistrationVersionCAS/work_domain
+=== RUN   TestRegistrationVersionCAS/declaration
+=== PAUSE TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/work_domain
+=== CONT  TestRegistrationVersionCAS/resource
+=== CONT  TestRegistrationVersionCAS/declaration
+--- PASS: TestRegistrationCommitRetryAndClose (0.00s)
+    --- PASS: TestRegistrationCommitRetryAndClose/close-fence (0.53s)
+    --- PASS: TestRegistrationCommitRetryAndClose/concurrent-retry (0.79s)
+--- PASS: TestRegistrationVersionCAS (0.00s)
+    --- PASS: TestRegistrationVersionCAS/work_domain (0.86s)
+    --- PASS: TestRegistrationVersionCAS/declaration (0.88s)
+    --- PASS: TestRegistrationVersionCAS/resource (0.88s)
+=== RUN   TestRegistrationVersionCAS
+=== PAUSE TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationVersionCAS
+=== CONT  TestRegistrationCommitRetryAndClose
+=== RUN   TestRegistrationVersionCAS/resource
+=== PAUSE TestRegistrationVersionCAS/resource
+=== RUN   TestRegistrationCommitRetryAndClose/concurrent-retry
+=== PAUSE TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/work_domain
+=== PAUSE TestRegistrationVersionCAS/work_domain
+=== RUN   TestRegistrationCommitRetryAndClose/close-fence
+=== PAUSE TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/declaration
+=== PAUSE TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/work_domain
+=== CONT  TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/resource
+--- PASS: TestRegistrationCommitRetryAndClose (0.00s)
+    --- PASS: TestRegistrationCommitRetryAndClose/close-fence (0.50s)
+    --- PASS: TestRegistrationCommitRetryAndClose/concurrent-retry (0.73s)
+--- PASS: TestRegistrationVersionCAS (0.00s)
+    --- PASS: TestRegistrationVersionCAS/work_domain (0.86s)
+    --- PASS: TestRegistrationVersionCAS/resource (0.86s)
+    --- PASS: TestRegistrationVersionCAS/declaration (0.86s)
+=== RUN   TestRegistrationVersionCAS
+=== PAUSE TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose/concurrent-retry
+=== PAUSE TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/resource
+=== PAUSE TestRegistrationVersionCAS/resource
+=== RUN   TestRegistrationCommitRetryAndClose/close-fence
+=== PAUSE TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/work_domain
+=== PAUSE TestRegistrationVersionCAS/work_domain
+=== RUN   TestRegistrationVersionCAS/declaration
+=== PAUSE TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/work_domain
+=== CONT  TestRegistrationVersionCAS/resource
+=== CONT  TestRegistrationVersionCAS/declaration
+--- PASS: TestRegistrationCommitRetryAndClose (0.00s)
+    --- PASS: TestRegistrationCommitRetryAndClose/close-fence (0.49s)
+    --- PASS: TestRegistrationCommitRetryAndClose/concurrent-retry (0.73s)
+--- PASS: TestRegistrationVersionCAS (0.00s)
+    --- PASS: TestRegistrationVersionCAS/declaration (0.84s)
+    --- PASS: TestRegistrationVersionCAS/resource (0.84s)
+    --- PASS: TestRegistrationVersionCAS/work_domain (0.84s)
+=== RUN   TestRegistrationVersionCAS
+=== PAUSE TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose/concurrent-retry
+=== PAUSE TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/resource
+=== PAUSE TestRegistrationVersionCAS/resource
+=== RUN   TestRegistrationCommitRetryAndClose/close-fence
+=== PAUSE TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/work_domain
+=== PAUSE TestRegistrationVersionCAS/work_domain
+=== RUN   TestRegistrationVersionCAS/declaration
+=== PAUSE TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/resource
+=== CONT  TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/work_domain
+--- PASS: TestRegistrationCommitRetryAndClose (0.00s)
+    --- PASS: TestRegistrationCommitRetryAndClose/close-fence (0.51s)
+    --- PASS: TestRegistrationCommitRetryAndClose/concurrent-retry (0.74s)
+--- PASS: TestRegistrationVersionCAS (0.00s)
+    --- PASS: TestRegistrationVersionCAS/resource (0.87s)
+    --- PASS: TestRegistrationVersionCAS/declaration (0.87s)
+    --- PASS: TestRegistrationVersionCAS/work_domain (0.88s)
+=== RUN   TestRegistrationVersionCAS
+=== PAUSE TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationVersionCAS
+=== CONT  TestRegistrationCommitRetryAndClose
+=== RUN   TestRegistrationVersionCAS/resource
+=== PAUSE TestRegistrationVersionCAS/resource
+=== RUN   TestRegistrationCommitRetryAndClose/concurrent-retry
+=== PAUSE TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/work_domain
+=== PAUSE TestRegistrationVersionCAS/work_domain
+=== RUN   TestRegistrationCommitRetryAndClose/close-fence
+=== PAUSE TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/declaration
+=== PAUSE TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/resource
+=== CONT  TestRegistrationVersionCAS/work_domain
+--- PASS: TestRegistrationCommitRetryAndClose (0.00s)
+    --- PASS: TestRegistrationCommitRetryAndClose/close-fence (0.52s)
+    --- PASS: TestRegistrationCommitRetryAndClose/concurrent-retry (0.76s)
+--- PASS: TestRegistrationVersionCAS (0.00s)
+    --- PASS: TestRegistrationVersionCAS/work_domain (0.86s)
+    --- PASS: TestRegistrationVersionCAS/declaration (0.87s)
+    --- PASS: TestRegistrationVersionCAS/resource (0.87s)
+=== RUN   TestRegistrationVersionCAS
+=== PAUSE TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationVersionCAS
+=== CONT  TestRegistrationCommitRetryAndClose
+=== RUN   TestRegistrationVersionCAS/resource
+=== PAUSE TestRegistrationVersionCAS/resource
+=== RUN   TestRegistrationCommitRetryAndClose/concurrent-retry
+=== PAUSE TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/work_domain
+=== PAUSE TestRegistrationVersionCAS/work_domain
+=== RUN   TestRegistrationCommitRetryAndClose/close-fence
+=== PAUSE TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/declaration
+=== PAUSE TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/work_domain
+=== CONT  TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/resource
+--- PASS: TestRegistrationCommitRetryAndClose (0.00s)
+    --- PASS: TestRegistrationCommitRetryAndClose/close-fence (0.49s)
+    --- PASS: TestRegistrationCommitRetryAndClose/concurrent-retry (0.74s)
+--- PASS: TestRegistrationVersionCAS (0.00s)
+    --- PASS: TestRegistrationVersionCAS/resource (0.85s)
+    --- PASS: TestRegistrationVersionCAS/work_domain (0.85s)
+    --- PASS: TestRegistrationVersionCAS/declaration (0.86s)
+=== RUN   TestRegistrationVersionCAS
+=== PAUSE TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose/concurrent-retry
+=== PAUSE TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/resource
+=== PAUSE TestRegistrationVersionCAS/resource
+=== RUN   TestRegistrationCommitRetryAndClose/close-fence
+=== PAUSE TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/work_domain
+=== PAUSE TestRegistrationVersionCAS/work_domain
+=== RUN   TestRegistrationVersionCAS/declaration
+=== PAUSE TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/work_domain
+=== CONT  TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/resource
+--- PASS: TestRegistrationCommitRetryAndClose (0.00s)
+    --- PASS: TestRegistrationCommitRetryAndClose/close-fence (0.50s)
+    --- PASS: TestRegistrationCommitRetryAndClose/concurrent-retry (0.75s)
+--- PASS: TestRegistrationVersionCAS (0.00s)
+    --- PASS: TestRegistrationVersionCAS/resource (0.84s)
+    --- PASS: TestRegistrationVersionCAS/work_domain (0.85s)
+    --- PASS: TestRegistrationVersionCAS/declaration (0.85s)
+=== RUN   TestRegistrationVersionCAS
+=== PAUSE TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationVersionCAS
+=== CONT  TestRegistrationCommitRetryAndClose
+=== RUN   TestRegistrationVersionCAS/resource
+=== PAUSE TestRegistrationVersionCAS/resource
+=== RUN   TestRegistrationCommitRetryAndClose/concurrent-retry
+=== PAUSE TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/work_domain
+=== PAUSE TestRegistrationVersionCAS/work_domain
+=== RUN   TestRegistrationCommitRetryAndClose/close-fence
+=== PAUSE TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/concurrent-retry
+=== CONT  TestRegistrationCommitRetryAndClose/close-fence
+=== RUN   TestRegistrationVersionCAS/declaration
+=== PAUSE TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/work_domain
+=== CONT  TestRegistrationVersionCAS/resource
+--- PASS: TestRegistrationCommitRetryAndClose (0.00s)
+    --- PASS: TestRegistrationCommitRetryAndClose/close-fence (0.52s)
+    --- PASS: TestRegistrationCommitRetryAndClose/concurrent-retry (0.77s)
+--- PASS: TestRegistrationVersionCAS (0.00s)
+    --- PASS: TestRegistrationVersionCAS/work_domain (0.87s)
+    --- PASS: TestRegistrationVersionCAS/resource (0.88s)
+    --- PASS: TestRegistrationVersionCAS/declaration (0.88s)
+=== RUN   TestRegistrationVersionCAS
+=== PAUSE TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationVersionCAS
+=== CONT  TestRegistrationCommitRetryAndClose
+=== RUN   TestRegistrationVersionCAS/resource
+=== PAUSE TestRegistrationVersionCAS/resource
+=== RUN   TestRegistrationCommitRetryAndClose/concurrent-retry
+=== PAUSE TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/work_domain
+=== PAUSE TestRegistrationVersionCAS/work_domain
+=== RUN   TestRegistrationCommitRetryAndClose/close-fence
+=== PAUSE TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/declaration
+=== PAUSE TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/work_domain
+=== CONT  TestRegistrationVersionCAS/resource
+--- PASS: TestRegistrationCommitRetryAndClose (0.00s)
+    --- PASS: TestRegistrationCommitRetryAndClose/close-fence (0.50s)
+    --- PASS: TestRegistrationCommitRetryAndClose/concurrent-retry (0.75s)
+--- PASS: TestRegistrationVersionCAS (0.00s)
+    --- PASS: TestRegistrationVersionCAS/work_domain (0.85s)
+    --- PASS: TestRegistrationVersionCAS/resource (0.85s)
+    --- PASS: TestRegistrationVersionCAS/declaration (0.85s)
+=== RUN   TestRegistrationVersionCAS
+=== PAUSE TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationVersionCAS
+=== CONT  TestRegistrationCommitRetryAndClose
+=== RUN   TestRegistrationVersionCAS/resource
+=== PAUSE TestRegistrationVersionCAS/resource
+=== RUN   TestRegistrationCommitRetryAndClose/concurrent-retry
+=== PAUSE TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/work_domain
+=== PAUSE TestRegistrationVersionCAS/work_domain
+=== RUN   TestRegistrationCommitRetryAndClose/close-fence
+=== PAUSE TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/concurrent-retry
+=== CONT  TestRegistrationCommitRetryAndClose/close-fence
+=== RUN   TestRegistrationVersionCAS/declaration
+=== PAUSE TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/work_domain
+=== CONT  TestRegistrationVersionCAS/resource
+=== CONT  TestRegistrationVersionCAS/declaration
+--- PASS: TestRegistrationCommitRetryAndClose (0.00s)
+    --- PASS: TestRegistrationCommitRetryAndClose/close-fence (0.52s)
+    --- PASS: TestRegistrationCommitRetryAndClose/concurrent-retry (0.73s)
+--- PASS: TestRegistrationVersionCAS (0.00s)
+    --- PASS: TestRegistrationVersionCAS/declaration (0.84s)
+    --- PASS: TestRegistrationVersionCAS/resource (0.85s)
+    --- PASS: TestRegistrationVersionCAS/work_domain (0.86s)
+=== RUN   TestRegistrationVersionCAS
+=== PAUSE TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose/concurrent-retry
+=== PAUSE TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/resource
+=== PAUSE TestRegistrationVersionCAS/resource
+=== RUN   TestRegistrationCommitRetryAndClose/close-fence
+=== PAUSE TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/concurrent-retry
+=== CONT  TestRegistrationCommitRetryAndClose/close-fence
+=== RUN   TestRegistrationVersionCAS/work_domain
+=== PAUSE TestRegistrationVersionCAS/work_domain
+=== RUN   TestRegistrationVersionCAS/declaration
+=== PAUSE TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/work_domain
+=== CONT  TestRegistrationVersionCAS/resource
+--- PASS: TestRegistrationCommitRetryAndClose (0.00s)
+    --- PASS: TestRegistrationCommitRetryAndClose/close-fence (0.53s)
+    --- PASS: TestRegistrationCommitRetryAndClose/concurrent-retry (0.75s)
+--- PASS: TestRegistrationVersionCAS (0.00s)
+    --- PASS: TestRegistrationVersionCAS/declaration (0.88s)
+    --- PASS: TestRegistrationVersionCAS/resource (0.88s)
+    --- PASS: TestRegistrationVersionCAS/work_domain (0.89s)
+=== RUN   TestRegistrationVersionCAS
+=== PAUSE TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationVersionCAS
+=== CONT  TestRegistrationCommitRetryAndClose
+=== RUN   TestRegistrationVersionCAS/resource
+=== PAUSE TestRegistrationVersionCAS/resource
+=== RUN   TestRegistrationCommitRetryAndClose/concurrent-retry
+=== PAUSE TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationVersionCAS/work_domain
+=== PAUSE TestRegistrationVersionCAS/work_domain
+=== RUN   TestRegistrationCommitRetryAndClose/close-fence
+=== PAUSE TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/concurrent-retry
+=== CONT  TestRegistrationCommitRetryAndClose/close-fence
+=== RUN   TestRegistrationVersionCAS/declaration
+=== PAUSE TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/work_domain
+=== CONT  TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/resource
+--- PASS: TestRegistrationCommitRetryAndClose (0.00s)
+    --- PASS: TestRegistrationCommitRetryAndClose/close-fence (0.52s)
+    --- PASS: TestRegistrationCommitRetryAndClose/concurrent-retry (0.77s)
+--- PASS: TestRegistrationVersionCAS (0.00s)
+    --- PASS: TestRegistrationVersionCAS/work_domain (0.90s)
+    --- PASS: TestRegistrationVersionCAS/declaration (0.91s)
+    --- PASS: TestRegistrationVersionCAS/resource (0.92s)
+PASS
+ok  	github.com/Darius-PJ/dwarf-harness/internal/core/agents	22.082s

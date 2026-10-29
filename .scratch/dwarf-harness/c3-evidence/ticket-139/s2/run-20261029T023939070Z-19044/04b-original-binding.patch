@@ -1,0 +1,5 @@
+--- a/internal/core/agents/registration_replay.go
++++ b/internal/core/agents/registration_replay.go
+@@ -82,1 +82,1 @@
+-	if private != nil || scoped != nil || review != nil || paid != nil || g == nil || g.command.CommandID != input.id || g.command.SubmissionSHA256 != input.digest || !sameScopedValue(g.receipt.Submission, input.sub) {
++	if private != nil || scoped != nil || review != nil || paid != nil || g == nil {

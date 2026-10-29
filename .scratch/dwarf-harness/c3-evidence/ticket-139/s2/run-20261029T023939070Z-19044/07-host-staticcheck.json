@@ -1,0 +1,28 @@
+{
+    "name":  "07-host-staticcheck",
+    "executable":  "C:/Program Files/Go/bin/go.exe",
+    "argv":  [
+                 "tool",
+                 "staticcheck",
+                 "./internal/core/agents"
+             ],
+    "cwd":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration",
+    "environmentOverrides":  {
+                                 "GOTOOLCHAIN":  "local",
+                                 "GOFLAGS":  "",
+                                 "GOROOT":  "C:/Program Files/Go",
+                                 "GOOS":  "windows",
+                                 "GOARCH":  "amd64",
+                                 "CGO_ENABLED":  "0"
+                             },
+    "timeoutSeconds":  600,
+    "startedUTC":  "2026-10-29T02:42:32.8394311Z",
+    "finishedUTC":  "2026-10-29T02:42:51.8081528Z",
+    "elapsedSeconds":  18.963711399999998,
+    "exitCode":  0,
+    "timedOut":  false,
+    "error":  null,
+    "stdout":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044\\07-host-staticcheck.stdout.log",
+    "stderr":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044\\07-host-staticcheck.stderr.log",
+    "metadata":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044\\07-host-staticcheck.json"
+}

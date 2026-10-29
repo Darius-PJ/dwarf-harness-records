@@ -1,0 +1,44 @@
+{
+  "basis": "ONLY retained completed plain output, in-process result-row analysis; indentation uses spaces/tabs only, never newlines",
+  "totals": {
+    "topTests": {
+      "PASS": 182,
+      "FAIL": 0,
+      "SKIP": 0
+    },
+    "topFuzz": {
+      "PASS": 5,
+      "FAIL": 0,
+      "SKIP": 0
+    },
+    "allRows": {
+      "PASS": 1367,
+      "FAIL": 0,
+      "SKIP": 0
+    }
+  },
+  "registrationOrdinarySeeds": {
+    "total": 24,
+    "PASS": 24,
+    "FAIL": 0,
+    "SKIP": 0
+  },
+  "maxResultRow": {
+    "indent": 0,
+    "status": "PASS",
+    "name": "TestPrivateScratchBindingsAreDistinct",
+    "seconds": 4.38
+  },
+  "atLeast10s": [],
+  "atLeast60s": [],
+  "S3PlainChildWaits": {
+    "total": 4,
+    "positiveReapedExit73": 4,
+    "boundaries": [
+      "before_commit",
+      "torn_final_group",
+      "durable_before_install",
+      "installed_before_ack"
+    ]
+  }
+}

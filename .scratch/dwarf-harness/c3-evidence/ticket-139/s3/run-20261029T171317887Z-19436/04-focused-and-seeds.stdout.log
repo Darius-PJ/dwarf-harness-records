@@ -1,0 +1,138 @@
+=== RUN   TestRegistrationInjectedCrashRecovery
+    registration_crash_test.go:61: crash prefix: complete_groups=14 durable=50 active_declaration=019a1390-0000-7000-8000-000000000500 version=2 consumers=[{Kind:context TaskID:00000000-0000-0000-0000-000000000000 Binding:{AgentID:019a1390-0000-7000-8000-000000000100 ContextID:019a1390-0000-7000-8000-000000000103}} {Kind:task TaskID:019a1390-0000-7000-8000-000000000300 Binding:{AgentID:00000000-0000-0000-0000-000000000000 ContextID:00000000-0000-0000-0000-000000000000}}]
+=== RUN   TestRegistrationInjectedCrashRecovery/before_commit
+    registration_crash_test.go:105: child launch: argv=["C:\\Users\\darius.jones\\AppData\\Local\\Temp\\go-build1820834429\\b001\\agents.test.exe" "-test.run=^TestRegistrationCrashChild$"] cwd="C:\\Users\\darius.jones\\AppData\\Local\\Temp\\TestRegistrationInjectedCrashRecoverybefore_commit1035271832\\001" env=["SystemRoot=C:\\windows" "WINDIR=C:\\windows" "TEMP=C:\\Users\\darius.jones\\AppData\\Local\\Temp" "TMP=C:\\Users\\darius.jones\\AppData\\Local\\Temp" "USERPROFILE=C:\\Users\\darius.jones" "LOCALAPPDATA=C:\\Users\\darius.jones\\AppData\\Local" "DWARF_REGISTRATION_CRASH_ROOT=C:\\Users\\darius.jones\\AppData\\Local\\Temp\\TestRegistrationInjectedCrashRecoverybefore_commit1035271832\\001" "DWARF_REGISTRATION_CRASH_BOUNDARY=before_commit"] requested=before_commit
+    registration_crash_test.go:107: child wait: reaped=true state=exit status 73 error=exit status 73 output={"Boundary":"before_commit","Before":50,"Digest":"1e4f079872bb76359dd6afdebc8307e2a041cb713137f6da724264581bfcaa44","Receipt":null,"EffectSequence":0,"Sequence":0,"Cut":0}
+    registration_crash_test.go:137: Store.Open: repair={Segment: TruncatedBytes:0} bytes=48599->48599 durable=50 sha256=7b15229f3661e4ec792aa1fdab702cb22094dd3285fa9a9291b8f008b0999076
+    registration_crash_test.go:149: uncommitted operation retained an effect or successful receipt
+=== RUN   TestRegistrationInjectedCrashRecovery/torn_final_group
+    registration_crash_test.go:105: child launch: argv=["C:\\Users\\darius.jones\\AppData\\Local\\Temp\\go-build1820834429\\b001\\agents.test.exe" "-test.run=^TestRegistrationCrashChild$"] cwd="C:\\Users\\darius.jones\\AppData\\Local\\Temp\\TestRegistrationInjectedCrashRecoverytorn_final_group626988285\\001" env=["SystemRoot=C:\\windows" "WINDIR=C:\\windows" "TEMP=C:\\Users\\darius.jones\\AppData\\Local\\Temp" "TMP=C:\\Users\\darius.jones\\AppData\\Local\\Temp" "USERPROFILE=C:\\Users\\darius.jones" "LOCALAPPDATA=C:\\Users\\darius.jones\\AppData\\Local" "DWARF_REGISTRATION_CRASH_ROOT=C:\\Users\\darius.jones\\AppData\\Local\\Temp\\TestRegistrationInjectedCrashRecoverytorn_final_group626988285\\001" "DWARF_REGISTRATION_CRASH_BOUNDARY=torn_final_group"] requested=torn_final_group
+    registration_crash_test.go:107: child wait: reaped=true state=exit status 73 error=exit status 73 output={"Boundary":"torn_final_group","Before":50,"Digest":"1e4f079872bb76359dd6afdebc8307e2a041cb713137f6da724264581bfcaa44","Receipt":null,"EffectSequence":0,"Sequence":0,"Cut":50888}
+    registration_crash_test.go:137: Store.Open: repair={Segment:00000000000000000001.jsonl TruncatedBytes:2289} bytes=50888->48599 durable=50 sha256=7b15229f3661e4ec792aa1fdab702cb22094dd3285fa9a9291b8f008b0999076
+    registration_crash_test.go:149: uncommitted operation retained an effect or successful receipt
+=== RUN   TestRegistrationInjectedCrashRecovery/durable_before_install
+    registration_crash_test.go:105: child launch: argv=["C:\\Users\\darius.jones\\AppData\\Local\\Temp\\go-build1820834429\\b001\\agents.test.exe" "-test.run=^TestRegistrationCrashChild$"] cwd="C:\\Users\\darius.jones\\AppData\\Local\\Temp\\TestRegistrationInjectedCrashRecoverydurable_before_install2896860576\\001" env=["SystemRoot=C:\\windows" "WINDIR=C:\\windows" "TEMP=C:\\Users\\darius.jones\\AppData\\Local\\Temp" "TMP=C:\\Users\\darius.jones\\AppData\\Local\\Temp" "USERPROFILE=C:\\Users\\darius.jones" "LOCALAPPDATA=C:\\Users\\darius.jones\\AppData\\Local" "DWARF_REGISTRATION_CRASH_ROOT=C:\\Users\\darius.jones\\AppData\\Local\\Temp\\TestRegistrationInjectedCrashRecoverydurable_before_install2896860576\\001" "DWARF_REGISTRATION_CRASH_BOUNDARY=durable_before_install"] requested=durable_before_install
+    registration_crash_test.go:107: child wait: reaped=true state=exit status 73 error=exit status 73 output={"Boundary":"durable_before_install","Before":50,"Digest":"1e4f079872bb76359dd6afdebc8307e2a041cb713137f6da724264581bfcaa44","Receipt":{"command_id":"019a0700-0000-7000-8000-00000000364c","submission_sha256":"1e4f079872bb76359dd6afdebc8307e2a041cb713137f6da724264581bfcaa44","submission":{"schema":5,"actor":"owner","origin":{"agent_id":"019a1390-0000-7000-8000-000000000100","session_id":"019a1390-0000-7000-8000-000000000101","context_id":"019a1390-0000-7000-8000-000000000102"},"operation":"declaration.set","arguments":{"declaration_id":"019a1390-0000-7000-8000-000000000500","expected_version":2,"subject":{"kind":"resource","id":"019a1390-0000-7000-8000-000000000400","version":2},"audience":["019a1390-0000-7000-8000-000000000100"],"consumers":[]}},"outcome":"applied","version":3},"EffectSequence":52,"Sequence":53,"Cut":0}
+    registration_crash_test.go:137: Store.Open: repair={Segment: TruncatedBytes:0} bytes=51534->51534 durable=53 sha256=5612c5c8427ac6470b37b9b9ac6b3c750a0e677f7f71695fca6aad74beb69cc1
+    registration_crash_test.go:159: agents.Open: durable=53 ledger_unchanged=true report={Issues:[] Completed:[] PendingWork:[] PendingPaid:[] UnboundCredentials:[]}
+    registration_crash_test.go:228: recovery/retry: previously_complete_bytes=48599 original_receipt={RuntimeRegistrationReceipt:{CommandID:019a0700-0000-7000-8000-00000000364c SubmissionSHA256:1e4f079872bb76359dd6afdebc8307e2a041cb713137f6da724264581bfcaa44 Submission:{Schema:5 Actor:owner Origin:{AgentID:019a1390-0000-7000-8000-000000000100 SessionID:019a1390-0000-7000-8000-000000000101 ContextID:019a1390-0000-7000-8000-000000000102} Operation:declaration.set Arguments:{DeclarationID:019a1390-0000-7000-8000-000000000500 ExpectedVersion:2 Subject:{Kind:resource ID:019a1390-0000-7000-8000-000000000400 Version:2} Audience:[019a1390-0000-7000-8000-000000000100] Consumers:[]}} Outcome:applied Version:3} EffectSequence:52 Sequence:53} final_durable=53 no_duplicate=true
+=== RUN   TestRegistrationInjectedCrashRecovery/installed_before_ack
+    registration_crash_test.go:105: child launch: argv=["C:\\Users\\darius.jones\\AppData\\Local\\Temp\\go-build1820834429\\b001\\agents.test.exe" "-test.run=^TestRegistrationCrashChild$"] cwd="C:\\Users\\darius.jones\\AppData\\Local\\Temp\\TestRegistrationInjectedCrashRecoveryinstalled_before_ack830687188\\001" env=["SystemRoot=C:\\windows" "WINDIR=C:\\windows" "TEMP=C:\\Users\\darius.jones\\AppData\\Local\\Temp" "TMP=C:\\Users\\darius.jones\\AppData\\Local\\Temp" "USERPROFILE=C:\\Users\\darius.jones" "LOCALAPPDATA=C:\\Users\\darius.jones\\AppData\\Local" "DWARF_REGISTRATION_CRASH_ROOT=C:\\Users\\darius.jones\\AppData\\Local\\Temp\\TestRegistrationInjectedCrashRecoveryinstalled_before_ack830687188\\001" "DWARF_REGISTRATION_CRASH_BOUNDARY=installed_before_ack"] requested=installed_before_ack
+    registration_crash_test.go:107: child wait: reaped=true state=exit status 73 error=exit status 73 output={"Boundary":"installed_before_ack","Before":50,"Digest":"1e4f079872bb76359dd6afdebc8307e2a041cb713137f6da724264581bfcaa44","Receipt":{"command_id":"019a0700-0000-7000-8000-00000000364c","submission_sha256":"1e4f079872bb76359dd6afdebc8307e2a041cb713137f6da724264581bfcaa44","submission":{"schema":5,"actor":"owner","origin":{"agent_id":"019a1390-0000-7000-8000-000000000100","session_id":"019a1390-0000-7000-8000-000000000101","context_id":"019a1390-0000-7000-8000-000000000102"},"operation":"declaration.set","arguments":{"declaration_id":"019a1390-0000-7000-8000-000000000500","expected_version":2,"subject":{"kind":"resource","id":"019a1390-0000-7000-8000-000000000400","version":2},"audience":["019a1390-0000-7000-8000-000000000100"],"consumers":[]}},"outcome":"applied","version":3},"EffectSequence":52,"Sequence":53,"Cut":0}
+    registration_crash_test.go:137: Store.Open: repair={Segment: TruncatedBytes:0} bytes=51534->51534 durable=53 sha256=5b82d752726474d0b557df9ac0b9c8bccfb63392a12c85c626c5bad2f40b54ff
+    registration_crash_test.go:159: agents.Open: durable=53 ledger_unchanged=true report={Issues:[] Completed:[] PendingWork:[] PendingPaid:[] UnboundCredentials:[]}
+    registration_crash_test.go:228: recovery/retry: previously_complete_bytes=48599 original_receipt={RuntimeRegistrationReceipt:{CommandID:019a0700-0000-7000-8000-00000000364c SubmissionSHA256:1e4f079872bb76359dd6afdebc8307e2a041cb713137f6da724264581bfcaa44 Submission:{Schema:5 Actor:owner Origin:{AgentID:019a1390-0000-7000-8000-000000000100 SessionID:019a1390-0000-7000-8000-000000000101 ContextID:019a1390-0000-7000-8000-000000000102} Operation:declaration.set Arguments:{DeclarationID:019a1390-0000-7000-8000-000000000500 ExpectedVersion:2 Subject:{Kind:resource ID:019a1390-0000-7000-8000-000000000400 Version:2} Audience:[019a1390-0000-7000-8000-000000000100] Consumers:[]}} Outcome:applied Version:3} EffectSequence:52 Sequence:53} final_durable=53 no_duplicate=true
+--- FAIL: TestRegistrationInjectedCrashRecovery (1.27s)
+    --- FAIL: TestRegistrationInjectedCrashRecovery/before_commit (0.77s)
+    --- FAIL: TestRegistrationInjectedCrashRecovery/torn_final_group (0.09s)
+    --- PASS: TestRegistrationInjectedCrashRecovery/durable_before_install (0.15s)
+    --- PASS: TestRegistrationInjectedCrashRecovery/installed_before_ack (0.15s)
+=== RUN   TestRegistrationReviewHistoryRecovery
+=== PAUSE TestRegistrationReviewHistoryRecovery
+=== RUN   TestRegistrationPaidHistoryRecovery
+=== PAUSE TestRegistrationPaidHistoryRecovery
+=== CONT  TestRegistrationReviewHistoryRecovery
+=== CONT  TestRegistrationPaidHistoryRecovery
+--- PASS: TestRegistrationReviewHistoryRecovery (0.67s)
+--- PASS: TestRegistrationPaidHistoryRecovery (0.88s)
+=== RUN   FuzzRegistrationGroupReplay
+=== RUN   FuzzRegistrationGroupReplay/seed#0
+=== PAUSE FuzzRegistrationGroupReplay/seed#0
+=== RUN   FuzzRegistrationGroupReplay/seed#1
+=== PAUSE FuzzRegistrationGroupReplay/seed#1
+=== RUN   FuzzRegistrationGroupReplay/seed#2
+=== PAUSE FuzzRegistrationGroupReplay/seed#2
+=== RUN   FuzzRegistrationGroupReplay/seed#3
+=== PAUSE FuzzRegistrationGroupReplay/seed#3
+=== RUN   FuzzRegistrationGroupReplay/seed#4
+=== PAUSE FuzzRegistrationGroupReplay/seed#4
+=== RUN   FuzzRegistrationGroupReplay/seed#5
+=== PAUSE FuzzRegistrationGroupReplay/seed#5
+=== RUN   FuzzRegistrationGroupReplay/seed#6
+=== PAUSE FuzzRegistrationGroupReplay/seed#6
+=== RUN   FuzzRegistrationGroupReplay/seed#7
+=== PAUSE FuzzRegistrationGroupReplay/seed#7
+=== RUN   FuzzRegistrationGroupReplay/seed#8
+=== PAUSE FuzzRegistrationGroupReplay/seed#8
+=== RUN   FuzzRegistrationGroupReplay/seed#9
+=== PAUSE FuzzRegistrationGroupReplay/seed#9
+=== RUN   FuzzRegistrationGroupReplay/seed#10
+=== PAUSE FuzzRegistrationGroupReplay/seed#10
+=== RUN   FuzzRegistrationGroupReplay/seed#11
+=== PAUSE FuzzRegistrationGroupReplay/seed#11
+=== RUN   FuzzRegistrationGroupReplay/seed#12
+=== PAUSE FuzzRegistrationGroupReplay/seed#12
+=== RUN   FuzzRegistrationGroupReplay/seed#13
+=== PAUSE FuzzRegistrationGroupReplay/seed#13
+=== RUN   FuzzRegistrationGroupReplay/seed#14
+=== PAUSE FuzzRegistrationGroupReplay/seed#14
+=== RUN   FuzzRegistrationGroupReplay/seed#15
+=== PAUSE FuzzRegistrationGroupReplay/seed#15
+=== RUN   FuzzRegistrationGroupReplay/seed#16
+=== PAUSE FuzzRegistrationGroupReplay/seed#16
+=== RUN   FuzzRegistrationGroupReplay/seed#17
+=== PAUSE FuzzRegistrationGroupReplay/seed#17
+=== RUN   FuzzRegistrationGroupReplay/seed#18
+=== PAUSE FuzzRegistrationGroupReplay/seed#18
+=== RUN   FuzzRegistrationGroupReplay/seed#19
+=== PAUSE FuzzRegistrationGroupReplay/seed#19
+=== RUN   FuzzRegistrationGroupReplay/seed#20
+=== PAUSE FuzzRegistrationGroupReplay/seed#20
+=== RUN   FuzzRegistrationGroupReplay/seed#21
+=== PAUSE FuzzRegistrationGroupReplay/seed#21
+=== RUN   FuzzRegistrationGroupReplay/seed#22
+=== PAUSE FuzzRegistrationGroupReplay/seed#22
+=== RUN   FuzzRegistrationGroupReplay/seed#23
+=== PAUSE FuzzRegistrationGroupReplay/seed#23
+=== CONT  FuzzRegistrationGroupReplay/seed#0
+=== CONT  FuzzRegistrationGroupReplay/seed#12
+=== CONT  FuzzRegistrationGroupReplay/seed#18
+=== CONT  FuzzRegistrationGroupReplay/seed#10
+=== CONT  FuzzRegistrationGroupReplay/seed#15
+=== CONT  FuzzRegistrationGroupReplay/seed#8
+=== CONT  FuzzRegistrationGroupReplay/seed#17
+=== CONT  FuzzRegistrationGroupReplay/seed#16
+=== CONT  FuzzRegistrationGroupReplay/seed#6
+=== CONT  FuzzRegistrationGroupReplay/seed#11
+=== CONT  FuzzRegistrationGroupReplay/seed#9
+=== CONT  FuzzRegistrationGroupReplay/seed#7
+=== CONT  FuzzRegistrationGroupReplay/seed#21
+=== CONT  FuzzRegistrationGroupReplay/seed#22
+=== CONT  FuzzRegistrationGroupReplay/seed#23
+=== CONT  FuzzRegistrationGroupReplay/seed#20
+=== CONT  FuzzRegistrationGroupReplay/seed#14
+=== CONT  FuzzRegistrationGroupReplay/seed#3
+=== CONT  FuzzRegistrationGroupReplay/seed#5
+=== CONT  FuzzRegistrationGroupReplay/seed#19
+=== CONT  FuzzRegistrationGroupReplay/seed#4
+=== CONT  FuzzRegistrationGroupReplay/seed#13
+=== CONT  FuzzRegistrationGroupReplay/seed#2
+=== CONT  FuzzRegistrationGroupReplay/seed#1
+--- PASS: FuzzRegistrationGroupReplay (0.49s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#12 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#18 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#10 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#6 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#17 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#7 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#15 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#11 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#21 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#22 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#9 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#3 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#14 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#20 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#5 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#13 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#4 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#23 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#2 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#19 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#1 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#8 (0.09s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#0 (0.10s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#16 (0.10s)
+FAIL
+FAIL	github.com/Darius-PJ/dwarf-harness/internal/core/agents	5.009s
+FAIL

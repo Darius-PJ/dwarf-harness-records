@@ -1,0 +1,8 @@
+=== RUN   TestRegistrationPaidHistoryRecovery
+=== PAUSE TestRegistrationPaidHistoryRecovery
+=== CONT  TestRegistrationPaidHistoryRecovery
+    registration_recovery_test.go:176: agents: inconsistent record at sequence 27: invalid scoped transition: agents: unavailable
+--- FAIL: TestRegistrationPaidHistoryRecovery (0.07s)
+FAIL
+FAIL	github.com/Darius-PJ/dwarf-harness/internal/core/agents	2.303s
+FAIL

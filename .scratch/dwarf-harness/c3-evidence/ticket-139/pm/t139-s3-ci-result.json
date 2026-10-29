@@ -1,0 +1,135 @@
+{
+  "status": "EXACT_FINAL_PUBLIC_SHA_HOSTED_SUCCESS",
+  "run": {
+    "id": 40929620085,
+    "runNumber": 11,
+    "runAttempt": 1,
+    "headBranch": "build/139-acceptance",
+    "headSHA": "84d0ced9446168777c7b7bfa3382974977bf27ed",
+    "status": "completed",
+    "conclusion": "success",
+    "createdAt": "2026-10-29T18:18:55Z",
+    "updatedAt": "2026-10-29T18:56:02Z",
+    "URL": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40929620085",
+    "sourceURL": "https://api.github.com/repos/Darius-PJ/dwarf-harness/actions/runs/40929620085",
+    "selection": "Actual latest run fields copied from final functions.read response, no CI rerun"
+  },
+  "exactAttemptJobsSource": "https://api.github.com/repos/Darius-PJ/dwarf-harness/actions/runs/40929620085/attempts/1/jobs?per_page=100",
+  "rawExactAttemptJobs": "local://t139-s3-ci-jobs.json",
+  "jobs": [
+    {
+      "name": "changes",
+      "id": 123644271295,
+      "URL": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40929620085/job/123644271295",
+      "conclusion": "success",
+      "jobElapsedSeconds": 5.0,
+      "jobTimingNotPackageOrRaceTiming": true,
+      "fullCheckStep": null,
+      "fullCheckStepSeconds": null
+    },
+    {
+      "name": "Check / linux-amd64",
+      "id": 123644346515,
+      "URL": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40929620085/job/123644346515",
+      "conclusion": "success",
+      "jobElapsedSeconds": 552.0,
+      "jobTimingNotPackageOrRaceTiming": true,
+      "fullCheckStep": {
+        "name": "Run the full check",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 8,
+        "started_at": "2026-10-29T18:19:11Z",
+        "completed_at": "2026-10-29T18:28:15Z"
+      },
+      "fullCheckStepSeconds": 544.0
+    },
+    {
+      "name": "Check / macos-arm64",
+      "id": 123644346609,
+      "URL": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40929620085/job/123644346609",
+      "conclusion": "success",
+      "jobElapsedSeconds": 1351.0,
+      "jobTimingNotPackageOrRaceTiming": true,
+      "fullCheckStep": {
+        "name": "Run the full check",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 8,
+        "started_at": "2026-10-29T18:19:25Z",
+        "completed_at": "2026-10-29T18:41:33Z"
+      },
+      "fullCheckStepSeconds": 1328.0
+    },
+    {
+      "name": "Check / windows-amd64",
+      "id": 123644346672,
+      "URL": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40929620085/job/123644346672",
+      "conclusion": "success",
+      "jobElapsedSeconds": 2208.0,
+      "jobTimingNotPackageOrRaceTiming": true,
+      "fullCheckStep": {
+        "name": "Run the full check",
+        "status": "completed",
+        "conclusion": "success",
+        "number": 8,
+        "started_at": "2026-10-29T18:19:39Z",
+        "completed_at": "2026-10-29T18:55:50Z"
+      },
+      "fullCheckStepSeconds": 2171.0
+    },
+    {
+      "name": "Check result",
+      "id": 123664481951,
+      "URL": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40929620085/job/123664481951",
+      "conclusion": "success",
+      "jobElapsedSeconds": 3.0,
+      "jobTimingNotPackageOrRaceTiming": true,
+      "fullCheckStep": null,
+      "fullCheckStepSeconds": null
+    }
+  ],
+  "annotationsObserved": {
+    "changes": {
+      "jobID": 123644271295,
+      "messages": [],
+      "sourceURL": "https://api.github.com/repos/Darius-PJ/dwarf-harness/check-runs/123644271295/annotations?per_page=100"
+    },
+    "Check / linux-amd64": {
+      "jobID": 123644346515,
+      "messages": [
+        "ImageOS=ubuntu24 ImageVersion=20261026.354.1; go version go1.27.3 linux/amd64; git version 2.56.0"
+      ],
+      "sourceURL": "https://api.github.com/repos/Darius-PJ/dwarf-harness/check-runs/123644346515/annotations?per_page=100"
+    },
+    "Check / macos-arm64": {
+      "jobID": 123644346609,
+      "messages": [
+        "ImageOS=macos15 ImageVersion=20260907.0337.1; go version go1.27.3 darwin/arm64; git version 2.55.0",
+        "Due to capacity constraints, jobs targeting macOS arm64 runners may experience longer queue times."
+      ],
+      "sourceURL": "https://api.github.com/repos/Darius-PJ/dwarf-harness/check-runs/123644346609/annotations?per_page=100"
+    },
+    "Check / windows-amd64": {
+      "jobID": 123644346672,
+      "messages": [
+        "ImageOS=win22 ImageVersion=20261026.347.1; go version go1.27.3 windows/amd64; git version 2.56.0.windows.3"
+      ],
+      "sourceURL": "https://api.github.com/repos/Darius-PJ/dwarf-harness/check-runs/123644346672/annotations?per_page=100"
+    },
+    "Check result": {
+      "jobID": 123664481951,
+      "messages": [],
+      "sourceURL": "https://api.github.com/repos/Darius-PJ/dwarf-harness/check-runs/123664481951/annotations?per_page=100"
+    }
+  },
+  "allFiveRequiredJobsSucceeded": true,
+  "allThreeActualFullCheckStepsSucceeded": true,
+  "matrixNotMarkdownExemption": true,
+  "WindowsVerifiedRaceCompilerInstall": "success in actual jobsteps",
+  "race": "Fullhostedcheck includes race under D153; no separate race/package internaltime inferred",
+  "logs": "Actual completionwatcher observed runlogs/joblogs403withoutlogin; no credentialprobe or log retry needed for successfulAPIproof",
+  "limits": "API job/fullcheckstep time is not package/race time or numerical performance qualification; mac capacity notice establishes no cause for this run duration",
+  "localGoOrCIReRun": false,
+  "mainOrPrivateRefMovedBySecondary": false
+}

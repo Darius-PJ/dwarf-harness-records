@@ -1,0 +1,144 @@
+--- historical-8a17-slot2-ipc-stop/final-commands.json
++++ source-only-ipc-rebound/final-commands.json
+@@ -3,11 +3,11 @@
+   "sourceBase": "8a17ec1ed2617ca2a4e5203479f75f363b359970",
+   "sourceBinding": {
+     "status": "SOURCE_BOUND_PENDING_PM_REVIEW_AND_SEPARATE_PRIMARY_GRANTS",
+-    "manifestPath": "C:/Users/darius.jones/.omp/agent/sessions/-Documents-PROJECTS-dwarf-harness/2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21/local/t139-s3-prefix-binding.json",
+-    "manifestSHA256": "45737862fb8b62ed57aaf3d3d55c059d162f50e0842fb95b2490baf85641da3d",
++    "manifestPath": "C:/Users/darius.jones/.omp/agent/sessions/-Documents-PROJECTS-dwarf-harness/2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21/local/t139-s3-ipc-prefix-binding.json",
++    "manifestSHA256": "f5f1f2c2313ef9fdb4a476113615f7ebf632be110672fb7cd32ea1f93b3ee3ef",
+     "sourcePathCount": 85,
+-    "historicalArchiveReceipt": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/historical-67d-before-8a17/archive-bindings.json",
+-    "scope": "Private source metadata only; cumulative accepted-commit helpers and repaired BodyRefs codec included. No adoption, product edit, mutation or execution permission."
++    "historicalArchiveReceipt": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/historical-8a17-slot2-ipc-stop/archive-bindings.json",
++    "scope": "Source-only exact owned crash-marker IPC string/ParseDigest correction. Only that one source hash changes; the84unchanged bindings reuse actual post-stop85/85proof. No product or native permission."
+   },
+   "sourceHashes": {
+     "go.mod": "817ae18bd8be5c150e0a71bb18bc577f4ab4bab6a3e0be0befe1c45091aa3bc6",
+@@ -92,7 +92,7 @@
+     "internal/core/agents/history_index_test.go": "375391888662220403614dda65cce81d32a7b6727327c938453da671d7633fb5",
+     "internal/core/agents/scoped_receipt_test.go": "315354fc745c3f90d904a379c60c7b9991b0ba32d9bfe67c9f8edb87817eed34",
+     "internal/core/agents/recovery_test.go": "57fb5b06fec677eb1f4c04aca4ff2e9337d5c4d3ceb20024d25eab24ca89db8c",
+-    "internal/core/agents/registration_crash_test.go": "f937f77b81699adabd7d80001e3dd0f6a58d0b692690e0ff8b3090261e3d8241",
++    "internal/core/agents/registration_crash_test.go": "36ae613b18c7c6ee5950ff096ed146288a8f920560a0423f473ee48724256f6d",
+     "_t139_smoke/main.go": "80463d040929445e6f53811f3fb2b3d98876dee9cb0b64b1228bbc0dc66a3036",
+     "internal/core/agents/registration_recovery_test.go": "d5cfdc0e42b4e718a85a18f3ef3b9f3f89088236ab04f19d031c6baf38abb479"
+   },
+@@ -100,6 +100,7 @@
+   "branch": "build/139-acceptance",
+   "executionAuthorized": false,
+   "sourceCoverageRevision": {
++    "crashIPC": "Retained slot2 failed before Service reconstruction because the test-private JSON digest string could not decode into ledger.Digest. Signal now uses string wire/child.String/parent explicit ParseDigest with the SAME nonzero requirement and typed lookup; all4rows/assertions retained. This correction is source-only, unrun; neither stopped attempt is a semantic red.",
+     "crashPrefix": "The actual frozen 139 ledger's first 14 complete commits end at seq 50; seq 49/receipt 50 install declaration 0x500 version 2 with both exact-context and task consumers. The ledger's first withdrawal, for declaration 0x501, is in the following complete group, seqs 51-53. No withdrawal is installed in the chosen baseline.",
+     "sourceRecords": "contract/ledger/testdata/f3/139/log/00000000000000000001.jsonl:31,34,37,40,48-53; commit starts through seq 50 establish the exact 14-group prefix.",
+     "crashAssertion": "All four rows now start from the public nonempty consumer snapshot and exercise a real active-to-empty replacement. Every complete prior group/receipt in that chosen prefix remains checked; no future golden group is included in prior-history expectations.",
+--- historical-8a17-slot2-ipc-stop/run-risk.ps1
++++ source-only-ipc-rebound/run-risk.ps1
+@@ -23,7 +23,7 @@
+ # remain prerequisites. ExpectedSubject must match; no automatic retarget.
+ $ReviewedSubject = '8a17ec1ed2617ca2a4e5203479f75f363b359970'
+ $PlanPath = Join-Path $Evidence 'final-commands.json'
+-$PlanHash = '55d09cbb87e3804f318b0508445551760de6daf0bdbb463b422f7b26a94788d4'
++$PlanHash = '2230e5613e756c97fd42651a578c9eefbcab39ef40109d27e382ae79921c24cb'
+ $SourceHashes = [ordered]@{
+     'go.mod' = '817ae18bd8be5c150e0a71bb18bc577f4ab4bab6a3e0be0befe1c45091aa3bc6'
+     'go.sum' = '8f5c60cb264ddc6838335d517678723a6c1af0e97568d7c1bd6510971500b18b'
+@@ -107,7 +107,7 @@
+     'internal/core/agents/history_index_test.go' = '375391888662220403614dda65cce81d32a7b6727327c938453da671d7633fb5'
+     'internal/core/agents/scoped_receipt_test.go' = '315354fc745c3f90d904a379c60c7b9991b0ba32d9bfe67c9f8edb87817eed34'
+     'internal/core/agents/recovery_test.go' = '57fb5b06fec677eb1f4c04aca4ff2e9337d5c4d3ceb20024d25eab24ca89db8c'
+-    'internal/core/agents/registration_crash_test.go' = 'f937f77b81699adabd7d80001e3dd0f6a58d0b692690e0ff8b3090261e3d8241'
++    'internal/core/agents/registration_crash_test.go' = '36ae613b18c7c6ee5950ff096ed146288a8f920560a0423f473ee48724256f6d'
+     '_t139_smoke/main.go' = '80463d040929445e6f53811f3fb2b3d98876dee9cb0b64b1228bbc0dc66a3036'
+     'internal/core/agents/registration_recovery_test.go' = 'd5cfdc0e42b4e718a85a18f3ef3b9f3f89088236ab04f19d031c6baf38abb479'
+ }
+--- historical-8a17-slot2-ipc-stop/run-risk-source.json
++++ source-only-ipc-rebound/run-risk-source.json
+@@ -1,21 +1,21 @@
+ {
+-  "status": "PRIVATE_DRIVER_SOURCE_CORRECTED_PENDING_QUIET_RELEASE_AND_FRESH_GRANT",
++  "status": "PRIVATE_DRIVER_IPC_SOURCE_REBOUND_PENDING_FRESH_FINITE_GRANT",
+   "path": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/run-risk.ps1",
+-  "sha256": "ada741007d1a8fe56ccb58a2acf2b2bf390e4385c143d6fc89bfcdda9cf1a730",
++  "sha256": "822e80ce8c43ee200731ef881d571201ffc3db2de094b85c9e6cb236151c0d58",
+   "sourcePattern": "Narrow adaptation of the supplied S2 run-final.ps1 Run-Command/Run-RuleBreak pattern; exactly two fixed reviewed mutation plans, no general mutation framework",
+   "mandatoryParameters": ["GrantReference", "ExpectedSubject"],
+   "binding": {
+     "sourceBase": "8a17ec1ed2617ca2a4e5203479f75f363b359970",
+     "executionAuthorized": false,
+     "proposalPath": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/final-commands.json",
+-    "proposalSHA256": "55d09cbb87e3804f318b0508445551760de6daf0bdbb463b422f7b26a94788d4",
+-    "prefixManifestPath": "C:/Users/darius.jones/.omp/agent/sessions/-Documents-PROJECTS-dwarf-harness/2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21/local/t139-s3-prefix-binding.json",
+-    "prefixManifestSHA256": "45737862fb8b62ed57aaf3d3d55c059d162f50e0842fb95b2490baf85641da3d",
++    "proposalSHA256": "2230e5613e756c97fd42651a578c9eefbcab39ef40109d27e382ae79921c24cb",
++    "prefixManifestPath": "C:/Users/darius.jones/.omp/agent/sessions/-Documents-PROJECTS-dwarf-harness/2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21/local/t139-s3-ipc-prefix-binding.json",
++    "prefixManifestSHA256": "f5f1f2c2313ef9fdb4a476113615f7ebf632be110672fb7cd32ea1f93b3ee3ef",
+     "sourcePathCount": 85,
+-    "historicalArchiveReceipt": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/historical-67d-before-8a17/archive-bindings.json",
+-    "preLaunchRequirement": "Primary already applied the one-line scalar Git discovery correction. This metadata-only update does not grant execution. Primary140 owns the next original-driver measurement interval; after the explicit quiet acknowledgment, no source/LSP/native activity is permitted until its explicit release. A NEW finite grant must approve this actual runner/current metadata and the unchanged proposal/source/temporary diffs before resumption. Do not retarget, rebind or rerun unchanged work.",
++    "historicalArchiveReceipt": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/historical-8a17-slot2-ipc-stop/archive-bindings.json",
++    "preLaunchRequirement": "Primary explicitly released the diagnostic quiet hold and approved only the exact owned crash-marker IPC string/ParseDigest correction and necessary one-hash private binding revision. Those source changes are now prepared, not executed. Primary must read the actual small source/private diffs and new hashes, then issue a NEW finite native reference covering this runner/current metadata and the unchanged intended commands/two temporary diffs. No inherited retry or extra decoder probe.",
+     "guard": "Mandatory ExpectedSubject must equal the source-bound ReviewedSubject before creating the run directory. A finite read-only git rev-parse --verify HEAD must then match it. The reviewed proposal hash, all listed source hashes and each unique mutation anchor are checked before product mutation.",
+-    "futurePermission": "Slot1 ended with FULL AUTHOR+PM release after a pre-child launcher failure; no inherited temporary-edit, retry or local-Go authority. The next reference must be a fresh explicit grant after primary's quiet release."
++    "futurePermission": "Slots1and2 ended with FULL AUTHOR+PM release and both remain UNPROVED, not semantic reds. Quiet release permits only the approved source repair; any parser/native/Go/format/mutant/retry/smoke/final execution still needs a NEW explicit finite grant."
+   },
+   "cwd": "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance",
+   "environmentOverrides": {
+@@ -94,7 +94,7 @@
+       }
+     }
+   },
+-  "currentSourceCorrection": {
++  "priorLauncherCorrection": {
+     "appliedBy": "primary PM",
+     "authority": "Coordination mailbox475-485; secondary may update only this truthful metadata, then send QUIET_ACK and park",
+     "sourceLine": 441,
+@@ -127,5 +127,34 @@
+     "actualInitialSourceGuard": "85paths matched; no product/permanent-source edit; no restoration claimed because no mutant was installed",
+     "release": "FULL AUTHOR+SECONDARY-PM LOCAL-GO RELEASE; job ended/no child started/no unreaped child/no pending final command",
+     "repeat": "None; failure is retained without rerunning to confirm it"
++  },
++  "slot2Stop": {
++    "grantReference": "primary-t139-s3-8a17-20261029-slot2",
++    "evidence": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/risk-20261029T061747257Z-17756/author-stop-report.json",
++    "launcherRuntimeProof": "Scalar Git cmd executable passed existing reviewed-head: exact8a17/exit0/0.1114811s/reaped/streams complete",
++    "classification": "UNPROVED unrelated owned-test IPC codec failure before public Service reconstruction, not intended M1 red or product failure",
++    "actualError": "json: cannot unmarshal string into Go struct field registrationCrashSignal.Digest of type ledger.Digest",
++    "actualChild": "durable_before_install/Before50/Effect52/Receipt53/appliedv3/emptyconsumers; positive wait/reap/exit73",
++    "GoCommands": 1,
++    "behavioralReds": 0,
++    "restoredGreens": 0,
++    "M1ByteAndHashRestoration": "Exact original5fd211ee66aef9b73e985f4fa4fd8ff461dab8725ed3ea1c240785fd787287fa restored; no restoration error",
++    "postStopSourceGuard": "Same run post-stop-source-hashes.json:85paths/0mismatches, in-process checksum only",
++    "laterWork": "No green/M2/final/smoke/fix/retry under slot2",
++    "release": "FULL AUTHOR+SECONDARY-PM LOCAL-GO RELEASE; all native and crash children reaped, no follow-on"
++  },
++  "currentIPCSourceCorrection": {
++    "authority": "Primary525-537 exact SOURCE-only owned-test repair, activated only after explicit diagnostic QUIET RELEASE",
++    "path": "internal/core/agents/registration_crash_test.go",
++    "priorSHA256": "f937f77b81699adabd7d80001e3dd0f6a58d0b692690e0ff8b3090261e3d8241",
++    "currentSHA256": "36ae613b18c7c6ee5950ff096ed146288a8f920560a0423f473ee48724256f6d",
++    "change": "Digest string wire; child command SubmissionSHA256.String(); parent explicit ledger.ParseDigest plus SAME nonzero requirement; parsed typed digest in command lookup",
++    "assertions": "All4rows and positive wait/boundary/before/actualreceipt/publicrecovery/priorhistory/noappend/retry assertions retained; no helper/unmarshaller/contract/product/shared/other test/CLI/golden/module edit",
++    "sourceDiff": "Parent local/t139-s3-ipc-source.diff",
++    "actualAuthorMessage": "6ee269a5",
++    "sourceBindingBasis": "Actual one changed source checksum plus retained84unchangedbindings from slot2post-stop85/85proof; no broad re-audit/rehash/rebind",
++    "LSP": "Author references failed with missing package metadata; scoped text references checked, no workspace setup or Go/parser",
++    "privateChanges": "Only current manifest/proposal/one risk guard hash/PlanHash/final manifest references/current metadata; native command flow, selection, classifier, two exact temporary diffs and deadlines unchanged",
++    "runtimeProof": "None for this source revision; no native/Go/parser/formatter/mutant/retry/smoke run. Future reviewed finite sequence under a fresh grant is the proof."
+   }
+ }
+--- historical-8a17-slot2-ipc-stop/run-final.ps1
++++ source-only-ipc-rebound/run-final.ps1
+@@ -149,8 +149,8 @@
+     status = 'started'; grantReference = $GrantReference; cwd = $Root
+     sourceBase = '8a17ec1ed2617ca2a4e5203479f75f363b359970'
+     prefixBindingManifest = [ordered]@{
+-        path = 'C:/Users/darius.jones/.omp/agent/sessions/-Documents-PROJECTS-dwarf-harness/2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21/local/t139-s3-prefix-binding.json'
+-        sha256 = '45737862fb8b62ed57aaf3d3d55c059d162f50e0842fb95b2490baf85641da3d'
++        path = 'C:/Users/darius.jones/.omp/agent/sessions/-Documents-PROJECTS-dwarf-harness/2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21/local/t139-s3-ipc-prefix-binding.json'
++        sha256 = 'f5f1f2c2313ef9fdb4a476113615f7ebf632be110672fb7cd32ea1f93b3ee3ef'
+         sourcePathCount = 85
+     }
+     startedUTC = [DateTime]::UtcNow.ToString('o'); finishedUTC = $null; exitCode = $null

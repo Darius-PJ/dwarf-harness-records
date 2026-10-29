@@ -1,0 +1,389 @@
+{
+  "status": "CODE_READY_WITH_GRANTED_LOCAL_PROOF",
+  "remainingRunStatus": "remaining-checks-complete",
+  "ticket": "139 S3",
+  "author": "CoderT139S3",
+  "subject": "8a17ec1ed2617ca2a4e5203479f75f363b359970",
+  "grantReference": "primary-t139-s3-8a17-20261029-slot4-remaining",
+  "worktree": "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance",
+  "evidenceRoot": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/remaining-20261029T173807547Z-9144",
+  "scopeLimit": "All granted local remaining checks are complete. This is not a claim of final S3 review approval, commit, hosted/full-ticket gate, integration or ticket closure; those remain PM-owned.",
+  "actualLaunch": "powershell.exe -NoLogo -NoProfile -NonInteractive -ExecutionPolicy Bypass -File C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/run-final.ps1 -GrantReference primary-t139-s3-8a17-20261029-slot4-remaining",
+  "launchOptions": {"async": true, "timeoutSeconds": 0, "pty": false, "cwd": "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance"},
+  "job": {
+    "id": "bg_54",
+    "completed": true,
+    "exitCode": 0,
+    "toolWallSeconds": 116.66,
+    "runnerStartedUTC": "2026-10-29T17:38:07.5756731Z",
+    "firstNativeStartedUTC": "2026-10-29T17:38:07.6953826Z",
+    "runnerFinishedUTC": "2026-10-29T17:40:03.7193242Z"
+  },
+  "environmentForEveryNativeCommand": {
+    "GOTOOLCHAIN": "local",
+    "GOFLAGS": "",
+    "GOROOT": "C:/Program Files/Go",
+    "GOOS": "windows",
+    "GOARCH": "amd64",
+    "CGO_ENABLED": "0"
+  },
+  "toolchainScope": "Pinned Go 1.27.3/local per the explicit primary grant. No version, setup, parser, decoder or baseline command was added.",
+  "nativeResults": {
+    "directRunnerCommands": 10,
+    "gofmtCommands": 2,
+    "goCommands": 8,
+    "exitZero": 10,
+    "nonzeroExits": 0,
+    "timeouts": 0,
+    "allReaped": true,
+    "allStreamsComplete": true,
+    "allCommandErrorsNull": true,
+    "allStderrFilesEmpty": true,
+    "rawReceipts": "commands.json and each named command's .json/.stdout.log/.stderr.log"
+  },
+  "commands": [
+    {
+      "name": "02-gofmt-write",
+      "executable": "C:/Program Files/Go/bin/gofmt.exe",
+      "argv": ["-w", "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance/internal/core/agents/registration_crash_test.go"],
+      "deadlineSeconds": 120,
+      "startedUTC": "2026-10-29T17:38:07.6953826Z",
+      "finishedUTC": "2026-10-29T17:38:07.8002966Z",
+      "elapsedSeconds": 0.08348839999999999,
+      "exitCode": 0,
+      "stdoutEmpty": true
+    },
+    {
+      "name": "03-gofmt-list",
+      "executable": "C:/Program Files/Go/bin/gofmt.exe",
+      "argv": ["-l", "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance/internal/core/agents/registration_crash_test.go"],
+      "deadlineSeconds": 120,
+      "startedUTC": "2026-10-29T17:38:07.8375784Z",
+      "finishedUTC": "2026-10-29T17:38:07.8710058Z",
+      "elapsedSeconds": 0.0362694,
+      "exitCode": 0,
+      "stdoutEmpty": true
+    },
+    {
+      "name": "04-crash-boundaries",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": ["test", "-count=1", "-v", "-timeout=19m", "./internal/core/agents", "-run", "^TestRegistrationInjectedCrashRecovery$"],
+      "deadlineSeconds": 1200,
+      "startedUTC": "2026-10-29T17:38:07.8872392Z",
+      "finishedUTC": "2026-10-29T17:38:16.5400001Z",
+      "elapsedSeconds": 8.652308399999999,
+      "exitCode": 0,
+      "packageReportedSeconds": 3.638
+    },
+    {
+      "name": "05-agents-plain",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": ["test", "-count=1", "-v", "-timeout=19m", "./internal/core/agents"],
+      "deadlineSeconds": 1200,
+      "startedUTC": "2026-10-29T17:38:16.5756838Z",
+      "finishedUTC": "2026-10-29T17:39:28.4775965Z",
+      "elapsedSeconds": 71.8996245,
+      "exitCode": 0,
+      "packageReportedSeconds": 70.257
+    },
+    {
+      "name": "06-host-vet",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": ["vet", "./internal/core/agents"],
+      "deadlineSeconds": 600,
+      "startedUTC": "2026-10-29T17:39:28.4845439Z",
+      "finishedUTC": "2026-10-29T17:39:31.1069093Z",
+      "elapsedSeconds": 2.6258566,
+      "exitCode": 0,
+      "stdoutEmpty": true
+    },
+    {
+      "name": "07-host-staticcheck",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": ["tool", "staticcheck", "./internal/core/agents"],
+      "deadlineSeconds": 600,
+      "startedUTC": "2026-10-29T17:39:31.1162709Z",
+      "finishedUTC": "2026-10-29T17:39:40.5465510Z",
+      "elapsedSeconds": 9.4315456,
+      "exitCode": 0,
+      "stdoutEmpty": true
+    },
+    {
+      "name": "08-production-imports",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": ["list", "-f", "{{join .Imports \"\\n\"}}", "./internal/core/agents"],
+      "deadlineSeconds": 300,
+      "startedUTC": "2026-10-29T17:39:40.5465510Z",
+      "finishedUTC": "2026-10-29T17:39:40.7422930Z",
+      "elapsedSeconds": 0.1803967,
+      "exitCode": 0,
+      "importLines": 31
+    },
+    {
+      "name": "09-test-imports",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": ["list", "-f", "{{join .TestImports \"\\n\"}}", "./internal/core/agents"],
+      "deadlineSeconds": 300,
+      "startedUTC": "2026-10-29T17:39:40.7510542Z",
+      "finishedUTC": "2026-10-29T17:39:40.9271232Z",
+      "elapsedSeconds": 0.1801266,
+      "exitCode": 0,
+      "importLines": 43
+    },
+    {
+      "name": "10-module-tidy-diff",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": ["mod", "tidy", "-diff"],
+      "deadlineSeconds": 600,
+      "startedUTC": "2026-10-29T17:39:40.9427937Z",
+      "finishedUTC": "2026-10-29T17:39:41.1543471Z",
+      "elapsedSeconds": 0.21143009999999998,
+      "exitCode": 0,
+      "stdoutEmpty": true
+    },
+    {
+      "name": "11-module-verify",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": ["mod", "verify"],
+      "deadlineSeconds": 600,
+      "startedUTC": "2026-10-29T17:39:41.1543471Z",
+      "finishedUTC": "2026-10-29T17:40:03.4323081Z",
+      "elapsedSeconds": 22.266447,
+      "exitCode": 0,
+      "stdout": "all modules verified"
+    }
+  ],
+  "plainPackageTallies": {
+    "basis": "pm-plain-output-tallies.json: Main's in-process analysis of this completed 05-agents-plain.stdout.log only; no additional execution",
+    "topTests": {"PASS": 182, "FAIL": 0, "SKIP": 0},
+    "topFuzz": {"PASS": 5, "FAIL": 0, "SKIP": 0},
+    "allResultRows": {"PASS": 1367, "FAIL": 0, "SKIP": 0},
+    "registrationOrdinarySeeds": {"total": 24, "PASS": 24, "FAIL": 0, "SKIP": 0},
+    "maxResultRow": {"name": "TestPrivateScratchBindingsAreDistinct", "seconds": 4.38},
+    "rowsAtLeast10Seconds": [],
+    "rowsAtLeast60Seconds": [],
+    "timingLimit": "Actual run/test-row timings, not a performance benchmark or regression verdict. Package elapsed time and individual result-row durations are distinct.",
+    "helperLimit": "Top-level PASS counts include subprocess entry helpers. Real S3 child completion is established by the separate positive wait records, not their zero-second top-level PASS rows."
+  },
+  "crashAcceptance": {
+    "test": "TestRegistrationInjectedCrashRecovery",
+    "focusedTopSeconds": 1.40,
+    "plainTopSeconds": 1.37,
+    "focusedRowsPassed": 4,
+    "plainRowsPassed": 4,
+    "focusedPositiveChildWaits": 4,
+    "plainPositiveChildWaits": 4,
+    "newS3ChildrenTotal": 8,
+    "allObservedChildrenReaped": true,
+    "allObservedChildExitCodes": 73,
+    "previousHistory": {"completeGroups": 14, "durable": 50, "bytes": 48599, "activeDeclarationVersion": 2, "activeConsumers": ["context", "task"]},
+    "commandID": "019a0700-0000-7000-8000-00000000364c",
+    "submissionSHA256": "1e4f079872bb76359dd6afdebc8307e2a041cb713137f6da724264581bfcaa44",
+    "rows": [
+      {
+        "boundary": "before_commit",
+        "focusedStatus": "PASS",
+        "focusedSeconds": 0.83,
+        "plainStatus": "PASS",
+        "plainSeconds": 0.82,
+        "childMarker": {"Before": 50, "ReceiptFieldOmitted": true, "EffectSequence": 0, "Sequence": 0, "Cut": 0},
+        "focusedStoreOpen": {"bytesBefore": 48599, "bytesAfter": 48599, "truncatedBytes": 0, "durable": 50, "sha256": "7b15229f3661e4ec792aa1fdab702cb22094dd3285fa9a9291b8f008b0999076"},
+        "focusedCoreReplay": {"durable": 50, "ledgerUnchanged": true, "issues": []},
+        "receiptMeaning": "Uncommitted at crash/reopen; no prior successful receipt. First post-recovery submission applies the operation, and matching retry returns that actual committed receipt without another append.",
+        "finalReceipt": {"outcome": "applied", "version": 3, "consumers": [], "effectSequence": 52, "sequence": 53},
+        "finalDurable": 53,
+        "noDuplicate": true
+      },
+      {
+        "boundary": "torn_final_group",
+        "focusedStatus": "PASS",
+        "focusedSeconds": 0.15,
+        "plainStatus": "PASS",
+        "plainSeconds": 0.14,
+        "childMarker": {"Before": 50, "ReceiptFieldOmitted": true, "EffectSequence": 0, "Sequence": 0, "Cut": 50888},
+        "focusedStoreOpen": {"bytesBefore": 50888, "bytesAfter": 48599, "truncatedBytes": 2289, "durable": 50, "sha256": "7b15229f3661e4ec792aa1fdab702cb22094dd3285fa9a9291b8f008b0999076"},
+        "focusedCoreReplay": {"durable": 50, "ledgerUnchanged": true, "issues": []},
+        "receiptMeaning": "Incomplete final group is discarded by Store.Open, leaving the complete prior prefix. First post-recovery submission applies the operation; matching retry returns its actual committed receipt without duplicate recovery.",
+        "finalReceipt": {"outcome": "applied", "version": 3, "consumers": [], "effectSequence": 52, "sequence": 53},
+        "finalDurable": 53,
+        "noDuplicate": true
+      },
+      {
+        "boundary": "durable_before_install",
+        "focusedStatus": "PASS",
+        "focusedSeconds": 0.14,
+        "plainStatus": "PASS",
+        "plainSeconds": 0.14,
+        "childMarker": {"Before": 50, "nonemptyActualReceipt": true, "EffectSequence": 52, "Sequence": 53, "Cut": 0},
+        "focusedStoreOpen": {"bytesBefore": 51534, "bytesAfter": 51534, "truncatedBytes": 0, "durable": 53, "sha256": "f379408d92fb4a2f3809d649999062866100881f9da054c922493e6aab49b991"},
+        "focusedCoreReplay": {"durable": 53, "ledgerUnchanged": true, "issues": []},
+        "receiptMeaning": "Durable actual child receipt survives before state installation. Core replays the committed withdrawn declaration without appending, and matching retry returns the original receipt.",
+        "finalReceipt": {"outcome": "applied", "version": 3, "consumers": [], "effectSequence": 52, "sequence": 53},
+        "finalDurable": 53,
+        "noDuplicate": true
+      },
+      {
+        "boundary": "installed_before_ack",
+        "focusedStatus": "PASS",
+        "focusedSeconds": 0.15,
+        "plainStatus": "PASS",
+        "plainSeconds": 0.15,
+        "childMarker": {"Before": 50, "nonemptyActualReceipt": true, "EffectSequence": 52, "Sequence": 53, "Cut": 0},
+        "focusedStoreOpen": {"bytesBefore": 51534, "bytesAfter": 51534, "truncatedBytes": 0, "durable": 53, "sha256": "a156ed1c1c0f6a9fc34eab2b1df7ee6988c88f56140c6f762d03ddfc90ea01fc"},
+        "focusedCoreReplay": {"durable": 53, "ledgerUnchanged": true, "issues": []},
+        "receiptMeaning": "Installed committed operation loses acknowledgement; reopen and matching retry retain the actual original receipt without another append.",
+        "finalReceipt": {"outcome": "applied", "version": 3, "consumers": [], "effectSequence": 52, "sequence": 53},
+        "finalDurable": 53,
+        "noDuplicate": true
+      }
+    ],
+    "storeVsCore": "Tail repair belongs to Store.Open: only the injected torn row truncates 2289 bytes. In every row the subsequent agents.Open/Core replay leaves the reopened ledger bytes and durable sequence unchanged. A first submission after an uncommitted crash is distinct from replay; both committed rows instead recover the child's already committed receipt.",
+    "historyAndRetry": "Both focused and plain output record previously_complete_bytes=48599 and actual version-3 empty-consumer receipts at effect 52/receipt 53, final_durable=53, no_duplicate=true for every boundary.",
+    "childEvidence": "04-crash-boundaries.stdout.log lines 4-26 and 05-agents-plain.stdout.log lines 179-201 retain exact executable/argv/cwd/environment, boundary markers, positive waits, Store.Open evidence and Core/retry evidence.",
+    "processDeathLimit": "Covers the named real-process exit boundaries and deliberately injected torn tail. It does not establish power-loss, OS/device failure or physical-durability guarantees."
+  },
+  "crossFamilyAcceptance": [
+    {
+      "test": "TestRegistrationReviewHistoryRecovery",
+      "plainStatus": "PASS",
+      "plainSeconds": 1.26,
+      "behavior": "Real F3-12 reviewed terminal task and reassigned task/exact-context history, registration history/revisions/withdrawal, global command identity collisions and unrelated-family historical stability."
+    },
+    {
+      "test": "TestRegistrationPaidHistoryRecovery",
+      "plainStatus": "PASS",
+      "plainSeconds": 1.66,
+      "behavior": "Existing F3-13 opaque address cohabitation, registration/grant independence, global command identity and paid-family historical stability without provider work in this S3 test."
+    },
+    {
+      "test": "FuzzRegistrationGroupReplay",
+      "plainStatus": "PASS",
+      "plainSeconds": 0.56,
+      "ordinarySeedsPassed": 24,
+      "scope": "Existing seed#0 through seed#23 inside the one unrun full verbose package; no standalone seed rerun or timed fuzz campaign."
+    }
+  ],
+  "retainedEvidenceBridge": {
+    "authority": "Primary's actual slot4 grant explicitly accepts the nil-only private wire bridge; this report does not independently extend that permission.",
+    "sourceDeltaBeforeLaunch": "PM applied only json:\",omitempty\" to test-private registrationCrashSignal.Receipt after archival. Parent assertions, all four rows, test selection and nonempty committed receipt field name/object bytes were unchanged.",
+    "riskEvidenceRoot": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/risk-20261029T171230684Z-18452",
+    "riskStatus": "two-named-reds-and-restored-greens-complete",
+    "riskProofs": [
+      {
+        "name": "withdrawal-install-omitted",
+        "redExit": 1,
+        "greenExit": 0,
+        "redBoundary": "Public recovered declaration after positively reaped durable-before-install child; actual version 2 with consumers instead of expected withdrawn version 3 with no consumers.",
+        "originalAndExactRestoredSHA256": "5fd211ee66aef9b73e985f4fa4fd8ff461dab8725ed3ea1c240785fd787287fa",
+        "byteIdenticalRestoration": true,
+        "identicalTargetGreen": true
+      },
+      {
+        "name": "external-grant-needs-registration",
+        "redExit": 1,
+        "greenExit": 0,
+        "redBoundary": "Public Service.Open replay before delegation: inconsistent record at sequence 27, invalid scoped transition, agents unavailable. Not a live-delegation red.",
+        "originalAndExactRestoredSHA256": "2c232bb2af3f6ba6dc90d47ba503c71dad585ef8d4bdaf5c2592cc1490bb0e9e",
+        "byteIdenticalRestoration": true,
+        "identicalTargetGreen": true
+      }
+    ],
+    "riskRerunsThisSlot": 0,
+    "mutantsInstalledThisSlot": 0,
+    "lastAll85RestorationProof": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/risk-20261029T171230684Z-18452/external-grant-needs-registration-after-green.source-hashes.json",
+    "smokeEvidenceRoot": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/run-20261029T171317887Z-19436",
+    "realPublicServiceCLI": {
+      "actualSlot3Command": "CGO_ENABLED=0 with the recorded pinned environment: go run ./_t139_smoke",
+      "exitCode": 0,
+      "actualElapsedSeconds": 4.4716491,
+      "originalPath": "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance/_t139_smoke/main.go",
+      "archivePath": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/run-20261029T171317887Z-19436/smoke-main.go",
+      "archiveSHA256": "80463d040929445e6f53811f3fb2b3d98876dee9cb0b64b1228bbc0dc66a3036",
+      "removedAfterSuccessfulRun": true,
+      "recreatedThisSlot": false,
+      "rerunThisSlot": false,
+      "observedStatus": "passed",
+      "observedDurableBefore": 53,
+      "observedDurableAfter": 53,
+      "observedRegistrationReceipts": 11,
+      "observedOriginalRetries": 6,
+      "observedRepairedBytes": 0,
+      "observedLedgerSHA256": "4398ae9c8cc2f072542d6a05a8645aa3623319f49e1b743869fad6aefbe28aaf",
+      "coverage": "Real public owner Service; resource/work-domain sources and all four task/context declaration combinations; revisions, mixed replacement, withdrawals, current/historical metadata, exact current/historical pins, close/reopen and matching original-receipt retry without ledger change.",
+      "loweredAdmissionLimits": "Archived CLI copies agents.DefaultLimits and reopens with MaxRegistrations=1 and MaxDeclarations=1 below its two retained registrations/four declarations; assertions retain current/history/pins, actual receipts and no-append retries."
+    },
+    "previousFailuresRetained": "Slot1 launcher failure, slot2 Digest wire decode failure and slot3 absent Receipt:null guard failure remain in their original evidence. None is rewritten into a semantic red. Slot3's separate successful mutation/smoke evidence and slot4's successful all-four-boundary proof are identified distinctly."
+  },
+  "finalOwnedSources": {
+    "receipt": "final-hashes.json",
+    "pathsAndSHA256": {
+      "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance/internal/core/agents/registration_crash_test.go": "1123794587c8486dd276a6463e88718870f62d9db7f4526ac1d41051ba9ac564",
+      "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance/internal/core/agents/registration_recovery_test.go": "d045d9705df2b4fb4f8c0d4db319ef29ccc40693d4dda47e6338165fb033aa53"
+    },
+    "formattedCrashHashStillMatchesApproved": true,
+    "alreadyFormattedRecoveryHashUnchanged": true,
+    "cliState": "Successful real CLI remains archived and removed; do not require or infer a recreated working-tree probe.",
+    "permanentProductSharedDocumentationDependencyWorkflowEditsByAuthor": false,
+    "sourceFixesDuringThisExecution": 0
+  },
+  "finalUnchangedBindings": {
+    "receipt": "final-unchanged-binding-hashes.json",
+    "captured": 10,
+    "matchingExpected": 10,
+    "mismatches": 0,
+    "hashes": {
+      "internal/core/agents/doc.go": "56f58f4332cc20bfa0ccb2b7d42656599bca9e83e5dbfec88df5680c94ad810e",
+      "internal/core/agents/history_index.go": "69c23b9faf4590931d2fde8ecb2385bb2a08967dfe1ace1fb8b0efff5975a73a",
+      "internal/core/agents/history_index_test.go": "375391888662220403614dda65cce81d32a7b6727327c938453da671d7633fb5",
+      "internal/core/agents/recovery_test.go": "57fb5b06fec677eb1f4c04aca4ff2e9337d5c4d3ceb20024d25eab24ca89db8c",
+      "internal/core/agents/registration_state.go": "5fd211ee66aef9b73e985f4fa4fd8ff461dab8725ed3ea1c240785fd787287fa",
+      "internal/core/agents/replay.go": "3b81a839ad03597271b78e0eff057c2e59926036f89dc2dc7cad6579b68eae2d",
+      "internal/core/agents/review_execute.go": "156e2e55f8ad84ff37eada10fd55e653fa190478dfc5aeea2cd972003c81896e",
+      "internal/core/agents/scoped_execute.go": "c23fb945fbe9c2a5e1535fe8a22a1954f2006b80ce492e581b03017b6a7ce86c",
+      "internal/core/agents/scoped_receipt_test.go": "315354fc745c3f90d904a379c60c7b9991b0ba32d9bfe67c9f8edb87817eed34",
+      "internal/core/agents/scoped_state.go": "2c232bb2af3f6ba6dc90d47ba503c71dad585ef8d4bdaf5c2592cc1490bb0e9e"
+    },
+    "moduleAndF3": {
+      "completeSetReceipt": "final-module-and-f3.json",
+      "comparisonReceipt": "module-and-f3-comparison.json",
+      "paths": 39,
+      "unchanged": true,
+      "basis": "Same complete module/F3 path-and-hash set versus supplied S2 module-and-f3-after.json; no rewrite or restoration of unrelated files.",
+      "go.mod": "817ae18bd8be5c150e0a71bb18bc577f4ab4bab6a3e0be0befe1c45091aa3bc6",
+      "go.sum": "8f5c60cb264ddc6838335d517678723a6c1af0e97568d7c1bd6510971500b18b"
+    },
+    "scope": "Fresh authorized captures are the two owned tests, ten unchanged adopted/helper/original-target paths and complete 39-path module/F3 set. This does not claim a fresh broad 84-path baseline rerun."
+  },
+  "approvedControlBindings": {
+    "run-final.ps1": "7775bec7bd71d88eba71cf59e71cff2190a262b180e296ba6fff61f8da0ade7c",
+    "remaining-commands.json": "298f29ac90fa9453e1bcf87ccbc9da3e2219d9c7d5f10da93bf4d4839e07e521",
+    "parent-local/t139-s3-remaining-prefix-binding.json": "4fa8f267c37f41fb01cb15b67fcabd95b25530900e0655c6962c45626033d12f",
+    "manifestSourcePaths": 84,
+    "basis": "Primary's actual read/review and five-hash approval plus runner summary binding; no source re-audit, baseline, setup or version rerun by author."
+  },
+  "proofLimits": [
+    "Windows/amd64 local package proof with explicit CGO_ENABLED=0; no local -race execution. Tests-only source introduces no production shared-state/locking change; future hosted applicability remains PM-owned.",
+    "Ordinary fuzz seeds only. No timed fuzz campaign, repeated x20 run or measurement.",
+    "No go run ./tools/check, full-ticket gate or hosted S3 gate was launched by this author.",
+    "The retained real public-Service CLI and two genuine semantic red/restored-green pairs are reused under the explicit nil-only bridge, not presented as rerun slot4 evidence.",
+    "No Git write, commit, push, main/private-ref change, source repair, classifier/selection change, automatic retry or follow-on command occurred in this slot.",
+    "No success is inferred from LSP. All runtime claims above come from actual retained command/output/hash receipts."
+  ],
+  "openProductDefectsEstablished": [],
+  "openAuthorQuestions": [],
+  "pendingPMOwnedWork": ["immutable S3 code/records preparation", "fresh independent final reviews and approval", "required committed/full/hosted gates and integration", "full-ticket closure and closing evidence"],
+  "release": {
+    "statement": "FULL AUTHOR + SECONDARY-PM LOCAL-GO RELEASE",
+    "authorJobCompleted": true,
+    "directRunnerChildrenReaped": 10,
+    "allDirectStreamsComplete": true,
+    "timeouts": 0,
+    "newS3CrashChildrenPositivelyWaitedReaped": 8,
+    "liveAuthorJobs": [],
+    "pendingAuthorFollowOnCommands": [],
+    "secondaryPMReleaseReceipt": "C:/Users/darius.jones/.omp/agent/sessions/-documents-PROJECTS-dwarf-harness/2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21/local/t139-s3-slot4-pm-release.json",
+    "secondaryPMNativePending": false,
+    "additionalLocalGoAuthorizedOrReserved": false,
+    "authorState": "PARKED; finite remaining-only grant exhausted with complete observed results, no inherited execution or source-edit permission"
+  }
+}

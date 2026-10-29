@@ -1,0 +1,56 @@
+CODE_READY. No shell, Go, tests, build, formatter, generator, explicit diagnostics or static commands have run.
+All commands run serially with cwd C:/Users/darius.jones/worktrees/dwarf-harness/139-registration.
+Every child command environment: GOTOOLCHAIN=local GOFLAGS= CGO_ENABLED=0 GOOS=windows GOARCH=amd64.
+Go binary: C:/Program Files/Go/bin/go.exe (pinned Go1.27.3).
+Python binary: C:/Program Files/Python313/python.exe.
+Runner: C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py.
+Each invocation: "C:/Program Files/Python313/python.exe" "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/run.py" STEP
+Bash deadline 1200 seconds per invocation; Go tests -timeout=19m.
+Runner saves exact argv, environment, exit, elapsed seconds and complete per-command log in the evidence folder.
+
+Sequence (all requires explicit primary compute grant):
+1. baseline: hash every old fixture (excluding f3/139), go.mod/go.sum and agents/scoped_golden_test.go; retain byte-exact helper backup. No Git.
+2. format: "C:/Program Files/Go/bin/gofmt.exe" -w [OWNED_GO below, absolute paths]
+3. generate: go test -count=1 -v -timeout=19m ./contract/ledger -run ^TestGoldenF3_139$ -update
+4. focused: go test -count=1 -v -timeout=19m ./contract/ledger -run "^(TestRegistration.*|TestGoldenF3_139|FuzzDecodeF3_139)$"
+5. goldens: go test -count=1 -v -timeout=19m ./contract/ledger -run ^TestGolden -update
+6. old_proof: assert full old fixture file-set and SHA256 equality, including D149 F3-13; assert module hashes unchanged.
+7. probe_format: "C:/Program Files/Go/bin/gofmt.exe" -w C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence/registration_freeze_setup_probe_test.go
+   Using read/edit/write tools only, install that retained probe source as internal/core/agents/registration_freeze_setup_probe_test.go; temporarily add chapter139 colony selection to scoped_golden_test.go.
+8. probe: go test -count=1 -v -timeout=19m ./internal/core/agents -run ^TestRegistrationFreezeSetupProbe$
+   Remove own temporary probe and restore scoped_golden_test.go using edit tools, including after probe failure.
+9. restoration: assert helper byte equality and SHA256 against baseline, assert temporary agents probe absent.
+10. package: go test -count=1 -v -timeout=19m ./contract/ledger
+11. consumer: go test -count=1 -v -timeout=19m ./internal/core/ledgerstore
+12. format_check: "C:/Program Files/Go/bin/gofmt.exe" -l [OWNED_GO below, absolute paths]; require empty output.
+13. vet: go vet ./contract/ledger
+14. staticcheck: go tool staticcheck ./contract/ledger
+15. imports: go list -f '{{join .Imports "\n"}}' ./contract/ledger
+16. test_imports: go list -f '{{join .TestImports "\n"}}' ./contract/ledger
+17. dependencies: go list -deps -f '{{if not .Standard}}{{.ImportPath}}{{end}}' ./contract/ledger
+18. tidy: go mod tidy -diff; require empty output.
+19. verify: go mod verify
+20. hashes: assert restoration, old fixtures and modules again; check noCR; save SHA256 of every owned Go file and every generated f3/139 fixture.
+
+OWNED_GO (each prefixed C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/):
+contract/ledger/registration.go
+contract/ledger/registration_submission.go
+contract/ledger/registration_test.go
+contract/ledger/registration_fuzz_test.go
+contract/ledger/registration_golden_test.go
+contract/ledger/catalogue.go
+contract/ledger/doc.go
+contract/ledger/paid_compatibility_test.go
+
+Mandatory probe source retained outside worktree: registration_freeze_setup_probe_test.go.
+Positive requires actual ledgerstore.Open + agents.Open, zero issues, 65 before/after, byte-identical ledger, actual earlier task and grant reconstruction; Completed may be nonempty.
+Negative rebuilds a separate copied complete log with one missing task dependency and consistent canonical submission/digest/chain; actual Core must return ErrInconsistent, without touching retained golden.
+
+No tools/check, Git writes, timed fuzz, race, x20, all-target static, provider, new dependency or other commands.
+Failure corrections (if needed) stay within owned paths and approved focused checks; same persistent failure after two fix attempts is reported, not retried indefinitely.
+After final checks and hashes, no product edits. Retain required source/log evidence; remove only disposable runner after its source has been retained as an evidence artifact.
+
+Approved failure correction during final sequence: Main additionally owned contract/ledger/catalogue_test.go after 10-package.log exposed the obsolete private-map equality assertion. Its public wire-name/version admission replacement retains all old coverage; format and final package reran (11-format.log, 12-package.log). This ninth Go file is included in the final formatter and SHA256 manifest.
+17-imports.log retains a runner template-escaping failure. The Python command literal was corrected to a raw string; the approved literal backslash-n command passed in 18-imports.log. No product change was needed.
+Final sequence finished at 23-hashes.log. commands.json records every exact child argv, environment, exit, elapsed seconds and log, including both failures.
+Disposable executable run.py is archived as run.py.source after final proof; required probe source and all logs remain outside the worktree.

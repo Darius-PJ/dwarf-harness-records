@@ -1,0 +1,22 @@
+{
+  "branch": "build/139-registration",
+  "sha": "67d9636d6c70ba8cab2810bcec81c31a6c5df914",
+  "parent": "34090c3b634b9854904671c336db91c350e6328c",
+  "mergeBase": "34090c3b634b9854904671c336db91c350e6328c",
+  "observedPrimaryMain": "34090c3b634b9854904671c336db91c350e6328c",
+  "exit": 0,
+  "remoteConfirmedSHA": "67d9636d6c70ba8cab2810bcec81c31a6c5df914",
+  "pushTime": "2026-10-28 23:06:03 EDT",
+  "guard": {
+    "commits": 1,
+    "addedLines": 2405,
+    "result": "ok",
+    "override": null
+  },
+  "command": "GIT_TERMINAL_PROMPT=0 GIT_SSH_COMMAND=\"ssh -o BatchMode=yes\" git push --set-upstream origin build/139-registration && printf 'PUSH_EXIT=0\\n' && GIT_TERMINAL_PROMPT=0 GIT_SSH_COMMAND=\"ssh -o BatchMode=yes\" git ls-remote origin refs/heads/build/139-registration && date '+%Y-%m-%d %H:%M:%S %Z'",
+  "mainMovedBySecondary": false,
+  "review": "two fresh Astra axes in progress",
+  "hostedConclusion": "success",
+  "runURL": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40810219344",
+  "runID": 40810219344
+}

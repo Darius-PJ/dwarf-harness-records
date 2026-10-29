@@ -1,0 +1,162 @@
+{
+  "status": "local-proof-complete-and-committed",
+  "worktree": "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration",
+  "branch": "build/139-registration",
+  "commit": {
+    "sha": "67d9636d6c70ba8cab2810bcec81c31a6c5df914",
+    "parent": "34090c3b634b9854904671c336db91c350e6328c",
+    "subject": "feat(agents): add owner registration evidence",
+    "author": "Darius-PJ <173397901+Darius-PJ@users.noreply.github.com>",
+    "committer": "Darius-PJ <173397901+Darius-PJ@users.noreply.github.com>",
+    "ownedPathsOnly": true,
+    "observedGitSummary": "27 files changed, 2403 insertions(+), 61 deletions(-)",
+    "stageExit": 0,
+    "commitExit": 0,
+    "identityAndParentReadExit": 0,
+    "pushed": false
+  },
+  "evidenceRoot": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence",
+  "successfulRun": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/run-20261029T023939070Z-19044",
+  "commandMetadataAndRawLogIndex": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/run-20261029T023939070Z-19044/commands.json",
+  "exactCommandManifest": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/final-commands.txt",
+  "runner": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/run-final.ps1",
+  "runnerExit": 0,
+  "outerWallSeconds": 595.88,
+  "commonEnvironment": {
+    "GOTOOLCHAIN": "local",
+    "GOFLAGS": "",
+    "GOROOT": "C:/Program Files/Go",
+    "GOOS": "windows",
+    "GOARCH": "amd64",
+    "CGO_ENABLED": "0"
+  },
+  "raceEnvironmentOverrides": {
+    "CGO_ENABLED": "1",
+    "CC": "C:/Users/darius.jones/AppData/Local/Programs/llvm-mingw-20260922-ucrt-x86_64/bin/x86_64-w64-mingw32-clang.exe"
+  },
+  "commandResults": [
+    {"name":"01-gofmt-write","exit":0,"seconds":0.1422013,"timeoutSeconds":120},
+    {"name":"02-gofmt-list","exit":0,"seconds":0.0730478,"timeoutSeconds":120,"output":"empty"},
+    {"name":"03-focused-and-seeds","exit":0,"seconds":17.2545363,"timeoutSeconds":1200},
+    {"name":"04a-owner-entrance-red","exit":1,"seconds":10.7139859,"timeoutSeconds":1200},
+    {"name":"04a-owner-entrance-restored-green","exit":0,"seconds":5.6950251,"timeoutSeconds":1200},
+    {"name":"04b-original-binding-red","exit":1,"seconds":10.7071598,"timeoutSeconds":1200},
+    {"name":"04b-original-binding-restored-green","exit":0,"seconds":5.6562686,"timeoutSeconds":1200},
+    {"name":"04c-postcommit-cancellation-red","exit":1,"seconds":10.4538867,"timeoutSeconds":1200},
+    {"name":"04c-postcommit-cancellation-restored-green","exit":0,"seconds":5.5178063,"timeoutSeconds":1200},
+    {"name":"05-agents-plain","exit":0,"seconds":103.5223309,"timeoutSeconds":1200},
+    {"name":"06-host-vet","exit":0,"seconds":3.0434422,"timeoutSeconds":600},
+    {"name":"07-host-staticcheck","exit":0,"seconds":18.9637114,"timeoutSeconds":600},
+    {"name":"08-agents-race","exit":0,"seconds":353.505087,"timeoutSeconds":1800},
+    {"name":"09-affected-race-x20","exit":0,"seconds":25.9158462,"timeoutSeconds":2800},
+    {"name":"10-production-imports","exit":0,"seconds":0.1540082,"timeoutSeconds":300},
+    {"name":"11-test-imports","exit":0,"seconds":0.1734974,"timeoutSeconds":300},
+    {"name":"12-module-tidy-diff","exit":0,"seconds":0.1815113,"timeoutSeconds":600,"output":"empty"},
+    {"name":"13-module-verify","exit":0,"seconds":22.417888,"timeoutSeconds":600}
+  ],
+  "timeoutsOccurred": false,
+  "wholePackagePasses": {"plain":1,"race":1},
+  "affectedRaceRepetitions": {
+    "count":20,
+    "exactPattern":"^(TestRegistrationVersionCAS|TestRegistrationCommitRetryAndClose)$/^(resource|work_domain|declaration|concurrent-retry|close-fence)$",
+    "rows":[
+      "TestRegistrationVersionCAS/resource",
+      "TestRegistrationVersionCAS/work_domain",
+      "TestRegistrationVersionCAS/declaration",
+      "TestRegistrationCommitRetryAndClose/concurrent-retry",
+      "TestRegistrationCommitRetryAndClose/close-fence"
+    ],
+    "legacyHistoryIndexRowsRepeated":false
+  },
+  "ruleBreaks": {
+    "index":"C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/run-20261029T023939070Z-19044/rule-breaks.json",
+    "allThreeClassification":"killed-by-expected-regression",
+    "allThreeRestoredByteIdentically":true,
+    "allThreeRestoredGreenExit":0,
+    "survivors":[],
+    "actualFailures":[
+      {"name":"04a-owner-entrance","test":"^TestRegistrationAuthorityAndIdentity$","assertion":"non-owner registration: <nil>","originalAndRestoredSHA256":"8845fee25ccedadf6cd68c15df29e834b2099e1229e76c992a1f906045335a7d"},
+      {"name":"04b-original-binding","test":"^TestRegistrationOriginalRequestPreflight$","assertion":"self-consistent mutation escaped original request: agents: command binding or digest mismatch","originalAndRestoredSHA256":"af7337423f654b621ce6a461fef78819a7a2e561ec627d6843e832b21ee0cb45"},
+      {"name":"04c-postcommit-cancellation","test":"^TestRegistrationCommitRetryAndClose$/^installed-lost-ack-and-cancel$","assertion":"post-commit cancellation returned before acknowledgment hook: context canceled","originalAndRestoredSHA256":"8845fee25ccedadf6cd68c15df29e834b2099e1229e76c992a1f906045335a7d"}
+    ],
+    "exactDiffsAndRestorationProofs":"Each named mutant has .patch, .original.go, .mutant.go, .proof.json, -red.json/-stdout.log/-stderr.log, and -restored-green.json/-stdout.log/-stderr.log in the successful run directory."
+  },
+  "acceptedRegistrationSeeds": {
+    "evidence":"C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/run-20261029T023939070Z-19044/accepted-registration-seeds.json",
+    "sourceSHA256":"6108e6a47701cf8b5572222b4543702f8cec70935b274b8ac733e1ac369c9a8d",
+    "passed":[
+      {"target":"FuzzRegistrationGroupReplay/seed#0","kind":"resource","preparedPrefix":5},
+      {"target":"FuzzRegistrationGroupReplay/seed#8","kind":"work_domain","preparedPrefix":6},
+      {"target":"FuzzRegistrationGroupReplay/seed#16","kind":"declaration","preparedPrefix":13}
+    ],
+    "proof":"Mode0 requires acceptance; these successful seeds must reach copied real-store Submit, Open, typed snapshot and original receipt assertions. Raw PASS lines and source hash are retained."
+  },
+  "normalSeedTargets":["FuzzRegistrationGroupReplay","FuzzScopedGroupReplay","FuzzReviewGroupReplay","FuzzPaidGroupReplay","FuzzPrivateGroupReplay"],
+  "pmTimedTargetsNotRun":["FuzzRegistrationGroupReplay","FuzzScopedGroupReplay","FuzzReviewGroupReplay","FuzzPaidGroupReplay"],
+  "importAndModuleAudit": {
+    "productionImports":"C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/run-20261029T023939070Z-19044/10-production-imports.stdout.log",
+    "testImports":"C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/run-20261029T023939070Z-19044/11-test-imports.stdout.log",
+    "newDependencyOrModule":false,
+    "moduleTidyDiffEmpty":true,
+    "moduleVerifyExit":0,
+    "moduleAndEntireFrozenF3PathHashSetUnchanged":true,
+    "baselineProof":"C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/run-20261029T023939070Z-19044/baseline-comparison.json",
+    "oldGoldenRegressions":"Covered by the single passing whole agents-package plain and race runs; frozen fixture bytes including139 are unchanged."
+  },
+  "preservedInitialFailure": {
+    "run":"C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/run-20261029T023245673Z-19280",
+    "step":"03-focused-and-seeds",
+    "exit":1,
+    "seconds":20.1381574,
+    "cause":"TestRegistrationCommitRetryAndClose/concurrent-retry incorrectly called Store.Append with ledger.command drafts; the real writer correctly refused the test fixture.",
+    "approvedCorrection":"Two live Store.Submit(command,nil) calls; all public original-receipt, normalization, no-second-effect and changed-input assertions preserved. No production change.",
+    "boundary":"The new row covers live retry after two legitimate F0 commits, not two F0 commands within one commit. Unchanged HistoryIndexCommandOccurrences covers historical whole-commit invalidation in full plain/race.",
+    "countedAsMutantRed":false
+  },
+  "deletedOrRenamed":[
+    {"name":"TestRegistrationInstalledBeforeAck","status":"new unexecuted test removed with explicit PM approval","reason":"It pinned query/I/O behavior by requiring a query to ignore authoritative corruption instead of proving an observable contract.","archive":"C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/removed-TestRegistrationInstalledBeforeAck.txt"}
+  ],
+  "legacyAssertionsDeletedOrRenamed":[],
+  "historyIndexDelegation": {
+    "file":"internal/core/agents/history_index.go",
+    "changes":["Ignore fifth decodeFamily result in cached reconstruction.","Return from putCommand when match.registration != nil."],
+    "cacheKeysCapsCoverageAndWholeCommitInvalidationUnchanged":true,
+    "sha256":"2cf636da336a1cecd4d5d65c81a97ddaaa8a022c52c9f3d3a075b796a8c6ac3e"
+  },
+  "ownedPathPrefix":"internal/core/agents/",
+  "finalHashes": {
+    "registration_types.go":"cce6073307a2b60ab6161041db52d65f4c71b7ee104d05f5e62484059ea547d3",
+    "registration_commands.go":"8845fee25ccedadf6cd68c15df29e834b2099e1229e76c992a1f906045335a7d",
+    "registration_replay.go":"af7337423f654b621ce6a461fef78819a7a2e561ec627d6843e832b21ee0cb45",
+    "registration_state.go":"5fd211ee66aef9b73e985f4fa4fd8ff461dab8725ed3ea1c240785fd787287fa",
+    "registration_query.go":"73fdd84660648ae808182bdde4dc77de6c59aa6fd6a13a7e5789174278c324a1",
+    "registration_service_test.go":"853e2e17c113659094d02814fb9be826cd8515db39d22be2761d4e671c1c3ae4",
+    "registration_replay_test.go":"b88f7477c1a29fda5714e00bdaf5ed281e37dcfb5730780d63c045f91e856ec7",
+    "registration_fuzz_test.go":"6108e6a47701cf8b5572222b4543702f8cec70935b274b8ac733e1ac369c9a8d",
+    "service.go":"3a9e0838135f9344ddcf083f7884b9289697a74cf0d9c56c38d3b7f102e69bec",
+    "types.go":"b9c449c480b6c05264a966386cfdb1a23cd21702ad618d2018ae199e8dafd0b8",
+    "scoped_replay.go":"4e7b0e0f92da725d07443bf88044432de673d1e5b220d6a98d824bec67159570",
+    "replay.go":"90f179cf09edea95fed8dffa251bd9820c68d6a1028245a4f172f188faf081a8",
+    "doc.go":"8a52831e0de08b3452fec02b265d90e3efef042cdb93a82699f46d7b185741ad",
+    "scoped_golden_test.go":"f9984f743a7f5a9c9c6f9dd105447bc41e9b8227c48c3807781c30dd3bb0b82f",
+    "integrity.go":"04dec8cedf618605134256b7aa2a973c5f78f1220a397c47d7beb2c5a8906560",
+    "paid_fixture_test.go":"6479e89ecc069fa3c87fb4a30dfadd8d823f165431920855f5de5136516317e8",
+    "paid_fuzz_test.go":"6aed09c53695dc3605c61888ae7877f0998f61a68ea89eeb84b1c807585508f8",
+    "paid_live.go":"f23effce5c73095784b1a43087a6b1ac4212e582edf4750d119dab282dc9f444",
+    "paid_read.go":"23cedad1a2838e69738d46929d25038ea29ceb27e5093bc35f80216b08b1c903",
+    "paid_settlement.go":"4a87639a07f80dc37cecf3beb5576f7e471107c613fafd42a2b92f6cbc7f1ee1",
+    "paid_state.go":"9cbdb65b4703c02cf9bf0ab7f9004641ebc5052dce2e180360c0605e0c4486a6",
+    "review_execute.go":"705524a3c43540db6ed4d587dc00c65502285a3b3aa4669f884f015a82911120",
+    "review_fuzz_test.go":"a31d51556102f4f9ce2c76af54409a5e6abb63eaa59c12b33daed03d058769ac",
+    "review_replay_test.go":"c95510f94cbe9c7881d441c31fdf73f4a9af52e947dccda8fad438cc1b2a2752",
+    "review_state.go":"ed34c8b43e24aeb1f02a15f90a5cc57998e2c14021f084dffe25e9cf39b8bb10",
+    "scoped_submit.go":"4639d4f4ff6a535c955dfd40478548cfec489ed3c2254996c002bb6657b90ee0",
+    "history_index.go":"2cf636da336a1cecd4d5d65c81a97ddaaa8a022c52c9f3d3a075b796a8c6ac3e"
+  },
+  "finalHashesRaw":"C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/run-20261029T023939070Z-19044/final-hashes.json",
+  "notRun":["local full gate","timed fuzz campaigns","measurements","live provider calls","hosted CI"],
+  "remainingPMGates":["four immutable-commit/hash-bound120s parallel1 fuzz campaigns","fresh independent review","guarded hosted CI","primary-only integration"],
+  "openQuestions":[],
+  "runnerRequests":[],
+  "computeReleased":true
+}

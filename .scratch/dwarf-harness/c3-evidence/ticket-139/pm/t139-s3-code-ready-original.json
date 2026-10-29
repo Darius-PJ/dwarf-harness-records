@@ -1,0 +1,193 @@
+{
+  "status": "CODE_READY",
+  "base": "67d9636d6c70ba8cab2810bcec81c31a6c5df914",
+  "worktree": "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance",
+  "branch": "build/139-acceptance",
+  "changed": [
+    {
+      "path": "internal/core/agents/registration_crash_test.go",
+      "reason": "Real-process recovery at all four required boundaries, actual committed receipts, complete-history preservation, store-tail repair versus no-append Service replay, and duplicate-free original retry.",
+      "sha256": "ff17022135af51f63c78cee727a72922e18585e9fb43ff5d0964325bbd0de458"
+    },
+    {
+      "path": "internal/core/agents/registration_recovery_test.go",
+      "reason": "Real F3-12 reassignment/review-terminal history and exact-context stability; F3-13 opaque-address/grant independence; cross-family command collisions and historical stability.",
+      "sha256": "d5cfdc0e42b4e718a85a18f3ef3b9f3f89088236ab04f19d031c6baf38abb479"
+    },
+    {
+      "path": "_t139_smoke/main.go",
+      "reason": "Complete throwaway CLI using real public owner-Service APIs and temporary durable stores.",
+      "sha256": "cffffc34436a2ce1122b163a99d8560ec515af0e39c07be595912cf43eefd04c"
+    }
+  ],
+  "productChanges": [],
+  "existingTestExtensions": [],
+  "deletedOrRenamed": [],
+  "removedExistingAssertions": [],
+  "sourceDiagnostics": {
+    "allThreeGoFiles": "LSP diagnostics returned OK.",
+    "limitation": "Not compilation, runtime, formatting, test or smoke proof."
+  },
+  "tests": [
+    {
+      "name": "TestRegistrationInjectedCrashRecovery",
+      "subtests": [
+        "before_commit",
+        "torn_final_group",
+        "durable_before_install",
+        "installed_before_ack"
+      ],
+      "behavior": "Sequential actual subprocesses, deterministic boundary markers, explicit launch/output/exit/wait evidence, retained complete prior ledger bytes/history, actual receipt recovery and matching retries without duplicate effects."
+    },
+    {
+      "name": "TestRegistrationCrashChild",
+      "behavior": "Subprocess entry point using existing fault seams and actual store files; not a separate acceptance result."
+    },
+    {
+      "name": "TestRegistrationReviewHistoryRecovery",
+      "behavior": "Declares stable task and exact original context, reassigns and resubmits the real task, completes it through F3-12 review, preserves pins/history across unrelated changes and reopen, rejects global command collisions, and accepts a declaration referencing terminal historical task state."
+    },
+    {
+      "name": "TestRegistrationPaidHistoryRecovery",
+      "behavior": "Replays actual F3-13 history; exercises existing external-grant delegation before registration and after audience narrowing/reopen; denies unrelated-agent grant disclosure; preserves paid history, registration snapshots and pins; checks paid/private/scoped command collisions and original receipts without provider work."
+    }
+  ],
+  "crashCases": {
+    "runtimeStatus": "NOT_RUN",
+    "actualChildLaunches": [],
+    "before_commit": "Source requires no interrupted effect or receipt, followed by the original request's first complete commit.",
+    "torn_final_group": "Source injects and syncs an incomplete final record; checks Store.Open repair separately, exact retained prefix, absent partial state/receipt, and subsequent complete commit.",
+    "durable_before_install": "Source terminates after actual durable submission and before installation; recovery must reconstruct the committed withdrawal and actual original receipt.",
+    "installed_before_ack": "Source checks the public installed withdrawal, then terminates before return; recovery and retry must retain that exact committed result.",
+    "allRows": "CombinedOutput waits/reaps before reopening. Service replay is compared against post-store-repair bytes and durable sequence; old registration history, task and grant state are retained.",
+    "limitations": "Deliberate process death and torn bytes only—not power-loss, hardware-durability or exactly-once delivery qualification."
+  },
+  "smoke": {
+    "path": "_t139_smoke/main.go",
+    "status": "SOURCE_COMPLETE_NOT_RUN",
+    "argv": ["go", "run", "./_t139_smoke"],
+    "runnerDeadlineSeconds": 600,
+    "coverage": [
+      "Resource and work-domain registration",
+      "All four source-kind/task-or-context declaration combinations",
+      "Source revisions, declaration replacement and withdrawals",
+      "Current, historical and exact pinned-version metadata",
+      "Close/reopen",
+      "Original registration/declaration receipt retries",
+      "Independent actual ledger receipt inspection and unchanged complete ledger"
+    ],
+    "exitCode": null,
+    "output": null,
+    "driverRemoved": false,
+    "removalReason": "Retained for the explicitly gated future smoke; prepared runner archives source/hash and removes only this driver after success."
+  },
+  "commands": {
+    "executed": [
+      {
+        "operation": "One Main-authorized read-only PowerShell Get-FileHash SHA256 operation on exactly six specified files",
+        "cwd": "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance",
+        "timeoutSeconds": 30,
+        "environmentOverrides": {},
+        "result": "Completed; all six hashes returned.",
+        "exitCode": null,
+        "durationSeconds": null,
+        "note": "The tool response did not expose numeric exit status or measured duration.",
+        "exactArgvAndMetadata": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/source-hashes.json",
+        "retainedOutput": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/source-hashes.stdout.json"
+      }
+    ],
+    "goFormattingTestsLintSmokeFuzzMutationsGitWrites": "NONE",
+    "requiredButUnrun": "All runtime verification and formatting remain blocked by the source-only grant; primary140 retains execution."
+  },
+  "proposedSerialEvidence": {
+    "exactCommandsEnvironmentDeadlinesAndMutationDiffs": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/final-commands.json",
+    "finiteRunner": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/run-final.ps1",
+    "runnerSHA256": "6f7facb96b48b2f6dad4b124515c72215d8f99ccd9a0a0855a8b01aa036d5c93",
+    "runnerStatus": "Source only; not executed or parsed by PowerShell.",
+    "environment": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "GOROOT": "C:/Program Files/Go",
+      "GOOS": "windows",
+      "GOARCH": "amd64",
+      "CGO_ENABLED": "0"
+    },
+    "sequence": [
+      "Separately approved named mutant red and byte-identically restored-green runs",
+      "Public-Service smoke, source archive/hash and own-driver removal",
+      "Owned-only gofmt -w and empty gofmt -l",
+      "One focused regression/ordinary-registration-seed run",
+      "One plain verbose agents-package run",
+      "Host vet and pinned staticcheck",
+      "Production/TestImports audit, go mod tidy -diff and go mod verify",
+      "Final owned hashes and comparison against supplied S2 module/F3 evidence"
+    ],
+    "focusedArgv": [
+      "test", "-count=1", "-v", "-timeout=19m",
+      "./internal/core/agents", "-run",
+      "^(TestRegistrationInjectedCrashRecovery|TestRegistrationReviewHistoryRecovery|TestRegistrationPaidHistoryRecovery|FuzzRegistrationGroupReplay)$"
+    ],
+    "plainArgv": [
+      "test", "-count=1", "-v", "-timeout=19m",
+      "./internal/core/agents"
+    ],
+    "focusedAndPlainRunnerDeadlineSeconds": 1200,
+    "otherDeadlinesSeconds": {
+      "formatting": 120,
+      "vet": 600,
+      "staticcheck": 600,
+      "eachImportAudit": 300,
+      "tidyDiff": 600,
+      "moduleVerify": 600
+    },
+    "automaticMutationsOrRetries": false
+  },
+  "breaks": [
+    {
+      "proposal": "withdrawal-install-omitted",
+      "path": "internal/core/agents/registration_state.go",
+      "originalSHA256": "5fd211ee66aef9b73e985f4fa4fd8ff461dab8725ed3ea1c240785fd787287fa",
+      "change": "Temporarily skip declaration installation when Consumers is empty.",
+      "regression": "TestRegistrationInjectedCrashRecovery/durable_before_install",
+      "expectedFailure": "Recovered public declaration state disagrees with the complete committed withdrawal.",
+      "status": "UNAPPROVED_NOT_INSTALLED_NOT_RUN"
+    },
+    {
+      "proposal": "external-grant-needs-registration",
+      "path": "internal/core/agents/scoped_state.go",
+      "originalSHA256": "9ce8f61064c9673ba3374fb6b3a4ccafa44cc88a59a1c229d2e0c4440d27f3d1",
+      "change": "Temporarily require a matching registration in registeredResource's external branch.",
+      "regression": "TestRegistrationPaidHistoryRecovery",
+      "expectedFailure": "Public Open rejects valid pre-registration F3-13 grant history, or existing-grant delegation is refused. An Open failure would not be reported as observed delegation failure.",
+      "status": "UNAPPROVED_NOT_INSTALLED_NOT_RUN"
+    }
+  ],
+  "race": {
+    "status": "NOT_RUN",
+    "reason": "Tests-only S3 changes no production shared-state or locking path; no duplicate S2 race/x20 gate proposed.",
+    "futureCondition": "Any separately authorized concurrency-affecting product fix requires renewed scope, affected selection and explicit race grant."
+  },
+  "seeds": {
+    "focused": ["FuzzRegistrationGroupReplay"],
+    "plainPackage": [
+      "FuzzRegistrationGroupReplay",
+      "FuzzScopedGroupReplay",
+      "FuzzReviewGroupReplay",
+      "FuzzPaidGroupReplay",
+      "FuzzPrivateGroupReplay"
+    ],
+    "changedProductionFuzzedPaths": [],
+    "proposedTimedCampaigns": [],
+    "executed": false
+  },
+  "slowestTests": null,
+  "predecessorEvidence": "Read actual S2 proof, import-audit logs, fuzz result and independent verdicts. Consumed Main's exact-67d hosted-success and integration notices without rerunning or transferring their approval to S3.",
+  "unchangedScope": "No product, shared, documentation, contract, golden, dependency, module or workflow file edited. No fresh runtime/module/golden validation claimed.",
+  "openQuestions": [
+    "PM approval of source and exact temporary mutation permissions/sequence.",
+    "Fresh explicit compute grant before any Go, formatter, test, lint, smoke or mutation execution.",
+    "Explicit retarget decision if main advances beyond 67d before final proof."
+  ],
+  "productDefectsObserved": [],
+  "completionLimit": "Source-complete CODE_READY only; not runtime acceptance, ticket closure, hosted approval or integration approval."
+}

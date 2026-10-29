@@ -1,0 +1,266 @@
+{
+  "sourceIndexSHA256": "00781110aa5b65e6199161e73f70ac5012ac4d00a019add7b5df33b333999dae",
+  "named": [
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-brief.md",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139-design-brief.md",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139-design-brief.md",
+      "expected": "f212b4e148e63c12e2101c36ba6a37f2f361487976b98a6413a9e3759ded6424",
+      "actual": "f212b4e148e63c12e2101c36ba6a37f2f361487976b98a6413a9e3759ded6424",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-ruling.md",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139-design-ruling.md",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139-design-ruling.md",
+      "expected": "549ea458c5a7fba7295b20d79b1ca7154f26fea832f4e848f423280c7e694858",
+      "actual": "549ea458c5a7fba7295b20d79b1ca7154f26fea832f4e848f423280c7e694858",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-acceptance-matrix.md",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139-acceptance-evidence.md",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139-acceptance-evidence.md",
+      "expected": "be707eda954cdace70dfa879b324f2b8172ffe65e198a307319ad1efe42ec8f7",
+      "actual": "be707eda954cdace70dfa879b324f2b8172ffe65e198a307319ad1efe42ec8f7",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-docs-notes.md",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139-build-notes.md",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139-build-notes.md",
+      "expected": "f3e2303d1f15867825304516868b73a1e5dae55c508bc8740ab53347dc73ee0f",
+      "actual": "f3e2303d1f15867825304516868b73a1e5dae55c508bc8740ab53347dc73ee0f",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\fable-verification-request.md",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139-fable-verification-request.md",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139-fable-verification-request.md",
+      "expected": "88338a1f98a63ebd60b3ee98f7bfbab06d69ec4146ef1d6925f3929ff1aa99a2",
+      "actual": "88338a1f98a63ebd60b3ee98f7bfbab06d69ec4146ef1d6925f3929ff1aa99a2",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s1-integration-packet.json",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139-s1-integration-packet.json",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139-s1-integration-packet.json",
+      "expected": "a5117577876ee044907758d2396929d291ef182542b74c9814582c3fda72a2e6",
+      "actual": "a5117577876ee044907758d2396929d291ef182542b74c9814582c3fda72a2e6",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s2-integration-packet.json",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139-s2-integration-packet.json",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139-s2-integration-packet.json",
+      "expected": "49ef19b949948a67ed25f60b3478c58af391cb761d0ed07302324c44f1bf90db",
+      "actual": "49ef19b949948a67ed25f60b3478c58af391cb761d0ed07302324c44f1bf90db",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-commit-proof.json",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139-s3-code-proof.json",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139-s3-code-proof.json",
+      "expected": "846c409134f19520126572e51170952855519a59c710c20fb0adc20e7eba76db",
+      "actual": "846c409134f19520126572e51170952855519a59c710c20fb0adc20e7eba76db",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-final-author-yield.md",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139-s3-author-yield.md",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139-s3-author-yield.md",
+      "expected": "5ec795fc4b4ea40106a465ee16ed083cb33346a8971adf641024f5b48021ff82",
+      "actual": "5ec795fc4b4ea40106a465ee16ed083cb33346a8971adf641024f5b48021ff82",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-final-author-capture.json",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139-s3-author-capture.json",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139-s3-author-capture.json",
+      "expected": "0a31913ccf1a042514e4ebc3551567ad1bcf216b670ee59aef9f2b08b89a1947",
+      "actual": "0a31913ccf1a042514e4ebc3551567ad1bcf216b670ee59aef9f2b08b89a1947",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-b34-closing-authority.txt",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139-b34-authority.txt",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139-b34-authority.txt",
+      "expected": "f12d7865001cfc3dc405e068806890c1aa639ff87233b86fb793be8f155b9afa",
+      "actual": "f12d7865001cfc3dc405e068806890c1aa639ff87233b86fb793be8f155b9afa",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-integration-packet.json",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139\\pm\\t139-s3-integration-packet.json",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-integration-packet.json",
+      "expected": "b3b1a4f826775bdfa614f2cbc94a2fe9dc261139ac069accdadd1c85e788648c",
+      "actual": "b3b1a4f826775bdfa614f2cbc94a2fe9dc261139ac069accdadd1c85e788648c",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-public-proof.json",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139\\pm\\t139-s3-public-proof.json",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-public-proof.json",
+      "expected": "7ee159b6149a56e46d4af41574f4013488e7ba91fa2365c3f376ddf97cd6dffe",
+      "actual": "7ee159b6149a56e46d4af41574f4013488e7ba91fa2365c3f376ddf97cd6dffe",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-public-record-application.json",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139\\pm\\t139-s3-public-record-application.json",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-public-record-application.json",
+      "expected": "6ab8c4c777309c48f857ee09a8d589b5dd0d73476a5857a0427e1edd4780ec48",
+      "actual": "6ab8c4c777309c48f857ee09a8d589b5dd0d73476a5857a0427e1edd4780ec48",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-publication.json",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139\\pm\\t139-s3-publication.json",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-publication.json",
+      "expected": "5fb2d5468d7258894fc2cee01af71d99da1c5965ef8f1ddbb9f0f9c2148241a3",
+      "actual": "5fb2d5468d7258894fc2cee01af71d99da1c5965ef8f1ddbb9f0f9c2148241a3",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-ci-result.json",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139\\pm\\t139-s3-ci-result.json",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-ci-result.json",
+      "expected": "82aef336c16440d930172e4a791ae52e016c73dda95fcd6f99546066fc403d27",
+      "actual": "82aef336c16440d930172e4a791ae52e016c73dda95fcd6f99546066fc403d27",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-ci-jobs.json",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139\\pm\\t139-s3-ci-jobs.json",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-ci-jobs.json",
+      "expected": "3638ddcb22dc6d3e165d0fc45144f177a81507deea38582d5c54667f44188905",
+      "actual": "3638ddcb22dc6d3e165d0fc45144f177a81507deea38582d5c54667f44188905",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-review-routing-proof.json",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139\\pm\\t139-s3-review-routing-proof.json",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-review-routing-proof.json",
+      "expected": "094ad38d42716dd29e27ac186b525c72258e34e69eefef3a3ae9e24aa1e8203a",
+      "actual": "094ad38d42716dd29e27ac186b525c72258e34e69eefef3a3ae9e24aa1e8203a",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-review-aggregate.md",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139\\pm\\t139-s3-review-aggregate.md",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-review-aggregate.md",
+      "expected": "7bbb26695414ff71ae07742ca410055d2493fbd450da4217c087965e0a9219f6",
+      "actual": "7bbb26695414ff71ae07742ca410055d2493fbd450da4217c087965e0a9219f6",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-standards-yield.md",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139\\pm\\t139-s3-standards-yield.md",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-standards-yield.md",
+      "expected": "6e47276dfd37c8d5ffd33e8a3b699268b9f9f51a095b8e210468e70af0a023cc",
+      "actual": "6e47276dfd37c8d5ffd33e8a3b699268b9f9f51a095b8e210468e70af0a023cc",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-standards-review.json",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139\\pm\\t139-s3-standards-review.json",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-standards-review.json",
+      "expected": "2206f850ba09b686112c5d444fa01bb917caccfbc5bf590462c667ae9ddbc50f",
+      "actual": "2206f850ba09b686112c5d444fa01bb917caccfbc5bf590462c667ae9ddbc50f",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-spec-yield.md",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139\\pm\\t139-s3-spec-yield.md",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-spec-yield.md",
+      "expected": "6c23c1ae344ed09ebf4d82b9106c04f5a82c047554fddde1de50aa0599443f42",
+      "actual": "6c23c1ae344ed09ebf4d82b9106c04f5a82c047554fddde1de50aa0599443f42",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s3-spec-review.json",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139\\pm\\t139-s3-spec-review.json",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-spec-review.json",
+      "expected": "92375498e6e573bd2e05fc5e6f01d088388d1d4f4339fade37a4901477b93d1e",
+      "actual": "92375498e6e573bd2e05fc5e6f01d088388d1d4f4339fade37a4901477b93d1e",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-primary-joint-closing-approval.txt",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139\\pm\\t139-primary-joint-closing-approval.txt",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-primary-joint-closing-approval.txt",
+      "expected": "3a80c2d02d7fbc73c623dacc819f5e654744986d41e07f30aec68804b7606dd1",
+      "actual": "3a80c2d02d7fbc73c623dacc819f5e654744986d41e07f30aec68804b7606dd1",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-joint-primary-record-review.json",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139\\pm\\t139-joint-primary-record-review.json",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-joint-primary-record-review.json",
+      "expected": "7bb96f4bd30ae842dfdf048e63bb88a79a03311b9723aff9e0737f4466083466",
+      "actual": "7bb96f4bd30ae842dfdf048e63bb88a79a03311b9723aff9e0737f4466083466",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 26
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-final-handoff.md",
+      "destination": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-139\\pm\\t139-final-handoff.md",
+      "destinationRelative": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-final-handoff.md",
+      "expected": "3853fc3cbf901bd68a7a67a21f79eaba95faaa4af868fd7337e2c5dc754f1b69",
+      "actual": "3853fc3cbf901bd68a7a67a21f79eaba95faaa4af868fd7337e2c5dc754f1b69",
+      "match": true,
+      "destinationExists": false,
+      "sourceCR": 0
+    }
+  ],
+  "attributes": ".scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-ci-jobs.json: text: auto\n.scratch/dwarf-harness/c3-evidence/ticket-139/pm/t139-s3-ci-jobs.json: eol: lf\n.scratch/dwarf-harness/c3-evidence/ticket-139/s3/remaining-20261029T173807547Z-9144/commands.json: text: auto\n.scratch/dwarf-harness/c3-evidence/ticket-139/s3/remaining-20261029T173807547Z-9144/commands.json: eol: lf\n.scratch/dwarf-harness/c3-evidence/ticket-139-design-brief.md: text: auto\n.scratch/dwarf-harness/c3-evidence/ticket-139-design-brief.md: eol: lf\n"
+}

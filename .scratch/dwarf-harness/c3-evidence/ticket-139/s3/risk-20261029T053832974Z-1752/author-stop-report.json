@@ -1,0 +1,116 @@
+{
+  "status": "needs-info",
+  "classification": "launcher-setup-failure-before-child-start-not-behavioral-red",
+  "grantReference": "primary-t139-s3-8a17-20261029-slot1",
+  "expectedSubject": "8a17ec1ed2617ca2a4e5203479f75f363b359970",
+  "observedSubject": null,
+  "worktree": "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance",
+  "evidenceDirectory": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/risk-20261029T053832974Z-1752",
+  "launch": {
+    "tool": "functions.bash",
+    "job": "bg_34",
+    "async": true,
+    "outerTimeoutSeconds": 0,
+    "cwd": "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance",
+    "command": "powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/run-risk.ps1 -GrantReference primary-t139-s3-8a17-20261029-slot1 -ExpectedSubject 8a17ec1ed2617ca2a4e5203479f75f363b359970 && powershell.exe -NoProfile -NonInteractive -ExecutionPolicy Bypass -File C:/Users/darius.jones/worktrees/dwarf-harness/t139-s3-evidence/run-final.ps1 -GrantReference primary-t139-s3-8a17-20261029-slot1",
+    "completed": true,
+    "exitCode": 1,
+    "toolWallSeconds": 1.84,
+    "finalRunnerInvoked": false
+  },
+  "riskRunner": {
+    "status": "stopped-for-PM-ruling",
+    "exitCode": 1,
+    "startedUTC": "2026-10-29T05:38:32.9928288Z",
+    "finishedUTC": "2026-10-29T05:38:34.0209270Z",
+    "summary": "summary.json",
+    "errorTrace": "runner-error.log"
+  },
+  "onlyNativeChildAttempt": {
+    "name": "00-reviewed-head",
+    "executable": "C:\\Program Files\\Git\\cmd\\git.exe C:\\Program Files\\Git\\bin\\git.exe",
+    "argv": ["rev-parse", "--verify", "HEAD"],
+    "cwd": "C:/Users/darius.jones/worktrees/dwarf-harness/139-acceptance",
+    "environmentOverrides": {
+      "GOTOOLCHAIN": "local",
+      "GOFLAGS": "",
+      "GOROOT": "C:/Program Files/Go",
+      "GOOS": "windows",
+      "GOARCH": "amd64",
+      "CGO_ENABLED": "0"
+    },
+    "timeoutSeconds": 30,
+    "startedUTC": "2026-10-29T05:38:33.6901794Z",
+    "finishedUTC": "2026-10-29T05:38:33.7709032Z",
+    "elapsedSeconds": 0.072560199999999991,
+    "exitCode": null,
+    "timedOut": false,
+    "recordedReaped": false,
+    "recordedStreamsComplete": false,
+    "processStarted": false,
+    "error": "Process.Start threw Win32 file-not-found: The system cannot find the file specified",
+    "record": "00-reviewed-head.json",
+    "allCommandsRecord": "commands.json",
+    "stdout": "00-reviewed-head.stdout.log",
+    "stderr": "00-reviewed-head.stderr.log",
+    "stdoutBytes": 0,
+    "stderrBytes": 0
+  },
+  "sourceExplanation": {
+    "retainedRunner": "run-risk.ps1",
+    "discoveryLine": 441,
+    "discovery": "$git = (Get-Command git.exe -CommandType Application -ErrorAction Stop).Source",
+    "callLine": 442,
+    "typedParameterLine": 191,
+    "actualFailureLine": 216,
+    "finding": "The recorded executable contains both discovered Git application paths joined into one filename. The discovery collects .Source without selecting one application, then passes it to the [string] Executable parameter. This private launcher failure occurs before either mutation call at lines 458-459.",
+    "cleanup": "started initializes false at line 214. Process.Start throws at line 216 before assignment succeeds; finally records the failure and disposes the Process wrapper. No child was created and no Stop-Tree taskkill path ran. The record's reaped=false does not describe an unreaped running child."
+  },
+  "sourceAndMutationState": {
+    "actualInitialHashReceipt": "initial.source-hashes.json",
+    "initialPathCount": 85,
+    "initialMismatchCount": 0,
+    "mutantsAttempted": 0,
+    "mutantsInstalled": 0,
+    "ruleBreaksFileCreated": false,
+    "restoration": "Not applicable: stopped before either mutant was installed; no restoration or restored-green proof is claimed.",
+    "productOrPermanentSourceEdits": 0,
+    "approvedPrivateSourceEdits": 0,
+    "postMutationOrFinalRunHashReceipt": null,
+    "originalTargets": {
+      "internal/core/agents/registration_state.go": "5fd211ee66aef9b73e985f4fa4fd8ff461dab8725ed3ea1c240785fd787287fa",
+      "internal/core/agents/scoped_state.go": "2c232bb2af3f6ba6dc90d47ba503c71dad585ef8d4bdaf5c2592cc1490bb0e9e"
+    },
+    "repairedCodecInitialHash": {
+      "internal/core/agents/history_index.go": "69c23b9faf4590931d2fde8ecb2385bb2a08967dfe1ace1fb8b0efff5975a73a"
+    },
+    "ownedInitialHashes": {
+      "internal/core/agents/registration_crash_test.go": "f937f77b81699adabd7d80001e3dd0f6a58d0b692690e0ff8b3090261e3d8241",
+      "internal/core/agents/registration_recovery_test.go": "d5cfdc0e42b4e718a85a18f3ef3b9f3f89088236ab04f19d031c6baf38abb479",
+      "_t139_smoke/main.go": "80463d040929445e6f53811f3fb2b3d98876dee9cb0b64b1228bbc0dc66a3036"
+    },
+    "moduleAndF3": "Included in the successful initial 85-path guard; no final-run comparison executed."
+  },
+  "notReached": {
+    "goCommands": 0,
+    "behavioralReds": 0,
+    "restoredGreens": 0,
+    "crashChildMarkersOrReceipts": "Not run; no child wait/reap/receipt acceptance evidence exists yet.",
+    "publicServiceSmoke": "Not run; original CLI source remains, no success-only removal occurred.",
+    "formatFocusPlainStaticImportsModules": "Not run; && prevented final runner after risk exit 1.",
+    "raceAndTimedFuzz": "Not run and not granted.",
+    "slowRowsAndSkips": "Not available: no Go test executed."
+  },
+  "authorRelease": {
+    "status": "FULL AUTHOR LOCAL-GO RELEASE",
+    "backgroundJobCompleted": true,
+    "nativeChildProcessesStarted": 0,
+    "authorJobsOrUnreapedChildrenRemaining": 0,
+    "basis": "Actual bg_34 completion/exit 1 and retained first-command Process.Start failure before child creation; final runner was gated off. No extra process scan, retry or native verification command was launched.",
+    "pmRelease": "Parent must issue its own full release; this report does not speak for PM."
+  },
+  "openQuestions": [
+    "PM ruling is required before a bounded private launcher correction selecting a single discovered Git executable, refreshed approved hashes, or any resumed native launch. No fix or retry has been performed."
+  ],
+  "disposition": "Stopped and parked under the grant's unexpected-failure rule; preserve this original failed run and all approved source/proposal/status files unchanged."
+}

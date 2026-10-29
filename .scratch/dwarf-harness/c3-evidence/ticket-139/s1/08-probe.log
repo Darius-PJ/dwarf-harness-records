@@ -1,0 +1,18 @@
+{"command": ["C:/Program Files/Go/bin/go.exe", "test", "-count=1", "-v", "-timeout=19m", "./internal/core/agents", "-run", "^TestRegistrationFreezeSetupProbe$"], "cwd": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\139-registration", "environment": {"GOTOOLCHAIN": "local", "GOFLAGS": "", "CGO_ENABLED": "0", "GOOS": "windows", "GOARCH": "amd64"}}
+=== RUN   TestRegistrationFreezeSetupProbe
+=== PAUSE TestRegistrationFreezeSetupProbe
+=== CONT  TestRegistrationFreezeSetupProbe
+=== RUN   TestRegistrationFreezeSetupProbe/positive
+=== PAUSE TestRegistrationFreezeSetupProbe/positive
+=== RUN   TestRegistrationFreezeSetupProbe/missing_dependency_negative
+=== PAUSE TestRegistrationFreezeSetupProbe/missing_dependency_negative
+=== CONT  TestRegistrationFreezeSetupProbe/positive
+=== CONT  TestRegistrationFreezeSetupProbe/missing_dependency_negative
+    registration_freeze_setup_probe_test.go:108: negative ledgerstore.Open=success agents.Open=ErrInconsistent durable_before=65 durable_after=65 rebuilt_sha256=5234ed31b1cc83b33b6dc7aa5fb2df64dc2e21c97600549bb95a45e866061f91 error=agents: inconsistent record at sequence 17: invalid scoped transition: agents: task dependency
+=== NAME  TestRegistrationFreezeSetupProbe/positive
+    registration_freeze_setup_probe_test.go:53: positive Open=success issues=0 completed=10 durable_before=65 durable_after=65 ledger_before_sha256=db1476e07b355d909dfb07cce79f142387469618709bc52a3f496395b94c5134 ledger_after_sha256=db1476e07b355d909dfb07cce79f142387469618709bc52a3f496395b94c5134 task_sequence=19 task_version=1 grant_authority_version=1
+--- PASS: TestRegistrationFreezeSetupProbe (0.00s)
+    --- PASS: TestRegistrationFreezeSetupProbe/missing_dependency_negative (0.11s)
+    --- PASS: TestRegistrationFreezeSetupProbe/positive (0.14s)
+PASS
+ok  	github.com/Darius-PJ/dwarf-harness/internal/core/agents	2.971s

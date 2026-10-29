@@ -1,0 +1,25 @@
+{
+  "subject": "86f952cfcae37bde06767c6c4eaa615a503dd96d",
+  "base": "82d8d48856c7191019625c9f6e896d10b9b8498c",
+  "editCount": 14,
+  "publicPaths": [
+    "contract/ledger/catalogue.go",
+    "contract/ledger/doc.go",
+    "contract/ledger/registration.go",
+    "contract/ledger/registration_submission.go",
+    "docs/CONTRACTS.md",
+    "docs/DESIGN-CORE-AND-LAUNCHERS.md"
+  ],
+  "privatePaths": [
+    "docs/DECISIONS.md",
+    ".scratch/dwarf-harness/c3-evidence/f3-139-freeze-evidence.md"
+  ],
+  "commentOnlyGoPaths": [
+    "contract/ledger/catalogue.go",
+    "contract/ledger/doc.go",
+    "contract/ledger/registration.go",
+    "contract/ledger/registration_submission.go"
+  ],
+  "pendingNumberAndDate": true,
+  "mirrorResult": []
+}

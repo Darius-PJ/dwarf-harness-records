@@ -1,0 +1,19 @@
+{
+  "at": "2026-10-29T13:29:39.788329-04:00",
+  "source": "Actualsecondarycoordination597\u2013613/623\u2013625, parentreadactualsourcewire26\u201333+strict148\u2013149",
+  "job": "bg48",
+  "exit": 1,
+  "toolWallSeconds": 63.39,
+  "riskStage": "BOTHgenuinesemanticreds/exact5fd+2cbyteSHArestores/IDENTICALrestoredgreensPASS;M1publicv2-v3afterdurable50/52/53childreap,M2publicOpenF3-13seq27refusalnotlivedelegation",
+  "riskEvidence": "t139-s3-evidence/risk-20261029T171230684Z-18452/rule-breaks.json",
+  "smoke": "ActualpublicServiceCLIpassed4.472s/durable53to53/6matchingretries/11receipts/noappend/limits1-1below2-4, archived80463dsmoke-main/onlysuccessfulownproberemoved",
+  "finalEvidence": "t139-s3-evidence/run-20261029T171317887Z-19436",
+  "formatting": "owned2gofmt/listPASS;crash36aeunchanged,recoveryd045formattedfromd5cf",
+  "focused": "durable_before_install+installed_before_ackPASS/review+paidPASS/ALL24registrationseedPASS;onlybefore_commit+torn_final_groupfail149",
+  "stopCause": "UntagedtestprivateRawMessageReceipt:nilencodednull,lenRawMessagenonzero,strictno-receiptguardcorrect; encoderomissionneeded,notestablishedproductfailure",
+  "actualReap": "All9recordedcommandsand4crashchildrenpositivelyreaped/streamscomplete/no timeout/no followon",
+  "fullAuthorAndPMRelease": true,
+  "newSourceOnlyAuthority": "Primary74D6627\u2013637exactReceiptjsonomitemptytagONLY/strictparentchecksunchanged;minimalremainingonlyplanreuseoldhelpers/changed1crash+formattedrecovery+intentionalprobeRemoval;remainingformat/list/all4crashfocus/ONEunrunplain/static-import-module-finalhash;NO nativegrant4yet",
+  "completedNeverRerun": "Riskreds/greens+realCLI+passedstandalonecrossfamily/seedsremaincompleted, notnewmissingwork;no prober recreation",
+  "primaryGo": "None;S5designerREADONLY/freshrulingpending,D155countonly"
+}

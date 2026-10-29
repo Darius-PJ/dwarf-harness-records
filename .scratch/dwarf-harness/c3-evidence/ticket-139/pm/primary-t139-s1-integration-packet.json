@@ -1,0 +1,140 @@
+{
+  "ticket": 139,
+  "slice": "S1",
+  "status": "approved_and_hosted_passed; awaiting primary-controlled integration after measurement hold",
+  "branch": "build/139-registration",
+  "finalPublicSHA": "34090c3b634b9854904671c336db91c350e6328c",
+  "codeSHA": "86f952cfcae37bde06767c6c4eaa615a503dd96d",
+  "base": "82d8d48856c7191019625c9f6e896d10b9b8498c",
+  "freeze": {
+    "decision": "D154",
+    "date": "2026-10-28",
+    "privateApplication": "Primary applied R1/R2/R14; secondary did not commit/push private records.",
+    "publicApplication": "Approved R3\u2013R13 applied exactly; four Go paths status-comments only."
+  },
+  "review": {
+    "verdict": "approve completed contract and proposed freeze record",
+    "blockingFindings": 0,
+    "confirmationPassNeeded": false,
+    "model": "openai-codex/gpt-6-astra",
+    "effort": "max",
+    "fallback": false,
+    "reviewLine": "GPT-6 Astra, acting as a temporary stand-in for Claude Fable 5.1, approves Ticket139 S1 at 86f952cfcae37bde06767c6c4eaa615a503dd96d, parent 82d8d48856c7191019625c9f6e896d10b9b8498c, jointly with its completed F3-139 specification, generated fixtures, observed evidence and proposed 14-edit D125 freeze record. No blocking findings remain. This is technical approval for PM freeze recording, not a claim that the freeze has landed or D153 integration gates have passed. Fable remains the main advisor; its whole-ticket double-check after reset is pending.",
+    "report": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s1-joint-review.md",
+    "routing": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s1-review-routing-proof.json"
+  },
+  "hosted": {
+    "finalPublicSHA": "34090c3b634b9854904671c336db91c350e6328c",
+    "runURL": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40794776982",
+    "runID": 40794776982,
+    "runNumber": 8,
+    "runAttempt": 1,
+    "conclusion": "success",
+    "classification": "Full matrix observed: all three Check platform/race jobs ran successfully; not Markdown exemption.",
+    "source": "https://api.github.com/repos/Darius-PJ/dwarf-harness/actions/runs/40794776982",
+    "jobsSource": "https://api.github.com/repos/Darius-PJ/dwarf-harness/actions/runs/40794776982/attempts/1/jobs?per_page=100",
+    "changes": {
+      "jobName": "changes",
+      "conclusion": "success",
+      "url": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40794776982/job/123188465421",
+      "jobID": 123188465421,
+      "startedAt": "2026-10-29T00:33:02Z",
+      "completedAt": "2026-10-29T00:33:07Z",
+      "apiJobSeconds": 5.0,
+      "classification": "Full matrix observed; all three platform Check jobs ran successfully, not Markdown exemption."
+    },
+    "windows": {
+      "jobName": "Check / windows-amd64",
+      "conclusion": "success",
+      "url": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40794776982/job/123188509937",
+      "jobID": 123188509937,
+      "startedAt": "2026-10-29T00:33:10Z",
+      "completedAt": "2026-10-29T01:05:06Z",
+      "apiJobSeconds": 1916.0
+    },
+    "linux": {
+      "jobName": "Check / linux-amd64",
+      "conclusion": "success",
+      "url": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40794776982/job/123188509951",
+      "jobID": 123188509951,
+      "startedAt": "2026-10-29T00:33:11Z",
+      "completedAt": "2026-10-29T00:47:00Z",
+      "apiJobSeconds": 829.0
+    },
+    "macOS": {
+      "jobName": "Check / macos-arm64",
+      "conclusion": "success",
+      "url": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40794776982/job/123188509930",
+      "jobID": 123188509930,
+      "startedAt": "2026-10-29T00:33:12Z",
+      "completedAt": "2026-10-29T00:52:43Z",
+      "apiJobSeconds": 1171.0
+    },
+    "checkResult": {
+      "jobName": "Check result",
+      "conclusion": "success",
+      "url": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40794776982/job/123199713185",
+      "jobID": 123199713185,
+      "startedAt": "2026-10-29T01:05:08Z",
+      "completedAt": "2026-10-29T01:05:10Z",
+      "apiJobSeconds": 2.0
+    }
+  },
+  "finalHashes": {
+    "contract/ledger/catalogue.go": "a2ef53d73961e882d56d59fa6a5988af56b744a3e0a35028dcba89647f697537",
+    "contract/ledger/catalogue_test.go": "8c042f0265260fed837ca1ab532113ddda4eab033c36ec0d995286ac555d939f",
+    "contract/ledger/doc.go": "d6bf607f06e11d7c27850bc757da529d2c7d5fae64b6f907785c63ca076afb69",
+    "contract/ledger/paid_compatibility_test.go": "3e236cb3bbd2006ffae0582215c476c26e8ac492e354fd85e3f87daba812e8f7",
+    "contract/ledger/registration.go": "e0ca1f86f681b4489f07ae75b107d0981f54bfdb1a0c50f138fd98d882db09ee",
+    "contract/ledger/registration_fuzz_test.go": "56693358dc9bad9cd1990bba6d75dcb2ac9b91acf7c7d4fd8e2343414ba6d10f",
+    "contract/ledger/registration_golden_test.go": "f4d9b5778d2936b4ccada58e549a746dd25f6a27289624c0cd4c898f5fca8c37",
+    "contract/ledger/registration_submission.go": "3b7d3b5d03bd4b0bccf85691d2ce70979dbdf1b1dd9e21355a71559425a09f6f",
+    "contract/ledger/registration_test.go": "42185f48ec0e51721742527706a138ed5144bed8f20f2c1572835d2c66f5a48b",
+    "contract/ledger/testdata/f3/139/bodies/e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5": "e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5",
+    "contract/ledger/testdata/f3/139/log/00000000000000000001.jsonl": "db1476e07b355d909dfb07cce79f142387469618709bc52a3f496395b94c5134",
+    "contract/ledger/testdata/f3/139/objects/a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b": "a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b",
+    "contract/ledger/testdata/f3/139/objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/CONTRACTS.md": "d394ba48c0d41e25a8e8d748b8743753cb3bfd4a3cdd51a5d8b1bef18aa4bf8f",
+    "docs/DESIGN-CORE-AND-LAUNCHERS.md": "900f18b1ba75185f4b0b23fc4923f22f0994aff629950c68446821212e91db2b"
+  },
+  "cumulativeChangedPaths": [
+    "contract/ledger/catalogue.go",
+    "contract/ledger/catalogue_test.go",
+    "contract/ledger/doc.go",
+    "contract/ledger/paid_compatibility_test.go",
+    "contract/ledger/registration.go",
+    "contract/ledger/registration_fuzz_test.go",
+    "contract/ledger/registration_golden_test.go",
+    "contract/ledger/registration_submission.go",
+    "contract/ledger/registration_test.go",
+    "contract/ledger/testdata/f3/139/bodies/e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5",
+    "contract/ledger/testdata/f3/139/log/00000000000000000001.jsonl",
+    "contract/ledger/testdata/f3/139/objects/a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b",
+    "contract/ledger/testdata/f3/139/objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/CONTRACTS.md",
+    "docs/DESIGN-CORE-AND-LAUNCHERS.md"
+  ],
+  "evidencePaths": {
+    "finalPublicProof": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s1-public-proof.json",
+    "coderFinal": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s1-coder-report.json",
+    "commitProof": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s1-commit-proof.json",
+    "rawS1Root": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s1-evidence",
+    "fixtureInventory": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s1-fixture-inventory.json",
+    "earlier42Fixtures": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s1-earlier-fixture-proof.json",
+    "authoritative13Logs": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s1-authoritative-golden-proof.json",
+    "pmFuzz": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s1-fuzz-result.json",
+    "publicPush": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s1-publication.json",
+    "rawHosted": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-s1-ci-result.json",
+    "privateFreezeEvidence": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\f3-139-freeze-evidence.md",
+    "fableWholeTicketPacket": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\fable-verification-request.md"
+  },
+  "integrationNotes": [
+    "Final public34090c3 is a direct descendant of code86f952c and coordinated pure140/main82d8d48, as reported by primary.",
+    "No main/private-record push or promotion by secondary. Primary alone ff-only integrates the approved/checked SHA after its measurement hold.",
+    "If main ancestry changes, coordinate retargeting; every changed final SHA needs its own hosted gate. No independent rebase is assumed.",
+    "No producer/S2 activation until approved freeze integration and explicit measurement/edit-hold release; any local evidence still needs its own slot.",
+    "No competing cache/history index, dependency, frozen old-family change, graph/action/view/provider functionality or D52 readiness claim.",
+    "S1 actual-Core probe validates prerequisite families only; S2 must implement and prove the full new producer/reducer.",
+    "Fable remains main advisor; whole-ticket double-check after reset is pending."
+  ]
+}

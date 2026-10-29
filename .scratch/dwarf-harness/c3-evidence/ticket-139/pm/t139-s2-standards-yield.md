@@ -1,0 +1,177 @@
+Read-only tools prevent artifact creation. Complete contents for the supplied secondary directory follow.
+
+## `t139-s2-standards-review.md`
+
+# Ticket139 S2 — Standards/maintainability
+
+**Verdict: approved.**
+
+Subject: `67d9636d6c70ba8cab2810bcec81c31a6c5df914`  
+Base: `34090c3b634b9854904671c336db91c350e6328c`
+
+**Review line:** Temporary GPT-6 Astra stand-in reviewer performed this independent standards review. Fable remains the advisor and double-checks the whole ticket after reset.
+
+## Hard breaches
+
+None found against AGENTS.md, current coder-context B26/B28/D152/D153, roadmap principles, domain/tracker conventions, or the ruled family structure. No blocking test-contract issue found.
+
+## Judgement calls
+
+No actionable findings across all twelve smell heuristics. Explicit family switches and mechanical fifth-result migrations follow existing conventions and ruling §7; replacing them with a registry would add unjustified machinery.
+
+The shared planner, isolated query values, existing locking conventions, and bounded cache exclusion remain understandable without new abstractions.
+
+## Tests and evidence
+
+Reviewed all eight registration files, targeted sections across the other nineteen changed paths, the exact history-index guard diff, and immutable commit/hash proof.
+
+Permanent tests exercise real-store authority, CAS, identity, history, retry, corruption and cancellation contracts—not wiring or wording.
+
+The original-binding mutant returned **ErrCommandMismatch**, not nil. **[INFERENCE from source trace]** it reached postcommit receipt matching, not an independent preflight rejection (`registration_commands.go:264–279`). The restored assertion requires both ErrInconsistent and unchanged durability (`registration_replay_test.go:227–228`), genuinely defending no-append. The red log prints no durable count.
+
+Reviewed all three independent mutation patches, red assertions, identical-restoration proofs and green logs; focused/seeds, whole-package plain/race, five-row race×20, static/import/module evidence, and unchanged frozen fixtures. Accepted fuzz seeds reach real Submit→Open→typed snapshot/receipt assertions.
+
+All four immutable 120-second PM fuzz campaigns passed; source/module/frozen hashes remained bound.
+
+## Remaining gates
+
+- D153 hosted Check9/run **40810219344**, attempt 1: in progress per PM, not yet successful.
+- Primary-owned integration/new-SHA evidence; approval does not transfer automatically.
+- S3 process/torn-tail/cross-family/Service-smoke evidence and ticket-close review remain separate.
+- Fable’s whole-ticket double-check after reset.
+
+**Owner gates:** none newly triggered; D52 testing-only restrictions remain.  
+**Confirmation needed:** no routine confirmation pass. No spec-axis verdict or whole-ticket/main readiness is implied.
+
+## `t139-s2-standards-review.json`
+
+{
+  "status": "complete",
+  "axis": "standards-maintainability",
+  "subjectSHA": "67d9636d6c70ba8cab2810bcec81c31a6c5df914",
+  "baseSHA": "34090c3b634b9854904671c336db91c350e6328c",
+  "verdict": "approved",
+  "findings": {
+    "hard": [],
+    "judgement": []
+  },
+  "evidenceReviewed": [
+    {
+      "category": "authority-and-standards",
+      "sources": [
+        "Main checkout AGENTS.md",
+        "Secondary local/coder-context.md",
+        "docs/ROADMAPS.md working rules",
+        "docs/ROADMAP-CORE.md working principles",
+        "docs/agents/domain.md",
+        "docs/agents/issue-tracker.md",
+        "Secondary local/t139-design-assignment.md:9-19",
+        "Secondary local/t139-ruling.md",
+        "Secondary local/t139-s2-assignment.md",
+        "Secondary local/t139-s2-standards-axis.md",
+        "contract/ledger/doc.go:2560-end"
+      ],
+      "reviewer": "Temporary GPT-6 Astra stand-in; Fable double-checks the whole ticket after reset."
+    },
+    {
+      "category": "immutable-source",
+      "sources": [
+        "Secondary local/t139-s2-commit-proof.json",
+        "Secondary local/t139-s2-history-guard.diff",
+        "All eight registration source/test files",
+        "Targeted implementing and migrated sections in the other nineteen changed paths"
+      ],
+      "assessment": "Reviewed source follows existing family, planner, locking, query and fixture conventions. The two authorized history_index.go edits exclude registration positives without introducing another cache."
+    },
+    {
+      "category": "complete-smell-baseline",
+      "heuristicsConsidered": [
+        "Mysterious Name",
+        "Duplicated Code",
+        "Feature Envy",
+        "Data Clumps",
+        "Primitive Obsession",
+        "Repeated Switches",
+        "Shotgun Surgery",
+        "Divergent Change",
+        "Speculative Generality",
+        "Message Chains",
+        "Middle Man",
+        "Refused Bequest"
+      ],
+      "assessment": "Judgement heuristics only; no actionable finding. Existing explicit family conventions override generic extraction or polymorphism suggestions."
+    },
+    {
+      "category": "local-proof",
+      "root": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/run-20261029T023939070Z-19044",
+      "sources": [
+        "commands.json",
+        "summary.json",
+        "03-focused-and-seeds.stdout.log",
+        "05-agents-plain.stdout.log",
+        "08-agents-race.stdout.log",
+        "09-affected-race-x20.stdout.log",
+        "10-production-imports.stdout.log",
+        "11-test-imports.stdout.log",
+        "baseline-comparison.json",
+        "accepted-registration-seeds.json"
+      ],
+      "assessment": "Focused regressions and required seeds, one plain package run, one race package run and five affected rows repeated twenty times passed. Static/module command records report success. No new dependency or frozen-fixture change."
+    },
+    {
+      "category": "mutation-and-test-contract",
+      "sources": [
+        "rule-breaks.json",
+        "04a-owner-entrance.patch and associated proof/red/green outputs",
+        "04b-original-binding.patch and associated proof/red/green outputs",
+        "04c-postcommit-cancellation.patch and associated proof/red/green outputs",
+        "registration_replay_test.go:227-228",
+        "registration_commands.go:264-279",
+        "registration_fuzz_test.go",
+        "removed-TestRegistrationInstalledBeforeAck.txt"
+      ],
+      "assessment": "Three independent mutations failed and restored identically before same-target green runs. The binding mutant reported ErrCommandMismatch, not nil. Source tracing indicates the postcommit mismatch fence; no durable count was printed. The restored test requires preflight inconsistency plus unchanged durability, so no-append is defended. Accepted registration seeds require real-store replay and typed observable results. The removed I/O-pinning test should remain removed."
+    },
+    {
+      "category": "completed-pm-fuzz",
+      "source": "Secondary local/t139-s2-fuzz-result.json",
+      "rawLogRoot": "C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/pm-fuzz-20261028T225809-0400",
+      "campaigns": [
+        {"target": "FuzzRegistrationGroupReplay", "executions": 7156, "passed": true},
+        {"target": "FuzzScopedGroupReplay", "executions": 17030, "passed": true},
+        {"target": "FuzzReviewGroupReplay", "executions": 28640, "passed": true},
+        {"target": "FuzzPaidGroupReplay", "executions": 43599, "passed": true}
+      ],
+      "assessment": "Four serial 120-second, parallel=1 campaigns; exit zero, no timeout or failure-corpus report. All 77 bound source/module/frozen hashes unchanged."
+    }
+  ],
+  "remainingExternalGates": [
+    {
+      "gate": "D153 hosted exact-SHA Check result",
+      "run": "40810219344",
+      "attempt": 1,
+      "status": "In progress per PM; success not claimed."
+    },
+    {
+      "gate": "Primary-owned integration",
+      "status": "Any retargeted/new SHA requires its own evidence; this approval is subject-specific."
+    },
+    {
+      "gate": "Separate spec-axis aggregation",
+      "status": "Not evaluated or reranked by this standards review."
+    },
+    {
+      "gate": "S3 and ticket close",
+      "status": "Real-process/torn-tail/cross-family/Service-smoke evidence and close review remain outside this slice verdict."
+    },
+    {
+      "gate": "Fable whole-ticket double-check",
+      "status": "After reset."
+    }
+  ],
+  "ownerGates": {
+    "newlyTriggered": [],
+    "unchangedBoundary": "D52 testing-only restrictions remain; this review grants no promotion, provider-spending or reserved owner approval."
+  },
+  "confirmationNeeded": false
+}

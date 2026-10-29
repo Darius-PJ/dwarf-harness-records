@@ -1,0 +1,6 @@
+{
+    "before":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044\\module-and-f3-before.json",
+    "after":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044\\module-and-f3-after.json",
+    "identical":  true,
+    "rule":  "Both module files and the entire frozen F3 fixture path/hash set remain unchanged"
+}

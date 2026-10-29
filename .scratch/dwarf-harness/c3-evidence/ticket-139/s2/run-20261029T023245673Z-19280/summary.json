@@ -1,0 +1,20 @@
+{
+    "status":  "stopped",
+    "root":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration",
+    "evidence":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023245673Z-19280",
+    "startedUTC":  "2026-10-29T02:32:45.7065911Z",
+    "finishedUTC":  "2026-10-29T02:33:06.9387585Z",
+    "parentDeadline":  "disabled (tool timeout=0); every native child has its own deadline",
+    "error":  "System.Management.Automation.RuntimeException: Command failed; no automatic retry: 03-focused-and-seeds (see C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023245673Z-19280\\03-focused-and-seeds.json)",
+    "commands":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023245673Z-19280\\commands.json",
+    "ruleBreaks":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023245673Z-19280\\rule-breaks.json",
+    "finalHashes":  null,
+    "deletedOrRenamed":  [
+                             {
+                                 "name":  "TestRegistrationInstalledBeforeAck",
+                                 "reason":  "New unexecuted test removed with PM approval: pins query/I/O behavior instead of observable contract",
+                                 "archive":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\removed-TestRegistrationInstalledBeforeAck.txt"
+                             }
+                         ],
+    "exitCode":  1
+}

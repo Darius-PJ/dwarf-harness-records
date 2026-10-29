@@ -1,0 +1,43 @@
+--- historical-8a17-slot2-ipc-stop/registration_crash_test.go
++++ source-only-ipc-correction/registration_crash_test.go
+@@ -26,7 +26,7 @@
+ type registrationCrashSignal struct {
+ 	Boundary                 string
+ 	Before                   uint64
+-	Digest                   ledger.Digest
++	Digest                   string
+ 	Receipt                  json.RawMessage
+ 	EffectSequence, Sequence uint64
+ 	Cut                      int64
+@@ -110,8 +110,12 @@
+ 				t.Fatalf("child did not positively exit/reap at %s: %v", boundary, waitErr)
+ 			}
+ 			var signal registrationCrashSignal
+-			if err := json.Unmarshal(output, &signal); err != nil || signal.Boundary != boundary || signal.Before != baseThrough || signal.Digest == (ledger.Digest{}) {
++			if err := json.Unmarshal(output, &signal); err != nil || signal.Boundary != boundary || signal.Before != baseThrough {
+ 				t.Fatalf("child did not reach requested boundary: %+v %v", signal, err)
++			}
++			digest, err := ledger.ParseDigest(signal.Digest)
++			if err != nil || digest == (ledger.Digest{}) {
++				t.Fatalf("invalid child command digest %q: %v", signal.Digest, err)
+ 			}
+ 
+ 			segment := filepath.Join(root, "log", ledger.SegmentName(1))
+@@ -177,7 +181,7 @@
+ 			}
+ 			wantView := baseView
+ 			wantView.ThroughSequence = through
+-			lookup := RegistrationCommandLookup{CommandID: input.Request.CommandID, SubmissionSHA256: signal.Digest}
++			lookup := RegistrationCommandLookup{CommandID: input.Request.CommandID, SubmissionSHA256: digest}
+ 			var original RegistrationReceipt
+ 			if committed {
+ 				original = RegistrationReceipt{RuntimeRegistrationReceipt: scopedDecode(t, ledger.DecodeRuntimeRegistrationReceipt, signal.Receipt), EffectSequence: signal.EffectSequence, Sequence: signal.Sequence}
+@@ -292,7 +296,7 @@
+ 	var service *Service
+ 	deps := serviceDeps{
+ 		beforeSubmit: func(d []ledger.Draft) []ledger.Draft {
+-			signal.Digest = scopedDecode(t, ledger.DecodeCommand, d[0].Payload).SubmissionSHA256
++			signal.Digest = scopedDecode(t, ledger.DecodeCommand, d[0].Payload).SubmissionSHA256.String()
+ 			if boundary == "before_commit" {
+ 				stop(nil)
+ 			}

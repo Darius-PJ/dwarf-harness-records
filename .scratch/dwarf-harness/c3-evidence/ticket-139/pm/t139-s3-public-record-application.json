@@ -1,0 +1,42 @@
+{
+  "status": "EXACT_APPROVED_PUBLIC_RECORDS_APPLIED_AND_DOCUMENT_CHECKS_PASS",
+  "codeSHA": "f92a5ef25b15cab47769cf76ff1af2eb86b23e25",
+  "approvedDraftSHA256": "003ce6eaa63db35972f2857d4929de7aca240df4c9a66da3c34d42b77784c45b",
+  "appliedIDs": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+  ],
+  "privateR8AppliedBySecondary": false,
+  "primaryConditionalAuthority": "local://t139-primary-joint-closing-approval.txt",
+  "actualRequiredVerdicts": {
+    "standards": {
+      "messageID": "7be38b8d",
+      "verdict": "approve",
+      "findings": 0
+    },
+    "spec": {
+      "messageID": "1d2520e4",
+      "verdict": "approve",
+      "findings": 0
+    }
+  },
+  "actualPublicHashesEqualReviewedProjection": true,
+  "finalPublicDocSHA256": {
+    ".scratch/dwarf-harness/issues/139-register-shared-resources-and-work-domains-through-core.md": "58e34215e328d73bfa8757576d4f9216a6b383614582cd9d6e7ad639c9454859",
+    "docs/ROADMAP-CORE.md": "a2ee264bde3b25b8c161b01215f612108d2ae1f672945d0cba72bcef2efdf86d",
+    "docs/ROADMAPS.md": "d8e99a169f28c11961e0c9555a8c0e9774ba48286ad73ed331e783be52131e4f",
+    "docs/ROADMAP-UNDERCURRENT.md": "d0e59b9e8a4c22ef747436308e22b861e4ec23a0ce10754328678ee5efc2fed0"
+  },
+  "allFourLF": true,
+  "relativeLinkIssues": [],
+  "checker": "Existing check_links policy; existing mirror construction pattern with only FOURchangedpublicdocs in checkscope and realPrimaryprivateDECISIONS +unchangedpackageGoDoc as target-only overlays",
+  "privacy": "Real private records existed ONLY in removed temporarymirror, never publicworktree. This does not claim B34/privatecopies applied.",
+  "temporaryMirrorRemoved": true,
+  "GoOrNativeValidationRun": false,
+  "mainOrPrivateRefChanged": false
+}

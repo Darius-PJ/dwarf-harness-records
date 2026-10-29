@@ -1,0 +1,10 @@
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== CONT  TestRegistrationCommitRetryAndClose
+=== RUN   TestRegistrationCommitRetryAndClose/installed-lost-ack-and-cancel
+=== PAUSE TestRegistrationCommitRetryAndClose/installed-lost-ack-and-cancel
+=== CONT  TestRegistrationCommitRetryAndClose/installed-lost-ack-and-cancel
+--- PASS: TestRegistrationCommitRetryAndClose (0.00s)
+    --- PASS: TestRegistrationCommitRetryAndClose/installed-lost-ack-and-cancel (0.20s)
+PASS
+ok  	github.com/Darius-PJ/dwarf-harness/internal/core/agents	3.210s

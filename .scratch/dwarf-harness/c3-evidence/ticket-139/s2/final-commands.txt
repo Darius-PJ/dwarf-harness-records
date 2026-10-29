@@ -1,0 +1,227 @@
+Ticket139 S2 final local sequence — PREPARED, NOT EXECUTED
+
+Execution requires Main's explicit runner release after source/argv review.
+Runner: C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/run-final.ps1
+Removed-test archive: C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/removed-TestRegistrationInstalledBeforeAck.txt
+CWD for every native child: C:/Users/darius.jones/worktrees/dwarf-harness/139-registration
+Supplied approved base (not re-audited): 34090c3b634b9854904671c336db91c350e6328c
+Supplied branch: build/139-registration
+Supplied toolchain: Go1.27.3
+
+Outer invocation, ONLY after release:
+  powershell.exe -NoProfile -NonInteractive -File C:/Users/darius.jones/worktrees/dwarf-harness/t139-s2-evidence/run-final.ps1
+Tool cwd: C:/Users/darius.jones/worktrees/dwarf-harness/139-registration
+Tool timeout: 0 (disabled); async: true; pty: false.
+The whole sequence is not placed under a single 1200s/3600s deadline.
+Each native child has its own recorded deadline below, plus the package's stated Go timeout.
+On a child deadline the runner records timeout, uses taskkill /PID <actual pid> /T /F, preserves raw output, and stops rather than retrying.
+
+Explicit common child environment:
+  GOTOOLCHAIN=local
+  GOFLAGS=
+  GOROOT=C:/Program Files/Go
+  GOOS=windows
+  GOARCH=amd64
+  CGO_ENABLED=0
+Race child overrides ONLY for steps08 and09:
+  CGO_ENABLED=1
+  CC=C:/Users/darius.jones/AppData/Local/Programs/llvm-mingw-20260922-ucrt-x86_64/bin/x86_64-w64-mingw32-clang.exe
+Executable GO: C:/Program Files/Go/bin/go.exe
+Executable GOFMT: C:/Program Files/Go/bin/gofmt.exe
+All other commands below use the common environment unless explicitly labeled race.
+
+OWNED is this exact ordered argv suffix; every entry is rooted at
+C:/Users/darius.jones/worktrees/dwarf-harness/139-registration/internal/core/agents/:
+  registration_types.go
+  registration_commands.go
+  registration_replay.go
+  registration_state.go
+  registration_query.go
+  registration_service_test.go
+  registration_replay_test.go
+  registration_fuzz_test.go
+  service.go
+  types.go
+  scoped_replay.go
+  replay.go
+  doc.go
+  scoped_golden_test.go
+  integrity.go
+  paid_fixture_test.go
+  paid_fuzz_test.go
+  paid_live.go
+  paid_read.go
+  paid_settlement.go
+  paid_state.go
+  review_execute.go
+  review_fuzz_test.go
+  review_replay_test.go
+  review_state.go
+  scoped_submit.go
+  history_index.go
+
+SERIAL PHASE0 — evidence and baselines
+Create one unique private run-<UTC>-<PID> directory beneath this evidence directory.
+Record runner/document SHA256, supplied base/branch/toolchain, exact owned paths,
+explicit environment, and inherited environment NAMES ONLY (no secret values).
+Get-FileHash SHA256 before any formatting for go.mod, go.sum, and every file under
+contract/ledger/testdata/f3, including the already frozen139 fixture. Record path
+set and hash set in module-and-f3-before.json with timestamp metadata. No git command.
+
+SERIAL PHASE1 — owned-only formatting
+01-gofmt-write: GOFMT -w OWNED
+  child deadline120s.
+02-gofmt-list: GOFMT -l OWNED
+  child deadline120s; require exit0 and empty stdout/stderr.
+
+SERIAL PHASE2 — focused regressions and normal fuzz seeds
+03-focused-and-seeds:
+  GO test -v -count=1 -timeout=19m -run '^(TestRegistration.*|FuzzRegistrationGroupReplay|FuzzScopedGroupReplay|FuzzReviewGroupReplay|FuzzPaidGroupReplay|FuzzPrivateGroupReplay)$' ./internal/core/agents
+  child deadline1200s.
+No extra focused HistoryIndexCommandOccurrences: the single whole-package run covers it.
+Preserve accepted FuzzRegistrationGroupReplay/seed#0, /seed#8 and /seed#16 PASS lines
+and their exact source hash/rawlog/command metadata in accepted-registration-seeds.json.
+These are mode0 positives for resource(prefix5), work-domain(prefix6), and declaration(prefix13).
+In the target, mode0 marks the candidate valid; decoder/planner/preflight rejection is fatal.
+Accepted candidates then copy the prepared REAL fixture, ledgerstore.Open, Submit,
+Service.Open, and assert the typed current snapshot plus original receipt/sequences.
+A PASS for these positives therefore requires the actual accepted-store replay branch;
+no nil/structural clone is claimed as replay evidence. No timed fuzz here.
+
+SERIAL PHASE3 — three independent rule breaks
+For EACH mutant: save post-format original bytes and SHA256; require one exact source
+anchor; save exact applied unified diff and mutant bytes/SHA256; run red; always restore
+original bytes in finally; compare both original/restored bytes and SHA256; then run
+exactly the SAME target green. Never leave a mutant installed. No combined mutants.
+Every child is CGO_ENABLED=0, -count=1, -timeout=19m, child deadline1200s.
+A red is credited only for exit1 with the expected target assertion in raw output;
+a green mutant is survived-or-masked; timeout/compile/other errors are unproven-other-failure.
+Preserve those outcomes honestly. A surviving/unproven mutant yields final exit2,
+not fabricated red evidence. An unexpected restored-green failure stops the sequence.
+
+04a-owner-entrance — internal/core/agents/registration_commands.go
+Exact independent diff (line position generated from the actual formatted source):
+--- a/internal/core/agents/registration_commands.go
++++ b/internal/core/agents/registration_commands.go
+@@ executeRegistration owner entrance @@
+-	if caller.actor != "owner" {
+-		return RegistrationReceipt{}, ErrDenied
+-	}
+Red and restored-green argv:
+  GO test -v -count=1 -timeout=19m -run '^TestRegistrationAuthorityAndIdentity$' ./internal/core/agents
+Expected red assertion: non-owner registration:
+
+04b-original-binding — internal/core/agents/registration_replay.go
+Exact independent diff:
+--- a/internal/core/agents/registration_replay.go
++++ b/internal/core/agents/registration_replay.go
+@@ preflightRegistration independent original request guard @@
+-	if private != nil || scoped != nil || review != nil || paid != nil || g == nil || g.command.CommandID != input.id || g.command.SubmissionSHA256 != input.digest || !sameScopedValue(g.receipt.Submission, input.sub) {
++	if private != nil || scoped != nil || review != nil || paid != nil || g == nil {
+Red and restored-green argv:
+  GO test -v -count=1 -timeout=19m -run '^TestRegistrationOriginalRequestPreflight$' ./internal/core/agents
+Expected red assertion: self-consistent mutation escaped original request:
+
+04c-postcommit-cancellation — internal/core/agents/registration_commands.go
+Exact independent diff (the ONLY change is Background to caller ctx for this refresh):
+--- a/internal/core/agents/registration_commands.go
++++ b/internal/core/agents/registration_commands.go
+@@ executeRegistration post-Submit completion refresh @@
+-	err = s.refreshLocked(context.Background(), max(s.p.through, committed.Last))
++	err = s.refreshLocked(ctx, max(s.p.through, committed.Last))
+Red and restored-green argv:
+  GO test -v -count=1 -timeout=19m -run '^TestRegistrationCommitRetryAndClose$/^installed-lost-ack-and-cancel$' ./internal/core/agents
+Expected red assertion: post-commit cancellation returned before acknowledgment hook:
+The target cancels the caller only after actual Submit and observes both the installed
+acknowledgment hook and the producer result channel. Premature return fails immediately
+without a per-test timer/deadline. At the hook it queries real status and the actual
+receipt; normal execution then loses the acknowledgment and checks restart/retry.
+No authoritative error is hidden and no production integrity validation is relaxed.
+
+Removed before execution with PM approval:
+  TestRegistrationInstalledBeforeAck (only this newly added test).
+Reason: it pinned query/I/O behavior by temporarily corrupting the ledger and requiring
+the query to ignore that authoritative error. The complete removed function and reason
+are archived in removed-TestRegistrationInstalledBeforeAck.txt. No legacy assertion was
+removed or renamed. The runner records this deletion in summary.json.
+
+SERIAL PHASE4 — exactly one plain changed-package pass
+05-agents-plain:
+  GO test -v -count=1 -timeout=19m ./internal/core/agents
+  child deadline1200s.
+This includes unchanged old-family goldens and HistoryIndexCommandOccurrences.
+All new real-store/frozen-prefix consumer integration is in this package; no external
+agents-package Go importers were found. No additional duplicate full-package pass.
+
+SERIAL PHASE5 — host static checks only
+06-host-vet:
+  GO vet ./internal/core/agents
+  child deadline600s.
+07-host-staticcheck:
+  GO tool staticcheck ./internal/core/agents
+  child deadline600s.
+No build-constraint/platform changes; no five-target static campaign or install.
+
+SERIAL PHASE6 — D152 shared-state race recipe, race environment above
+08-agents-race:
+  GO test -race -v -count=1 -timeout=29m ./internal/core/agents
+  child deadline1800s.
+09-affected-race-x20:
+  GO test -race -v -count=20 -timeout=45m -run '^(TestRegistrationVersionCAS|TestRegistrationCommitRetryAndClose)$/^(resource|work_domain|declaration|concurrent-retry|close-fence)$' ./internal/core/agents
+  child deadline2800s.
+Exactly five selected rows: VersionCAS/resource, VersionCAS/work_domain,
+VersionCAS/declaration, CommitRetryAndClose/concurrent-retry, CommitRetryAndClose/close-fence.
+No duplicate20x of unchanged legacy HistoryIndexLookupRace rows.
+The newly channelized cancellation/lost-ack row remains covered by focused, rule-break
+restored-green, whole plain and whole race; it is not added to the PM's exact20x regex.
+
+SERIAL PHASE7 — import/module audit, unchanged fixtures, final hashes
+10-production-imports:
+  GO list -f '{{join .Imports "\n"}}' ./internal/core/agents
+  child deadline300s.
+11-test-imports:
+  GO list -f '{{join .TestImports "\n"}}' ./internal/core/agents
+  child deadline300s.
+12-module-tidy-diff:
+  GO mod tidy -diff
+  child deadline600s; require exit0 and no stdout/stderr.
+13-module-verify:
+  GO mod verify
+  child deadline600s.
+Capture module-and-f3-after.json and compare the exact module/frozen-fixture path/hash
+set against before. Record baseline-comparison.json; refuse changed baselines without
+rewriting unrelated files. Record all27 owned final SHA256s in final-hashes.json.
+No source edits after final restoration/checks/hashes.
+
+EVIDENCE OUTPUT
+Each child writes separate <step>.stdout.log and <step>.stderr.log, preserving raw
+stream contents without claiming interleaved ordering. Each <step>.json records full
+argv, cwd, explicit env, deadline, start/end UTC, elapsed seconds, actual exit code,
+timeout/error and rawlog paths. commands.json indexes every completed child, failures
+included. Each mutant additionally records .patch, .original.go, .mutant.go and
+.proof.json with red/restored-green metadata and byte/SHA restoration proof.
+summary.json records complete/stopped/proof-incomplete, errors, removed-test archive,
+and final hash location. Unexpected failure stops; there is no automatic retry.
+No initial all-green result or test timing is claimed by this prepared manifest.
+
+EXCLUSIONS
+No go run ./tools/check, no Git writes, no push/commit/main/private-record mutation,
+no provider calls, no real colony, no measurements, and no timed fuzz in this runner.
+Main owns the later immutable-commit/hash-bound120s -parallel=1 campaigns for:
+FuzzRegistrationGroupReplay, FuzzScopedGroupReplay, FuzzReviewGroupReplay,
+FuzzPaidGroupReplay. FuzzPrivateGroupReplay remains normal seeds only.
+
+APPROVED FIXTURE CORRECTION AFTER FIRST EXECUTION
+Preserved initial run: run-20261029T023245673Z-19280.
+gofmt write/list exited0; focused exited1 after20.1381574s. Sole observed failure:
+TestRegistrationCommitRetryAndClose/concurrent-retry incorrectly used Store.Append
+for ledger.command records; the real store correctly refused this fixture misuse.
+No mutant, whole-package, static or race command ran in that stopped sequence.
+Main approved replacing only that insertion with two Store.Submit(command, nil)
+calls and accurately describing two unrelated F0 commits. All consumer assertions
+remain unchanged. This row proves live schema5 retry after intervening F0 traffic;
+it does NOT claim a two-command single-commit insertion. The unchanged
+HistoryIndexCommandOccurrences regression covers whole-commit F0 invalidation in
+the approved single whole plain/race runs. No production behavior was altered.
+The approved sequence restarts from formatting/focused in a fresh evidence directory;
+the original failed run remains immutable and is not counted as mutant red evidence.

@@ -1,0 +1,59 @@
+{
+  "status": "EXACT_IN_MEMORY_PREVIEW_ONLY_NO_REPOSITORY_WRITES",
+  "codeSHA": "f92a5ef25b15cab47769cf76ff1af2eb86b23e25",
+  "draftFile": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-documents-PROJECTS-dwarf-harness\\2026-10-28T22-09-34-833Z_01a1848f-bc71-7725-b904-bf2e53c88c21\\local\\t139-closing-edits.md",
+  "draftSHA256": "003ce6eaa63db35972f2857d4929de7aca240df4c9a66da3c34d42b77784c45b",
+  "editIDs": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7",
+    "R8"
+  ],
+  "allEightFindUnique": true,
+  "publicEdits": [
+    "R1",
+    "R2",
+    "R3",
+    "R4",
+    "R5",
+    "R6",
+    "R7"
+  ],
+  "privatePrimaryOnly": [
+    "R8"
+  ],
+  "publicFiles": [
+    ".scratch/dwarf-harness/issues/139-register-shared-resources-and-work-domains-through-core.md",
+    "docs/ROADMAP-CORE.md",
+    "docs/ROADMAPS.md",
+    "docs/ROADMAP-UNDERCURRENT.md"
+  ],
+  "C3StatusMirrorsExactly": true,
+  "U3StatusMirrorsExactly": true,
+  "sixCriterionWordsUnchanged": true,
+  "noPersonalPathInPublicReplacements": true,
+  "projectOrPrivateFilesWritten": false,
+  "newGoOrNativeValidation": false,
+  "shadowPublicHashes": {
+    ".scratch/dwarf-harness/issues/139-register-shared-resources-and-work-domains-through-core.md": "58e34215e328d73bfa8757576d4f9216a6b383614582cd9d6e7ad639c9454859",
+    "docs/ROADMAP-CORE.md": "a2ee264bde3b25b8c161b01215f612108d2ae1f672945d0cba72bcef2efdf86d",
+    "docs/ROADMAPS.md": "d8e99a169f28c11961e0c9555a8c0e9774ba48286ad73ed331e783be52131e4f",
+    "docs/ROADMAP-UNDERCURRENT.md": "d0e59b9e8a4c22ef747436308e22b861e4ec23a0ce10754328678ee5efc2fed0"
+  },
+  "allShadowPublicLF": true,
+  "B34AppendedWordCount": 153,
+  "PMRevision": "ONLY shortened four R8B34paragraphs after drafter handoff; publicR1\u20137 unchanged, links/gates remain. Actual R8old/new diff retained separately.",
+  "pending": [
+    "freshindependentStandards/Spec",
+    "jointprimaryapproval",
+    "primaryB/privatecopyapplication",
+    "D116onepublicclosingdoccommit",
+    "guardedfinalpublicSHA/fullhostedCI",
+    "primarymain/privateintegration",
+    "laterFable"
+  ]
+}

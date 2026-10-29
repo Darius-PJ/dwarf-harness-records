@@ -1,0 +1,60 @@
+{
+  "finalPublicSHA": "84d0ced9446168777c7b7bfa3382974977bf27ed",
+  "reviewedCodeSHA": "f92a5ef25b15cab47769cf76ff1af2eb86b23e25",
+  "baseSHA": "8a17ec1ed2617ca2a4e5203479f75f363b359970",
+  "codeCommit": "ONLY2newtests/682insertions,actualtested1123/d045",
+  "closingDocumentsCommit": "ONE D116commit/4files/15insertions11deletions,exactR1\u2013R7",
+  "reviewedClosingDraftSHA256": "003ce6eaa63db35972f2857d4929de7aca240df4c9a66da3c34d42b77784c45b",
+  "finalHashes": {
+    "internal/core/agents/registration_crash_test.go": "1123794587c8486dd276a6463e88718870f62d9db7f4526ac1d41051ba9ac564",
+    "internal/core/agents/registration_recovery_test.go": "d045d9705df2b4fb4f8c0d4db319ef29ccc40693d4dda47e6338165fb033aa53",
+    ".scratch/dwarf-harness/issues/139-register-shared-resources-and-work-domains-through-core.md": "58e34215e328d73bfa8757576d4f9216a6b383614582cd9d6e7ad639c9454859",
+    "docs/ROADMAP-CORE.md": "a2ee264bde3b25b8c161b01215f612108d2ae1f672945d0cba72bcef2efdf86d",
+    "docs/ROADMAPS.md": "d8e99a169f28c11961e0c9555a8c0e9774ba48286ad73ed331e783be52131e4f",
+    "docs/ROADMAP-UNDERCURRENT.md": "d0e59b9e8a4c22ef747436308e22b861e4ec23a0ce10754328678ee5efc2fed0"
+  },
+  "actualFinalCommittedBlobVerification": {
+    "matched": [
+      "internal/core/agents/registration_crash_test.go",
+      "internal/core/agents/registration_recovery_test.go",
+      ".scratch/dwarf-harness/issues/139-register-shared-resources-and-work-domains-through-core.md",
+      "docs/ROADMAP-CORE.md",
+      "docs/ROADMAPS.md",
+      "docs/ROADMAP-UNDERCURRENT.md"
+    ],
+    "mismatched": [],
+    "missing": [],
+    "recordCommitUncovered": []
+  },
+  "review": {
+    "standards": {
+      "verdict": "approve",
+      "findings": 0,
+      "actualMessageID": "7be38b8d"
+    },
+    "spec": {
+      "verdict": "approve",
+      "findings": 0,
+      "actualMessageID": "1d2520e4"
+    },
+    "actualModel": "openai-codex/gpt-6-astra",
+    "effort": "max",
+    "fallback": false,
+    "primaryConditionalGate": "Both actual independent jointcode/records approvals satisfy retained primary approval; no routineconfirmation",
+    "notANewReviewOfUnknownSource": "FinalSHA combines unchanged reviewed code blobs with exact jointly reviewed publicrecords only"
+  },
+  "linksLF": "local://t139-s3-public-record-application.json:exact4docprojection/allLF/0publiclinkissues/temporarymirrorremoved",
+  "privateRecord": "R8approveddraftonly; primaryactualdate/tail/copies/app/push; no privatefile in owncommits",
+  "mainOrPrivateRefChanged": false,
+  "localGoRerun": false,
+  "publication": "Guardedownbranchpush/remoteEXACT84d0/2commits701scanlinesclean/14:18:44EDT; actualpublicationreceipt",
+  "hosted": {
+    "conclusion": "success",
+    "exactPublicSHA": "84d0ced9446168777c7b7bfa3382974977bf27ed",
+    "runID": 40929620085,
+    "URL": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40929620085",
+    "attempt": 1,
+    "all5JobsAnd3FullCheckStepsSuccess": true,
+    "resultArtifact": "local://t139-s3-ci-result.json"
+  }
+}

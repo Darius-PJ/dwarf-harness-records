@@ -1,0 +1,492 @@
+=== RUN   TestRegistrationFrozenGoldenReplay
+=== PAUSE TestRegistrationFrozenGoldenReplay
+=== RUN   TestRegistrationOriginalRequestPreflight
+=== PAUSE TestRegistrationOriginalRequestPreflight
+=== RUN   TestRegistrationGroupRules
+=== PAUSE TestRegistrationGroupRules
+=== RUN   TestRegistrationReviewTerminalConsumer
+=== PAUSE TestRegistrationReviewTerminalConsumer
+=== RUN   TestRegistrationUnsupportedVersion
+=== PAUSE TestRegistrationUnsupportedVersion
+=== RUN   TestRegistrationPostcommitReadbackFailure
+=== PAUSE TestRegistrationPostcommitReadbackFailure
+=== RUN   TestRegistrationAuthorityAndIdentity
+=== PAUSE TestRegistrationAuthorityAndIdentity
+=== RUN   TestRegistrationLimitsAndRetry
+=== PAUSE TestRegistrationLimitsAndRetry
+=== RUN   TestRegistrationNormalizationAndSize
+=== PAUSE TestRegistrationNormalizationAndSize
+=== RUN   TestRegistrationVersionCAS
+=== PAUSE TestRegistrationVersionCAS
+=== RUN   TestRegistrationCommitRetryAndClose
+=== PAUSE TestRegistrationCommitRetryAndClose
+=== RUN   TestRegistrationDeclarationHistory
+=== PAUSE TestRegistrationDeclarationHistory
+=== RUN   TestRegistrationGrantsRemainIndependent
+=== PAUSE TestRegistrationGrantsRemainIndependent
+=== CONT  TestRegistrationFrozenGoldenReplay
+=== RUN   TestRegistrationFrozenGoldenReplay/0
+=== PAUSE TestRegistrationFrozenGoldenReplay/0
+=== RUN   TestRegistrationFrozenGoldenReplay/1
+=== PAUSE TestRegistrationFrozenGoldenReplay/1
+=== RUN   TestRegistrationFrozenGoldenReplay/2
+=== PAUSE TestRegistrationFrozenGoldenReplay/2
+=== RUN   TestRegistrationFrozenGoldenReplay/3
+=== PAUSE TestRegistrationFrozenGoldenReplay/3
+=== RUN   TestRegistrationFrozenGoldenReplay/4
+=== PAUSE TestRegistrationFrozenGoldenReplay/4
+=== RUN   TestRegistrationFrozenGoldenReplay/5
+=== PAUSE TestRegistrationFrozenGoldenReplay/5
+=== RUN   TestRegistrationFrozenGoldenReplay/6
+=== PAUSE TestRegistrationFrozenGoldenReplay/6
+=== RUN   TestRegistrationFrozenGoldenReplay/7
+=== PAUSE TestRegistrationFrozenGoldenReplay/7
+=== RUN   TestRegistrationFrozenGoldenReplay/8
+=== PAUSE TestRegistrationFrozenGoldenReplay/8
+=== RUN   TestRegistrationFrozenGoldenReplay/9
+=== PAUSE TestRegistrationFrozenGoldenReplay/9
+=== RUN   TestRegistrationFrozenGoldenReplay/10
+=== PAUSE TestRegistrationFrozenGoldenReplay/10
+=== RUN   TestRegistrationFrozenGoldenReplay/11
+=== PAUSE TestRegistrationFrozenGoldenReplay/11
+=== RUN   TestRegistrationFrozenGoldenReplay/12
+=== PAUSE TestRegistrationFrozenGoldenReplay/12
+=== RUN   TestRegistrationFrozenGoldenReplay/13
+=== PAUSE TestRegistrationFrozenGoldenReplay/13
+=== RUN   TestRegistrationFrozenGoldenReplay/14
+=== CONT  TestRegistrationGrantsRemainIndependent
+=== PAUSE TestRegistrationFrozenGoldenReplay/14
+=== RUN   TestRegistrationFrozenGoldenReplay/15
+=== PAUSE TestRegistrationFrozenGoldenReplay/15
+=== RUN   TestRegistrationFrozenGoldenReplay/16
+=== PAUSE TestRegistrationFrozenGoldenReplay/16
+=== RUN   TestRegistrationFrozenGoldenReplay/17
+=== PAUSE TestRegistrationFrozenGoldenReplay/17
+=== RUN   TestRegistrationFrozenGoldenReplay/18
+=== PAUSE TestRegistrationFrozenGoldenReplay/18
+=== RUN   TestRegistrationFrozenGoldenReplay/19
+=== PAUSE TestRegistrationFrozenGoldenReplay/19
+=== CONT  TestRegistrationReviewTerminalConsumer
+=== CONT  TestRegistrationDeclarationHistory
+=== CONT  TestRegistrationGroupRules
+=== RUN   TestRegistrationGroupRules/missing-effect
+=== PAUSE TestRegistrationGroupRules/missing-effect
+=== RUN   TestRegistrationGroupRules/extra-effect
+=== PAUSE TestRegistrationGroupRules/extra-effect
+=== RUN   TestRegistrationGroupRules/reordered
+=== PAUSE TestRegistrationGroupRules/reordered
+=== RUN   TestRegistrationGroupRules/mixed-family
+=== PAUSE TestRegistrationGroupRules/mixed-family
+=== RUN   TestRegistrationGroupRules/agent-envelope
+=== PAUSE TestRegistrationGroupRules/agent-envelope
+=== RUN   TestRegistrationGroupRules/session
+=== PAUSE TestRegistrationGroupRules/session
+=== RUN   TestRegistrationGroupRules/unknown-success
+=== PAUSE TestRegistrationGroupRules/unknown-success
+=== RUN   TestRegistrationGroupRules/effect-request-disagreement
+=== PAUSE TestRegistrationGroupRules/effect-request-disagreement
+=== RUN   TestRegistrationGroupRules/unregistered-audience
+=== PAUSE TestRegistrationGroupRules/unregistered-audience
+=== RUN   TestRegistrationGroupRules/immutable-address
+=== PAUSE TestRegistrationGroupRules/immutable-address
+=== RUN   TestRegistrationGroupRules/stale-source
+=== PAUSE TestRegistrationGroupRules/stale-source
+=== RUN   TestRegistrationGroupRules/address-collision
+=== PAUSE TestRegistrationGroupRules/address-collision
+=== RUN   TestRegistrationGroupRules/stale-cas
+=== PAUSE TestRegistrationGroupRules/stale-cas
+=== RUN   TestRegistrationGroupRules/context-outside-audience
+=== PAUSE TestRegistrationGroupRules/context-outside-audience
+=== RUN   TestRegistrationGroupRules/source-audience
+=== PAUSE TestRegistrationGroupRules/source-audience
+=== CONT  TestRegistrationOriginalRequestPreflight
+=== CONT  TestRegistrationPostcommitReadbackFailure
+=== CONT  TestRegistrationLimitsAndRetry
+=== CONT  TestRegistrationAuthorityAndIdentity
+=== CONT  TestRegistrationCommitRetryAndClose
+=== RUN   TestRegistrationCommitRetryAndClose/concurrent-retry
+=== PAUSE TestRegistrationCommitRetryAndClose/concurrent-retry
+=== RUN   TestRegistrationCommitRetryAndClose/installed-lost-ack-and-cancel
+=== PAUSE TestRegistrationCommitRetryAndClose/installed-lost-ack-and-cancel
+=== RUN   TestRegistrationCommitRetryAndClose/close-fence
+=== PAUSE TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationVersionCAS
+=== RUN   TestRegistrationVersionCAS/resource
+=== PAUSE TestRegistrationVersionCAS/resource
+=== RUN   TestRegistrationVersionCAS/work_domain
+=== PAUSE TestRegistrationVersionCAS/work_domain
+=== RUN   TestRegistrationVersionCAS/declaration
+=== PAUSE TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationNormalizationAndSize
+--- PASS: TestRegistrationPostcommitReadbackFailure (0.80s)
+=== CONT  TestRegistrationUnsupportedVersion
+=== RUN   TestRegistrationUnsupportedVersion/resource
+=== PAUSE TestRegistrationUnsupportedVersion/resource
+=== RUN   TestRegistrationUnsupportedVersion/domain
+=== PAUSE TestRegistrationUnsupportedVersion/domain
+=== RUN   TestRegistrationUnsupportedVersion/declaration
+=== PAUSE TestRegistrationUnsupportedVersion/declaration
+=== RUN   TestRegistrationUnsupportedVersion/receipt
+=== PAUSE TestRegistrationUnsupportedVersion/receipt
+=== CONT  TestRegistrationFrozenGoldenReplay/0
+--- PASS: TestRegistrationOriginalRequestPreflight (0.84s)
+=== CONT  TestRegistrationFrozenGoldenReplay/19
+--- PASS: TestRegistrationLimitsAndRetry (0.95s)
+=== CONT  TestRegistrationFrozenGoldenReplay/18
+=== CONT  TestRegistrationFrozenGoldenReplay/17
+--- PASS: TestRegistrationReviewTerminalConsumer (1.02s)
+=== CONT  TestRegistrationFrozenGoldenReplay/16
+--- PASS: TestRegistrationAuthorityAndIdentity (1.05s)
+=== CONT  TestRegistrationFrozenGoldenReplay/15
+--- PASS: TestRegistrationGrantsRemainIndependent (1.47s)
+=== CONT  TestRegistrationFrozenGoldenReplay/14
+=== CONT  TestRegistrationFrozenGoldenReplay/13
+=== CONT  TestRegistrationFrozenGoldenReplay/12
+=== CONT  TestRegistrationFrozenGoldenReplay/11
+=== CONT  TestRegistrationFrozenGoldenReplay/10
+=== CONT  TestRegistrationFrozenGoldenReplay/9
+--- PASS: TestRegistrationDeclarationHistory (2.14s)
+=== CONT  TestRegistrationFrozenGoldenReplay/8
+--- PASS: TestRegistrationNormalizationAndSize (2.16s)
+=== CONT  TestRegistrationFrozenGoldenReplay/7
+=== CONT  TestRegistrationFrozenGoldenReplay/6
+=== CONT  TestRegistrationFrozenGoldenReplay/5
+=== CONT  TestRegistrationFrozenGoldenReplay/4
+=== CONT  TestRegistrationFrozenGoldenReplay/3
+=== CONT  TestRegistrationFrozenGoldenReplay/2
+=== CONT  TestRegistrationFrozenGoldenReplay/1
+=== CONT  TestRegistrationGroupRules/missing-effect
+=== CONT  TestRegistrationGroupRules/unregistered-audience
+=== CONT  TestRegistrationGroupRules/agent-envelope
+=== CONT  TestRegistrationGroupRules/effect-request-disagreement
+=== CONT  TestRegistrationGroupRules/unknown-success
+=== CONT  TestRegistrationGroupRules/session
+=== CONT  TestRegistrationGroupRules/reordered
+=== CONT  TestRegistrationGroupRules/mixed-family
+=== CONT  TestRegistrationGroupRules/extra-effect
+=== CONT  TestRegistrationGroupRules/stale-cas
+=== CONT  TestRegistrationGroupRules/source-audience
+=== CONT  TestRegistrationGroupRules/context-outside-audience
+--- PASS: TestRegistrationFrozenGoldenReplay (0.00s)
+    --- PASS: TestRegistrationFrozenGoldenReplay/0 (0.20s)
+    --- PASS: TestRegistrationFrozenGoldenReplay/17 (0.67s)
+    --- PASS: TestRegistrationFrozenGoldenReplay/18 (0.77s)
+    --- PASS: TestRegistrationFrozenGoldenReplay/16 (0.71s)
+    --- PASS: TestRegistrationFrozenGoldenReplay/15 (0.71s)
+    --- PASS: TestRegistrationFrozenGoldenReplay/14 (0.62s)
+    --- PASS: TestRegistrationFrozenGoldenReplay/11 (0.50s)
+    --- PASS: TestRegistrationFrozenGoldenReplay/12 (0.55s)
+    --- PASS: TestRegistrationFrozenGoldenReplay/10 (0.50s)
+    --- PASS: TestRegistrationFrozenGoldenReplay/13 (0.65s)
+    --- PASS: TestRegistrationFrozenGoldenReplay/8 (0.42s)
+    --- PASS: TestRegistrationFrozenGoldenReplay/9 (0.47s)
+    --- PASS: TestRegistrationFrozenGoldenReplay/7 (0.40s)
+    --- PASS: TestRegistrationFrozenGoldenReplay/5 (0.39s)
+    --- PASS: TestRegistrationFrozenGoldenReplay/4 (0.40s)
+    --- PASS: TestRegistrationFrozenGoldenReplay/6 (0.44s)
+    --- PASS: TestRegistrationFrozenGoldenReplay/3 (0.40s)
+    --- PASS: TestRegistrationFrozenGoldenReplay/1 (0.34s)
+    --- PASS: TestRegistrationFrozenGoldenReplay/2 (0.41s)
+    --- PASS: TestRegistrationFrozenGoldenReplay/19 (2.34s)
+=== CONT  TestRegistrationGroupRules/stale-source
+=== CONT  TestRegistrationGroupRules/address-collision
+=== CONT  TestRegistrationGroupRules/immutable-address
+=== CONT  TestRegistrationCommitRetryAndClose/concurrent-retry
+=== CONT  TestRegistrationCommitRetryAndClose/close-fence
+=== CONT  TestRegistrationCommitRetryAndClose/installed-lost-ack-and-cancel
+=== CONT  TestRegistrationVersionCAS/resource
+=== CONT  TestRegistrationVersionCAS/declaration
+=== CONT  TestRegistrationVersionCAS/work_domain
+=== CONT  TestRegistrationUnsupportedVersion/resource
+=== CONT  TestRegistrationUnsupportedVersion/declaration
+--- PASS: TestRegistrationGroupRules (0.00s)
+    --- PASS: TestRegistrationGroupRules/missing-effect (0.47s)
+    --- PASS: TestRegistrationGroupRules/unregistered-audience (0.50s)
+    --- PASS: TestRegistrationGroupRules/effect-request-disagreement (0.50s)
+    --- PASS: TestRegistrationGroupRules/agent-envelope (0.51s)
+    --- PASS: TestRegistrationGroupRules/unknown-success (0.51s)
+    --- PASS: TestRegistrationGroupRules/session (0.44s)
+    --- PASS: TestRegistrationGroupRules/reordered (0.44s)
+    --- PASS: TestRegistrationGroupRules/mixed-family (0.42s)
+    --- PASS: TestRegistrationGroupRules/extra-effect (0.41s)
+    --- PASS: TestRegistrationGroupRules/stale-cas (0.50s)
+    --- PASS: TestRegistrationGroupRules/source-audience (0.51s)
+    --- PASS: TestRegistrationGroupRules/context-outside-audience (0.52s)
+    --- PASS: TestRegistrationGroupRules/stale-source (0.50s)
+    --- PASS: TestRegistrationGroupRules/address-collision (0.44s)
+    --- PASS: TestRegistrationGroupRules/immutable-address (0.46s)
+=== CONT  TestRegistrationUnsupportedVersion/receipt
+=== CONT  TestRegistrationUnsupportedVersion/domain
+--- PASS: TestRegistrationCommitRetryAndClose (0.00s)
+    --- PASS: TestRegistrationCommitRetryAndClose/concurrent-retry (0.92s)
+    --- PASS: TestRegistrationCommitRetryAndClose/close-fence (0.80s)
+    --- PASS: TestRegistrationCommitRetryAndClose/installed-lost-ack-and-cancel (0.79s)
+--- PASS: TestRegistrationVersionCAS (0.00s)
+    --- PASS: TestRegistrationVersionCAS/resource (0.85s)
+    --- PASS: TestRegistrationVersionCAS/work_domain (0.82s)
+    --- PASS: TestRegistrationVersionCAS/declaration (0.85s)
+--- PASS: TestRegistrationUnsupportedVersion (0.00s)
+    --- PASS: TestRegistrationUnsupportedVersion/resource (0.44s)
+    --- PASS: TestRegistrationUnsupportedVersion/declaration (0.46s)
+    --- PASS: TestRegistrationUnsupportedVersion/receipt (0.34s)
+    --- PASS: TestRegistrationUnsupportedVersion/domain (0.27s)
+=== RUN   FuzzPaidGroupReplay
+=== RUN   FuzzPaidGroupReplay/seed#0
+=== PAUSE FuzzPaidGroupReplay/seed#0
+=== RUN   FuzzPaidGroupReplay/seed#1
+=== PAUSE FuzzPaidGroupReplay/seed#1
+=== RUN   FuzzPaidGroupReplay/seed#2
+=== PAUSE FuzzPaidGroupReplay/seed#2
+=== RUN   FuzzPaidGroupReplay/seed#3
+=== PAUSE FuzzPaidGroupReplay/seed#3
+=== RUN   FuzzPaidGroupReplay/seed#4
+=== PAUSE FuzzPaidGroupReplay/seed#4
+=== RUN   FuzzPaidGroupReplay/seed#5
+=== PAUSE FuzzPaidGroupReplay/seed#5
+=== RUN   FuzzPaidGroupReplay/seed#6
+=== PAUSE FuzzPaidGroupReplay/seed#6
+=== RUN   FuzzPaidGroupReplay/seed#7
+=== PAUSE FuzzPaidGroupReplay/seed#7
+=== RUN   FuzzPaidGroupReplay/seed#8
+=== PAUSE FuzzPaidGroupReplay/seed#8
+=== RUN   FuzzPaidGroupReplay/seed#9
+=== PAUSE FuzzPaidGroupReplay/seed#9
+=== RUN   FuzzPaidGroupReplay/seed#10
+=== PAUSE FuzzPaidGroupReplay/seed#10
+=== RUN   FuzzPaidGroupReplay/seed#11
+=== PAUSE FuzzPaidGroupReplay/seed#11
+=== CONT  FuzzPaidGroupReplay/seed#0
+=== CONT  FuzzPaidGroupReplay/seed#6
+=== CONT  FuzzPaidGroupReplay/seed#9
+=== CONT  FuzzPaidGroupReplay/seed#11
+=== CONT  FuzzPaidGroupReplay/seed#3
+=== CONT  FuzzPaidGroupReplay/seed#5
+=== CONT  FuzzPaidGroupReplay/seed#4
+=== CONT  FuzzPaidGroupReplay/seed#10
+=== CONT  FuzzPaidGroupReplay/seed#2
+=== CONT  FuzzPaidGroupReplay/seed#8
+=== CONT  FuzzPaidGroupReplay/seed#7
+=== CONT  FuzzPaidGroupReplay/seed#1
+--- PASS: FuzzPaidGroupReplay (0.45s)
+    --- PASS: FuzzPaidGroupReplay/seed#9 (0.00s)
+    --- PASS: FuzzPaidGroupReplay/seed#11 (0.00s)
+    --- PASS: FuzzPaidGroupReplay/seed#3 (0.00s)
+    --- PASS: FuzzPaidGroupReplay/seed#5 (0.00s)
+    --- PASS: FuzzPaidGroupReplay/seed#4 (0.00s)
+    --- PASS: FuzzPaidGroupReplay/seed#2 (0.00s)
+    --- PASS: FuzzPaidGroupReplay/seed#7 (0.00s)
+    --- PASS: FuzzPaidGroupReplay/seed#1 (0.00s)
+    --- PASS: FuzzPaidGroupReplay/seed#8 (0.22s)
+    --- PASS: FuzzPaidGroupReplay/seed#6 (0.23s)
+    --- PASS: FuzzPaidGroupReplay/seed#10 (0.23s)
+    --- PASS: FuzzPaidGroupReplay/seed#0 (0.23s)
+=== RUN   FuzzRegistrationGroupReplay
+=== RUN   FuzzRegistrationGroupReplay/seed#0
+=== PAUSE FuzzRegistrationGroupReplay/seed#0
+=== RUN   FuzzRegistrationGroupReplay/seed#1
+=== PAUSE FuzzRegistrationGroupReplay/seed#1
+=== RUN   FuzzRegistrationGroupReplay/seed#2
+=== PAUSE FuzzRegistrationGroupReplay/seed#2
+=== RUN   FuzzRegistrationGroupReplay/seed#3
+=== PAUSE FuzzRegistrationGroupReplay/seed#3
+=== RUN   FuzzRegistrationGroupReplay/seed#4
+=== PAUSE FuzzRegistrationGroupReplay/seed#4
+=== RUN   FuzzRegistrationGroupReplay/seed#5
+=== PAUSE FuzzRegistrationGroupReplay/seed#5
+=== RUN   FuzzRegistrationGroupReplay/seed#6
+=== PAUSE FuzzRegistrationGroupReplay/seed#6
+=== RUN   FuzzRegistrationGroupReplay/seed#7
+=== PAUSE FuzzRegistrationGroupReplay/seed#7
+=== RUN   FuzzRegistrationGroupReplay/seed#8
+=== PAUSE FuzzRegistrationGroupReplay/seed#8
+=== RUN   FuzzRegistrationGroupReplay/seed#9
+=== PAUSE FuzzRegistrationGroupReplay/seed#9
+=== RUN   FuzzRegistrationGroupReplay/seed#10
+=== PAUSE FuzzRegistrationGroupReplay/seed#10
+=== RUN   FuzzRegistrationGroupReplay/seed#11
+=== PAUSE FuzzRegistrationGroupReplay/seed#11
+=== RUN   FuzzRegistrationGroupReplay/seed#12
+=== PAUSE FuzzRegistrationGroupReplay/seed#12
+=== RUN   FuzzRegistrationGroupReplay/seed#13
+=== PAUSE FuzzRegistrationGroupReplay/seed#13
+=== RUN   FuzzRegistrationGroupReplay/seed#14
+=== PAUSE FuzzRegistrationGroupReplay/seed#14
+=== RUN   FuzzRegistrationGroupReplay/seed#15
+=== PAUSE FuzzRegistrationGroupReplay/seed#15
+=== RUN   FuzzRegistrationGroupReplay/seed#16
+=== PAUSE FuzzRegistrationGroupReplay/seed#16
+=== RUN   FuzzRegistrationGroupReplay/seed#17
+=== PAUSE FuzzRegistrationGroupReplay/seed#17
+=== RUN   FuzzRegistrationGroupReplay/seed#18
+=== PAUSE FuzzRegistrationGroupReplay/seed#18
+=== RUN   FuzzRegistrationGroupReplay/seed#19
+=== PAUSE FuzzRegistrationGroupReplay/seed#19
+=== RUN   FuzzRegistrationGroupReplay/seed#20
+=== PAUSE FuzzRegistrationGroupReplay/seed#20
+=== RUN   FuzzRegistrationGroupReplay/seed#21
+=== PAUSE FuzzRegistrationGroupReplay/seed#21
+=== RUN   FuzzRegistrationGroupReplay/seed#22
+=== PAUSE FuzzRegistrationGroupReplay/seed#22
+=== RUN   FuzzRegistrationGroupReplay/seed#23
+=== PAUSE FuzzRegistrationGroupReplay/seed#23
+=== CONT  FuzzRegistrationGroupReplay/seed#0
+=== CONT  FuzzRegistrationGroupReplay/seed#15
+=== CONT  FuzzRegistrationGroupReplay/seed#9
+=== CONT  FuzzRegistrationGroupReplay/seed#8
+=== CONT  FuzzRegistrationGroupReplay/seed#14
+=== CONT  FuzzRegistrationGroupReplay/seed#13
+=== CONT  FuzzRegistrationGroupReplay/seed#12
+=== CONT  FuzzRegistrationGroupReplay/seed#11
+=== CONT  FuzzRegistrationGroupReplay/seed#10
+=== CONT  FuzzRegistrationGroupReplay/seed#20
+=== CONT  FuzzRegistrationGroupReplay/seed#23
+=== CONT  FuzzRegistrationGroupReplay/seed#22
+=== CONT  FuzzRegistrationGroupReplay/seed#21
+=== CONT  FuzzRegistrationGroupReplay/seed#4
+=== CONT  FuzzRegistrationGroupReplay/seed#6
+=== CONT  FuzzRegistrationGroupReplay/seed#5
+=== CONT  FuzzRegistrationGroupReplay/seed#18
+=== CONT  FuzzRegistrationGroupReplay/seed#19
+=== CONT  FuzzRegistrationGroupReplay/seed#7
+=== CONT  FuzzRegistrationGroupReplay/seed#17
+=== CONT  FuzzRegistrationGroupReplay/seed#16
+=== CONT  FuzzRegistrationGroupReplay/seed#2
+=== CONT  FuzzRegistrationGroupReplay/seed#3
+=== CONT  FuzzRegistrationGroupReplay/seed#1
+--- PASS: FuzzRegistrationGroupReplay (0.65s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#9 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#20 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#14 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#13 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#22 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#12 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#4 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#23 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#6 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#11 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#5 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#18 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#10 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#7 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#15 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#3 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#21 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#1 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#2 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#19 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#17 (0.00s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#0 (0.14s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#8 (0.14s)
+    --- PASS: FuzzRegistrationGroupReplay/seed#16 (0.15s)
+=== RUN   FuzzPrivateGroupReplay
+=== RUN   FuzzPrivateGroupReplay/seed#0
+=== RUN   FuzzPrivateGroupReplay/seed#1
+=== RUN   FuzzPrivateGroupReplay/seed#2
+=== RUN   FuzzPrivateGroupReplay/seed#3
+=== RUN   FuzzPrivateGroupReplay/seed#4
+=== RUN   FuzzPrivateGroupReplay/seed#5
+=== RUN   FuzzPrivateGroupReplay/seed#6
+=== RUN   FuzzPrivateGroupReplay/seed#7
+=== RUN   FuzzPrivateGroupReplay/seed#8
+=== RUN   FuzzPrivateGroupReplay/seed#9
+=== RUN   FuzzPrivateGroupReplay/seed#10
+=== RUN   FuzzPrivateGroupReplay/seed#11
+=== RUN   FuzzPrivateGroupReplay/seed#12
+=== RUN   FuzzPrivateGroupReplay/seed#13
+=== RUN   FuzzPrivateGroupReplay/seed#14
+=== RUN   FuzzPrivateGroupReplay/seed#15
+=== RUN   FuzzPrivateGroupReplay/seed#16
+=== RUN   FuzzPrivateGroupReplay/seed#17
+=== RUN   FuzzPrivateGroupReplay/seed#18
+=== RUN   FuzzPrivateGroupReplay/seed#19
+--- PASS: FuzzPrivateGroupReplay (0.01s)
+    --- PASS: FuzzPrivateGroupReplay/seed#0 (0.00s)
+    --- PASS: FuzzPrivateGroupReplay/seed#1 (0.00s)
+    --- PASS: FuzzPrivateGroupReplay/seed#2 (0.00s)
+    --- PASS: FuzzPrivateGroupReplay/seed#3 (0.00s)
+    --- PASS: FuzzPrivateGroupReplay/seed#4 (0.00s)
+    --- PASS: FuzzPrivateGroupReplay/seed#5 (0.00s)
+    --- PASS: FuzzPrivateGroupReplay/seed#6 (0.00s)
+    --- PASS: FuzzPrivateGroupReplay/seed#7 (0.00s)
+    --- PASS: FuzzPrivateGroupReplay/seed#8 (0.00s)
+    --- PASS: FuzzPrivateGroupReplay/seed#9 (0.00s)
+    --- PASS: FuzzPrivateGroupReplay/seed#10 (0.00s)
+    --- PASS: FuzzPrivateGroupReplay/seed#11 (0.00s)
+    --- PASS: FuzzPrivateGroupReplay/seed#12 (0.00s)
+    --- PASS: FuzzPrivateGroupReplay/seed#13 (0.00s)
+    --- PASS: FuzzPrivateGroupReplay/seed#14 (0.00s)
+    --- PASS: FuzzPrivateGroupReplay/seed#15 (0.00s)
+    --- PASS: FuzzPrivateGroupReplay/seed#16 (0.00s)
+    --- PASS: FuzzPrivateGroupReplay/seed#17 (0.00s)
+    --- PASS: FuzzPrivateGroupReplay/seed#18 (0.00s)
+    --- PASS: FuzzPrivateGroupReplay/seed#19 (0.00s)
+=== RUN   FuzzReviewGroupReplay
+=== RUN   FuzzReviewGroupReplay/seed#0
+=== PAUSE FuzzReviewGroupReplay/seed#0
+=== RUN   FuzzReviewGroupReplay/seed#1
+=== PAUSE FuzzReviewGroupReplay/seed#1
+=== RUN   FuzzReviewGroupReplay/seed#2
+=== PAUSE FuzzReviewGroupReplay/seed#2
+=== RUN   FuzzReviewGroupReplay/seed#3
+=== PAUSE FuzzReviewGroupReplay/seed#3
+=== RUN   FuzzReviewGroupReplay/seed#4
+=== PAUSE FuzzReviewGroupReplay/seed#4
+=== RUN   FuzzReviewGroupReplay/seed#5
+=== PAUSE FuzzReviewGroupReplay/seed#5
+=== RUN   FuzzReviewGroupReplay/seed#6
+=== PAUSE FuzzReviewGroupReplay/seed#6
+=== CONT  FuzzReviewGroupReplay/seed#0
+=== CONT  FuzzReviewGroupReplay/seed#4
+=== CONT  FuzzReviewGroupReplay/seed#3
+=== CONT  FuzzReviewGroupReplay/seed#1
+=== CONT  FuzzReviewGroupReplay/seed#6
+=== CONT  FuzzReviewGroupReplay/seed#5
+=== CONT  FuzzReviewGroupReplay/seed#2
+--- PASS: FuzzReviewGroupReplay (0.33s)
+    --- PASS: FuzzReviewGroupReplay/seed#4 (0.00s)
+    --- PASS: FuzzReviewGroupReplay/seed#6 (0.00s)
+    --- PASS: FuzzReviewGroupReplay/seed#3 (0.00s)
+    --- PASS: FuzzReviewGroupReplay/seed#2 (0.00s)
+    --- PASS: FuzzReviewGroupReplay/seed#1 (0.01s)
+    --- PASS: FuzzReviewGroupReplay/seed#0 (0.20s)
+    --- PASS: FuzzReviewGroupReplay/seed#5 (0.20s)
+=== RUN   FuzzScopedGroupReplay
+=== RUN   FuzzScopedGroupReplay/seed#0
+=== PAUSE FuzzScopedGroupReplay/seed#0
+=== RUN   FuzzScopedGroupReplay/seed#1
+=== PAUSE FuzzScopedGroupReplay/seed#1
+=== RUN   FuzzScopedGroupReplay/seed#2
+=== PAUSE FuzzScopedGroupReplay/seed#2
+=== RUN   FuzzScopedGroupReplay/seed#3
+=== PAUSE FuzzScopedGroupReplay/seed#3
+=== RUN   FuzzScopedGroupReplay/seed#4
+=== PAUSE FuzzScopedGroupReplay/seed#4
+=== RUN   FuzzScopedGroupReplay/seed#5
+=== PAUSE FuzzScopedGroupReplay/seed#5
+=== RUN   FuzzScopedGroupReplay/seed#6
+=== PAUSE FuzzScopedGroupReplay/seed#6
+=== RUN   FuzzScopedGroupReplay/seed#7
+=== PAUSE FuzzScopedGroupReplay/seed#7
+=== RUN   FuzzScopedGroupReplay/seed#8
+=== PAUSE FuzzScopedGroupReplay/seed#8
+=== CONT  FuzzScopedGroupReplay/seed#0
+=== CONT  FuzzScopedGroupReplay/seed#5
+=== CONT  FuzzScopedGroupReplay/seed#4
+=== CONT  FuzzScopedGroupReplay/seed#8
+=== CONT  FuzzScopedGroupReplay/seed#1
+=== CONT  FuzzScopedGroupReplay/seed#3
+=== CONT  FuzzScopedGroupReplay/seed#7
+=== CONT  FuzzScopedGroupReplay/seed#2
+=== CONT  FuzzScopedGroupReplay/seed#6
+--- PASS: FuzzScopedGroupReplay (0.23s)
+    --- PASS: FuzzScopedGroupReplay/seed#4 (0.00s)
+    --- PASS: FuzzScopedGroupReplay/seed#5 (0.00s)
+    --- PASS: FuzzScopedGroupReplay/seed#1 (0.00s)
+    --- PASS: FuzzScopedGroupReplay/seed#8 (0.00s)
+    --- PASS: FuzzScopedGroupReplay/seed#3 (0.00s)
+    --- PASS: FuzzScopedGroupReplay/seed#2 (0.00s)
+    --- PASS: FuzzScopedGroupReplay/seed#0 (0.19s)
+    --- PASS: FuzzScopedGroupReplay/seed#7 (0.19s)
+    --- PASS: FuzzScopedGroupReplay/seed#6 (0.20s)
+PASS
+ok  	github.com/Darius-PJ/dwarf-harness/internal/core/agents	10.034s

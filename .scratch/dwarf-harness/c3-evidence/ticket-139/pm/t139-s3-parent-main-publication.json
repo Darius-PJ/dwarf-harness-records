@@ -1,0 +1,55 @@
+{
+  "sha": "8a17ec1ed2617ca2a4e5203479f75f363b359970",
+  "previousMain": "67d9636d6c70ba8cab2810bcec81c31a6c5df914",
+  "approvedReviewBinding": "local://t140-s4-review-binding.json",
+  "localProof": "local://t140-s4-final-evidence-receipt.json",
+  "fuzzProof": "local://t140-s4-fuzz-results.json",
+  "hostedProof": "local://t140-s4-hosted-success.json",
+  "ticketClosed": false,
+  "numericalAcceptance": false,
+  "newCIStartedByMainPush": false,
+  "privateRecordsUnchanged": "3234b90d0ee4d6457b7b313e6c1656e2c6fe0680",
+  "fastForward": {
+    "command": [
+      "git",
+      "-C",
+      "C:/Users/darius.jones/Documents/PROJECTS/dwarf-harness",
+      "merge",
+      "--ff-only",
+      "8a17ec1ed2617ca2a4e5203479f75f363b359970"
+    ],
+    "exit": 0,
+    "stdout": "Updating 67d9636..8a17ec1\nFast-forward\n internal/core/agents/doc.go                 |  38 ++--\n internal/core/agents/history_index.go       |  43 ++++-\n internal/core/agents/history_index_test.go  | 261 +++++++++++++++++++++++++++\n internal/core/agents/recovery_test.go       |  10 +-\n internal/core/agents/replay.go              | 269 +++++++++++++++++-----------\n internal/core/agents/review_execute.go      |  14 +-\n internal/core/agents/scoped_execute.go      |  16 +-\n internal/core/agents/scoped_receipt_test.go | 216 ++++++++++++++++++++++\n internal/core/agents/scoped_state.go        |  13 ++\n 9 files changed, 749 insertions(+), 131 deletions(-)\n",
+    "stderr": "",
+    "reflog": "8a17ec1ed2617ca2a4e5203479f75f363b359970 main@{2026-10-29 01:36:44 -0400} merge 8a17ec1ed2617ca2a4e5203479f75f363b359970: Fast-forward"
+  },
+  "push": {
+    "command": [
+      "git",
+      "-C",
+      "C:/Users/darius.jones/Documents/PROJECTS/dwarf-harness",
+      "push",
+      "origin",
+      "main"
+    ],
+    "exit": 0,
+    "stdout": "",
+    "stderr": "pre-push scan refs/heads/main: 2 commit(s), 753 added line(s): ok\nTo github.com:Darius-PJ/dwarf-harness.git\n   67d9636..8a17ec1  main -> main\n",
+    "finished": "2026-10-29T01:36:46.971725-04:00"
+  },
+  "remote": {
+    "command": [
+      "git",
+      "-C",
+      "C:/Users/darius.jones/Documents/PROJECTS/dwarf-harness",
+      "ls-remote",
+      "origin",
+      "refs/heads/main"
+    ],
+    "exit": 0,
+    "stdout": "8a17ec1ed2617ca2a4e5203479f75f363b359970\trefs/heads/main\n",
+    "stderr": "",
+    "observed": "2026-10-29T01:36:47.624689-04:00"
+  },
+  "status": "exact-reviewed-checked-source-fast-forwarded-guarded-push-remote-confirmed-numeric-pending"
+}

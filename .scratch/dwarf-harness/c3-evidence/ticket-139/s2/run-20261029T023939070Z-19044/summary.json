@@ -1,0 +1,20 @@
+{
+    "status":  "complete",
+    "root":  "C:/Users/darius.jones/worktrees/dwarf-harness/139-registration",
+    "evidence":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044",
+    "startedUTC":  "2026-10-29T02:39:39.1197691Z",
+    "finishedUTC":  "2026-10-29T02:49:34.4086841Z",
+    "parentDeadline":  "disabled (tool timeout=0); every native child has its own deadline",
+    "error":  null,
+    "commands":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044\\commands.json",
+    "ruleBreaks":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044\\rule-breaks.json",
+    "finalHashes":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\run-20261029T023939070Z-19044\\final-hashes.json",
+    "deletedOrRenamed":  [
+                             {
+                                 "name":  "TestRegistrationInstalledBeforeAck",
+                                 "reason":  "New unexecuted test removed with PM approval: pins query/I/O behavior instead of observable contract",
+                                 "archive":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t139-s2-evidence\\removed-TestRegistrationInstalledBeforeAck.txt"
+                             }
+                         ],
+    "exitCode":  0
+}
