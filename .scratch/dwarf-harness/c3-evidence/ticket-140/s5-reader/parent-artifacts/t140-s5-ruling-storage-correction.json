@@ -1,0 +1,12 @@
+{
+  "status": "ORIGINAL_ASSISTANT_SUBSTRING_EXACT_BYTES_RESTORED;NO_RULING_OR_POLICY_CHANGE",
+  "sourceMessage": "1d7d1fb9",
+  "sourceTranscript": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22\\RuleT140S5Astra.jsonl",
+  "originalSHA256": "ef2dfa6612bf2114dcb3229d474d841389df749d868fdb1dfb9bfb36ca702611",
+  "originalBytes": 36618,
+  "historicalCRLFCapture": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22\\local\\t140-s5-design-ruling-storage-crlf.json",
+  "historicalSHA256": "13c54640efb95aa90c40f2834fb50a105b51af22761e031a1a9917a3ca25399d",
+  "identityProof": "StoredcaptureCRLF->LFisEXACTactualassistantJSONsubstring;noJSONreserializationorwordchange",
+  "textToolLimitation": "Explicittool.writealsopreservedexistingCRLFstyle;binarysnapshotretentionusedfororiginalUTF8bytes",
+  "technicalApprovalUnchanged": true
+}

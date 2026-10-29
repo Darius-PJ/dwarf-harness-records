@@ -1,0 +1,22 @@
+{
+  "stage": "m1-prefix-red",
+  "purpose": "OneexactnamedReadersemanticoracle;expectednonzeroisNOTbyitselfredproof",
+  "commands": [
+    {
+      "name": "m1-prefix-red",
+      "executable": "go",
+      "argv": [
+        "test",
+        "-count=1",
+        "-timeout=19m",
+        "-v",
+        "./contract/ledger",
+        "-run",
+        "^TestReaderCheckpointChangedPrefix$/^framing$"
+      ],
+      "timeoutSeconds": 1200,
+      "expectedExit": 1,
+      "requireEmptyOutput": false
+    }
+  ]
+}

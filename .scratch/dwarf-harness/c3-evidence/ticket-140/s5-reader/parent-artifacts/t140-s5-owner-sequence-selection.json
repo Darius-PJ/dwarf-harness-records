@@ -1,0 +1,22 @@
+{
+  "at": "2026-10-29T16:01:25.221229-04:00",
+  "actualUserSelection": "Allow two milestones in S5",
+  "originator": "adopted",
+  "source": "Actualfunctions.asktoolresultforquestiont140_c1_freeze_then_c3_one_final_slice;assistant-writtenoptionpickedbyowner",
+  "questionExactlyPresented": "Do you authorize a Ticket140-only exception to the completion-unit and slice-accounting rules of D125/D155: within the one fifth-and-final S5 assignment, first complete the C1 Reader capability as an independently evidenced and reviewed contract increment, freeze it under D125, and land its own successful exact-SHA hosted commit and freeze record on main before any C3 consumer code is written; then continue the same bounded assignment with C3 consumption and obtain a separate final combined review and exact-SHA hosted result? This explicitly permits two completion/integration milestones inside that one counted slice. It does not permit an upfront or retrospective freeze, a sixth slice, consumer coding before the integrated freeze, an API/safety waiver, or changes to the seven bounds, cache cap or traffic.",
+  "rulingSHA256": "ef2dfa6612bf2114dcb3229d474d841389df749d868fdb1dfb9bfb36ca702611",
+  "briefSHA256": "93bf8a13f847d03626672caae2a77f35e97ddfcc968b63568dd4ea12bc81cc55",
+  "D155ExistingCountAuthority": "63f202643a4c6e45397b3c2cad210d6914296d07",
+  "scope": "Ticket140ONLY/TWOcompletion-main-integrationmilestonesinsideONEfifthFINALS5;completed/evidenced/reviewed/frozenC1+ownexactSHAhostedmainBEFOREANYC3code;thenCorecompletion+finalcombinedreview/ownhosted/newsubjectALL7bounds",
+  "doesNotPermit": [
+    "Upfrontorretrospectivefreeze",
+    "Sixthslice",
+    "ConsumerimplementationornewAPIconsumertestsbeforeintegratedC1freeze",
+    "API/safetywaiver",
+    "Changedsevenbounds/cachecap/traffic",
+    "RelabelingfailedS4cohortorCPUdiagnosticassuccess"
+  ],
+  "approvalReceived": true,
+  "decisionNotYetWritten": true,
+  "implementationAssigned": false
+}

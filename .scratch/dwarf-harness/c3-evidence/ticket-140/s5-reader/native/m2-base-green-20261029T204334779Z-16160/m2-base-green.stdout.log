@@ -1,0 +1,8 @@
+=== RUN   TestReaderCheckpointAnchorAndFallback
+=== RUN   TestReaderCheckpointAnchorAndFallback/changed_predecessor
+=== PAUSE TestReaderCheckpointAnchorAndFallback/changed_predecessor
+=== CONT  TestReaderCheckpointAnchorAndFallback/changed_predecessor
+--- PASS: TestReaderCheckpointAnchorAndFallback (0.00s)
+    --- PASS: TestReaderCheckpointAnchorAndFallback/changed_predecessor (0.01s)
+PASS
+ok  	github.com/Darius-PJ/dwarf-harness/contract/ledger	1.084s

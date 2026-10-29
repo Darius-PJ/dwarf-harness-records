@@ -1,0 +1,72 @@
+{
+  "started": "2026-10-29T16:03:39.968139-04:00",
+  "repository": "private records",
+  "scope": "D156actualowner-adoptedTicket140two-milestonecompletion/accountingexceptiononly;no implementation/freeze/publicCI",
+  "commands": [
+    {
+      "label": "commit",
+      "args": [
+        "commit",
+        "--only",
+        "-m",
+        "docs(records): allow freeze-first final acknowledgement slice",
+        "--",
+        "docs/DECISIONS.md"
+      ],
+      "started": "2026-10-29T16:03:39.997150-04:00",
+      "finished": "2026-10-29T16:03:40.104193-04:00",
+      "exit": 0,
+      "stdout": "[main b63d618] docs(records): allow freeze-first final acknowledgement slice\n 1 file changed, 14 insertions(+)\n",
+      "stderr": ""
+    },
+    {
+      "label": "commit_sha",
+      "args": [
+        "rev-parse",
+        "HEAD"
+      ],
+      "started": "2026-10-29T16:03:40.104324-04:00",
+      "finished": "2026-10-29T16:03:40.131078-04:00",
+      "exit": 0,
+      "stdout": "b63d618c76b864ec08855bd78eadcf3e27cf7588\n",
+      "stderr": ""
+    },
+    {
+      "label": "push",
+      "args": [
+        "push",
+        "origin",
+        "main"
+      ],
+      "started": "2026-10-29T16:03:40.131181-04:00",
+      "finished": "2026-10-29T16:03:41.930968-04:00",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "pre-push scan refs/heads/main: 1 commit(s), 16 added line(s): ok\nTo github.com:Darius-PJ/dwarf-harness-records.git\n   63f2026..b63d618  main -> main\n"
+    },
+    {
+      "label": "ls_remote",
+      "args": [
+        "ls-remote",
+        "origin",
+        "refs/heads/main"
+      ],
+      "started": "2026-10-29T16:03:41.931066-04:00",
+      "finished": "2026-10-29T16:03:42.582495-04:00",
+      "exit": 0,
+      "stdout": "b63d618c76b864ec08855bd78eadcf3e27cf7588\trefs/heads/main\n",
+      "stderr": ""
+    }
+  ],
+  "base": "63f202643a4c6e45397b3c2cad210d6914296d07",
+  "commit": "b63d618c76b864ec08855bd78eadcf3e27cf7588",
+  "remote": "b63d618c76b864ec08855bd78eadcf3e27cf7588",
+  "finished": "2026-10-29T16:03:42.582623-04:00",
+  "guard": "Actualprivatepre-pushrecords-modeguardoutputretained;nooverride/bypass",
+  "projectCIStarted": false,
+  "ownerSelection": "Allow two milestones in S5",
+  "originator": "adopted",
+  "nextD": "D157unallocated;futureC1completedfreezeNOTyetrecorded",
+  "B34": "Allocated139/DRAFTnotapplied",
+  "nextFreeB": "B35unallocated"
+}

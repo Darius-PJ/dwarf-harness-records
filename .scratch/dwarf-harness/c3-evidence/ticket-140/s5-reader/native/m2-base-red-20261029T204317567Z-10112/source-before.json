@@ -1,0 +1,22 @@
+{
+    "contract/ledger/reader.go":  {
+                                      "sha256":  "700029eee10ecf6b39cb1a270d1458d8a645a01e373fba39a6134e97e0765e5a",
+                                      "bytes":  13249
+                                  },
+    "contract/ledger/scan.go":  {
+                                    "sha256":  "94652a4384242aba11592beb8667cf65a90865ac3fdbfad60297bedb9732e1cb",
+                                    "bytes":  13675
+                                },
+    "contract/ledger/doc.go":  {
+                                   "sha256":  "b078d7f534f5ebfd7fcb1c08d518a8c3e355abb8709e649ae9aef2c9993c29eb",
+                                   "bytes":  171531
+                               },
+    "contract/ledger/reader_test.go":  {
+                                           "sha256":  "710772f66538aac26444f1ae4661d6df1f683f5a23d1a68336a7551bdad1e28d",
+                                           "bytes":  23797
+                                       },
+    "contract/ledger/fuzz_test.go":  {
+                                         "sha256":  "7b5c0fac7138c779ac41e5f42a9deb5ef9274bd7c462b28ee45df545734f9488",
+                                         "bytes":  20854
+                                     }
+}

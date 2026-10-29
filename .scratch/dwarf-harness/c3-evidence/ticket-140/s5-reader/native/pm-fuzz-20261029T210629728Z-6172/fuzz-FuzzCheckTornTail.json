@@ -1,0 +1,37 @@
+{
+    "name":  "fuzz-FuzzCheckTornTail",
+    "executable":  "C:/Program Files/Go/bin/go.exe",
+    "argv":  [
+                 "test",
+                 "-count=1",
+                 "-timeout=19m",
+                 "./contract/ledger",
+                 "-run",
+                 "^$",
+                 "-fuzz",
+                 "^FuzzCheckTornTail$",
+                 "-fuzztime=120s",
+                 "-parallel=1"
+             ],
+    "cwd":  "C:/Users/darius.jones/worktrees/dwarf-harness/140-final-ack",
+    "environmentOverrides":  {
+                                 "GOTOOLCHAIN":  "local",
+                                 "GOFLAGS":  "",
+                                 "GOROOT":  "C:/Program Files/Go",
+                                 "GOOS":  "windows",
+                                 "GOARCH":  "amd64",
+                                 "CGO_ENABLED":  "0"
+                             },
+    "timeoutSeconds":  1200,
+    "startedUTC":  "2026-10-29T21:10:48.9141846Z",
+    "finishedUTC":  "2026-10-29T21:12:52.7497804Z",
+    "elapsedSeconds":  123.8294797,
+    "exitCode":  0,
+    "timedOut":  false,
+    "reaped":  true,
+    "streamsComplete":  true,
+    "error":  null,
+    "stdout":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\pm-fuzz-20261029T210629728Z-6172\\fuzz-FuzzCheckTornTail.stdout.log",
+    "stderr":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\pm-fuzz-20261029T210629728Z-6172\\fuzz-FuzzCheckTornTail.stderr.log",
+    "metadata":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\pm-fuzz-20261029T210629728Z-6172\\fuzz-FuzzCheckTornTail.json"
+}

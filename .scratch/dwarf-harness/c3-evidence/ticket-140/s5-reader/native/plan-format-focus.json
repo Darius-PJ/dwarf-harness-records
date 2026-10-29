@@ -1,0 +1,53 @@
+{
+  "stage": "format-focus",
+  "purpose": "C1SOURCEFROZEN/finiteM1ONLY/NOCore/NOplainyet",
+  "preformatManifest": "local://t140-s5-c1-preformat-manifest.json",
+  "commands": [
+    {
+      "name": "01-gofmt-write",
+      "executable": "gofmt",
+      "argv": [
+        "-w",
+        "contract/ledger/reader.go",
+        "contract/ledger/scan.go",
+        "contract/ledger/doc.go",
+        "contract/ledger/reader_test.go",
+        "contract/ledger/fuzz_test.go"
+      ],
+      "timeoutSeconds": 120,
+      "expectedExit": 0,
+      "requireEmptyOutput": false
+    },
+    {
+      "name": "02-gofmt-list",
+      "executable": "gofmt",
+      "argv": [
+        "-l",
+        "contract/ledger/reader.go",
+        "contract/ledger/scan.go",
+        "contract/ledger/doc.go",
+        "contract/ledger/reader_test.go",
+        "contract/ledger/fuzz_test.go"
+      ],
+      "timeoutSeconds": 120,
+      "expectedExit": 0,
+      "requireEmptyOutput": true
+    },
+    {
+      "name": "03-reader-golden-focus",
+      "executable": "go",
+      "argv": [
+        "test",
+        "-count=1",
+        "-timeout=19m",
+        "-v",
+        "./contract/ledger",
+        "-run",
+        "^(TestReader.*|TestReadingHasNoEffects|TestGolden.*)$"
+      ],
+      "timeoutSeconds": 1200,
+      "expectedExit": 0,
+      "requireEmptyOutput": false
+    }
+  ]
+}

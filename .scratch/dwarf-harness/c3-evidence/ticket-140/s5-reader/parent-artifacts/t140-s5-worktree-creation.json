@@ -1,0 +1,12 @@
+{
+  "at": "2026-10-29T16:07:26.754136-04:00",
+  "worktree": "C:/Users/darius.jones/worktrees/dwarf-harness/140-final-ack",
+  "branch": "build/140-final-ack",
+  "base": "84d0ced9446168777c7b7bfa3382974977bf27ed",
+  "actualStdout": "HEAD is now at 84d0ced docs(agents): close registration build (B34)\n",
+  "actualStderr": "Preparing worktree (new branch 'build/140-final-ack')\n",
+  "ownerAuthority": "b63d618c76b864ec08855bd78eadcf3e27cf7588",
+  "oneAssignmentTwoMilestones": true,
+  "C3HardBarrier": "NOTRELEASED;requirescompletedC1freeze+ownreview/hosted/mainfirst",
+  "codeAssigned": false
+}

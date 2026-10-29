@@ -1,0 +1,88 @@
+{
+  "subject": "8a17ec1ed2617ca2a4e5203479f75f363b359970",
+  "source": "Actualexistinggoplsreferencequeries,noCLI/setup/checkcommands",
+  "refs": {
+    "ledger.lastRecord": {
+      "text": "Found 2 reference(s):\n  contract/ledger/reader.go:99:6\n    98: // starts in and returns the chain position after it.\n    99: func lastRecord(dir string, seg segment, colony uuid.UUID) (Chain, error) {\n    100: \tf, err := os.Open(filepath.Join(dir, seg.name))\n  contract/ledger/reader.go:77:19\n    76: \tif k > 0 {\n    77: \t\tif start, err = lastRecord(logDir, segs[k-1], opts.Colony); err != nil {\n    78: \t\t\treturn nil, err",
+      "details": {
+        "serverName": "gopls",
+        "action": "references",
+        "success": true,
+        "request": {
+          "action": "references",
+          "file": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\contract\\ledger\\reader.go",
+          "line": 99,
+          "symbol": "lastRecord"
+        }
+      }
+    },
+    "ledger.Reader": {
+      "text": "Found 7 reference(s):\n  contract/ledger/reader.go:48:6\n    47: // record it reads. It is read-only and not safe for concurrent use.\n    48: type Reader struct {\n    49: \topts   ReadOptions\n  contract/ledger/reader.go:58:52\n    57: // of the segment before it.\n    58: func OpenReader(logDir string, opts ReadOptions) (*Reader, error) {\n    59: \tif !isV7(opts.Colony) {\n  contract/ledger/reader.go:90:10\n    89: \t}\n    90: \treturn &Reader{\n    91: \t\topts:   opts,\n  contract/ledger/reader.go:154:10\n    153: // Through. Errors are final.\n    154: func (r *Reader) Next() (Commit, error) {\n    155: \tif r.err != nil {\n  contract/ledger/reader.go:166:10\n    165: \n    166: func (r *Reader) next() (Commit, error) {\n    167: \tfor {\n  contract/ledger/reader.go:212:10\n    211: // persist it as its next After.\n    212: func (r *Reader) Cursor() uint64 { return r.cursor }\n    213: \n  contract/ledger/reader.go:216:10\n    215: // wrapping os.ErrClosed, unless it had already failed or reached the end.\n    216: func (r *Reader) Close() error {\n    217: \tr.s.close()",
+      "details": {
+        "serverName": "gopls",
+        "action": "references",
+        "success": true,
+        "request": {
+          "action": "references",
+          "file": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\contract\\ledger\\reader.go",
+          "line": 58,
+          "symbol": "Reader"
+        }
+      }
+    },
+    "ledger.newScanner": {
+      "text": "Found 3 reference(s):\n  contract/ledger/scan.go:72:6\n    71: \n    72: func newScanner(dir string, segs []segment, colony uuid.UUID, start Chain, tail bool, keep func(*Envelope) bool) *scanner {\n    73: \treturn &scanner{\n  contract/ledger/reader.go:92:11\n    91: \t\topts:   opts,\n    92: \t\ts:      newScanner(logDir, segs[k:], opts.Colony, start, opts.Through == ToEnd, keep),\n    93: \t\tcursor: opts.After,\n  contract/ledger/scan.go:36:7\n    35: \t}\n    36: \ts := newScanner(logDir, segs, colony, Genesis(), true, nil)\n    37: \tdefer s.close()",
+      "details": {
+        "serverName": "gopls",
+        "action": "references",
+        "success": true,
+        "request": {
+          "action": "references",
+          "file": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\contract\\ledger\\scan.go",
+          "line": 72,
+          "symbol": "newScanner"
+        }
+      }
+    },
+    "ledger.scanner.close": {
+      "text": "Found 6 reference(s):\n  contract/ledger/scan.go:82:19\n    81: \n    82: func (s *scanner) close() {\n    83: \tif s.f != nil {\n  contract/ledger/reader.go:161:7\n    160: \t\tr.err = err\n    161: \t\tr.s.close()\n    162: \t}\n  contract/ledger/reader.go:217:6\n    216: func (r *Reader) Close() error {\n    217: \tr.s.close()\n    218: \tif r.err == nil {\n  contract/ledger/scan.go:37:10\n    36: \ts := newScanner(logDir, segs, colony, Genesis(), true, nil)\n    37: \tdefer s.close()\n    38: \tfor {\n  contract/ledger/scan.go:104:5\n    103: \t\ts.eof = true\n    104: \t\ts.close()\n    105: \t}\n  contract/ledger/scan.go:134:6\n    133: \t\t\t}\n    134: \t\t\ts.close()\n    135: \t\t\ts.i++",
+      "details": {
+        "serverName": "gopls",
+        "action": "references",
+        "success": true,
+        "request": {
+          "action": "references",
+          "file": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\contract\\ledger\\scan.go",
+          "line": 82,
+          "symbol": "close"
+        }
+      }
+    },
+    "ledger.lineReader.reset": {
+      "text": "Found 2 reference(s):\n  contract/ledger/scan.go:376:23\n    375: \n    376: func (lr *lineReader) reset(r io.Reader) {\n    377: \tif lr.br == nil {\n  contract/ledger/scan.go:196:7\n    195: \ts.f = f\n    196: \ts.lr.reset(f)\n    197: \ts.end = 0",
+      "details": {
+        "serverName": "gopls",
+        "action": "references",
+        "success": true,
+        "request": {
+          "action": "references",
+          "file": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\contract\\ledger\\scan.go",
+          "line": 376,
+          "symbol": "reset"
+        }
+      }
+    }
+  },
+  "scannerSymbols": {
+    "text": "Symbols in contract/ledger/scan.go:\n\ud83d\udcc1 CheckResult struct{...} @ line 16\n  \u2022 Last Chain @ line 17\n  \u2022 Segment string @ line 18\n  \u2022 Size int64 @ line 19\n  \u2022 TornBytes int64 @ line 20\n\u27f2 Check func(logDir string, colony uuid.UUID) (CheckResult, error) @ line 28\n\ud83d\udcc1 scanner struct{...} @ line 55\n  \u2022 dir string @ line 56\n  \u2022 segs []segment @ line 57\n  \u2022 i int @ line 58\n  \u2022 f *os.File @ line 59\n  \u2022 lr lineReader @ line 60\n  \u2022 v verifier @ line 61\n  \u2022 tail bool @ line 62\n  \u2022 keep func(*Envelope) bool @ line 63\n  \u2022 compact bytes.Buffer @ line 64\n  \u2022 eof bool @ line 65\n  \u2022 end int64 @ line 67\n  \u2022 torn int64 @ line 68\n  \u2022 cur Commit @ line 69\n\u27f2 newScanner func(dir string, segs []segment, colony uuid.UUID, start Chain, tail bool, keep func(*Envelope) bool) *scanner @ line 72\n\u27f2 (*scanner).close func() @ line 82\n\u27f2 (*scanner).corrupt func(off int64, reason string) error @ line 89\n\u27f2 (*scanner).next func() (Commit, error) @ line 97\n\u27f2 (*scanner).scan func() (Commit, error) @ line 109\n\u27f2 (*scanner).open func() error @ line 186\n\u27f2 (*scanner).tornTail func() error @ line 203\n\u27f2 checkTorn func(r []byte, seg string, base int64, last Chain, colony uuid.UUID, compact *bytes.Buffer) error @ line 223\n\u27f2 lineError func(seg string, off int64, err error) error @ line 297\n\ud83d\udcc1 verifier struct{...} @ line 306\n  \u2022 colony uuid.UUID @ line 307\n  \u2022 done Chain @ line 308\n  \u2022 cur Chain @ line 309\n  \u2022 id uuid.UUID @ line 312\n  \u2022 count int @ line 313\n  \u2022 next int @ line 314\n  \u2022 held bool @ line 315\n  \u2022 size int @ line 316\n\u27f2 (*verifier).accept func(e *Envelope, hash string, n int) (bool, string) @ line 321\n\u2022 errPartial @ line 365\n\u2022 errLong @ line 366\n\ud83d\udcc1 lineReader struct{...} @ line 370\n  \u2022 br *bufio.Reader @ line 371\n  \u2022 off int64 @ line 372\n  \u2022 buf []byte @ line 373\n\u27f2 (*lineReader).reset func(r io.Reader) @ line 376\n\u27f2 (*lineReader).next func() (line []byte, off int64, err error) @ line 388",
+    "details": {
+      "serverName": "gopls",
+      "action": "symbols",
+      "success": true,
+      "request": {
+        "action": "symbols",
+        "file": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\contract\\ledger\\scan.go"
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "status": "NINE_IMMUTABLE_AUTHORITY_COPIES;NOT_A_COMPLETED_FREEZE_OR_C3RELEASE",
+  "copies": [
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22\\local\\t140-s5-design-brief.md",
+      "privatePath": ".scratch/dwarf-harness/c3-evidence/ticket-140-s5-design-brief.md",
+      "sha256": "93bf8a13f847d03626672caae2a77f35e97ddfcc968b63568dd4ea12bc81cc55",
+      "bytes": 62257,
+      "verbatim": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22\\local\\t140-s5-design-ruling.json",
+      "privatePath": ".scratch/dwarf-harness/c3-evidence/ticket-140-s5-design-ruling.json",
+      "sha256": "ef2dfa6612bf2114dcb3229d474d841389df749d868fdb1dfb9bfb36ca702611",
+      "bytes": 36618,
+      "verbatim": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22\\local\\t140-s5-design-ruling-binding.json",
+      "privatePath": ".scratch/dwarf-harness/c3-evidence/ticket-140-s5-design-ruling-binding.json",
+      "sha256": "d568b4d2f515e1f469b434f6230cc2b3119cee6d05bdc649513fcf60e8c59c32",
+      "bytes": 1312,
+      "verbatim": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22\\local\\t140-s5-owner-sequence-question.json",
+      "privatePath": ".scratch/dwarf-harness/c3-evidence/ticket-140-s5-owner-sequence-question.json",
+      "sha256": "74e0ccb899e7f775d075f1cfbef4ded361dba86982895c1d27e6c7134ec71d26",
+      "bytes": 2154,
+      "verbatim": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22\\local\\t140-s5-owner-sequence-selection.json",
+      "privatePath": ".scratch/dwarf-harness/c3-evidence/ticket-140-s5-owner-sequence-selection.json",
+      "sha256": "97dc5472c0f2a707a1202f1510ef2d8eed8c88775c4b27a571b1d9b662f09092",
+      "bytes": 1987,
+      "verbatim": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22\\local\\t140-d156-publication.json",
+      "privatePath": ".scratch/dwarf-harness/c3-evidence/ticket-140-d156-publication.json",
+      "sha256": "db1693516a9b38c98cc10ac155872a075e3741aaef859da7c9f1d2e9ff143a7b",
+      "bytes": 2446,
+      "verbatim": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22\\local\\t140-s5-ruled-assignment-authority.json",
+      "privatePath": ".scratch/dwarf-harness/c3-evidence/ticket-140-s5-ruled-assignment-authority.json",
+      "sha256": "7cf9e033d06b7dbee1394f3496f58fa528bf1887448c82d61de19becfbc45d18",
+      "bytes": 16136,
+      "verbatim": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22\\local\\t140-d155-publication.json",
+      "privatePath": ".scratch/dwarf-harness/c3-evidence/ticket-140-d155-publication.json",
+      "sha256": "2e66d64607f9f6291df26901e54c4fbbe81121dc275901b93c2cc124d5544460",
+      "bytes": 3440,
+      "verbatim": true
+    },
+    {
+      "sourceCommit": "b63d618c76b864ec08855bd78eadcf3e27cf7588",
+      "source": "docs/DECISIONS.md:3090-3116",
+      "privatePath": ".scratch/dwarf-harness/c3-evidence/ticket-140-s5-d155-d156.md",
+      "sha256": "1f2d04dfd0146bbd1f206c1d5b120f3e534c837a191c72cce35057c14145c5da",
+      "bytes": 7297,
+      "verbatim": true
+    }
+  ],
+  "storageCorrection": {
+    "status": "ORIGINAL_ASSISTANT_SUBSTRING_EXACT_BYTES_RESTORED;NO_RULING_OR_POLICY_CHANGE",
+    "sourceMessage": "1d7d1fb9",
+    "sourceTranscript": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22\\RuleT140S5Astra.jsonl",
+    "originalSHA256": "ef2dfa6612bf2114dcb3229d474d841389df749d868fdb1dfb9bfb36ca702611",
+    "originalBytes": 36618,
+    "historicalCRLFCapture": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22\\local\\t140-s5-design-ruling-storage-crlf.json",
+    "historicalSHA256": "13c54640efb95aa90c40f2834fb50a105b51af22761e031a1a9917a3ca25399d",
+    "identityProof": "StoredcaptureCRLF->LFisEXACTactualassistantJSONsubstring;noJSONreserializationorwordchange",
+    "textToolLimitation": "Explicittool.writealsopreservedexistingCRLFstyle;binarysnapshotretentionusedfororiginalUTF8bytes",
+    "technicalApprovalUnchanged": true
+  },
+  "publication": "FutureC1privatebinding;notyetpublished"
+}

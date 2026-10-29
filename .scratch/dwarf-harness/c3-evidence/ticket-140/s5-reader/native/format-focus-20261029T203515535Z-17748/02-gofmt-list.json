@@ -1,0 +1,33 @@
+{
+    "name":  "02-gofmt-list",
+    "executable":  "C:/Program Files/Go/bin/gofmt.exe",
+    "argv":  [
+                 "-l",
+                 "contract/ledger/reader.go",
+                 "contract/ledger/scan.go",
+                 "contract/ledger/doc.go",
+                 "contract/ledger/reader_test.go",
+                 "contract/ledger/fuzz_test.go"
+             ],
+    "cwd":  "C:/Users/darius.jones/worktrees/dwarf-harness/140-final-ack",
+    "environmentOverrides":  {
+                                 "GOTOOLCHAIN":  "local",
+                                 "GOFLAGS":  "",
+                                 "GOROOT":  "C:/Program Files/Go",
+                                 "GOOS":  "windows",
+                                 "GOARCH":  "amd64",
+                                 "CGO_ENABLED":  "0"
+                             },
+    "timeoutSeconds":  120,
+    "startedUTC":  "2026-10-29T20:35:15.8605914Z",
+    "finishedUTC":  "2026-10-29T20:35:15.9043867Z",
+    "elapsedSeconds":  0.042466199999999996,
+    "exitCode":  0,
+    "timedOut":  false,
+    "reaped":  true,
+    "streamsComplete":  true,
+    "error":  null,
+    "stdout":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\format-focus-20261029T203515535Z-17748\\02-gofmt-list.stdout.log",
+    "stderr":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\format-focus-20261029T203515535Z-17748\\02-gofmt-list.stderr.log",
+    "metadata":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\format-focus-20261029T203515535Z-17748\\02-gofmt-list.json"
+}

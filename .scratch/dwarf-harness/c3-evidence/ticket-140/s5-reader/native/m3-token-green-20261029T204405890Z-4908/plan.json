@@ -1,0 +1,22 @@
+{
+    "stage":  "m3-token-green",
+    "purpose":  "OneexactnamedReadersemanticoracle;expectednonzeroisNOTbyitselfredproof",
+    "commands":  [
+                     {
+                         "name":  "m3-token-green",
+                         "executable":  "go",
+                         "argv":  [
+                                      "test",
+                                      "-count=1",
+                                      "-timeout=19m",
+                                      "-v",
+                                      "./contract/ledger",
+                                      "-run",
+                                      "^TestReaderCheckpointAnchorAndFallback$/^damaged_afterHash$"
+                                  ],
+                         "timeoutSeconds":  1200,
+                         "expectedExit":  0,
+                         "requireEmptyOutput":  false
+                     }
+                 ]
+}

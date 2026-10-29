@@ -1,0 +1,445 @@
+{
+  "measuredSubject": "8a17ec1ed2617ca2a4e5203479f75f363b359970",
+  "requestPath": "C:/Users/darius.jones/.omp/agent/sessions/-Documents-PROJECTS-dwarf-harness/2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22/local/t140-s5-design-review-request.md",
+  "briefPath": "C:/Users/darius.jones/.omp/agent/sessions/-Documents-PROJECTS-dwarf-harness/2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22/local/t140-s5-design-brief.md",
+  "briefSHA256": "93bf8a13f847d03626672caae2a77f35e97ddfcc968b63568dd4ea12bc81cc55",
+  "binding": "Read the complete request and all 312 brief lines, including untruncated mechanism fields. SHA identities are the supplied bindings; no hashing command was run. Source inspection used canonical MAIN, not Ticket139's mutation tree.",
+  "verdict": "reject",
+  "approvalScope": {
+    "technicalDesign": "P1–P6 are acceptable as the bounded technical design below. P7 needs the specified evidence-sequencing correction. B4 remains a blocking policy prerequisite: this ruling does not authorize a coder assignment.",
+    "implementationAuthorized": false,
+    "codeApproved": false,
+    "contractFrozen": false,
+    "numericalAcceptance": false,
+    "ticketCloseApproved": false
+  },
+  "reviewLine": "Fresh independent design review by a temporary GPT-6 Astra stand-in reviewer, openai-codex/gpt-6-astra, not Fable. The checkpoint mechanism is technically acceptable within the stated boundaries, but Ticket140S5 remains blocked on the exact completed-C1-freeze versus single-final-slice sequencing decision below. Fable double-checks the whole ticket after its reset.",
+  "sourceRoots": {
+    "PM": "C:/Users/darius.jones/.omp/agent/sessions/-Documents-PROJECTS-dwarf-harness/2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22/local/",
+    "repository": "C:/Users/darius.jones/Documents/PROJECTS/dwarf-harness"
+  },
+  "blockingFindings": [
+    {
+      "id": "B4",
+      "severity": "major",
+      "location": "PM/t140-s5-design-brief.md:308",
+      "requirements": [
+        "docs/CONTRACTS.md:3,11-18,26",
+        "docs/ROADMAPS.md:229-236",
+        "docs/DECISIONS.md:2134-2143",
+        "docs/DECISIONS.md:3090-3102"
+      ],
+      "failedPremise": "A single branch or coder assignment does not itself reconcile a completed C1 contract slice with an incomplete combined C1/C3 implementation slice. D125 delegates freezing a completed, evidenced contract slice approved together with its freeze record. D155 authorizes only one additional final implementation slice and expressly grants no owner-policy waiver. Treating the independently completed C1 delivery as a slice leaves a subsequent C3 delivery; treating the whole combined S5 as the completion unit leaves it incomplete when C3 needs permission to start.",
+      "determination": "I do not approve silently redefining the completion/counting unit through a phased-branch label. D121's workflow delegation does not override D125's completion condition or D155's ticket-specific count decision. A local-proof/review pause followed by consumer coding and a final combined freeze is insufficient.",
+      "boundedCorrection": "Obtain the explicit Ticket140-only completion-unit/sequencing exception stated in ownerGates. Keep the proposed API and mechanism; no replacement parser, additional cache or coder-invented interface is requested. After that decision, use the precise conditional milestones below. Without it, do not assign this combined implementation."
+    }
+  ],
+  "perPdisposition": [
+    {
+      "id": "P1",
+      "disposition": "approve",
+      "scope": "Technical mechanism only, subject to B4.",
+      "ruling": "Reuse previously verified chain state only after validating the Reader-minted checkpoint, freshly validating the preceding-segment anchor, and hashing the exact containing-segment prefix on the same descriptor used for suffix reading.",
+      "conditions": [
+        "Perform the existing option validation, directory listing, containing-segment selection, preceding last-record parsing and segment-name continuity checks before restoring state.",
+        "Match directory, colony, numeric advancing range, exact After, selected segment, version, checksum, shape and all base-chain fields.",
+        "Hash every framed byte in [0,offset), including hash text, TAB and LF, using bounded 64-KiB scratch. Do not substitute size, timestamp, a final-line hash or SameFile.",
+        "After equality, seek that same open descriptor to offset. Set absolute logical offsets and restore only the complete after-chain, with no open commit.",
+        "Preserve the fresh preceding-segment chain as the segment's base; do not accidentally replace it with the restored after-chain when capturing the next checkpoint.",
+        "Hash subsequent full lines at logical consumption, before buffer reuse. Never include bufio read-ahead beyond the completed Through boundary.",
+        "Use the existing frameLine, decodeEnvelope, lineError, verifier.accept, keep and version-checking paths for the suffix."
+      ],
+      "fallback": "A missing, damaged, mismatched, rotated, truncated or byte-changed hint selects ordinary scanning. In the new opener this remains checked-close mode, not a call that silently downgrades to legacy Close behavior. Genuine non-EOF I/O, seek and close failures remain errors.",
+      "costLimit": "Prefix I/O and SHA-256 work remain. This removes warm-prefix JSON decoding, not all prefix work, and proves no numerical bound."
+    },
+    {
+      "id": "P2",
+      "disposition": "approve",
+      "scope": "Additive existing ledger-reader capability; completed C1 freeze still required.",
+      "ruling": "Use exactly the proposed opaque ReadCheckpoint, opt-in OpenReaderWithCheckpoint and Reader.Checkpoint surface. Preserve OpenReader, ReadOptions, Commit, Check and every existing consumer's legacy behavior. Do not expand ledgerstore, Receipt, privateStore or appender."
+    },
+    {
+      "id": "P3",
+      "disposition": "approve",
+      "ruling": "Retain one copied opaque checkpoint under the single fixed historyAckRead key in the existing LRU.",
+      "accounting": {
+        "checkpointFieldBytes": 232,
+        "checkpointChargeBytes": 256,
+        "existingEntryChargeBytes": 128,
+        "emptyDataCheckpointEntryChargeBytes": 384,
+        "sharedEntryLimit": 256,
+        "sharedChargedMetadataLimitBytes": 8388608,
+        "meaning": "Charged retained metadata, not total RSS; bounded container/header overhead remains separately entry-bounded."
+      },
+      "conditions": [
+        "One retained-charge helper governs admission, replacement, eviction, removal and totals. Existing entries receive no additional allowance.",
+        "Copy the typed value on insertion and retrieval. Retain no Reader, descriptor, buffer, hash.Hash, commit backing storage, body bytes or pointer-bearing token payload.",
+        "Get and put require exact accepted coverage: h.through equals the requested frontier and the entry's from value. No late-fill exception.",
+        "Remove the fixed key on every accepted advance before publishing coverage, including refresh and direct-review publication.",
+        "Only successful scoped acceptance may install the newly read checkpoint at the new frontier.",
+        "Keep Service.mu before history.mu; release history.mu before I/O. Close discards the entry and reopening starts cold."
+      ]
+    },
+    {
+      "id": "P4",
+      "disposition": "approve",
+      "ruling": "Extract the existing drain into scanReader, preserving context checks, visitor/read errors and deferred Close joining. Preserve exact-one-complete-range validation and leave acceptCommitLocked unchanged.",
+      "cutover": [
+        "Only the existing nonduplicate contiguous scoped-acknowledgement branch opts in.",
+        "At that private call boundary, nil means legacy reading; a nonnil zero checkpoint means an opt-in cold read.",
+        "The review caller passes nil and discards the returned proof. Its preflighted plan, witness handling and publication ordering stay unchanged.",
+        "Migrate both production callers and all four direct range-test calls without an old-signature alias.",
+        "All historical scans remain on OpenReader.",
+        "Read, exact-range validation and successful closure precede acceptance; checkpoint publication follows successful acceptance."
+      ],
+      "preserved": "Actual command/family/submission binding, five-family planning, duplicate-occurrence checks, schema-5 guards, reducer staging, publication, reservations, cancellation-after-durability, materialization and immutable receipt semantics remain unchanged."
+    },
+    {
+      "id": "P5",
+      "disposition": "approve",
+      "ruling": "The private-field typed value supplies ordinary caller provenance; its checksum detects accidental damage, not malicious same-process forgery. Fresh byte identity alone never authenticates caller-asserted chain state.",
+      "minting": [
+        "Only the opt-in Reader may mint a nonzero checkpoint.",
+        "Require complete numeric Through processing, terminal EOF, successful actual closure, Cursor equal to Through and verifier.done.Seq, no partial commit, and a valid final chain/logical offset.",
+        "Early Close, read failure, close failure, ToEnd and equal-bound reads issue no checkpoint.",
+        "Return a fresh value copy. No exported constructor, marshaler, unmarshaler, JSON DTO, raw-token import or caller-supplied Chain.",
+        "Directory identity uses successful Abs then Clean without alias resolution or case folding. Failure to derive that optional identity disables capture/use, not ordinary reading or checked Close."
+      ],
+      "limits": "The proof inherits the existing append-only live-writer protocol. It does not create a filesystem snapshot, hostile-rewrite atomicity, OS isolation or a same-process security seal."
+    },
+    {
+      "id": "P6",
+      "disposition": "approve",
+      "ruling": "Opt-in truthful close reporting is necessary and bounded. A shared private mode is preferable to changing all legacy readers or creating a second scanner.",
+      "requiredClosureSemantics": [
+        "Retain the first actual file-close failure across automatic EOF/error closure, explicit Close and repeated Close.",
+        "Stop before opening the next segment after a transition-close failure.",
+        "Apply checked closure to the preceding-segment helper and discarded candidate descriptors as well as the scanner.",
+        "Retain read errors and join actual closure failures before readCommittedRange can succeed.",
+        "Do not allow errors.Is(err, io.EOF) to erase a close failure. Normal EOF alone is not an error in a successfully drained operation.",
+        "A failed closure forbids checkpoint issuance and successful scoped acknowledgement.",
+        "Legacy OpenReader and Check retain their existing sticky Next/EOF/os.ErrClosed and Close-return semantics."
+      ]
+    },
+    {
+      "id": "P7",
+      "disposition": "revise",
+      "blockingIndependently": false,
+      "ruling": "Accept the proposed behavioral regressions and four minimal proof breaks, with their timing and reachability corrected for an actual freeze-first implementation.",
+      "boundedCorrections": [
+        "Before a C1 freeze, use the already-proposed TestReaderCheckpointChangedPrefix as the prefix-identity mutation oracle. The C3 TestScopedAcknowledgementPrefixChanged cannot supply pre-freeze evidence because that consumer may not yet be coded.",
+        "After the freeze, the warmed public-Service regression must prove refusal, unchanged accepted state/charge and no successful receipt/source publication. Do not repeat an unchanged C1 mutation campaign merely to change the oracle's package.",
+        "For the predecessor mutation, preserve its sequence so the existing segment-name check does not mask removal of base-chain equality.",
+        "The new byte/token-mutation fuzzer reaches checked-close execution, but does not by itself establish actual close-failure coverage. Attribute that failure proof to the real descriptor-close regression.",
+        "Retain exact mutant diffs, named observable failures, byte-identical restores and greens. Report masking honestly; do not add internal-only tests or compound mutants to manufacture a red."
+      ]
+    },
+    {
+      "id": "P8",
+      "disposition": "block",
+      "ruling": "Compatibility is resolved as additive, but the current authority does not resolve the completed-contract-slice versus single-final-slice sequencing issue. The proposed single-branch route is not authorized merely because it is sequential.",
+      "requiredDecision": "OG-SEQUENCE below."
+    }
+  ],
+  "perBdisposition": [
+    {
+      "id": "B1",
+      "disposition": "approve",
+      "ruling": "The named Reader/scanner expansion and one charged opaque checkpoint are technically within D155's sole acknowledgement-prefix-decoding objective. This is a fresh technical ruling, not an inference from D155 or S4 approval. No ledgerstore expansion is needed."
+    },
+    {
+      "id": "B2",
+      "disposition": "approve",
+      "ruling": "Additive, not breaking, under the exact invariants in compatibility. No frozen-breaking owner approval is triggered by this design as specified. B4 remains independent."
+    },
+    {
+      "id": "B3",
+      "disposition": "approve",
+      "ruling": "The provenance, same-descriptor byte identity, fresh-anchor and closure argument is sufficient at design level. It is not executed implementation evidence. The specified Reader and Service regressions and reachable fuzz campaigns must later demonstrate the actual implementation."
+    },
+    {
+      "id": "B4",
+      "disposition": "block",
+      "ruling": "No implementation route is authorized under the existing count-only exception. Obtain OG-SEQUENCE before assigning the combined work; then follow the conditional milestones exactly."
+    }
+  ],
+  "compatibility": {
+    "classification": "Additive extension of the existing frozen ledger-reader version-1 capability, not a new contract boundary or ledger format.",
+    "owningStep": "C1",
+    "newConsumer": "C3 scoped contiguous own-commit acknowledgement only",
+    "verifyEveryRecord": {
+      "source": "contract/ledger/doc.go:132-154; contract/ledger/reader.go:45-58,166-205",
+      "ruling": "The frozen promise specifies verification of hash, chain, sequence, commit framing, colony and time; it does not prescribe repeating JSON decoding on every open. Previously completed Reader verification, fresh equality of every framed prefix byte, and equality of the freshly read predecessor chain establish those same prefix invariants. The suffix still passes the original parser/verifier. This does not interpret the prefix as exempt from verification.",
+      "consumption": "Current Reader code skips commits at or below After before consumed-version checking. Reusing their envelope/chain proof therefore does not require reusing an old Consume map or changing version semantics. Suffix consumption and AllTypes behavior use this open's options."
+    },
+    "legacySurface": "Existing exported structs and signatures remain intact. Existing opener and Check behavior remain unchanged, including their legacy closure behavior.",
+    "newCloseBehavior": "Truthful actual-close errors belong only to the explicitly selected new opener. They are not silently imposed on existing callers.",
+    "registeredConsumers": [
+      "Core C2/C3",
+      "U1.L/U1.E and each field capability",
+      "C4–C9",
+      "R1",
+      "U3 for its frozen families"
+    ],
+    "currentProductionCallersPreserved": [
+      "agents replay and ordinary scans",
+      "ledgerstore bodies, collection, commands and store replay",
+      "workspace activation replay and service Open",
+      "undercurrent graph replay"
+    ],
+    "frozenBreakingOwnerGateRequiredNow": false,
+    "wouldRequireOwnerApproval": "Weakening prefix verification, changing legacy results/errors, changing frozen format/rules/goldens, accepting caller-constructed chain assertions, or otherwise making a breaking contract change requires a separate owner decision naming affected steps. None is authorized here.",
+    "documentation": "Document the additive proof and opt-in errors without weakening the existing Reading guarantee. D125's completed-capability record remains necessary."
+  },
+  "ownerGates": [
+    {
+      "id": "OG-SEQUENCE",
+      "required": true,
+      "approvalReceived": false,
+      "authority": "D125 completed-contract-slice condition together with D155's one fifth-and-final count exception; D121 cannot waive either owner decision.",
+      "exactOwnerQuestion": "Do you authorize a Ticket140-only exception to the completion-unit and slice-accounting rules of D125/D155: within the one fifth-and-final S5 assignment, first complete the C1 Reader capability as an independently evidenced and reviewed contract increment, freeze it under D125, and land its own successful exact-SHA hosted commit and freeze record on main before any C3 consumer code is written; then continue the same bounded assignment with C3 consumption and obtain a separate final combined review and exact-SHA hosted result? This explicitly permits two completion/integration milestones inside that one counted slice. It does not permit an upfront or retrospective freeze, a sixth slice, consumer coding before the integrated freeze, an API/safety waiver, or changes to the seven bounds, cache cap or traffic.",
+      "effectOfYes": "Record the actual answer and its provenance before assignment. It supplies only the stated completion-unit/sequencing exception; the technical restrictions and all evidence gates in this ruling remain.",
+      "effectOfNoOrNoAnswer": "Keep this implementation unassigned and Ticket140 open. Do not disguise a second implementation slice as a phase, fix-up, S5a/S5b or another ticket.",
+      "notAnOwnerDesignApprovalRequest": "The technical mechanism and additive classification are ruled here. The question concerns only authority to use the specified two-milestone completion sequence under the single remaining slice."
+    }
+  ],
+  "freezeFirstSequencing": {
+    "status": "Conditional route only; requires OG-SEQUENCE. No milestone below has been completed or approved by this review.",
+    "answerOnHostedAndMain": "C1 needs its own final public freeze SHA with successful hosted Check result and main integration before C3 coding. The freeze record is prepared and reviewed with the completed C1 capability, then included in that public SHA before its hosted run. Final combined C3 CI cannot retrospectively establish this prerequisite. The public record must not require a self-referential commit hash.",
+    "milestones": [
+      {
+        "id": "M0",
+        "name": "Record the exact sequence authority",
+        "requirements": [
+          "Persist this ruling verbatim against the bound brief.",
+          "Obtain and record OG-SEQUENCE with the actual originator classification.",
+          "Define one bounded assignment and its hard C1-to-C3 release barrier. No C3 implementation or consumer tests against the new API before that barrier."
+        ]
+      },
+      {
+        "id": "M1",
+        "name": "Complete C1 without the new C3 consumer",
+        "requirements": [
+          "Implement only the named contract/ledger capability, documentation and Reader tests/fuzzer.",
+          "Keep agents and all existing consumers unchanged.",
+          "Retain C1 implementation commit SHA, changed-file SHA-256 manifest, raw focused/plain package and host static/format/import/module outputs.",
+          "Complete the four C1 proof breaks using Reader-level observable oracles and exact restores.",
+          "Complete the new checkpoint and changed legacy-scanner 120-second fuzz campaigns.",
+          "Retain evidence that frozen fixtures and formats are unchanged. Do not regenerate goldens or require a new diagnostic/performance-control run."
+        ]
+      },
+      {
+        "id": "M2",
+        "name": "Review the completed C1 capability and freeze record together",
+        "requirements": [
+          "A fresh independent reviewer judges completed code, evidence, compatibility and the exact freeze-record changes in one review.",
+          "The record identifies the additive interfaces, verification equivalence, process-only lifetime, fallback and opt-in close semantics; it does not claim C3 integration or Ticket140 numerical success.",
+          "PM records the nonbreaking freeze with originator assistant under D125 and the explicit sequence exception.",
+          "Apply public CONTRACTS/package documentation changes on the same branch. Keep the decision and evidence in the private records repository.",
+          "Bind tested code to the final public freeze commit with file hashes and any explicitly identified comment-only record delta."
+        ]
+      },
+      {
+        "id": "M3",
+        "name": "Integrate the frozen C1 capability before releasing C3",
+        "requirements": [
+          "Record the exact C1_FREEZE_SHA, hosted run identity/URL and successful full Windows/Linux/macOS matrix, race and Check result on that SHA.",
+          "Fast-forward main only to that approved, checked SHA; publish through the existing guarded procedure.",
+          "Bind the private freeze decision/evidence record to C1_FREEZE_SHA and its actual review/check results.",
+          "Only after the integrated freeze is recorded may PM release the same assignment to C3 coding."
+        ]
+      },
+      {
+        "id": "M4",
+        "name": "Implement only the ruled C3 consumer",
+        "requirements": [
+          "Continue from the integrated C1_FREEZE_SHA on the same bounded branch/assignment.",
+          "Implement the copied fixed-key LRU entry, exact charging/invalidation, shared drain and scoped-only opt-in.",
+          "Migrate the review caller as an opt-out and the four direct range tests.",
+          "Run the warmed public-Service regressions and D152 agents evidence, including shared-state race and affected concurrency repetitions.",
+          "Run the affected agents fuzz campaigns for their actual changed drain/cache paths.",
+          "Keep the frozen C1 files unchanged. A required C1 contract revision must be resolved and frozen before consumption of that revision, not hidden in the final combined review."
+        ]
+      },
+      {
+        "id": "M5",
+        "name": "Judge the final combined subject",
+        "requirements": [
+          "Bind final changed-file hashes, local evidence and the unchanged C1 manifest to S5_FINAL_SHA.",
+          "Use the first complete unchanged T11 final-candidate run as both program smoke and, if eligible, the first acceptance instance.",
+          "Complete the unchanged three-or-five-instance protocol per driver on the actual combined subject.",
+          "Obtain the required fresh independent final Standards and Specification/code-evidence reviews.",
+          "Obtain full three-OS/race hosted success and Check result on exact S5_FINAL_SHA before final ff-only integration.",
+          "Keep Fable whole-ticket verification and the ticket-close review separate."
+        ]
+      }
+    ],
+    "shaRules": [
+      "C1 implementation SHA, C1_FREEZE_SHA and S5_FINAL_SHA are future evidence identities, not fabricated values.",
+      "C1_FREEZE_SHA and S5_FINAL_SHA each require their own hosted result because each is a distinct public integration subject.",
+      "A fix or rebase changes the SHA and requires its own hosted result and affected evidence/review.",
+      "Retain the C1 code/test/fuzz hashes, public freeze record, private decision commit, review artifact and hosted result so final review can establish that the consumed capability is the frozen one."
+    ],
+    "reuseWithoutDuplicatedGates": [
+      "Carry forward unchanged C1 focused/plain/static/import proof, fixture identity, mutation reds/restores/greens and timed fuzz evidence by exact source binding.",
+      "Do not rerun unchanged C1 local campaigns merely because C3 is added.",
+      "The final hosted matrix is the required exact-new-SHA integration gate, not an additional local full check.",
+      "C3 evidence covers its newly changed consumer paths; it is not deferred C1 freeze evidence.",
+      "No settled S4 checks, mutation campaigns, reviews, hosted runs or publication gates are reopened."
+    ]
+  },
+  "ownedPathsAndInterfaces": {
+    "authorization": "Technical ownership perimeter only; coding remains blocked by OG-SEQUENCE.",
+    "C1": [
+      "contract/ledger/reader.go",
+      "contract/ledger/scan.go",
+      "contract/ledger/doc.go",
+      "contract/ledger/reader_test.go",
+      "contract/ledger/fuzz_test.go"
+    ],
+    "C3AfterFreeze": [
+      "internal/core/agents/replay.go",
+      "internal/core/agents/history_index.go",
+      "internal/core/agents/scoped_execute.go",
+      "internal/core/agents/review_execute.go",
+      "internal/core/agents/scoped_receipt_test.go",
+      "internal/core/agents/history_index_test.go",
+      "internal/core/agents/doc.go"
+    ],
+    "PMDrafter": [
+      "docs/CONTRACTS.md",
+      "Existing private decision and evidence records under D145; not coder-owned"
+    ],
+    "publicInterfaces": [
+      "type ReadCheckpoint struct with exactly the brief's unexported fixed-width fields",
+      "func OpenReaderWithCheckpoint(logDir string, opts ReadOptions, checkpoint *ReadCheckpoint) (*Reader, error)",
+      "func (r *Reader) Checkpoint() *ReadCheckpoint"
+    ],
+    "checkpointFieldsInOrder": [
+      "version uint64",
+      "directory [32]byte",
+      "colony [16]byte",
+      "segmentFirst uint64",
+      "offset int64",
+      "baseSeq uint64",
+      "baseHash [32]byte",
+      "baseTime int64",
+      "afterSeq uint64",
+      "afterHash [32]byte",
+      "afterTime int64",
+      "prefix [32]byte",
+      "checksum [32]byte"
+    ],
+    "representation": "Version 1; fixed-width little-endian integers and arrays in listed order for the self-checksum. No retained strings, slices, interfaces, files or pointers in the value; no persistent encoding.",
+    "privateInterfaces": [
+      "func scanReader(ctx context.Context, r *ledger.Reader, visit func(ledger.Commit) error) (err error)",
+      "func (s *Service) readCommittedRange(ctx context.Context, first, last uint64, checkpoint *ledger.ReadCheckpoint) (ledger.Commit, *ledger.ReadCheckpoint, error)",
+      "historyIndex.ackCheckpoint(after uint64) *ledger.ReadCheckpoint",
+      "historyIndex.putAckCheckpoint(after uint64, checkpoint *ledger.ReadCheckpoint)"
+    ],
+    "unchangedInterfaces": [
+      "OpenReader, ReadOptions, Commit, Check and the existing scanner-construction/reset signatures",
+      "acceptCommitLocked",
+      "privateStore, Store, Submit, Receipt, Close, Recover and appender"
+    ],
+    "exclusions": "No format/catalogue/schema/golden change, Digest unmarshaler change, second cache, offset catalogue, retained Reader, startup inventory, snapshot, general command index, provider/accounting/credential policy change, dependency/toolchain/workflow/machine change or additional startup optimization."
+  },
+  "observableProofAndFuzzReachability": {
+    "ReaderProof": [
+      "Compare genuine warm continuation with an independently opened ordinary Reader: exact complete commits/record bytes, cursor and typed errors/locations.",
+      "Cover consumed-version versus AllTypes behavior, numeric and inside-commit boundaries, rotation, truncation, wrong context/root/After, zero/damaged checkpoints and unchanged-source fallback.",
+      "Change an earlier nonterminal prefix line while preserving the last prefix line and suffix; require the ordinary corruption or unsupported-format outcome.",
+      "Change a correctly framed predecessor last record without changing its sequence; require the broken segment link to be detected despite identical current-segment prefix bytes.",
+      "Use an actual descriptor close failure to prove retained Close errors, repeated Close behavior and prohibition of checkpoint minting. Early Close and real read errors issue no token.",
+      "Retain no-write/no-truncate behavior and legacy Reader/Check regressions."
+    ],
+    "ServiceProof": [
+      "Warm through real successful scoped acknowledgement, then damage the earlier prefix before the next acknowledgement. Require no successful receipt, unchanged accepted projection/frontier/charge after hold release, and no successful source proof from the rejected group.",
+      "Keep rewritten command, submission and transition regressions effective on the warm path.",
+      "Preserve exact durable receipts, reopen/retry, one effect/charge, changed-input conflicts, duplicate/intervening-commit fallback and partial-range rejection.",
+      "Discard, eviction, disabling and detectable damage must reproduce authoritative outcomes without lost committed state or extra holds.",
+      "Exercise foreign and direct-review advancement without retimestamping an older checkpoint.",
+      "Retain existing authority, denial, cancellation, projection-fence, Close-drain, recovery and integrated registration-family behavior; do not duplicate the broad matrix."
+    ],
+    "minimalProofBreaks": [
+      "Remove prefix-digest equality: the earlier-prefix-corruption Reader regression must fail.",
+      "Remove fresh-base equality: the predecessor-anchor regression must fail.",
+      "Remove token self-checksum validation: damaged afterHash on valid source must cause the fallback-equivalence regression to fail.",
+      "Remove retained opt-in Close-error return: the real descriptor-close regression must fail."
+    ],
+    "fuzzCampaigns": [
+      {
+        "targets": [
+          "FuzzReaderCheckpoint"
+        ],
+        "when": "Before C1 freeze",
+        "reach": "Genuine minted warm checkpoint, prefix/anchor validation, restored verifier state, bounded mutations/cuts, accidental token damage and ordinary-reader equivalence.",
+        "limit": "No claim of actual close-error coverage from byte mutations alone."
+      },
+      {
+        "targets": [
+          "FuzzCheckTruncation",
+          "FuzzCheckTornTail",
+          "FuzzCheckCorruption"
+        ],
+        "when": "Before C1 freeze",
+        "reach": "Changed scanner/open/close/line-reader code in legacy mode. Truncation also exercises ordinary Reader; TornTail and Corruption exercise Check.",
+        "limit": "They do not exercise warm checkpoints."
+      },
+      {
+        "targets": [
+          "FuzzScopedGroupReplay",
+          "FuzzReviewGroupReplay",
+          "FuzzPaidGroupReplay",
+          "FuzzRegistrationGroupReplay"
+        ],
+        "when": "After C3 implementation",
+        "reach": "Accepted inputs use real store submission and Service Open/replay, reaching changed scan/drain and relevant history publication paths; registration also exercises its real receipt queries.",
+        "limit": "Preflight-only rejected inputs do not reach live acknowledgement. These targets are not proof of warm scoped acknowledgement."
+      }
+    ],
+    "excludedTarget": {
+      "name": "FuzzPrivateGroupReplay",
+      "reason": "Its inspected path is in-memory draft decoding, planning and installation, not Reader, shared drain, history publication or live acknowledgement. Reconsider only if the actual final changed code enters that exercised path."
+    },
+    "executionRules": "PM-owned serial 120-second campaigns for new targets and targets whose fuzzed code changes. Retain failures, execution counts, source identities and reachability limits. No package-membership-only campaigns.",
+    "localEvidence": "Use the brief's D152 focused/plain verbose package and host format/vet/static/import/module evidence. Agents shared-state changes require its package race and affected ×20 concurrency rows. No separate local ledger race or five-target static loop absent an actual triggering change. No routine local tools/check."
+  },
+  "unchangedNumericalProtocol": {
+    "status": "Required later; no acceptance granted.",
+    "controls": "Reuse eligible 93e8f0afe125b1ea8e87f4b8336664dd390c5b3a controls under unchanged method/environment. Time passing or integrated139 alone does not require replacement controls.",
+    "subject": "Actual final combined SHA, never a mutant, old S4 subject or pure140 label.",
+    "sampling": "Three independent complete eligible instances per driver. Extend once to exactly five only under the existing paired-differences-straddle-zero AND within-10-percent trigger.",
+    "startupBounds": "Independently for T11 and T12: median(OpenLong_i / actual Open-record ratio_i) <= median(OpenShort_i).",
+    "operationBounds": "turn.start, local.admit, local.begin, task.create and task.cancel each require median(long) <= 2*median(short)+25ms, using that final subject's own short samples; cancellation uses paired profile_cleanup rows.",
+    "traffic": "Preserve all six saved source hashes, original assertions, T11 populations12→20/held turns1→3/burst16 and complete ten-operation cycles until current commits reach actual B×10. Preserve T12 factor2, populations and four profiles. No fixed 87/874 endpoint filter.",
+    "eligibility": "Fresh outputs/colonies, serial local runs, no overlapping compute and five-second pre/post unrelated CPU <=0.25 core. Retain invalid/interrupted attempts; slowness alone never excludes a run.",
+    "smoke": "The first complete unchanged eligible T11 final-candidate run also supplies the real-program smoke; no extra diagnostic or shortened smoke is required.",
+    "labels": "Admission and storage only; bookkeeping, not capacity, provider, executor, delivery, power-loss or SLA evidence.",
+    "failure": "Retain failures and stop. No sixth slice, further mechanism, larger cache, snapshot, threshold relaxation or traffic reduction follows automatically."
+  },
+  "noExtraGates": [
+    "No rerun or re-review of settled S4 correctness, local, fuzz, dual-review, hosted Check10 or main-publication evidence.",
+    "No new preimplementation measurement, CPU-share SLA, control cohort or diagnostic.",
+    "No routine duplicate local full check.",
+    "No confirmation pass for minor notes.",
+    "No owner request for ordinary technical design approval or a nonbreaking completed freeze; OG-SEQUENCE is the specific unresolved policy exception.",
+    "No claimed implementation proof from this source-only design review."
+  ],
+  "carriedStatus": {
+    "D155": "Actual owner-adopted selection permits one Ticket140 fifth-and-final slice only. Private publication 63f202643a4c6e45397b3c2cad210d6914296d07 is retained; it is not algorithm, API, frozen-contract or sequencing approval.",
+    "currentFailedCohort": "Exact8a17 has three eligible instances per driver: both startup bounds pass, all five incremental bounds fail, and neither extension triggers. These remain failed S4 results, not S5 acceptance samples.",
+    "diagnostic": "The one authorized current-subject diagnostic is complete. readCommittedRange accounts for 46.63 seconds, 62.28 percent of 74.87 sampled CPU seconds. Cumulative stacks overlap; this is neither exact elapsed attribution nor proof the proposed fix succeeds.",
+    "retainedAuthorityHashes": {
+      "failureStop": "9eec5d0d95bb4f0164052933adb755b449108dff76df52b68bccdbe01de18809",
+      "postdiagnosticScope": "7b51eaefe7c63278a83e58d6fb71bb6c77c763bddf282740042d83e7ae9db84e"
+    },
+    "Ticket139": "The request reports its local proof complete and Go released, with closing/reviews/CI preparation separate. This ruling neither rechecks nor approves its close and never uses its mutant tree.",
+    "recordAllocation": "Carry the request's latest allocation: B34 belongs to Ticket139 close, not yet applied/approved; B35 and D156 remain unallocated. Allocate nothing in this ruling.",
+    "sharedRows": "C3/U3 shared draft rows remain held for primary coordination.",
+    "remainingCloseWork": "Ticket140 remains open. Fable whole-ticket verification and Ticket13 verification/close remain separate."
+  },
+  "evidenceRequests": [],
+  "nextAction": "Present OG-SEQUENCE exactly, with this technical ruling. Until the actual decision is recorded, do not assign the combined C1/C3 implementation or infer permission from D155.",
+  "reviewerActions": "Read-only inspection of the complete request/brief, cited authority, canonical implementation, existing regression/fuzz paths and supplied evidence/reference artifacts. No commands, builds, tests, fuzzing, formatting, profiling, diagnostics, Git writes, repository/private-record edits or subagents."
+}

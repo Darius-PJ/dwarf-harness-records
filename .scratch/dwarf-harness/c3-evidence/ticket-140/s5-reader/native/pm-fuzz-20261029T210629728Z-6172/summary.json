@@ -1,0 +1,61 @@
+{
+    "status":  "complete-expected-exits-observed",
+    "grantReference":  "primary-t140-s5-reader-81ae-20261029-fuzz",
+    "stage":  "pm-fuzz",
+    "plan":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plan-pm-fuzz.json",
+    "planSHA256":  "3002c4d52ad40b19f78545b025bc26df20b5f2345a31205234303a7cf216f7f5",
+    "cwd":  "C:/Users/darius.jones/worktrees/dwarf-harness/140-final-ack",
+    "sourceBase":  "84d0ced9446168777c7b7bfa3382974977bf27ed",
+    "ownerAuthority":  "D156/b63d618c76b864ec08855bd78eadcf3e27cf7588",
+    "startedUTC":  "2026-10-29T21:06:29.8169979Z",
+    "finishedUTC":  "2026-10-29T21:14:56.0002711Z",
+    "exitCode":  0,
+    "error":  null,
+    "sourceBefore":  {
+                         "contract/ledger/reader.go":  {
+                                                           "sha256":  "75cb8a6e2bf9e7468787f7fd2708b2174aadfa741179a5ec97123f5eb959cc75",
+                                                           "bytes":  13265
+                                                       },
+                         "contract/ledger/scan.go":  {
+                                                         "sha256":  "94652a4384242aba11592beb8667cf65a90865ac3fdbfad60297bedb9732e1cb",
+                                                         "bytes":  13675
+                                                     },
+                         "contract/ledger/doc.go":  {
+                                                        "sha256":  "b078d7f534f5ebfd7fcb1c08d518a8c3e355abb8709e649ae9aef2c9993c29eb",
+                                                        "bytes":  171531
+                                                    },
+                         "contract/ledger/reader_test.go":  {
+                                                                "sha256":  "710772f66538aac26444f1ae4661d6df1f683f5a23d1a68336a7551bdad1e28d",
+                                                                "bytes":  23797
+                                                            },
+                         "contract/ledger/fuzz_test.go":  {
+                                                              "sha256":  "7b5c0fac7138c779ac41e5f42a9deb5ef9274bd7c462b28ee45df545734f9488",
+                                                              "bytes":  20854
+                                                          }
+                     },
+    "sourceAfter":  {
+                        "contract/ledger/reader.go":  {
+                                                          "sha256":  "75cb8a6e2bf9e7468787f7fd2708b2174aadfa741179a5ec97123f5eb959cc75",
+                                                          "bytes":  13265
+                                                      },
+                        "contract/ledger/scan.go":  {
+                                                        "sha256":  "94652a4384242aba11592beb8667cf65a90865ac3fdbfad60297bedb9732e1cb",
+                                                        "bytes":  13675
+                                                    },
+                        "contract/ledger/doc.go":  {
+                                                       "sha256":  "b078d7f534f5ebfd7fcb1c08d518a8c3e355abb8709e649ae9aef2c9993c29eb",
+                                                       "bytes":  171531
+                                                   },
+                        "contract/ledger/reader_test.go":  {
+                                                               "sha256":  "710772f66538aac26444f1ae4661d6df1f683f5a23d1a68336a7551bdad1e28d",
+                                                               "bytes":  23797
+                                                           },
+                        "contract/ledger/fuzz_test.go":  {
+                                                             "sha256":  "7b5c0fac7138c779ac41e5f42a9deb5ef9274bd7c462b28ee45df545734f9488",
+                                                             "bytes":  20854
+                                                         }
+                    },
+    "expectedExitsObserved":  true,
+    "semanticMutationJudgment":  "Parentreadsactualnamedassertion;expectednonzeroaloneisNOTsemanticred",
+    "C3Released":  false
+}

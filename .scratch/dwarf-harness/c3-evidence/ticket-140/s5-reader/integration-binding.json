@@ -1,0 +1,27 @@
+{
+  "status": "COMPLETED_INTEGRATED_C1_FREEZE_RECORDED;PM_CORE_RELEASE_STILL_SEPARATE",
+  "decision": "D157",
+  "decisionLines": "docs/DECISIONS.md:3126-3136;D125pointer2148",
+  "privateParent": "874b1fe0e3972dafe42de8461ca6706b84e5579d",
+  "publicFreezeSHA": "bf71ba15cfc24095e36cf7230115694e665275ad",
+  "publicMainAndRemote": "bf71ba15cfc24095e36cf7230115694e665275ad",
+  "implementationSHA": "81ae94d3e92b5fd5574f46046c42fc9c5e30ce6d",
+  "reviewOriginalSHA256": "16958d4e8a5f753322511da7099d9f365db81cb237bedaa4af546d233e764005",
+  "reviewActualMessage": "90ae3609/AstraMAX/noFallback",
+  "reviewedM2EvidenceSHA256": "c6405bf018387cc66d72ead83156a3a6959828dd03f0b50be318706bc22f364c",
+  "reviewedM2RecordSHA256": "192487c0cf06973c15d2f5e8589b38bae638e86bd38acd9eb10e0d44a59e6383",
+  "ownHostedRun": 40959042523,
+  "ownHostedAttempt": 1,
+  "ownHostedAll5Conclusion": "success/full3OSfullcheck/race",
+  "actualPostApplicationRecordSHA256": {
+    "docs/DECISIONS.md": "b68fae427907cfb3d57cbca6dd52bea835639f013235996e233fb7801fe7f6c9",
+    ".scratch/dwarf-harness/c3-evidence/ticket-140-s5-reader-freeze-evidence.md": "fbbd75a56c0f8a99184b73fb8136dc96ccce8982ec538a3e05a4bc64286e8584",
+    ".scratch/dwarf-harness/c3-evidence/ticket-140/s5-reader/source-manifest.json": "009912767d4b974e2755a76addf6509962ed0318474d1c54d6814d1ed73f3cfe"
+  },
+  "sourceCapsuleOriginalCopies": 196,
+  "originalAuthorityCopies": 9,
+  "selfReferenceRule": "Privatecommit/publicationandPMCorereleaseareEXTERNALactualreceiptsafterprivatepublication;neitherisassertedbythisbinding",
+  "externalPrivatePublication": "PM/t140-s5-c1-private-publication.json",
+  "externalPMCoreRelease": "PM/t140-s5-c1-core-release.json",
+  "recordedAt": "2026-10-29T18:22:24.643708-04:00"
+}

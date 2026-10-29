@@ -1,0 +1,426 @@
+{
+  "at": "2026-10-29T16:44:24.394718-04:00",
+  "base": "84d0ced9446168777c7b7bfa3382974977bf27ed",
+  "scope": "EVERYtrackedcontract/ledger/testdatafixture;Readeronlymutantsneverwritefixturepaths",
+  "readMethod": "Oneactualgitls-treeandonecat-filebatch;notperfileCLI/noGo/no regeneration",
+  "count": 46,
+  "allMatch": true,
+  "totalBytes": 748606,
+  "CRbytes": 0,
+  "rows": [
+    {
+      "path": "contract/ledger/testdata/f0/catalogue/log/00000000000000000001.jsonl",
+      "baseObject": "362a788b3f45cb6845e9d04ff672d573a3ed027e",
+      "baseSHA256": "319c805312afd1abf824d306bcd799dd42bd3ae04fdf33fb74bc3f742ac8c898",
+      "currentSHA256": "319c805312afd1abf824d306bcd799dd42bd3ae04fdf33fb74bc3f742ac8c898",
+      "bytes": 3871,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f0/log/00000000000000000001.jsonl",
+      "baseObject": "c3486e64134b94ad1546560a9c90fe16035a3006",
+      "baseSHA256": "c72c4a739965586d984b524dbc6ee67a5b9d866756639fbb03b04e90f441f2e5",
+      "currentSHA256": "c72c4a739965586d984b524dbc6ee67a5b9d866756639fbb03b04e90f441f2e5",
+      "bytes": 2065,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f0/log/00000000000000000005.jsonl",
+      "baseObject": "f527524673123bef60912bedb52181d92b1ba0f1",
+      "baseSHA256": "3ee9f566e69e9cccb89ed435afee322950d3084a69ed0301684c15be70f8e65b",
+      "currentSHA256": "3ee9f566e69e9cccb89ed435afee322950d3084a69ed0301684c15be70f8e65b",
+      "bytes": 816,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f2/05/log/00000000000000000001.jsonl",
+      "baseObject": "dc7ca5c83d7ceeb26ec22db2b4ba8f9c0dbc8820",
+      "baseSHA256": "843663a168e472adf4656fdba4ffa6db770e588feec0020bb10e20bf14def437",
+      "currentSHA256": "843663a168e472adf4656fdba4ffa6db770e588feec0020bb10e20bf14def437",
+      "bytes": 7765,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f2/06/log/00000000000000000001.jsonl",
+      "baseObject": "2d9b7cc4bb84941ba6677fedcace399ae099ad7e",
+      "baseSHA256": "014cc612076390934fa8a668117c353c5cca2630a3b3fd90364a29542b96f40d",
+      "currentSHA256": "014cc612076390934fa8a668117c353c5cca2630a3b3fd90364a29542b96f40d",
+      "bytes": 20295,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f2/07/log/00000000000000000001.jsonl",
+      "baseObject": "c8153a98f3f55fe189db39e2a284a41a36513233",
+      "baseSHA256": "96de91f92432040683157279432512810c2dd27d36012695be46dd1eccac88c5",
+      "currentSHA256": "96de91f92432040683157279432512810c2dd27d36012695be46dd1eccac88c5",
+      "bytes": 37093,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f2/08/log/00000000000000000001.jsonl",
+      "baseObject": "a4871169a5b35ba6e1c769301df801ff3b65ab99",
+      "baseSHA256": "985e073a342d9f991fdd2afd407dc495c3542020c98e35d3079018e29db14b8c",
+      "currentSHA256": "985e073a342d9f991fdd2afd407dc495c3542020c98e35d3079018e29db14b8c",
+      "bytes": 31470,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f2/09/log/00000000000000000001.jsonl",
+      "baseObject": "e5cc60c82f6eea84ecf9e258b432b226b9bb09f2",
+      "baseSHA256": "f1a0c473ee410c189c743547f37c86ebd638ce9c92c68cd44d1b2816f9f3ad88",
+      "currentSHA256": "f1a0c473ee410c189c743547f37c86ebd638ce9c92c68cd44d1b2816f9f3ad88",
+      "bytes": 34582,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/10/log/00000000000000000001.jsonl",
+      "baseObject": "dc427d60d95ea45f807e2929bb151f0b727034a3",
+      "baseSHA256": "9622b72877ed546a18fcbfd28a19807e0bab237909e23ffe76e7c3da1c260ecd",
+      "currentSHA256": "9622b72877ed546a18fcbfd28a19807e0bab237909e23ffe76e7c3da1c260ecd",
+      "bytes": 28222,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/11/bodies/3b916c5875daabd31fe60ddb30be34acada65bf680bdd173183d56c204eb8f00",
+      "baseObject": "e7b222795a44e78db5eabffcf910451ed38dc01d",
+      "baseSHA256": "3b916c5875daabd31fe60ddb30be34acada65bf680bdd173183d56c204eb8f00",
+      "currentSHA256": "3b916c5875daabd31fe60ddb30be34acada65bf680bdd173183d56c204eb8f00",
+      "bytes": 299,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/11/bodies/3c6956d1a5353c50842e3a9bf22dfefeb6d7afe49e4f606f92aa58a85556a2cf",
+      "baseObject": "f050162645949d21ea99302b408a49a621fcf324",
+      "baseSHA256": "3c6956d1a5353c50842e3a9bf22dfefeb6d7afe49e4f606f92aa58a85556a2cf",
+      "currentSHA256": "3c6956d1a5353c50842e3a9bf22dfefeb6d7afe49e4f606f92aa58a85556a2cf",
+      "bytes": 26,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/11/bodies/8ed03435e57f91ee4ee0ea15e9cdd96b6750e173159fd970cdcd9fff228608a0",
+      "baseObject": "3f5f79047f47f66b9f9fc4fb0b84c4fa40228487",
+      "baseSHA256": "8ed03435e57f91ee4ee0ea15e9cdd96b6750e173159fd970cdcd9fff228608a0",
+      "currentSHA256": "8ed03435e57f91ee4ee0ea15e9cdd96b6750e173159fd970cdcd9fff228608a0",
+      "bytes": 28,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/11/log/00000000000000000001.jsonl",
+      "baseObject": "8949695daa92ec03b09247ecec6d11dc534f0f1d",
+      "baseSHA256": "145bb11c2b1c58e9e8530a98e6972b35329e4adb9dfb945a9f15381ae221bba6",
+      "currentSHA256": "145bb11c2b1c58e9e8530a98e6972b35329e4adb9dfb945a9f15381ae221bba6",
+      "bytes": 144136,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/11/objects/7bc39933cb0f99ee55f646057761d8203a8903c53ed90f9c1660fed4111a7d89",
+      "baseObject": "7f7c48b1d38f2419ca019224274e00ea5ad6fb29",
+      "baseSHA256": "7bc39933cb0f99ee55f646057761d8203a8903c53ed90f9c1660fed4111a7d89",
+      "currentSHA256": "7bc39933cb0f99ee55f646057761d8203a8903c53ed90f9c1660fed4111a7d89",
+      "bytes": 12,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/11/objects/a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b",
+      "baseObject": "95285ac337ee9a83a05385b68b0b92d0caaaab9e",
+      "baseSHA256": "a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b",
+      "currentSHA256": "a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b",
+      "bytes": 6,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/11/objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "baseObject": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "baseSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "currentSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/12/bodies/0e24c0c870c696ccf688d9ddcf681510516ef6afb760621853af04d173291854",
+      "baseObject": "9741380f5214b5c2e94c8b04688832d1d69ac139",
+      "baseSHA256": "0e24c0c870c696ccf688d9ddcf681510516ef6afb760621853af04d173291854",
+      "currentSHA256": "0e24c0c870c696ccf688d9ddcf681510516ef6afb760621853af04d173291854",
+      "bytes": 29,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/12/bodies/121fdcbb8286cec13a55d621ec0dda07e721079eef0cf727c49903b45dd6b2fe",
+      "baseObject": "c720f978c9e51c6f5d8bd8c0f03e62c359459971",
+      "baseSHA256": "121fdcbb8286cec13a55d621ec0dda07e721079eef0cf727c49903b45dd6b2fe",
+      "currentSHA256": "121fdcbb8286cec13a55d621ec0dda07e721079eef0cf727c49903b45dd6b2fe",
+      "bytes": 29,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/12/bodies/dbfa7ba648c8fb9a7c5b6c3ea37563d66196d431666dddc0e390d5daa080c444",
+      "baseObject": "15efd6f5f1f7cc92529411c6d532fa599d49a1e7",
+      "baseSHA256": "dbfa7ba648c8fb9a7c5b6c3ea37563d66196d431666dddc0e390d5daa080c444",
+      "currentSHA256": "dbfa7ba648c8fb9a7c5b6c3ea37563d66196d431666dddc0e390d5daa080c444",
+      "bytes": 35,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/12/log/00000000000000000001.jsonl",
+      "baseObject": "6893f923e3396690da32cffd29b6367ff7566136",
+      "baseSHA256": "6586720b28a19f997dd0890a6dbc71d27ffdf395fd000e68b6aedbbbe0ce79f8",
+      "currentSHA256": "6586720b28a19f997dd0890a6dbc71d27ffdf395fd000e68b6aedbbbe0ce79f8",
+      "bytes": 115128,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/12/objects/398455cfb72d36d78b6b1819bb59708371d25d2503bba258181712a2cf36ce6e",
+      "baseObject": "679b99dcf91699348ef888a9610bcd09b21bb97c",
+      "baseSHA256": "398455cfb72d36d78b6b1819bb59708371d25d2503bba258181712a2cf36ce6e",
+      "currentSHA256": "398455cfb72d36d78b6b1819bb59708371d25d2503bba258181712a2cf36ce6e",
+      "bytes": 16,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/12/objects/d832c9deb9d8ee1a562f9b5dda200818a05f91cc4b2802e80ce81c735ffa064e",
+      "baseObject": "42813d9eeec5cd348ba9384c724d1ac62b63788a",
+      "baseSHA256": "d832c9deb9d8ee1a562f9b5dda200818a05f91cc4b2802e80ce81c735ffa064e",
+      "currentSHA256": "d832c9deb9d8ee1a562f9b5dda200818a05f91cc4b2802e80ce81c735ffa064e",
+      "bytes": 15,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/12/objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "baseObject": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "baseSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "currentSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/13/bodies/91bcc3dba39a97a337829a4150acae0f0918e67eb64396aee01d1afdc951a269",
+      "baseObject": "1bb191ace3258ae483a8ec1e03b9d1f37360cfba",
+      "baseSHA256": "91bcc3dba39a97a337829a4150acae0f0918e67eb64396aee01d1afdc951a269",
+      "currentSHA256": "91bcc3dba39a97a337829a4150acae0f0918e67eb64396aee01d1afdc951a269",
+      "bytes": 32,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/13/log/00000000000000000001.jsonl",
+      "baseObject": "bc6d0e0a22fe5316a1fec4e4527ca2615716a064",
+      "baseSHA256": "50b41cf739cbef89bec234cf64873e80af85188b256c66d6cb1e86ebea3555ff",
+      "currentSHA256": "50b41cf739cbef89bec234cf64873e80af85188b256c66d6cb1e86ebea3555ff",
+      "bytes": 190713,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/13/objects/a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b",
+      "baseObject": "95285ac337ee9a83a05385b68b0b92d0caaaab9e",
+      "baseSHA256": "a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b",
+      "currentSHA256": "a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b",
+      "bytes": 6,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/13/objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d1/core/objects/312ee20080d1e7610b94b7dbc89ceb0f42a8250738b7e572a8f297c7751a8736",
+      "baseObject": "2fd49aefb58252b08214a1405a157feaa3f8b799",
+      "baseSHA256": "312ee20080d1e7610b94b7dbc89ceb0f42a8250738b7e572a8f297c7751a8736",
+      "currentSHA256": "312ee20080d1e7610b94b7dbc89ceb0f42a8250738b7e572a8f297c7751a8736",
+      "bytes": 67,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/13/objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d1/core/objects/4f3a2d40ae3df0268204f8619d566e378961bebcea0a3daaabf738b7d0001ec7",
+      "baseObject": "15c5ffea2eeb317ef40c1fdd4915e0d3560987e0",
+      "baseSHA256": "4f3a2d40ae3df0268204f8619d566e378961bebcea0a3daaabf738b7d0001ec7",
+      "currentSHA256": "4f3a2d40ae3df0268204f8619d566e378961bebcea0a3daaabf738b7d0001ec7",
+      "bytes": 315,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/13/objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d1/core/objects/55706821e9f1197621c6cc08234c7ecde67ae4c8a92815f26d905cabed079cdb",
+      "baseObject": "6ebdb86ab79859ddf22b0d3345a6ebe4bc5919eb",
+      "baseSHA256": "55706821e9f1197621c6cc08234c7ecde67ae4c8a92815f26d905cabed079cdb",
+      "currentSHA256": "55706821e9f1197621c6cc08234c7ecde67ae4c8a92815f26d905cabed079cdb",
+      "bytes": 84,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/13/objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d1/core/objects/a6666404b2692b6634e550aeca21a17cdb60c744bc24206d203b34db6f9ae5c8",
+      "baseObject": "170f27c2e953e8bb29288ae2536165d54c644d3b",
+      "baseSHA256": "a6666404b2692b6634e550aeca21a17cdb60c744bc24206d203b34db6f9ae5c8",
+      "currentSHA256": "a6666404b2692b6634e550aeca21a17cdb60c744bc24206d203b34db6f9ae5c8",
+      "bytes": 574,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/13/objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d1/core/objects/abbbac539288497fbe1465c534a0287fb67dfea4085ddd33d8cdac1daa902376",
+      "baseObject": "294afcf42acdbcb53be1231102e04bc99e3ecab2",
+      "baseSHA256": "abbbac539288497fbe1465c534a0287fb67dfea4085ddd33d8cdac1daa902376",
+      "currentSHA256": "abbbac539288497fbe1465c534a0287fb67dfea4085ddd33d8cdac1daa902376",
+      "bytes": 589,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/13/objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d2/core/objects/1f417fb8c14eb0ca1aa3184119a375448be6196b288966519f74f7139364fc8b",
+      "baseObject": "9df3d048c307f6c1cfd30293968f3959b108f6da",
+      "baseSHA256": "1f417fb8c14eb0ca1aa3184119a375448be6196b288966519f74f7139364fc8b",
+      "currentSHA256": "1f417fb8c14eb0ca1aa3184119a375448be6196b288966519f74f7139364fc8b",
+      "bytes": 430,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/13/objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d2/core/objects/354d73188334fc9282beb07b702e2d9660fe63a4585ada9640e3fa047f05dd4f",
+      "baseObject": "3a165abeeeffd429abf263f93650e68376f14bef",
+      "baseSHA256": "354d73188334fc9282beb07b702e2d9660fe63a4585ada9640e3fa047f05dd4f",
+      "currentSHA256": "354d73188334fc9282beb07b702e2d9660fe63a4585ada9640e3fa047f05dd4f",
+      "bytes": 594,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/13/objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d2/core/objects/359a718394436350faf2b14993295f0905c2524ba00319d58777613ce7cf1bcc",
+      "baseObject": "794251998444d396085b04b1ffe29f5b67096bc9",
+      "baseSHA256": "359a718394436350faf2b14993295f0905c2524ba00319d58777613ce7cf1bcc",
+      "currentSHA256": "359a718394436350faf2b14993295f0905c2524ba00319d58777613ce7cf1bcc",
+      "bytes": 167,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/13/objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d2/core/objects/4f3a2d40ae3df0268204f8619d566e378961bebcea0a3daaabf738b7d0001ec7",
+      "baseObject": "15c5ffea2eeb317ef40c1fdd4915e0d3560987e0",
+      "baseSHA256": "4f3a2d40ae3df0268204f8619d566e378961bebcea0a3daaabf738b7d0001ec7",
+      "currentSHA256": "4f3a2d40ae3df0268204f8619d566e378961bebcea0a3daaabf738b7d0001ec7",
+      "bytes": 315,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/13/objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d2/core/objects/54ee1d1e3f68412171037aa615bacae4f862d803f4ac2004f65d07356e320e3f",
+      "baseObject": "bc2fe79f6c593c7e5029812ecb70e208cd44b289",
+      "baseSHA256": "54ee1d1e3f68412171037aa615bacae4f862d803f4ac2004f65d07356e320e3f",
+      "currentSHA256": "54ee1d1e3f68412171037aa615bacae4f862d803f4ac2004f65d07356e320e3f",
+      "bytes": 332,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/13/objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d2/core/objects/66e417355a1b4f1ddb7c6d9ce1f7bf06fec4b3a008cad59f201f0ce4cebd2e38",
+      "baseObject": "bbb8a3d21b241062137db3f404bd422f6a3ad9d1",
+      "baseSHA256": "66e417355a1b4f1ddb7c6d9ce1f7bf06fec4b3a008cad59f201f0ce4cebd2e38",
+      "currentSHA256": "66e417355a1b4f1ddb7c6d9ce1f7bf06fec4b3a008cad59f201f0ce4cebd2e38",
+      "bytes": 71,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/13/objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d2/core/objects/79119b5437fcaf9b9e501cd1a20aa1a269a7a276ac09b2d694f264ce85f0c885",
+      "baseObject": "dd9ff29c202888ebcaba7055687476e916e2ff7a",
+      "baseSHA256": "79119b5437fcaf9b9e501cd1a20aa1a269a7a276ac09b2d694f264ce85f0c885",
+      "currentSHA256": "79119b5437fcaf9b9e501cd1a20aa1a269a7a276ac09b2d694f264ce85f0c885",
+      "bytes": 576,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/13/objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d2/core/objects/8cf1f92e41921d777b8cd4c541a15d7749c12131c78f9cef887a16d8e2b88bee",
+      "baseObject": "0eeb00299b007f3c5de2106329a038f720d7038c",
+      "baseSHA256": "8cf1f92e41921d777b8cd4c541a15d7749c12131c78f9cef887a16d8e2b88bee",
+      "currentSHA256": "8cf1f92e41921d777b8cd4c541a15d7749c12131c78f9cef887a16d8e2b88bee",
+      "bytes": 516,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/13/objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d2/core/objects/e9bd1e74693c754a7e368f52990882d4f82de6bd499dd8f712ae8c7df9bb8d62",
+      "baseObject": "319b8e7d877d132eef5a87ec419bb145160bf138",
+      "baseSHA256": "e9bd1e74693c754a7e368f52990882d4f82de6bd499dd8f712ae8c7df9bb8d62",
+      "currentSHA256": "e9bd1e74693c754a7e368f52990882d4f82de6bd499dd8f712ae8c7df9bb8d62",
+      "bytes": 89,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/13/objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "baseObject": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "baseSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "currentSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/139/bodies/e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5",
+      "baseObject": "b9c77957538280c31346b2d530f6ce2a2b155760",
+      "baseSHA256": "e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5",
+      "currentSHA256": "e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5",
+      "bytes": 41,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/139/log/00000000000000000001.jsonl",
+      "baseObject": "9fdb2ef749b3594b5c8e52be1ec13a9ae08d4ca6",
+      "baseSHA256": "db1476e07b355d909dfb07cce79f142387469618709bc52a3f496395b94c5134",
+      "currentSHA256": "db1476e07b355d909dfb07cce79f142387469618709bc52a3f496395b94c5134",
+      "bytes": 63815,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/139/objects/a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b",
+      "baseObject": "95285ac337ee9a83a05385b68b0b92d0caaaab9e",
+      "baseSHA256": "a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b",
+      "currentSHA256": "a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b",
+      "bytes": 6,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/f3/139/objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "baseObject": "e69de29bb2d1d6434b8b29ae775ad8c2e48c5391",
+      "baseSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "currentSHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "CRbytes": 0,
+      "matches": true
+    },
+    {
+      "path": "contract/ledger/testdata/u3/61/log/00000000000000000001.jsonl",
+      "baseObject": "03d57afe89f47c4ac5b4f122f08a65829882706d",
+      "baseSHA256": "6c7169aa9cfe77bb8976348f515ef85ec8da82b277520f82fd2bf169e6c45e0f",
+      "currentSHA256": "6c7169aa9cfe77bb8976348f515ef85ec8da82b277520f82fd2bf169e6c45e0f",
+      "bytes": 63336,
+      "CRbytes": 0,
+      "matches": true
+    }
+  ]
+}

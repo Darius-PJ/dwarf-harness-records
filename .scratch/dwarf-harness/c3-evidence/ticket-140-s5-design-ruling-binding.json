@@ -1,0 +1,37 @@
+{
+  "transcript": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22\\RuleT140S5Astra.jsonl",
+  "messageId": "1d7d1fb9",
+  "timestamp": "2026-10-29T18:04:11.415Z",
+  "sha256": "ef2dfa6612bf2114dcb3229d474d841389df749d868fdb1dfb9bfb36ca702611",
+  "briefSHA256": "93bf8a13f847d03626672caae2a77f35e97ddfcc968b63568dd4ea12bc81cc55",
+  "subject": "8a17ec1ed2617ca2a4e5203479f75f363b359970",
+  "capture": "ActualoriginallatestassistantJSONsubstringverbatim/no summaryretype/reserialization",
+  "actualProvider": "openai-codex",
+  "actualModel": "gpt-6-astra",
+  "routeEvents": [
+    {
+      "type": "model_change",
+      "id": "79003f1b",
+      "parentId": null,
+      "timestamp": "2026-10-29T17:52:27.567Z",
+      "runtime": {
+        "version": "18.13.3"
+      },
+      "model": "openai-codex/gpt-6-astra",
+      "resolvedModelIsFallback": false
+    },
+    {
+      "type": "thinking_level_change",
+      "id": "5c627b6d",
+      "parentId": "79003f1b",
+      "timestamp": "2026-10-29T17:52:27.573Z",
+      "runtime": {
+        "version": "18.13.3"
+      },
+      "thinkingLevel": "max",
+      "configured": null
+    }
+  ],
+  "verdict": "reject",
+  "implementationAuthorized": false
+}

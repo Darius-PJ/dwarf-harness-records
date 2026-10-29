@@ -1,0 +1,30 @@
+{
+    "name":  "11-module-tidy-diff",
+    "executable":  "C:/Program Files/Go/bin/go.exe",
+    "argv":  [
+                 "mod",
+                 "tidy",
+                 "-diff"
+             ],
+    "cwd":  "C:/Users/darius.jones/worktrees/dwarf-harness/140-final-ack",
+    "environmentOverrides":  {
+                                 "GOTOOLCHAIN":  "local",
+                                 "GOFLAGS":  "",
+                                 "GOROOT":  "C:/Program Files/Go",
+                                 "GOOS":  "windows",
+                                 "GOARCH":  "amd64",
+                                 "CGO_ENABLED":  "0"
+                             },
+    "timeoutSeconds":  600,
+    "startedUTC":  "2026-10-29T20:57:25.4433596Z",
+    "finishedUTC":  "2026-10-29T20:57:25.5644526Z",
+    "elapsedSeconds":  0.11683149999999999,
+    "exitCode":  0,
+    "timedOut":  false,
+    "reaped":  true,
+    "streamsComplete":  true,
+    "error":  null,
+    "stdout":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\imports-module-remaining-20261029T205724896Z-15852\\11-module-tidy-diff.stdout.log",
+    "stderr":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\imports-module-remaining-20261029T205724896Z-15852\\11-module-tidy-diff.stderr.log",
+    "metadata":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\imports-module-remaining-20261029T205724896Z-15852\\11-module-tidy-diff.json"
+}

@@ -1,0 +1,8 @@
+=== RUN   TestReaderCheckpointAnchorAndFallback
+=== RUN   TestReaderCheckpointAnchorAndFallback/damaged_afterHash
+=== PAUSE TestReaderCheckpointAnchorAndFallback/damaged_afterHash
+=== CONT  TestReaderCheckpointAnchorAndFallback/damaged_afterHash
+--- PASS: TestReaderCheckpointAnchorAndFallback (0.00s)
+    --- PASS: TestReaderCheckpointAnchorAndFallback/damaged_afterHash (0.01s)
+PASS
+ok  	github.com/Darius-PJ/dwarf-harness/contract/ledger	1.078s

@@ -1,0 +1,12 @@
+{
+  "text": "Symbols in contract/ledger/scan.go:\n\ud83d\udcc1 CheckResult struct{...} @ line 16\n  \u2022 Last Chain @ line 17\n  \u2022 Segment string @ line 18\n  \u2022 Size int64 @ line 19\n  \u2022 TornBytes int64 @ line 20\n\u27f2 Check func(logDir string, colony uuid.UUID) (CheckResult, error) @ line 28\n\ud83d\udcc1 scanner struct{...} @ line 55\n  \u2022 dir string @ line 56\n  \u2022 segs []segment @ line 57\n  \u2022 i int @ line 58\n  \u2022 f *os.File @ line 59\n  \u2022 lr lineReader @ line 60\n  \u2022 v verifier @ line 61\n  \u2022 tail bool @ line 62\n  \u2022 keep func(*Envelope) bool @ line 63\n  \u2022 compact bytes.Buffer @ line 64\n  \u2022 eof bool @ line 65\n  \u2022 end int64 @ line 67\n  \u2022 torn int64 @ line 68\n  \u2022 cur Commit @ line 69\n\u27f2 newScanner func(dir string, segs []segment, colony uuid.UUID, start Chain, tail bool, keep func(*Envelope) bool) *scanner @ line 72\n\u27f2 (*scanner).close func() @ line 82\n\u27f2 (*scanner).corrupt func(off int64, reason string) error @ line 89\n\u27f2 (*scanner).next func() (Commit, error) @ line 97\n\u27f2 (*scanner).scan func() (Commit, error) @ line 109\n\u27f2 (*scanner).open func() error @ line 186\n\u27f2 (*scanner).tornTail func() error @ line 203\n\u27f2 checkTorn func(r []byte, seg string, base int64, last Chain, colony uuid.UUID, compact *bytes.Buffer) error @ line 223\n\u27f2 lineError func(seg string, off int64, err error) error @ line 297\n\ud83d\udcc1 verifier struct{...} @ line 306\n  \u2022 colony uuid.UUID @ line 307\n  \u2022 done Chain @ line 308\n  \u2022 cur Chain @ line 309\n  \u2022 id uuid.UUID @ line 312\n  \u2022 count int @ line 313\n  \u2022 next int @ line 314\n  \u2022 held bool @ line 315\n  \u2022 size int @ line 316\n\u27f2 (*verifier).accept func(e *Envelope, hash string, n int) (bool, string) @ line 321\n\u2022 errPartial @ line 365\n\u2022 errLong @ line 366\n\ud83d\udcc1 lineReader struct{...} @ line 370\n  \u2022 br *bufio.Reader @ line 371\n  \u2022 off int64 @ line 372\n  \u2022 buf []byte @ line 373\n\u27f2 (*lineReader).reset func(r io.Reader) @ line 376\n\u27f2 (*lineReader).next func() (line []byte, off int64, err error) @ line 388",
+  "details": {
+    "serverName": "gopls",
+    "action": "symbols",
+    "success": true,
+    "request": {
+      "action": "symbols",
+      "file": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\contract\\ledger\\scan.go"
+    }
+  }
+}

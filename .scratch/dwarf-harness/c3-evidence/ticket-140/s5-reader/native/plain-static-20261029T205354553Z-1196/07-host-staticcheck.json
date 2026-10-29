@@ -1,0 +1,30 @@
+{
+    "name":  "07-host-staticcheck",
+    "executable":  "C:/Program Files/Go/bin/go.exe",
+    "argv":  [
+                 "tool",
+                 "staticcheck",
+                 "./contract/ledger"
+             ],
+    "cwd":  "C:/Users/darius.jones/worktrees/dwarf-harness/140-final-ack",
+    "environmentOverrides":  {
+                                 "GOTOOLCHAIN":  "local",
+                                 "GOFLAGS":  "",
+                                 "GOROOT":  "C:/Program Files/Go",
+                                 "GOOS":  "windows",
+                                 "GOARCH":  "amd64",
+                                 "CGO_ENABLED":  "0"
+                             },
+    "timeoutSeconds":  600,
+    "startedUTC":  "2026-10-29T20:54:03.4339944Z",
+    "finishedUTC":  "2026-10-29T20:54:06.0495226Z",
+    "elapsedSeconds":  2.6125873,
+    "exitCode":  0,
+    "timedOut":  false,
+    "reaped":  true,
+    "streamsComplete":  true,
+    "error":  null,
+    "stdout":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196\\07-host-staticcheck.stdout.log",
+    "stderr":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196\\07-host-staticcheck.stderr.log",
+    "metadata":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196\\07-host-staticcheck.json"
+}

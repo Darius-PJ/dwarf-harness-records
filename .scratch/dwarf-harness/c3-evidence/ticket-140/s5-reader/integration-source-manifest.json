@@ -1,0 +1,65 @@
+{
+  "status": "M3_ACTUAL_SOURCE_AND_FINAL_RECORD_RETENTION",
+  "publicFreezeSHA": "bf71ba15cfc24095e36cf7230115694e665275ad",
+  "ownHostedRun": 40959042523,
+  "copies": [
+    {
+      "source": "https://api.github.com/repos/Darius-PJ/dwarf-harness/actions/runs/40959042523",
+      "privatePath": ".scratch/dwarf-harness/c3-evidence/ticket-140/s5-reader/hosted/workflow.json",
+      "sha256": "30e21971ad2d905caf5ea00548397f3c5b3546c47112c499a64decd5f1200294",
+      "bytes": 12498,
+      "CRbytes": 0,
+      "verbatim": true
+    },
+    {
+      "source": "https://api.github.com/repos/Darius-PJ/dwarf-harness/actions/runs/40959042523/jobs?per_page=100",
+      "privatePath": ".scratch/dwarf-harness/c3-evidence/ticket-140/s5-reader/hosted/jobs.json",
+      "sha256": "45f8af0fd2a0f27550b76c1ff496d48868270c8c754c2192d405a4ee73566b1e",
+      "bytes": 11126,
+      "CRbytes": 0,
+      "verbatim": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22\\local\\t140-s5-c1-final-evidence.md",
+      "privatePath": ".scratch/dwarf-harness/c3-evidence/ticket-140/s5-reader/parent-artifacts/t140-s5-c1-final-evidence.md",
+      "sha256": "fbbd75a56c0f8a99184b73fb8136dc96ccce8982ec538a3e05a4bc64286e8584",
+      "bytes": 30398,
+      "CRbytes": 0,
+      "verbatim": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22\\local\\t140-s5-c1-final-private-edits.md",
+      "privatePath": ".scratch/dwarf-harness/c3-evidence/ticket-140/s5-reader/parent-artifacts/t140-s5-c1-final-private-edits.md",
+      "sha256": "453bd8c323d873d099d6a591213818c0bd31e1c9cf7f105c2ef61c166e0764dc",
+      "bytes": 43115,
+      "CRbytes": 0,
+      "verbatim": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22\\local\\t140-s5-c1-hosted-success.json",
+      "privatePath": ".scratch/dwarf-harness/c3-evidence/ticket-140/s5-reader/parent-artifacts/t140-s5-c1-hosted-success.json",
+      "sha256": "545a4842ebe28b25bbca7d1bf5c95b7d292e547878d97b6ce9c7fb18a636a2e8",
+      "bytes": 4203,
+      "CRbytes": 119,
+      "verbatim": true
+    },
+    {
+      "source": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22\\local\\t140-s5-c1-main-publication.json",
+      "privatePath": ".scratch/dwarf-harness/c3-evidence/ticket-140/s5-reader/parent-artifacts/t140-s5-c1-main-publication.json",
+      "sha256": "c1e15dad047439b77ed8a2bdaa04c4d8426eddfe140c74651dea5a5da8e99897",
+      "bytes": 1747,
+      "CRbytes": 39,
+      "verbatim": true
+    }
+  ],
+  "finalRecordSHA256": {
+    "docs/DECISIONS.md": "b68fae427907cfb3d57cbca6dd52bea835639f013235996e233fb7801fe7f6c9",
+    ".scratch/dwarf-harness/c3-evidence/ticket-140-s5-reader-freeze-evidence.md": "fbbd75a56c0f8a99184b73fb8136dc96ccce8982ec538a3e05a4bc64286e8584",
+    ".scratch/dwarf-harness/c3-evidence/ticket-140/s5-reader/source-manifest.json": "009912767d4b974e2755a76addf6509962ed0318474d1c54d6814d1ed73f3cfe"
+  },
+  "integrationBindingPath": ".scratch/dwarf-harness/c3-evidence/ticket-140/s5-reader/integration-binding.json",
+  "integrationBindingSHA256": "31ac6eabb65fcf00d603bcbdb643feef46c7dc5ec1b2c04553dda19396657ab7",
+  "originalM0M1M2Manifest": ".scratch/dwarf-harness/c3-evidence/ticket-140/s5-reader/source-manifest.json",
+  "originalSnapshotNotRewritten": true,
+  "privatePublicationAndCoreRelease": "Externalactualreceiptsafterguardedprivatepublication;no selfreferentialcommitforecast"
+}

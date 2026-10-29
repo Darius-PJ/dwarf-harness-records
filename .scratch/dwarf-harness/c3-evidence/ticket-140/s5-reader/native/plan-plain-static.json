@@ -1,0 +1,116 @@
+{
+  "stage": "plain-static",
+  "purpose": "ONEsettledverboseledgerpackageplusactualversion/hostvet-static/import/moduleonly;afterfourmutantsRESTORED/PMrelease",
+  "commands": [
+    {
+      "name": "04-go-version",
+      "executable": "go",
+      "argv": [
+        "version"
+      ],
+      "timeoutSeconds": 60,
+      "expectedExit": 0,
+      "requireEmptyOutput": false
+    },
+    {
+      "name": "05-ledger-plain",
+      "executable": "go",
+      "argv": [
+        "test",
+        "-count=1",
+        "-timeout=19m",
+        "-v",
+        "./contract/ledger"
+      ],
+      "timeoutSeconds": 1200,
+      "expectedExit": 0,
+      "requireEmptyOutput": false
+    },
+    {
+      "name": "06-host-vet",
+      "executable": "go",
+      "argv": [
+        "vet",
+        "./contract/ledger"
+      ],
+      "timeoutSeconds": 600,
+      "expectedExit": 0,
+      "requireEmptyOutput": true
+    },
+    {
+      "name": "07-host-staticcheck",
+      "executable": "go",
+      "argv": [
+        "tool",
+        "staticcheck",
+        "./contract/ledger"
+      ],
+      "timeoutSeconds": 600,
+      "expectedExit": 0,
+      "requireEmptyOutput": true
+    },
+    {
+      "name": "08-production-imports",
+      "executable": "go",
+      "argv": [
+        "list",
+        "-f",
+        "{{join .Imports \"\n\"}}",
+        "./contract/ledger"
+      ],
+      "timeoutSeconds": 300,
+      "expectedExit": 0,
+      "requireEmptyOutput": false
+    },
+    {
+      "name": "09-test-imports",
+      "executable": "go",
+      "argv": [
+        "list",
+        "-f",
+        "{{join .TestImports \"\n\"}}",
+        "./contract/ledger"
+      ],
+      "timeoutSeconds": 300,
+      "expectedExit": 0,
+      "requireEmptyOutput": false
+    },
+    {
+      "name": "10-nonstandard-dependencies",
+      "executable": "go",
+      "argv": [
+        "list",
+        "-deps",
+        "-f",
+        "{{if not .Standard}}{{.ImportPath}}{{end}}",
+        "./contract/ledger"
+      ],
+      "timeoutSeconds": 300,
+      "expectedExit": 0,
+      "requireEmptyOutput": false
+    },
+    {
+      "name": "11-module-tidy-diff",
+      "executable": "go",
+      "argv": [
+        "mod",
+        "tidy",
+        "-diff"
+      ],
+      "timeoutSeconds": 600,
+      "expectedExit": 0,
+      "requireEmptyOutput": true
+    },
+    {
+      "name": "12-module-verify",
+      "executable": "go",
+      "argv": [
+        "mod",
+        "verify"
+      ],
+      "timeoutSeconds": 600,
+      "expectedExit": 0,
+      "requireEmptyOutput": false
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+=== RUN   TestReaderCheckpointErrors
+=== RUN   TestReaderCheckpointErrors/numeric_EOF_close_failure
+=== PAUSE TestReaderCheckpointErrors/numeric_EOF_close_failure
+=== CONT  TestReaderCheckpointErrors/numeric_EOF_close_failure
+    reader_test.go:621: actual close failure not retained: <nil>
+--- FAIL: TestReaderCheckpointErrors (0.00s)
+    --- FAIL: TestReaderCheckpointErrors/numeric_EOF_close_failure (0.01s)
+FAIL
+FAIL	github.com/Darius-PJ/dwarf-harness/contract/ledger	1.057s
+FAIL

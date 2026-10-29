@@ -1,0 +1,14 @@
+{
+  "text": "Found 1 definition(s):\n  contract/ledger/scan.go:72:6\n    71: \n    72: func newScanner(dir string, segs []segment, colony uuid.UUID, start Chain, tail bool, keep func(*Envelope) bool) *scanner {\n    73: \treturn &scanner{",
+  "details": {
+    "serverName": "gopls",
+    "action": "definition",
+    "success": true,
+    "request": {
+      "action": "definition",
+      "file": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\contract\\ledger\\reader.go",
+      "line": 92,
+      "symbol": "newScanner"
+    }
+  }
+}

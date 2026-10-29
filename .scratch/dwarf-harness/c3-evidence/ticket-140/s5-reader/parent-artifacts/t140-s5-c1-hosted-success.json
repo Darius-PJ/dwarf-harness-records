@@ -1,0 +1,119 @@
+{
+  "status": "OWN_EXACT_SHA_FULL_HOSTED_SUCCESS",
+  "sha": "bf71ba15cfc24095e36cf7230115694e665275ad",
+  "runID": 40959042523,
+  "runNumber": 12,
+  "attempt": 1,
+  "url": "https://github.com/Darius-PJ/dwarf-harness/actions/runs/40959042523",
+  "updatedUTC": "2026-10-29T22:08:20Z",
+  "conclusion": "success",
+  "jobs": [
+    {
+      "id": 123746664978,
+      "name": "changes",
+      "conclusion": "success",
+      "startedUTC": "2026-10-29T21:35:18Z",
+      "completedUTC": "2026-10-29T21:35:23Z",
+      "fullCheckStep": [],
+      "windowsRaceCompilerStep": []
+    },
+    {
+      "id": 123746727406,
+      "name": "Check / windows-amd64",
+      "conclusion": "success",
+      "startedUTC": "2026-10-29T21:35:26Z",
+      "completedUTC": "2026-10-29T22:08:14Z",
+      "fullCheckStep": [
+        {
+          "name": "Run the full check",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-29T21:36:01Z",
+          "completed_at": "2026-10-29T22:08:10Z"
+        }
+      ],
+      "windowsRaceCompilerStep": [
+        {
+          "name": "Install verified Windows race compiler",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 7,
+          "started_at": "2026-10-29T21:35:55Z",
+          "completed_at": "2026-10-29T21:36:01Z"
+        }
+      ]
+    },
+    {
+      "id": 123746727452,
+      "name": "Check / linux-amd64",
+      "conclusion": "success",
+      "startedUTC": "2026-10-29T21:35:27Z",
+      "completedUTC": "2026-10-29T21:49:07Z",
+      "fullCheckStep": [
+        {
+          "name": "Run the full check",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-29T21:35:32Z",
+          "completed_at": "2026-10-29T21:49:03Z"
+        }
+      ],
+      "windowsRaceCompilerStep": [
+        {
+          "name": "Install verified Windows race compiler",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 7,
+          "started_at": "2026-10-29T21:35:32Z",
+          "completed_at": "2026-10-29T21:35:32Z"
+        }
+      ]
+    },
+    {
+      "id": 123746727513,
+      "name": "Check / macos-arm64",
+      "conclusion": "success",
+      "startedUTC": "2026-10-29T21:36:22Z",
+      "completedUTC": "2026-10-29T21:55:15Z",
+      "fullCheckStep": [
+        {
+          "name": "Run the full check",
+          "status": "completed",
+          "conclusion": "success",
+          "number": 8,
+          "started_at": "2026-10-29T21:36:34Z",
+          "completed_at": "2026-10-29T21:55:10Z"
+        }
+      ],
+      "windowsRaceCompilerStep": [
+        {
+          "name": "Install verified Windows race compiler",
+          "status": "completed",
+          "conclusion": "skipped",
+          "number": 7,
+          "started_at": "2026-10-29T21:36:34Z",
+          "completed_at": "2026-10-29T21:36:34Z"
+        }
+      ]
+    },
+    {
+      "id": 123761953986,
+      "name": "Check result",
+      "conclusion": "success",
+      "startedUTC": "2026-10-29T22:08:17Z",
+      "completedUTC": "2026-10-29T22:08:19Z",
+      "fullCheckStep": [],
+      "windowsRaceCompilerStep": []
+    }
+  ],
+  "rawWorkflow": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-140\\s5-reader\\hosted\\workflow.json",
+  "rawJobs": "C:\\Users\\darius.jones\\Documents\\PROJECTS\\dwarf-harness\\.scratch\\dwarf-harness\\c3-evidence\\ticket-140\\s5-reader\\hosted\\jobs.json",
+  "rawSource": "Existingci_watch.pyrawHTTPgetter;readerjobspreviewwaslimited300/463lines/fullartifact2195;fullHTTPJSONretainedwithouttruncation",
+  "logs": "Actualwatcherobserved403onworkflow/joblogendpoints;nointernalpackagedurationsclaimed/noownerdownloadgate",
+  "localWatcherAttempts": "ghbg88commandnotfound127/noCIretry;existingstdlibAPIwatcherbg89completedALL5success",
+  "approvalOriginalSHA256": "16958d4e8a5f753322511da7099d9f365db81cb237bedaa4af546d233e764005",
+  "sourceBridge": "local://t140-s5-c1-freeze-source-bridge.json",
+  "CoreReleased": false
+}

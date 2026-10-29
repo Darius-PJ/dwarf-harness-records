@@ -1,0 +1,182 @@
+{
+  "status": "PARTIAL_LOCAL_PROOF_PASS_IMPORT_TEMPLATE_CAPTURE_STOP_ONLY",
+  "root": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196",
+  "actualGoVersion": "go version go1.27.3 windows/amd64",
+  "successful": [
+    "04-go-version",
+    "05-ledger-plain",
+    "06-host-vet",
+    "07-host-staticcheck"
+  ],
+  "plainTallies": {
+    "topTestPASS": 84,
+    "topFuzzPASS": 15,
+    "allPASSRows": 9382,
+    "FAIL": 0,
+    "SKIP": 0,
+    "packageLines": [
+      "PASS",
+      "ok  \tgithub.com/Darius-PJ/dwarf-harness/contract/ledger\t7.301s"
+    ]
+  },
+  "failed": "08-production-imports actual unterminatedquotedstring:generatedargumentcontainedactualLF,notliteralbackslashn",
+  "sourceUnchangedAll5": true,
+  "nativeFailureIsNotProductOrSemanticRed": true,
+  "all5ChildrenReaped": true,
+  "PMGoReleased": true,
+  "repair": "CopiedEXACTsuccessful13908/09argvtemplatevalues;newremainingplanonly08+unrun09\u201312",
+  "newGrant": "primary-t140-s5-reader-84d0-20261029-imports-remaining",
+  "commands": [
+    {
+      "name": "04-go-version",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": [
+        "version"
+      ],
+      "cwd": "C:/Users/darius.jones/worktrees/dwarf-harness/140-final-ack",
+      "environmentOverrides": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "GOROOT": "C:/Program Files/Go",
+        "GOOS": "windows",
+        "GOARCH": "amd64",
+        "CGO_ENABLED": "0"
+      },
+      "timeoutSeconds": 60,
+      "startedUTC": "2026-10-29T20:53:54.6928249Z",
+      "finishedUTC": "2026-10-29T20:53:54.7873292Z",
+      "elapsedSeconds": 0.08528419999999999,
+      "exitCode": 0,
+      "timedOut": false,
+      "reaped": true,
+      "streamsComplete": true,
+      "error": null,
+      "stdout": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196\\04-go-version.stdout.log",
+      "stderr": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196\\04-go-version.stderr.log",
+      "metadata": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196\\04-go-version.json"
+    },
+    {
+      "name": "05-ledger-plain",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": [
+        "test",
+        "-count=1",
+        "-timeout=19m",
+        "-v",
+        "./contract/ledger"
+      ],
+      "cwd": "C:/Users/darius.jones/worktrees/dwarf-harness/140-final-ack",
+      "environmentOverrides": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "GOROOT": "C:/Program Files/Go",
+        "GOOS": "windows",
+        "GOARCH": "amd64",
+        "CGO_ENABLED": "0"
+      },
+      "timeoutSeconds": 1200,
+      "startedUTC": "2026-10-29T20:53:54.8189016Z",
+      "finishedUTC": "2026-10-29T20:54:02.9494512Z",
+      "elapsedSeconds": 8.1275619,
+      "exitCode": 0,
+      "timedOut": false,
+      "reaped": true,
+      "streamsComplete": true,
+      "error": null,
+      "stdout": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196\\05-ledger-plain.stdout.log",
+      "stderr": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196\\05-ledger-plain.stderr.log",
+      "metadata": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196\\05-ledger-plain.json"
+    },
+    {
+      "name": "06-host-vet",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": [
+        "vet",
+        "./contract/ledger"
+      ],
+      "cwd": "C:/Users/darius.jones/worktrees/dwarf-harness/140-final-ack",
+      "environmentOverrides": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "GOROOT": "C:/Program Files/Go",
+        "GOOS": "windows",
+        "GOARCH": "amd64",
+        "CGO_ENABLED": "0"
+      },
+      "timeoutSeconds": 600,
+      "startedUTC": "2026-10-29T20:54:02.9601786Z",
+      "finishedUTC": "2026-10-29T20:54:03.4183577Z",
+      "elapsedSeconds": 0.4597695,
+      "exitCode": 0,
+      "timedOut": false,
+      "reaped": true,
+      "streamsComplete": true,
+      "error": null,
+      "stdout": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196\\06-host-vet.stdout.log",
+      "stderr": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196\\06-host-vet.stderr.log",
+      "metadata": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196\\06-host-vet.json"
+    },
+    {
+      "name": "07-host-staticcheck",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": [
+        "tool",
+        "staticcheck",
+        "./contract/ledger"
+      ],
+      "cwd": "C:/Users/darius.jones/worktrees/dwarf-harness/140-final-ack",
+      "environmentOverrides": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "GOROOT": "C:/Program Files/Go",
+        "GOOS": "windows",
+        "GOARCH": "amd64",
+        "CGO_ENABLED": "0"
+      },
+      "timeoutSeconds": 600,
+      "startedUTC": "2026-10-29T20:54:03.4339944Z",
+      "finishedUTC": "2026-10-29T20:54:06.0495226Z",
+      "elapsedSeconds": 2.6125873,
+      "exitCode": 0,
+      "timedOut": false,
+      "reaped": true,
+      "streamsComplete": true,
+      "error": null,
+      "stdout": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196\\07-host-staticcheck.stdout.log",
+      "stderr": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196\\07-host-staticcheck.stderr.log",
+      "metadata": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196\\07-host-staticcheck.json"
+    },
+    {
+      "name": "08-production-imports",
+      "executable": "C:/Program Files/Go/bin/go.exe",
+      "argv": [
+        "list",
+        "-f",
+        "{{join .Imports \"\n\"}}",
+        "./contract/ledger"
+      ],
+      "cwd": "C:/Users/darius.jones/worktrees/dwarf-harness/140-final-ack",
+      "environmentOverrides": {
+        "GOTOOLCHAIN": "local",
+        "GOFLAGS": "",
+        "GOROOT": "C:/Program Files/Go",
+        "GOOS": "windows",
+        "GOARCH": "amd64",
+        "CGO_ENABLED": "0"
+      },
+      "timeoutSeconds": 300,
+      "startedUTC": "2026-10-29T20:54:06.0556417Z",
+      "finishedUTC": "2026-10-29T20:54:06.0936000Z",
+      "elapsedSeconds": 0.037878999999999996,
+      "exitCode": 1,
+      "timedOut": false,
+      "reaped": true,
+      "streamsComplete": true,
+      "error": null,
+      "stdout": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196\\08-production-imports.stdout.log",
+      "stderr": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196\\08-production-imports.stderr.log",
+      "metadata": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196\\08-production-imports.json"
+    }
+  ],
+  "noRepeat": "No version/plain/vet/static/focus/mutant repeat;no new product source/gate"
+}

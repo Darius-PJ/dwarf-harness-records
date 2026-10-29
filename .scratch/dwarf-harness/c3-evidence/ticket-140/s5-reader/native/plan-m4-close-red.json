@@ -1,0 +1,22 @@
+{
+  "stage": "m4-close-red",
+  "purpose": "OneexactnamedReadersemanticoracle;expectednonzeroisNOTbyitselfredproof",
+  "commands": [
+    {
+      "name": "m4-close-red",
+      "executable": "go",
+      "argv": [
+        "test",
+        "-count=1",
+        "-timeout=19m",
+        "-v",
+        "./contract/ledger",
+        "-run",
+        "^TestReaderCheckpointErrors$/^numeric_EOF_close_failure$"
+      ],
+      "timeoutSeconds": 1200,
+      "expectedExit": 1,
+      "requireEmptyOutput": false
+    }
+  ]
+}

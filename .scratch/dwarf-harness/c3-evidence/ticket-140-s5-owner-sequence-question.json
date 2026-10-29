@@ -1,0 +1,18 @@
+{
+  "status": "ACTUAL_FRESH_RULING_REQUIRES_OWNER_ONLY_SEQUENCE_EXCEPTION;NOAPPROVAL_OR_CODE",
+  "subject": "8a17ec1ed2617ca2a4e5203479f75f363b359970",
+  "briefSHA256": "93bf8a13f847d03626672caae2a77f35e97ddfcc968b63568dd4ea12bc81cc55",
+  "rulingSHA256": "ef2dfa6612bf2114dcb3229d474d841389df749d868fdb1dfb9bfb36ca702611",
+  "actualReviewer": "openai-codex/gpt-6-astra/MAX/no fallback",
+  "D155CountExceptionActualPublished": "63f202643a4c6e45397b3c2cad210d6914296d07",
+  "exactOwnerQuestion": "Do you authorize a Ticket140-only exception to the completion-unit and slice-accounting rules of D125/D155: within the one fifth-and-final S5 assignment, first complete the C1 Reader capability as an independently evidenced and reviewed contract increment, freeze it under D125, and land its own successful exact-SHA hosted commit and freeze record on main before any C3 consumer code is written; then continue the same bounded assignment with C3 consumption and obtain a separate final combined review and exact-SHA hosted result? This explicitly permits two completion/integration milestones inside that one counted slice. It does not permit an upfront or retrospective freeze, a sixth slice, consumer coding before the integrated freeze, an API/safety waiver, or changes to the seven bounds, cache cap or traffic.",
+  "exceptionRequested": "ONEcountedfinalS5/TWOcompletion-integrationmilestones:C1completed-evidenced-reviewed-frozen+ownhostedcheckedSHAonmainBEFOREANYC3consumerCode,thenCorecompletion+separatefinalexactSHAreview/hosted/numericalacceptance",
+  "technicalCompatibility": "Ruledadditiveexistingledger-reader-v1;no frozenbreakingownerapprovaltriggeredasspecified",
+  "requiredCorrection": "P7ReaderCheckpointChangedPrefixispre-freezeprefixmutationoracle;C3warmServicecaseonlyafterintegratedfreeze;unchangedC1sourceboundproofreused",
+  "ownerSequenceApprovalReceived": false,
+  "nextDecisionNumberUnallocated": 156,
+  "B34": "Allocated139;notapplied;nextfreeB35unallocated",
+  "existingSevenBoundsAndProtocol": "UNCHANGED;S4twoPASSfiveFAILretained/notaccepted",
+  "implementationAssigned": false,
+  "computeReserved": false
+}

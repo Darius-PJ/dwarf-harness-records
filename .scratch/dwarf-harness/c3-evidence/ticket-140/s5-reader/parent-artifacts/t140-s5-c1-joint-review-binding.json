@@ -1,0 +1,47 @@
+{
+  "status": "ACTUAL_INDEPENDENT_JOINT_APPROVAL;NOT_CORE_RELEASE",
+  "actualSourceTranscript": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22\\ReviewT140C1Freeze.jsonl",
+  "actualAssistantMessage": "90ae3609",
+  "actualAssistantTimestamp": "2026-10-29T21:30:42.418Z",
+  "originalJSONBytes": 11139,
+  "originalJSONSHA256": "16958d4e8a5f753322511da7099d9f365db81cb237bedaa4af546d233e764005",
+  "originalJSONPath": "C:\\Users\\darius.jones\\.omp\\agent\\sessions\\-Documents-PROJECTS-dwarf-harness\\2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22\\local\\t140-s5-c1-joint-review-verbatim.json",
+  "requestSHA256": "60c158ba31332f9eb54948dd4c3f6eb1d6a86336e4f94b258eaaef48ffdf83c2",
+  "codeSHA": "81ae94d3e92b5fd5574f46046c42fc9c5e30ce6d",
+  "evidenceSHA256": "c6405bf018387cc66d72ead83156a3a6959828dd03f0b50be318706bc22f364c",
+  "exactRecordSHA256": "192487c0cf06973c15d2f5e8589b38bae638e86bd38acd9eb10e0d44a59e6383",
+  "actualModelEvents": [
+    {
+      "type": "model_change",
+      "id": "76737c5b",
+      "parentId": null,
+      "timestamp": "2026-10-29T21:23:25.309Z",
+      "runtime": {
+        "version": "18.13.3"
+      },
+      "model": "openai-codex/gpt-6-astra",
+      "resolvedModelIsFallback": false
+    }
+  ],
+  "actualEffortEvents": [
+    {
+      "type": "thinking_level_change",
+      "id": "9a3fb6c2",
+      "parentId": "76737c5b",
+      "timestamp": "2026-10-29T21:23:25.315Z",
+      "runtime": {
+        "version": "18.13.3"
+      },
+      "thinkingLevel": "max",
+      "configured": null
+    }
+  ],
+  "actualToolNames": [
+    "read"
+  ],
+  "verdict": "APPROVE",
+  "blockingFindings": 0,
+  "nonblockingFindings": 0,
+  "modelRoutingCount": 1,
+  "byteRetention": "EXACToriginalassistantJSONsubstringUTF8LF;noJSONreserialization"
+}

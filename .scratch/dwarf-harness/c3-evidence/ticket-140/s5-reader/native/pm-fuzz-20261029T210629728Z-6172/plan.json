@@ -1,0 +1,90 @@
+{
+    "stage":  "pm-fuzz",
+    "purpose":  "PMOWNEDFOURserial120s-p1actualchangedcodetargets;onlyaftersettledcommittedsource+PMgrant",
+    "commands":  [
+                     {
+                         "name":  "fuzz-FuzzReaderCheckpoint",
+                         "executable":  "go",
+                         "argv":  [
+                                      "test",
+                                      "-count=1",
+                                      "-timeout=19m",
+                                      "./contract/ledger",
+                                      "-run",
+                                      "^$",
+                                      "-fuzz",
+                                      "^FuzzReaderCheckpoint$",
+                                      "-fuzztime=120s",
+                                      "-parallel=1"
+                                  ],
+                         "timeoutSeconds":  1200,
+                         "expectedExit":  0,
+                         "requireEmptyOutput":  false
+                     },
+                     {
+                         "name":  "fuzz-FuzzCheckTruncation",
+                         "executable":  "go",
+                         "argv":  [
+                                      "test",
+                                      "-count=1",
+                                      "-timeout=19m",
+                                      "./contract/ledger",
+                                      "-run",
+                                      "^$",
+                                      "-fuzz",
+                                      "^FuzzCheckTruncation$",
+                                      "-fuzztime=120s",
+                                      "-parallel=1"
+                                  ],
+                         "timeoutSeconds":  1200,
+                         "expectedExit":  0,
+                         "requireEmptyOutput":  false
+                     },
+                     {
+                         "name":  "fuzz-FuzzCheckTornTail",
+                         "executable":  "go",
+                         "argv":  [
+                                      "test",
+                                      "-count=1",
+                                      "-timeout=19m",
+                                      "./contract/ledger",
+                                      "-run",
+                                      "^$",
+                                      "-fuzz",
+                                      "^FuzzCheckTornTail$",
+                                      "-fuzztime=120s",
+                                      "-parallel=1"
+                                  ],
+                         "timeoutSeconds":  1200,
+                         "expectedExit":  0,
+                         "requireEmptyOutput":  false
+                     },
+                     {
+                         "name":  "fuzz-FuzzCheckCorruption",
+                         "executable":  "go",
+                         "argv":  [
+                                      "test",
+                                      "-count=1",
+                                      "-timeout=19m",
+                                      "./contract/ledger",
+                                      "-run",
+                                      "^$",
+                                      "-fuzz",
+                                      "^FuzzCheckCorruption$",
+                                      "-fuzztime=120s",
+                                      "-parallel=1"
+                                  ],
+                         "timeoutSeconds":  1200,
+                         "expectedExit":  0,
+                         "requireEmptyOutput":  false
+                     }
+                 ],
+    "sourceCommit":  "81ae94d3e92b5fd5574f46046c42fc9c5e30ce6d",
+    "expectedSourceSHA256":  {
+                                 "contract/ledger/reader.go":  "75cb8a6e2bf9e7468787f7fd2708b2174aadfa741179a5ec97123f5eb959cc75",
+                                 "contract/ledger/scan.go":  "94652a4384242aba11592beb8667cf65a90865ac3fdbfad60297bedb9732e1cb",
+                                 "contract/ledger/doc.go":  "b078d7f534f5ebfd7fcb1c08d518a8c3e355abb8709e649ae9aef2c9993c29eb",
+                                 "contract/ledger/reader_test.go":  "710772f66538aac26444f1ae4661d6df1f683f5a23d1a68336a7551bdad1e28d",
+                                 "contract/ledger/fuzz_test.go":  "7b5c0fac7138c779ac41e5f42a9deb5ef9274bd7c462b28ee45df545734f9488"
+                             }
+}

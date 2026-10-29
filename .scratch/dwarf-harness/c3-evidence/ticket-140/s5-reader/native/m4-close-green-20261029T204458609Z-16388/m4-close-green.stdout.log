@@ -1,0 +1,8 @@
+=== RUN   TestReaderCheckpointErrors
+=== RUN   TestReaderCheckpointErrors/numeric_EOF_close_failure
+=== PAUSE TestReaderCheckpointErrors/numeric_EOF_close_failure
+=== CONT  TestReaderCheckpointErrors/numeric_EOF_close_failure
+--- PASS: TestReaderCheckpointErrors (0.00s)
+    --- PASS: TestReaderCheckpointErrors/numeric_EOF_close_failure (0.01s)
+PASS
+ok  	github.com/Darius-PJ/dwarf-harness/contract/ledger	1.040s

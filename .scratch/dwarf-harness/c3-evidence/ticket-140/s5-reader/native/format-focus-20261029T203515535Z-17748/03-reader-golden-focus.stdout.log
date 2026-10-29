@@ -1,0 +1,256 @@
+=== RUN   TestGoldenF0
+--- PASS: TestGoldenF0 (0.00s)
+=== RUN   TestGoldenF2_05
+--- PASS: TestGoldenF2_05 (0.00s)
+=== RUN   TestGoldenF2_06
+--- PASS: TestGoldenF2_06 (0.00s)
+=== RUN   TestGoldenF2_07
+=== PAUSE TestGoldenF2_07
+=== RUN   TestGoldenF2_08
+=== PAUSE TestGoldenF2_08
+=== RUN   TestGoldenF2_09
+=== PAUSE TestGoldenF2_09
+=== RUN   TestGoldenU3_61
+=== PAUSE TestGoldenU3_61
+=== RUN   TestGoldenDecodes
+--- PASS: TestGoldenDecodes (0.04s)
+=== RUN   TestGoldenF3_13
+=== PAUSE TestGoldenF3_13
+=== RUN   TestGoldenF3_10
+=== PAUSE TestGoldenF3_10
+=== RUN   TestReaderConsumption
+=== RUN   TestReaderConsumption/nothing_consumed
+=== RUN   TestReaderConsumption/both_sample_versions
+=== RUN   TestReaderConsumption/sample_version_1_only
+=== RUN   TestReaderConsumption/other
+=== RUN   TestReaderConsumption/other_at_an_undeclared_version
+--- PASS: TestReaderConsumption (0.00s)
+    --- PASS: TestReaderConsumption/nothing_consumed (0.00s)
+    --- PASS: TestReaderConsumption/both_sample_versions (0.00s)
+    --- PASS: TestReaderConsumption/sample_version_1_only (0.00s)
+    --- PASS: TestReaderConsumption/other (0.00s)
+    --- PASS: TestReaderConsumption/other_at_an_undeclared_version (0.00s)
+=== RUN   TestReaderAllTypes
+--- PASS: TestReaderAllTypes (0.00s)
+=== RUN   TestReaderCursorAndBound
+--- PASS: TestReaderCursorAndBound (0.00s)
+=== RUN   TestReadingHasNoEffects
+--- PASS: TestReadingHasNoEffects (0.01s)
+=== RUN   TestReaderCheckpointContinuation
+=== PAUSE TestReaderCheckpointContinuation
+=== RUN   TestReaderCheckpointChangedPrefix
+=== RUN   TestReaderCheckpointChangedPrefix/framing
+=== PAUSE TestReaderCheckpointChangedPrefix/framing
+=== RUN   TestReaderCheckpointChangedPrefix/unsupported_format
+=== PAUSE TestReaderCheckpointChangedPrefix/unsupported_format
+=== CONT  TestReaderCheckpointChangedPrefix/framing
+=== CONT  TestReaderCheckpointChangedPrefix/unsupported_format
+--- PASS: TestReaderCheckpointChangedPrefix (0.00s)
+    --- PASS: TestReaderCheckpointChangedPrefix/unsupported_format (0.02s)
+    --- PASS: TestReaderCheckpointChangedPrefix/framing (0.02s)
+=== RUN   TestReaderCheckpointAnchorAndFallback
+=== RUN   TestReaderCheckpointAnchorAndFallback/changed_predecessor
+=== PAUSE TestReaderCheckpointAnchorAndFallback/changed_predecessor
+=== RUN   TestReaderCheckpointAnchorAndFallback/rotation
+=== PAUSE TestReaderCheckpointAnchorAndFallback/rotation
+=== RUN   TestReaderCheckpointAnchorAndFallback/truncated_prefix
+=== PAUSE TestReaderCheckpointAnchorAndFallback/truncated_prefix
+=== RUN   TestReaderCheckpointAnchorAndFallback/missing_segment
+=== PAUSE TestReaderCheckpointAnchorAndFallback/missing_segment
+=== RUN   TestReaderCheckpointAnchorAndFallback/wrong_root
+=== PAUSE TestReaderCheckpointAnchorAndFallback/wrong_root
+=== RUN   TestReaderCheckpointAnchorAndFallback/wrong_colony
+=== PAUSE TestReaderCheckpointAnchorAndFallback/wrong_colony
+=== RUN   TestReaderCheckpointAnchorAndFallback/wrong_After
+=== PAUSE TestReaderCheckpointAnchorAndFallback/wrong_After
+=== RUN   TestReaderCheckpointAnchorAndFallback/zero
+=== PAUSE TestReaderCheckpointAnchorAndFallback/zero
+=== RUN   TestReaderCheckpointAnchorAndFallback/nil
+=== PAUSE TestReaderCheckpointAnchorAndFallback/nil
+=== RUN   TestReaderCheckpointAnchorAndFallback/damaged_afterHash
+=== PAUSE TestReaderCheckpointAnchorAndFallback/damaged_afterHash
+=== CONT  TestReaderCheckpointAnchorAndFallback/changed_predecessor
+=== CONT  TestReaderCheckpointAnchorAndFallback/wrong_colony
+=== CONT  TestReaderCheckpointAnchorAndFallback/wrong_root
+=== CONT  TestReaderCheckpointAnchorAndFallback/truncated_prefix
+=== CONT  TestReaderCheckpointAnchorAndFallback/rotation
+=== CONT  TestReaderCheckpointAnchorAndFallback/nil
+=== CONT  TestReaderCheckpointAnchorAndFallback/damaged_afterHash
+=== CONT  TestReaderCheckpointAnchorAndFallback/missing_segment
+=== CONT  TestReaderCheckpointAnchorAndFallback/zero
+=== CONT  TestReaderCheckpointAnchorAndFallback/wrong_After
+--- PASS: TestReaderCheckpointAnchorAndFallback (0.00s)
+    --- PASS: TestReaderCheckpointAnchorAndFallback/missing_segment (0.02s)
+    --- PASS: TestReaderCheckpointAnchorAndFallback/damaged_afterHash (0.03s)
+    --- PASS: TestReaderCheckpointAnchorAndFallback/wrong_colony (0.03s)
+    --- PASS: TestReaderCheckpointAnchorAndFallback/changed_predecessor (0.03s)
+    --- PASS: TestReaderCheckpointAnchorAndFallback/nil (0.03s)
+    --- PASS: TestReaderCheckpointAnchorAndFallback/truncated_prefix (0.03s)
+    --- PASS: TestReaderCheckpointAnchorAndFallback/zero (0.01s)
+    --- PASS: TestReaderCheckpointAnchorAndFallback/rotation (0.03s)
+    --- PASS: TestReaderCheckpointAnchorAndFallback/wrong_root (0.03s)
+    --- PASS: TestReaderCheckpointAnchorAndFallback/wrong_After (0.01s)
+=== RUN   TestReaderCheckpointErrors
+=== RUN   TestReaderCheckpointErrors/framing
+=== PAUSE TestReaderCheckpointErrors/framing
+=== RUN   TestReaderCheckpointErrors/malformed_envelope
+=== PAUSE TestReaderCheckpointErrors/malformed_envelope
+=== RUN   TestReaderCheckpointErrors/unsupported_format
+=== PAUSE TestReaderCheckpointErrors/unsupported_format
+=== RUN   TestReaderCheckpointErrors/unsupported_version
+=== PAUSE TestReaderCheckpointErrors/unsupported_version
+=== RUN   TestReaderCheckpointErrors/short_numeric_end
+=== PAUSE TestReaderCheckpointErrors/short_numeric_end
+=== RUN   TestReaderCheckpointErrors/partial_commit
+=== PAUSE TestReaderCheckpointErrors/partial_commit
+=== RUN   TestReaderCheckpointErrors/early_Close
+=== PAUSE TestReaderCheckpointErrors/early_Close
+=== RUN   TestReaderCheckpointErrors/numeric_EOF_close_failure
+=== PAUSE TestReaderCheckpointErrors/numeric_EOF_close_failure
+=== RUN   TestReaderCheckpointErrors/explicit_close_failure
+=== PAUSE TestReaderCheckpointErrors/explicit_close_failure
+=== RUN   TestReaderCheckpointErrors/read_and_close_failure
+=== PAUSE TestReaderCheckpointErrors/read_and_close_failure
+=== RUN   TestReaderCheckpointErrors/corrupt_and_close_failure
+=== PAUSE TestReaderCheckpointErrors/corrupt_and_close_failure
+=== RUN   TestReaderCheckpointErrors/legacy_close_failure
+=== PAUSE TestReaderCheckpointErrors/legacy_close_failure
+=== CONT  TestReaderCheckpointErrors/framing
+=== CONT  TestReaderCheckpointErrors/early_Close
+=== CONT  TestReaderCheckpointErrors/read_and_close_failure
+=== CONT  TestReaderCheckpointErrors/explicit_close_failure
+=== CONT  TestReaderCheckpointErrors/legacy_close_failure
+=== CONT  TestReaderCheckpointErrors/unsupported_version
+=== CONT  TestReaderCheckpointErrors/unsupported_format
+=== CONT  TestReaderCheckpointErrors/corrupt_and_close_failure
+=== CONT  TestReaderCheckpointErrors/malformed_envelope
+=== CONT  TestReaderCheckpointErrors/partial_commit
+=== CONT  TestReaderCheckpointErrors/numeric_EOF_close_failure
+=== CONT  TestReaderCheckpointErrors/short_numeric_end
+--- PASS: TestReaderCheckpointErrors (0.00s)
+    --- PASS: TestReaderCheckpointErrors/legacy_close_failure (0.01s)
+    --- PASS: TestReaderCheckpointErrors/read_and_close_failure (0.01s)
+    --- PASS: TestReaderCheckpointErrors/early_Close (0.01s)
+    --- PASS: TestReaderCheckpointErrors/explicit_close_failure (0.01s)
+    --- PASS: TestReaderCheckpointErrors/unsupported_version (0.01s)
+    --- PASS: TestReaderCheckpointErrors/numeric_EOF_close_failure (0.01s)
+    --- PASS: TestReaderCheckpointErrors/framing (0.02s)
+    --- PASS: TestReaderCheckpointErrors/corrupt_and_close_failure (0.02s)
+    --- PASS: TestReaderCheckpointErrors/partial_commit (0.01s)
+    --- PASS: TestReaderCheckpointErrors/unsupported_format (0.02s)
+    --- PASS: TestReaderCheckpointErrors/short_numeric_end (0.01s)
+    --- PASS: TestReaderCheckpointErrors/malformed_envelope (0.02s)
+=== RUN   TestGoldenF3_139
+=== PAUSE TestGoldenF3_139
+=== RUN   TestGoldenF3_12
+=== PAUSE TestGoldenF3_12
+=== RUN   TestGoldenF3_11
+=== PAUSE TestGoldenF3_11
+=== CONT  TestGoldenF3_139
+=== CONT  TestGoldenF2_08
+=== CONT  TestGoldenF2_09
+=== CONT  TestGoldenF2_07
+=== CONT  TestReaderCheckpointContinuation
+=== CONT  TestGoldenF3_13
+=== CONT  TestGoldenF3_10
+=== CONT  TestGoldenU3_61
+=== NAME  TestGoldenF3_139
+    registration_golden_test.go:218: objects/a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b SHA-256=a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b
+    registration_golden_test.go:218: objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 SHA-256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+    registration_golden_test.go:218: bodies/e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5 SHA-256=e94d3c7b4a8a8627e15a761daba3f8077fb32efb96e4260a09563d9c357158b5
+    registration_golden_test.go:218: log/00000000000000000001.jsonl SHA-256=db1476e07b355d909dfb07cce79f142387469618709bc52a3f496395b94c5134
+--- PASS: TestGoldenF2_09 (0.01s)
+--- PASS: TestGoldenF2_08 (0.01s)
+=== CONT  TestGoldenF3_11
+=== CONT  TestGoldenF3_12
+=== NAME  TestGoldenF3_11
+    scoped_golden_test.go:382: objects/a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b SHA-256=a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b
+=== NAME  TestGoldenF3_12
+    review_golden_test.go:288: objects/398455cfb72d36d78b6b1819bb59708371d25d2503bba258181712a2cf36ce6e SHA-256=398455cfb72d36d78b6b1819bb59708371d25d2503bba258181712a2cf36ce6e
+=== NAME  TestGoldenF3_11
+    scoped_golden_test.go:382: objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 SHA-256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+=== NAME  TestGoldenF3_12
+    review_golden_test.go:288: objects/d832c9deb9d8ee1a562f9b5dda200818a05f91cc4b2802e80ce81c735ffa064e SHA-256=d832c9deb9d8ee1a562f9b5dda200818a05f91cc4b2802e80ce81c735ffa064e
+=== NAME  TestGoldenF3_11
+    scoped_golden_test.go:382: objects/7bc39933cb0f99ee55f646057761d8203a8903c53ed90f9c1660fed4111a7d89 SHA-256=7bc39933cb0f99ee55f646057761d8203a8903c53ed90f9c1660fed4111a7d89
+=== NAME  TestGoldenF3_12
+    review_golden_test.go:288: objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 SHA-256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+=== NAME  TestGoldenF3_11
+    scoped_golden_test.go:382: bodies/8ed03435e57f91ee4ee0ea15e9cdd96b6750e173159fd970cdcd9fff228608a0 SHA-256=8ed03435e57f91ee4ee0ea15e9cdd96b6750e173159fd970cdcd9fff228608a0
+=== NAME  TestGoldenF3_12
+    review_golden_test.go:288: bodies/121fdcbb8286cec13a55d621ec0dda07e721079eef0cf727c49903b45dd6b2fe SHA-256=121fdcbb8286cec13a55d621ec0dda07e721079eef0cf727c49903b45dd6b2fe
+=== NAME  TestGoldenF3_11
+    scoped_golden_test.go:382: bodies/3c6956d1a5353c50842e3a9bf22dfefeb6d7afe49e4f606f92aa58a85556a2cf SHA-256=3c6956d1a5353c50842e3a9bf22dfefeb6d7afe49e4f606f92aa58a85556a2cf
+=== NAME  TestGoldenF3_12
+    review_golden_test.go:288: bodies/dbfa7ba648c8fb9a7c5b6c3ea37563d66196d431666dddc0e390d5daa080c444 SHA-256=dbfa7ba648c8fb9a7c5b6c3ea37563d66196d431666dddc0e390d5daa080c444
+=== NAME  TestGoldenF3_10
+    private_golden_test.go:205: golden SHA-256=9622b72877ed546a18fcbfd28a19807e0bab237909e23ffe76e7c3da1c260ecd commits=10 records=34
+--- PASS: TestGoldenF3_10 (0.01s)
+--- PASS: TestGoldenF2_07 (0.01s)
+=== NAME  TestGoldenF3_11
+    scoped_golden_test.go:382: bodies/3b916c5875daabd31fe60ddb30be34acada65bf680bdd173183d56c204eb8f00 SHA-256=3b916c5875daabd31fe60ddb30be34acada65bf680bdd173183d56c204eb8f00
+=== NAME  TestGoldenF3_12
+    review_golden_test.go:288: bodies/0e24c0c870c696ccf688d9ddcf681510516ef6afb760621853af04d173291854 SHA-256=0e24c0c870c696ccf688d9ddcf681510516ef6afb760621853af04d173291854
+    review_golden_test.go:288: log/00000000000000000001.jsonl SHA-256=6586720b28a19f997dd0890a6dbc71d27ffdf395fd000e68b6aedbbbe0ce79f8
+=== NAME  TestGoldenF3_11
+    scoped_golden_test.go:382: log/00000000000000000001.jsonl SHA-256=145bb11c2b1c58e9e8530a98e6972b35329e4adb9dfb945a9f15381ae221bba6
+=== NAME  TestGoldenF3_13
+    paid_golden_test.go:430: bodies/91bcc3dba39a97a337829a4150acae0f0918e67eb64396aee01d1afdc951a269 SHA-256=91bcc3dba39a97a337829a4150acae0f0918e67eb64396aee01d1afdc951a269
+    paid_golden_test.go:430: objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d2/core/objects/354d73188334fc9282beb07b702e2d9660fe63a4585ada9640e3fa047f05dd4f SHA-256=354d73188334fc9282beb07b702e2d9660fe63a4585ada9640e3fa047f05dd4f
+    paid_golden_test.go:430: objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d1/core/objects/a6666404b2692b6634e550aeca21a17cdb60c744bc24206d203b34db6f9ae5c8 SHA-256=a6666404b2692b6634e550aeca21a17cdb60c744bc24206d203b34db6f9ae5c8
+    paid_golden_test.go:430: log/00000000000000000001.jsonl SHA-256=50b41cf739cbef89bec234cf64873e80af85188b256c66d6cb1e86ebea3555ff
+    paid_golden_test.go:430: objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d2/core/objects/8cf1f92e41921d777b8cd4c541a15d7749c12131c78f9cef887a16d8e2b88bee SHA-256=8cf1f92e41921d777b8cd4c541a15d7749c12131c78f9cef887a16d8e2b88bee
+    paid_golden_test.go:430: objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d1/core/objects/55706821e9f1197621c6cc08234c7ecde67ae4c8a92815f26d905cabed079cdb SHA-256=55706821e9f1197621c6cc08234c7ecde67ae4c8a92815f26d905cabed079cdb
+    paid_golden_test.go:430: objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d2/core/objects/e9bd1e74693c754a7e368f52990882d4f82de6bd499dd8f712ae8c7df9bb8d62 SHA-256=e9bd1e74693c754a7e368f52990882d4f82de6bd499dd8f712ae8c7df9bb8d62
+    paid_golden_test.go:430: objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d2/core/objects/79119b5437fcaf9b9e501cd1a20aa1a269a7a276ac09b2d694f264ce85f0c885 SHA-256=79119b5437fcaf9b9e501cd1a20aa1a269a7a276ac09b2d694f264ce85f0c885
+    paid_golden_test.go:430: objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d1/core/objects/abbbac539288497fbe1465c534a0287fb67dfea4085ddd33d8cdac1daa902376 SHA-256=abbbac539288497fbe1465c534a0287fb67dfea4085ddd33d8cdac1daa902376
+    paid_golden_test.go:430: objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d1/core/objects/312ee20080d1e7610b94b7dbc89ceb0f42a8250738b7e572a8f297c7751a8736 SHA-256=312ee20080d1e7610b94b7dbc89ceb0f42a8250738b7e572a8f297c7751a8736
+    paid_golden_test.go:430: objects/a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b SHA-256=a9d748d84941c6117611a40dd7163c239e08fa6dd823f538ba68b3513605720b
+    paid_golden_test.go:430: objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d2/core/objects/54ee1d1e3f68412171037aa615bacae4f862d803f4ac2004f65d07356e320e3f SHA-256=54ee1d1e3f68412171037aa615bacae4f862d803f4ac2004f65d07356e320e3f
+    paid_golden_test.go:430: objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d2/core/objects/359a718394436350faf2b14993295f0905c2524ba00319d58777613ce7cf1bcc SHA-256=359a718394436350faf2b14993295f0905c2524ba00319d58777613ce7cf1bcc
+=== NAME  TestGoldenU3_61
+    golden_test.go:1784: golden SHA-256=6c7169aa9cfe77bb8976348f515ef85ec8da82b277520f82fd2bf169e6c45e0f commits=41 records=62 EmptyGraphDigest=50615e395eebec3556dbfd7bb8684d2c65e3aee8810b9d17cbfb157c30471f91 EmptyChunksDigest=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+--- PASS: TestGoldenU3_61 (0.01s)
+=== NAME  TestGoldenF3_13
+    paid_golden_test.go:430: objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d2/core/objects/66e417355a1b4f1ddb7c6d9ce1f7bf06fec4b3a008cad59f201f0ce4cebd2e38 SHA-256=66e417355a1b4f1ddb7c6d9ce1f7bf06fec4b3a008cad59f201f0ce4cebd2e38
+    paid_golden_test.go:430: objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d2/core/objects/4f3a2d40ae3df0268204f8619d566e378961bebcea0a3daaabf738b7d0001ec7 SHA-256=4f3a2d40ae3df0268204f8619d566e378961bebcea0a3daaabf738b7d0001ec7
+    paid_golden_test.go:430: objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d2/core/objects/1f417fb8c14eb0ca1aa3184119a375448be6196b288966519f74f7139364fc8b SHA-256=1f417fb8c14eb0ca1aa3184119a375448be6196b288966519f74f7139364fc8b
+    paid_golden_test.go:430: objects/agents/Ada-a1/contexts/0199c000-0000-7000-8000-0000000000d1/core/objects/4f3a2d40ae3df0268204f8619d566e378961bebcea0a3daaabf738b7d0001ec7 SHA-256=4f3a2d40ae3df0268204f8619d566e378961bebcea0a3daaabf738b7d0001ec7
+    paid_golden_test.go:430: objects/e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 SHA-256=e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+=== NAME  TestGoldenF3_139
+    registration_golden_test.go:315: commits=19 records=65 first_effect=25 first_receipt=26 final_effect=64 final_receipt=65
+--- PASS: TestGoldenF3_139 (0.02s)
+=== NAME  TestGoldenF3_12
+    review_golden_test.go:410: commits=25 records=90; request C,Q,R; reject C,V,R; approve/fail C,V,U,R
+--- PASS: TestGoldenF3_12 (0.01s)
+=== NAME  TestGoldenF3_11
+    scoped_golden_test.go:472: commits=39 records=130
+--- PASS: TestGoldenF3_11 (0.02s)
+=== NAME  TestGoldenF3_13
+    paid_golden_test.go:530: commits=48 records=150 shapes=paid.admit/reserved,paid.correct/corrected,paid.credential.bind/bound,paid.credential.revoke/revoked,paid.dispatch/sent,paid.observe/no_charge,paid.observe/settled,paid.observe/unknown,paid.overrun.acknowledge/acknowledged,paid.release/released_unsent,paid.route.configure/configured,paid.spend.configure/configured,paid.spend.delegate/delegated
+--- PASS: TestGoldenF3_13 (0.03s)
+=== RUN   TestReaderCheckpointContinuation/consumed_version
+=== RUN   TestReaderCheckpointContinuation/all_types_unconsumed_version
+=== RUN   TestReaderCheckpointContinuation/skipped_prefix_version
+=== RUN   TestReaderCheckpointContinuation/nothing_consumed
+=== RUN   TestReaderCheckpointContinuation/inside_lower_commit
+=== RUN   TestReaderCheckpointContinuation/inside_upper_commit
+=== RUN   TestReaderCheckpointContinuation/equal_bounds
+=== RUN   TestReaderCheckpointContinuation/to_end
+=== RUN   TestReaderCheckpointContinuation/reversed_bounds
+=== RUN   TestReaderCheckpointContinuation/multi-buffer_prefix
+=== PAUSE TestReaderCheckpointContinuation/multi-buffer_prefix
+=== CONT  TestReaderCheckpointContinuation/multi-buffer_prefix
+--- PASS: TestReaderCheckpointContinuation (0.04s)
+    --- PASS: TestReaderCheckpointContinuation/consumed_version (0.00s)
+    --- PASS: TestReaderCheckpointContinuation/all_types_unconsumed_version (0.00s)
+    --- PASS: TestReaderCheckpointContinuation/skipped_prefix_version (0.00s)
+    --- PASS: TestReaderCheckpointContinuation/nothing_consumed (0.00s)
+    --- PASS: TestReaderCheckpointContinuation/inside_lower_commit (0.00s)
+    --- PASS: TestReaderCheckpointContinuation/inside_upper_commit (0.00s)
+    --- PASS: TestReaderCheckpointContinuation/equal_bounds (0.00s)
+    --- PASS: TestReaderCheckpointContinuation/to_end (0.00s)
+    --- PASS: TestReaderCheckpointContinuation/reversed_bounds (0.00s)
+    --- PASS: TestReaderCheckpointContinuation/multi-buffer_prefix (0.02s)
+PASS
+ok  	github.com/Darius-PJ/dwarf-harness/contract/ledger	1.184s

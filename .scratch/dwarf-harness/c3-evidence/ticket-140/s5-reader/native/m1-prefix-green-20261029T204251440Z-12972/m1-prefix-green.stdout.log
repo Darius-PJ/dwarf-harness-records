@@ -1,0 +1,8 @@
+=== RUN   TestReaderCheckpointChangedPrefix
+=== RUN   TestReaderCheckpointChangedPrefix/framing
+=== PAUSE TestReaderCheckpointChangedPrefix/framing
+=== CONT  TestReaderCheckpointChangedPrefix/framing
+--- PASS: TestReaderCheckpointChangedPrefix (0.00s)
+    --- PASS: TestReaderCheckpointChangedPrefix/framing (0.01s)
+PASS
+ok  	github.com/Darius-PJ/dwarf-harness/contract/ledger	1.112s

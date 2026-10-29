@@ -1,0 +1,15 @@
+{
+  "scope": "ApprovedR1ONLY;actualD157digitsfilled;codeunmodified",
+  "sourceApproval": "16958d4e8a5f753322511da7099d9f365db81cb237bedaa4af546d233e764005",
+  "decision": "D157allocatedatapprovedpublicrecordapplication;privatecompletedentryawaitsactualM3facts",
+  "date": "2026-10-29",
+  "path": "docs/CONTRACTS.md",
+  "sha256": "8fb8a671c3f859b8d8d2f597dc657d7807c49761fabdc5d1cd4a8147d1dc7953",
+  "LF": true,
+  "newLocalLinkTargets": [
+    "../contract/ledger/doc.go"
+  ],
+  "targetsExist": true,
+  "existingUnchangedLinks": "Notre-audited;existingrecordconventionsretained",
+  "CoreReleased": false
+}

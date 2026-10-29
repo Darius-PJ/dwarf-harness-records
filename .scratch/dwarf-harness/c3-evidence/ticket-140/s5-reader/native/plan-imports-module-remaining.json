@@ -1,0 +1,71 @@
+{
+  "stage": "imports-module-remaining",
+  "purpose": "ONLYfailed08plusunrun09\u201312;actualgo-templateunescapedLFsourcefixedbyEXACTalready-passed139argvtemplates;NOrepeatversion/plain/vet/static/focus/mutants",
+  "retainedStoppedRun": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196",
+  "exactTemplateSource": "Actualsuccess139remaining08/09commandmetadata,notnewquotingconvention",
+  "commands": [
+    {
+      "name": "08-production-imports",
+      "executable": "go",
+      "argv": [
+        "list",
+        "-f",
+        "{{join .Imports \"\\n\"}}",
+        "./contract/ledger"
+      ],
+      "timeoutSeconds": 300,
+      "expectedExit": 0,
+      "requireEmptyOutput": false
+    },
+    {
+      "name": "09-test-imports",
+      "executable": "go",
+      "argv": [
+        "list",
+        "-f",
+        "{{join .TestImports \"\\n\"}}",
+        "./contract/ledger"
+      ],
+      "timeoutSeconds": 300,
+      "expectedExit": 0,
+      "requireEmptyOutput": false
+    },
+    {
+      "name": "10-nonstandard-dependencies",
+      "executable": "go",
+      "argv": [
+        "list",
+        "-deps",
+        "-f",
+        "{{if not .Standard}}{{.ImportPath}}{{end}}",
+        "./contract/ledger"
+      ],
+      "timeoutSeconds": 300,
+      "expectedExit": 0,
+      "requireEmptyOutput": false
+    },
+    {
+      "name": "11-module-tidy-diff",
+      "executable": "go",
+      "argv": [
+        "mod",
+        "tidy",
+        "-diff"
+      ],
+      "timeoutSeconds": 600,
+      "expectedExit": 0,
+      "requireEmptyOutput": true
+    },
+    {
+      "name": "12-module-verify",
+      "executable": "go",
+      "argv": [
+        "mod",
+        "verify"
+      ],
+      "timeoutSeconds": 600,
+      "expectedExit": 0,
+      "requireEmptyOutput": false
+    }
+  ]
+}

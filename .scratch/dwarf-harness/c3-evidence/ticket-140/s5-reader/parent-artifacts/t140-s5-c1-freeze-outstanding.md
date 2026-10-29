@@ -1,0 +1,94 @@
+# Ticket140 S5 — C1 freeze future-fill and release map
+
+LOCAL DRAFT ONLY. The three drafting deliverables are this map, `t140-s5-c1-freeze-record-edits.md` and `t140-s5-c1-freeze-evidence-draft.md`. None is applied/approved/frozen evidence. PM owns factual capture, exact anchors, completed joint review, public register application, private records, publication and C3 release. No future D/B number, date, implementation hash, command result or hosted run is allocated here.
+
+## 1. Binding and perimeter
+
+Original brief `93bf8a13f847d03626672caae2a77f35e97ddfcc968b63568dd4ea12bc81cc55` plus actual ruling `ef2dfa6612bf2114dcb3229d474d841389df749d868fdb1dfb9bfb36ca702611` govern. The ruling's P7 Reader-level pre-freeze prefix oracle overrides the original Service-oracle timing. Original B4 rejection was correct when issued; actual adopted D156, published privately as `b63d618c76b864ec08855bd78eadcf3e27cf7588`, supplies only its specific two-milestone exception. Do not rewrite/re-rank either authority. [Sources: PM/t140-s5-design-ruling.json:20-36,125-136,195-208; docs/DECISIONS.md:3104-3116; PM/t140-d156-publication.json:62-68.]
+
+Public edit: ONLY existing `docs/CONTRACTS.md:26`, additive ledger-reader version-1 checkpoint capability, retaining all existing consumers/guarantees and the Frozen boundary. No public self-hash or private citation/owner quote. Private edits: assistant-originated D125+D156 freeze decision at actual tail, one D125 pointer and one evidence-file creation. No B entry, ticket/roadmap/Core/Undercurrent status, family/catalogue/schema/Defined/fixture/golden, appender/Receipt/privateStore/Digest or legacy consumer change. Code/package docs remain the coder's five-file delivery; this drafting task neither reads moving source as completed evidence nor writes it. [Sources: docs/CONTRACTS.md:3,11-27; contract/ledger/doc.go:132-154; docs/DECISIONS.md:2139-2147; PM/t140-s5-design-ruling.json:166-194,289-346.]
+
+Citation roots: repository-relative paths mean canonical MAIN `C:/Users/darius.jones/Documents/PROJECTS/dwarf-harness`. PM/ means parent local `C:/Users/darius.jones/.omp/agent/sessions/-Documents-PROJECTS-dwarf-harness/2026-10-24T15-58-31-752Z_01a16ea2-9748-77b3-ac90-a8beabd7bc22/local/`. Keep roots/citations/provenance private.
+
+## 2. Remaining milestone prerequisites and hard barrier
+
+| Milestone | Required actual evidence before progression |
+|---|---|
+| M1 — completed C1 only | Settle only reader.go, scan.go, doc.go, reader_test.go and fuzz_test.go in contract/ledger; capture implementation SHA and five-file manifest. PM's focused/plain/host-format-static-import-module lane, observable Reader proofs, FOUR minimal semantic reds/exact restores/SAME-command greens, and FOUR serial actual 120-second fuzz campaigns/counts. Existing fixtures/formats unchanged, no golden regeneration. Existing consumers untouched. |
+| M2 — completed-capability freeze | Fill M1 evidence and exact R1–R4 reviewable record; fresh independent completed-code + evidence + compatibility + EXACT-record joint review and provenance, with actual blocking corrections resolved under D152. Only then PM records assistant-originated D125/D156 freeze and applies reviewed public register. Package docs/code are independently complete already, not upfront promises. Preserve review-submitted/final record hashes and actual implementation-to-freeze bridge. |
+| M3 — own checked public main + private binding | Final public C1_FREEZE_SHA includes completed C1 and public record before its own hosted run; fresh exact-SHA review binding, full Windows/Linux/macOS matrix including race and successful Check result on that SAME SHA, guarded ff-only main publication, actual private decision/evidence binding and publication receipt. Only then explicit PM C3 release. |
+
+**HARD CORE BARRIER:** no C3 consumer implementation, cache work or new-API consumer tests before all M1–M3 requirements above are actually evidenced and the integrated freeze is recorded. A branch/phase label, local review pause, document-only aggregate, design ruling, D156 answer or later final combined CI cannot substitute. One fifth-and-final assignment has two explicitly authorized checked-main milestones, never a sixth slice or upfront/retrospective freeze. [Sources: docs/DECISIONS.md:3109-3116; PM/t140-s5-design-ruling.json:206-288.]
+
+No routine local full tools/check, duplicate unchanged C1 campaign, preimplementation diagnostic/control run, extra ledger local race/×20 or five-target static loop absent its actual trigger. D152/D153 and the fresh ruling supersede the older freeze skills' local-full-check/amend/push-at-ticket-close recipes. No routine confirmation pass for nonblocking notes. [Sources: docs/DECISIONS.md:3032-3044,3057-3069; PM/t140-s5-design-ruling.json:283-288,407,421-429.]
+
+## 3. Exact fill map
+
+Fills occur only where the value belongs. Every source-dependent receipt includes actual source SHA/manifest, command/env/times/exit, raw output path and SHA256, observed result and retained failures. A PASS word without those sources is insufficient. Table groups below name EVERY distinct token used in the edits/evidence; identical names are filled consistently. Table-cell values may not introduce unescaped `|`; multiline evidence blocks belong outside a table cell or use suitable links to retained raw material.
+
+| Token(s) | Value and fill point |
+|---|---|
+| «EVIDENCE-SCOPE» | PM's factual evidence scope at M1/M2 and final M3 completion; until then local preparation only. Do not claim work before its actual receipts exist. |
+| «D-NEXT», «DATE» | Actual unused D digits and local-calendar freeze date at M2/application. D157 remains unallocated; B34 is Ticket139's and B35 is not allocated here. |
+| «LOG-LAST-LINE» | Current private log's last nonempty line copied byte-for-byte at application; assert unique match. Draft observed tail: docs/DECISIONS.md:3116. Reanchor if Ticket139/B34 or another entry moves it; no prior decision-body edit. |
+| «EVIDENCE-BODY» | Entire exact companion evidence body after all actual fills, UTF-8/LF, inserted as R4's single replacement; no unresolved token or duplicate draft wrapper. |
+| «BRIEF-COPY», «RULING-COPY», «RULING-BINDING-COPY» | Separately byte-retained original files, immutable destination/digest and source path/line bindings; M0 authorities already exist, future archival-copy receipt still required. Do not reserialize JSON or replace source hashes. |
+| «QUESTION-COPY», «SELECTION-COPY» | Separate original exact question and actual selection, private destinations/digests/provenance; historical unanswered question state is not altered. |
+| «D155-D156-COPY», «D156-PUBLICATION-COPY», «ASSIGNMENT-AUTHORITY-COPY» | Byte-retained private decision excerpt with source commit/line range; separate actual D156 publication receipt; separate original ruled-assignment authority JSON. No derived text masquerades as an original receipt. |
+| «COMPLETED-DECISION-COPY» | Actual new private D entry's immutable committed identity/digest, filled after application/publication; no self-commit-hash requirement inside its own bytes. |
+| «C1-IMPLEMENTATION-SHA», «IMPLEMENTATION-IDENTITY-RECEIPT» | Settled completed C1 commit, actual parent/base and source-capture receipt; M1. Supplied public base is 84d0ced9446168777c7b7bfa3382974977bf27ed, not a fabricated completed implementation. |
+| «EXECUTION-ENVIRONMENT», «C1-PERIMETER-RECEIPT», «MANIFEST-RECEIPT» | Actual toolchain/env/source-release; full changed-path inventory and unchanged consumer/module/fixture scope; raw exact-blob manifest receipt. M1 before source-dependent proof. |
+| «READER-SHA256», «SCAN-SHA256», «DOC-SHA256», «READER-TEST-SHA256», «FUZZ-TEST-SHA256» | Actual SHA256 of each corresponding settled implementation blob, not of a moving worktree or an earlier subject; M1. |
+| «PACKAGE-DOC-CITATION» | Actual settled C1 commit + contract/ledger/doc.go exact new Reading/checkpoint line range, supplied only when complete. Replaces no unseen Go Find. |
+| «PROOF-CONTINUATION», «PROOF-OPTIONS-BOUNDARIES», «PROOF-CHANGED-PREFIX», «PROOF-PREDECESSOR», «PROOF-FALLBACK», «PROOF-CLOSURE», «PROOF-LEGACY-NO-EFFECTS» | Actual named semantic tests/subcases, exact source/case locations and observed committed-record/cursor/typed-error/no-effects outcomes; source-bound raw M1 focused/package receipts. Close-failure evidence is a real descriptor failure, not byte-fuzz reach. |
+| «BREAK-PREFIX», «BREAK-PREDECESSOR», «BREAK-TOKEN», «BREAK-CLOSE» | Each complete minimal-diff/source-hash/red/assertion/byte-identical-restore/SAME-command-green record, including any initial survivor or masking; M1 before freeze. Reader ChangedPrefix is first oracle; predecessor mutation preserves sequence. |
+| «FUZZ-CHECKPOINT», «FUZZ-TRUNCATION», «FUZZ-TORN-TAIL», «FUZZ-CORRUPTION» | Actual separate serial 120-second campaign command/source/env/start/end/elapsed/execution count/result/raw hashes/corpus/failures. Record actual reach; no warm or real close-failure claim from unrelated legacy/byte paths. M1. |
+| «FIXTURE-IDENTITY», «FORMAT-PERIMETER», «FIXTURE-LINE-ENDINGS» | Complete base/implementation fixture blob maps and comparison, unchanged format/catalogue/schema/count/path inventory, observed byte-ending identities. No golden update. M1. |
+| «HOST-FOCUSED», «HOST-PLAIN», «HOST-FORMAT», «HOST-STATIC», «HOST-IMPORTS», «HOST-MODULE», «RAW-OUTPUT-INDEX» | Actual M1 commands/outputs for focused and one plain verbose ledger package run, five-file format listing, host vet/staticcheck, direct/test/nonstandard imports, tidy-diff/verify/unchanged module files, indexed raw outputs/timings/failures. No inferred empty output. |
+| «JOINT-REVIEW-RECEIPT», «REVIEW-SUBJECT», «REVIEWED-RECORD», «JOINT-REVIEW», «REVIEW-DISPOSITION» | Actual M2 fresh independent reviewer/provider/model/effort provenance and immutable review artifact; exact code/manifest/evidence and record/fill version digests; verbatim approved review line; blocking findings/fixes and adopted record corrections. Original design ruling does not fill this. |
+| «C1-FREEZE-SHA», «PUBLIC-FREEZE-IDENTITY», «CODE-HASH-BRIDGE», «EXACT-SHA-REVIEW-BINDING» | Actual final public commit/parent after approved R1 application, five-file equality and exact public-record delta from tested implementation, explicit comment-only delta if any, review-to-final-SHA identity; M2→M3. Public R1 never contains its own commit hash. |
+| «HOSTED-FULL-MATRIX», «C1-HOSTED-RESULT» | Actual exact-C1_FREEZE_SHA hosted URL/run/attempt/head, full classifier/matrix WinLinuxMac/race raw job results, successful aggregate and completion time; M3. Not a Markdown-only exemption or a later Core run. |
+| «C1-MAIN-PUBLICATION» | Actual guarded work-branch and approved checked-SHA fast-forward/public-main/remote publication receipt; M3. |
+| «PRIVATE-BINDING», «PRIVATE-PUBLICATION-RECEIPT» | Actual private evidence/decision digests and code/review/check/public-main bridge; private records commit/remote/publication guard receipt retained externally when own-hash inclusion would be circular. M3. |
+| «CORE-RELEASE-RECEIPT» | PM's actual explicit release after integrated freeze + own full hosted/main/private proof; may be an external immutable release receipt referenced by the private evidence. Not an advance release here. |
+
+Map sources: PM/t140-s5-design-ruling.json:220-288,347-407; docs/DECISIONS.md:2139-2141,3032-3044,3057-3069,3109-3116. Placeholder names are drafting conventions, not newly approved proof gates.
+
+## 4. Private immutable-copy targets
+
+All targets below are FUTURE PM copy destinations under the existing `.scratch/dwarf-harness/c3-evidence/` convention, not new evidence already written or a second storage scheme. Keep each original's bytes; record digest/source identity in its corresponding fill. Existing canonical decisions remain unmodified except R2 and the future append. Local files/raw outputs remain separately retained until their immutable private copies exist. Do not put these private paths, user quotations or provenance into public register text or commit messages. [Sources: docs/DECISIONS.md:3113-3116; role D116/D145 rules; PM/t140-s5-c1-freeze-drafter-assignment.md:24-27,39.]
+
+| Actual input or future output | Proposed private target basename under c3-evidence/ |
+|---|---|
+| PM/t140-s5-design-brief.md, original all 312 lines | ticket-140-s5-design-brief.md |
+| PM/t140-s5-design-ruling.json, actual original JSON | ticket-140-s5-design-ruling.json |
+| PM/t140-s5-design-ruling-binding.json | ticket-140-s5-design-ruling-binding.json |
+| PM/t140-s5-owner-sequence-question.json | ticket-140-s5-owner-sequence-question.json |
+| PM/t140-s5-owner-sequence-selection.json | ticket-140-s5-owner-sequence-selection.json |
+| Exact D155/D156 private entry bytes from source publication, source range and commit in copy manifest | ticket-140-s5-d155-d156.md |
+| PM/t140-d156-publication.json | ticket-140-d156-publication.json |
+| PM/t140-s5-ruled-assignment-authority.json | ticket-140-s5-ruled-assignment-authority.json |
+| Filled draft2, the R4 creation | ticket-140-s5-reader-freeze-evidence.md (assignment's exact destination) |
+| PM's actual raw source/host/fixture/mutant/fuzz capture and indexed hashes | ticket-140-s5-c1-raw/ (individual original filenames, original bytes; no synthesized PASS summaries) |
+| Actual completed-code/record review request, verdict, provenance and approved exact record/fills | ticket-140-s5-c1-review/ (separate original files) |
+| Final public identity/hash bridge, hosted raw jobs/result, public/private guarded publication and explicit PM release receipts | ticket-140-s5-c1-integration/ (separate original files, external receipts avoid self-hash cycles) |
+
+These basenames are draft organization choices [INFERENCE], not existing-file claims; PM may preserve already-established exact filenames with an explicit map rather than duplicate them. The destination for draft2 is fixed by assignment. The byte identities of the original brief/ruling and actual answer are not optional or rename-sensitive. Do not create the raw/review/integration targets during this source-only drafting assignment. Actual completed D remains in docs/DECISIONS.md, with immutable private publication/excerpt binding captured in the integration records.
+
+## 5. Later M4/M5 and unchanged quantitative boundary
+
+After explicit release, same assignment only: scoped contiguous own-commit consumer, copied fixed-key entry in the existing single256-entry/8MiB charged-metadata cache (not RAM bound), exact-frontier eligibility, invalidation/charging, shared drain, review opt-out, actual postaccept publication. Preserve no-effects-before-read/range/successful-close, immutable receipt/command/family/input binding, authority/recovery/money/disclosure fences, legacy callers and all ordinary historical scans. Complete warmed public-Service regressions, affected agents local/race/×20 and actual reachable fuzz proof then; C1 proof cannot be deferred to those consumer tests. [Source: PM/t140-s5-design-ruling.json:62-96,253-263,347-407.]
+
+Final combined subject requires new independent final Standards and Specification/code-evidence reviews and its own exact-new-SHA full three-OS/race/Check result before ff-only main. Carry C1 hashes/focused/mutant/fuzz/fixture evidence unchanged by source binding; do not repeat unchanged campaigns. A C1 contract revision must be resolved/frozen before consuming that revision. Fable whole-ticket double-check and ticket-close review stay separate. [Sources: PM/t140-s5-design-ruling.json:253-288; docs/DECISIONS.md:3110-3116.]
+
+All SEVEN original bounds remain: separately T11 and T12 median(OpenLong_i / actual Open-record ratio_i) <= median(OpenShort_i); separately turn.start, local.admit, local.begin, task.create and task.cancel median(long) <= 2*median(short)+25ms, cancellation using paired profile_cleanup. Three independent eligible complete instances per driver on actual final combined SHA; exactly two more ONCE only when paired differences straddle zero AND the median is within10% of bound, decide using all5. No bound relaxation. Retain all six saved-source hashes, original assertions, T11 populations12→20/held turns1→3/burst16/complete ten-operation cycles until actual B×10, T12 factor2/populations/four profiles, fresh outputs/colonies, serial runs and five-second pre/post unrelated CPU <=0.25 core. Do not filter to fixed87/874 endpoints. Use eligible original93e8f0afe125b1ea8e87f4b8336664dd390c5b3a controls under unchanged documented method/environment; no repeat solely for time/139 integration. First eligible complete unchanged T11 final-candidate run also supplies real program smoke. [Sources: PM/t140-s5-design-brief.md:259-280; PM/t140-s5-design-ruling.json:408-420.]
+
+Retain S4 failed cohorts/diagnostic and invalid/interrupted/new failures separately; slowness alone is not exclusion. No old subject/mutant becomes an S5 sample. No sixth slice, larger cache/snapshot, extra preimplementation diagnostic, traffic reduction, new allowance or API/safety waiver. Admission/storage bookkeeping is not capacity/provider/executor/delivery/power-loss/SLA evidence. A numerical failure retains evidence and stops. No Ticket140 closure is claimed by these drafts. [Sources: docs/DECISIONS.md:3095-3116; PM/t140-s5-design-ruling.json:408-444.]
+
+## Drafter report
+
+- **P1 — narrow public record.** Reuse existing ledger-reader row and package-doc reference; no second status table, family or speculative Go edit. Sources: docs/CONTRACTS.md:3,11-27; PM/t140-s5-design-ruling.json:166-194.
+- **P2 — actual authority, future execution.** Preserve original ruling and actual later adopted D156 as separate sources; future assistant freeze has no number/date/evidence assigned now. Sources: docs/DECISIONS.md:2139-2147,3104-3116; PM/t140-s5-design-ruling-binding.json:1-37.
+- **P3 — source-bound proof and hard release.** M1–M3 evidence stays independent of later consumer/numerical gates; no upfront freeze or borrowed S4 proof. Sources: PM/t140-s5-design-ruling.json:125-136,206-288,347-420.
+- **P4 — immutable private retention.** Use existing c3-evidence convention and byte-preserving separate originals; proposed subtarget names are labeled [INFERENCE]. Sources: docs/DECISIONS.md:3113-3116; PM/t140-s5-c1-freeze-drafter-assignment.md:24-27,39.
+- **Unsettled facts:** only the explicit future fills above: actual settled implementation, execution/review evidence, log tail/number/date and public/private integration/release. No unresolved technical choice, source edit or new authority question is introduced. Main performs actual validation; this drafter used reads and only the three local artifact writes/edits, no repository/private-record edit, native command, formatter or subagent.

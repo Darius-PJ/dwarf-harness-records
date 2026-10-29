@@ -1,0 +1,32 @@
+{
+    "name":  "05-ledger-plain",
+    "executable":  "C:/Program Files/Go/bin/go.exe",
+    "argv":  [
+                 "test",
+                 "-count=1",
+                 "-timeout=19m",
+                 "-v",
+                 "./contract/ledger"
+             ],
+    "cwd":  "C:/Users/darius.jones/worktrees/dwarf-harness/140-final-ack",
+    "environmentOverrides":  {
+                                 "GOTOOLCHAIN":  "local",
+                                 "GOFLAGS":  "",
+                                 "GOROOT":  "C:/Program Files/Go",
+                                 "GOOS":  "windows",
+                                 "GOARCH":  "amd64",
+                                 "CGO_ENABLED":  "0"
+                             },
+    "timeoutSeconds":  1200,
+    "startedUTC":  "2026-10-29T20:53:54.8189016Z",
+    "finishedUTC":  "2026-10-29T20:54:02.9494512Z",
+    "elapsedSeconds":  8.1275619,
+    "exitCode":  0,
+    "timedOut":  false,
+    "reaped":  true,
+    "streamsComplete":  true,
+    "error":  null,
+    "stdout":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196\\05-ledger-plain.stdout.log",
+    "stderr":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196\\05-ledger-plain.stderr.log",
+    "metadata":  "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\plain-static-20261029T205354553Z-1196\\05-ledger-plain.json"
+}

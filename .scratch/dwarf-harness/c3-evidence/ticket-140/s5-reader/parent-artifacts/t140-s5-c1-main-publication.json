@@ -1,0 +1,39 @@
+{
+  "status": "APPROVED_CHECKED_EXACT_SHA_FF_AND_GUARDED_PUBLICATION_COMPLETE",
+  "checkedSHA": "bf71ba15cfc24095e36cf7230115694e665275ad",
+  "fromKnownMain": "84d0ced9446168777c7b7bfa3382974977bf27ed",
+  "hostedRunID": 40959042523,
+  "reviewVerbatimSHA256": "16958d4e8a5f753322511da7099d9f365db81cb237bedaa4af546d233e764005",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "merge",
+        "--ff-only",
+        "bf71ba15cfc24095e36cf7230115694e665275ad"
+      ],
+      "started": "2026-10-29T18:13:13.512452-04:00",
+      "finished": "2026-10-29T18:13:13.606076-04:00",
+      "exit": 0,
+      "stdout": "Updating 84d0ced..bf71ba1\nFast-forward\n contract/ledger/doc.go         |  22 +++\n contract/ledger/fuzz_test.go   | 131 +++++++++++++\n contract/ledger/reader.go      | 177 +++++++++++++++--\n contract/ledger/reader_test.go | 421 +++++++++++++++++++++++++++++++++++++++++\n contract/ledger/scan.go        |  56 +++++-\n docs/CONTRACTS.md              |   2 +-\n 6 files changed, 793 insertions(+), 16 deletions(-)\n",
+      "stderr": ""
+    },
+    {
+      "argv": [
+        "git",
+        "push",
+        "origin",
+        "main"
+      ],
+      "started": "2026-10-29T18:13:13.606855-04:00",
+      "finished": "2026-10-29T18:13:15.430612-04:00",
+      "exit": 0,
+      "stdout": "",
+      "stderr": "pre-push scan refs/heads/main: 2 commit(s), 799 added line(s): ok\nTo github.com:Darius-PJ/dwarf-harness.git\n   84d0ced..bf71ba1  main -> main\n"
+    }
+  ],
+  "CoreReleased": false,
+  "remoteMain": "bf71ba15cfc24095e36cf7230115694e665275ad",
+  "remoteReceipt": "bf71ba15cfc24095e36cf7230115694e665275ad\trefs/heads/main\n",
+  "privateBinding": "PENDING_RECORDED_FREEZE;CoreStillHeld"
+}

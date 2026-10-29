@@ -1,0 +1,96 @@
+{
+  "status": "EXACT_SIX_BLOBS_MATCH_JOINTLY_APPROVED_CODE_AND_R1",
+  "implementationSHA": "81ae94d3e92b5fd5574f46046c42fc9c5e30ce6d",
+  "publicFreezeSHA": "bf71ba15cfc24095e36cf7230115694e665275ad",
+  "parent": "81ae94d3e92b5fd5574f46046c42fc9c5e30ce6d",
+  "base": "84d0ced9446168777c7b7bfa3382974977bf27ed",
+  "manifest": {
+    "contract/ledger/reader.go": "75cb8a6e2bf9e7468787f7fd2708b2174aadfa741179a5ec97123f5eb959cc75",
+    "contract/ledger/scan.go": "94652a4384242aba11592beb8667cf65a90865ac3fdbfad60297bedb9732e1cb",
+    "contract/ledger/doc.go": "b078d7f534f5ebfd7fcb1c08d518a8c3e355abb8709e649ae9aef2c9993c29eb",
+    "contract/ledger/reader_test.go": "710772f66538aac26444f1ae4661d6df1f683f5a23d1a68336a7551bdad1e28d",
+    "contract/ledger/fuzz_test.go": "7b5c0fac7138c779ac41e5f42a9deb5ef9274bd7c462b28ee45df545734f9488",
+    "docs/CONTRACTS.md": "8fb8a671c3f859b8d8d2f597dc657d7807c49761fabdc5d1cd4a8147d1dc7953"
+  },
+  "committedBlobProof": {
+    "matched": [
+      "contract/ledger/reader.go",
+      "contract/ledger/scan.go",
+      "contract/ledger/doc.go",
+      "contract/ledger/reader_test.go",
+      "contract/ledger/fuzz_test.go",
+      "docs/CONTRACTS.md"
+    ],
+    "mismatched": [],
+    "missing": [],
+    "uncovered": []
+  },
+  "publicRecordDelta": "ONLYdocs/CONTRACTS.mdexistingReaderrow;actualD157digits;NOcode/commentdelta",
+  "approvalVerbatimSHA256": "16958d4e8a5f753322511da7099d9f365db81cb237bedaa4af546d233e764005",
+  "actualReviewerMessage": "90ae3609",
+  "reviewedEvidenceSHA256": "c6405bf018387cc66d72ead83156a3a6959828dd03f0b50be318706bc22f364c",
+  "reviewedRecordSHA256": "192487c0cf06973c15d2f5e8589b38bae638e86bd38acd9eb10e0d44a59e6383",
+  "allowedFactualFillAuthority": {
+    "withoutRoutineNoteConfirmation": true,
+    "only": [
+      {
+        "fields": [
+          "JOINT-REVIEW",
+          "JOINT-REVIEW-RECEIPT",
+          "REVIEW-SUBJECT",
+          "REVIEWED-RECORD",
+          "REVIEW-DISPOSITION"
+        ],
+        "allowedContent": "This verbatim review line and original verdict; actual request/verdict/provenance paths and digests; actual reviewer/model/effort/fallback routing; exact submitted identities and findings disposition. Preserve submitted and final-filled copies separately."
+      },
+      {
+        "fields": [
+          "D-NEXT",
+          "DATE",
+          "R3 literal Find and first retained Replace line"
+        ],
+        "allowedContent": "Actual unused decision digits, actual local-calendar freeze date, and the actual append-time last nonempty decision-log line. Use identical digits throughout; do not rewrite an earlier decision body or allocate a B entry."
+      },
+      {
+        "fields": [
+          "C1-FREEZE-SHA",
+          "PUBLIC-FREEZE-IDENTITY",
+          "CODE-HASH-BRIDGE",
+          "EXACT-SHA-REVIEW-BINDING"
+        ],
+        "allowedContent": "Actual public commit/parent containing the reviewed code/package documentation plus approved R1; five-blob equality, exact public-record delta and this review's binding to that subject."
+      },
+      {
+        "fields": [
+          "HOSTED-FULL-MATRIX",
+          "C1-HOSTED-RESULT"
+        ],
+        "allowedContent": "Actual own exact-freeze-SHA full Windows/Linux/macOS and race results, successful Check result, run URL/ID/attempt/head/classifier/completion and raw receipts. No Markdown-exempt aggregate or later Core run substitutes."
+      },
+      {
+        "fields": [
+          "C1-MAIN-PUBLICATION",
+          "PRIVATE-BINDING",
+          "PRIVATE-PUBLICATION-RECEIPT",
+          "COMPLETED-DECISION-COPY"
+        ],
+        "allowedContent": "Actual guarded checked-SHA fast-forward/main/remote facts and private decision/evidence/review/check/public-subject bindings, digests and publication receipts. Keep self-referential private commit identities external to their own bytes."
+      },
+      {
+        "fields": [
+          "CORE-RELEASE-RECEIPT"
+        ],
+        "allowedContent": "Only the PM's later actual release after the completed freeze, its own hosted success, main publication and private binding exist. This review does not supply that release."
+      },
+      {
+        "fields": [
+          "EVIDENCE-BODY"
+        ],
+        "allowedContent": "The exact reviewed UTF-8/LF companion body with only these authorized factual fills, inserted as R4. Applied records must contain no unresolved placeholders."
+      }
+    ],
+    "restrictions": "No M1 fuzz result remains pending. These fills cannot alter reviewed code, contract prose, evidence conclusions or authority premises. Material changes require affected proof/review; a changed public SHA requires its own hosted result. Unchanged C1 campaigns need not be repeated."
+  },
+  "hosted": "PENDING_OWN_FULL_MATRIX",
+  "C3Released": false
+}

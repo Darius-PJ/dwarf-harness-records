@@ -1,0 +1,149 @@
+{
+  "at": "2026-10-29T16:52:42.275692-04:00",
+  "status": "ACCEPTED_FOUR_GENUINE_REDS_EXACT_RESTORED_SAME_GREENS",
+  "report": "local://t140-s5-c1-mutation-report.json",
+  "actualAll8MetadataRead": true,
+  "actualAll8RawStdoutRead": true,
+  "exactOnePredicateReconstructedEach": true,
+  "parentProofAnchorNote": "M4return-lineappearedintwofunctions;verificationcontextnarrowedtocheckedCloseblock.Nosourcechanged/nativeproofrepeated;M1\u2013M3successfulverificationretained.",
+  "all5ActualWorkingTreeSHA256Restored": {
+    "contract/ledger/reader.go": "75cb8a6e2bf9e7468787f7fd2708b2174aadfa741179a5ec97123f5eb959cc75",
+    "contract/ledger/scan.go": "94652a4384242aba11592beb8667cf65a90865ac3fdbfad60297bedb9732e1cb",
+    "contract/ledger/doc.go": "b078d7f534f5ebfd7fcb1c08d518a8c3e355abb8709e649ae9aef2c9993c29eb",
+    "contract/ledger/reader_test.go": "710772f66538aac26444f1ae4661d6df1f683f5a23d1a68336a7551bdad1e28d",
+    "contract/ledger/fuzz_test.go": "7b5c0fac7138c779ac41e5f42a9deb5ef9274bd7c462b28ee45df545734f9488"
+  },
+  "perimeter": {
+    "changedPaths": [
+      "contract/ledger/doc.go",
+      "contract/ledger/fuzz_test.go",
+      "contract/ledger/reader.go",
+      "contract/ledger/reader_test.go",
+      "contract/ledger/scan.go"
+    ],
+    "untracked": [],
+    "noConsumerModuleFixtureChange": true
+  },
+  "rows": [
+    {
+      "id": "M1",
+      "oneExactPredicateReconstructedMatchesNativeSHA": true,
+      "exactDiffSHA256": "fe2b89092dd50b4a086c805bb84d1f164af31427e628b1ccd267f5a2dcaec736",
+      "sourceRestoredActualWorkingTree": true,
+      "runs": [
+        {
+          "color": "red",
+          "run": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\m1-prefix-red-20261029T204230087Z-6716",
+          "exit": 1,
+          "reaped": true,
+          "sourceHashesMatch": true,
+          "rawStdoutSHA256": "38c7b2133bee08731101d5d051934f66c8285670b2babf7dde096e3dbb6eeee7",
+          "metadataSHA256": "21cb753f52a68209195d4955c2d7703147abb14b4f21ca99f9570484ec404625",
+          "namedObservedRow": "--- FAIL: TestReaderCheckpointChangedPrefix/framing (0.01s)"
+        },
+        {
+          "color": "green",
+          "run": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\m1-prefix-green-20261029T204251440Z-12972",
+          "exit": 0,
+          "reaped": true,
+          "sourceHashesMatch": true,
+          "rawStdoutSHA256": "d7d5d30562042888a9f8b6486dd5150046f32673e806b7079fe85e478bf1110d",
+          "metadataSHA256": "5dc5dde84ae9180b3fc39d04b4559f7a7f1edde0f8d77d3103f5f7f13d15e0e2",
+          "namedObservedRow": "--- PASS: TestReaderCheckpointChangedPrefix/framing (0.01s)"
+        }
+      ]
+    },
+    {
+      "id": "M2",
+      "oneExactPredicateReconstructedMatchesNativeSHA": true,
+      "exactDiffSHA256": "517fad52eaaabad5a3e072d3a14e97b568bf1db14f71abff0824293182366c67",
+      "sourceRestoredActualWorkingTree": true,
+      "runs": [
+        {
+          "color": "red",
+          "run": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\m2-base-red-20261029T204317567Z-10112",
+          "exit": 1,
+          "reaped": true,
+          "sourceHashesMatch": true,
+          "rawStdoutSHA256": "5b7a73c9783ce9c284a144fb100a120df59c9e330eacaf5d9e1cb7211c7d2c54",
+          "metadataSHA256": "0b9d24e75e0178291770ac95b5dc60b092a519eee05ca6e3844c4d2fc96a42cf",
+          "namedObservedRow": "--- FAIL: TestReaderCheckpointAnchorAndFallback/changed_predecessor (0.01s)"
+        },
+        {
+          "color": "green",
+          "run": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\m2-base-green-20261029T204334779Z-16160",
+          "exit": 0,
+          "reaped": true,
+          "sourceHashesMatch": true,
+          "rawStdoutSHA256": "44b359ca1f930585b3691e84997145a5d2f2c036d426353157b154702addaf96",
+          "metadataSHA256": "2fd75a869c84898208537c89257c36d9e221fd8c382345cac7393d251ac807f2",
+          "namedObservedRow": "--- PASS: TestReaderCheckpointAnchorAndFallback/changed_predecessor (0.01s)"
+        }
+      ]
+    },
+    {
+      "id": "M3",
+      "oneExactPredicateReconstructedMatchesNativeSHA": true,
+      "exactDiffSHA256": "f86f696ad2308806b975c62d4161ca2f0d80deb0ca651888b6c9e93ce15b95b6",
+      "sourceRestoredActualWorkingTree": true,
+      "runs": [
+        {
+          "color": "red",
+          "run": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\m3-token-red-20261029T204348840Z-13328",
+          "exit": 1,
+          "reaped": true,
+          "sourceHashesMatch": true,
+          "rawStdoutSHA256": "8c04fcacad7bc1d0a0ea93893b5eeaac78283311169cbd0b35afb9945a5a65ed",
+          "metadataSHA256": "cce1d51a8df8aecf33b1b8e294020c6a417b70cd243bf67441fd711899b48a38",
+          "namedObservedRow": "--- FAIL: TestReaderCheckpointAnchorAndFallback/damaged_afterHash (0.01s)"
+        },
+        {
+          "color": "green",
+          "run": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\m3-token-green-20261029T204405890Z-4908",
+          "exit": 0,
+          "reaped": true,
+          "sourceHashesMatch": true,
+          "rawStdoutSHA256": "2144a71bf7455231a3c21ad29b993ae3cc69485c7b9ed49694923eada6b74911",
+          "metadataSHA256": "f61a6b244fade598363858f6fb5f5a3be3d9bcdb3784d144a6f7340080b10733",
+          "namedObservedRow": "--- PASS: TestReaderCheckpointAnchorAndFallback/damaged_afterHash (0.01s)"
+        }
+      ]
+    },
+    {
+      "id": "M4",
+      "oneExactPredicateReconstructedMatchesNativeSHA": true,
+      "exactDiffSHA256": "3eb9002730754796d8648e869da79e979b0af082540b9391cd99937c9a71ad4d",
+      "sourceRestoredActualWorkingTree": true,
+      "runs": [
+        {
+          "color": "red",
+          "run": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\m4-close-red-20261029T204439527Z-14476",
+          "exit": 1,
+          "reaped": true,
+          "sourceHashesMatch": true,
+          "rawStdoutSHA256": "37eefcfa087a3b6ca8664f0df94ac18a82d18b8f20bc91d8046a674bb42b0d4f",
+          "metadataSHA256": "0db36dac5c47d5c8fc9f7e05069a585fd5c52e00d276a247acc5965eb709ea69",
+          "namedObservedRow": "--- FAIL: TestReaderCheckpointErrors/numeric_EOF_close_failure (0.01s)"
+        },
+        {
+          "color": "green",
+          "run": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t140-s5-reader-evidence\\m4-close-green-20261029T204458609Z-16388",
+          "exit": 0,
+          "reaped": true,
+          "sourceHashesMatch": true,
+          "rawStdoutSHA256": "66c2dce2dcc2a5224fd1596f271393b441530035f9986e6ba6d260e152f342f2",
+          "metadataSHA256": "5088cd08ecb8cab1d8c57b30dee7dfca30c6c05566d31264cd2330d99c033d94",
+          "namedObservedRow": "--- PASS: TestReaderCheckpointErrors/numeric_EOF_close_failure (0.01s)"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "M3redrecordscursorequivalencefailsbeforeerrorclassprint;noErrCorruptredlogclaim",
+    "M4actualClosereturnfailureonly;Next/checkpointguardsstillprotectnoissuance;noC3successclaim"
+  ],
+  "AUTHORGoReleased": true,
+  "PMGoReleaseAcknowledged": true,
+  "noPendingNativeOrWriter": true,
+  "C3Released": false
+}
