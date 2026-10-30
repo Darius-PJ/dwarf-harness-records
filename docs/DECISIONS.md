@@ -3202,3 +3202,8 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 - **Date:** 2026-10-30. **Decided by:** adopted. The owner picked four of the project manager's five options; he did not pick turning contract freezes into register lines, so freezes keep their entries, in the short form.
 - **Decision:** agents read `docs/CURRENT-RULES.md`, one line per rule in force with its entries, and open this log only for an entry's reasoning or history. A new entry is written only when a standing rule, the scope or an owner gate changes. It holds the date, the originator, the decision in a few lines and what it amends: no quotes, evidence paragraphs, line-number citations or pointer lines in earlier entries. A ticket adds no build record: its Answer and evidence say what it built, and its exceptions, rulings and answers stay in its notes, ruling and evidence.
 - **Amends:** the decision-record rule in `AGENTS.md`; D116's documents list and ROADMAPS working rules 6 and 10; the close step of D160's loop. Entries D1–D160 and B1–B36 stay as written.
+
+### D162. The twenty-step loop stands; brief timing per ticket
+
+- **Date:** 2026-10-30. **Decided by:** owner. After ticket 89, the first ticket run wholly under D160's loop, he found that the workflow changes had shortened tickets. D160's flow is no longer provisional. For each ticket the project manager reports only its timing, briefly, with no per-ticket pace analysis; in-depth analysis is done in the owner's periodic audits.
+- **Amends:** D160 (its provisional status and the review after the next ticket).

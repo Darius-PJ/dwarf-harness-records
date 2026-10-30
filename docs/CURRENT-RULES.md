@@ -1,6 +1,6 @@
 # Current rules
 
-This file is a digest of the rules in force in the decision log, entries D1–D161 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
+This file is a digest of the rules in force in the decision log, entries D1–D162 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
 
 ## How the build works
 - Build Core first; Undercurrent foundations use synthetic data and frozen consumed contracts, and pass their field gates before affecting agents. (D14, D19, D20)
@@ -30,7 +30,7 @@ This file is a digest of the rules in force in the decision log, entries D1–D1
 - Keep decisions, evidence and agent instructions/roles in private records, absent from public history. Only decisions/evidence may quote the owner, and new entries do not; public text/messages omit personal paths, machine/settings/program descriptions and use the published identity. (D135, D136, D145)
 - The PM removes redundancy and decides reversible matters outside reservations; record changed repository rules as assistant decisions and report procedure changes. Start frontier tickets without routine approval. (D121, D152 item 4, D160 item 3)
 - At one provider's 0.95 usage window move build roles to the other and report it; both at 0.95 means stop at the next slice boundary. Ask optional owner questions once and continue independent work. (D152 item 4)
-- One PM session runs up to three tickets; write its handoff once per session. A watcher wakes the PM after fifteen inactive minutes with pending work. Designers get LSP; coders test unless measurement holds the machine. (D160 items 4, 6, 9, 10)
+- One PM session runs up to three tickets; write its handoff once per session. A watcher wakes the PM after fifteen inactive minutes with pending work. Designers get LSP; coders test unless measurement holds the machine. Report each ticket's timing briefly, without per-ticket pace analysis; in-depth analysis comes in the owner's periodic audits. (D160 items 4, 6, 9, 10, D162)
 - Numerically bounded tickets start with one profiled acceptance-driver run. After a smallest-history smoke, each instance uses a quiet-machine runner writing its own admission record. (D160 items 7–8)
 - Evaluate architecture against declared workload, accepted throughput, backlog/latency, contention/rework and whole-process/model costs; distinguish assumptions, calculations and measurements. Busy refusals are not delivery. Preserve social scope and safety; calibration is not capacity. (D78, D79, B15)
 
