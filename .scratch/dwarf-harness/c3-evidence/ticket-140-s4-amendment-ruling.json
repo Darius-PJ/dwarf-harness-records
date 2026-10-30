@@ -1,0 +1,145 @@
+{
+  "artifact": {
+    "suggestedPath": "local://t140-s4-amendment-ruling.json",
+    "written": false,
+    "reason": "This reviewer has read/grep/glob/find only; no write tool is exposed. This response is the complete ruling for PM persistence."
+  },
+  "verdict": "approve",
+  "approvalScope": "Bounded fourth-and-last S4 implementation amendment only. Not code approval, numerical acceptance or ticket close.",
+  "reviewLine": "Temporary GPT-6 Astra stand-in, routed as openai-codex/gpt-6-astra, approves the bounded Ticket140 S4 amendment below under D152 and original ruling §6. This is not Fable approval. Fresh independent S4 code review and later Fable whole-ticket verification remain required.",
+  "regressionRuling": {
+    "route": "Fix before acceptance; do not close with failed bounds.",
+    "severity": "major",
+    "effect": "Blocks Ticket140 quantitative acceptance and close, not the settled S3 code approval or its completed integration gates.",
+    "measuredSubject": "82d8d48856c7191019625c9f6e896d10b9b8498c",
+    "result": "The complete eligible campaign fails all seven finite bounds. Neither driver triggers the fixed noise extension.",
+    "failedBoundsMs": {
+      "T11 normalized Open": [834.6942807, 245.6987],
+      "turn.start": [181.3089, 69.1186],
+      "local.admit": [439.721, 136.9594],
+      "local.begin": [441.6982, 146.6468],
+      "task.create": [183.6394, 83.0086],
+      "task.cancel": [176.2842, 89.1498],
+      "T12 normalized Open": [5120.4612011, 3250.419]
+    },
+    "pairMeaning": "Observed median, then bound, for the failed subject. These are not replacement absolute thresholds for S4.",
+    "evidenceBasis": [
+      "Read the completed campaign summary, original S5 profile attribution, diagnostic receipt/profile outputs, governing ruling/addendum, settled S3 receipt and relevant immutable production source.",
+      "T12 grown Open attributes overlapping cumulative CPU to scan, refreshLocked and sourceRecords/reviewWitnesses. The earlier S5 read-rights/artifact-authority/load-task conjunction has zero reported sampled share; do not describe that old bottleneck as reintroduced.",
+      "The separately instrumented full-traffic T11 diagnostic identifies refreshLocked, findCommand and workspace registration/readiness work. Its cumulative stacks overlap and must not be added.",
+      "T11 diagnostic pre-observation was approximately 0.291 unrelated core, above acceptance eligibility. It remains diagnostic-only, not a quiet timing sample. CPU attribution does not establish I/O latency."
+    ]
+  },
+  "implementationBase": {
+    "sha": "34090c3b634b9854904671c336db91c350e6328c",
+    "interveningChange": "Integrated Ticket139 S1 additive codecs/freeze documentation, with no Core producer or Core production-source change, as reported by PM.",
+    "subjectTreatment": "S4 is built on this base, not directly on 82d8d48. Identify the final combined SHA honestly; do not transfer the failed subject's measurements to it or label it pure140."
+  },
+  "ownedScope": {
+    "productPaths": [
+      "internal/core/agents/history_index.go",
+      "internal/core/agents/replay.go",
+      "internal/core/agents/scoped_state.go",
+      "internal/core/agents/scoped_execute.go",
+      "internal/core/agents/review_execute.go",
+      "internal/core/agents/doc.go"
+    ],
+    "regressionPaths": "Use existing history_index_test.go and the relevant scoped admission, replay, review and recovery test files. Touch only files needed for the observable cases below.",
+    "sourceRecordsInterface": "Keep review_sources.go's existing batched authoritative fallback and interface. Accepted-source warming below feeds that existing interface; a parallel source lookup implementation is not authorized.",
+    "exclusions": [
+      "No contract Reader, ReadOptions, scanner, appender or ledgerstore interface/implementation change.",
+      "No new persistent reader, ToEnd live-reader shortcut, checkpoint, snapshot, offset catalogue, second cache, broad grant index or generic caching framework.",
+      "No owner/private producer, paid producer, accounting, credential, provider, scheduler, workflow, toolchain, dependency, machine-setting, record, schema or golden change.",
+      "No retention of authorization, reservations or executable preflight plans across an unlock.",
+      "No alteration of S3 occurrence inspection, fresh private health, materialization completion or selection semantics."
+    ]
+  },
+  "concreteAmendment": [
+    {
+      "name": "Workspace-registration membership in the existing LRU",
+      "interface": "Retain registeredResource(ctx, resource, through). Its workspace branch performs the existing context-binding check, then consults one additional historyIndex kind keyed by WorkspaceID.",
+      "valueAndProof": "Cache only the found boolean and existing checksummed covered-prefix metadata. Populate it after the existing complete authoritative workspace search succeeds, not merely after observing one workspace_registered record. Preserve the full search's decoding/error behavior.",
+      "validity": "Use the existing historical-entry rule: the search's exact complete prefix or the current accepted prefix, with coverage and checksum validation. An arbitrary intermediate prefix or an earlier prefix cannot borrow a later answer.",
+      "publicationAndInvalidation": "A completed cold fill is inserted only while history coverage still equals its captured prefix. Every accepted workspace_registered effect invalidates the affected WorkspaceID before advancing coverage. A decoding failure during optional invalidation conservatively clears acceleration and leaves the authoritative query to return its existing error; it must not manufacture absence or introduce a cache-only refusal.",
+      "fallback": "Missing, disabled, evicted, oversized, stale, malformed or detectably corrupt acceleration uses the existing full authoritative workspace search.",
+      "authorityBoundary": "Registration remains evidence, not permission. Do not cache workspaceReady. Current origin/context binding, grants, task restrictions and an open matching root scratch remain checked in their existing phases. A cached registration must not make a closed scratch usable."
+    },
+    {
+      "name": "Warm existing source-record entries from fully accepted commits",
+      "interface": "Reuse historyIndex.putSource/source and sourceRecords. Feed them actual ledger.Record values already obtained by the authoritative reader during successful commit acceptance.",
+      "eligibleMetadata": "The existing private-revision, scoped-private-revision and task-description source records, plus already-consumed artifact-source records with body references. No arbitrary unknown-family payload caching and no schema5 support is authorized.",
+      "keyAndProof": "Keep the existing source sequence key, instance/colony isolation, record identity and complete-commit first/last bounds. A hit requires the entire source commit to be within the requested prefix and accepted coverage. Preserve type, binding, revision, slot, mode, byte count, body-reference and task-description checks.",
+      "publication": "Warm only after all acceptance checks and effects for that complete commit succeed. Cover both ordinary refresh publication and the existing direct live-review installation. Never warm from draft preparation, rejected groups, a partially processed commit or unacknowledged data.",
+      "storage": "Use the existing copied/encoded metadata representation and shared accounting. Do not retain a whole reader commit backing array while charging only one selected record. Serialization or admission failure simply leaves the entry uncached.",
+      "fallback": "Eviction or invalid proof returns to the unchanged batched segment-aligned source reader. Positive immutable late fills retain the existing complete-commit/prefix rules; mutable or negative fills gain no such exception."
+    },
+    {
+      "name": "Reuse the authoritative own-commit read for scoped acknowledgement",
+      "interface": "Factor the existing refresh callback's complete-commit validation/install/publication into a private helper shared by refreshLocked and the contiguous scoped acknowledgement path. It may return the commandMatch decoded from that same accepted commit.",
+      "eligiblePath": "Only a nonduplicate Submit receipt whose First equals the still-locked projection frontier plus one may use the shortcut. Read its exact numeric interval through the existing scan/Reader, require exactly the expected complete commit/range, and validate the actual command ID, submission digest and scoped family.",
+      "installation": "Run the existing reducer checks on the authoritative commit and install it once. Reuse its decoded match for the acknowledgement instead of performing refresh followed by another findCommand scan over that same receipt interval.",
+      "preservedEffects": "Keep duplicate-ID checking, all family effects, maxCommand, reviewFloor from actual envelope times, scratches, identity/association publication, cache invalidation and final p.through publication. No successful acknowledgement follows a reader, range, decoding, reducer or close error.",
+      "fallback": "Duplicate receipts, gaps, prior installation or an ineligible range retain the existing refresh and exact-interval receipt lookup behavior. Do not reconstruct an authoritative receipt from the caller's draft or assume Submit's hot index replaces agents' duplicate detection.",
+      "commandBoundary": "This does not authorize seeding a global command-search answer from one observed command. findCommand retains its (after, through] semantics, duplicate detection, complete-search fills, F0 invalidation and late-fill exclusion.",
+      "reviewPath": "Preserve the existing direct live-review optimization and its already-performed bounded read. Use that accepted commit for source warming/publication; do not reread immutable witnesses or retain a plan across an unlock.",
+      "costLimit": "The existing Reader may still decode the containing segment prefix for a bounded interval. This amendment removes redundant reads and nested metadata searches; it does not make that reader seek directly to a record or promise scan-free ordinary work."
+    }
+  ],
+  "sharedSafetyRequirements": [
+    "The one LRU remains capped at 256 entries and 8 MiB charged retained metadata, with bounded container overhead. This is not a total-RSS guarantee. No second inventory or lifetime map is permitted.",
+    "Whole-commit acceptance precedes accelerator publication. Failed or partial acceptance cannot publish successful lookup proofs, receipts, effects or a covered frontier.",
+    "Service.mu remains the outer lock where both locks are needed. The history mutex spans neither I/O nor acquisition of Service.mu. Release it before callbacks or other service work; do not recursively lock it while warming sources.",
+    "Preserve all preparation, current-authority, CAS, pre-submit, scope-gate, reservation, retry/wait and acknowledgement phases. Caller cancellation after a durable commit retains existing completion ownership.",
+    "Acceleration damage loses acceleration, not committed facts. Authoritative fallback errors remain errors. Preserve historical prefixes, exact receipt intervals, duplicate occurrences and unsupported-version behavior.",
+    "Keep S3 fresh object/Markdown observations and all transcript/current-head fences unchanged. Cached ledger metadata is never fresh filesystem-health evidence."
+  ],
+  "observableEvidenceRequirements": {
+    "workspace": [
+      "A missing workspace answer must not survive its later valid registration; later metadata must not appear in an earlier-prefix query.",
+      "A warm registration must not bypass wrong context/origin, denied or revoked authority, or a closed/missing matching root scratch. Refusal must append nothing and create no extra hold or charge.",
+      "Discarded, evicted and detectably damaged workspace entries must reproduce authoritative outcomes, including real authoritative errors."
+    ],
+    "sources": [
+      "Exercise sources warmed by actual accepted replay and live publication, not solely hand-inserted cache entries.",
+      "Preserve exact source identity and complete-commit prefix exclusions, rejected-group nonpublication, copied-value isolation and truthful fallback after damage/eviction.",
+      "Existing wrong-type/sequence/binding/slot/size/reference and review-rights regressions must remain effective; add only genuinely uncovered cases."
+    ],
+    "acknowledgement": [
+      "A contiguous own commit returns its exact durable receipt and installs/charges once; reopen and retry reproduce it without another effect.",
+      "An intervening commit or duplicate winner takes the correct fallback. Changed-input reuse remains a conflict. A corrupt or malformed authoritative acknowledgement interval must not be accepted from prepared drafts.",
+      "Retain existing command-occurrence, negative-tail versus broader-query, cancellation, completion-failure, projection-fence and Close-draining behavior."
+    ],
+    "mutationProof": "For each newly introduced eligibility/publication/invalidation proof, demonstrate a minimal decisive rule break that causes an existing or justified new observable regression to fail, then restore exact bytes and obtain green evidence. Combine coverage where one row genuinely catches multiple bugs; do not add wiring, source-text, cache-hit-count or incidental-default assertions.",
+    "localGate": "D152 focused/plain verbose package runs at 19m/1200s launcher deadline; shared-state race at 29m/1800s; genuinely affected concurrency rows at race count20, 45m/2800s. Approved Go1.27.3, ordinary CGO0, race CGO1 with the pinned compiler. Retain static/vet/format/import/module and raw failure/correction evidence. No duplicate local tools/check.",
+    "families": "Retain service-level frozen-family and crash/recovery coverage for all four existing families. Do not modify goldens or weaken no-effect invariants to accommodate acceleration.",
+    "fuzz": "PM selects 120-second serial campaigns from the actual final changed-path reachability. Scoped/Review/Paid currently provide real-store Open reach; Private's prior omission is not automatically binding if S4 changes its reach. Document the final decision and limitations, preserve failures, and run no package-membership-only campaigns.",
+    "integration": "Fresh independent S4 code-and-evidence review, then exact-final-SHA D153 full Windows/Linux/macOS/race/aggregate hosted success before ff-only integration. A fix or rebase needs evidence for its own SHA."
+  },
+  "numericalAcceptance": {
+    "controls": "The existing eligible 93e8f0afe125b1ea8e87f4b8336664dd390c5b3a control for each driver may remain the overall baseline under the same documented machine, toolchain, environment, driver bytes and measurement method. Elapsed time and the intervening139 codec addition alone do not require duplicate controls. A material environment/method change requires an explicitly comparable replacement control for the affected driver; retain the old one.",
+    "newCandidates": "The final S4 SHA requires a complete new cohort of three independent eligible instances per driver. Do not mix in 82d8d48 candidate instances. Retain that completed failed cohort separately with all invalidated/withdrawn attempts.",
+    "drivers": "Keep all six saved source hashes unchanged, including the already-approved T12 label-only version. Preserve T11 populations12→20, held turns1→3, burst16, all phases and the complete ten-operation loop until current commits reach at least actual B×10. Keep T12 factor2, populations and four original CPU profiles.",
+    "bounds": "For each driver, median(OpenLong_i/R_i) <= median(OpenShort_i), using each instance's actual Open record ratio. For each of the five T11 operations, median(long) <= 2*median(short)+25ms; task.cancel uses paired profile_cleanup rows. Compute the final subject's own short medians; neither the old failed bounds nor base timings replace them.",
+    "eligibility": "Fresh output/colony directories, serial execution, no overlapping local compute, and five-second pre/post unrelated CPU observations <=0.25 core. Postpone ineligible starts; retain and replace loaded-invalid or interrupted instances. Slow timing alone is not exclusion grounds.",
+    "noise": "After three eligible instances, add exactly two complete instances of a driver only when its original paired-difference/10-percent rule triggers, then decide on all five. No extension is justified for the already-completed failed S3 cohort.",
+    "reporting": "Retain commands, environments, hashes, exact subjects, frontiers, statuses, raw output and profiles. Report raw agents.Open and store.Open separately, actual R, time per record, normalized growth and two-point exponents without universal-complexity claims. Preserve admission-and-storage-only and bookkeeping labels.",
+    "additionalMeasurements": "No additional preimplementation measurement is required to authorize this bounded design. Use the original final-candidate drivers and their required profiles. Do not impose a new CPU-share SLA or automatic extra T11 diagnostic campaign.",
+    "failureStop": "All seven bounds and the existing semantic/ordinary-history/S5-ordering gates remain required. If S4 still fails, retain the failure and return for an explicit ruling; no fifth slice, larger cache, snapshot, smaller workload, threshold relaxation or noise relabeling is automatically authorized."
+  },
+  "crossSliceIntegrationNote": {
+    "status": "Ticket139 S2 remains in its separate tree and is not part of current main34090c3b or this amendment.",
+    "preserveOnEventualIntegration": [
+      "Its cached decodeFamily call conservatively ignores the added fifth result.",
+      "Its putCommand guard declines caching when match.registration is nonnil."
+    ],
+    "boundary": "Preserve those two authorized mechanical guards during eventual PM-managed integration. Do not introduce cached schema5 positives or change cache caps, keys, coverage or F0 invalidation for139. Its matching-receipt/no-second-effect/intervening-F0/changed-input proof remains139's responsibility. This creates no140 product dependency on139."
+  },
+  "carriedNotes": [
+    "S3 code approval, its timed-fuzz results and exact-SHA hosted success remain settled. Their correctness evidence does not cure the measured cost failure.",
+    "Update cost documentation only to the implemented and measured paths, including remaining segment-prefix decoding, cold misses, eviction and required historical private inspection.",
+    "No owner-only gate is triggered by the bounded amendment as written. Frozen/API breaks, D52 promotion, dependency/toolchain changes and provider/money/workflow/machine actions remain outside this approval.",
+    "Record this technical ruling with originator assistant and retain private evidence under the existing private-record rules.",
+    "Fable whole-ticket verification and Ticket13 verification/close remain held. No commands, measurements, tests, edits or subagents were run by this reviewer."
+  ],
+  "evidenceRequests": []
+}

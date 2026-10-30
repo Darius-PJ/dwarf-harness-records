@@ -1,0 +1,162 @@
+{
+  "briefSHA256": "2888377df3f439d55e1a8cdf5d893d3e38a1fd29de4ab6cda47acf054e26e090",
+  "briefBinding": "Read the whole brief (all 179 lines, truncated lines re-read raw), the designer request, the PM clarifications, the decision excerpts (D45, D152, D155-D158), the retained fifth-slice ruling (SHA256 ef2dfa66..., read for its P1-P8/B1-B4 dispositions, compatibility and OG-SEQUENCE), both gopls reference files, the diagnostic summary, and the real code on worktree 140-final-ack at 2bce72e. SHA identities are the supplied bindings; no hashing command was run. No edits, Go commands, tests, Git writes or subagents.",
+  "reviewer": "Fable advisor (anthropic/claude-fable-5-1), fresh technical ruling under D158; nothing here is inferred from D158's existence or from the mechanism's plausibility.",
+  "verdict": "approve-with-conditions",
+  "approvalScope": {
+    "technicalDesign": "P1-P6 approved as the bounded sixth-slice design, with the conditions listed per item. The coder may be assigned once the PM records this ruling and its amended rule as an assistant-originated decision entry (AGENTS.md; D152 item 5).",
+    "implementationAuthorized": true,
+    "codeApproved": false,
+    "contractChanged": false,
+    "numericalAcceptance": false,
+    "ticketCloseApproved": false,
+    "stillRequired": "D158's own gates: focused local and fuzz proof on the final SHA, the unchanged original measurement protocol for all seven bounds, a fresh final combined review of the code and evidence, the final SHA's own full hosted three-OS/race Check result, D153 guarded publication, and the separate whole-ticket verification and close."
+  },
+  "dispositions": {
+    "P1": {
+      "item": "Seam: Open-only inline replay in openService through OpenReaderWithCheckpoint(..., nil), the existing scanReader and the unchanged acceptor.",
+      "disposition": "approve",
+      "grounds": [
+        "The measured miss is exactly this path: openService builds an empty history index and replays through refreshLocked -> scan -> ledger.OpenReader (service.go:169-172; replay.go:241-279), which captures nothing; the first contiguous acknowledgement then passes an empty proof (scoped_execute.go:341-345) and only it publishes one (scoped_execute.go:351-353).",
+        "OpenReaderWithCheckpoint(logDir, opts, nil) is a checked-close cold read with capture enabled: checkpoint.matches on a nil receiver returns false (contract/ledger/reader.go:94-96), so no restore is attempted and r.s.prefix is set only when Through is numeric and After < Through (reader.go:176-190). The frozen Reader's own Checkpoint() rules then govern issuance (reader.go:334-365).",
+        "The pseudocode mirrors the already-proven readCommittedRange shape: scanReader's deferred r.Close() runs before Checkpoint() is asked (replay.go:249-263, 283-312), so the descriptor is closed and the token is minted only after terminal EOF and successful actual closure.",
+        "At Open, After is 0 (p.through starts at 0), so k=0 and lastRecord is not invoked; multi-segment logs go through the scanner's checked transition closes and per-segment prefix reset (contract/ledger/scan.go:112-121, 203-219). The final token describes the segment containing T.",
+        "Every refreshLocked advance, every historical scan (findCommand, inspectOpen at integrity.go:72,165, sourceRecord) and the review path stay on legacy OpenReader. No mode flag, bootstrap field or second reducer is introduced."
+      ],
+      "conditions": [
+        "Replace only the s.refreshLocked(ctx, store.Durable()) call at service.go:170-172 with the brief's block, keeping the single store.Durable() snapshot and the equal-frontier no-op (`if through != s.p.through`).",
+        "Call r.Checkpoint() only after scanReader returned nil; never retain r, a hash state, Commit buffers or the descriptor beyond the replay block; hold only the optional token.",
+        "No retry, fallback replay, second pass, alternate parser, or legacy re-open on any error; an error from OpenReaderWithCheckpoint or scanReader returns (nil, report, err) exactly as the refresh failure does today.",
+        "scan, scanReader, refreshLocked, readCommittedRange, acceptCommitLocked, every cache function, the Reader, scanner, ledgerstore and appender remain byte-unchanged. No new file, import or dependency: contract/ledger is already imported by service.go.",
+        "Nit, not a condition: the inline ReadOptions literal duplicates scan's; acceptable because the opener differs and the brief rightly rejects a mode flag."
+      ]
+    },
+    "P2": {
+      "item": "Error compatibility: under checked-close mode an actual descriptor-close failure during the initial replay becomes an Open/OpenPaid error instead of being ignored.",
+      "disposition": "approve",
+      "classification": "nonbreaking",
+      "exactBehaviorChange": "In legacy mode scanner.close() never records a close error (scan.go:87-96), so Next's readCloseError and Reader.Close return nothing for a failed close(2) on a read-only segment descriptor. In checked mode the first actual close failure is retained, returned from Next at EOF/error, from a segment transition (stopping before the next segment opens) and from the deferred Close in scanReader (reader.go:262-271, 322-332; scan.go:112-121). openService therefore returns that error (possibly errors.Join-ed with a read or reducer error). Normal EOF, every corruption/version/cursor/visitor/context error and their typed fields are unchanged. On a healthy filesystem Open's projection, report, receipts, goldens and crash rows are identical.",
+      "whyNonbreaking": [
+        "internal/core/agents is not a contract package (D45: contracts live under contract/ and are standard-library only). No register row in docs/CONTRACTS.md covers agents.Open or agents.OpenPaid; C3's frozen items (D139, D140, D144, D148, D154) are record families and their producer/replay rules, which this slice does not touch.",
+        "The frozen ledger-reader row (docs/CONTRACTS.md:26) itself defines 'opt-in actual-close error reporting' and says 'Existing OpenReader, Check, ReadOptions, Commit and consumer behavior remain unchanged' - a statement that the Reader freeze did not alter callers that keep using OpenReader. A registered consumer (Core C3) selecting the frozen opt-in is the consumption D156/D157 scheduled, not a Reader change.",
+        "D152 item 4's owner-reserved list (D52, breaking changes to frozen contracts, toolchain, dependencies, owner documents, keys/money/accounts/machine, art) is not engaged. D155 preserves 'truthful-error requirements' and D158 forbids 'suppression of authoritative errors'; reporting a real close failure is the truthful direction.",
+        "Ticket 140's 'Behaviour is unchanged' criterion names answers, transitions, reads, restart recovery results, goldens and crash rows; none depends on ignoring an OS close failure, which was never a specified result.",
+        "No production caller of agents.Open/OpenPaid exists outside the package on this worktree (grep across the repository excluding internal/core/agents: no matches); the only observers are the package tests and the measurement driver, and those only under an actual I/O fault.",
+        "Poisoning: refreshLocked would set poisoned on the unreturned Service; dropping that assignment is unobservable because a failed Open returns nil. Store poisoning, live refresh policy and Close/recovery requirements for published Services are untouched (service.go:192-241; replay.go:267-279)."
+      ],
+      "conditions": [
+        "Return the error as the frozen Reader and scanReader produce it: no swallowing, no success branch on errors.Is(err, io.EOF) beyond scanReader's existing one, no sentinel, no wording normalization, no legacy retry.",
+        "The fixture and recovery callers of openService (crash_test.go:217, paid_replay_test.go:40, recovery_test.go:227,614, registration_crash_test.go:353, registration_replay_test.go:35, review_crash_test.go:119,346, review_live_clock_test.go:177,213, scoped_crash_test.go:370, service_test.go:49) need no change; do not weaken any of their error assertions.",
+        "State the new error behavior in doc.go's Open explanation (doc.go:25-34) as the brief specifies."
+      ],
+      "ownerGate": "none - no frozen contract or owner-reserved guarantee requires Core Open to keep ignoring actual descriptor-close failures; the brief's conditional question is not triggered."
+    },
+    "P3": {
+      "item": "Publication and key alignment: hold the token locally, publish through putAckCheckpoint only immediately before a successful openService return, stamped at the saved replay-final openedThrough.",
+      "disposition": "approve",
+      "keyAlignmentConfirmed": [
+        "Let T be the replay's last complete commit. acceptCommitLocked calls s.history.advance(s.p.through, c.Last, d) and then s.p.through = c.Last (replay.go:466-469); advance sets h.through = c.Last (history_index.go:376-377). After replay p.through == h.through == T, and the Reader's token has afterSeq == T because Checkpoint requires cursor == Through == s.v.done.Seq (reader.go:338-345).",
+        "s.openedThrough = s.p.through is assigned immediately after replay (service.go:173) and nothing later in Open changes it.",
+        "putAckCheckpoint(T, token) stores the fixed historyAckRead key with from = T; put requires from == h.through (history_index.go:309-326). ackCheckpoint(after) requires from == after == h.through (history_index.go:275-285, 346-352).",
+        "The first nonduplicate contiguous scoped Submit has committed.First == s.p.through+1, requests ackCheckpoint(s.p.through) and readCommittedRange sets After = first-1 = T (scoped_execute.go:341-346; replay.go:287). No off-by-one.",
+        "On use, the frozen matches() re-checks directory, colony, afterSeq == After, segment and base chain, then restore hashes every prefix byte on the suffix descriptor (reader.go:94-110, 176-190; scan.go:222-247)."
+      ],
+      "noStaleSeedConfirmed": [
+        "Only two sites advance the frontier and both call history.advance, which removes the ack key before publishing coverage: acceptCommitLocked (replay.go:467) and the direct review publication (review_execute.go:132). inspectOpen and inspectScope use legacy s.scan and never call acceptCommitLocked or advance (integrity.go:72,165; grep over integrity.go/scoped_query.go/paid_query.go shows no advance or p.through assignment).",
+        "pendingWorkViews, pendingPaidViews and unboundCredentialViews read the projection (workView uses openedThrough, paidView reads p.through) and append nothing.",
+        "openPaidService receives the opened Service, builds transport state, sets paidHotLimit and prunes hot results (paid_live.go:44-62); none advances p.through. On transport failure it calls s.Close(), which clears and disables the index (service.go:192-207; history_index.go:252-261), so a failed OpenPaid retains nothing.",
+        "A failed Open seeds nothing: every error path returns before the put, and the Service object is never returned. Even a later accidental put could not retimestamp: put rejects from != h.through and advance always removes the key.",
+        "External append between replay and the first command: every command and query refreshes first (commands.go:30,126,150,179; scoped_query.go:25); an accepted advance removes the key; a gap or duplicate takes the refresh+findCommand branch (scoped_execute.go:354-358)."
+      ],
+      "conditions": [
+        "Insert s.history.putAckCheckpoint(s.openedThrough, checkpoint) after report.UnboundCredentials and before `return s, report, nil`; nothing else in openService may call history.advance or assign openedThrough.",
+        "Never stamp with a later frontier or re-read store.Durable() for the stamp.",
+        "No new field on Service for the token; the local variable's lifetime ends at return.",
+        "Note (nonblocking): the seed is pushed to the LRU front last, after inspectOpen's own source warming, so the driver's single cold receipt lookup (findCommand puts one entry) cannot evict it; eviction under the unchanged 256-entry/8 MiB cap remains a legitimate miss."
+      ]
+    },
+    "P4": {
+      "item": "Tests: the extended TestScopedAcknowledgementPrefixChanged 'open' provenance row; the one semantic rule break; the stated honest limits.",
+      "disposition": "approve-with-conditions",
+      "assessment": [
+        "The 'open' row is a genuine observable-boundary test: after reopenScoped (scoped_service_test.go:58-78) the new Open seeds the token, the first contiguous WritePrivate uses it, restore hashes the damaged prefix, the mismatch falls back to a checked cold scan and ErrCorrupt is observed with unchanged projection, durable Submit and no source proof (scoped_receipt_test.go:377-429). The oracle is consumer-visible, not plumbing.",
+        "The rule break (discard the visitor's acceptor error) must turn TestF3_10PayloadsAndRecordRules/wrong_session red: that row submits a real-store group with the wrong execution session and expects Open to return ErrInconsistent (replay_test.go:160-193). With the error discarded the group is skipped, no later guard in Open re-reduces it, and Open succeeds. This is the plausible coder bug for the inline rewrite and is in D152's crash-recovery/data-integrity scope.",
+        "The honest limits are correct: a deleted seed, a ToEnd capture or a wrong stamp is a safe miss and existing receipt tests stay green; the T11 bound is the consumer oracle for acceleration. No test should assert timing or hit counters.",
+        "No test on this worktree asserts that a reopened Service starts cold (grep for ackCheckpoint/historyAckRead in *_test.go: only presence checks after warming and absence checks after damage/discard at history_index_test.go:484-522,580-600 and scoped_receipt_test.go:284,371). TestHistoryIndexAcknowledgementFallback's reopen phase retries a duplicate, not a contiguous acknowledgement, so it is untouched."
+      ],
+      "conditions": [
+        "The 'open' row must assert its precondition immediately after reopenScoped: f.service.history.ackCheckpoint(f.store.Durable()) != nil, exactly as warmScopedPrivateAcknowledgement already asserts for scoped-ack provenance (scoped_receipt_test.go:371-373). Without it the row is vacuous (an absent seed makes it indistinguishable from the cold 'scoped-ack' path and it cannot fail on the bug it claims to catch). This is the file's existing convention, not a new instrumentation framework, and it gives a local red for 'seed missing or wrongly stamped' that the brief otherwise leaves to the cohort.",
+        "Keep the original 'scoped-ack' row and all its assertions byte-for-byte; each row uses its own isolated real fixture; no extra scoped mutation after reopen.",
+        "Run the wrong_session mutant with the named selector only, observe the red, restore byte-identically and observe the green; report masking honestly if some other guard catches it.",
+        "Do not remutate or recertify frozen C1 predicates; carry TestReaderCheckpointContinuation/AnchorAndFallback/Errors and the Reader prefix-corruption oracle by unchanged source identity."
+      ],
+      "missingDecisive": "Nothing else decisive is missing; nothing planned is plumbing."
+    },
+    "P5": {
+      "item": "Proof plan.",
+      "disposition": "approve-with-adjustments",
+      "required": [
+        "gofmt -w / gofmt -l on the three owned files.",
+        "The focused selector exactly as the brief lists it, then one plain verbose run of ./internal/core/agents, go vet, go tool staticcheck, go mod tidy -diff (GOTOOLCHAIN=local, empty GOFLAGS, CGO_ENABLED=0), import-boundary check under its existing convention.",
+        "The wrong_session mutant red / byte-identical restore / green with the named selector; recorded diffs and outputs.",
+        "Fuzz on the final SHA: FuzzScopedGroupReplay at the established shape (-run '^$' -fuzz '^FuzzScopedGroupReplay$' -fuzztime=120s -parallel=1). Reachability as read: all four targets reach the changed initializer only through their accepted real-store branch, which Submits then calls Open (scoped_replay_test.go:632-640; review_fuzz_test.go:116; paid_fuzz_test.go:108; registration_fuzz_test.go:128); rejected preflight-only inputs never reach it, and none exercises a warm acknowledgement after Open. FuzzScopedGroupReplay is the ticket's family and the only one that then exercises post-Open scoped reads; the other three add no reachability specific to this change and are the PM's option.",
+        "The unchanged final cohort on the final SHA exactly as the brief restates it: first full original T11 run is the program smoke and instance 01; three eligible instances per driver, extending once to exactly five only under the existing paired-straddle-zero and within-10-percent trigger; all seven bounds computed from the new subject's own short samples; the 93e8f0af controls reused; no driver edits; results labelled admission and storage only."
+      ],
+      "notRequiredByThisRuling": [
+        "The ×20 race rows and the local whole-package race run: the slice changes no locking, goroutine, channel or lock ordering; the seed is inserted during exclusive initialization through the existing locked put, and later readers use the same copy-out get. D152 item 1 does not trigger, and the final SHA's hosted check runs race on three OSes. The PM may still run them; they are not a gate I set."
+      ]
+    },
+    "P6": {
+      "item": "Anything else that would block a coder.",
+      "disposition": "approve",
+      "checked": [
+        "Cancellation: scanReader's per-iteration ctx.Err() check and acceptCommitLocked's context pass-through are unchanged; the returned error is the same as before. Dropping refreshLocked's poisoned assignment is unobservable (the Service is not returned). No store poisoning changes.",
+        "Empty log / Through==0: the preserved equal-frontier guard skips the opener; checkpoint stays nil and putAckCheckpoint(nil) is a no-op (history_index.go:354-357). No genesis proof is manufactured.",
+        "Multi-segment logs: After=0 selects the first segment; transitions close checked and reset the prefix hash with the fresh base (scan.go:112-121, 203-219); the token describes the segment containing T. Rotation before the first acknowledgement is a frozen-Reader miss, not a hazard.",
+        "doc.go: the three comment edits are correct and sufficient; keep the 'reads no clock, appends no record and dispatches no work' sentence, the two-outer-pass qualification (doc.go:94-99) and all capacity disclaimers; no numbers before measurement.",
+        "Owned paths: internal/core/agents/service.go (openService only), internal/core/agents/scoped_receipt_test.go (TestScopedAcknowledgementPrefixChanged only), internal/core/agents/doc.go (comments only). No go.mod, workflow, Reader, scanner, ledgerstore or appender change.",
+        "The baseline Service that the test and the fuzz targets open on the same store now seeds its own index; indexes are per-Service, so there is no cross-effect.",
+        "Cost: the replay adds one streaming SHA-256 over consumed lines plus one 384-byte charged entry; both startup bounds must be re-established by the cohort, as the brief says."
+      ],
+      "notesForCoderOrClose": [
+        "The first warm acknowledgement after Open now takes the restore path (prefix I/O and hashing on the suffix descriptor, no prefix decoding); this is the expected source of the task.create gain and is proved only by the cohort.",
+        "The PM records the amended fifth-slice rule below as an assistant-originated decision bound to this ruling before assigning the coder."
+      ]
+    }
+  },
+  "amendedFifthSliceRule": "Replaces, for Ticket 140 only, the fifth-slice ruling's P3 conditions 'Only successful scoped acceptance may install the newly read checkpoint at the new frontier' and 'Close discards the entry and reopening starts cold', and its P4 cutover lines 'Only the existing nonduplicate contiguous scoped-acknowledgement branch opts in' and 'All historical scans remain on OpenReader'. Amended rule: every historical scan (findCommand, inspectOpen/inspectScope, sourceRecord and all other s.scan callers) and every refreshLocked advance stay on legacy OpenReader and publish no checkpoint; the review path still passes nil and discards its proof; history.advance still removes the acknowledgement key on every accepted advance; Service.Close still clears and disables the index. Exactly two sites may publish the single historyAckRead entry: (a) a successful nonduplicate contiguous scoped acknowledgement, installing the checkpoint returned by its own readCommittedRange at the new frontier; and (b) a successful openService, installing the checkpoint returned by its own initial replay - opened with OpenReaderWithCheckpoint(logDir, opts, nil), drained by the unchanged scanReader and reduced by the unchanged acceptCommitLocked - at the saved replay-final openedThrough, immediately before the successful return and after inspection and the pending/unbound views. A reopened Service is cold until its own Open seeds it; a failed Open or OpenPaid seeds nothing.",
+  "compatibility": {
+    "classification": "Nonbreaking Core (C3) consumer opt-in to the frozen D157 ledger-reader capability; no contract, record, golden, schema, Reader, scanner, ledgerstore or appender change.",
+    "frozenContractCoveringOpenErrors": "None. agents.Open/OpenPaid are internal/core/agents functions, not a contract/ package or register row; C3's frozen entries are record families and their rules; the ledger-reader row defines opt-in actual-close reporting and promises unchanged behavior only for existing OpenReader/Check callers.",
+    "ownerReservedGuaranteeCoveringOpenErrors": "None found in D152 item 4's reserved list, D155, D157, D158, docs/CONTRACTS.md, the agents package documentation or ticket 140's acceptance criteria.",
+    "observableChange": "Only under an actual descriptor-close failure during the initial replay: Open/OpenPaid return that error (possibly joined) instead of succeeding. Everything else Open produces is identical.",
+    "callersExposed": "agents.Open, agents.OpenPaid (via openPaidService), and the twelve fixture/recovery test callers of openService; no production caller outside the package exists on this worktree.",
+    "frozenBreakingOwnerGateRequiredNow": false
+  },
+  "ownerGate": {
+    "required": false,
+    "exactQuestion": null,
+    "note": "The brief's conditional question ('May Core's initial Service replay opt into D157 checked closure, returning an actual replay descriptor-close failure from Open/OpenPaid instead of ignoring it?') is not triggered: no frozen or owner-reserved suppression guarantee exists. Owner gates that remain are the unchanged D158 ones (numerical acceptance, close), none of which this ruling touches."
+  },
+  "ownedPaths": [
+    "internal/core/agents/service.go - openService only (replace the refreshLocked call at :170-172 with the Open-only replay block; add the final putAckCheckpoint before :190's return)",
+    "internal/core/agents/scoped_receipt_test.go - TestScopedAcknowledgementPrefixChanged only (provenance table 'scoped-ack' and 'open', with the precondition assertion)",
+    "internal/core/agents/doc.go - comments only (:25-34 Open explanation; :339-345 cost explanation)"
+  ],
+  "requiredProof": [
+    "gofmt, focused selector, one plain verbose package run, go vet, staticcheck, go mod tidy -diff, import-boundary check, with changed-file hashes and unchanged frozen C1 identities recorded.",
+    "Wrong_session mutant red with the named selector, byte-identical restore, same-command green; masking reported if observed.",
+    "'open' provenance row green with its precondition assertion; 'scoped-ack' row unchanged and green.",
+    "FuzzScopedGroupReplay 120 s on the final SHA (others at the PM's option).",
+    "Unchanged original cohort on the final SHA: T11 first full run as smoke and instance 01, three-or-five eligible instances per driver, all seven bounds, reused controls, admission-and-storage label.",
+    "Then D158/D153 gates: fresh final combined review, the final SHA's own full hosted Check result, guarded publication, separate whole-ticket verification."
+  ],
+  "notRequired": [
+    "×20 race repetition rows and the local whole-package race run (no locking/goroutine/channel change; hosted check runs race).",
+    "Fuzz campaigns on FuzzReviewGroupReplay, FuzzPaidGroupReplay and FuzzRegistrationGroupReplay (same accepted-branch reachability as the scoped target; PM's option, not a gate).",
+    "Any new timing, hit-counter, token-shape or allowance-specific test; any pre-implementation profiling; any C1 remutation; any routine local tools/check or five-target static loop for these platform-neutral files.",
+    "An owner question on P2."
+  ],
+  "blockingFindings": [],
+  "nextAction": "Record this ruling and the amended rule as an assistant-originated decision bound to brief SHA 2888377d... and ruling text; then assign one coder with the three owned paths, the P1-P4 conditions verbatim (including the 'open' row precondition assertion) and the required proof list."
+}
