@@ -1,6 +1,6 @@
 # Current rules
 
-This file is a digest of the rules in force in the decision log, entries D1–D162 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
+This file is a digest of the rules in force in the decision log, entries D1–D163 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
 
 ## How the build works
 - Build Core first; Undercurrent foundations use synthetic data and frozen consumed contracts, and pass their field gates before affecting agents. (D14, D19, D20)
@@ -71,7 +71,7 @@ This file is a digest of the rules in force in the decision log, entries D1–D1
 ## Contracts
 - Contracts comprise standard-library Go packages, versioned golden samples and owning/dependent register entries. Drafts change freely; consumers build against frozen capabilities, never unspecified placeholder payloads. (D40, B2)
 - The PM freezes completed code, evidence and exact record after joint advisor approval; this supplies integration sign-off without owner packets. Freeze producer-ready catalogue parts before producer code; record ownership, callers, consumers, privacy and replay essentials. (D40, B2, D113, D125)
-- Frozen contracts evolve additively; breaking changes need owner decisions listing affected steps. Preserve historical bytes/goldens and decoding compatibility; unsupported consumed versions stop clearly. (D35, D40, D125)
+- Frozen contracts evolve additively; breaking changes need owner decisions listing affected steps. Preserve historical bytes/goldens and decoding compatibility; unsupported consumed versions stop clearly. (D35, D40, D125, D163)
 - Preserve F0/F2 group, pin, admission, scratch, witness, finalization and activation rules; exact definitions are in package documentation, versions/status in the register. (D111, D115, D118, D119, D123, D124)
 - Law-format v1 objects are closed; add versions read beside old ones, preserving old values/digests without semantic upgrading. Host parser limits may tighten, never widen. (B12, D114)
 - Shared-state consumers need all contributing families: both private revisions; task changes plus review results; work plus paid children/endings/unit charges. Preserve canonical submission schemas and cross-record rules; producer-fingerprint changes need visible decisions. (D139, D140, D144, D148, D154)
