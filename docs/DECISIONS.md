@@ -3046,6 +3046,7 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 - **Unchanged:** a fresh coder for each slice; fresh reviewers; D145's rules for the public repository; the scan before every push.
 - **Evidence:** the project manager's [analysis](../.scratch/dwarf-harness/c3-evidence/process-speed-analysis-2026-10-27.md) of ticket 13's transcripts and the coders' command records: about 9.5 coder hours outside the measurement, 6.7 of them the model writing code and tests and 2.8 running commands; the ticket's 36 hours also held about 11 hours waiting overnight for an owner answer and about 8 hours of measurement, 4.7 of them a superseded first run.
 - **Changes:** this entry; an "Amended by D152" line under D116; the evidence file; in the records repository, the verdict section of the advisor's role file. The project manager's procedures and the coders' standing context changed outside the repositories.
+- **Amended by D160:** item 2's slice count allows two more slices after a failed preregistered bound; item 3's reviews are one per slice and one at the close; item 4's stand-in approvals close tickets, with Fable's audit after; item 7's handoff is written once per session, which runs up to three tickets.
 
 ### D153. Each slice is checked on GitHub before `main` moves
 
@@ -3169,3 +3170,22 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 - **Decision:** use discardable ledger-derived lookup hints, one bounded metadata cache, fresh current-head checks and fused startup inspection, then byte-revalidated Reader checkpoints for contiguous acknowledgements. Successful Open seeds the same checkpoint entry from its own replay, removing the measured first-after-reopen prefix-decoding cost without trusting a receipt or adding a second authority. The [package documentation](../internal/core/agents/doc.go) specifies the built boundary and remaining cold paths; the rulings retain alternatives and reasons.
 - **Evidence and limits:** the [acceptance evidence](../.scratch/dwarf-harness/c3-evidence/ticket-140-acceptance-evidence.md) maps all four criteria across six slices. Final code `453ec63abfc3eb8b15a2322ef09d279dcce22d1e` passes all seven original numerical bounds with three eligible instances per driver and no noise extension; earlier failed cohorts remain evidence. D153 gates final reviews, exact-SHA hosted success and publication. These are admission-and-storage measurements, not capacity or power-loss qualification. The one 256-entry/8 MiB charged-metadata limit is not an RSS bound. Prefix I/O and hashing remain, and eviction, an accepted frontier advance or segment rotation can make the first scoped acknowledgement after Open cold again. Initial Open/OpenPaid replay now reports actual descriptor-close failures, as D159 rules; no record, golden, authority, provider or money semantics change. D52/C4 real-work admission and Ticket13's verification remain separate.
 - **Changes:** Ticket140's close and paired C3 progress lines, with private B35, acceptance evidence and eight verbatim design-source copies. D157's completed register change is not repeated.
+
+### D160. A twenty-step ticket loop: fewer owner stops, one review per slice, one project manager for several tickets
+
+- **Date:** 2026-10-29. **Decided by:** modified. After the project manager's audit of tickets 03–140, the owner adopted ten of its eleven proposals. He changed the fifth (records), dropping its mailbox for a second project manager: one project manager runs several tickets. He did not adopt the fourth (the project manager's model when its provider runs out). The flow is provisional until he reviews it after the next ticket.
+- **Owner's words (chat, 23:34):**
+  > Implement recommendations 1, 2, 3, 5 (with no reference to a secondary PM, one PM will handle multiple tickets), 6, 7, 8, 9, 10, & 11. Reducing from 50 to 20 steps and we will revisit the flow after the next ticket. This does not need to be exhuastively documented in the DECISIONS file. The session history will suffice. That DECISIONS file is already bloated
+- **Decision:**
+  1. When a preregistered numerical bound fails, the project manager adds up to two slices without asking, each after one labelled diagnostic and a fresh ruling, and reports them. A third slice, and any change to the bounds, traffic or eligibility rules, is the owner's.
+  2. A ticket closes on its stand-in reviewer's approval. A fresh Fable advisor audits it after Fable's window resets, and a finding opens a fix ticket.
+  3. The project manager decides reversible matters outside D152 item 4's owner list and reports them. Each design ruling lists the owner-reserved items its ticket will meet, which the project manager asks together right after the ruling.
+  4. Records: one notes file per ticket in plain sentences; a receipt only when the evidence file cites it; evidence links raw logs by path and SHA-256 instead of copying them; the handoff written once per session.
+  5. One fresh review per slice, covering standards and specification together, and one final review of the close documents with any code not yet reviewed.
+  6. One project manager session on this machine runs up to three tickets at once.
+  7. A ticket with numerical bounds starts with one profiled run of its acceptance driver.
+  8. Each measurement instance runs through a runner that waits for a quiet machine and writes its own admission record, after a smoke run on the smallest history.
+  9. Designers get the language-server tool; coders run their own focused tests unless a measurement holds the machine.
+  10. A watcher wakes the project manager after 15 minutes without activity while work is pending.
+- **Amends:** D152 items 2, 3, 4 (the stand-in clause) and 7; the per-ticket loop of D116 and D121. D116's documents-once-per-ticket rule and D153's gates stand.
+- **Changes:** this entry and an "Amended by D160" line under D152; in the records repository, the designer, coder, advisor and drafter role files. The project manager's procedure, its two scripts and the coders' standing context changed outside the repositories.
