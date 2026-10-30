@@ -1,0 +1,117 @@
+{
+ "ticket": 141,
+ "generated": "2026-10-30T16:18:20-04:00",
+ "note": "Raw evidence of slice S1, kept outside the repositories; the staticcheck build and the throwaway recorder script were removed by the coder.",
+ "files": [
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\baseline-hashes.json",
+   "bytes": 336,
+   "sha256": "41a6682fcb115cf54a5780148dce952047a19b23e6b7cdbd7834ffdcdf8bed23"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\break-a-green.log",
+   "bytes": 1051,
+   "sha256": "92e8c5e6e54a20f9140c43e871649d951507960756013f36d895db4fe5eebffa"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\break-a-red.log",
+   "bytes": 892,
+   "sha256": "dcb44d4eb96526e1dcd336bbcc987e524201b471d4b58d6d35aaa772f4cb9888"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\break-a-restored-hashes.json",
+   "bytes": 336,
+   "sha256": "41a6682fcb115cf54a5780148dce952047a19b23e6b7cdbd7834ffdcdf8bed23"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\break-b-before-hashes.json",
+   "bytes": 336,
+   "sha256": "41a6682fcb115cf54a5780148dce952047a19b23e6b7cdbd7834ffdcdf8bed23"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\break-b-green.log",
+   "bytes": 2193,
+   "sha256": "a5f86ff8752b39b3978289d6cc312ef4534eb5d5194825fa69744a95dca8df64"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\break-b-red.log",
+   "bytes": 2741,
+   "sha256": "b88048dbbf8f87e630e9bd42bc19c9100caac97798742955f09c88a6aee58641"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\break-b-restored-hashes.json",
+   "bytes": 336,
+   "sha256": "41a6682fcb115cf54a5780148dce952047a19b23e6b7cdbd7834ffdcdf8bed23"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\commands.jsonl",
+   "bytes": 5398,
+   "sha256": "33538ecfb10c991f87246cbb469f1a95fedc406e03fd8ea626fdfaf5bc0db7ab"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\final-hashes.json",
+   "bytes": 336,
+   "sha256": "41a6682fcb115cf54a5780148dce952047a19b23e6b7cdbd7834ffdcdf8bed23"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\focused-existing.log",
+   "bytes": 69,
+   "sha256": "e400fa1f206cbd11eaa31cb9ad8a287bb1fecae5812c181b1504f9ea2e92c823"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\focused-zero.log",
+   "bytes": 1051,
+   "sha256": "627e6f2b714476769d5e764bc3d0b12f79714547dd6038f2cba01978ca73e7f0"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\gofmt.log",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\imports-prod.log",
+   "bytes": 554,
+   "sha256": "d82f04624b3acddadb7e50d398f6079d47f5c2ed13aa8daa8dedb008eb07a36b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\imports-test.log",
+   "bytes": 720,
+   "sha256": "ff6c0e486b982b5c3f516eaaaf2ccfbbd6e440afaf20a9d3fca1ca1dec5b260d"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\staticcheck-build.log",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\staticcheck.log",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\status.log",
+   "bytes": 123,
+   "sha256": "1f0c742f85e3dced756421d797684c516cc005a0ee908837f6e27e62bdbec696"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\tidy.log",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\timing.json",
+   "bytes": 1316,
+   "sha256": "7117c378271c0a037fd9df9708427a4199fe923be15d7a3d38a5abba0832978b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\v1.log",
+   "bytes": 407611,
+   "sha256": "2cf4fea6d85e7bd91be6331866666cd4593a4cd218094241d450b87ca28e438a"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t141-s1-evidence\\vet.log",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+ ]
+}
