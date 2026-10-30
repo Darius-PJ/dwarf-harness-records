@@ -4,16 +4,20 @@ Canonical instructions for every coding agent working in this project.
 
 ## Decision records
 
-Every new entry in `docs/DECISIONS.md` records its **originator** in the existing **Decided by:** field:
+Read `docs/CURRENT-RULES.md`: one line for each rule in force, with the entries that make it. Open an entry in `docs/DECISIONS.md` only for its reasoning or history (D161).
 
-- `owner`: the owner originated it. Quote his typed words verbatim in the entry.
+Write a new entry only when a standing rule, the project's scope or an owner gate changes. A ticket adds no build record: its `## Answer` and evidence file say what it built, and its exceptions, rulings and answers stay in its notes, ruling and evidence. An entry is short: the date, **Decided by:**, the decision in a few lines and what it amends; no quotes, evidence paragraphs, line-number citations or pointer lines added to earlier entries. Change the rule's line in `docs/CURRENT-RULES.md` in the same commit.
+
+**Decided by:** records the originator:
+
+- `owner`: the owner originated it. State what he decided; the session history keeps his words.
 - `adopted`: an assistant proposal accepted as written, including a pick from assistant-written options and bulk approvals such as "as described".
 - `modified`: an assistant proposal the owner changed. State the change.
 - `assistant`: decided by an agent within leeway the owner delegated.
 
-Use `adopted` when unsure. Entries dated before 2026-10-04 stay as written.
+Use `adopted` when unsure. Entries before D161 stay as written.
 
-`docs/DECISIONS.md` and the evidence folders `.scratch/dwarf-harness/*-evidence/` are private records, kept with this file and the role files in the private records repository, never in the published project repository (D145). Only they quote the owner. Every file the project repository tracks, including tickets, roadmaps, documents and code comments, and every commit message, states what he decided and cites the entry. It never quotes him, never names his Windows user folder, and never describes his machine, its settings or the programs he runs.
+`docs/DECISIONS.md`, `docs/CURRENT-RULES.md` and the evidence folders `.scratch/dwarf-harness/*-evidence/` are private records, kept with this file and the role files in the private records repository, never in the published project repository (D145). Only they may quote the owner; earlier entries do. Every file the project repository tracks, including tickets, roadmaps, documents and code comments, and every commit message, states what he decided and cites the entry. It never quotes him, never names his Windows user folder, and never describes his machine, its settings or the programs he runs.
 
 ## Agent skills
 
