@@ -3237,3 +3237,12 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 - **Date:** 2026-10-31. **Decided by:** assistant (under D125).
 - **Decision:** add two producer readings to F3-15 with ticket 15's runtime at 8c2a065, changing no type, member, closed set, golden or earlier byte. A `runtime.tool_result` whose start carries `effect_command_id` may omit `effect_receipt_sequence` only for a definite pre-commit refusal (outcome `denied`, `unavailable`, `conflict`, `too_large`, `busy` or `invalid_argument`, never `ok` or `unknown_effect`), when a global receipt lookup under the committing serialization proves that native command was never committed and the producer never submits it afterwards; an existing native admission or atomic receipt is always named, and a native receipt later found for such a command ID is an integrity issue. A well-formed passive or catalogue request that no current chain authorizes is recorded as `unrecognized`, like an unknown one, with no target, grant or effect ID.
 - **Amends:** D165 (F3-15), by addition.
+
+### D167. Tickets 143 and 144 published
+
+- **Date:** 2026-11-07. **Decided by:** adopted. The project manager proposed the two tickets below; in chat the owner approved publishing both tickets and having ticket 46 also wait for 144.
+- **Decision:** publish two tickets.
+  - 143, "Let a downward paid correction succeed when an admission names an unconfigured spend scope" (C3), blocked by 142. Core refuses a downward correction whose admission named a scope with no spend configuration, because the paid projection has already pruned that scope's account, so the configured scopes keep the overstated charge. The defect predates ticket 142, whose measurement smoke found it.
+  - 144, "Make the Windows executor's race-step tests reliable on hosted runners" (C10), with no blockers. Three hosted race steps failed in three different Windows-executor tests on commits that did not touch the package. It takes these failures over from the small follow-up fixes made under ticket 45.
+  - Ticket 46 now also waits for 144 (it was blocked by 18, 19 and 45), so that the Windows A2 qualification rests on explained tests; no other ticket's blockers or criteria change. Tickets 10, 13 and 45 get cross-link comments.
+- **Amends:** none.
