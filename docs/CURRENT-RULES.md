@@ -1,6 +1,6 @@
 # Current rules
 
-This file is a digest of the rules in force in the decision log, entries D1–D167 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
+This file is a digest of the rules in force in the decision log, entries D1–D169 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
 
 ## How the build works
 - Build Core first; Undercurrent foundations use synthetic data and frozen consumed contracts, and pass their field gates before affecting agents. (D14, D19, D20)
@@ -45,7 +45,7 @@ This file is a digest of the rules in force in the decision log, entries D1–D1
 ## Core and the ledger
 - Implement in Go, pin go1.27.3 with go 1.27 and local toolchain selection. Core/terminal remain cgo-free; set cgo explicitly and use pinned off-PATH llvm-mingw only for race/GUI builds. (D1, D28, D45, D147)
 - One Core host/appender owns each colony ledger/sequence. Only Core, router and Undercurrent graph use the appender contract; other field packages are readers. (D15, D26, D33, D34, D50, B3)
-- Keep dependencies one-way through internal layers to standard-library-only contracts; GUI never imports internals. Recorded exceptions are import-boundary rules. Restrict x/sys to exact durable/winexec/credentials packages/tests and agents tests; new importers need entries. (D29, D45, D50, D151)
+- Keep dependencies one-way through internal layers to standard-library-only contracts; GUI never imports internals. Recorded exceptions are import-boundary rules. Restrict x/sys to exact durable/winexec/credentials/gitprocess packages/tests and agents tests; new importers need entries. (D29, D45, D50, D151, D168)
 - Log actions, turns, approvals, money, messages, workspace/check events and router measurements. Private content stays in agent directories, ledger-hashed; large bodies use body storage and router call decisions a separate JSON-lines record. (D33)
 - Use append-only whole-commit writes/flushes, torn-final-commit recovery and rebuilt indexes. Snapshots/persistent indexes require measured triggers; discardable caches never become authority. Preserve exact record bytes and replay-essential facts. (D34, D35, B3)
 - SHA-256 protects bodies/record chains; Git IDs retain repository format. Never delete/compact ledger history; compression and policy-driven body collection preserve replay facts. External anchoring waits for A3. (D36)
@@ -74,7 +74,7 @@ This file is a digest of the rules in force in the decision log, entries D1–D1
 - Frozen contracts evolve additively; breaking changes need owner decisions listing affected steps. Preserve historical bytes/goldens and decoding compatibility; unsupported consumed versions stop clearly. (D35, D40, D125, D163, D164, D165, D166)
 - Preserve F0/F2 group, pin, admission, scratch, witness, finalization and activation rules; exact definitions are in package documentation, versions/status in the register. (D111, D115, D118, D119, D123, D124)
 - Law-format v1 objects are closed; add versions read beside old ones, preserving old values/digests without semantic upgrading. Host parser limits may tighten, never widen. (B12, D114)
-- Shared-state consumers need all contributing families: private heads consume `private.revision`, `private.scoped_revision` and `private.turn_revision` in ledger order; F3-10+F3-11-only private-head consumers MUST NOT read logs holding F3-15. Task state consumes task changes plus review results; turn-child completion needs F3-11 local work, F3-13 paid attempts and F3-15 tool invocations, preserving their endings/unit charges. Preserve canonical submission schemas and cross-record rules; producer-fingerprint changes need visible decisions. (D139, D140, D144, D148, D154, D165)
+- Shared-state consumers need all contributing families: private heads consume `private.revision`, `private.scoped_revision` and `private.turn_revision` in ledger order; F3-10+F3-11-only private-head consumers MUST NOT read logs holding F3-15. Task state consumes task changes plus review results; turn-child completion needs F3-11 local work, F3-13 paid attempts and F3-15 tool invocations, preserving their endings/unit charges. Where an F3-16 owner exists for a turn, dispatch-class F3-11/F3-13/F3-15 commands need its live phase, operation, generation and exact pending identity and no persisted stop, in preflight and replay; endings and settlements stay allowed, and command lookup spans schemas 1–7. Preserve canonical submission schemas and cross-record rules; producer-fingerprint changes need visible decisions. (D139, D140, D144, D148, D154, D165, D169)
 - Reader checkpoints are process-only hints: freshly verify prefix/predecessor, issue only after completed numeric reads and successful close, fall back on invalid proof, retain real I/O/close errors and never weaken ordinary verification. (D157)
 
 ## Routing
