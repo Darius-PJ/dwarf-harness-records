@@ -3267,3 +3267,9 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 - **Date:** 2026-11-08. **Decided by:** adopted. The project manager proposed the ticket below; in chat the owner approved publishing it and starting it at once.
 - **Decision:** publish ticket 145, "Explain and fix the one-shot paid transport test that sees a faulted request succeed" (C3), with no blockers. `TestPaidHTTP1OneShot` in `internal/core/providers` failed in its `partial_header` rows in three hosted checks, on commits that did not touch that package. A faulted paid request that succeeds could be a second paid send, so until the failures are explained they count as a possible money defect, not a test flake. No existing ticket's blockers or criteria change; tickets 10, 13 and 14 get cross-link comments.
 - **Amends:** none.
+
+### D171. A hosted runner's cost is fixed in the product
+
+- **Date:** 2026-11-08. **Decided by:** owner. Ticket 16's Git-process owner makes every workspace Git child pay several durable flushes, and the hosted Windows runner keeps temporary files on a slow volume, so two packages passed the thirty-minute limit there. The project manager offered moving the runner's temporary files to its faster drive; the owner declined tuning CI for the tests and chose to make the product robust instead.
+- **Decision:** a cost that a hosted runner exposes, such as slow disk flushes, is fixed in the product so that general-purpose machines don't pay it. It is not absorbed by reconfiguring the runner or raising a limit. Ticket 16's Git-process owner is redesigned to cut its durable writes per Git child while keeping its crash guarantee.
+- **Amends:** none.

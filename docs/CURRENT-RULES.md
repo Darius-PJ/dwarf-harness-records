@@ -1,6 +1,6 @@
 # Current rules
 
-This file is a digest of the rules in force in the decision log, entries D1–D170 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
+This file is a digest of the rules in force in the decision log, entries D1–D171 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
 
 ## How the build works
 - Build Core first; Undercurrent foundations use synthetic data and frozen consumed contracts, and pass their field gates before affecting agents. (D14, D19, D20)
@@ -19,6 +19,7 @@ This file is a digest of the rules in force in the decision log, entries D1–D1
 - Markdown-only/empty diffs may skip the matrix, but need PM link/LF checks. Revisit the exemption if tracked Markdown becomes code/tool/test input. Manual dispatch runs the full matrix. (D128, D153)
 - The check runs pinned-toolchain verification, gofmt, vet, staticcheck, online govulncheck, import boundaries, cgo-free tests, race and cross-builds; static analysis/builds cover all five supported targets. CI supplies three native systems. (D42, D133, D137, D153)
 - Tests/race use count=1 and thirty-minute package limits; race above twenty-five minutes is recorded in slice evidence and escalated to the owner. (D127, D131)
+- A cost a hosted runner exposes, such as slow disk flushes, is fixed in the product for general-purpose machines, not absorbed by reconfiguring the runner or raising a limit. (D171)
 - Routine guarded branch/passing-main pushes need no owner question or ticket-close wait. Scan every outgoing commit's patch, message, identity and paths; private records push separately. (D145, D146, D153 items 4–5)
 - Public push scans reject merges, credentials, private/personal material, wrong identity and unsigned-off workflow changes; machine terms require contextual reading. Credentials, identity and privacy have no override; records scans still reject credentials/merges. (D145, D153 item 5)
 - Protect main against deletion/force pushes; require linear history and Actions Check result without bypass, strict up-to-date mode or creation exemption. These controls do not defeat malicious authorized writers. (D146, D153)
