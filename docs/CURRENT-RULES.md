@@ -1,6 +1,6 @@
 # Current rules
 
-This file is a digest of the rules in force in the decision log, entries D1–D169 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
+This file is a digest of the rules in force in the decision log, entries D1–D170 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
 
 ## How the build works
 - Build Core first; Undercurrent foundations use synthetic data and frozen consumed contracts, and pass their field gates before affecting agents. (D14, D19, D20)
