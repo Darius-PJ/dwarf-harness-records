@@ -44,7 +44,7 @@ This file is a digest of the rules in force in the decision log, entries D1–D1
 - Every default-art generator change needs both map and character contact-sheet approval. Allowed modules do not replace explicit pixel maps with rule-generated shapes. (D103, D104, D105)
 
 ## Core and the ledger
-- Implement in Go, pin go1.27.3 with go 1.27 and local toolchain selection. Core/terminal remain cgo-free; set cgo explicitly and use pinned off-PATH llvm-mingw only for race/GUI builds. (D1, D28, D45, D147)
+- Implement in Go, pin go1.27.4 with go 1.27 and local toolchain selection. Core/terminal remain cgo-free; set cgo explicitly and use pinned off-PATH llvm-mingw only for race/GUI builds. (D1, D28, D45, D147, D172)
 - One Core host/appender owns each colony ledger/sequence. Only Core, router and Undercurrent graph use the appender contract; other field packages are readers. (D15, D26, D33, D34, D50, B3)
 - Keep dependencies one-way through internal layers to standard-library-only contracts; GUI never imports internals. Recorded exceptions are import-boundary rules. Restrict x/sys to exact durable/winexec/credentials/gitprocess packages/tests and agents tests; new importers need entries. (D29, D45, D50, D151, D168)
 - Log actions, turns, approvals, money, messages, workspace/check events and router measurements. Private content stays in agent directories, ledger-hashed; large bodies use body storage and router call decisions a separate JSON-lines record. (D33)
@@ -93,7 +93,7 @@ This file is a digest of the rules in force in the decision log, entries D1–D1
 - Authorize/project before ranking impressions. Permit only coarse shared-resource pressure/freshness and content-free hints within authorized regions, never identities, paths, content, amounts, headers or credentials; expired/unknown headroom stays unknown. (D80, B10, B13)
 - Render bounded deterministic impressions with at most six complete situated/ambient/exploration items; token estimates are not billing or measured-fit guarantees. Field has no routing, money, permission or managerial authority. (D80, B13)
 - Federation requires bilateral owner enrollment, pinned identities, exact law/profile agreement and authorized bounded TLS exchange; no implicit/transitive trust, global coordinator or shared ledger. Keep local sovereignty and recheck grants; authenticated origin proves neither truth nor independence. (D81, B14)
-- Graph analysis binds accepted trees, immutable chunks and coverage; zero-net confirmation preserves effective identity. Resolve Go only through verified bounded go/packages helper/pinned environment with goindex disabled, no downloads/code execution and proven descendants; outside-tree dependencies remain unknown. (D130, D132, D134, D147)
+- Graph analysis binds accepted trees, immutable chunks and coverage; zero-net confirmation preserves effective identity. Resolve Go only through verified bounded go/packages helper/pinned environment with goindex disabled, no downloads/code execution and proven descendants; outside-tree dependencies remain unknown. (D130, D132, D134, D147, D172)
 
 ## Fortress GUI and art
 - dwarf-harness hosts Core/terminal; dwarf-harness-GUI is a native Fyne display client, without credentials/colony logic, attaching to or starting Core. Check protocol compatibility; GUI crashes never stop turns. No web renderer. (D2, D39, B11)
