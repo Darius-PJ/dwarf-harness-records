@@ -3314,3 +3314,9 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
   - D127's limits are unchanged, and no test is skipped, moved behind a flag or taken out of the hosted check.
   Ticket 91's remaining slices land after ticket 147, with its S2 rebased onto that result. Ticket 91's number and blockers are unchanged, and no other ticket's blockers or criteria change. Ticket 10 gets a cross-link comment.
 - **Amends:** none.
+
+### D177. Opus stand-in reviews while Fable is held and Codex is used up
+
+- **Date:** 2026-11-21. **Decided by:** owner. He chose a Claude Opus stand-in reviewer when Fable's weekly window neared 0.95 and the Codex budget, which D152 item 4's stand-in reviewer used, was used up.
+- **Decision:** while Fable's window is held and Codex is used up, each review or ruling goes to a fresh temporary Claude Opus 5.5 reviewer (role `advisor-opus`, xhigh thinking, read-only). Its approvals close tickets, and a fresh Fable advisor audits those tickets after its reset (D160). Fable stays the main advisor; the role file is deleted once Fable's window reopens.
+- **Amends:** D152 item 4, for the case where the other provider is also used up.
