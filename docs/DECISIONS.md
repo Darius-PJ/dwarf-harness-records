@@ -3320,3 +3320,14 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 - **Date:** 2026-11-21. **Decided by:** owner. He chose a Claude Opus stand-in reviewer when Fable's weekly window neared 0.95 and the Codex budget, which D152 item 4's stand-in reviewer used, was used up.
 - **Decision:** while Fable's window is held and Codex is used up, each review or ruling goes to a fresh temporary Claude Opus 5.5 reviewer (role `advisor-opus`, xhigh thinking, read-only). Its approvals close tickets, and a fresh Fable advisor audits those tickets after its reset (D160). Fable stays the main advisor; the role file is deleted once Fable's window reopens.
 - **Amends:** D152 item 4, for the case where the other provider is also used up.
+
+### D178. Ticket 148 published
+
+- **Date:** 2026-11-21. **Decided by:** adopted. A ruling during ticket 147's work routed a defect in ticket 16's Git-process recovery to a fix ticket under D171. The project manager proposed the ticket below, and the owner approved ticket 148 as proposed.
+- **Decision:** publish ticket 148, "Stop Git-process recovery refusing a reused process ID" (C3), with no blockers.
+  - After a restart, reconcile must not refuse a recorded Git root whose process ID now belongs to a different process, including one the current user can't open.
+  - It must still wait for a live root of its own, and refuse that root when it is unconfirmed.
+  - A ruled design with its own rule breaks chooses the fix.
+  - Acceptance adds a deterministic regression row, a refusal message that carries its cause, no frozen contract change and a green three-OS check.
+  No existing ticket's blockers or criteria change; tickets 16 and 147 get cross-link comments.
+- **Amends:** none.
