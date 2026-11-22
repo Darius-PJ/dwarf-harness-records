@@ -3337,3 +3337,13 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 - **Date:** 2026-11-21. **Decided by:** owner. Ticket 147's own tree, run 44958796872, met every hosted target: Windows race 1,115 s against 1,200 s, Windows tests 904 s against 1,100 s, macOS race 886 s against 1,200 s and Linux race 793 s against 800 s. With ticket 91's S2 added, the projected Windows race was about 1,435 s, and a temporary stand-in ruled that the ticket's two further slices could not close the gap. The owner chose the first of three options it offered.
 - **Decision:** ticket 147's criterion 1 and its other hosted targets count as met on its own tree (run 44958796872). Ticket 91's S2 lands on its own green run under D127's standing limits. Ticket 147's 60-second local bound for `FuzzServiceGroupReplay` is recorded as missed: 101.5 s in the package race run, from 144.7 s before the ticket.
 - **Amends:** D176 (criterion 1 measured with ticket 91's S2).
+
+### D180. Ticket 149 published; a change to D157's rule approved in principle
+
+- **Date:** 2026-11-22. **Decided by:** adopted. Ticket 147's diagnosis and rulings found the agent service's per-read reopen and prefix re-hash, which D157's rule requires, to be the largest cost left in the package's tests, and its ruling could not cut it without changing that frozen rule. The project manager proposed the ticket below, and the owner chose that recommended option.
+- **Decision:** publish ticket 149, "Keep a ledger reader's checked position across reads" (C3), with no blockers.
+  - In principle, D157 is to be amended so that one process can keep a ledger reader's checked position instead of re-opening the ledger and re-hashing the prefix for every read.
+  - The ticket's ruled design states the exact amendment, which needs the owner's sign-off before `main` moves (D41).
+  - Implementation waits for his reassessment at the pause that follows ticket 91's close; the design brief and ruling may proceed before then.
+  No existing ticket's blockers or criteria change; tickets 91 and 147 get cross-link comments.
+- **Amends:** none yet; the ruled design's entry will amend D157.
