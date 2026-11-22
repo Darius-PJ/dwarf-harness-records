@@ -3331,3 +3331,9 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
   - Acceptance adds a deterministic regression row, a refusal message that carries its cause, no frozen contract change and a green three-OS check.
   No existing ticket's blockers or criteria change; tickets 16 and 147 get cross-link comments.
 - **Amends:** none.
+
+### D179. Ticket 147's targets counted on its own tree; ticket 91's service fuzz bound recorded as missed
+
+- **Date:** 2026-11-21. **Decided by:** owner. Ticket 147's own tree, run 44958796872, met every hosted target: Windows race 1,115 s against 1,200 s, Windows tests 904 s against 1,100 s, macOS race 886 s against 1,200 s and Linux race 793 s against 800 s. With ticket 91's S2 added, the projected Windows race was about 1,435 s, and a temporary stand-in ruled that the ticket's two further slices could not close the gap. The owner chose the first of three options it offered.
+- **Decision:** ticket 147's criterion 1 and its other hosted targets count as met on its own tree (run 44958796872). Ticket 91's S2 lands on its own green run under D127's standing limits. Ticket 147's 60-second local bound for `FuzzServiceGroupReplay` is recorded as missed: 101.5 s in the package race run, from 144.7 s before the ticket.
+- **Amends:** D176 (criterion 1 measured with ticket 91's S2).
