@@ -3347,3 +3347,15 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
   - Implementation waits for his reassessment at the pause that follows ticket 91's close; the design brief and ruling may proceed before then.
   No existing ticket's blockers or criteria change; tickets 91 and 147 get cross-link comments.
 - **Amends:** none yet; the ruled design's entry will amend D157.
+
+### D181. Tests cover what a user would notice; reviews block only function-breaking errors
+
+- **Date:** 2026-11-23. **Decided by:** modified. Tests had outgrown the product code (about 115,000 test lines to 83,000 on `main`), the cumulative hosted agents race step stood 127 s inside D127's limit, and ticket 91's S3 spent four rounds on hosted-only test failures. The project manager proposed five streamlined rules. The owner kept them and changed four: internal steps are tested only when a reviewer flags them; reviews block only function-breaking errors and send nothing short of that back; earlier work is trusted, with a simple retry an acceptable scope for timing errors; and the clean-up of existing tests runs without a ticket.
+- **Decision:**
+  1. **Scope:** tests cover what a user would notice. Each new behaviour gets a test of its normal path and its main failure; each shared format keeps one round-trip test. Internal steps are tested only where the reviewer flags them as suspect and affecting the user. There are no tests for permutations or timing races.
+  2. **Reviews:** the reviewer checks that the change fits the existing code and won't cause issues, and blocks only function-breaking errors: wrong behaviour, a broken shared format or frozen contract, wrong money, data loss, a hang, or a secrets, authority or sandbox bypass. Everything else is a note, and notes are not sent back to the coder.
+  3. **Known issues:** a bug that doesn't degrade what works today goes on the ticket's known-issues list and is fixed when real use shows it matters. Tests focus on the new code and trust earlier work. A test that fails only on timing and guards no user-visible behaviour is removed, or given a simple retry, rather than investigated.
+  4. **Coders** build, run their own tests and debug until the code works as intended. Rule-break proofs, repeated race runs and fuzz campaigns are no longer done; existing fuzz seeds still run as tests.
+  5. **The clean-up:** existing tests that don't guard functionality are removed, mostly in `internal/core/agents`, aiming to bring its hosted Windows race step under about 20 minutes. Format and functional tests stay. It runs without a ticket.
+  Rulings and tickets that ask for rule breaks, repeated runs or fuzz campaigns follow this entry instead. D127's limits and D171 stand.
+- **Amends:** D116 item 6 and D152 items 1 and 3 (blocking list, focused checks, race repeats, rule breaks and fuzz campaigns).

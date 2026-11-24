@@ -1,6 +1,6 @@
 # Current rules
 
-This file is a digest of the rules in force in the decision log, entries D1–D180 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
+This file is a digest of the rules in force in the decision log, entries D1–D181 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
 
 ## How the build works
 - Build Core first; Undercurrent foundations use synthetic data and frozen consumed contracts, and pass their field gates before affecting agents. (D14, D19, D20)
@@ -11,10 +11,10 @@ This file is a digest of the rules in force in the decision log, entries D1–D1
 - Ruled designs proceed without owner approval unless reserved decisions are reached. Keep the owner summary first; list reserved items and ask them together immediately after the ruling. (D117, D160 item 3)
 - Small, single-package nonsensitive tickets get PM briefs ruled at first review; medium tickets get designers without readers; providers, credentials, money, sandbox or freezes require full reader-assisted design and fresh ruling. (D152 item 5)
 - Review each slice once for standards and specification together; review close documents with unreviewed code once. Stand-ins may close tickets; Fable audits after reset and findings open fix tickets. (D152 item 3, D160 items 2, 5)
-- Block only for violated acceptance/ruling/contract, secrets, authority/disclosure/sandbox bypass, wrong money, data loss/corruption/recovery, or missing/ineffective tests for these. Other findings are notes; re-review blocking fixes only for the finding. (D152 item 3)
+- Tests cover what a user would notice: each new behaviour's normal path and main failure, and one round-trip per shared format; internal steps only where the reviewer flags them as suspect and user-affecting; no permutation or timing-race tests. Non-degrading bugs go on the ticket's known-issues list; a timing-only test guarding no user-visible behaviour is removed or given a simple retry. (D181)
+- Reviews check fit with the existing code and block only function-breaking errors: wrong behaviour, broken shared format or frozen contract, wrong money, data loss, a hang, or a secrets/authority/sandbox bypass. Other findings are notes and are not sent back to the coder; re-review blocking fixes only for the finding. (D152 item 3, D181)
 - Coders run focused tests, one plain verbose run per changed package, gofmt and host vet/staticcheck; changed build constraints add five-target vet/staticcheck. Measure only what ticket/ruling requests. (D152 item 1)
-- Changed locking, goroutines, channels or shared state require local package race and affected-row twentyfold race runs; hosted full checks include race on all three systems. (D152 item 1, D153)
-- Rule breaks cover permissions/disclosure, credentials, recovery, sandbox and money: named tests fail, exact restoration passes. Fuzz new or changed-code targets for 120 seconds; all seeds run in checks. (D116 item 6, D152 item 1)
+- Coders build, run their own tests and debug until the code works as intended; no rule-break proofs, repeated race runs or fuzz campaigns. Existing fuzz seeds run as tests; hosted full checks include race on all three systems. (D152 item 1, D153, D181)
 - CI runs on build/**, docs/** and fix/** pushes and manual dispatch, cancelling superseded runs per ref. Main pushes start no run; Check result requires successful classification and full-matrix success or valid document exemption. (D153 item 1)
 - Markdown-only/empty diffs may skip the matrix, but need PM link/LF checks. Revisit the exemption if tracked Markdown becomes code/tool/test input. Manual dispatch runs the full matrix. (D128, D153)
 - The check runs pinned-toolchain verification, gofmt, vet, staticcheck, online govulncheck, import boundaries, cgo-free tests, race and cross-builds; static analysis/builds cover all five supported targets. CI supplies three native systems. (D42, D133, D137, D153)
