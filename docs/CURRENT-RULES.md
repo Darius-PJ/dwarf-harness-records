@@ -1,6 +1,6 @@
 # Current rules
 
-This file is a digest of the rules in force in the decision log, entries D1–D181 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
+This file is a digest of the rules in force in the decision log, entries D1–D182 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
 
 ## How the build works
 - Build Core first; Undercurrent foundations use synthetic data and frozen consumed contracts, and pass their field gates before affecting agents. (D14, D19, D20)
@@ -9,7 +9,7 @@ This file is a digest of the rules in force in the decision log, entries D1–D1
 - Use fresh coders per slice and fresh reviewers; designers draft designs, drafters record decisions, readers map sources and runners execute commands. (D116 item 1, D152, D160)
 - Build two to four slices; failed preregistered bounds permit two additional slices, each after one labelled diagnostic and fresh ruling. A third addition or changed bounds, traffic or eligibility needs the owner. (D152 item 2, D160 item 1)
 - Ruled designs proceed without owner approval unless reserved decisions are reached. Keep the owner summary first; list reserved items and ask them together immediately after the ruling. (D117, D160 item 3)
-- Small, single-package nonsensitive tickets get PM briefs ruled at first review; medium tickets get designers without readers; providers, credentials, money, sandbox or freezes require full reader-assisted design and fresh ruling. (D152 item 5)
+- Small, single-package nonsensitive tickets get PM briefs ruled at first review; other tickets get designers working from source lists, without a reader's source map, and a fresh ruling. (D152 item 5, D182)
 - Review each slice once for standards and specification together; review close documents with unreviewed code once. Stand-ins may close tickets; Fable audits after reset and findings open fix tickets. (D152 item 3, D160 items 2, 5)
 - Tests cover what a user would notice: each new behaviour's normal path and main failure, and one round-trip per shared format; internal steps only where the reviewer flags them as suspect and user-affecting; no permutation or timing-race tests. Non-degrading bugs go on the ticket's known-issues list; a timing-only test guarding no user-visible behaviour is removed or given a simple retry. (D181)
 - Reviews check fit with the existing code and block only function-breaking errors: wrong behaviour, broken shared format or frozen contract, wrong money, data loss, a hang, or a secrets/authority/sandbox bypass. Other findings are notes and are not sent back to the coder; re-review blocking fixes only for the finding. (D152 item 3, D181)
@@ -64,7 +64,7 @@ This file is a digest of the rules in force in the decision log, entries D1–D1
 - Requests outlive turns/views. Same ID/submission retrieves original state; mismatches error and different IDs stay separate. Results remain in the original context, passively available without completion-only model turns. (D53, D58, D63)
 - Only submitting context/owner cancels promotion via a separate command; turn cancellation/view closure does not. Finalize passing evidence → durable intent → guarded durable Git update → durable acceptance → release; intent closes cancellation. (D57, D59, D77)
 - Recover proven effects without execution retry: old tip means interruption, target means complete acceptance bookkeeping once. Fence prior writers and block unproven effects. No-change needs a proven accepted predecessor and performs no checks, ref update or acceptance. (D55, D59, D71, D77)
-- Harness agents remain testing-only until C4's real gate passes; C2/C3 promotion is unavailable. Valid nonempty declared checks must all pass; no human fallback, permissive validator or path-based initial exclusion. (D52, D72, D73, B6)
+- Harness agents remain testing-only until Release 1's exit test passes; C2/C3 promotion is unavailable. Valid nonempty declared checks must all pass; no human fallback, permissive validator or path-based initial exclusion. (D52, D72, D73, B6, D182)
 - Changed policy/checks/environments hold new intents, finish intended finalizations, switch requirements and freshly validate existing pre-intent requests. Keep one colony-wide policy, history and request IDs; confirm superseded children exit before replacement. (D61, D64, D67, D68, D69, D77)
 - Keep speculative output/artifacts/diagnostics/verdicts/hashes host-private until the exact predecessor is durably accepted; no early models, ordinary views, field or shared-cache disclosure. (B5)
 - Durable views use ledger cursors; ephemeral turn/delta text has atomic snapshot/high-water attach and gapless continuation, but cannot replay after Core exits. (D49)
@@ -134,7 +134,7 @@ This file is a digest of the rules in force in the decision log, entries D1–D1
 ## Open items awaiting the owner
 - Exact trust/sentiment attenuation function, representation, coefficients and cutpoints remain unresolved pending testing; illustrative formulas are not defaults. (D94, D95)
 - C4's per-incident fresh-execution cap needs a separate decision; policy artifacts contain only flake-rate prior, failure-repair confidence and quarantine threshold. (D47, D114)
-- Higher-level fortress utility, remaining first-release scope and deferred Linux/macOS start timing are undecided. (D90, D91, D92, D138)
+- Work is tiered: Release 1 (91; slimmed 17, 18 or 19, 20, 30, 31; new colony-setup and terminal-inspection tickets), Release 2, On trigger (incl. 37, 146, 149), Park (incl. 137) and Release 3 layers behind go/no-go; C3 closes with 91; art and fortress work pause until Release 3. Open: first repository/language, mid-turn checks, declared workload, usefulness trial. (D138, D182)
 - Issues/Wiki/Discussions await the owner; collaborator/deploy-key/webhook/deployment access lacks separate confirmation. Coder reasoning/December-target proposals and the PM-model-on-quota proposal were not adopted. (D146, D152, D153 item 3, D160)
 
 Superseded: D54, D106, D122, D126, D129, D141, D143.

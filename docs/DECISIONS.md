@@ -3359,3 +3359,19 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
   5. **The clean-up:** existing tests that don't guard functionality are removed, mostly in `internal/core/agents`, aiming to bring its hosted Windows race step under about 20 minutes. Format and functional tests stay. It runs without a ticket.
   Rulings and tickets that ask for rule breaks, repeated runs or fuzz campaigns follow this entry instead. D127's limits and D171 stand.
 - **Amends:** D116 item 6 and D152 items 1 and 3 (blocking list, focused checks, race repeats, rule breaks and fuzz campaigns).
+
+### D182. Release tiers adopted; the real-work gate moves to Release 1's exit test
+
+- **Date:** 2026-11-23. **Decided by:** adopted. The 2026-11-23 release-triage report found that the first release had no cut line, that no ticket set up a colony, and that nothing ended the testing-only rule short of all of C4. The owner took its recommended answers on five of its nine questions, and the project manager's recommendation to keep designing without a source map. The other four questions (the first repository and language, agents running declared checks mid-turn, a declared owner workload, and replacing the usefulness trial) stay open.
+- **Decision:**
+  1. **Release 1** is the usable core on Windows and the terminal: ticket 91; tickets 17, 18 (or 19, by his repository answer), 20, 30 and 31, slimmed; and new tickets for colony setup and for terminal inspection and troubleshooting. A new ticket for mid-turn declared checks waits on his answer.
+  2. **The other tiers:** Release 2 is 19, 25, 26, 27, 34, 36, 39, 54, 55 and 93. On trigger is 21–24, 28, 37, 38, 40–44, 46, 58, 146 and 149. Park is 52, 53, 81–83, 103, 115 and 137 (84–86 wait on his trial answer). Release 3 is the other open tickets, each layer behind its own go/no-go. Linux and macOS stay later (D138).
+  3. **C3 closes with ticket 91;** tickets 146 and 149 move to On trigger.
+  4. **The background host** (tickets 30 and 31) stays in Release 1, for a persistent colony.
+  5. **Real work** on the owner's repositories may start when Release 1's exit test passes, not after all of C4.
+  6. **Art rounds and fortress work** pause until Release 3's go/no-go, which follows his own use of the terminal.
+  7. **Designs** continue without a reader's source map.
+  8. **Ticket 37's owner gates** aren't asked while it waits On trigger.
+
+  The ticket edits that carry this out (tier comments, slimmed criteria, rewired blockers, the new tickets, the status hub) follow through ticket publication.
+- **Amends:** D52 (the real-work gate), D152 item 5 (reader-assisted design), D173 (ticket 146's cells deferred) and D180 (ticket 149 waits for its trigger).
