@@ -1,0 +1,2948 @@
+{
+ "ticket": 91,
+ "generated": "2026-11-25T15:32:36-05:00",
+ "note": "Ticket 91's evidence roots, inventoried once at its close (2026-11-25); raw files stay in place and are cited by path and SHA-256.",
+ "files": [
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\check-44833370745-jobs.json",
+   "bytes": 15694,
+   "sha256": "befbcaeee4911696540c680b67c7d51992756289ab6698985064723b28b9fe45"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\check-44833370745-run.json",
+   "bytes": 14042,
+   "sha256": "38e5f389aa7fda66c5506abb83d202758597f6686bfd413c2d3e93823086c683"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\check-45687027863-jobs.json",
+   "bytes": 13794,
+   "sha256": "8398fe1fc0458b8808ceb7d271e9ac455764a9d55837e127b6d5087f8d297c9b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\check-45687027863-run.json",
+   "bytes": 14010,
+   "sha256": "1b79d7bc6fada27a2773aa9ae277463f5db3177e05e84ebc12c25e3dc01c19d3"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\f3-91-evidence.log",
+   "bytes": 28229,
+   "sha256": "7a6e38e88109b200c485b78f3b54a8c37d957a2dee37215fef39b33a0723065b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\s1-fuzz-FuzzDecodeF3_91-1.log",
+   "bytes": 3403,
+   "sha256": "8528cc78d3b37283a407eb7c536b0d691b00f272ac7649d71b4c2af8b3d02d67"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\s1-fuzz-FuzzDecodeF3_91-2.log",
+   "bytes": 3470,
+   "sha256": "5d52dd71f00b59da45df3fb16b4a69584195daa8dcd186f7ef8d3ee419e2e93e"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\s2-ab\\ab-1-91-s2.log",
+   "bytes": 4895,
+   "sha256": "45456966d08e66130fc8de6013e86c6853331091f95758e50ec2fb903957b213"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\s2-ab\\ab-1-gate.log",
+   "bytes": 4899,
+   "sha256": "c0b4f9d3b1883f2c262b3c0bfa9bffffe98103ca719e383754c5153950323f15"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\s2-ab\\ab-2-91-s2.log",
+   "bytes": 4894,
+   "sha256": "de4a13bdd0f3b3e539430a2eae81c90533f4440a9f6058ebacca0ec7cfb46b25"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\s2-ab\\ab-2-gate.log",
+   "bytes": 4894,
+   "sha256": "812cceb015bf6e306826093c11ad416e5ccb0157628a7a9ab45d73b4f890803e"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\s2-ab\\build-91-s2.log",
+   "bytes": 86,
+   "sha256": "ac0b8258f778e9e1360b48c9cb910516f89ff022a83df4f460404d7b0961bda0"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\s2-ab\\build-gate.log",
+   "bytes": 86,
+   "sha256": "eb9dd6506453f31dec94fa8ffdc893476918de1d846af832903b2524640dae3e"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\s2-fuzz\\FuzzContinuationGroupReplay.log",
+   "bytes": 3288,
+   "sha256": "8564797eddbb886722fc8fd401009f1ddc9555a5fe096647d3edd98e0c99269b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\s2-fuzz\\FuzzEligibilityGroupReplay.log",
+   "bytes": 3278,
+   "sha256": "8dc9686fc3cd0bb006c170eb8151d5d78eb90a6812a18eccc9efa6f639f753ff"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\s2-fuzz\\FuzzLoopGroupReplay.log",
+   "bytes": 3284,
+   "sha256": "3e545caebfd6d2f0939fd8705db303afc535c48da6c76057fd1a77f7b79379c9"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\s2-fuzz\\FuzzPaidGroupReplay.log",
+   "bytes": 3369,
+   "sha256": "03d563b003eabf6617beb9a7eba61ce68871388244c89f2deb862484670fe622"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\s2-fuzz\\FuzzRegistrationGroupReplay.log",
+   "bytes": 3325,
+   "sha256": "480e355e688a813acb755d7224967043797a48a4f29113b25f4fbcc6c1c26b00"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\s2-fuzz\\FuzzReviewGroupReplay.log",
+   "bytes": 3344,
+   "sha256": "e8a6f78f3528764e565724d3699d49771f2747dd82714ad4693f0fb09520f2be"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\s2-fuzz\\FuzzScopedGroupReplay.log",
+   "bytes": 3339,
+   "sha256": "b14e773ef329b6d2667075ac5b643f7753a44428f7ac2bf902ae9bea18c5cfb9"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\s2-fuzz\\FuzzServiceGroupReplay.log",
+   "bytes": 3191,
+   "sha256": "ed50ad239e74891a4f22900495e9e85fd662f51cdfca874c3979a67864935c14"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\s2-fuzz\\fix1-FuzzServiceGroupReplay.log",
+   "bytes": 3180,
+   "sha256": "fd640c490b1bc1ef2b344dbdf46e34df3acca8b45f7784d3b04332a31934df8b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\s2-macos\\race-x5-8c2c1e2.log",
+   "bytes": 12662,
+   "sha256": "dbc194d22cda467a38be6c3427af8b1755944f2616ce74c3814cb0bd9b35f4a9"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-pm-evidence\\s2r-fuzz\\FuzzServiceGroupReplay.log",
+   "bytes": 3099,
+   "sha256": "bb4b1c35fc0dcf939c7c44b2e70e956e69c3400ae40e362ea62d02ff621393cb"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\base-imports.txt",
+   "bytes": 178,
+   "sha256": "42bfd6715e853cdb39344bf43c5a1dc998e155ed04c394e8834410c75450d1d8"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\base-testimports.txt",
+   "bytes": 169,
+   "sha256": "8a195f882c5eec9cad4598822be1a806107f7ffea50207be145ec0c5bb0bd7a6"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\catalogue-references.txt",
+   "bytes": 3113,
+   "sha256": "c6221013cbc9ae0df8c3622a794775236aa8eb1400d7d3769e3f4eb4a74566ec"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\codecs-bindings.log",
+   "bytes": 4840,
+   "sha256": "af0d82aeb18b1512f704833ce8d237f6ca44da6677bf15256b013e32ec719cab"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\codecs-initial.log",
+   "bytes": 4024,
+   "sha256": "1c93b4632e701f0302a013d0a0d09e460de46981e189b507fe902143560ae637"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\complete-service-smoke.log",
+   "bytes": 20206,
+   "sha256": "68d3b9da9c2b5f5f3ab974010d0ea3e42395e45ca9d46b07dabc8443539e9c88"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\core-open-initial.log",
+   "bytes": 5829,
+   "sha256": "940856ee8bd7928bff4d65777d24de2b66c90f57670f825e47495232aeff6fcb"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\core_open_test.go",
+   "bytes": 4262,
+   "sha256": "1c4925e6ecfac014308ee1e7031a93422f1d9b72eb0a5214741789598d23d11b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\coverage-boundary-red.log",
+   "bytes": 326,
+   "sha256": "a91448961cc587a0c83264f0500d36790d2da9b099499261395290026a85e121"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\diagnostics.txt",
+   "bytes": 354,
+   "sha256": "cc5f3d114fa655bcf84d841c107da28d0895d026209c60d47dc82d57333f2e8a"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\earlier-after.sha256",
+   "bytes": 22092,
+   "sha256": "accd78aebea1667d9dac83744b5741058973b5de31845a7629e6abe3ff92256c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\earlier-before.sha256",
+   "bytes": 22200,
+   "sha256": "2ced349f163cb06ca0f83286e20a41df40746d6b2d9c301e3e969d33828ecf54"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\final-core-open.log",
+   "bytes": 5829,
+   "sha256": "dcb5f89523f2438e3e36c8b3c114b6938432704d96d1f1d727c487ab6cbe9f60"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\final-evidence-summary.log",
+   "bytes": 2305,
+   "sha256": "338c6ddc6f3053848954a028d379def7b04624790d4bea97038940c1645fbf92"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\final-fixture-audit.log",
+   "bytes": 115,
+   "sha256": "15f001e235205867cc5300f38d9b0c83b1243f433e42e6bfc9ee38adaecbf6af"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\final-focused.log",
+   "bytes": 5804,
+   "sha256": "61d6876db64aa849907a7036c36795e70262a019bd7ff6ff34cb132a1d7c6df5"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\final-gofmt.log",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\final-golden-regenerate.log",
+   "bytes": 214,
+   "sha256": "cb79e6ac3dd2bbfee59e8a57b9a8815a17f5c5eead31e4a83d9a632c9ccaf86b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\final-import-audit.log",
+   "bytes": 183,
+   "sha256": "f9b56aad473561e5d34d10636c6705729255415c03d3c8ae5ee62c1ea18d1411"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\final-imports.txt",
+   "bytes": 178,
+   "sha256": "42bfd6715e853cdb39344bf43c5a1dc998e155ed04c394e8834410c75450d1d8"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\final-mod-verify.log",
+   "bytes": 21,
+   "sha256": "b4537ed75f533f993f371954de47e42a793b8e5b0587577de7e27fb3e50696bd"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\final-nonstdlib.txt",
+   "bytes": 51,
+   "sha256": "3fed9c60a19efaba835fb8ec05d7731ca7d6c696023c05c67b2f9cf8c48797a4"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\final-packages.log",
+   "bytes": 1648716,
+   "sha256": "de62cd5cb23d5b1ff7ef4440733a6e561aac1f12924e029364f222d8eb89ac91"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\final-staticcheck.log",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\final-status.log",
+   "bytes": 338,
+   "sha256": "b30987d5087f2e4b5eb44ee96d720e8116370a6d551fbf582e9f9cb8acbd4cdd"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\final-testimports.txt",
+   "bytes": 169,
+   "sha256": "8a195f882c5eec9cad4598822be1a806107f7ffea50207be145ec0c5bb0bd7a6"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\final-tidy.log",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\final-vet.log",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\format-command.txt",
+   "bytes": 444,
+   "sha256": "73e39eaa26a37c464bf15018be40e21825aa5f0f3b54cdf8cf4f0d8315679acd"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\golden-corrected.log",
+   "bytes": 214,
+   "sha256": "09326543c4ff56ae04eb190eaf07c4d2bc8e5e4143dd049a994bfe7576766c4e"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\golden-initial.log",
+   "bytes": 214,
+   "sha256": "2f3bab1f4d79c76ec9619ae285ada91e4a2e248242eeacc9da033f8d8e94f9b2"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\handoff.md",
+   "bytes": 1905,
+   "sha256": "b68ee40b60e03d201003c1d8fb25e1748427b3b0659a3f78eb630c9cebb67b01"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\new-after.sha256",
+   "bytes": 3064,
+   "sha256": "06c55c53ecca4671dff6a4adb68f5c2878c4ca50d157c554a16eea345505763e"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\new-before.sha256",
+   "bytes": 3078,
+   "sha256": "17da192a37d2a42c46205fcb9f42be1be6410feb11b70e8192bc62502cc3df82"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\overlay.json",
+   "bytes": 202,
+   "sha256": "42bb98675f8bb794bdcfbb18ca5786b5bd57d68c15015ed7f4c57a0a44c148c5"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\paid-call-references.txt",
+   "bytes": 170,
+   "sha256": "2175ac34561a4d70343212476ac2f8c2cd5a470dcfc2bfc81ba8ed3df78de8c6"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\staticcheck-build.log",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\staticcheck.exe",
+   "bytes": 17331712,
+   "sha256": "46b0047980d909f00dda27848ef627af4f684072b66c114c33d3e7d1fb9db5cf"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\yield.json",
+   "bytes": 29534,
+   "sha256": "3e8cfe00681f144858a6950997fdde7eeca04ca82b8035838263df3d5742ec75"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\00-format.log",
+   "bytes": 268,
+   "sha256": "61c15b9d310878601ea6ebfeaa69c2a047aa0b9d2d11e5a16634f6ac11dcc42c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\01-gofmt.log",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\02-vet.log",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\03-staticcheck.log",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\04-focused.log",
+   "bytes": 41432,
+   "sha256": "295013e486ae8d2f473f3b27378b984a0e0b8795c79d24d80e9b37535ab705b9"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\05-packages.log",
+   "bytes": 1685302,
+   "sha256": "81fb27c2905d2eda81e1783cae0cf5d975ddf137510df8b5c50fda42dbdf8639"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\06-golden.log",
+   "bytes": 214,
+   "sha256": "5fa37dd43733d4a7b36fb0e290ccd8dfe0b0bc6c5799e7ca69b9f9d9bc918b52"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\07-golden-status.log",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\08-final-status.log",
+   "bytes": 40,
+   "sha256": "6fc5b29650e85e63b025ee13257bd0d4bea8ece245189a88d570bec7708447d9"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\final.sha256",
+   "bytes": 461,
+   "sha256": "f512f63b03e5a7bf81b716663b50a642c9fd292eee972f39d732ebaab94493ac"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\handoff.md",
+   "bytes": 2995,
+   "sha256": "6db67a9ad12d8a688da47fee87bd475666e1c85177ef6573e1534bc21dba2fb3"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m1-before.sha256",
+   "bytes": 156,
+   "sha256": "0f53e2f7bbcb77809662014f68dc32115d36b809a91851593fb2a5eeca438fe8"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m1-green.log",
+   "bytes": 528,
+   "sha256": "76ee50df2a376c40b610bb36a62f9fda6e5f38072afb421db6bbb3c25225e04d"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m1-red.log",
+   "bytes": 730,
+   "sha256": "d690a5232b350168e3e1f5831911827c983d0d9d26543216788f5d47ea74269b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m1-restore.log",
+   "bytes": 94,
+   "sha256": "7e1b00224377b65672f1284444b5296f7c4c21e9cec9ea663e71ee6a8e4f6034"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m2-before.sha256",
+   "bytes": 150,
+   "sha256": "15b5f455d34862a0656280faea982c0e84d1337b5741c726b1ad60e6e0baf161"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m2-green.log",
+   "bytes": 1100,
+   "sha256": "ed72315a5ef3aedc50a7ee2ff75ada7737e49312db5a9a9fef8adad3afe64d2c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m2-red.log",
+   "bytes": 1543,
+   "sha256": "c0e8b0eb25d172acb5a10d879a807a445d1c8ce4b1c27294e1ea3c7406855b87"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m2-restore.log",
+   "bytes": 88,
+   "sha256": "6f8a9339ecb3ea0e8a7a24a558921d0d8f26c3a1620b14c7127f711640c80065"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m3-before.sha256",
+   "bytes": 150,
+   "sha256": "15b5f455d34862a0656280faea982c0e84d1337b5741c726b1ad60e6e0baf161"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m3-green.log",
+   "bytes": 448,
+   "sha256": "01392b159b16cd8d60f8ae7db3abeeddb51c063332ee15ad12f7af765eb5f603"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m3-red.log",
+   "bytes": 531,
+   "sha256": "c737f1c10dc28c57cc90ce39bb26746bf68dfbfdeaf9c1f7afdc748a83ed1a9c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m3-restore.log",
+   "bytes": 88,
+   "sha256": "6f8a9339ecb3ea0e8a7a24a558921d0d8f26c3a1620b14c7127f711640c80065"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m4-before.sha256",
+   "bytes": 150,
+   "sha256": "15b5f455d34862a0656280faea982c0e84d1337b5741c726b1ad60e6e0baf161"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m4-green.log",
+   "bytes": 448,
+   "sha256": "4adad9aace8fb2467f6c92a656d4423820609e9140d813c56504fd1fe70e47ac"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m4-red.log",
+   "bytes": 536,
+   "sha256": "2b10c57bce82d990bec8774dc7c69c9a742185ee5c488ac578d2a349d2337ce7"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m4-restore.log",
+   "bytes": 88,
+   "sha256": "6f8a9339ecb3ea0e8a7a24a558921d0d8f26c3a1620b14c7127f711640c80065"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m5-before.sha256",
+   "bytes": 156,
+   "sha256": "0f53e2f7bbcb77809662014f68dc32115d36b809a91851593fb2a5eeca438fe8"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m5-green.log",
+   "bytes": 464,
+   "sha256": "9b45873dd3d33ad1e1c9486ad04764e88e7de0d2baf611ef705bd085b1393e79"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m5-red.log",
+   "bytes": 531,
+   "sha256": "392b0ff902cd2c8e955de77e3834837f39c26a1789e542cfdd42d4ea8ef7983b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m5-restore.log",
+   "bytes": 94,
+   "sha256": "7e1b00224377b65672f1284444b5296f7c4c21e9cec9ea663e71ee6a8e4f6034"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m6-before.sha256",
+   "bytes": 150,
+   "sha256": "15b5f455d34862a0656280faea982c0e84d1337b5741c726b1ad60e6e0baf161"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m6-green.log",
+   "bytes": 1540,
+   "sha256": "4c9f22b948267d8b6c0a0442ec78c87874f7cc41ce8dba03087167e656ce94c3"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m6-red.log",
+   "bytes": 2355,
+   "sha256": "6b630349bf2b23b1a503f1cf213e98bd4718102b856300780710c8077c88ddeb"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m6-restore.log",
+   "bytes": 88,
+   "sha256": "6f8a9339ecb3ea0e8a7a24a558921d0d8f26c3a1620b14c7127f711640c80065"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m7-before.sha256",
+   "bytes": 150,
+   "sha256": "15b5f455d34862a0656280faea982c0e84d1337b5741c726b1ad60e6e0baf161"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m7-green.log",
+   "bytes": 1540,
+   "sha256": "5bec1ab0c0cd0c1e66b6943e56f069482a0078cef6d32d2a5cc52bf9156897e3"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m7-red.log",
+   "bytes": 2256,
+   "sha256": "bdb7662fc9e9773549dc43f257b1bf6d3d9f2efe316260c247bb770f5fc40ec4"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m7-restore.log",
+   "bytes": 88,
+   "sha256": "6f8a9339ecb3ea0e8a7a24a558921d0d8f26c3a1620b14c7127f711640c80065"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m8-before.sha256",
+   "bytes": 150,
+   "sha256": "15b5f455d34862a0656280faea982c0e84d1337b5741c726b1ad60e6e0baf161"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m8-green.log",
+   "bytes": 2092,
+   "sha256": "26f8ecae131e42821009c55820a5681b7966057375e7dd2f41eb54a67658591a"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m8-red.log",
+   "bytes": 2933,
+   "sha256": "a452183e6412115d2c0f457df299017601067cc69e0c2f038ede53d962f65421"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m8-restore.log",
+   "bytes": 88,
+   "sha256": "6f8a9339ecb3ea0e8a7a24a558921d0d8f26c3a1620b14c7127f711640c80065"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m9-before.sha256",
+   "bytes": 156,
+   "sha256": "0f53e2f7bbcb77809662014f68dc32115d36b809a91851593fb2a5eeca438fe8"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m9-green.log",
+   "bytes": 2480,
+   "sha256": "d21a147e1de4064f9ad7c80021e1eff9cf74c4c1e7a465c7ec022aba2e982132"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m9-red.log",
+   "bytes": 3458,
+   "sha256": "52c872b1f52cd5f04f30fc1cc31780e07b4f2ef6bc0e37bf8b15e165e8fca4a7"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\m9-restore.log",
+   "bytes": 94,
+   "sha256": "7e1b00224377b65672f1284444b5296f7c4c21e9cec9ea663e71ee6a8e4f6034"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s1-evidence\\fix-1\\yield.json",
+   "bytes": 15901,
+   "sha256": "8da507bbd700febf212cc0906c7ed76f9bd6a2b79a2fb43ff3a23db230cd8bd0"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B1-canonical.sha256",
+   "bytes": 157,
+   "sha256": "0c55c59dcf522859fb656888dc3ae392b282d5eeb4a4a181e91a4477d6ce0c97"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B1-green.log",
+   "bytes": 873,
+   "sha256": "c5bc35e438ee3343aa3356c7e7fcde3caff96bae4488f1172e3b7f875cbf6945"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B1-mutant.sha256",
+   "bytes": 157,
+   "sha256": "99e47d0fcc0860aaac48fd9540e2ab34c66d63c076ecb5cf21fa226c3562a1d4"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B1-red.log",
+   "bytes": 950,
+   "sha256": "57dcd69cdb108fd1b6e28e0189cb063eba43d04e29a90c96976e94247ed64f34"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B1-restore.log",
+   "bytes": 95,
+   "sha256": "83889184b793e0725c21c3da4b70e78aaf17c3eac1c048ce2b65be50e94d5179"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B4a-canonical.sha256",
+   "bytes": 155,
+   "sha256": "198d1771e0dbfd0de25aa0adda6cc4e3da45a967ac2ee78e860881774b990a43"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B4a-green.log",
+   "bytes": 1053,
+   "sha256": "a932847860488f2f3f8813e9604ae5581a60f86d7527218f654caf29322c19ab"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B4a-mutant.sha256",
+   "bytes": 155,
+   "sha256": "ff6a52c0db7995b7a4ce7200b4d182ad722a8f149af5f07fdaec6b7616674e55"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B4a-red.log",
+   "bytes": 1212,
+   "sha256": "dc79377022f973210ce07fb94f01a70ce72c6edd5f08528b155edc351bf2fe73"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B4a-restore.log",
+   "bytes": 93,
+   "sha256": "77d4ac3a2e5269bced4dc8c0a1a975c1f95fa6b93993e0cf4dffe6025e60c1b1"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B4b-canonical.sha256",
+   "bytes": 158,
+   "sha256": "63f2cdc467394161bab77eebbb90fb40e8c3c861df6548e12a1110403a080344"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B4b-green.log",
+   "bytes": 769,
+   "sha256": "f0a9ec6a2b5624cb736173966a8c421cab1b14cd836962f23f23b3142cec575a"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B4b-mutant.sha256",
+   "bytes": 158,
+   "sha256": "e7535e03ef0e88d26e8126ebab685b379bfabf67220f6a38cdcaec0750980825"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B4b-red.log",
+   "bytes": 1123,
+   "sha256": "78ed902b2017876eb1e10254f5ad2715c45a1f6f4725cb0862e3ebd6be6c0a54"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B4b-restore.log",
+   "bytes": 96,
+   "sha256": "3b5971b9535a32eb9e86d057968d83536c17837b6fc72214d1c77c29c469a8af"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B5-canonical.sha256",
+   "bytes": 158,
+   "sha256": "63f2cdc467394161bab77eebbb90fb40e8c3c861df6548e12a1110403a080344"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B5-green.log",
+   "bytes": 485,
+   "sha256": "4277ad00558e5a676673bb033f9856bbc3040c3d84de7851b47d883990cd7f56"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B5-mutant.sha256",
+   "bytes": 158,
+   "sha256": "6ec39539e5c290a5d64beacdbee4bf9e28ecfae0e7b7d6591ee61329480d3e8e"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B5-red.log",
+   "bytes": 582,
+   "sha256": "0e63be2e76fdaf63b2ba01a5129bddf6617b7b989349a7df901f20880491dca7"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B5-restore.log",
+   "bytes": 96,
+   "sha256": "3b5971b9535a32eb9e86d057968d83536c17837b6fc72214d1c77c29c469a8af"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B6-canonical.sha256",
+   "bytes": 150,
+   "sha256": "f9574550caa6a9f1cd8f0fdc6e60c548c061000d736dc98b509c311b829c156b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B6-green.log",
+   "bytes": 733,
+   "sha256": "b7ddf5a4441919306eb90e6aa2b67cbea7707fac9a4da7a0d133bb21323f1033"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B6-mutant.sha256",
+   "bytes": 150,
+   "sha256": "c2c941714e340ec1a64d191c81f3b34557f1ac933fa571213979ff274a5f7c72"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B6-red.log",
+   "bytes": 4019,
+   "sha256": "19e8674518876cad088a4a06639f612e96e7dcda6c863d3a61212466f7f364b2"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\B6-restore.log",
+   "bytes": 88,
+   "sha256": "76989da7fe723cf7b611a54fc6de45c47a8e67f4df5fb6652c96898b64893642"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\base-imports.txt",
+   "bytes": 716,
+   "sha256": "a55264772d29efee0c8b9e35c915a368d9bba691837d0c1dd662056092d74e53"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\base-testimports.txt",
+   "bytes": 841,
+   "sha256": "41bcaab0bcae8d2b0a9ab7e4d1d2da9163a7400dffe1340d5a31cd89dfb113b5"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\changed.json",
+   "bytes": 5025,
+   "sha256": "959640a2b820a9b16d47734198f1b663d4dd9a85db2d42899083607886bec5b7"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\citations-rebound.json",
+   "bytes": 2334,
+   "sha256": "cbb4a7f69e2c11f724100351a0097a25faab75e9e1537ff5d01b3cdeaaf2f8f3"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\commands-completed.json",
+   "bytes": 6254,
+   "sha256": "aaaff7dbd1378212a17356cb35466b7a4a568d88a5b6b5532ef20a2f21844fce"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\current-imports.txt",
+   "bytes": 731,
+   "sha256": "42194db637b642414e0896f42bdb7f0e3c724b1fddb6ad547ce107ade495a685"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\current-testimports.txt",
+   "bytes": 846,
+   "sha256": "d12d443d22c2c68451650efa0dec46c341e61fa7c8f92ca4a8d328d74194a488"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-boundaries-1.log",
+   "bytes": 6002,
+   "sha256": "2a5ca3b29ea01ec2705d4108b683e788d6e6a06b49dd706ad0517308c89c643c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-crash-1.log",
+   "bytes": 2293,
+   "sha256": "573fd56aba04d48db5833bab16e5e85c924da2ac6b53e8fc3472c4f5bf2a032f"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-expiry-race-green.log",
+   "bytes": 1253,
+   "sha256": "7fc0782388ab8959adcc5b92e553517b86d930d7ec84e60bc91921d3e8826ec8"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-expiry-race-red.log",
+   "bytes": 964,
+   "sha256": "788b44b4254b4ed16c9b8ff86c6aa0eb4cadd2fabc5cc7b4cbe37975df7ae3c2"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-fuzz-seeds-1.log",
+   "bytes": 41120,
+   "sha256": "5fb1dc256c338d0513fb450c16d03d2475403f4d4c3feef532554566bcf564bb"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-golden-1.log",
+   "bytes": 498,
+   "sha256": "05e3a15960bc52714770893a9f3aa4ef81a3191528b0f3b7f34a2c52b3724533"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-golden-2.log",
+   "bytes": 682,
+   "sha256": "e4ad079d16930889347398535dfae73678ff15648ecb3b4b0c8d1972c15517aa"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-golden-3.log",
+   "bytes": 4622,
+   "sha256": "74fb7113f075f0c89fbe933c5828085b14cb1ce1a4db278b18045d43d9060d3d"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-money-1.log",
+   "bytes": 4781,
+   "sha256": "2f3b237dc2deaea839074254fdcf2b308d89698bd5b0f157945bf444e7d11c08"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-native-1.log",
+   "bytes": 319,
+   "sha256": "650a6f18480991f9ef187bcd6c7bdb033b7ef3b6131035e09adaed5b4a87541c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-native-2.log",
+   "bytes": 841,
+   "sha256": "9e1dc75ba1805d375dc2ccb55d70461552bbf62f8d9c52ad83c5bc85de03537d"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-native-diagnosis-1.log",
+   "bytes": 1345,
+   "sha256": "3b625a91214f72878228dfc3aebdd2a861a4d00a78f7697b4bf41ef000f78f4d"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-onset-1.log",
+   "bytes": 1480,
+   "sha256": "204a1c89564b693aae2d7b1e00a009c0ad3822c1be2539eb0c6387607c4fd699"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-onset-2.log",
+   "bytes": 3632,
+   "sha256": "4c5a3fb3619ef8efaa20729da6fc7aeb78b7f3d0e05aaaf53abebf2f0fbe1f06"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-onset-3.log",
+   "bytes": 2500,
+   "sha256": "bd88960eae9fd00bf47ab5368e0ecfa330d33cff8aea50088ec71cbce7ec14be"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-onset-4.log",
+   "bytes": 2797,
+   "sha256": "8df1f9b202d3b46abcdb013eeaf98198f582e7c52450cd8d05b7406f7a87263a"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-outages-1.log",
+   "bytes": 3789,
+   "sha256": "fde2bde17d7ae890d2146ac7c061885782a60c7bba4fc092e002ca62c9f64184"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-permits-1.log",
+   "bytes": 4310,
+   "sha256": "a24c5696f992fdcfa9b3137b3b4e028a117e3f0e62ef5fa9e4e52203cb94ab2d"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-races-1.log",
+   "bytes": 652,
+   "sha256": "11eb19b8bbda62d6d3c88e890892f078c972903871f49dcb4c419cb244259bc6"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-races-2.log",
+   "bytes": 501,
+   "sha256": "7b7323676ff220a8fc3750b24ff2ca30ef723839765a9953ad07957e0ff103af"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-recovery-permits-1.log",
+   "bytes": 7864,
+   "sha256": "32e52bd97dcca5e1d62fd73aaaa121894d62383ce0276cd2be4bfd0f73fcb27f"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-source-diagnosis.log",
+   "bytes": 761,
+   "sha256": "264d62010fbefb3823490a52f41b88760beed6e6d58e76689e0eabe5076df047"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-startup-1.log",
+   "bytes": 1096,
+   "sha256": "7a3bd77721c7d67dddbd5e658aa321686a14cd792a359cd2935857caf1f59b7b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-startup-2.log",
+   "bytes": 372,
+   "sha256": "0ba7c3ea92f2dd634bcbff1a46180613494fc77db8b77dfffc15536d45c807b8"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-startup-3.log",
+   "bytes": 1000,
+   "sha256": "a4c31a6c0ceab732b145781aee2a0b489737d5244b0ea8506b69597b382a1f32"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-startup-4.log",
+   "bytes": 1001,
+   "sha256": "84ef26af39c980d3f0c4b3996fb81b9efc156b6f579d686dd3aee3e44a63964c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-startup-5.log",
+   "bytes": 887,
+   "sha256": "ea993a8bba70ad47fa2fa072463381e6bdbb7755fac4b1ad453bf5c9674a2e13"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\dev-unsupported-red.log",
+   "bytes": 624,
+   "sha256": "b944b7aabb304d37c3566ad92d45f36bdfbaaa1d8843b1f98672b5e801622b42"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\deviations.json",
+   "bytes": 3953,
+   "sha256": "f67d07e219a54c5a53fece78d2bc7114d041b777ed8480c829abef0c1779c97c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\final-consumers.log",
+   "bytes": 273,
+   "sha256": "156c1f2c2a9a8713789b10d40bb1c3bc29ff1314fc703ab9663b4e05265df614"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\final-focused.log",
+   "bytes": 16113,
+   "sha256": "9cf8842ca6c3907378619982732282695fdf53b134b95e953151680e9a0d4b1c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\final-gofmt.log",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\final-hashes.json",
+   "bytes": 3407,
+   "sha256": "8e9e0cf76f34d1354d21285ea7c87a1a45d2cb58f6cf02a7cc55c0b75a2a41da"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\final-hashes.sha256",
+   "bytes": 4754,
+   "sha256": "e4548b312f729726c0cb6f6f5b7ead5f7de495e41b6026c02b50b52fba96a700"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\final-plain-2.log",
+   "bytes": 658455,
+   "sha256": "9eab4be360293e8dd35ac95e5bb45d1c9e934d55be43c710e46e56976aac3862"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\final-plain.log",
+   "bytes": 631068,
+   "sha256": "0cf9286857f3fd1e8a603d69ccf7aab133f4fcf2edba2a45aaeb92f782f572fe"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\final-race.log",
+   "bytes": 71,
+   "sha256": "14da66367bbb59144a07ed5e07ae4fc1f852adc0ce27c58433feb45c2aa27ca2"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\final-race20.log",
+   "bytes": 204107,
+   "sha256": "204f216d9228abc6eecf14feaaf1832556cfbcc943e9786a7d63c87231e5104b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\final-static-2.log",
+   "bytes": 371,
+   "sha256": "dd631b2b17fc8bb7b82c32edde652422f3efd204284addd182271b0104a0392e"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\final-static.log",
+   "bytes": 271,
+   "sha256": "07bac8b867987f552dae8891e77179be05ca15286b984e9f84c75df57df69b2c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\final-status.log",
+   "bytes": 1304,
+   "sha256": "bd668821aae6657ffe8bbd79eaa58f0367c37a5b3d283b51410e00ca17b97a3c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\final-tidy-diff.log",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\final-tools.log",
+   "bytes": 454,
+   "sha256": "54cc4d62b38fe4a5f430b5f6d56c5e9af47ffb5bb6157480c30474773c346e77"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fuzz-reach.json",
+   "bytes": 1343,
+   "sha256": "4a1253e79524cd2ce0062ebfcaf54eb6db51dee1e81b7c4e51c94ded839dad84"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\go-analyzer.exe",
+   "bytes": 8603648,
+   "sha256": "81d7752f8677e63f44ff92fbea908ccb1e72428147df616ac0d45bb8f5861d14"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\handoff.md",
+   "bytes": 14138,
+   "sha256": "e1bf17115fab8858ce7d7fb4c6b8b0c8ec9bd6e5af656d16c738371635b5d366"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\imports.diff",
+   "bytes": 325,
+   "sha256": "736ecec76cf9258ff61aa9dc2ee2e4da3868ac8f10b5995fee5b1e3995f6929a"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\lsp-Close.txt",
+   "bytes": 2724,
+   "sha256": "69f3758fa1d877a03bcd78f3a2bda5f23be645ccde67dbb83542ddbd00925d1d"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\lsp-EnableTurnLoop.txt",
+   "bytes": 556,
+   "sha256": "c97002c9c05afb7904615807e152894fdbfddb4cb72adf1982e5a3f6dfd780a2"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\lsp-Reconciliation.txt",
+   "bytes": 1339,
+   "sha256": "2173764e3edc868d03f4d560364961b69a87ce16b8f29511869d73073981d0ef"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\lsp-commandMatch.txt",
+   "bytes": 925,
+   "sha256": "0339b75a22d4ce6ec55e7b3492715201337be69d787cabd02c784f6fa0294c7e"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\lsp-decodeFamily.txt",
+   "bytes": 957,
+   "sha256": "0e06f74720c1346d5b4ab28103c393b7d78947790a1724f3f4bf06a90349aad5"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\lsp-evidence.json",
+   "bytes": 2395,
+   "sha256": "ae91839f1f5e793fb6776af1cbfd6ca90945603cc85beb95847fdeb9ef4231a2"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\lsp-findCommand.txt",
+   "bytes": 1189,
+   "sha256": "fc3a8371e3fb2224aa8216cf6c72419a22b98c5306ea1a5596e893231dc39fe6"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\lsp-stageCommitLocked.txt",
+   "bytes": 330,
+   "sha256": "83b8dcb0a17225ee1f7d0cbdf2c48f9037dce3f06df52491b64c39244ac66c6c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\plain-summary.json",
+   "bytes": 2864,
+   "sha256": "d02809a558f9f4d80bf5883b569432e7da2b8c04efeeb15d1d1b6c3872ef09bf"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\plain-timeout-summary.json",
+   "bytes": 3014,
+   "sha256": "43d3682663faad90512555205b50392d8bda23f08f97d6c8cfcfc6c5130d82e9"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\race-summary.json",
+   "bytes": 664,
+   "sha256": "9562d920a04df92beeb5cf377ddc260a68ee72bf5240013b113635f4647beff9"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\race20-summary.json",
+   "bytes": 2432,
+   "sha256": "697ae93df089e483474c1222e1a8b78ca0e6414a8421d247c5bc9728b3ce4c11"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\staticcheck.exe",
+   "bytes": 17331712,
+   "sha256": "46b0047980d909f00dda27848ef627af4f684072b66c114c33d3e7d1fb9db5cf"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\test-contracts.json",
+   "bytes": 8479,
+   "sha256": "678a1720b30683b5057c104629daa7a22173c74d11cd6ba98136b4e8d0224dad"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\testimports.diff",
+   "bytes": 331,
+   "sha256": "de6bc7212f59afd30c4e7164f2ed6a05067f6288798190fb0f86abc73998ca2e"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\yield.json",
+   "bytes": 40984,
+   "sha256": "a452bae806f06a96ab8adf015784864a23051390a5fc39305c150a476fa0c0d0"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\B4a-canonical.sha256",
+   "bytes": 155,
+   "sha256": "118bdc263691b3e9d93d4f7b4ecdf6d9f9722792349ec675a98a5a52ff9cb9fd"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\B4a-green.log",
+   "bytes": 945,
+   "sha256": "e3734479601dabf6f08054304d48700ffaa020639444398fb564f615f03b0686"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\B4a-mutant.sha256",
+   "bytes": 155,
+   "sha256": "9aa034f29e5d22d2820e55c48385657949987b477f854896a0dab8f1aef8e352"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\B4a-red.log",
+   "bytes": 1261,
+   "sha256": "f91f355e2660d8bdfaa936746e65c303a35b0f97159e8bb792b8032e93f025c9"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\B4a-restore.log",
+   "bytes": 93,
+   "sha256": "77d4ac3a2e5269bced4dc8c0a1a975c1f95fa6b93993e0cf4dffe6025e60c1b1"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\B4b-canonical.sha256",
+   "bytes": 158,
+   "sha256": "a02a82e6c5b9f9b862c07bd45c7cfde56248ae0d1935239f7b087b4ff4a42d15"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\B4b-green.log",
+   "bytes": 769,
+   "sha256": "a07a1581f5ebf1f5ebaad1a85273dc7ac8554bfd333c66ec2c0d88ee0b99b91c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\B4b-mutant.sha256",
+   "bytes": 158,
+   "sha256": "de82da7b5ff0fa546340ee6c7ddf0ee0f15650f95f70dd81638217dc07166b92"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\B4b-red.log",
+   "bytes": 1123,
+   "sha256": "6664691497ff8826108747dec8d7035adb05acec56581324abb0aac585869415"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\B4b-restore.log",
+   "bytes": 96,
+   "sha256": "3b5971b9535a32eb9e86d057968d83536c17837b6fc72214d1c77c29c469a8af"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\F1-canonical.sha256",
+   "bytes": 155,
+   "sha256": "118bdc263691b3e9d93d4f7b4ecdf6d9f9722792349ec675a98a5a52ff9cb9fd"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\F1-green.log",
+   "bytes": 701,
+   "sha256": "4f732a373ec489f9dd3933453929c86e73916e4113b865af0d1a94dfcda29a9e"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\F1-mutant.sha256",
+   "bytes": 155,
+   "sha256": "95e98d90969f022994077f33490e534fce99d4a3658c5023773e14485ccf03cc"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\F1-red.log",
+   "bytes": 1009,
+   "sha256": "8d42febeeb5014a69cfa3eb2ed6829c9b7721251b52fc6074b9de189c658a03c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\F1-restore.log",
+   "bytes": 93,
+   "sha256": "77d4ac3a2e5269bced4dc8c0a1a975c1f95fa6b93993e0cf4dffe6025e60c1b1"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\F2-canonical.sha256",
+   "bytes": 157,
+   "sha256": "f10764b783a4dfc14caf6aa842db37d3b9f5fc8c1108e269cea2162b4e80ca89"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\F2-green.log",
+   "bytes": 557,
+   "sha256": "4c7a04ac78a26c28cba2f5cacebaefae84fb992d66e34ebcfc0fdfe7444dfea5"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\F2-mutant.sha256",
+   "bytes": 157,
+   "sha256": "5878f17c13a11ba1423f002f6838c044cd66beddc451a17c7041ed60511e9b26"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\F2-red.log",
+   "bytes": 701,
+   "sha256": "31a0eceac3c464fd780d61426bdb9584decbb5a6e6fef2305f1a330edbeb6cc8"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\F2-restore.log",
+   "bytes": 95,
+   "sha256": "83889184b793e0725c21c3da4b70e78aaf17c3eac1c048ce2b65be50e94d5179"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\F3-canonical.sha256",
+   "bytes": 158,
+   "sha256": "a02a82e6c5b9f9b862c07bd45c7cfde56248ae0d1935239f7b087b4ff4a42d15"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\F3-green.log",
+   "bytes": 569,
+   "sha256": "8fe74444937d63b6d0a80d820d1e68cd838502de2253383bf6772b6a5d59815c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\F3-mutant.sha256",
+   "bytes": 158,
+   "sha256": "16c35dc4955970fd5fceb3fac61cf30822e727a9a118a9275111feea32cfc808"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\F3-red.log",
+   "bytes": 1099,
+   "sha256": "14e2f413ae9b349e6d1e6b06752e475e164915d534541fef948cd90f6120472c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\F3-restore.log",
+   "bytes": 96,
+   "sha256": "3b5971b9535a32eb9e86d057968d83536c17837b6fc72214d1c77c29c469a8af"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\base-imports.txt",
+   "bytes": 1588,
+   "sha256": "57b047bc841452f3695b7cc7a9d290e8efe7fb297855bf0ba8a875e403d3d076"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\current-imports.txt",
+   "bytes": 1588,
+   "sha256": "57b047bc841452f3695b7cc7a9d290e8efe7fb297855bf0ba8a875e403d3d076"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\dev-fixes-2.log",
+   "bytes": 3729,
+   "sha256": "8031b8909620abee786a346cbd8f7765801cfad01b4ab7eabc567932bc685702"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\dev-fixes.log",
+   "bytes": 4580,
+   "sha256": "d970e904abae57cfe0a6235e605679b269ea8432ea30c468779849c35d3b5179"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\final-focused.log",
+   "bytes": 18633,
+   "sha256": "8b54c16bf59d0dee77c392541be009138bc65a648eb59d5688743bcd5b2f0452"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\final-gofmt.log",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\final-hashes.sha256",
+   "bytes": 739,
+   "sha256": "546db580c7128402ef4067d7ab8e3115bde4f78a38a9284c61222dd4b926c9b0"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\final-plain.log",
+   "bytes": 660896,
+   "sha256": "62581e31b398791522959cd5521399cfcba488760916fb027e4b22a55cc7f70f"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\final-race20.log",
+   "bytes": 336444,
+   "sha256": "104f9642b24273379b615b35d5e8aef121da681a7f91ccedcd7e4e7d4e110782"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\final-static.log",
+   "bytes": 354,
+   "sha256": "387be96e6200fdbcb9229795a3272124bcc4451187300c46b4a281f707f262a6"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\final-status.log",
+   "bytes": 298,
+   "sha256": "e5a0c7f18ead176d77ae47d3bf9efc8d84b55327bafcacb42dffbbebb3994dee"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\final-tidy-diff.log",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\handoff.md",
+   "bytes": 3253,
+   "sha256": "452af75d1f9798eb56f6e781a64dadc116555102c1243f0832092a26c3cf605b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\imports.diff",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\lsp-evidence.json",
+   "bytes": 1485,
+   "sha256": "5b2bf6151d42fd5a3458a6ee27853d3a24cb95b78cbbbcfa03ad9b38a666c1bb"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\plain-summary.json",
+   "bytes": 1713,
+   "sha256": "8fbd36b2faf9615c74913238c9bdc16ba9b4f61137caf204fb03c6d0eb3e4f3d"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\race20-summary.json",
+   "bytes": 1978,
+   "sha256": "8b9b6240815848eedd97f8cc83c38299507bfab24053e6957866095d51139149"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2-evidence\\fix-1\\yield.json",
+   "bytes": 20763,
+   "sha256": "4ae7ef967301bb66e81ac1c6a6bd3b5b78aeadabb3694d4c9c9e6f3922d491ab"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\base-imports.txt",
+   "bytes": 731,
+   "sha256": "42194db637b642414e0896f42bdb7f0e3c724b1fddb6ad547ce107ade495a685"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\base-testimports.txt",
+   "bytes": 851,
+   "sha256": "c9555fe84664eaaf14f0abb742c3bcf9bfa80069535c0a9f4d4485f7c619dcdd"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\final-hashes.txt",
+   "bytes": 328,
+   "sha256": "2e1a858a743466638f441adf22e39100bfe7641cbf9f6b9379809eec3a91d63e"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\final-imports.txt",
+   "bytes": 731,
+   "sha256": "42194db637b642414e0896f42bdb7f0e3c724b1fddb6ad547ce107ade495a685"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\final-testimports.txt",
+   "bytes": 851,
+   "sha256": "c9555fe84664eaaf14f0abb742c3bcf9bfa80069535c0a9f4d4485f7c619dcdd"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\first-seed-per-shape.txt",
+   "bytes": 1237,
+   "sha256": "1758f16177461bfedd92e9b12c1e95ed5b91943926e7dcc6de92b9d434676471"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\fuzz-race-count5.log",
+   "bytes": 203517,
+   "sha256": "e2ea0ed56046da4d93429a13e82ed4bd00ef3a299bdc1813f048238798f52ca8"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\fuzz-race.json",
+   "bytes": 386465,
+   "sha256": "17aac9c65dbbe1425e0c53559d2cc7066c4b5555f1dc52f58c239d52bff9213a"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\go-analyzer.exe",
+   "bytes": 8603648,
+   "sha256": "66d7b34caef179a458400c76d5039c97d53d87d540f329c346bfcba1dd9b0534"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\graph-env.txt",
+   "bytes": 445,
+   "sha256": "053dfa7606ad7f5a7c511bece71cbb6c354680b3960fa8c4b495457af88a9799"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\handoff.md",
+   "bytes": 3200,
+   "sha256": "70dbd27d3e58daba5a2220f2e381415ae958dccf9eeecc3a00d81408d95d0797"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\pkg-plain-seedscan.txt",
+   "bytes": 2,
+   "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\pkg-plain.log",
+   "bytes": 666261,
+   "sha256": "cc779e4ae19d78ec20983ddaba15f992ba6cd8c34d8c362362830feac593dd03"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\pkg-plain.time",
+   "bytes": 49,
+   "sha256": "d8316502a3dde2d99ea0ffcbff79a9ccf89093230465e5d28f9a42e7ff95fc09"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\pkg-race-seedscan.txt",
+   "bytes": 2,
+   "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\pkg-race.log",
+   "bytes": 666673,
+   "sha256": "45c77c791cd3daad8a2f9a42d22b6ec28bcf41bd916da2d58c9ddcc19ae0ba86"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\pkg-race.time",
+   "bytes": 49,
+   "sha256": "b7009747044ab383482d5ce058f3a7c1b15e24b73139c5f2f0dd157d298b6a66"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\post-mode-times.txt",
+   "bytes": 407,
+   "sha256": "7397357052854f2298c6eadbaa1c184192aac9ba4103ac3e935712331c44ca7d"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\pre-fuzz-race.json",
+   "bytes": 386400,
+   "sha256": "c146f1440a2e07f8a179df7e2f1ec420a79375de76c61153508ce2e5be07fbba"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\service-plain.log",
+   "bytes": 18633,
+   "sha256": "2f1c7a220c64e1e4fea08b966db4b666cb0557b9d3a897aab04f411747788aba"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\service-race.log",
+   "bytes": 18650,
+   "sha256": "4d327c92523b48e69ff2bd832f53107ba0d5e0aee6e5852c5b49434c9d734eab"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\static-1.log",
+   "bytes": 80,
+   "sha256": "cf57144eea47c0377616301676755e534439c51d5d73cfde0662b824ee73fe44"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\static-2.log",
+   "bytes": 158,
+   "sha256": "e95a5e9d0b4189bdcaa5f8c2cc89fa5dffa2307ac5aa8e21715fe2e232f62faf"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\staticcheck.exe",
+   "bytes": 17331712,
+   "sha256": "46b0047980d909f00dda27848ef627af4f684072b66c114c33d3e7d1fb9db5cf"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\status.txt",
+   "bytes": 139,
+   "sha256": "780e9f1790d5b296cf4fab9def3f762df25f262667dbc90efe3b06d31e1bdca1"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s2r-evidence\\yield.json",
+   "bytes": 17633,
+   "sha256": "8d6afbbcabd89b712f35597ae00a01e681ae5056993f7fd75f84f79d1fa55220"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\base-imports-agents.txt",
+   "bytes": 731,
+   "sha256": "42194db637b642414e0896f42bdb7f0e3c724b1fddb6ad547ce107ade495a685"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\base-imports-providers.txt",
+   "bytes": 194,
+   "sha256": "7926e90b4a950a5f794220dcce0e3d7c6a0b4519ee503ebdd874aa3c6ed989c0"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\base-imports-workspace.txt",
+   "bytes": 532,
+   "sha256": "7fab12d4ba3a782b9da2a96deb1c5658b2ea1699111b8c6245ce3508cb5d3b41"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\base-testimports-agents.txt",
+   "bytes": 851,
+   "sha256": "c9555fe84664eaaf14f0abb742c3bcf9bfa80069535c0a9f4d4485f7c619dcdd"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\base-testimports-providers.txt",
+   "bytes": 293,
+   "sha256": "642d10860531e3db48e259574375e56d0086e9b9ce3f9d893fd61168d6556e4b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\base-testimports-workspace.txt",
+   "bytes": 508,
+   "sha256": "104eaeedafadfdd50d5a80b6437abdc2b52c3ea380fd89af9fc2c06770631e14"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks.py",
+   "bytes": 9113,
+   "sha256": "de82cfa9ca95a335cff752c73505f16b1924eefb794ed5266f80ffb9fb6531f9"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\clar.json",
+   "bytes": 39418,
+   "sha256": "d1b207ad7a1d1118d454f0a414838673797e6eed2e86deb0da786c8c0510343a"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\final-consumers.log",
+   "bytes": 442,
+   "sha256": "1a1241a8c0322e07cbb8685ee945e32cbe2e9b0a6c3f95a25acec646ba78b930"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\final-plain.log",
+   "bytes": 1103528,
+   "sha256": "829f701b6ae863f30a84bebe6b1d4b7752831bcc9e6f75d3c4c709ef586b82dd"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\final-race.log",
+   "bytes": 918086,
+   "sha256": "a2c965d9a184bbf7535ff3ac5aa49d24a6d3041c3f82fd7e5976bc503c4b0861"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\final-race20.log",
+   "bytes": 255036,
+   "sha256": "7f982b658732614fc3b24f4847781bc499eee7c1c1d0b6283f2e016b8b1c7a19"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\final-service.log",
+   "bytes": 35619,
+   "sha256": "3a4d7501901bc8d4dd350247adf697ff91b78ce7c205958f84338dfc91571350"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\final-status.log",
+   "bytes": 2001,
+   "sha256": "e1797343fc54725a973dafc3280bf860a6578b5568dcb37b1f3cac6f25b2a853"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\handoff.md",
+   "bytes": 15447,
+   "sha256": "667233d624e51ff39e5afbd4781211093d9a03f4485aaf5c9e9f0bd63e0821d2"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\lsp-references-base.txt",
+   "bytes": 4445,
+   "sha256": "56a883a3a147871e5c88bceefa7c861ed978c85a79d762ae3f90d598db5b8faf"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\lsp-references-final.txt",
+   "bytes": 1471,
+   "sha256": "b3bad5c4e7b574a7ac24405608bf99953b1cb1b01a558f99155ececf970e2afb"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\ruling.json",
+   "bytes": 52866,
+   "sha256": "042f4b9169720ee304d6f727ed935b28a5aba80622e82bd8e5f6d9a1366f4971"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\static-1.log",
+   "bytes": 3020,
+   "sha256": "fec3004787c49a1b9e3c4b4a12cc30374eeb947a8515a21425c093b377efad9e"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\static-2.log",
+   "bytes": 3020,
+   "sha256": "c6bcca4a48652989450c8cf4a963e0902d8f12b4e6ca2f650bea6a573e73f4b1"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\static.sh",
+   "bytes": 1950,
+   "sha256": "2d95021ae14e09c8add3295b0f309add7cb1f69702d6a134baaab177ab43122f"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\staticcheck.exe",
+   "bytes": 17331712,
+   "sha256": "46b0047980d909f00dda27848ef627af4f684072b66c114c33d3e7d1fb9db5cf"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\yield.json",
+   "bytes": 36206,
+   "sha256": "da0c148be0ec4f3b69a90c0356d58da1844088d646acbaab18de5a008f505856"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\yield_build.py",
+   "bytes": 9329,
+   "sha256": "22e9d6d18db375c9ab4fa5a920bb250611ca4f1c8bdb0dbab6e037bd89236345"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\yield_text.json",
+   "bytes": 12121,
+   "sha256": "b86aaf8175187a69bcee2db34e0b971c821dd0521ea1e6164a38f724c13ece60"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B1-live\\canonical.sha256",
+   "bytes": 209,
+   "sha256": "25bf742c3ae4d01efb0190e1d0e79134dbee50ff216fcda24a0aaca8b1bc4c48"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B1-live\\green-0.log",
+   "bytes": 667,
+   "sha256": "c306a352ac4326aaef8586c0036293146f723b77fe6899214c018717f9a6c49d"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B1-live\\mutant.sha256",
+   "bytes": 209,
+   "sha256": "7eaa8001aeedd9e3910d562d5a66e5c06609d4055737faee5b8c14a42d9f9687"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B1-live\\red-0.log",
+   "bytes": 750,
+   "sha256": "2a9374bea9d872f0e11480670953a0c8179879b233af84bf5417539e1b89a47d"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B1-live\\restore.log",
+   "bytes": 124,
+   "sha256": "c6ef0a5ba58659279551f42a10511d67e8b21beb592ee0ad6855d9aa959f4c4d"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B1-live\\result.json",
+   "bytes": 1241,
+   "sha256": "1fbbbc47f2d4a16e055245f7012fd745fd3e0065a405ddd7f04b59d7e8ba8dc1"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B2\\canonical.sha256",
+   "bytes": 105,
+   "sha256": "5dd455d01b59ab85083fa3ae5beeee7648b69e2b5e1363a176b7bcf7f0ede2db"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B2\\green-0.log",
+   "bytes": 620,
+   "sha256": "2b9bb60ef109056ed0f50b26572d99c94b6721578a4aec2342cbdf1aff962a2e"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B2\\mutant.sha256",
+   "bytes": 105,
+   "sha256": "f709c660c37e366b863f3e21b93a6da8650a91c83c67d516debb080cd6ef7b51"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B2\\red-0.log",
+   "bytes": 734,
+   "sha256": "cad826ddc0bcd935d21382ed931c80a55e2b9b41ae180bc3a4667e88f66b65bb"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B2\\restore.log",
+   "bytes": 82,
+   "sha256": "7a3498c522bd368abbe0d3b923e3addf54806cec601782863e15cc2ffece87ca"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B2\\result.json",
+   "bytes": 943,
+   "sha256": "39a6896cf6e28805be5a8d5aed8a03adb8c94d7001b63aa7c338bb34c7c42397"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B3\\canonical.sha256",
+   "bytes": 105,
+   "sha256": "91e9f21df7c83fb7334f4577916381077594c0bc56934e59613bbe24abf2b262"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B3\\green-0.log",
+   "bytes": 718,
+   "sha256": "ffb9318cc01e176cec348fa7d9abd7dc236c1ece64bf458be474de508976c486"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B3\\mutant.sha256",
+   "bytes": 105,
+   "sha256": "46064ec705e26186511d530da611c88fb010fa611d9745d7ef37cdd1b47eb265"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B3\\red-0.log",
+   "bytes": 1063,
+   "sha256": "9ff2e1ac1eab6e18a3ad164b86c18afa54164b77bade2e579535ec25e81c6f1b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B3\\restore.log",
+   "bytes": 82,
+   "sha256": "1351026dc0f4263a019a8082964edfd86c262f114c716c1d90c7ecc8ffab49a5"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B3\\result.json",
+   "bytes": 1040,
+   "sha256": "3ac4a8d8898903a79fad2dd58ac02dbc4432b9723b0a2074f7371dd52c612668"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B7\\canonical.sha256",
+   "bytes": 109,
+   "sha256": "acf310694541248855987df66003c6a0246806c4560c25c59c4b0e98ceb3ffdb"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B7\\child-mutant.sha256",
+   "bytes": 109,
+   "sha256": "4e4c2d4c379fe1325f566a4db8e3123ae64e6cdd04c756ab2c979cf571973707"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B7\\green-0.log",
+   "bytes": 364,
+   "sha256": "7baf5633a2fca89d165a6666d2b65803a7c75eca36c4df95909f3de2ffe7e183"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B7\\mutant.sha256",
+   "bytes": 109,
+   "sha256": "4e4c2d4c379fe1325f566a4db8e3123ae64e6cdd04c756ab2c979cf571973707"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B7\\red-0.log",
+   "bytes": 480,
+   "sha256": "43cdbce2ab19c00bdb491e261ffe92421363b83eef6eca02d8825afaf4b03c7e"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B7\\red-child.log",
+   "bytes": 2217,
+   "sha256": "33ae9ad67188c464a0bd07f93ac1da2657914e03f9908efe3ec20e0e2dd48532"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B7\\restore-child.log",
+   "bytes": 86,
+   "sha256": "7686345d9e9c1fb8480c3233c8df4f136e7cd868da8b1e17a52c3fcdcf814e3c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B7\\restore.log",
+   "bytes": 86,
+   "sha256": "7686345d9e9c1fb8480c3233c8df4f136e7cd868da8b1e17a52c3fcdcf814e3c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\B7\\result.json",
+   "bytes": 913,
+   "sha256": "af41f2b2ab433d0813e577ff3f7208757f2c0e557c8526a838d50bfcf679c6a1"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\PM9-crash\\canonical.sha256",
+   "bytes": 104,
+   "sha256": "208e4e01c1934c6a7a2901a2f17027fef304e781668f6e075c58220a7c78e026"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\PM9-crash\\green-0.log",
+   "bytes": 1781,
+   "sha256": "bf502642d32ac274b95bc7255fbf2eabf5fc937b3d7dd784372606536571bb26"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\PM9-crash\\mutant.sha256",
+   "bytes": 104,
+   "sha256": "b2d223d1687371955999a3ae89a9e3a75bdf376a1995f98c9c085e068174dea0"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\PM9-crash\\red-0.log",
+   "bytes": 1666,
+   "sha256": "83b6df33963b71edbc748add545073e314d1bce440c46fea996f350671252a61"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\PM9-crash\\restore.log",
+   "bytes": 81,
+   "sha256": "318fc9f9c798d62e837f3859df6414bfacc9782b4228cd85fdf31868cf4151a0"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\PM9-crash\\result.json",
+   "bytes": 1023,
+   "sha256": "f5a65a8fac8f52cc30312563d8901a29f2a750ca402ce94dedc89fcb12c8d8df"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\PM9-eligibility\\canonical.sha256",
+   "bytes": 101,
+   "sha256": "3bc0b4621a44621e828f8dfabfe543c5273deaa756e725031f910cb203cf91ac"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\PM9-eligibility\\green-0.log",
+   "bytes": 1256,
+   "sha256": "283761bd6ed80d942f4467323fbdc6031f804d93afd12d5d0c9781fad160a54a"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\PM9-eligibility\\mutant.sha256",
+   "bytes": 101,
+   "sha256": "3bb231cd8499089295ac8c6f6b454d1f4c8b38b2bacd274682f415bcc5a37fd6"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\PM9-eligibility\\red-0.log",
+   "bytes": 1356,
+   "sha256": "cb613b827666f8339a96c756c0e29449c7d4fc62d7a21f7a6b4d1e1ac156bc10"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\PM9-eligibility\\restore.log",
+   "bytes": 78,
+   "sha256": "bdde029d9855ab328e1cd02d32d40597efa4e6a789105575ec76a43ce92997ca"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\PM9-eligibility\\result.json",
+   "bytes": 1256,
+   "sha256": "f6acfeda9c4ad60470c1e6db25b174bd38b5304dc2e11966c9b5d37f2ef864bf"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\PM9-exchange\\canonical.sha256",
+   "bytes": 104,
+   "sha256": "208e4e01c1934c6a7a2901a2f17027fef304e781668f6e075c58220a7c78e026"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\PM9-exchange\\green-0.log",
+   "bytes": 1263,
+   "sha256": "40f9d9481e0f7baa19cd8c3e40e93ef6ccd5172b5645d4ae65abe5375e9289dd"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\PM9-exchange\\mutant.sha256",
+   "bytes": 104,
+   "sha256": "b2d223d1687371955999a3ae89a9e3a75bdf376a1995f98c9c085e068174dea0"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\PM9-exchange\\red-0.log",
+   "bytes": 1563,
+   "sha256": "c57b49ad3278a1e589da8713328fb894e1f783cf56810f9ae97bf7f1f97bad12"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\PM9-exchange\\restore.log",
+   "bytes": 81,
+   "sha256": "318fc9f9c798d62e837f3859df6414bfacc9782b4228cd85fdf31868cf4151a0"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\PM9-exchange\\result.json",
+   "bytes": 973,
+   "sha256": "f87b7b778ceb8d6fe85c3a437fc415d35dffda31731c45a4c4be54d26cfed252"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\permission\\canonical.sha256",
+   "bytes": 101,
+   "sha256": "3bc0b4621a44621e828f8dfabfe543c5273deaa756e725031f910cb203cf91ac"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\permission\\green-0.log",
+   "bytes": 672,
+   "sha256": "a56fa3ec0bec039e072bc57b85fe307d1616a0b911daa3992f0cd1ece9eb1236"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\permission\\mutant.sha256",
+   "bytes": 101,
+   "sha256": "d1297440441d9de6e6b6ce845ad727bf297f724a92f50e7daa6ac64b27bc762a"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\permission\\red-0.log",
+   "bytes": 780,
+   "sha256": "33f598c6d80c6a76d66c8b66d00a531d46012615813742d27007060f127e7b66"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\permission\\restore.log",
+   "bytes": 78,
+   "sha256": "bdde029d9855ab328e1cd02d32d40597efa4e6a789105575ec76a43ce92997ca"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\breaks\\permission\\result.json",
+   "bytes": 953,
+   "sha256": "09c5fedf0cabb52f87dcdbca9dafa59c054f883d321593100507348c065671cb"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\agents-plain.log",
+   "bytes": 684709,
+   "sha256": "63c83f3e0cd0d0e310cbacb46650c46eb6ddc9403555e5989bc767e52491eb62"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\agents-race.log",
+   "bytes": 684965,
+   "sha256": "78feb094b406bb3139192a865a8215fa4c239f832a3512bb3cbdbe0826cb5afc"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks.py",
+   "bytes": 6476,
+   "sha256": "02d04d1253458df69b39cf9130a1b6210f57113368ddfecadc153fb1691b4403"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\consumers.log",
+   "bytes": 442,
+   "sha256": "b47edcba245a948caa2ea615695b8ba9092e53d2e38608847f77a206088b8752"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\race20.log",
+   "bytes": 37318,
+   "sha256": "6ce703cb10ed37f5c32deab8c52c72861a383799296bcf71f9af974e4cc02799"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\service.log",
+   "bytes": 37083,
+   "sha256": "551499a4df73b33e85f4c5408c26a1cfd1166c65e2ef768147b18fd684c364d3"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\static.log",
+   "bytes": 3935,
+   "sha256": "afdfff67b4eaefc71d33b7c91dfeb0a03bd7fdd9f3b315817a288dfcfc7f92f3"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\static.sh",
+   "bytes": 2176,
+   "sha256": "1f25d32d60d32ea54da544e36ce36e3d47f31dd15a85be611be77e74dcdc0ff1"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\status.log",
+   "bytes": 451,
+   "sha256": "36f2a025931cad173dde708d69a93d35bfed57b90ae635351d0e2877fc0c24c9"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\workspace-providers.log",
+   "bytes": 419876,
+   "sha256": "b95f1ee450e2acc529a16cf272390111685a4ebc184af1a989613c2b47a4aab8"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\yield.json",
+   "bytes": 24948,
+   "sha256": "fe2f0ae2a7f48b832387c2d759e4fd2b9aa19e567730b48b4fe623d186a5727d"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\yield_build.py",
+   "bytes": 2685,
+   "sha256": "933cbeba6fa6ef1f99a70141dc6c9d4a644a0b24d8d521f67f1119ca4ae4700c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\yield_text.json",
+   "bytes": 14385,
+   "sha256": "19bdebfc1748104edf67112ce2baf5a8aa75d31bed9a08cb2a756cac3b247573"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-credential-not-recorded\\canonical.sha256",
+   "bytes": 105,
+   "sha256": "03a70216490ed05099c8ebc73d67a91a6cb452127400226662d38f8d0e1ab32b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-credential-not-recorded\\green-0.log",
+   "bytes": 581,
+   "sha256": "d22e0a600bb86b9423ffa4f6349816aba28b1b4c1d9239062af5f3d46041ee68"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-credential-not-recorded\\mutant.sha256",
+   "bytes": 105,
+   "sha256": "e4b9742aea065cecdf22c8e906d1608cf60f162c5b301043c1650c1f97211c56"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-credential-not-recorded\\red-0.log",
+   "bytes": 658,
+   "sha256": "574271c51db0826348b53c602bdbb7cad656b26e23917556adb0a31c0013be34"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-credential-not-recorded\\restore.log",
+   "bytes": 82,
+   "sha256": "1351026dc0f4263a019a8082964edfd86c262f114c716c1d90c7ecc8ffab49a5"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-credential-not-recorded\\result.json",
+   "bytes": 972,
+   "sha256": "dae81ed54c26c55bb7e086971b0bde66f1be7fbe208e9d90bde2936490e8767f"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-first-exhausted-only\\canonical.sha256",
+   "bytes": 105,
+   "sha256": "03a70216490ed05099c8ebc73d67a91a6cb452127400226662d38f8d0e1ab32b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-first-exhausted-only\\green-0.log",
+   "bytes": 626,
+   "sha256": "6942cfa96deaa724839889092b0c4b57c1a88d2ba0098359877e964418d65008"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-first-exhausted-only\\mutant.sha256",
+   "bytes": 105,
+   "sha256": "1d231a21310903c0f02bcd0f92448a6b0c55566219e0a797c0b1834462291352"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-first-exhausted-only\\red-0.log",
+   "bytes": 713,
+   "sha256": "75d88b88c90387ed2a9d18d2d0531394c7fe427901812a94693393787c300a76"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-first-exhausted-only\\restore.log",
+   "bytes": 82,
+   "sha256": "1351026dc0f4263a019a8082964edfd86c262f114c716c1d90c7ecc8ffab49a5"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-first-exhausted-only\\result.json",
+   "bytes": 991,
+   "sha256": "9c253b36b26657e475c8f57e178e9aa2148bca9a0ed4c0bcadd40f824afa844b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-incomplete-recorded\\canonical.sha256",
+   "bytes": 105,
+   "sha256": "03a70216490ed05099c8ebc73d67a91a6cb452127400226662d38f8d0e1ab32b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-incomplete-recorded\\green-0.log",
+   "bytes": 591,
+   "sha256": "52b1757e445c6c7a4a52dafccc2336449f57db3bb7176646594ad3cc2005d3c1"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-incomplete-recorded\\mutant.sha256",
+   "bytes": 105,
+   "sha256": "704ff8f766062fe4780bd90236dee804cec1effd0747b39020efcbe7eb6e5e33"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-incomplete-recorded\\red-0.log",
+   "bytes": 1645,
+   "sha256": "b51e51dc661ac7fadcefd21ccf7074d36fc08615d68b229d5c74159180716aa2"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-incomplete-recorded\\restore.log",
+   "bytes": 82,
+   "sha256": "1351026dc0f4263a019a8082964edfd86c262f114c716c1d90c7ecc8ffab49a5"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-incomplete-recorded\\result.json",
+   "bytes": 1089,
+   "sha256": "76f2699261211897d439fbe504d3314ad9bcc7d74a60699aa3b561cfbfeaeb12"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-moved-admission-ignored\\canonical.sha256",
+   "bytes": 105,
+   "sha256": "03a70216490ed05099c8ebc73d67a91a6cb452127400226662d38f8d0e1ab32b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-moved-admission-ignored\\green-0.log",
+   "bytes": 645,
+   "sha256": "c8a393fde7eaffebd6469f3aef4decbbf8f4945f908f6ad40fef0531c7ad2297"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-moved-admission-ignored\\mutant.sha256",
+   "bytes": 105,
+   "sha256": "1bc0bc66fa009c62e6b40a59e57c6d24ba4009fdaca5bc8ed9d1c8f7bd7c6475"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-moved-admission-ignored\\red-0.log",
+   "bytes": 784,
+   "sha256": "182a272967058f8f9723dde7a85e77e17440c25c8a573bacdebc40c39c2c06b5"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-moved-admission-ignored\\restore.log",
+   "bytes": 82,
+   "sha256": "1351026dc0f4263a019a8082964edfd86c262f114c716c1d90c7ecc8ffab49a5"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-moved-admission-ignored\\result.json",
+   "bytes": 1050,
+   "sha256": "0173cb8d553b0042c9fe05b40b3435e332306f90c40239cb1474f859edf1b232"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-moved-binding-ignored\\canonical.sha256",
+   "bytes": 105,
+   "sha256": "03a70216490ed05099c8ebc73d67a91a6cb452127400226662d38f8d0e1ab32b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-moved-binding-ignored\\green-0.log",
+   "bytes": 635,
+   "sha256": "c66e6f4503f6f745846c18109408c15bd32084a242894e85f53cf074cf169fff"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-moved-binding-ignored\\mutant.sha256",
+   "bytes": 105,
+   "sha256": "526f1d8079fcd12d4fafb10ee34c1f5f41367cf62546e4e4cfe3f354b5498ee8"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-moved-binding-ignored\\red-0.log",
+   "bytes": 772,
+   "sha256": "49e1febe43f75b587ffe2f2bdc2445751491919b5a88d129908a8948d4b2e780"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-moved-binding-ignored\\restore.log",
+   "bytes": 82,
+   "sha256": "1351026dc0f4263a019a8082964edfd86c262f114c716c1d90c7ecc8ffab49a5"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-moved-binding-ignored\\result.json",
+   "bytes": 1038,
+   "sha256": "0f1eaac894840b0a0805a0329a71ee132f27185c81cc6e5c67139d3da4a29612"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-moved-never\\canonical.sha256",
+   "bytes": 105,
+   "sha256": "03a70216490ed05099c8ebc73d67a91a6cb452127400226662d38f8d0e1ab32b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-moved-never\\green-0.log",
+   "bytes": 570,
+   "sha256": "01d562561388750093a2880e1cbf4aaa06a9b74ba08e177ab1abf82ab84f4034"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-moved-never\\mutant.sha256",
+   "bytes": 105,
+   "sha256": "721ca7617daaa982975a08e45d4c5f2473d4fbd429943a9842e119967938b8a3"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-moved-never\\red-0.log",
+   "bytes": 664,
+   "sha256": "46c644135c19c7da0fffde825bb8b4b2e378b606c78305ab8152a3aacf3db047"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-moved-never\\restore.log",
+   "bytes": 82,
+   "sha256": "1351026dc0f4263a019a8082964edfd86c262f114c716c1d90c7ecc8ffab49a5"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-moved-never\\result.json",
+   "bytes": 939,
+   "sha256": "b29a264f30a8b1d43227589848914598da87d60d16d1f99f846ffff2d46aba35"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-workset-admission-left-out\\canonical.sha256",
+   "bytes": 105,
+   "sha256": "03a70216490ed05099c8ebc73d67a91a6cb452127400226662d38f8d0e1ab32b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-workset-admission-left-out\\green-0.log",
+   "bytes": 581,
+   "sha256": "b5092fd7db51dee90fdfbc1c7da2bb6e22909260ce1c5c671a680cf6b7f59296"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-workset-admission-left-out\\mutant.sha256",
+   "bytes": 105,
+   "sha256": "8bce380ebd7b56a7ab150945e45925363ef4e2b6466c1d5454a0038ceefba804"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-workset-admission-left-out\\red-0.log",
+   "bytes": 757,
+   "sha256": "f5adbc028b45dc56322a40dcaddad3578e7e6618ad20bbb957ae9c2f6374279a"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-workset-admission-left-out\\restore.log",
+   "bytes": 82,
+   "sha256": "1351026dc0f4263a019a8082964edfd86c262f114c716c1d90c7ecc8ffab49a5"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-workset-admission-left-out\\result.json",
+   "bytes": 1080,
+   "sha256": "0dba5e20bfa25157907bf95791b1807df5907509a8e445715ab615490671e9fd"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-workset-other-agent\\canonical.sha256",
+   "bytes": 105,
+   "sha256": "03a70216490ed05099c8ebc73d67a91a6cb452127400226662d38f8d0e1ab32b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-workset-other-agent\\green-0.log",
+   "bytes": 581,
+   "sha256": "872736a63cf97e9f064a709533d847c177317edfe3830b34ea4a0cc103d99945"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-workset-other-agent\\mutant.sha256",
+   "bytes": 105,
+   "sha256": "9e66742875484fcf824060989cd76c6f3fc5eb99fdcd5dd5fee7dca0efca2e75"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-workset-other-agent\\red-0.log",
+   "bytes": 757,
+   "sha256": "fa0b71c86eace3f340a930aee5610bf611bf994802e83047b656e0a908b6318f"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-workset-other-agent\\restore.log",
+   "bytes": 82,
+   "sha256": "1351026dc0f4263a019a8082964edfd86c262f114c716c1d90c7ecc8ffab49a5"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-1\\breaks\\F1-workset-other-agent\\result.json",
+   "bytes": 1059,
+   "sha256": "e7a6200330ee6b32d828b8450c54525afa8b57bbd6450dd30d9b0155f3af870f"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\agents-plain.log",
+   "bytes": 684702,
+   "sha256": "dd0245fe83ac0266b8e25b10293070c2cebc91b9337fac70cc7bdc64312c7c09"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\agents-race-attempt1.log",
+   "bytes": 807201,
+   "sha256": "f696a4a778dab61bd8101d7ce386ee8e43de2e0678589ac34dbf58d897e42bf5"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\agents-race-attempt2.log",
+   "bytes": 672853,
+   "sha256": "20a367354605f7ad5571e18433e4c6ece89ab92d4f81f54b8d58229a46d53ef0"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\agents-race.log",
+   "bytes": 722241,
+   "sha256": "7a1f0affe7261223d5577b527195f6c4d55df6b55e6fe5d754e99269cd2456a3"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\breaks.py",
+   "bytes": 3890,
+   "sha256": "2f555f8d76bec3057c82fd0d22cc03149f7982952f4db36a096d7ea244a59f37"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\seam-200.log",
+   "bytes": 221,
+   "sha256": "82ae0664e4b4278f2e46c85864c1c58704f92ae9d8205df46f8e9fcbc64a9ea9"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\seam-cpu.log",
+   "bytes": 21237,
+   "sha256": "d2f89ac2c11d659e3c66222162a8f724e6cdae70807a2064f5e4fd6271be9fa4"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\seam-race20.log",
+   "bytes": 236,
+   "sha256": "37cef1a65756ba7f6605c5047bd3a61b09389b132570e8e6d3c9a49953e3721c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\service.log",
+   "bytes": 37083,
+   "sha256": "a2abe6574104376c90e7227cc5df2db15e092e141e86e7b0b1d99e3468fea7a4"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\static.log",
+   "bytes": 3935,
+   "sha256": "6e83350f9d4f0e2c00f299d910a89bda09cb3ee15de9dd8a3adf085a23b93dd7"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\static.sh",
+   "bytes": 2176,
+   "sha256": "1f25d32d60d32ea54da544e36ce36e3d47f31dd15a85be611be77e74dcdc0ff1"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\status.log",
+   "bytes": 145,
+   "sha256": "5289fcda5fec74449a32068ea5ccebdecdf97e6347e6f116d3b6c9f5f73dc49f"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\yield.json",
+   "bytes": 12414,
+   "sha256": "5bb448d05a5a4888a821bb234c7b0d0a603da3750d71b21fbf88983a92665996"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\yield_build.py",
+   "bytes": 6125,
+   "sha256": "3d7e416e5286fbaac9acfe1752132813b5c37ac8c1753be62a97fe57b3e235ef"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\yield_text.json",
+   "bytes": 4529,
+   "sha256": "b05d0ed7895bb3df4e36805aca8aed738bce01c9f91720333df555618ade68c2"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\breaks\\fixed\\canonical.sha256",
+   "bytes": 115,
+   "sha256": "7961adcfa12c20b2c17ec09c07d9ca5b0106261c3718ebef7cee43fda7ff6324"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\breaks\\fixed\\restore.log",
+   "bytes": 92,
+   "sha256": "4b95eb014d1ca1c7caff514dcfefca5d30c8fe095d990b64b485c410a12f73f2"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\breaks\\fixed\\result.json",
+   "bytes": 548,
+   "sha256": "ffc073029eb41a8d89231e0b2bfd2be675eee8f9881a3bb7f7a9495b044aed65"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\breaks\\fixed\\run.log",
+   "bytes": 348,
+   "sha256": "2ede9c1b6a118fb64cd531d6be8d34fcccfdb1a5d477ed87745bd0870ca3bd88"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\breaks\\old\\canonical.sha256",
+   "bytes": 115,
+   "sha256": "89b2e641cb6bac03c30640f3399298764fc7dbebd62081bb3a5cd2574449c8a9"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\breaks\\old\\restore.log",
+   "bytes": 92,
+   "sha256": "4b95eb014d1ca1c7caff514dcfefca5d30c8fe095d990b64b485c410a12f73f2"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\breaks\\old\\result.json",
+   "bytes": 686,
+   "sha256": "db1674c6fa136aa25c6e1ac4fcbb97998bf639d7e47f3b1f716a7adec2fb00fc"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-2\\breaks\\old\\run.log",
+   "bytes": 1396,
+   "sha256": "c570a45fd330f6b92b21051c073293e37f5ea052c7ce91dacc9a881ab23ab4c9"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\agents-plain.log",
+   "bytes": 684786,
+   "sha256": "52791fddc7edb3b04c51baee83051c00d5ce222ed2fcfda5d2c0f4824fc8d7de"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\agents-race.log",
+   "bytes": 685100,
+   "sha256": "4d643fda624c6bbaafc549b38810029f727a49a24e34ce407976ec6d2994843d"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\breaks.py",
+   "bytes": 4150,
+   "sha256": "264645a96901bec8ae5beb5545fe99a87b1664c7686f08974e22fc2a210645c5"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\diag-stopped.log",
+   "bytes": 1355,
+   "sha256": "0ffb9c00b49a093199129332544d0e64957e0031b353ad1d9edad87927b9926d"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\diag.log",
+   "bytes": 16538,
+   "sha256": "d6317823480f63af2168c0d20194a4bc5d19593e4a535aca49295f0a7ed5e698"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\diag.py",
+   "bytes": 2743,
+   "sha256": "4e41661775b6b78d21a1305f00fc6d80e87b8e546e55d8f689a1e3bab62ef294"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\measure.log",
+   "bytes": 2283,
+   "sha256": "9328c78c0042cd698e7eeb2ae3a76b79a220a6325b50eae2df7d4136caca7075"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\measure.py",
+   "bytes": 3041,
+   "sha256": "74726c5c38325a9cffa729ca943bfedbd433255057be015ae63c8cfc3391896e"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\measure2.log",
+   "bytes": 1788,
+   "sha256": "803550198c2eb2016c2e19bc958c825106be6548335e695719db88c5f7bd0e6e"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\parked-cpu1.log",
+   "bytes": 7746,
+   "sha256": "1b864ec5b867f3ca951bb74cd9def2198454f905009f44231dfd4f91fc8886de"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\parked-cpu28-stopped.log",
+   "bytes": 6121,
+   "sha256": "25bfbb7d2cc5d43f0c2c39b628ead121be666ed5cb5bc85b2075015d3db02bc9"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\parked-cpu28.log",
+   "bytes": 24838,
+   "sha256": "25ce8acfeaa43317265632ef08fbd84ac3d4f1962500746211291f79223c47fd"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\parked-cpu30-stopped.log",
+   "bytes": 9255,
+   "sha256": "5d9867cf47e9dfae3b45f2fa77e46d2b2ced09273e47af5c2404c8ad8e4c3d34"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\parked-race10.log",
+   "bytes": 12632,
+   "sha256": "261131c2129588dffad03751628fb0bbfdc919129d7a4145282d5ca2cd94c578"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\service.log",
+   "bytes": 37083,
+   "sha256": "9acbe24ce047b1c1f3560ce0e5e989a5ba59a6f1066d5c4291bdfe0bf15d8aed"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\shapes-dispatch.log",
+   "bytes": 2835,
+   "sha256": "2eb37e1a1a32ccb9aa23cc57a8a8e7372744c2501a9f8876c2ec1b4abbcb02e6"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\shapes-handshake.log",
+   "bytes": 2853,
+   "sha256": "2f2e18a4cb6398a91db6010c0dc353feb474eebdfb3d6bbf5f5c658266ad21fd"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\shapes.py",
+   "bytes": 3741,
+   "sha256": "4fbf8c468dfeac3d419f3d241b82aeb3ffac3fea0e7a4a79ef62a36a34d7dd0b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\static.log",
+   "bytes": 3935,
+   "sha256": "977050e957b379d6ca0f07e8f1b1b5ab2fbba7ee477a24261721c5723a93a1bc"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\static.sh",
+   "bytes": 2176,
+   "sha256": "1f25d32d60d32ea54da544e36ce36e3d47f31dd15a85be611be77e74dcdc0ff1"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\status.log",
+   "bytes": 128,
+   "sha256": "ffdde662be0903879cc4d66349eda1d73dc19fa268b868f166fa2ef501c7de3a"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\yield.json",
+   "bytes": 24073,
+   "sha256": "6b81ac3e5957e9c13e5528372598ba2e05444e76bdda8411ac0a624f879fe339"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\yield_build.py",
+   "bytes": 6095,
+   "sha256": "869ee6704d8d7dc8c3a23d3da6565b7351c9754b1e8b7064a9f43c6e384f00c3"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\yield_text.json",
+   "bytes": 12121,
+   "sha256": "d8010eb2ebf9d3a763d1ce2b1c7a77cb1b831f6788579cc748623e38175c0dde"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\breaks\\fixed-jump\\canonical.sha256",
+   "bytes": 114,
+   "sha256": "05881dcd7e9ec9ebe6183a63109c504b8dbbafe9d98bf4ab32f50779150c9a28"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\breaks\\fixed-jump\\restore.log",
+   "bytes": 91,
+   "sha256": "23a8bfa5b6b1b6133888d73bbf8a08735688b1b5a15b6e3ea63c8fff9101bf6b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\breaks\\fixed-jump\\result.json",
+   "bytes": 1122,
+   "sha256": "db1f390736f0ab6fff9794b4fb6114f095b0c0d441f01a992bd1fe9701f895e8"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\breaks\\fixed-jump\\run.log",
+   "bytes": 2185,
+   "sha256": "5e00b7fb8cd59d756753abf9d82bcee25ec2eec94c69becd4e4a8ef03b0645c3"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\breaks\\fixed-sleep\\canonical.sha256",
+   "bytes": 114,
+   "sha256": "05881dcd7e9ec9ebe6183a63109c504b8dbbafe9d98bf4ab32f50779150c9a28"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\breaks\\fixed-sleep\\restore.log",
+   "bytes": 91,
+   "sha256": "23a8bfa5b6b1b6133888d73bbf8a08735688b1b5a15b6e3ea63c8fff9101bf6b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\breaks\\fixed-sleep\\result.json",
+   "bytes": 860,
+   "sha256": "52ccbe274189726398bb9fe792aae8c212d4b49647bc7728f797b9635de70585"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\breaks\\fixed-sleep\\run.log",
+   "bytes": 565,
+   "sha256": "f2ecc9263670e59f3a719a17ccf1f3b0558c891e710a398830313ef8d2818c0a"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\breaks\\old-jump\\canonical.sha256",
+   "bytes": 114,
+   "sha256": "6489b9c5aac2c3c0abd61dc21942bfb2afa204322864c84cc164209f73ae9eba"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\breaks\\old-jump\\restore.log",
+   "bytes": 91,
+   "sha256": "23a8bfa5b6b1b6133888d73bbf8a08735688b1b5a15b6e3ea63c8fff9101bf6b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\breaks\\old-jump\\result.json",
+   "bytes": 1118,
+   "sha256": "de2e23514851777c819a38feaaa2f8339b482e8652041c0f26f02fc1cd8d18c9"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\breaks\\old-jump\\run.log",
+   "bytes": 2115,
+   "sha256": "91edff8dab83a4a9970b5a56f935c34de7b1e4ff5cfe2332532f1a5236f8d5bf"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\breaks\\old-sleep\\canonical.sha256",
+   "bytes": 114,
+   "sha256": "6489b9c5aac2c3c0abd61dc21942bfb2afa204322864c84cc164209f73ae9eba"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\breaks\\old-sleep\\restore.log",
+   "bytes": 91,
+   "sha256": "23a8bfa5b6b1b6133888d73bbf8a08735688b1b5a15b6e3ea63c8fff9101bf6b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\breaks\\old-sleep\\result.json",
+   "bytes": 1163,
+   "sha256": "10d622f11b22382dcbfeba3433199746b46e4b5b5dbd1b6a86c44bb50622ba93"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-3\\breaks\\old-sleep\\run.log",
+   "bytes": 2120,
+   "sha256": "7e773ba8317c528c1941ebf5c58515a5b8a913f97a3ee21213632557041e5a64"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\agents-plain.log",
+   "bytes": 684907,
+   "sha256": "ec90285ed71e24c2ff493284f073cac4e782aaf13ae44f5e6e589e8a991012f4"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\agents-race.log",
+   "bytes": 685036,
+   "sha256": "36870dba8c0255aabbbd7980ca1ecfa46998564b7f2357639390a8e886b1d1e9"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\breaks.py",
+   "bytes": 5248,
+   "sha256": "3e2c43e4a832b0f34d96e6b0f5e3da9593c0456412b83a09ab58b6a7588c9487"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\diag-afterloss.log",
+   "bytes": 1678,
+   "sha256": "32005d286142d2333977edc6b23a3892e923a806c21708902833eb354fc61ecc"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\diag-exchange-ended.log",
+   "bytes": 12651,
+   "sha256": "e6af7c73438983147094108f2e1de073601de5131c9cde57a8c235138500f33d"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\diag-floor-window.log",
+   "bytes": 822,
+   "sha256": "06b8aa8661c7f4bed24c4a7a0d16b6021a9ee1eb4ca1ccacbcb25cf797b3e219"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\diag-loop-wake.log",
+   "bytes": 6372,
+   "sha256": "161c861136c15833311343c918f904f6effbca4efaf63042fd5f83c6e33d75da"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\diag-stress.log",
+   "bytes": 401,
+   "sha256": "8a85844b91ea4fe20994b63bdaad1735068d1fddf491182b84b7aecb4ee42c1f"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\diag.log",
+   "bytes": 1250,
+   "sha256": "8b19f0fbcc8217af3548f4aaf64f2f848ff6a835b87f16fde1745c29a5d51e9f"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\diag.py",
+   "bytes": 2730,
+   "sha256": "44886ce85640c1d5c65ca5b52c1c4c180e3739f05db9ee29c2adb2beac004290"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\diag_afterloss.py",
+   "bytes": 3135,
+   "sha256": "d55378d1cefd4b3c8ef91681d081f4c5305f420cca4eebbde70ce9e28bb7d16c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\diag_exchange_ended.py",
+   "bytes": 3499,
+   "sha256": "63b4cadf612c72966809c98d526d43219fd1975ca2b12273f75d17d44a977eed"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\diag_floor_window.py",
+   "bytes": 3436,
+   "sha256": "c2fb2d7f47330a063af30c0cde9b864d11544c4a9e696fc94f588d8607b5bcc9"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\diag_loop_wake.py",
+   "bytes": 3397,
+   "sha256": "a17c55becf9514f95b8afe3d43c5debff8cba3b5c6008fc0239081e0fca0e2f4"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\diag_stress.py",
+   "bytes": 2848,
+   "sha256": "5099e2e2c4ace7b2d4d6bc275b8bf7ea196c0a54141c7f3a29c49774207c7c6d"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\row-cpu50.log",
+   "bytes": 64475,
+   "sha256": "87184ef0205285896d563c8953103d6217f7fc34829505b0747853b34ec3742a"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\row-race20.log",
+   "bytes": 8842,
+   "sha256": "394e92bf3e1f57c77651622cd6845cfe147ff430c6ec0704e7570f54c4354c11"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\service.log",
+   "bytes": 37083,
+   "sha256": "48503c0a956264806e4969c01163d9a081350640f9441c92e77655c0f2b449fb"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\static.log",
+   "bytes": 3935,
+   "sha256": "423e14cc3e45737a2d48d65b62b7db99aea8ab9a80413cee72e29a736ae3a2bd"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\static.sh",
+   "bytes": 2176,
+   "sha256": "1f25d32d60d32ea54da544e36ce36e3d47f31dd15a85be611be77e74dcdc0ff1"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\status.log",
+   "bytes": 84,
+   "sha256": "b854921bfac7c6de0dcf3cbf491c0b56ebf8391188871bf289b747a7db4c46a8"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\yield.json",
+   "bytes": 22609,
+   "sha256": "271acd7528ff12decedb8625ae55dd606e9337f862325f69e449a8eb04c52327"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\yield_build.py",
+   "bytes": 6008,
+   "sha256": "ace5f2d298748a2949928dc50a4a90f1b1b1030c0d9f71f2c8736c1ce6911175"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\yield_text.json",
+   "bytes": 12440,
+   "sha256": "fdef1ee524f96bfdb23044c5ee2bda5966163d02a39ecadb3d03665d0c32ad78"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\breaks\\fixed\\canonical.sha256",
+   "bytes": 115,
+   "sha256": "75577448e2f0cd021d66a1fe5848f9fe11dd933002eefa8ee2aa59d5dbe1f7d0"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\breaks\\fixed\\restore.log",
+   "bytes": 92,
+   "sha256": "5fe6f8f8d97eac70532cc1d2865f8af1ef65852a7678fdd89cd934341c256eb8"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\breaks\\fixed\\result.json",
+   "bytes": 1321,
+   "sha256": "ab1b0613d1951e412179a993db2535e53057b5d1953a006e19a526b8fb463cb6"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\breaks\\fixed\\run.log",
+   "bytes": 1531,
+   "sha256": "6f9e43463758664ae9d47f9315b99d831239acfd0fc8a86dcdffccceee509fbd"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\breaks\\headers-old\\canonical.sha256",
+   "bytes": 115,
+   "sha256": "5842b2ffde4e4b15c223b588ea1637d63351c017c18ecb7d6eb13b192189a204"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\breaks\\headers-old\\restore.log",
+   "bytes": 92,
+   "sha256": "5fe6f8f8d97eac70532cc1d2865f8af1ef65852a7678fdd89cd934341c256eb8"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\breaks\\headers-old\\result.json",
+   "bytes": 1143,
+   "sha256": "eaea961fececbc8aac25856f5aa9516b336052d0c7e238aabf960cf300f07bf9"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\breaks\\headers-old\\run.log",
+   "bytes": 1531,
+   "sha256": "3fe90cb0033c62bc07dea2a2bbf436bbc0fd0e4f15b20482ffd761f412a4c1a4"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\breaks\\old\\canonical.sha256",
+   "bytes": 115,
+   "sha256": "5842b2ffde4e4b15c223b588ea1637d63351c017c18ecb7d6eb13b192189a204"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\breaks\\old\\restore.log",
+   "bytes": 92,
+   "sha256": "5fe6f8f8d97eac70532cc1d2865f8af1ef65852a7678fdd89cd934341c256eb8"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\breaks\\old\\result.json",
+   "bytes": 2660,
+   "sha256": "93f6ef7f1e293a4ad900a21eb4bc0463d5d2edfa1ed463e2d252c8f92cbd63ec"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-evidence\\fix-4\\breaks\\old\\run.log",
+   "bytes": 4707,
+   "sha256": "129907f4c48b20bdbfb5818eb361efb148d00678aaa08046aab49e5d979cca11"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-pm-fuzz\\FuzzPaidGroupReplay.log",
+   "bytes": 3316,
+   "sha256": "f065f9b1f56b3d6a61f68fb5ad913555eaf500b3f0720b104289281d3019e9df"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-pm-fuzz\\FuzzScopedGroupReplay.log",
+   "bytes": 3327,
+   "sha256": "efd7a9489e7fbfe9a28e2c7dd48015e14a3e9ccb13205f201b6e635db6325165"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-pm-fuzz\\FuzzServiceFailure.log",
+   "bytes": 3457,
+   "sha256": "c8ae08c9d43c3305a4946cc021890121ea34941901a64931a9ecc1b1f206c50a"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-pm-fuzz\\FuzzServiceGroupReplay.log",
+   "bytes": 3100,
+   "sha256": "1eaac51599ed801d5fd09073aac5f80ab91b1036d718e3ee6c01e7702b5caca7"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-pm-fuzz\\fix-1\\FuzzPaidGroupReplay.log",
+   "bytes": 3217,
+   "sha256": "fa745470a2254c8ec4b5393f418a68ae1452d5635a9c2b064a01c4fa0ebd90a1"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-pm-fuzz\\fix-1\\FuzzScopedGroupReplay.log",
+   "bytes": 3313,
+   "sha256": "928dad3ff702f2445cabf4e68034e347767759233de6fd29d0f3272a19fc45ee"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-pm-fuzz\\fix-1\\FuzzServiceGroupReplay.log",
+   "bytes": 3098,
+   "sha256": "25a8138e734e6fb88da7efccd4ce3114166d66f678cda39587595a3ab6ce4091"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s3-pm-fuzz\\r137\\stress.log",
+   "bytes": 29957,
+   "sha256": "6a4b16d0593d2f89d3fde966e8adffa3dab818b83ff53822a4d590422a994f4a"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\base-agents-imports.txt",
+   "bytes": 731,
+   "sha256": "42194db637b642414e0896f42bdb7f0e3c724b1fddb6ad547ce107ade495a685"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\base-agents-testimports.txt",
+   "bytes": 911,
+   "sha256": "ab84b3a9fc2433615b694a3bfd3de5ee27e456cab1349c2c3bbfd71fd208d009"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\base-dwarf-harness-imports.txt",
+   "bytes": 507,
+   "sha256": "6db33f3d3f2587449b5b0e67c44bda0381a56ff0337f5ff390d5eda0197c30a2"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\base-dwarf-harness-testimports.txt",
+   "bytes": 319,
+   "sha256": "020896a6bdbbef714a579e4c44475cbe274751b7c51085a9af70ffb96e681fb5"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\base-session-imports.txt",
+   "bytes": 71,
+   "sha256": "aa5405503f4d76bee8dc12f72b0e5fc298379ed332cc488ab7bf76c43fa1b5a0"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\base-session-testimports.txt",
+   "bytes": 0,
+   "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\base-terminal-imports.txt",
+   "bytes": 218,
+   "sha256": "4358805d7ac1865e4a70cddc3560097605def67769c19ec9ee14dfc5c4eb801e"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\base-terminal-testimports.txt",
+   "bytes": 173,
+   "sha256": "59ce645c71a50228855451005fec9c94219e87e2af630ff0349fcbf1a91ee0a7"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\build-go-analyzer.log",
+   "bytes": 256,
+   "sha256": "4d412a4f404120ae464f63f014e7f1f9ae0cf9dd5f961d1179f326310f51f9e1"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\build-program.log",
+   "bytes": 256,
+   "sha256": "66529e4fb16aea21a7fb047857e0601f35f52848459b8d1c00d866e857ed9a17"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\build-staticcheck.log",
+   "bytes": 269,
+   "sha256": "f1d5070ca5b052cb7ada4da6d75225fc5b2bdc66b2adce1cf3b9628144ad0a76"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\commands.jsonl",
+   "bytes": 14054,
+   "sha256": "84a74ec3a13282cdb139707c337a60917b2a014c73761dde62a91410f9cf5b64"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\compile-initial.log",
+   "bytes": 335,
+   "sha256": "d970d9832fde7e5b33e595ec8ed877400eb2be92f0e812c855cd7e4981b61f04"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\dwarf-harness.exe",
+   "bytes": 18322432,
+   "sha256": "68ef2d6426ed129ab15feedcc9b0d15dba041810ead10c76950a7a9ad271efd1"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-agents-imports.log",
+   "bytes": 922,
+   "sha256": "bb1a84fa55645739b1344d600f89b7acf3adfb8cb844f7921a8b34ca18733c2b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-agents-imports.txt",
+   "bytes": 770,
+   "sha256": "99431a0b95b45d851a8311b0b542de37f22221ba80399651a7fbf3d8f9d51a9b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-agents-testimports.log",
+   "bytes": 1106,
+   "sha256": "fe8e147a7eda395e2d3b27e9367581938f2a7145b1d37ae61ba6ba9a49760cb1"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-agents-testimports.txt",
+   "bytes": 961,
+   "sha256": "50bc5d2e634cc29aba5d17e50c1343682e041a01701ccba53704c9e4cc123d49"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-dwarf-harness-imports.log",
+   "bytes": 695,
+   "sha256": "9ce84bb2ef027e1522d11c207efa05cb8283f5fa129c915f2b2ea4706266c026"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-dwarf-harness-imports.txt",
+   "bytes": 523,
+   "sha256": "a55b8abe5673c88078f5e853f9f90fcfdbf0aafb9e04e51ffdc7711da3071a35"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-dwarf-harness-testimports.log",
+   "bytes": 630,
+   "sha256": "4deeda739ae6749862c4832bdb1aee34f7d7ae2ca948deb9f974e81938ae2b71"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-dwarf-harness-testimports.txt",
+   "bytes": 456,
+   "sha256": "449ca2005e7ef002c4d54e487c47f718c3ed77478cc488ba258df0baa2d15084"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-focused.log",
+   "bytes": 3399,
+   "sha256": "42e5e79013ec49f90f22ade2699b72322dd33bb8a0819e3a5d182c896ec37abf"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-gofmt.log",
+   "bytes": 1655,
+   "sha256": "7129ad651a958c98d2f98bffb08a32d98805f0804abec993174733a63b3c4e41"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-hashes.json",
+   "bytes": 1859,
+   "sha256": "d670602599e8697573cda60f44ed26242e7d7b54865393570b6282441d45772c"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-module-tidy-diff.log",
+   "bytes": 150,
+   "sha256": "2efa37d3c164fe2fc0fde2565f1cbcacde37c18fabf63910bd7e540b87f33a64"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-plain-agents.log",
+   "bytes": 560326,
+   "sha256": "d07c00a5e7e3ac025a3492b59ae2c79a79f201c8ca7a933763aa0387f6df2530"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-plain-dwarf-harness.log",
+   "bytes": 8146,
+   "sha256": "c778dc2d1337bb5bb4e9e2e7517e4539e2a62d20ef2714726f4a811c69aadf7a"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-plain-session.log",
+   "bytes": 267,
+   "sha256": "eff81958ff08e6e05df17ef182f6ed61b46ac9d613ea222ba5fed890d4a72175"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-plain-terminal.log",
+   "bytes": 17735,
+   "sha256": "6a93791a91ff24c2c4c2bdf1dad2baff1081e8e72a304ada39dc58d0a7794f0e"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-race.log",
+   "bytes": 25837,
+   "sha256": "3576ed5338d206dabcbea946685a946892169924cd1282575354468633428085"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-session-imports.log",
+   "bytes": 263,
+   "sha256": "ada67d34b056a3f1d2366a58b8192282d0f4751add1b5974fbc9e51da064b504"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-session-imports.txt",
+   "bytes": 75,
+   "sha256": "3c6009639b4dcf63e9b3a5309d3c87f1a711c72d28bb60d1458e8667433b6b3e"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-session-testimports.log",
+   "bytes": 196,
+   "sha256": "f622b99720d8ca266db43de0fa3eadc7192eb8df1dc2b6c5f0c001638b03912d"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-session-testimports.txt",
+   "bytes": 2,
+   "sha256": "7eb70257593da06f682a3ddda54a9d260d4fc514f645237f5ca74b08f8da61a6"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-staticcheck-darwin-amd64.log",
+   "bytes": 201,
+   "sha256": "6c0baa79efae28e63aa0d1f9520e6c90300226729f2e008bf16061d8fa51aaf4"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-staticcheck-darwin-arm64.log",
+   "bytes": 201,
+   "sha256": "f40fd6d3705cfc534b798e023edecc530c6fbc03375eb448d32e570546121f8a"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-staticcheck-linux-amd64.log",
+   "bytes": 200,
+   "sha256": "17c0c2a412080ee2ef1dbdda96fafb491da8568c695cdad356a58180b4da9db3"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-staticcheck-linux-arm64.log",
+   "bytes": 200,
+   "sha256": "35260584b6a6bf234987e34eb78a1a6ec3c3f4117e6f1cb377cff4cc5742e000"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-staticcheck-windows-amd64.log",
+   "bytes": 274,
+   "sha256": "0664db6c384985ce67a367049232b932136b20fc001d9ab8f98d6d8dfa21ef93"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-status.log",
+   "bytes": 794,
+   "sha256": "d8d9d3fb833a59dd166da48396626fcde879ce347f17040f0d80eb1d56a7c3a8"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-terminal-imports.log",
+   "bytes": 411,
+   "sha256": "7864e662d531f01ab849be3652aa997e0ce8e01e94ea9582523e0f949ff44ab0"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-terminal-imports.txt",
+   "bytes": 236,
+   "sha256": "6846722a63895e60a153b48a608a3a33d51b015c5f800c9ce6c6e9ef1e055850"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-terminal-testimports.log",
+   "bytes": 370,
+   "sha256": "0af3963789ee9e2157ec1d0a2a0f76ddb51c1e3a0dc94e80164bb2bc622e7b00"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-terminal-testimports.txt",
+   "bytes": 184,
+   "sha256": "2779c1a60a19bd3a91d62385a5969608a74759b5ea23d56c7d13b4c4416fa3ec"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-vet-darwin-amd64.log",
+   "bytes": 183,
+   "sha256": "0dde58e5a98d3e5dd821128be5be43c7f56bf38f76512565249ea6e735409f8a"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-vet-darwin-arm64.log",
+   "bytes": 158,
+   "sha256": "f7437d8015a581f4e1b3c09cb26c19c501cc8a5e5a92a67ef15ae6d055be2484"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-vet-linux-amd64.log",
+   "bytes": 182,
+   "sha256": "4f4daf12e51113ed94694e59966c0249972166f4b2d0d016b8a7d4d792889528"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-vet-linux-arm64.log",
+   "bytes": 157,
+   "sha256": "7cb0d64f25c4ad53d2250ec43d9bc807d62f423071f4c31326bc2be2268d1e46"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\final-vet-windows-amd64.log",
+   "bytes": 231,
+   "sha256": "73ffd3de740916f58a760bb5a1d2293475b7d3bf519522a854c20ee2c4e3441e"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\focused-initial.log",
+   "bytes": 2679,
+   "sha256": "a50f7ecd9e4955a97b98c2818a71874a773e2460ae047a5f7773911cfb07cc43"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\focused-repair-1.log",
+   "bytes": 1451,
+   "sha256": "689858301473da6fedc5079c933db99d8205c971de28033ba5d5fb01b2c4f773"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\focused-stale-fixed.log",
+   "bytes": 359,
+   "sha256": "7387b5a2659ac0c83ef40c21d575e46fd14ee7324a135bad81c12e4180fa28b8"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\format-final.log",
+   "bytes": 1655,
+   "sha256": "99ef3b3187e66a808e2b3d4f5db9b37fce0b775d90edd3d8db5d796e8ba0f606"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\go-analyzer.exe",
+   "bytes": 8603648,
+   "sha256": "675314ceb5d11f1504f0b013f926647494f2b644493240f9e261c0580f918ec8"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\handoff.md",
+   "bytes": 3227,
+   "sha256": "81ef549eae9509a575ebfea2969b8cf39589c21acce52ee2ef86adec070ff6f9"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\imports.json",
+   "bytes": 335,
+   "sha256": "fc7408b80643128ea978361b26010349707d6797dfab337d1d1702a47a02972b"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\provider-program-smoke-fixed.log",
+   "bytes": 5786,
+   "sha256": "dfa0d5c272a00e8c77ee73d69055b7640cf6d6dd6b10d82e0f03f94cd7a40d5a"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\provider-program-smoke.log",
+   "bytes": 109,
+   "sha256": "0081f8805d4611b3b712a5ad3831807207bff33b00f505c47f7cf8cb9409c6d4"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\provider-terminal-counts.json",
+   "bytes": 363,
+   "sha256": "f6fefaf62a4ad8d45d35bc308d536247a7f8314e3c42b8dc6486205e32c3a698"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\provider-terminal-transcript.txt",
+   "bytes": 4658,
+   "sha256": "6aa981c7cef0a32dff222f66a8f6afc7626c0fb829e883722a9d7f16e9cacd1d"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\refusal-input.txt",
+   "bytes": 24,
+   "sha256": "2741a486cab5440608876c9ca89f72413f722537d0a67b5ce38751c16dab8e50"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\staticcheck.exe",
+   "bytes": 17331712,
+   "sha256": "46b0047980d909f00dda27848ef627af4f684072b66c114c33d3e7d1fb9db5cf"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\timing.json",
+   "bytes": 3700,
+   "sha256": "8449a2a1e7e3bb9b0de4fc7fff825caa3206931238e336c26641a986e21e9645"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\unconfirmed-binary-counts.json",
+   "bytes": 299,
+   "sha256": "a4743ccac01fe754783a45acfaf1528014066160b11d3f638f7716fe28fd2cca"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\unconfirmed-binary-smoke.log",
+   "bytes": 2231,
+   "sha256": "0c0f0a49ac8b8b94fe499cee56ff87d831b6ea46986e12bf8d48c2b057cf9174"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\unconfirmed-binary-transcript.txt",
+   "bytes": 1117,
+   "sha256": "16a3d4bdbb39e15d8574715dc00fd6a0e10652c42a895056eeed57b164a41d8a"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\verification-environment.json",
+   "bytes": 583,
+   "sha256": "cb5afb6d882c44af32ebf7523fb5fab3c10daf76834d558fca7957fb3c8313d3"
+  },
+  {
+   "path": "C:\\Users\\darius.jones\\worktrees\\dwarf-harness\\t91-s4-evidence\\yield.json",
+   "bytes": 34330,
+   "sha256": "fdb60eca2f8d00c4ee2d59b4471e412992b19aba2d1b699aa98d0360b6db05f6"
+  }
+ ],
+ "trees": []
+}

@@ -3375,3 +3375,9 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 
   The ticket edits that carry this out (tier comments, slimmed criteria, rewired blockers, the new tickets, the status hub) follow through ticket publication.
 - **Amends:** D52 (the real-work gate), D152 item 5 (reader-assisted design), D173 (ticket 146's cells deferred) and D180 (ticket 149 waits for its trigger).
+
+### D183. F3-91 withdrawal wording corrected; v1 process and clearance scope recorded
+
+- **Date:** 2026-11-25. **Decided by:** assistant.
+- **Decision:** for provider, integrity and process causes, compare a clear's sample with each member still pending when it is applied: before due withdraws; at or after due the member expires first and the clear follows, including a clear in another member's restoration. For money, any `budget_available` clear from expiry or succeeding-call admission withdraws a member still pending until expiry is applied; a clear never restores an already-lost member. A budget refusal parks rather than ends its turn, and deduplicated refusals leave no complete demand set: owner cancellation proves no clearance, so its agent can still become lost at due under a stated-reset ceiling still exhausted then. Ticket 130 inherits the router stop-within-grace question. In v1, process loss and its barrier require tree proof (Windows, D138); integrity/process clears come only from explicit reports reconcile at an unrefused start, not live passes.
+- **Amends:** D175's withdrawal reading and v1 producer-clear scope; no codec, value shape or frozen byte changes.

@@ -1,6 +1,6 @@
 # Current rules
 
-This file is a digest of the rules in force in the decision log, entries D1–D182 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
+This file is a digest of the rules in force in the decision log, entries D1–D183 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
 
 ## How the build works
 - Build Core first; Undercurrent foundations use synthetic data and frozen consumed contracts, and pass their field gates before affecting agents. (D14, D19, D20)
@@ -122,6 +122,7 @@ This file is a digest of the rules in force in the decision log, entries D1–D1
 - Relationships retain nine regions: Hostile/Strained/Grudging for negative sentiment, Wary/Neutral/Trusted for neutral, Hopeful/Friendly/Bonded for positive, across increasing trust. Labels express the agent's eligible perspective, not objective competence or permission. (D91, D92, D95)
 - Service loss covers provider/execution/host failure and exhausted agent/account/colony money, not task-budget/permission refusals. Detection uses existing records, never probes; idle, detached, interrupted or stopped-host state alone is insufficient. (D97, D98)
 - Onset follows router's thirty-second silent wait plus two-minute grace, or two minutes from first pre-router refusal; owner-clearable causes without reset count immediately. Restoration needs a successful completed call after clearing/moving all affected work. (D97, D98, D99, D102)
+- For still-pending non-money members, clear samples before due withdraw; at/after due expiry precedes clear, including another member's restoration. Any expiry/admission budget_available clear withdraws a pending money member until expiry is applied; cancellation proves no clearance and clears never restore loss. V1 process loss/barrier needs Windows tree proof; integrity/process clears use only reports reconcile at an unrefused start. (D175, D183, D138)
 - During officer outages keep existing work, claim queued tasks or split own acceptance-bound subtasks; new top-level work, goals/criteria, assignments/grants/approvals wait. No agent takes the absent officer's context or decisions. (D97, D98, D99)
 - Own-Corps members/directly led Grand-chain officers pause ordinary work at default-three reserved questions; running calls finish. Paused officers still serve dependants. Separately capped default-three task proposals never pause members; both limits are colony-configurable. (D98, D99, D100, D101)
 - Give passive grouped outage notices/prompts; wait covers later arrivals, stop only shown turns. Core sends restoration immediately but releases each member after its questions are handled. Authorized status lists pauses/questions; no extra pause notice or unproven restart pacing. (D97, D98, D99, D100, D101)
