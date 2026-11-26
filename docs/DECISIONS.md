@@ -3389,3 +3389,12 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
   1. **The first repository is a Python one,** so ticket 18 stays in Release 1 and ticket 19 (Node) stays in Release 2.
   2. **The owner reviews the harness himself after Release 2,** in place of the usefulness trial; tickets 84–86 move to Park.
 - **Amends:** D182 items 1 and 2.
+
+### D185. Agents run declared checks mid-turn; the owner's workload sets the Release 1 and 2 gates; C4's incident cap is 12
+
+- **Date:** 2026-11-26. **Decided by:** adopted. The owner took the release-triage report's recommended answers to questions 3 and 5, and approved ticket 17's OG2 as proposed, after the project manager set out each problem, how the answer resolves it and the holes it leaves. With D184 this settles the report's open questions.
+- **Decision:**
+  1. **New ticket C joins Release 1:** one agent tool runs the workspace's declared checks on the agent's own scratch, through ticket 17's runner and ticket 45's Windows executor, and returns the results inside the turn. It lands nothing and grants no new authority; only the landing gate's fresh run counts.
+  2. **Release 1 and 2 gates use the owner's declared workload:** about five agents, at most three paid model exchanges at once (Core's current default), one or two repositories. D78's 12- and 20-agent scenarios become Release 3's target.
+  3. **C4's per-incident fresh-execution cap** is an owner-set Core startup setting, `validation_capacity.incident_executions`, outside law-format v1 and the activation chain, with no default: absent, reproduction is unavailable. His initial value is 12. The initial canonical observation, every reproduction and every adjacent before-and-after execution are charged to one cumulative incident reservation when queued, and the charge survives interruption and restart.
+- **Amends:** D78 (the workload Release 1 and 2 gates use) and D182 item 1 (ticket C); settles the incident cap D47 and D114 left open.

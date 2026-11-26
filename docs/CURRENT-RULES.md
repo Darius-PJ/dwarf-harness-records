@@ -1,6 +1,6 @@
 # Current rules
 
-This file is a digest of the rules in force in the decision log, entries D1–D184 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
+This file is a digest of the rules in force in the decision log, entries D1–D185 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
 
 ## How the build works
 - Build Core first; Undercurrent foundations use synthetic data and frozen consumed contracts, and pass their field gates before affecting agents. (D14, D19, D20)
@@ -34,6 +34,7 @@ This file is a digest of the rules in force in the decision log, entries D1–D1
 - One PM session runs up to three tickets; write its handoff once per session. A watcher wakes the PM after fifteen inactive minutes with pending work. Designers get LSP; coders test unless measurement holds the machine. Report each ticket's timing briefly, without per-ticket pace analysis; in-depth analysis comes in the owner's periodic audits. (D160 items 4, 6, 9, 10, D162)
 - Numerically bounded tickets start with one profiled acceptance-driver run. After a smallest-history smoke, each instance uses a quiet-machine runner writing its own admission record. (D160 items 7–8)
 - Evaluate architecture against declared workload, accepted throughput, backlog/latency, contention/rework and whole-process/model costs; distinguish assumptions, calculations and measurements. Busy refusals are not delivery. Preserve social scope and safety; calibration is not capacity. (D78, D79, B15)
+- Release 1 and 2 gates use the owner's declared workload: about five agents, at most three paid model exchanges at once, one or two repositories; D78's 12/20-agent scenarios are Release 3's target. (D78, D185)
 
 ## Owner-reserved decisions
 - Reserve D52 approvals, breaking contracts, toolchains, dependencies, owner-decision/workflow changes, art sign-offs and actions needing personal keys, money, accounts or machine to the owner. Workflow guard overrides are not authorization. (D29, D41, D52, D125, D152 item 4, D153)
@@ -66,6 +67,7 @@ This file is a digest of the rules in force in the decision log, entries D1–D1
 - Recover proven effects without execution retry: old tip means interruption, target means complete acceptance bookkeeping once. Fence prior writers and block unproven effects. No-change needs a proven accepted predecessor and performs no checks, ref update or acceptance. (D55, D59, D71, D77)
 - Harness agents remain testing-only until Release 1's exit test passes; C2/C3 promotion is unavailable. Valid nonempty declared checks must all pass; no human fallback, permissive validator or path-based initial exclusion. (D52, D72, D73, B6, D182)
 - Changed policy/checks/environments hold new intents, finish intended finalizations, switch requirements and freshly validate existing pre-intent requests. Keep one colony-wide policy, history and request IDs; confirm superseded children exit before replacement. (D61, D64, D67, D68, D69, D77)
+- C4's per-incident fresh-execution cap is the owner-set startup setting `validation_capacity.incident_executions` (initially 12), outside law-format v1 and the activation chain, with no default (absent: no reproduction); the initial canonical observation, each reproduction and each adjacent execution charge one cumulative incident reservation when queued, kept across interruption and restart. (D47, D114, D185)
 - Keep speculative output/artifacts/diagnostics/verdicts/hashes host-private until the exact predecessor is durably accepted; no early models, ordinary views, field or shared-cache disclosure. (B5)
 - Durable views use ledger cursors; ephemeral turn/delta text has atomic snapshot/high-water attach and gapless continuation, but cannot replay after Core exits. (D49)
 
@@ -131,11 +133,10 @@ This file is a digest of the rules in force in the decision log, entries D1–D1
 - Cutover passes unanswered messages, pending decisions and open tasks into fresh contexts, not prior conversations/unsubmitted edits; notify senders and release paused members in step with answers. (D99, D100, D101)
 - Resource/work-domain registration is owner CAS evidence, not permission. Version-bound declarations obey audiences, replace consumer sets and never retarget on source revisions; grants remain independently authoritative. (D154)
 - First release needs Windows-host mechanisms only; neutral code remains portable and C3 needs three-OS CI. Unsupported mechanisms explicitly refuse, never weaken. Deferred Apple-silicon native execution uses one disposable macOS guest slot; Intel Macs lack that path. (D27, D87, D133, D138, B11)
+- Work is tiered: Release 1 (91, done; slimmed 17, 18, 20, 30, 31; new colony-setup, terminal-inspection and mid-turn declared-checks tickets; the checks tool is sandboxed, lands nothing and grants nothing), Release 2 (incl. 19), On trigger (incl. 37, 146, 149), Park (incl. 84–86, 137) and Release 3 layers behind go/no-go; C3 closed with 91; art and fortress work pause until Release 3; the owner's own review after Release 2 replaces the usefulness trial. (D138, D182, D184, D185)
 
 ## Open items awaiting the owner
 - Exact trust/sentiment attenuation function, representation, coefficients and cutpoints remain unresolved pending testing; illustrative formulas are not defaults. (D94, D95)
-- C4's per-incident fresh-execution cap needs a separate decision; policy artifacts contain only flake-rate prior, failure-repair confidence and quarantine threshold. (D47, D114)
-- Work is tiered: Release 1 (91, done; slimmed 17, 18, 20, 30, 31; new colony-setup and terminal-inspection tickets), Release 2 (incl. 19), On trigger (incl. 37, 146, 149), Park (incl. 84–86, 137) and Release 3 layers behind go/no-go; C3 closed with 91; art and fortress work pause until Release 3; the owner's own review after Release 2 replaces the usefulness trial. Open: mid-turn checks, declared workload. (D138, D182, D184)
 - Issues/Wiki/Discussions await the owner; collaborator/deploy-key/webhook/deployment access lacks separate confirmation. Coder reasoning/December-target proposals and the PM-model-on-quota proposal were not adopted. (D146, D152, D153 item 3, D160)
 
 Superseded: D54, D106, D122, D126, D129, D141, D143.
