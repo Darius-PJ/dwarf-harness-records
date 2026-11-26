@@ -1,6 +1,6 @@
 # Current rules
 
-This file is a digest of the rules in force in the decision log, entries D1–D183 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
+This file is a digest of the rules in force in the decision log, entries D1–D184 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
 
 ## How the build works
 - Build Core first; Undercurrent foundations use synthetic data and frozen consumed contracts, and pass their field gates before affecting agents. (D14, D19, D20)
@@ -135,7 +135,7 @@ This file is a digest of the rules in force in the decision log, entries D1–D1
 ## Open items awaiting the owner
 - Exact trust/sentiment attenuation function, representation, coefficients and cutpoints remain unresolved pending testing; illustrative formulas are not defaults. (D94, D95)
 - C4's per-incident fresh-execution cap needs a separate decision; policy artifacts contain only flake-rate prior, failure-repair confidence and quarantine threshold. (D47, D114)
-- Work is tiered: Release 1 (91; slimmed 17, 18 or 19, 20, 30, 31; new colony-setup and terminal-inspection tickets), Release 2, On trigger (incl. 37, 146, 149), Park (incl. 137) and Release 3 layers behind go/no-go; C3 closes with 91; art and fortress work pause until Release 3. Open: first repository/language, mid-turn checks, declared workload, usefulness trial. (D138, D182)
+- Work is tiered: Release 1 (91, done; slimmed 17, 18, 20, 30, 31; new colony-setup and terminal-inspection tickets), Release 2 (incl. 19), On trigger (incl. 37, 146, 149), Park (incl. 84–86, 137) and Release 3 layers behind go/no-go; C3 closed with 91; art and fortress work pause until Release 3; the owner's own review after Release 2 replaces the usefulness trial. Open: mid-turn checks, declared workload. (D138, D182, D184)
 - Issues/Wiki/Discussions await the owner; collaborator/deploy-key/webhook/deployment access lacks separate confirmation. Coder reasoning/December-target proposals and the PM-model-on-quota proposal were not adopted. (D146, D152, D153 item 3, D160)
 
 Superseded: D54, D106, D122, D126, D129, D141, D143.

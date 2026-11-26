@@ -3381,3 +3381,11 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
 - **Date:** 2026-11-25. **Decided by:** assistant.
 - **Decision:** for provider, integrity and process causes, compare a clear's sample with each member still pending when it is applied: before due withdraws; at or after due the member expires first and the clear follows, including a clear in another member's restoration. For money, any `budget_available` clear from expiry or succeeding-call admission withdraws a member still pending until expiry is applied; a clear never restores an already-lost member. A budget refusal parks rather than ends its turn, and deduplicated refusals leave no complete demand set: owner cancellation proves no clearance, so its agent can still become lost at due under a stated-reset ceiling still exhausted then. Ticket 130 inherits the router stop-within-grace question. In v1, process loss and its barrier require tree proof (Windows, D138); integrity/process clears come only from explicit reports reconcile at an unrefused start, not live passes.
 - **Amends:** D175's withdrawal reading and v1 producer-clear scope; no codec, value shape or frozen byte changes.
+
+### D184. The first repository is Python; the owner's own review after Release 2 replaces the usefulness trial
+
+- **Date:** 2026-11-26. **Decided by:** adopted. The owner took the release-triage report's recommended answers to its questions 2 and 9. Questions 3 (agents running declared checks mid-turn) and 5 (a declared owner workload) and ticket 17's OG2 stay open.
+- **Decision:**
+  1. **The first repository is a Python one,** so ticket 18 stays in Release 1 and ticket 19 (Node) stays in Release 2.
+  2. **The owner reviews the harness himself after Release 2,** in place of the usefulness trial; tickets 84–86 move to Park.
+- **Amends:** D182 items 1 and 2.
