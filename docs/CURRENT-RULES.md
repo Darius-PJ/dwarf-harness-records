@@ -1,6 +1,6 @@
 # Current rules
 
-This file is a digest of the rules in force in the decision log, entries D1–D186 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
+This file is a digest of the rules in force in the decision log, entries D1–D187 and B1–B36. Agents read it instead of the log and open an entry only for its reasoning or history (D161). The log wins wherever the two differ. Update this file in the same commit as each new entry.
 
 ## How the build works
 - Build Core first; Undercurrent foundations use synthetic data and frozen consumed contracts, and pass their field gates before affecting agents. (D14, D19, D20)
@@ -131,7 +131,7 @@ This file is a digest of the rules in force in the decision log, entries D1–D1
 - Owners may act through lost offices' channels, clearly attributed as owner; restored holders receive decisions passively. Answered questions stop counting and are not answered twice. (D98, D99)
 - Owner-declared unrecoverable officers may yield without live handoff; Core transfers open tasks/pending decisions/attenuated roster, never private lessons. Restoration before cutover requires the owner's choice. Aspirant loss pauses succession. (D98, D99)
 - Cutover passes unanswered messages, pending decisions and open tasks into fresh contexts, not prior conversations/unsubmitted edits; notify senders and release paused members in step with answers. (D99, D100, D101)
-- Resource/work-domain registration is owner CAS evidence, not permission. Version-bound declarations obey audiences, replace consumer sets and never retarget on source revisions; grants remain independently authoritative. (D154)
+- Resource/work-domain registration is owner CAS evidence, not permission. Version-bound declarations obey audiences, replace consumer sets and never retarget on source revisions; grants remain independently authoritative. F3-150 setup records are owner evidence and configuration, never permission: only `internal/core/setup` reads them, agents and workspace skip them, and they gate, cancel or authorize no other family's command. (D154, D187)
 - First release needs Windows-host mechanisms only; neutral code remains portable and C3 needs three-OS CI. Unsupported mechanisms explicitly refuse, never weaken. Deferred Apple-silicon native execution uses one disposable macOS guest slot; Intel Macs lack that path. (D27, D87, D133, D138, B11)
 - Work is tiered: Release 1 (91, done; slimmed 17, 18, 20, 30, 31; new 150 colony setup, 151 terminal inspection and 152 mid-turn declared checks; the checks tool is sandboxed, lands nothing and grants nothing), Release 2 (incl. 19), On trigger (incl. 37, 146, 149, 154), Park (incl. 84–86, 137) and Release 3 layers behind go/no-go (incl. 153); C3 closed with 91; art and fortress work pause until Release 3; the owner's own review after Release 2 replaces the usefulness trial. During Release 1 a new ticket joins it only if it blocks the exit test or fixes a money, credential or data-loss defect or a permission or sandbox bypass; a real-use fault gets a narrow fix ticket stating its symptom, with its ledger export kept in the private records. (D138, D182, D184, D185, D186)
 
