@@ -82,7 +82,7 @@ The ruling and the S1 review ask Fable's audit to examine three points: the self
 
 ## Close
 
-Final close review: StandInT148Close, a temporary Claude Opus 5.5 stand-in for the held advisor (D177), blocked on three corrections and gave exact replacement text for each (criterion 3's timing claim, criterion 7's grace wording and one evidence-record line); the PM applied them as given, with one of its wording notes on check 129's step times,, without re-review as the review allowed, and no other finding blocks the close.. Public ticket and paired-roadmap edits and these private records land separately (D145); C3 status stays only in its paired roadmap Status line and board row, and the contract register and decision log are unchanged (D161).
+Final close review: StandInT148Close, a temporary Claude Opus 5.5 stand-in for the held advisor (D177), blocked on three corrections and gave exact replacement text for each (criterion 3's timing claim, criterion 7's grace wording and one evidence-record line); the PM applied them as given, with one of its wording notes on check 129's step times, without re-review as the review allowed, and no other finding blocks the close. Public ticket and paired-roadmap edits and these private records land separately (D145); C3 status stays only in its paired roadmap Status line and board row, and the contract register and decision log are unchanged (D161).
 
 ## Raw evidence references
 
@@ -111,3 +111,7 @@ The [inventory](ticket-148-evidence-inventory.json) is copied verbatim from `loc
 | local://t148-fix-1-review.md | 67f4ba9264bedfe83227b6c3e76e457fe100d165805f2f80c52e495cad981b64 |
 | local://t148-s1.diff | 68cfa8a1e2c53d986a347babc76a4e03c42d39dc53d50687b5b7a8f387c5b63c |
 | local://t148-fix-1.diff | c5b363b3fb8b592e5de8e008b985fa5cab901277cd3acddec0c697a1696d2918 |
+
+## Fable audit (2026-11-27)
+
+AuditT148Fable, a fresh Fable 5.2 advisor (D160), confirmed the stand-in-reviewed runs of ticket 148 with no fix-ticket finding and no new known issue (`local://t148-fable-audit.md`, SHA-256 9b19489e4ff85a7a27c9bdcaa425a3e95f5c831709aaa38f249d69ac92649872). One optional test tightening, an `own-denied` assertion, is deferred.

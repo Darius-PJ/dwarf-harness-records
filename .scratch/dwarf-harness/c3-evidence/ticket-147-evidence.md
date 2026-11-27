@@ -208,7 +208,7 @@ Final close review: StandInT147Close, a temporary Claude Opus 5.5 stand-in for t
 
 ## Raw evidence references
 
-The [inventory](ticket-147-evidence-inventory.json) is copied verbatim from `local://t147-evidence-inventory.json` (SHA-256 78b5214b6ba1515ee33fab805d25b60700237e92f4d27be8638e56b43ac695a8) and is the path, size and SHA-256 authority for every raw file; raw files remain outside both repositories, and none is copied here. Prefixes: `PM/` is `C:/Users/darius.jones/worktrees/dwarf-harness/t147-pm-evidence`, `S1/` `…/t147-s1-evidence`, `S2/` `…/t147-s2-evidence`, `S3/` `…/t147-s3-evidence`, `DIAG/` `…/t147-diag-evidence`, and `CI/` is `C:/Users/darius.jones/Documents/PROJECTS/DwarfHarness/CI Logs`. The files below carry claims in this record:
+The [inventory](ticket-147-evidence-inventory.json) is copied verbatim from `local://t147-evidence-inventory.json` (SHA-256 78b5214b6ba1515ee33fab805d25b60700237e92f4d27be8638e56b43ac695a8) and is the path, size and SHA-256 authority for every raw file except the hosted job logs under `CI/`, which this record hashes only where a claim rests on one (Fable's audit checked the unhashed macOS and Linux logs of #120, #124 and #125 and the Linux log of #126 against their figures); raw files remain outside both repositories, and none is copied here. Prefixes: `PM/` is `C:/Users/darius.jones/worktrees/dwarf-harness/t147-pm-evidence`, `S1/` `…/t147-s1-evidence`, `S2/` `…/t147-s2-evidence`, `S3/` `…/t147-s3-evidence`, `DIAG/` `…/t147-diag-evidence`, and `CI/` is `C:/Users/darius.jones/Documents/PROJECTS/DwarfHarness/CI Logs`. The files below carry claims in this record:
 
 | Path | SHA-256 |
 |---|---|
@@ -269,3 +269,7 @@ The [inventory](ticket-147-evidence-inventory.json) is copied verbatim from `loc
 | local://t147-s1.diff | ab9dc78999dc3f1bdbfa9a590768eb8d17c5094de1f4456b092454c039ea390a |
 | local://t147-s2.diff | a9e4436e476c9d70f1b53724708ae1ac22a5c0301631ce01e5cd57054078317a |
 | local://t147-s3.diff | 50d07e25660c24518f1354bc8e4d939d6d5af51b9f2302c8db78744dde386813 |
+
+## Fable audit (2026-11-27)
+
+AuditT147Fable, a fresh Fable 5.2 advisor (D160), audited the stand-in-reviewed runs of ticket 147. It confirmed them with no fix-ticket finding (`local://t147-fable-audit.md`, SHA-256 77166a9c5349b08c5f653ccf222aeef3ab5b2cf0ce3d8aeba8d0ebfdf5a73a10). New known issues: `ledger.Digest` cannot be read back from text, so a future answer type could be re-read three times; `testPreparedTurnResult` releases `Service.mu` between damaging the command directory and setting `rebuilding`, so a rebuild in that gap can fail the row falsely. Notes: the re-append probe's refusal at sequence 46 is the reducer's clock-floor rule, not a defect; ticket 142's work-lookup and `body_refs` command hits took effect only at 147's S3.

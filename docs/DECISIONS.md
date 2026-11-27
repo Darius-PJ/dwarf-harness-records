@@ -3398,3 +3398,22 @@ Step-specific open questions are listed in each roadmap; `ROADMAPS.md` indexes t
   2. **Release 1 and 2 gates use the owner's declared workload:** about five agents, at most three paid model exchanges at once (Core's current default), one or two repositories. D78's 12- and 20-agent scenarios become Release 3's target.
   3. **C4's per-incident fresh-execution cap** is an owner-set Core startup setting, `validation_capacity.incident_executions`, outside law-format v1 and the activation chain, with no default: absent, reproduction is unavailable. His initial value is 12. The initial canonical observation, every reproduction and every adjacent before-and-after execution are charged to one cumulative incident reservation when queued, and the charge survives interruption and restart.
 - **Amends:** D78 (the workload Release 1 and 2 gates use) and D182 item 1 (ticket C); settles the incident cap D47 and D114 left open.
+
+### D186. Ticket edits for the release tiers published: tickets 150–154, two splits and thirteen blocker changes
+
+- **Date:** 2026-11-27. **Decided by:** modified. The project manager proposed the ticket edits that carry out D182, D184 and D185. He also proposed two standing rules from section 6 of the triage report, and an advisor reviewed both. The owner approved publishing them with both standing rules and added a permission or sandbox bypass to the intake rule's bar.
+- **Decision:**
+  1. **New tickets.** In Release 1: 150, colony setup from the terminal (no blockers); 151, seeing and troubleshooting from the terminal (20); and 152, running the declared checks during a turn (17, 45). Ticket 153, split from 27, takes the Corps, Grand and Diplomat role matrix to Release 3's teams layer (27). Ticket 154, split from 39, takes the router's live provider handover, On trigger (38, 39).
+  2. **Blocker changes:** 25: 24→20; 34: 28,29→20; 36: 28,29→16; 55: 25,27,54→20,54; 93: 27,31→26,31; 39: 38→150; 130: 39,91→91,154; 41: 39,40→40,154; 29: 25,27→24,25,153; 71: 25,60,63→24,25,60,63; 92: 27,31→31,153; 80: 79→79,153; 35: 34→34,153. 29 and 71 keep the wait on 24 that 25 used to carry.
+  3. **Moved criteria.**
+     - The V6 fixtures leave 17, 18 and 19 for 22 and 46.
+     - 20 lands one change at a time, and 23 takes the overlap.
+     - 25's repairer exclusion and quarantine replay go to 24.
+     - 31's competing-commands criterion and the launcher-protocol freeze go to 54. C7's exit criterion points there, so C7 can be Done without that proof.
+     - 55's overview drops Corps and role topology, keeping agents and contexts. 93's board memory and 34's C5 rules apply once their producers exist.
+     - The roadmaps name the tickets that start before their step's wait: 25 (C5), 34–36 and 97 (C9), and 39 (R1).
+  4. **Every open ticket** gets one tier comment, and every Release 1 and 2 ticket gets the transparency criterion. The tickets' shared gate sentences and the public documents now end the testing-only rule at Release 1's exit test, which the owner runs and declares passed.
+  5. **Two standing rules,** recorded in `ROADMAPS.md`'s Release tiers section:
+     - *Intake.* During Release 1, a new ticket joins it only if it blocks the exit test or fixes a money, credential or data-loss defect or a permission or sandbox bypass. Anything else goes On trigger with its symptom.
+     - *Patching.* When something misbehaves in real use, its ledger slice is exported and kept in the private records, and a narrow fix ticket states the symptom. An On-trigger ticket moves up when its symptom appears.
+- **Amends:** nothing; items 1–4 carry out D182, D184 and D185, and item 5 adds two standing rules.
